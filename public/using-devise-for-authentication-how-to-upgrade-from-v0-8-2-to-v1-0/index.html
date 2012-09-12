@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Using Devise for authentication? How to upgrade from v0.8.2 to v1.0 - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Using Devise for Authentication? How to Upgrade From v0.8.2 to v1.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-11T13:28:51+00:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few. <p /> It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place). <p /> On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this. <p />	 <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">&nbsp;&nbsp;config.gem &#039;devise&#039;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p /> becomes <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">	config.gem &#039;devise&#039;, :version =&gt; &#039;&gt;=1.0.0&#039;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p />  <br />And after restarting the server, a barf. <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">	ActionView::TemplateError (undefined local variable or method `new_user_session_path&#039; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p />  <br />So obviously my Devise resource, User in this case, is fubar. <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">	class User &lt; ActiveRecord::Base</div><div class="line" id="LC2">&nbsp;&nbsp;	  devise :all </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p />  <br />Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model. <p />	 <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">	class User &lt; ActiveRecord::Base</div><div class="line" id="LC2">	  devise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p /> So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-11T13:28:51+00:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0" data-via="" data-counturl="http://yoursite.com/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/paperclip-attachment-validations" title="Previous Post: Paperclip - attachment validations">&laquo; Paperclip - attachment validations</a>
+      
+      
+        <a class="basic-alignment right" href="/rails-2-3devise-changing-your-email-content-type" title="Next Post: Rails 2.3/Devise : changing your email content type.">Rails 2.3/Devise : changing your email content type. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

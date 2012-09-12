@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Fix for annoying bug in EmailSpec - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as; 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 Scenario Outline: Register new &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/fix-for-annoying-bug-in-emailspec">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Fix for Annoying Bug in EmailSpec</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-15T13:33:00+00:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    <p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
+<p><div class="data type-cucumber">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+<span id="L5">5</span>
+<span id="L6">6</span>
+<span id="L7">7</span>
+<span id="L8">8</span>
+<span id="L9">9</span>
+<span id="L10">10</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="k">Scenario Outline:</span><span class="nf"> Register new user </span></div><div class="line" id="LC2"><span class="k">Given </span><span class="nf">I am on the signup page </span></div><div class="line" id="LC3"><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Email</span><span class="nf">&quot; with &quot;&quot; </span></div><div class="line" id="LC4"><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Password</span><span class="nf">&quot; with &quot;&quot; </span></div><div class="line" id="LC5"><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Create My Account</span><span class="nf">&quot; </span></div><div class="line" id="LC6"><span class="k">Then </span><span class="nf">I should </span></div><div class="line" id="LC7"><span class="k">And </span><span class="nf">I should receive an email </span></div><div class="line" id="LC8"><span class="k">When </span><span class="nf">I open the email </span></div><div class="line" id="LC9"><span class="k">Then </span><span class="nf">I should see &quot;</span><span class="s">Please activate your new account</span><span class="nf">&quot; in the subject </span></div><div class="line" id="LC10"><span class="k">When </span><span class="nf">I click the first link in the email </span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></p>
+<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you; <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+<span id="L5">5</span>
+<span id="L6">6</span>
+<span id="L7">7</span>
+<span id="L8">8</span>
+<span id="L9">9</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">You have a nil object when you didn&#039;t expect it! </div><div class="line" id="LC2">You might have expected an instance of Array. </div><div class="line" id="LC3">The error occurred while evaluating nil.include? (NoMethodError) </div><div class="line" id="LC4">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#039; </div><div class="line" id="LC5">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `select&#039; </div><div class="line" id="LC6">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#039; </div><div class="line" id="LC7">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in `mailbox_for&#039; </div><div class="line" id="LC8">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#039; </div><div class="line" id="LC9">./features/step_definitions/email_steps.rb:52 </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><em><br /></em> <br />I fixed the offending bug - grab the code either at Gemcutter <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">gem install glennr-email-spec </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><em><br /></em> <br />or via GitHub <p /> <em><a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a> </em><p /> If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-15T13:33:00+00:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/fix-for-annoying-bug-in-emailspec" data-via="" data-counturl="http://yoursite.com/fix-for-annoying-bug-in-emailspec" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/browser-market-share-applying-the-8020-rule" title="Previous Post: Browser market share: Applying the 80:20 rule ">&laquo; Browser market share: Applying the 80:20 rule </a>
+      
+      
+        <a class="basic-alignment right" href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty" title="Next Post: Using Git? How to know what branch you're on, and if its dirty.">Using Git? How to know what branch you're on, and if its dirty. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

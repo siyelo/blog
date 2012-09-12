@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Rails 2.3/Devise : changing your email content type. - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/rails-2-3devise-changing-your-email-content-type">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Rails 2.3/Devise : Changing Your Email Content Type.</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-18T14:26:00+00:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    <p>Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the &#8220;standard&#8221; authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?). <p /> A minor issue on Rails 2.3 is that Devise (v1.0) doesn&#8217;t allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to &#8216;text/html&#8217;, unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on. <p /> I&#8217;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
+<p>UPDATE: Its been merged into Devise v1.0.2 <a href="http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4ff18b039d">http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4&#8230;</a></p>
+<p><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">&nbsp;&nbsp;Devise.setup do |config|</div><div class="line" id="LC2">&nbsp;&nbsp;&nbsp;&nbsp;...</div><div class="line" id="LC3">&nbsp;&nbsp;&nbsp;&nbsp;config.mailer_content_type = &#039;text/plain&#039;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p /> The gem on gemcutter <p /> <div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">&nbsp;&nbsp;gem install glennr-devise</div><div class="line" id="LC2">&nbsp;&nbsp;or</div><div class="line" id="LC3">&nbsp;&nbsp;config.gem &#039;glennr-devise&#039;, :lib =&gt; &#039;devise&#039;, :source =&gt; &#039;http://gemcutter.org&#039;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p /> The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a></p>
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-18T14:26:00+00:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/rails-2-3devise-changing-your-email-content-type" data-via="" data-counturl="http://yoursite.com/rails-2-3devise-changing-your-email-content-type" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0" title="Previous Post: Using Devise for authentication? How to upgrade from v0.8.2 to v1.0">&laquo; Using Devise for authentication? How to upgrade from v0.8.2 to v1.0</a>
+      
+      
+        <a class="basic-alignment right" href="/the-least-you-can-do-on-usability" title="Next Post: 'The least you can do' on Usability">'The least you can do' on Usability &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

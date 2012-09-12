@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Redis in the NoSQL ecosystem - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Redis (REmote DIctionary Server) is key-value in-memory database storage that also supports disk storage for persistence. It supports several data &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/redis-in-the-nosql-ecosystem">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Redis in the NoSQL Ecosystem</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T21:01:00+00:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    <p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro" title="Redis Data Types">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub" title="Redis Publish/Subsscribe">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions" title="Redis transactions">transactions</a>.</p>
+<p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
+<p><span style="font-size:large;color:#888888;">Give us some ACID</span></p>
+<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be <a href="http://en.wikipedia.org/wiki/ACID" title="ACID properties for databases">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other <a href="http://nosql-database.org/" title="NoSQL databases">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default <strong>fsync()</strong> is set to <strong>everysec</strong> which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the <strong>appendfsync</strong> command (you can use <strong>appendfsync always</strong> and system will fsync data after every write - it&#8217;s slow but safest!).</p>
+<p><span style="font-size:large;color:#888888;">When to use Redis?</span></p>
+<p>In your production environment you don&#8217;t need to switch to Redis. You can just <a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html" title="Redis usage">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
+<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.<p />If you need a more featured document oriented database that allows you to perform <strong>range queries</strong>, <strong>regular expression searches</strong>, <strong>indexing</strong>, and <strong>MapReduce</strong> you should check <strong>MongoDB</strong>, <strong>CouchDB</strong> or similar. If you need a simple <strong>caching</strong> with better expiration algorhitms than Redis has then you should check <strong>memcache</strong>.</p>
+<p><span style="font-size:medium;color:#888888;">Redis Use-Cases</span></p>
+<ul>
+<li>Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.</li>
+<li>Counting Downloads: <a href="https://github.com/rubygems/rubygems.org" title="Rubygems on Github">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the <a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb" title="Rubygems Download model ">Download</a> model.</li>
+<li>High Score tables: Redis supports data type functions that can be very <a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/" title="Redis High Score tables">handy</a>.</li>
+<li>Who&#8217;s Online: Use Redis to implement <a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/" title="Who is online - Redis example">who is online</a> logic in your application.</li>
+<li>Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.</li>
+<li>Queues: <a href="https://github.com/defunkt/resque" title="Resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.</li>
+<li>Live debugging: You need to do live debugging or roll out new features for production testing for specific users only - <a href="https://github.com/jamesgolick/rollout" title="Rollout">Rollout</a> gem does exactly that.</li>
+<li>HN style social news site written in Ruby/Sinatra/Redis/jQuery - <a href="https://github.com/antirez/lamernews" title="Lamernews - Ruby/Sinatra/Redis/jQuery">lamernews</a>.</li>
+</ul>
+<p><span style="font-size:medium;color:#888888;">Play with Redis (install, start and stop server)<br /></span></p>
+<p>
+
+<p /><span style="font-size:large;color:#888888;">Redis console</span></p>
+<p>You can use redis-cli to connect to a local or remote Redis server and call com-<br />mands. Here is an example (first connect to the server using: redis-cli -p 6379):<p />
+
+<p /><span style="font-size:large;color:#888888;">Redis from Ruby<br /></span></p>
+<p>Here is an example using Ruby to execute commands on Redis server. You need to install <a href="https://github.com/ezmobius/redis-rb" title="Redis gem for Ruby">redis gem</a> by executing <em>gem install redis</em> first.</p>
+
+<p>Learn more about Redis <a href="http://redis.io/commands" title="Redis commands">commands</a> and give some speed to your web applications for free.</p>
+<p><span style="font-size:large;color:#888888;">Real world Redis example</span></p>
+<p>At the end, lets show a real world example how Redis is used in <a href="http://rubygems.org/" title="Rubygems">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
+<p><p />
+
+First, in the initializer a new redis object as a global variable <strong>$redis</strong> is instantiated. This object is used in Download model for updating the downloads count for a gem with <strong>self.incr(name)</strong> method and reading the downloads count for a gem with <strong>self.for_rubygem(name)</strong> method. Rubygems is using Sinatra application <strong>Hostess</strong> to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines <strong>get &#8220;/gems/*.gem&#8221;</strong> route which triggers the downloads count to be updated in the Redis database.</p>
+<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at <a href="https://github.com/rubygems/rubygems.org" title="Rubygems source code">Github</a> for more details.</p>
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T21:01:00+00:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/redis-in-the-nosql-ecosystem" data-via="" data-counturl="http://yoursite.com/redis-in-the-nosql-ecosystem" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/jquery-mobile-overview" title="Previous Post: jQuery Mobile overview">&laquo; jQuery Mobile overview</a>
+      
+      
+        <a class="basic-alignment right" href="/intro-to-machine-learning-in-ruby" title="Next Post: Intro to Machine Learning in Ruby">Intro to Machine Learning in Ruby &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

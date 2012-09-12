@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Scalable full screen background image - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/scalable-full-screen-background-image">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Scalable Full Screen Background Image</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-28T07:52:00+00:00" pubdate data-updated="true">Apr 28<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of the alternatives is Flash and anyone who appreciates usability and web standards will probably resent that very thought.</p>
+<p>Recently I worked on a website for a <a href="http://freezing-light-25.heroku.com/">branding agency</a> that required a bit more avant-garde design with a large background image that could resize according to the browser’s window size and resolution. My research showed that most of the non-flash websites were done by JavaScript, but there was something else that caught my attention – a solution done with straight HTML, CSS and guess what – tables! Yeah, I know, the old arch-nemesis of web design. We almost started forgetting they existed, but they pop-up from time to time, reminding us of the good old days of poorly designed websites. And yet it was a solution so simple it’s almost creative and I was urged to try it out.</p>
+<p>The whole trick is to create a single cell table, and apply few styles to make the magic work.</p>
+<p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: <a href="http://haml-lang.com/">http://haml-lang.com/</a></p>
+<p><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+<span id="L5">5</span>
+<span id="L6">6</span>
+<span id="L7">7</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">#bg</div><div class="line" id="LC2">&nbsp;&nbsp;#bg_wrapper</div><div class="line" id="LC3">&nbsp;&nbsp;&nbsp;&nbsp;%table{ :cellspacing =&gt; &quot;0&quot;, :cellpadding =&gt; &quot;0&quot; }</div><div class="line" id="LC4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%tbody</div><div class="line" id="LC5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%tr</div><div class="line" id="LC6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%td</div><div class="line" id="LC7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%img#background{ :src =&gt; &quot;images/index.jpg&quot; }</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></p>
+<p>So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:</p>
+<p><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+<span id="L5">5</span>
+<span id="L6">6</span>
+<span id="L7">7</span>
+<span id="L8">8</span>
+<span id="L9">9</span>
+<span id="L10">10</span>
+<span id="L11">11</span>
+<span id="L12">12</span>
+<span id="L13">13</span>
+<span id="L14">14</span>
+<span id="L15">15</span>
+<span id="L16">16</span>
+<span id="L17">17</span>
+<span id="L18">18</span>
+<span id="L19">19</span>
+<span id="L20">20</span>
+<span id="L21">21</span>
+<span id="L22">22</span>
+<span id="L23">23</span>
+<span id="L24">24</span>
+<span id="L25">25</span>
+<span id="L26">26</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><br /></div><div class="line" id="LC2">body</div><div class="line" id="LC3">&nbsp;&nbsp;width: 100%</div><div class="line" id="LC4">&nbsp;&nbsp;height: 100%</div><div class="line" id="LC5">&nbsp;&nbsp;overflow: hidden</div><div class="line" id="LC6"><br /></div><div class="line" id="LC7">#bg, table, td, #content</div><div class="line" id="LC8">&nbsp;&nbsp;&nbsp;&nbsp;width: 100%</div><div class="line" id="LC9">&nbsp;&nbsp;&nbsp;&nbsp;height: 100%</div><div class="line" id="LC10">&nbsp;&nbsp;&nbsp;&nbsp;overflow: hidden</div><div class="line" id="LC11"><br /></div><div class="line" id="LC12">&nbsp;&nbsp;#bg_wrapper</div><div class="line" id="LC13">&nbsp;&nbsp;&nbsp;&nbsp;width: 200%</div><div class="line" id="LC14">&nbsp;&nbsp;&nbsp;&nbsp;left: -50%</div><div class="line" id="LC15">&nbsp;&nbsp;&nbsp;&nbsp;position: absolute</div><div class="line" id="LC16">&nbsp;&nbsp;&nbsp;&nbsp;top: -50%</div><div class="line" id="LC17">&nbsp;&nbsp;&nbsp;&nbsp;height: 200%</div><div class="line" id="LC18"><br /></div><div class="line" id="LC19">&nbsp;&nbsp;td</div><div class="line" id="LC20">&nbsp;&nbsp;&nbsp;&nbsp;text-align: center</div><div class="line" id="LC21">&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: middle</div><div class="line" id="LC22"><br /></div><div class="line" id="LC23">&nbsp;&nbsp;#bg img</div><div class="line" id="LC24">&nbsp;&nbsp;&nbsp;&nbsp;margin: 0 auto</div><div class="line" id="LC25">&nbsp;&nbsp;&nbsp;&nbsp;min-height: 50%</div><div class="line" id="LC26">&nbsp;&nbsp;&nbsp;&nbsp;min-width: 50%</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></p>
+<p>After this you can continue styling the rest of the page with straight CSS without worrying about the background. Leave the table as it is and nest the rest of your DIV’s straight in the body.</p>
+
+<p> </p>
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-28T07:52:00+00:00" pubdate data-updated="true">Apr 28<span>th</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/scalable-full-screen-background-image" data-via="" data-counturl="http://yoursite.com/scalable-full-screen-background-image" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/tip-of-the-day-mime-types-for-paperclip-ie8" title="Previous Post: Tip of the day: MIME types for Paperclip & IE8">&laquo; Tip of the day: MIME types for Paperclip & IE8</a>
+      
+      
+        <a class="basic-alignment right" href="/the-easiest-way-to-make-sasscompass-work-on-heroku" title="Next Post: The easiest way to make sass/compass work on Heroku">The easiest way to make sass/compass work on Heroku &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

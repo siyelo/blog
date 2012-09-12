@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Remote pair-programming with Screen - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/remote-pair-programming-with-screen">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Remote Pair-programming With Screen</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-03T08:37:00+00:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    <p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/" title="Remote pair-programming options" target="_blank">here</a>).</p>
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
+<ul style="margin-left:30px;">
+<li>you don&#8217;t have control over the other screen</li>
+<li>you cannot have both screen sharing and video</li>
+<li>bandwidth of the internet connection sometimes can be a problem</li>
+<li>it&#8217;s not a tool for pair programming</li>
+</ul>
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+<p>The solution: <a href="http://www.gnu.org/s/screen/" title="GNU Screen" target="_blank">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
+<ul style="margin-left:30px;">
+<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive - useful as a real time code collaboration tool</li>
+</ul>
+<ul>
+</ul>
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.<p />First we need to install SSH server because all communication will happen over secure channel:</p>
+<p>
+
+</p>
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash" title="RBash shell" target="_blank">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/" title="Restricted Bash shell" target="_blank">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+
+<p>Next we need to setup the guest shell .profile. Add the following to /home/guest/.profile</p>
+
+<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
+
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+
+<p>Then you need to add the following screen config in ~/.screenrc file</p>
+
+<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+<p>Finally, communication goes like this: screen session is started by host with:</p>
+
+<p>Guest SSH to the host machine and automatically joins the screen session:</p>
+
+<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser" title="Screen commands" target="_blank">here</a>.</p>
+<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+
+<p>And is starting pairprog screen session with:</p>
+
+<p>Then user2 can join that session with:</p>
+
+<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference" title="Screen reference" target="_blank">screen reference</a>. Basic commands are:</p>
+
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-03T08:37:00+00:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/remote-pair-programming-with-screen" data-via="" data-counturl="http://yoursite.com/remote-pair-programming-with-screen" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/koding-in-khayelitsha-great-photo" title="Previous Post: Koding in Khayelitsha - great photo">&laquo; Koding in Khayelitsha - great photo</a>
+      
+      
+        <a class="basic-alignment right" href="/we-have-a-new-phone-number" title="Next Post: We have a new phone number!">We have a new phone number! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

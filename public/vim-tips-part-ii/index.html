@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Vim Tips - Part II - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the&nbsp;Practical Vim book. You can also &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/vim-tips-part-ii">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Vim Tips - Part II</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-03T14:39:23+00:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">    <p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the&nbsp;<a href="http://pragprog.com/book/dnvim/practical-vim" title="Practical Vim Book">Practical Vim</a> book. You can also read the first part in this series&nbsp;<a href="http://blog.siyelo.com/vim-tips-part-i" title="Vim Tips - Part I">Vim Tips - Part I</a> at our blog.</p>
+<p><span style="font-size:medium;">1. Replace in multiple files</span></p>
+<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the&nbsp;<strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
+<div class="CodeRay">
+  <div class="code"><pre>:args app/assets/javascripts/hrt*.js</pre></div>
+</div>
+
+<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
+<div class="CodeRay">
+  <div class="code"><pre>:args</pre></div>
+</div>
+
+<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
+<div class="CodeRay">
+  <div class="code"><pre>:argdo %s/Hrt/Hrt2/g</pre></div>
+</div>
+
+<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
+<div class="CodeRay">
+  <div class="code"><pre>:argdo update</pre></div>
+</div>
+
+<p><span style="font-size:medium;">2. Search and replace in&nbsp;</span><span style="font-size:medium;">multiple&nbsp;</span><span style="font-size:medium;">files</span></p>
+<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files. <strong>vimgrep</strong>&nbsp;command creates quicklist with files matching the pattern which list we can see by opening it with&nbsp;<strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the&nbsp;<strong>:Qargs</strong>&nbsp;mapping&nbsp;which we have in our vimrc file:</p>
+<div class="CodeRay">
+  <div class="code"><pre>command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+
+&quot; populate the argument list with each of the files named in the quickfix list
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction</pre></div>
+</div>
+
+<div>Finally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:</div>
+<div>
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>:vimgrep /CurrencyNumberHelper/ app/models/*.rb
+:Qargs
+:argdo %s/CurrencyNumberHelper/CurrencyHelper/g
+:argdo update</pre></div>
+</div>
+
+</div>
+<p />
+<div><span style="font-size:medium;">3. Edit already recorded macro</span></div>
+<br />While recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with&nbsp;<strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.
+<p />
+<div><span style="font-size:medium;">4. Execute macro in multiple files</span></div>
+<div><br />We have&nbsp;already&nbsp;recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:</div>
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>:args app/models/*.rb</pre></div>
+</div>
+
+</div>
+<div>&nbsp;Then we run the macro (that is recorded in register a) with:</div>
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>:argdo normal @a</pre></div>
+</div>
+
+</div>
+<div>In the end we save all the buffers with:</div>
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>:argdo update</pre></div>
+</div>
+
+</div>
+<p />
+<div><span style="font-size:medium;">5.&nbsp;Delete commands</span></div>
+<br />We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:
+<div class="CodeRay">
+  <div class="code"><pre>&lt;C-h&gt; &quot; delete back one character (backspace)
+&lt;C-w&gt; &quot; delete back one word
+&lt;C-u&gt; &quot; delete back to start of line</pre></div>
+</div>
+
+<p><span style="font-size:medium;">6. Vi mode on command line</span></p>
+<div>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</div>
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>set -o vi</pre></div>
+</div>
+
+<div>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</div>
+<p />
+<div>To go back to emacs mode, we need to type:</div>
+</div>
+</div>
+<div class="CodeRay">
+  <div class="code"><pre>set -o emacs</pre></div>
+</div>
+
+<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s&nbsp;<a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt" title="Vi editing mode cheatsheet">cheatsheet</a> for that.</p>
+  
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-03T14:39:23+00:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/vim-tips-part-ii" data-via="" data-counturl="http://yoursite.com/vim-tips-part-ii" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/vim-tips-part-i" title="Previous Post: Vim Tips - Part I">&laquo; Vim Tips - Part I</a>
+      
+      
+        <a class="basic-alignment right" href="/rails-deployment-audit" title="Next Post: Rails Deployment Audit">Rails Deployment Audit &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
