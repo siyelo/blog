@@ -1,0 +1,26 @@
+---
+layout: post
+title: "The easiest way to make sass/compass work on Heroku"
+date: 2010-06-03 13:31:52
+comments: true
+categories:
+author: 
+---
+
+
+    <p>Configure your sass or compass options (config/compass.config):</p><p><span class="Apple-tab-span">	</span>config.css_dir = “tmp/stylesheets/compiled”</p><p>And then create and initializer (e.g. config/initializers/compass.rb) which contains:</p><p></p><p></p><p><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="nb">require</span> <span class="s2">&quot;fileutils&quot;</span></div><div class="line" id="LC2"><span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tmp&quot;</span><span class="p">,</span> <span class="s2">&quot;stylesheets&quot;</span><span class="p">,</span> <span class="s2">&quot;compiled&quot;</span><span class="p">))</span></div><div class="line" id="LC3"><span class="no">ActionController</span><span class="o">::</span><span class="no">Dispatcher</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="no">Rack</span><span class="o">::</span><span class="no">Static</span><span class="p">,</span> <span class="ss">:root</span> <span class="o">=&gt;</span> <span class="s2">&quot;tmp/&quot;</span><span class="p">,</span> <span class="ss">:urls</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;/stylesheets/compiled&quot;</span><span class="o">]</span><span class="p">)</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></p><div>And your stylesheets will always compile to tmp/ !</div>
+  

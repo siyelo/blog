@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Heroku - the fastest way to getting a Rails app into Production"
+date: 2009-11-17 16:44:00
+comments: true
+categories:
+author: 
+---
+
+
+    <p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then Heroku <a href="http://heroku.com/">http://heroku.com/</a> may just be the fastest way to get a Rails app deployed on a production system. <p /> Its as easy as; <br /><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+<span id="L5">5</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">sudo gem install heroku </div><div class="line" id="LC2">heroku create </div><div class="line" id="LC3">git push heroku master </div><div class="line" id="LC4">heroku rake db:migrate </div><div class="line" id="LC5">heroku open </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></p>
+<p>Sit back and watch your app open automagically in your browser. <p /> Also note, Siyelo Fuselage <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
+  

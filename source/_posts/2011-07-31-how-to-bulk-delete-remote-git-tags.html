@@ -1,0 +1,58 @@
+---
+layout: post
+title: "How to bulk delete remote git tags"
+date: 2011-07-31 22:48:00
+comments: true
+categories:
+author: 
+---
+
+
+    <div>Our project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</div>
+
+<div>I needed a one-liner to find all these prerelease tags (i.e.&nbsp;all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</div>
+<p />
+<div>
+<div>Given that "git ls-remote" gives output like "&lt;SHA&gt; &nbsp; &nbsp;refs/tags/&lt;tag&gt;". E.g.;</div>
+
+<p />
+<div>With a bit of awk and regexp love, we can match that output with;</div>
+
+</div>
+<div>And we know that to delete a git tag on a remote you use;</div>
+<p />
+
+<p />
+<div>So putting it all together we get;</div>
+<p />
+
+<p />
+<div>
+<div>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</div>
+</div>
+<p />
+<div>
+<div>Booyaka.</div>
+<p />
+<div>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;</div>
+</div>
+<blockquote style="margin:0 0 0 40px;border:none;padding:0;">
+<div>
+<p />
+<div>a) make sure you have the tags backed up in your local repo first and&nbsp;</div>
+<div>b) check the output of the awk command first... (everything before "| xargs ..." )</div>
+</div>
+</blockquote>
+<p />
+<div>Once you've done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</div>
+<p />
+
+<p />
+<div>Similarly for removing these pre-release tags from a local git repo;</div>
+<p />
+
+<p />
+<div>(This command is a lot easier to figure out since the output from "git tag -l" is simpler.&nbsp;Alternatively, for synchronization, if you don't have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</div>
+<p />
+<div>Final step: Profit</div>
+  

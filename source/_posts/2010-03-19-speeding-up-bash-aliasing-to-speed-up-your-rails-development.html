@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Speeding up bash aliasing to speed up your Rails development"
+date: 2010-03-19 17:02:57
+comments: true
+categories:
+author: 
+---
+
+
+    <div>All good developers love the terminal, and spend many hours at the command prompt.</div><p /><div>All excellent developers are masters of the shell.</div><p /><div>All uber developers issue&nbsp;<a href="http://github.com/glennr/bash_profile">shell commands with obtuse aliases</a>.</div><p /><div>So, if you're uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here's a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you're done.</div><p /><div><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">alias mbp=&#039;mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile&#039;</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></div><p /><div>The speedy way to create aliases that speed up your development.</div><p /><div>And remember, keep it DRY.</div>
+  

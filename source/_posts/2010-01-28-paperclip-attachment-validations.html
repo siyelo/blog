@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Paperclip - attachment validations"
+date: 2010-01-28 14:07:00
+comments: true
+categories:
+author: 
+---
+
+
+    
+<div>Using Paperclip, if you need to check if your model has an attachment, you don't use the standard ActiveRecord validation helper i.e.;</div>
+<p />
+<div><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">validates_presence_of</span> <span class="ss">:logo</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></div>
+<p />
+<div>Erroneous!</div>
+<p />
+<div>Instead you use Paperclip's helper</div>
+<p />
+<div><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></div>
+<p />
+<div>But be sure to put that&nbsp;<strong>after <span style="font-weight:normal;">your attachment definition</span></strong></div>
+<p />
+<div><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">has_attached_file</span> <span class="ss">:logo</span></div><div class="line" id="LC2"><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></div>
+<p />
+<div>And if you're doing something tricky, like allowing your model to be saved without an attachment first, but enforcing that an attachment is present on update then;&nbsp;</div>
+<p />
+<div><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span><span class="p">,</span> <span class="ss">:unless</span> <span class="o">=&gt;</span> <span class="ss">:new_record?</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></div>
+  

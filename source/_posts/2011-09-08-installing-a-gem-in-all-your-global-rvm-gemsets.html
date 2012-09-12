@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Installing a gem in all your global RVM gemsets"
+date: 2011-09-08 18:46:00
+comments: true
+categories:
+author: 
+---
+
+
+    <div>Across different projects like us, you probably have a lot of development gems you like to use.&nbsp;</div>
+<div>E.g. we like;</div>
+
+<div>but obviously it's a PITA (Pain In The ****) to add this gem spec to all your projects.</div>
+<p>So, give this a shot;</p>
+<div><span class="Apple-tab-span"> </span>for x in $(rvm list strings); do rvm use $x@global &amp;&amp; gem install &lt;RAD DEVELOPMENT GEM NAME&gt;; done<br />
+<div>This installs a specific gem into all your global RVM gemsets. For great justice!</div>
+</div>
+  

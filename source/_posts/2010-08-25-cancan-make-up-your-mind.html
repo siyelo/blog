@@ -1,0 +1,116 @@
+---
+layout: post
+title: "CanCan - make up your mind!"
+date: 2010-08-25 15:05:00
+comments: true
+categories:
+author: 
+---
+
+
+    <div><span style="font-size:medium;"><span style="font-size:14px;">If you're using CanCan and came across an error like this;</span></span></div>
+<p />
+<div><span style="font-size:medium;"><span style="font-size:14px;"><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">The :class option has been renamed to :resource for specifying the class in CanCan. </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></span></div>
+<p />
+<div><span style="font-size:medium;"><span style="font-size:14px;">And you duly updated your controller code from;</span></span></div>
+<p />
+<div><span style="font-size:14px;"><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">authorize_resource</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></div>
+<p />
+<div><span style="color:#3296a4;font-size:medium;"><span style="font-size:14px;"><span style="color:#000000;font-family:Helvetica;">To something like this;</span></span></span></div>
+<p />
+<div><span style="font-size:14px;"><span style="color:#000000;font-family:Helvetica;"><span style="font-family:Helvetica;"><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">authorize_resource</span> <span class="ss">:resource</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></span></span></div>
+<p />
+<p />
+<div><span style="font-family:Helvetica;font-size:14px;">Since, like all good programmers, you do what you're told by error-messages. But then like some sick joke it starts mocking you with the inverse error message i.e;</span></div>
+<p />
+<div><span style="font-family:Helvetica;font-size:14px;"><span style="font-family:Helvetica;"><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">The :resource option has been renamed back to :class, use false if no class.</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></span></div>
+<p />
+<div><span style="font-family:Helvetica;font-size:14px;">Before you go and stalk Ryan B (the CanCan author) with a fully automatic assault rifle, first check your CanCan versions.</span></div>
+<p />
+<div><span style="font-family:Helvetica;font-size:14px;"><span style="font-family:Helvetica;"><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+<span id="L2">2</span>
+<span id="L3">3</span>
+<span id="L4">4</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">$ gem open cancan</div><div class="line" id="LC2">Open which gem?</div><div class="line" id="LC3">&nbsp;1. cancan 1.1.1</div><div class="line" id="LC4">&nbsp;2. cancan 1.3.2</div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></span></div>
+<p />
+<div>
+<div>Ah ha. And if you're using RVM like we do, then your default.gems might be specifying a different version (which in our case manifested in our staging server, not on local development).</div>
+<p />
+<div>So by making sure you're using the latest version (&gt;= 1.3.2), and using the :class syntax i.e.</div>
+<p />
+</div>
+<div><span style="font-family:Arial, Helvetica, sans-serif;font-size:14px;"><div class="data type-ruby">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1"><span class="n">authorize_resource</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span></div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div></span></div>
+<p />
+<div><span style="color:#3296a4;font-size:medium;"><span style="font-size:14px;"><span style="color:#000000;font-family:Helvetica;">, you might save yourself a murder (or at the very least a weapons) charge.</span></span></span></div>
+  

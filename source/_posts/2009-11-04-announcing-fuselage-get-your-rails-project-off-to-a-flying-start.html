@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Announcing Fuselage - Get your Rails project off to a flying start!"
+date: 2009-11-04 09:08:00
+comments: true
+categories:
+author: 
+---
+
+
+    <p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the "rails" command gives you. <p /> What's different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template. <p /> Fuselage avoids asking a lot of questions, so if you want to customize your install, edit "template.rb" manually. <p />  <br />Usage is very simple. You can invoke it directly from your "rails -m" command with;</p>
+<p><div class="data type-text">
+      <table class="lines" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <pre class="line_numbers"><span id="L1">1</span>
+</pre>
+          </td>
+          <td width="100%">
+                <div class="highlight"><pre /><div class="line" id="LC1">rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb </div></pre></div>
+          </td>
+        </tr>
+      </table>
+  </div><p /> (note this does a git clone of Fuselage for you automatically) <p /> Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable. <p /> Full feature list <p /> Currently Fuselage includes the following; <p />  Rails <br /> basic template for a clean a rails install <br /> SCS <br /> git <br /> DB + Models <br /> MySQL <br /> authlogic <br /> recaptcha <br /> paperclip <br /> Design/Layout <br /> jQuery <br /> haml <br /> sass <br /> compass + blueprint <br /> formtastic <br /> cufon <br /> friendly_id <br /> Controllers <br /> make_resourceful <br /> will_paginate <br /> Testing <br /> machinist <br /> faker <br /> cucumber <br /> rspec <br /> webrat <br /> watchr - alternative to autotest <br /> Search <br /> thinking-sphinx <br /> Security <br /> tarantula <br /> Metrics <br /> metric_Fu <br /> Production <br /> passenger <br /> capistrano <br /> exception_notification <p />  <br />Extra templates included <p /> These templates are included, but not installed by default. Manually edit template.rb to include them. <p />  compass with 960 grid system <br /> restful_authentication <br /> forgery <br /> asset_packager <br /> whenever</p>
+  
