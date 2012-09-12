@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
 
   
   <meta name="description" content="Heroku just got better.&nbsp;If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) &hellip;">
@@ -18,26 +18,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yoursite.com/blog/page/7/">
+  <link rel="canonical" href="http://blog.siyelo.com/page/13/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Siyelo</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>A blogging framework for siyelos.</h2>
   
 </hgroup>
 
@@ -49,7 +61,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -88,6 +100,8 @@
 
 <time datetime="2009-11-17T20:04:30+00:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
+         | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
@@ -124,6 +138,8 @@
 
 
 <time datetime="2009-11-17T16:44:00+00:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+         | <a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production#disqus_thread">Comments</a>
         
       </p>
     
@@ -178,6 +194,8 @@
 
 
 <time datetime="2009-11-17T16:35:00+00:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+         | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a>
         
       </p>
     
@@ -255,6 +273,8 @@
 
 <time datetime="2009-11-04T10:02:59+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
         
+         | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
@@ -295,6 +315,8 @@
 
 <time datetime="2009-11-04T09:09:04+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
         
+         | <a href="/agile-contracts-working-group#disqus_thread">Comments</a>
+        
       </p>
     
   </header>
@@ -309,61 +331,13 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start">Announcing Fuselage - Get Your Rails Project Off to a Flying Start!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-11-04T09:08:00+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">    <p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the &#8220;rails&#8221; command gives you. <p /> What&#8217;s different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template. <p /> Fuselage avoids asking a lot of questions, so if you want to customize your install, edit &#8220;template.rb&#8221; manually. <p />  <br />Usage is very simple. You can invoke it directly from your &#8220;rails -m&#8221; command with;</p>
-<p><div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> (note this does a git clone of Fuselage for you automatically) <p /> Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable. <p /> Full feature list <p /> Currently Fuselage includes the following; <p />  Rails <br /> basic template for a clean a rails install <br /> SCS <br /> git <br /> DB + Models <br /> MySQL <br /> authlogic <br /> recaptcha <br /> paperclip <br /> Design/Layout <br /> jQuery <br /> haml <br /> sass <br /> compass + blueprint <br /> formtastic <br /> cufon <br /> friendly_id <br /> Controllers <br /> make_resourceful <br /> will_paginate <br /> Testing <br /> machinist <br /> faker <br /> cucumber <br /> rspec <br /> webrat <br /> watchr - alternative to autotest <br /> Search <br /> thinking-sphinx <br /> Security <br /> tarantula <br /> Metrics <br /> metric_Fu <br /> Production <br /> passenger <br /> capistrano <br /> exception_notification <p />  <br />Extra templates included <p /> These templates are included, but not installed by default. Manually edit template.rb to include them. <p />  compass with 960 grid system <br /> restful_authentication <br /> forgery <br /> asset_packager <br /> whenever</p>
-  
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/page/14/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
-    <a class="next" href="/blog/page/6/">Newer &rarr;</a>
+    <a class="next" href="/page/12/">Newer &rarr;</a>
     
   </div>
 </div>
@@ -396,6 +370,51 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
 
 
 
@@ -407,12 +426,25 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Siyelo -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

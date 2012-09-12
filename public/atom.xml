@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-09-12T14:24:47+00:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[Siyelo]]></title>
+  <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-09-12T14:56:01+00:00</updated>
+  <id>http://blog.siyelo.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     <title type="html"><![CDATA[Siyelo Drinkup: Skopje]]></title>
-    <link href="http://yoursite.com/siyelo-drinkup-skopje"/>
+    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
     <updated>2012-09-11T14:09:00+00:00</updated>
-    <id>http://yoursite.com/siyelo-drinkup-skopje</id>
+    <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
     <content type="html"><![CDATA[    <div>There&#8217;ll be&nbsp;<a href="https://github.com/dalibor">three</a>&nbsp;<a href="https://github.com/Dime">Siyelo</a>&nbsp;<a href="https://github.com/glennr">folks</a>&nbsp;in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.</div>
 <div><span> </span><div class='p_embed p_image_embed'>
 <img alt="Pastedgraphic-4" height="138" src="http://siyelo.files.wordpress.com/2012/09/pastedgraphic-4.png?w=254" width="254" />
@@ -46,9 +46,9 @@
   
   <entry>
     <title type="html"><![CDATA[We're Hiring - Experienced Web Developer]]></title>
-    <link href="http://yoursite.com/were-hiring-experienced-web-developer"/>
+    <link href="http://blog.siyelo.com/were-hiring-experienced-web-developer"/>
     <updated>2012-09-11T13:45:00+00:00</updated>
-    <id>http://yoursite.com/were-hiring-experienced-web-developer</id>
+    <id>http://blog.siyelo.com/were-hiring-experienced-web-developer</id>
     <content type="html"><![CDATA[    <p><div class='p_embed p_image_embed'>
 <a href="http://siyelo.files.wordpress.com/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg?w=300"><img alt="Nsyncsongpics1llj5txulpx8qrm" height="375" src="http://siyelo.files.wordpress.com/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg?w=300" width="500" /></a>
 </div>
@@ -93,9 +93,9 @@
   
   <entry>
     <title type="html"><![CDATA[Scratching an itch]]></title>
-    <link href="http://yoursite.com/scratching-an-itch"/>
+    <link href="http://blog.siyelo.com/scratching-an-itch"/>
     <updated>2012-09-07T16:00:00+00:00</updated>
-    <id>http://yoursite.com/scratching-an-itch</id>
+    <id>http://blog.siyelo.com/scratching-an-itch</id>
     <content type="html"><![CDATA[    <p>This week we released a very simple gem called&nbsp;<a href="https://rubygems.org/gems/should_clean" target="_blank">ShouldClean</a>. &nbsp;ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;). &nbsp;</p>
 <p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. &nbsp;ShouldClean will remove the word &#8216;should&#8217; and will conjugate&nbsp;the verb to its singular 3rd person, present indicative form (huh?). For example:&nbsp;</p>
 <ul>
@@ -118,9 +118,9 @@
   
   <entry>
     <title type="html"><![CDATA[Rails Deployment Audit]]></title>
-    <link href="http://yoursite.com/rails-deployment-audit"/>
+    <link href="http://blog.siyelo.com/rails-deployment-audit"/>
     <updated>2012-07-13T14:13:00+00:00</updated>
-    <id>http://yoursite.com/rails-deployment-audit</id>
+    <id>http://blog.siyelo.com/rails-deployment-audit</id>
     <content type="html"><![CDATA[    <p>We recently undertook an audit of a Rails deployment for a system  developed by&nbsp;<a href="http://www.redcometlabs.com/" title="Red Comet Labs">Red Comet Labs</a>. It is a Rails 3.2 application that  integrates with 3 different storage systems (CouchDB, PostgreSQL and  Redis). It is deployed using Capistrano and the server setup and  management is done using Chef.</p>
 <p>We shared our Rails Deployment experience with Red Comet Labs, and in  this article we&#8217;ll discuss a checklist of some&nbsp;<a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/" title="What is this devops thing anyway?">devops</a>&nbsp;practices and  tools we are familiar with.</p>
 <p><span style="font-size:medium;">Extract sensitive data</span></p>
@@ -160,9 +160,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vim Tips - Part II]]></title>
-    <link href="http://yoursite.com/vim-tips-part-ii"/>
+    <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
     <updated>2012-07-03T14:39:23+00:00</updated>
-    <id>http://yoursite.com/vim-tips-part-ii</id>
+    <id>http://blog.siyelo.com/vim-tips-part-ii</id>
     <content type="html"><![CDATA[    <p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the&nbsp;<a href="http://pragprog.com/book/dnvim/practical-vim" title="Practical Vim Book">Practical Vim</a> book. You can also read the first part in this series&nbsp;<a href="http://blog.siyelo.com/vim-tips-part-i" title="Vim Tips - Part I">Vim Tips - Part I</a> at our blog.</p>
 <p><span style="font-size:medium;">1. Replace in multiple files</span></p>
 <p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the&nbsp;<strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
@@ -269,9 +269,9 @@ endfunction</pre></div>
   
   <entry>
     <title type="html"><![CDATA[Vim Tips - Part I]]></title>
-    <link href="http://yoursite.com/vim-tips-part-i"/>
+    <link href="http://blog.siyelo.com/vim-tips-part-i"/>
     <updated>2012-06-27T07:50:00+00:00</updated>
-    <id>http://yoursite.com/vim-tips-part-i</id>
+    <id>http://blog.siyelo.com/vim-tips-part-i</id>
     <content type="html"><![CDATA[    <p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim" title="Practical Vim book">Practical Vim</a> book&nbsp;by Drew Neil.</p>
 <p><span style="font-size:medium;">1. Repeat the last Ex command</span></p>
 <p>In Vim there are 3 command line mode prompts:</p>
@@ -343,9 +343,9 @@ var report  = element.data('report')</pre></div>
   
   <entry>
     <title type="html"><![CDATA[Rails 3 upgrade process (the road from 2.3.14 to 3.2.6)]]></title>
-    <link href="http://yoursite.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6"/>
+    <link href="http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6"/>
     <updated>2012-06-21T16:10:35+00:00</updated>
-    <id>http://yoursite.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6</id>
+    <id>http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6</id>
     <content type="html"><![CDATA[    <p>We&#8217;ve just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we&#8217;ll share some details about the experience and the process we took for the upgrade. Before the upgrade, it&#8217;s advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
 <p><span style="color:#888888;font-size:large;">Versions running out of support&#8230;</span></p>
 <p>Why upgrade? Ruby 1.8.7 is slowly <a href="http://www.ruby-lang.org/en/news/2011/10/06/plans-for-1-8-7/" title="Ruby 1.8.7 support plans">running out of support</a> and Ruby on Rails 2.3.x is already <a href="https://groups.google.com/forum/#!topic/rubyonrails-security/CdoMUVpsRmQ/discussion">out of maintenance and out of security support</a>. If wondering which Ruby on Rails version are supported at the moment, it&#8217;s 3.2 for bugfixes and 3.1 for security fixes (see this <a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/30ff7f618a6428f3/a767ba1bbf526fde?q=#50a39e4694704f14" title="Ruby on Rails support">thread discussion</a> on rails-core mailing list).&nbsp;</p>
@@ -417,9 +417,9 @@ bundle exec guard init spork</pre></div>
   
   <entry>
     <title type="html"><![CDATA[WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN]]></title>
-    <link href="http://yoursite.com/were-hiring-social-media-marketing-intern"/>
+    <link href="http://blog.siyelo.com/were-hiring-social-media-marketing-intern"/>
     <updated>2012-05-11T14:07:00+00:00</updated>
-    <id>http://yoursite.com/were-hiring-social-media-marketing-intern</id>
+    <id>http://blog.siyelo.com/were-hiring-social-media-marketing-intern</id>
     <content type="html"><![CDATA[    <div>Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</div>
 <p />
 <div>&ndash;</div>
@@ -502,9 +502,9 @@ bundle exec guard init spork</pre></div>
   
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
-    <link href="http://yoursite.com/intro-to-machine-learning-in-ruby"/>
+    <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
     <updated>2011-12-30T10:41:00+00:00</updated>
-    <id>http://yoursite.com/intro-to-machine-learning-in-ruby</id>
+    <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <content type="html"><![CDATA[    <p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 <p>&nbsp;</p>
 <p><span style="color:#888888;font-size:large;">Let&#8217;s build&#8230;</span></p>
@@ -544,9 +544,9 @@ bundle exec guard init spork</pre></div>
   
   <entry>
     <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
-    <link href="http://yoursite.com/redis-in-the-nosql-ecosystem"/>
+    <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
     <updated>2011-12-28T21:01:00+00:00</updated>
-    <id>http://yoursite.com/redis-in-the-nosql-ecosystem</id>
+    <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
     <content type="html"><![CDATA[    <p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro" title="Redis Data Types">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub" title="Redis Publish/Subsscribe">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions" title="Redis transactions">transactions</a>.</p>
 <p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
 <p><span style="font-size:large;color:#888888;">Give us some ACID</span></p>
@@ -587,9 +587,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[jQuery Mobile overview]]></title>
-    <link href="http://yoursite.com/jquery-mobile-overview"/>
+    <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
     <updated>2011-12-14T09:51:00+00:00</updated>
-    <id>http://yoursite.com/jquery-mobile-overview</id>
+    <id>http://blog.siyelo.com/jquery-mobile-overview</id>
     <content type="html"><![CDATA[    <p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
 <p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/" title="jQuery Mobile" target="_blank">jQuery Mobile</a>, the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/" target="_blank">graded support</a> for a wide range of mobile browsers and platforms.<p />Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
 <p><span style="font-size:large;">Building a mobile application with jQuery Mobile is extremely easy and fast</span></p>
@@ -622,9 +622,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Stop Internet Censorship - FIGHT SOPA]]></title>
-    <link href="http://yoursite.com/stop-internet-censorship-fight-sopa"/>
+    <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
     <updated>2011-12-13T18:07:14+00:00</updated>
-    <id>http://yoursite.com/stop-internet-censorship-fight-sopa</id>
+    <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
     <content type="html"><![CDATA[    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit:http://americancensorship.org/posts/4672/uncensor
   
 ]]></content>
@@ -632,9 +632,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Siyelos' git workflow]]></title>
-    <link href="http://yoursite.com/siyelos-git-workflow"/>
+    <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
     <updated>2011-12-12T09:53:00+00:00</updated>
-    <id>http://yoursite.com/siyelos-git-workflow</id>
+    <id>http://blog.siyelo.com/siyelos-git-workflow</id>
     <content type="html"><![CDATA[    <p><span style="color:#9da7b0;font-family:Avenir Blog, Arial, Helvetica, sans-serif;"><span style="color:#000000;font-family:arial;font-size:small;">Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I&rsquo;m going to give a brief outline of how we work:</span><br /><span>&nbsp;</span><p /><span><strong><span style="font-size:large;">Named Branches</span></strong></span><p /><span>We rarely work on dev/master. Almost every feature we work on will get it&rsquo;s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</span><p /><span><span style="font-size:large;"><strong>Pull Requests</strong></span></span><p /><span>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</span><p /><span>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</span><p /><span><strong><span style="font-size:medium;">Why pull requests?</span></strong></span><p /><span>Pull requests serve 2 functions:</span><p /><span>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</span><p /><span>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</span><p /><span><strong><span style="font-size:large;">Merging</span></strong></span><p /><span>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</span><p /><span><strong><span style="font-size:large;">Deploying</span></strong></span><p /><span>Once merged in, the branch is immediately deployed to staging.</span><p /><span>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced. &nbsp;It also gives us more time to locate possible defects, if any.</span><p /><span>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</span></span></p>
 <p>&nbsp;</p>
   
@@ -643,9 +643,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[We have a new phone number!]]></title>
-    <link href="http://yoursite.com/we-have-a-new-phone-number"/>
+    <link href="http://blog.siyelo.com/we-have-a-new-phone-number"/>
     <updated>2011-12-08T08:04:32+00:00</updated>
-    <id>http://yoursite.com/we-have-a-new-phone-number</id>
+    <id>http://blog.siyelo.com/we-have-a-new-phone-number</id>
     <content type="html"><![CDATA[    <div>Siyelo has changed its Cape Town office number to &nbsp;<b>+27 (0) 21 461 2050</b>.</div><p /><div>Our old landline number (<span>+27 21 461 2559)</span>&nbsp;was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</div><p /><blockquote class="webkit-indent-blockquote" style="margin:0 0 0 40px;border:none;padding:0;"><div>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221;</div><div>&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221;</div><div><i>*facepalm*</i></div></blockquote><p /><div>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</div>
   
 ]]></content>
@@ -653,9 +653,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
-    <link href="http://yoursite.com/remote-pair-programming-with-screen"/>
+    <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
     <updated>2011-11-03T08:37:00+00:00</updated>
-    <id>http://yoursite.com/remote-pair-programming-with-screen</id>
+    <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
     <content type="html"><![CDATA[    <p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/" title="Remote pair-programming options" target="_blank">here</a>).</p>
 <p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 <ul style="margin-left:30px;">
@@ -707,9 +707,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Koding in Khayelitsha - great photo]]></title>
-    <link href="http://yoursite.com/koding-in-khayelitsha-great-photo"/>
+    <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
     <updated>2011-10-04T12:45:00+00:00</updated>
-    <id>http://yoursite.com/koding-in-khayelitsha-great-photo</id>
+    <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
     <content type="html"><![CDATA[    A great photo from the programming class @glennrob is involved with. <p /> (they&#8217;re learning ruby)<p><div class='p_embed p_image_embed'>
 <a href="http://siyelo.files.wordpress.com/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img alt="Koding_in_khayelitsha" height="747" src="http://siyelo.files.wordpress.com/2011/10/koding_in_khayelitsha-scaled-1000.jpg?w=200" width="500" /></a>
 </div>
@@ -720,9 +720,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Siyelo Office Graffiti: stop-motion video]]></title>
-    <link href="http://yoursite.com/siyelo-office-graffiti-stop-motion-video"/>
+    <link href="http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video"/>
     <updated>2011-09-23T10:11:28+00:00</updated>
-    <id>http://yoursite.com/siyelo-office-graffiti-stop-motion-video</id>
+    <id>http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video</id>
     <content type="html"><![CDATA[    [vimeo http://www.vimeo.com/29374463 w=500&h=283]
   
 ]]></content>
@@ -730,9 +730,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Installing a gem in all your global RVM gemsets]]></title>
-    <link href="http://yoursite.com/installing-a-gem-in-all-your-global-rvm-gemsets"/>
+    <link href="http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets"/>
     <updated>2011-09-08T18:46:00+00:00</updated>
-    <id>http://yoursite.com/installing-a-gem-in-all-your-global-rvm-gemsets</id>
+    <id>http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets</id>
     <content type="html"><![CDATA[    <div>Across different projects like us, you probably have a lot of development gems you like to use.&nbsp;</div>
 <div>E.g. we like;</div>
 
@@ -747,9 +747,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[How to bulk delete remote git tags]]></title>
-    <link href="http://yoursite.com/how-to-bulk-delete-remote-git-tags"/>
+    <link href="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags"/>
     <updated>2011-07-31T22:48:00+00:00</updated>
-    <id>http://yoursite.com/how-to-bulk-delete-remote-git-tags</id>
+    <id>http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags</id>
     <content type="html"><![CDATA[    <div>Our project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</div>
 
 <div>I needed a one-liner to find all these prerelease tags (i.e.&nbsp;all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</div>
@@ -803,9 +803,9 @@ First, in the initializer a new redis object as a global variable <strong>$redis
   
   <entry>
     <title type="html"><![CDATA[Can't drop your Heroku database?]]></title>
-    <link href="http://yoursite.com/cant-drop-your-heroku-database"/>
+    <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
     <updated>2011-07-27T13:08:00+00:00</updated>
-    <id>http://yoursite.com/cant-drop-your-heroku-database</id>
+    <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
     <content type="html"><![CDATA[    <p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e. <p /> Step 1	 <br />
 
 <p /> Step 2 <p /> 
