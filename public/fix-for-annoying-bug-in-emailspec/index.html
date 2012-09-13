@@ -9,16 +9,8 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as; 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 Scenario Outline: Register new &hellip;">
+  <meta name="description" content="EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as; 12345678910
+Scenario Outline:Register new userGivenI &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,63 +105,22 @@
   </header>
 
 
-<div class="entry-content">    <p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
-<p><div class="data type-cucumber">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-<span id="L3">3</span>
-<span id="L4">4</span>
-<span id="L5">5</span>
-<span id="L6">6</span>
-<span id="L7">7</span>
-<span id="L8">8</span>
-<span id="L9">9</span>
-<span id="L10">10</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1"><span class="k">Scenario Outline:</span><span class="nf"> Register new user </span></div><div class="line" id="LC2"><span class="k">Given </span><span class="nf">I am on the signup page </span></div><div class="line" id="LC3"><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Email</span><span class="nf">&quot; with &quot;&quot; </span></div><div class="line" id="LC4"><span class="k">And </span><span class="nf">I fill in &quot;</span><span class="s">Password</span><span class="nf">&quot; with &quot;&quot; </span></div><div class="line" id="LC5"><span class="k">And </span><span class="nf">I press &quot;</span><span class="s">Create My Account</span><span class="nf">&quot; </span></div><div class="line" id="LC6"><span class="k">Then </span><span class="nf">I should </span></div><div class="line" id="LC7"><span class="k">And </span><span class="nf">I should receive an email </span></div><div class="line" id="LC8"><span class="k">When </span><span class="nf">I open the email </span></div><div class="line" id="LC9"><span class="k">Then </span><span class="nf">I should see &quot;</span><span class="s">Please activate your new account</span><span class="nf">&quot; in the subject </span></div><div class="line" id="LC10"><span class="k">When </span><span class="nf">I click the first link in the email </span></div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div></p>
-<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you; <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-<span id="L3">3</span>
-<span id="L4">4</span>
-<span id="L5">5</span>
-<span id="L6">6</span>
-<span id="L7">7</span>
-<span id="L8">8</span>
-<span id="L9">9</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">You have a nil object when you didn&#039;t expect it! </div><div class="line" id="LC2">You might have expected an instance of Array. </div><div class="line" id="LC3">The error occurred while evaluating nil.include? (NoMethodError) </div><div class="line" id="LC4">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#039; </div><div class="line" id="LC5">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `select&#039; </div><div class="line" id="LC6">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#039; </div><div class="line" id="LC7">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in `mailbox_for&#039; </div><div class="line" id="LC8">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#039; </div><div class="line" id="LC9">./features/step_definitions/email_steps.rb:52 </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><em><br /></em> <br />I fixed the offending bug - grab the code either at Gemcutter <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">gem install glennr-email-spec </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><em><br /></em> <br />or via GitHub <p /> <em><a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a> </em><p /> If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
-  
+<div class="entry-content"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
+
+<p>12345678910
+Scenario Outline:Register new userGivenI am on the signup pageAndI fill in &#8220;Email&#8221; with &#8220;&#8221;AndI fill in &#8220;Password&#8221; with &#8220;&#8221;AndI press &#8220;Create My Account&#8221;ThenI shouldAndI should receive an emailWhenI open the emailThenI should see &#8220;Please activate your new account&#8221; in the subjectWhenI click the first link in the email</p>
+
+<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you;</p>
+
+<p>123456789
+You have a nil object when you didn&#8217;t expect it!You might have expected an instance of Array.The error occurred while evaluating nil.include? (NoMethodError)/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <code>mailbox_for'/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in</code>select&#8217;/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <code>mailbox_for'/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in</code>mailbox_for&#8217;/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#8217;./features/step_definitions/email_steps.rb:52**I fixed the offending bug - grab the code either at Gemcutter</p>
+
+<p>1
+gem install glennr-email-spec**or via GitHub</p>
+
+<p>*<a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a> *</p>
+
+<p>If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
 </div>
 
 
@@ -209,7 +160,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/browser-market-share-applying-the-8020-rule" title="Previous Post: Browser market share: Applying the 80:20 rule ">&laquo; Browser market share: Applying the 80:20 rule </a>
+        <a class="basic-alignment left" href="/browser-market-share-applying-the-8020-rule" title="Previous Post: Browser Market Share Applying The 8020 Rule">&laquo; Browser Market Share Applying The 8020 Rule</a>
       
       
         <a class="basic-alignment right" href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty" title="Next Post: Using Git? How to know what branch you're on, and if its dirty.">Using Git? How to know what branch you're on, and if its dirty. &raquo;</a>
@@ -233,11 +184,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="We all know that Textmate&#8217;s &#8220;Find in Project&#8221; feature runs like a dog. If you&#8217;re generally only really wanting to search .rb &hellip;">
+  <meta name="description" content="We all know that Textmate's "Find in Project" feature runs like a dog. If you&#8217;re generally only really wanting to search .rb files, here&#8217; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,27 +104,24 @@
   </header>
 
 
-<div class="entry-content">    We all know that Textmate&#8217;s &#8220;Find in Project&#8221; feature runs like a dog. <p /> If you&#8217;re generally only really wanting to search .rb files, here&#8217;s a script which I call &#8216;findrb&#8217; <p /> <div class="data type-shell">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1"><span class="c">#! /bin/sh</span></div><div class="line" id="LC2">find . -name <span class="se">*</span>.rb -type f | xargs grep -nHr <span class="s2">&quot;$1&quot;</span></div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> Drop this in a file in your $PATH, chmod +x it, and off you go. <p /> E.g. <p /> <code>
- glenn-roberts-4 ~/ba[master*]$ findrb 'show'
+<div class="entry-content"><pre><code>We all know that Textmate's "Find in Project" feature runs like a dog.
+</code></pre>
+
+<p>If you&#8217;re generally only really wanting to search .rb files, here&#8217;s a script which I call &#8216;findrb&#8217;</p>
+
+<p>12</p>
+
+<h1>! /bin/shfind . -name*.rb -type f | xargs grep -nHr&#8221;$1&#8221;</h1>
+
+<p>Drop this in a file in your $PATH, chmod +x it, and off you go.</p>
+
+<p>E.g.</p>
+
+<p><code>glenn-roberts-4 ~/ba[master*]$ findrb 'show'
  ./app/controllers/home_controller.rb:13: def show
  ./app/controllers/live_profiles_controller.rb:2: before_filter :authenticate_user!, :except =&gt; [ :index, :show ]
  ./app/controllers/live_profiles_controller.rb:22: def show
- ./app/controllers/live_profiles_controller.rb:26: format.html # show.html.haml
-</code>
-
+ ./app/controllers/live_profiles_controller.rb:26: format.html # show.html.haml</code></p>
 </div>
 
 
@@ -164,10 +161,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/speeding-up-bash-aliasing-to-speed-up-your-rails-development" title="Previous Post: Speeding up bash aliasing to speed up your Rails development">&laquo; Speeding up bash aliasing to speed up your Rails development</a>
+        <a class="basic-alignment left" href="/speeding-up-bash-aliasing-to-speed-up-your-rails-development" title="Previous Post: Speeding Up Bash Aliasing To Speed Up Your Rails Development">&laquo; Speeding Up Bash Aliasing To Speed Up Your Rails Development</a>
       
       
-        <a class="basic-alignment right" href="/tip-of-the-day-mime-types-for-paperclip-ie8" title="Next Post: Tip of the day: MIME types for Paperclip & IE8">Tip of the day: MIME types for Paperclip & IE8 &raquo;</a>
+        <a class="basic-alignment right" href="/tip-of-the-day-mime-types-for-paperclip-ie8" title="Next Post: Tip Of The Day Mime Types For Paperclip Ie8">Tip Of The Day Mime Types For Paperclip Ie8 &raquo;</a>
       
     </p>
   </footer>
@@ -188,11 +185,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

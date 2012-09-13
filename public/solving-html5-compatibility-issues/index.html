@@ -104,13 +104,25 @@
   </header>
 
 
-<div class="entry-content">    <p>By now you&#8217;ve probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics. Why use &lt;div id=&#8221;header&#8221;&gt; when you can use just &lt;header&gt;? This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.<p />But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won&#8217;t be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it&#8217;s a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
+<div class="entry-content"><p>By now you&#8217;ve probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics. Why use <div id="header"> when you can use just <header>? This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.</p>
+
+<p>But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won&#8217;t be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it&#8217;s a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
+
 <p>The first solution is a very simple one and apllies to normal type of browsers like Firefox, Safari, Opera, Chrome: just put the CSS property { display: block; } in your stylesheets:</p>
-<p>&nbsp;&nbsp;&nbsp; &lt;style type=&#8221;text/css&#8221;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; header, nav, article, footer, example { display: block; }<br />&nbsp;&nbsp;&nbsp; &lt;/style&gt;</p>
-<p>and you&#8217;re done. This converted them into block elements and returned them in the flow, so you can use the tags in your document.<p />But this is not so easy when it comes to Internet Explorer. You always need to put more effort into explaining something to a deaf, dumb and blind person, and so is this monstrocity spawned by Microsoft. What you need to do here is add some javascript, otherwise your html5 elements won&#8217;t be recognized even by applying the block property. In the head of the document place this piece of code:<p />&nbsp; &lt;script&gt;document.createElement(&#8216;time&#8217;);&lt;/script&gt;<p />This just created the &lt;date&gt; tag. You can use this method to create all the elements you require to make your html5-ish website acceptable for IE. There&#8217;s also <a href="http://remysharp.com/downloads/html5.js">a script</a> made by Remy Sharp that will take care of this for you.</p>
-<p>But nowdays we have more complete solutions to this problem, that also deal with cross-browser compatibility, improved css degradation and add some extra features. We have <a href="http://www.modernizr.com/">Modernizr</a>, JavaScript created by Faruk Ateş and Paul Irish that creates support for HTML5 and a lot of CSS3, and <a href="http://html5boilerplate.com/">Boilerplate</a> created by Paul Irish and Divya Manian, a cross-browser compatible and future-proof HTML template that support HTML5 and CSS3. What&#8217;s really cool about Boilerplate is that they are working on a HAML/SASS port.</p>
-<p>And for the end here are some cool examples of HTML5 websites, published recently by <a href="http://webdesignledger.com/inspiration/55-excellent-examples-of-websites-using-html5">WDL</a>. I know i&#8217;ll be using HTML5 on my next website.</p>
-  
+
+<p>    <style type="text/css">        header, nav, article, footer, example { display: block; }    </style></p>
+
+<p>and you&#8217;re done. This converted them into block elements and returned them in the flow, so you can use the tags in your document.</p>
+
+<p>But this is not so easy when it comes to Internet Explorer. You always need to put more effort into explaining something to a deaf, dumb and blind person, and so is this monstrocity spawned by Microsoft. What you need to do here is add some javascript, otherwise your html5 elements won&#8217;t be recognized even by applying the block property. In the head of the document place this piece of code:</p>
+
+<p>  <script>document.createElement('time');</script></p>
+
+<p>This just created the <date> tag. You can use this method to create all the elements you require to make your html5-ish website acceptable for IE. There&#8217;s also<a href="http://remysharp.com/downloads/html5.js">a script</a> made by Remy Sharp that will take care of this for you.</p>
+
+<p>But nowdays we have more complete solutions to this problem, that also deal with cross-browser compatibility, improved css degradation and add some extra features. We have<a href="http://www.modernizr.com/">Modernizr</a> , JavaScript created by Faruk Ateş and Paul Irish that creates support for HTML5 and a lot of CSS3, and<a href="http://html5boilerplate.com/">Boilerplate</a> created by Paul Irish and Divya Manian, a cross-browser compatible and future-proof HTML template that support HTML5 and CSS3. What&#8217;s really cool about Boilerplate is that they are working on a HAML/SASS port.</p>
+
+<p>And for the end here are some cool examples of HTML5 websites, published recently by<a href="http://webdesignledger.com/inspiration/55-excellent-examples-of-websites-using-html5">WDL</a> . I know i&#8217;ll be using HTML5 on my next website.</p>
 </div>
 
 
@@ -150,10 +162,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/web-apps-to-outlast-mobilenative-apps" title="Previous Post: Web apps to outlast mobile/native apps">&laquo; Web apps to outlast mobile/native apps</a>
+        <a class="basic-alignment left" href="/cancan-make-up-your-mind" title="Previous Post: Cancan Make Up Your Mind">&laquo; Cancan Make Up Your Mind</a>
       
       
-        <a class="basic-alignment right" href="/cancan-make-up-your-mind" title="Next Post: CanCan - make up your mind!">CanCan - make up your mind! &raquo;</a>
+        <a class="basic-alignment right" href="/git-workflow-for-a-staging-environment-with-heroku-and-github" title="Next Post: Git Workflow For A Staging Environment With Heroku And Github">Git Workflow For A Staging Environment With Heroku And Github &raquo;</a>
       
     </p>
   </footer>
@@ -174,11 +186,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

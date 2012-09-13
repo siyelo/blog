@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of &hellip;">
+  <meta name="description" content="We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,70 +104,37 @@
   </header>
 
 
-<div class="entry-content">    We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few. <p /> It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place). <p /> On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this. <p />	 <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">&nbsp;&nbsp;config.gem &#039;devise&#039;</div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> becomes <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">	config.gem &#039;devise&#039;, :version =&gt; &#039;&gt;=1.0.0&#039;</div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p />  <br />And after restarting the server, a barf. <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">	ActionView::TemplateError (undefined local variable or method `new_user_session_path&#039; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p />  <br />So obviously my Devise resource, User in this case, is fubar. <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">	class User &lt; ActiveRecord::Base</div><div class="line" id="LC2">&nbsp;&nbsp;	  devise :all </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p />  <br />Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model. <p />	 <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">	class User &lt; ActiveRecord::Base</div><div class="line" id="LC2">	  devise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable</div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.
-  
+<div class="entry-content"><pre><code>We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.
+</code></pre>
+
+<p>It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place).</p>
+
+<p>On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.</p>
+
+<p>1
+  config.gem &#8216;devise&#8217;</p>
+
+<p>becomes</p>
+
+<p>1
+config.gem &#8216;devise&#8217;, :version => &#8216;>=1.0.0&#8217;</p>
+
+<p>And after restarting the server, a barf.</p>
+
+<p>1
+ActionView::TemplateError (undefined local variable or method `new_user_session_path&#8217; for #&lt;ActionView::Base:0x243fca4>) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &#8220;Join&#8221;, join_url 27: %li= link_to &#8220;Sign In&#8221;, new_user_session_path</p>
+
+<p>So obviously my Devise resource, User in this case, is fubar.</p>
+
+<p>12
+class User &lt; ActiveRecord::Base     devise :all</p>
+
+<p>Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
+
+<p>12
+class User &lt; ActiveRecord::Basedevise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable</p>
+
+<p>So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.</p>
 </div>
 
 
@@ -207,7 +174,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/paperclip-attachment-validations" title="Previous Post: Paperclip - attachment validations">&laquo; Paperclip - attachment validations</a>
+        <a class="basic-alignment left" href="/paperclip-attachment-validations" title="Previous Post: Paperclip Attachment Validations">&laquo; Paperclip Attachment Validations</a>
       
       
         <a class="basic-alignment right" href="/rails-2-3devise-changing-your-email-content-type" title="Next Post: Rails 2.3/Devise : changing your email content type.">Rails 2.3/Devise : changing your email content type. &raquo;</a>
@@ -231,11 +198,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

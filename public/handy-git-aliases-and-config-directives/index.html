@@ -9,11 +9,8 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc: 1
-2
-3
-4
-5 [alias] st = status ci = &hellip;">
+  <meta name="description" content="By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc: 12345
+[alias]st = statusci = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,67 +105,21 @@
   </header>
 
 
-<div class="entry-content">    <p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc: <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-<span id="L3">3</span>
-<span id="L4">4</span>
-<span id="L5">5</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">[alias] </div><div class="line" id="LC2">st = status </div><div class="line" id="LC3">ci = commit </div><div class="line" id="LC4">co = checkout </div><div class="line" id="LC5">br = branch </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> Also, you might find these will come in handy; <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-<span id="L3">3</span>
-<span id="L4">4</span>
-<span id="L5">5</span>
-<span id="L6">6</span>
-<span id="L7">7</span>
-<span id="L8">8</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1">[merge] </div><div class="line" id="LC2">tool = opendiff </div><div class="line" id="LC3">summary = true </div><div class="line" id="LC4">[color] </div><div class="line" id="LC5">diff = auto </div><div class="line" id="LC6">status = auto </div><div class="line" id="LC7">branch = auto </div><div class="line" id="LC8">interactive = auto </div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div><p /> Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first. <p /> <div class="data type-text">
-      <table class="lines" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="L1">1</span>
-<span id="L2">2</span>
-<span id="L3">3</span>
-<span id="L4">4</span>
-<span id="L5">5</span>
-<span id="L6">6</span>
-<span id="L7">7</span>
-<span id="L8">8</span>
-<span id="L9">9</span>
-<span id="L10">10</span>
-<span id="L11">11</span>
-<span id="L12">12</span>
-<span id="L13">13</span>
-</pre>
-          </td>
-          <td width="100%">
-                <div class="highlight"><pre /><div class="line" id="LC1"># http://henrik.nyh.se/2008/12/git-dirty-prompt</div><div class="line" id="LC2"># http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/</div><div class="line" id="LC3"># http://gist.github.com/47546</div><div class="line" id="LC4">&nbsp;</div><div class="line" id="LC5">function parse_git_dirty {</div><div class="line" id="LC6">&nbsp;&nbsp;git diff --quiet HEAD &amp;&gt;/dev/null</div><div class="line" id="LC7">&nbsp;&nbsp;[[ $? == 1 ]] &amp;&amp; echo &quot;*&quot;</div><div class="line" id="LC8">}</div><div class="line" id="LC9">function parse_git_branch {</div><div class="line" id="LC10">&nbsp;&nbsp;local branch=$(__git_ps1 &quot;%s&quot;)</div><div class="line" id="LC11">&nbsp;&nbsp;[[ $branch ]] &amp;&amp; echo &quot;[$branch$(parse_git_dirty)]&quot;</div><div class="line" id="LC12">}</div><div class="line" id="LC13">export PS1=$(echo &quot;$PS1&quot; | sed &#039;s/\w/\w\[33[35m\]$(parse_git_branch)\[33[0m\]/g&#039;)</div></pre></div>
-          </td>
-        </tr>
-      </table>
-  </div></p>
-  
+<div class="entry-content"><p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc:</p>
+
+<p>12345
+[alias]st = statusci = commitco = checkoutbr = branch</p>
+
+<p>Also, you might find these will come in handy;</p>
+
+<p>12345678
+[merge]tool = opendiffsummary = true[color]diff = autostatus = autobranch = autointeractive = auto</p>
+
+<p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
+
+<p>12345678910111213</p>
+
+<h1>http://henrik.nyh.se/2008/12/git-dirty-prompt# http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/# http://gist.github.com/47546 function parse_git_dirty {  git diff &#8211;quiet HEAD &amp;>/dev/null  [[ $? == 1 ]] &amp;&amp; echo &#8220;*&#8221;}function parse_git_branch {  local branch=$(__git_ps1 &#8220;%s&#8221;)  [[ $branch ]] &amp;&amp; echo &#8220;[$branch$(parse_git_dirty)]&#8221;}export PS1=$(echo &#8220;$PS1&#8221; | sed &#8216;s/\w/\w[33[35m]$(parse_git_branch)[33[0m]/g&#8217;)</h1>
 </div>
 
 
@@ -211,7 +162,7 @@
         <a class="basic-alignment left" href="/aliases-for-common-heroku-commands" title="Previous Post: Aliases for common Heroku commands">&laquo; Aliases for common Heroku commands</a>
       
       
-        <a class="basic-alignment right" href="/browser-market-share-applying-the-8020-rule" title="Next Post: Browser market share: Applying the 80:20 rule ">Browser market share: Applying the 80:20 rule  &raquo;</a>
+        <a class="basic-alignment right" href="/browser-market-share-applying-the-8020-rule" title="Next Post: Browser Market Share Applying The 8020 Rule">Browser Market Share Applying The 8020 Rule &raquo;</a>
       
     </p>
   </footer>
@@ -232,11 +183,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

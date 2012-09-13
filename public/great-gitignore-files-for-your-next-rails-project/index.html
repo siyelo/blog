@@ -104,22 +104,22 @@
   </header>
 
 
-<div class="entry-content">    <p>Here&#8217;s great rails template snippet to set up .gitignore files throughout your whole Rails project. <p /> It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git. <p /> <code> 
-run "touch tmp/.gitignore log/.gitignore vendor/.gitignore" 
- 
-run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore} 
- 
-file '.gitignore', &lt;&lt;-EOS.gsub(/^ /, '') 
-.DS_Store 
-log/*.log 
-tmp/**/* 
-config/database.yml 
-config/initializers/site_keys.rb 
-db/*.sqlite3 
-EOS 
- 
-</code></p>
-  
+<div class="entry-content"><p>Here&#8217;s great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
+
+<p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
+
+<p>`run &#8220;touch tmp/.gitignore log/.gitignore vendor/.gitignore&#8221;</p>
+
+<p>run %{find . -type d -empty | grep -v &#8220;vendor&#8221; | grep -v &#8220;.git&#8221; | grep -v &#8220;tmp&#8221; | xargs -I xxx touch xxx/.gitignore}</p>
+
+<p>file &#8216;.gitignore&#8217;, &lt;&lt;-EOS.gsub(/^ /, &#8221;)
+.DS_Store
+log/<em>.log
+tmp/**/</em>
+config/database.yml
+config/initializers/site_keys.rb
+db/*.sqlite3
+EOS`</p>
 </div>
 
 
@@ -183,11 +183,11 @@ EOS
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
       </li>
     
       <li class="post">

@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-09-13T11:55:04+02:00</updated>
+  <updated>2012-09-13T15:31:39+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,80 +14,65 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Siyelo Drinkup: Skopje]]></title>
-    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
-    <updated>2012-09-11T16:09:00+02:00</updated>
-    <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
-    <content type="html"><![CDATA[    <div>There&#8217;ll be&nbsp;<a href="https://github.com/dalibor">three</a>&nbsp;<a href="https://github.com/Dime">Siyelo</a>&nbsp;<a href="https://github.com/glennr">folks</a>&nbsp;in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.</div>
-<div><span> </span><div class='p_embed p_image_embed'>
-<img alt="Pastedgraphic-4" height="138" src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-4.png" width="254" />
-</div>
-</div>
-<div>If you&#8217;re into web technologies, come and join us next Wednesday night for a great time at La Bodeguita in Skopje - drinks are on us!</div>
-<p><div class='p_embed p_image_embed'>
-<img alt="Pastedgraphic-1" height="291" src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-1.png" width="450" />
-</div>
-</p>
-<div><strong>Details:</strong></div>
-<div style="margin:0 0 0 20px;border:none!important;padding:0;">
-<div><strong>Where:&nbsp;</strong></div>
-<div style="margin:0 0 0 20px;border:none!important;padding:0;"><a href="http://www.bodeguita.com.mk/">La Bodeguita Del Medio</a></div>
-<div style="margin:0 0 0 20px;border:none!important;padding:0;">13 Noembri 180, Skopje</div>
-<div><strong>When:&nbsp;</strong>&nbsp;</div>
-<div style="margin:0 0 0 20px;border:none!important;padding:0;">Wednesday,&nbsp;19 Sep, 7PM</div>
-</div>
-<div><div class='p_embed p_image_embed'>
-<img alt="Pastedgraphic-2" height="350" src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-2.png" width="450" />
-</div>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[We're Hiring - Experienced Web Developer]]></title>
     <link href="http://blog.siyelo.com/were-hiring-experienced-web-developer"/>
     <updated>2012-09-11T15:45:00+02:00</updated>
     <id>http://blog.siyelo.com/were-hiring-experienced-web-developer</id>
-    <content type="html"><![CDATA[    <p><div class='p_embed p_image_embed'>
-<a href="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg"><img alt="Nsyncsongpics1llj5txulpx8qrm" height="375" src="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg" width="500" /></a>
-</div>
-</p>
+    <content type="html"><![CDATA[<p><a href="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg"><img src="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg" alt="Nsyncsongpics1llj5txulpx8qrm" /> </a></p>
+
 <p>Siyelo is growing and we&#8217;re looking for talented software developers to join our team!</p>
+
 <p><strong>Opportunity</strong></p>
-<p>Be a part of an entrepreneurial and focused Ruby/Rails software consultancy, where <em>everybody codes </em>(yes, even our designer Dime has mad coding skills)<em>.</em>&nbsp;We are looking for people with strong web development backgrounds, with a passion for clean code and great software.</p>
+
+<p>Be a part of an entrepreneurial and focused Ruby/Rails software consultancy, where<em>everybody codes</em>(yes, even our designer Dime has mad coding skills)<em>.</em> We are looking for people with strong web development backgrounds, with a passion for clean code and great software.</p>
+
 <p>We believe that all members of the product team have end-to-end responsibility - from design to demo-ing. As a developer you will participate in conceptualization and wireframing of projects, provide design feedback, be responsible for the user experience and ensure that all code we ship has 1) been fully tested and 2) kicks ass.</p>
-<p>We are working on an exciting mix of improving and scaling existing apps and developing entirely new apps. Our team is fast, talented and independent, and we encourage Open Source contributions and community participation.&nbsp;</p>
-<p><strong><br />Requirements<br /></strong></p>
-<ul>
-<li>3+ years web development experience</li>
-<li>Experience in Object Oriented languages &amp; domain driven design</li>
-<li>Agile development practices: TDD/BDD, pair programming, refactoring</li>
-<li>PostgreSQL / MySQL</li>
-<li>*nix.</li>
-<li>Unnatural desire to learn new things</li>
-<li>English proficiency a must.</li>
-</ul>
-<ul>
-</ul>
-<p><strong><br />Highly Regarded<br /></strong></p>
-<ul>
-<li>Ruby / JS / Python / Smalltalk / Java / .Net experience</li>
-<li>NoSQL technologies</li>
-<li>Front-end dev skills</li>
-<li>Open source contributions</li>
-<li>Git</li>
-<li>Vim</li>
-<li>In-depth knowledge of 90&#8217;s boy band &#8216;N Sync</li>
-</ul>
-<p><strong>Location</strong></p>
-<ul>
-<li>Skopje or Cape Town</li>
-</ul>
-<p><strong><br />How to Apply</strong></p>
-<p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
 
+<p>We are working on an exciting mix of improving and scaling existing apps and developing entirely new apps. Our team is fast, talented and independent, and we encourage Open Source contributions and community participation. </p>
 
+<p><strong>Requirements</strong>
+- 3+ years web development experience
+- Experience in Object Oriented languages &amp; domain driven design
+- Agile development practices: TDD/BDD, pair programming, refactoring
+- PostgreSQL / MySQL
+- *nix.
+- Unnatural desire to learn new things
+- English proficiency a must.</p>
+
+<p><strong>Highly Regarded</strong>
+- Ruby / JS / Python / Smalltalk / Java / .Net experience
+- NoSQL technologies
+- Front-end dev skills
+- Open source contributions
+- Git
+- Vim
+- In-depth knowledge of 90&#8217;s boy band &#8216;N Sync</p>
+
+<p><strong>Location</strong>
+- Skopje or Cape Town</p>
+
+<p><strong>How to Apply</strong></p>
+
+<p>Please send your portfolio and open source links to<a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a> . Attach a CV if you must.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Siyelo Drinkup Skopje]]></title>
+    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
+    <updated>2012-09-11T00:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
+    <content type="html"><![CDATA[<hr />
+
+<p>layout: post
+title: &#8220;Siyelo Drinkup: Skopje&#8221;
+date: 2012-09-11 14:09:00
+comments: true
+categories:
+author:
+&#8212;There&#8217;ll be <a href="https://github.com/dalibor">three</a>  <a href="https://github.com/Dime">Siyelo</a>  <a href="https://github.com/glennr">folks</a>  in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.![Pastedgraphic-4][/images/old/2012/09/pastedgraphic-4.png] If you&#8217;re into web technologies, come and join us next Wednesday night for a great time at La Bodeguita in Skopje - drinks are on us!</p>
+
+<p>![Pastedgraphic-1][/images/old/2012/09/pastedgraphic-1.png] <strong>Details:</strong><strong>Where: </strong><a href="http://www.bodeguita.com.mk/">La Bodeguita Del Medio</a> 13 Noembri 180, Skopje<strong>When: </strong> Wednesday, 19 Sep, 7PM![Pastedgraphic-2][/images/old/2012/09/pastedgraphic-2.png]</p>
 ]]></content>
   </entry>
   
@@ -96,23 +81,22 @@
     <link href="http://blog.siyelo.com/scratching-an-itch"/>
     <updated>2012-09-07T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/scratching-an-itch</id>
-    <content type="html"><![CDATA[    <p>This week we released a very simple gem called&nbsp;<a href="https://rubygems.org/gems/should_clean" target="_blank">ShouldClean</a>. &nbsp;ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;). &nbsp;</p>
-<p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. &nbsp;ShouldClean will remove the word &#8216;should&#8217; and will conjugate&nbsp;the verb to its singular 3rd person, present indicative form (huh?). For example:&nbsp;</p>
-<ul>
-<li>it &#8220;should be true&#8221; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt; it &#8220;is true&#8221;</li>
-<li>it &#8220;should action something&#8221; -&gt; it &#8220;actions something&#8221;</li>
-<li>it &#8220;should push something&#8221; &nbsp; -&gt; it &#8220;pushes something&#8221;</li>
-<li>it &#8220;should by default be 1&#8221; &nbsp; &nbsp;-&gt; it &#8220;by default is 1&#8221;</li>
-</ul>
-<p>Are a few extra &#8216;shoulds&#8217; really that big of deal? Probably not - it really boils down to a matter of preference. &nbsp;For us, running this tool on projects with large test suites helps:</p>
-<ol>
-<li>make the tests more readable;</li>
-<li>it reduces unneccessary duplication in the spec files and the test output;</li>
-<li>An added benefit is that the test suite has a mood of certainty about it - reading the tests tells you what the code does, not what it should do when everything falls into place.&nbsp;</li>
-</ol>
-<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better. &nbsp;Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean" target="_blank">http://www.github.com/siyelo/should_clean</a>)</p>
-<p>&nbsp;</p>
-  
+    <content type="html"><![CDATA[<p>This week we released a very simple gem called <a href="https://rubygems.org/gems/should_clean">ShouldClean</a> .  ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;).  </p>
+
+<p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds.  ShouldClean will remove the word &#8216;should&#8217; and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: 
+- it &#8220;should be true&#8221;                -> it &#8220;is true&#8221;
+- it &#8220;should action something&#8221; -> it &#8220;actions something&#8221;
+- it &#8220;should push something&#8221;   -> it &#8220;pushes something&#8221;
+- it &#8220;should by default be 1&#8221;    -> it &#8220;by default is 1&#8221;</p>
+
+<p>Are a few extra &#8216;shoulds&#8217; really that big of deal? Probably not - it really boils down to a matter of preference.  For us, running this tool on projects with large test suites helps:
+1. make the tests more readable;
+2. it reduces unneccessary duplication in the spec files and the test output;
+3. An added benefit is that the test suite has a mood of certainty about it - reading the tests tells you what the code does, not what it should do when everything falls into place. </p>
+
+<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a> )</p>
+
+<p> </p>
 ]]></content>
   </entry>
   
@@ -121,40 +105,71 @@
     <link href="http://blog.siyelo.com/rails-deployment-audit"/>
     <updated>2012-07-13T16:13:00+02:00</updated>
     <id>http://blog.siyelo.com/rails-deployment-audit</id>
-    <content type="html"><![CDATA[    <p>We recently undertook an audit of a Rails deployment for a system  developed by&nbsp;<a href="http://www.redcometlabs.com/" title="Red Comet Labs">Red Comet Labs</a>. It is a Rails 3.2 application that  integrates with 3 different storage systems (CouchDB, PostgreSQL and  Redis). It is deployed using Capistrano and the server setup and  management is done using Chef.</p>
-<p>We shared our Rails Deployment experience with Red Comet Labs, and in  this article we&#8217;ll discuss a checklist of some&nbsp;<a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/" title="What is this devops thing anyway?">devops</a>&nbsp;practices and  tools we are familiar with.</p>
-<p><span style="font-size:medium;">Extract sensitive data</span></p>
-<p>All sensitive data like passwords, API keys &amp;  tokens that are in the application are extracted as environment  variables outside of the source code repository. We are using&nbsp;<a href="https://github.com/sstephenson/rbenv" title="rbenv">rbevn</a>&nbsp;for  managing rubies, there is a nice plugin for setting up environment  variables <a href="https://github.com/sstephenson/rbenv-vars" title="rbenv vars">rbenv-vars</a>.</p>
-<p><span style="font-size:medium;">Continuous Integration &amp; Deployment</span></p>
-<p>There are many great open source and commercial tools out there for&nbsp;<a href="https://www.ruby-toolbox.com/categories/continuous_integration" title="Continuous Integration tools">Continuous Integration</a>. We are using&nbsp;<a href="http://jenkins-ci.org/" title="Jenkins">Jenkins CI</a>&nbsp;to run our test suite  and handle Continuous Deployment (if the tests are green) for our  staging branch. For production releases, we suggest doing releases  manually at a scheduled time with the whole team ready and available.</p>
-<p><span style="font-size:medium;">Deployment tools</span></p>
-<p>If you need more advanced tool for doing the deploy,&nbsp;<a href="https://github.com/capistrano/capistrano" title="Capistrano deployment tool">Capistrano</a>&nbsp;is the definitely the tool to go with. However, if you want  something more light-weight you can try&nbsp;<a href="https://github.com/brentd/gitploy" title="Gitploy deployment tool">gitploy</a>&nbsp;(bare minimum,  git-based tool for deployment). Alternatively, check out another tool  from this&nbsp;<a href="https://www.ruby-toolbox.com/categories/deployment_automation" title="Deployment Automation">list</a>.</p>
-<p><span style="font-size:medium;">Deployment Documentation</span></p>
-<p>Document server setup and everything about the deployment process.  It may seem tedious now but in the long-run it will help because setups  are easily forgetten and the person who initially setup the server is  not always on hand to assist. By using an automation tool like&nbsp;<a href="http://wiki.opscode.com/display/chef/" title="Chef">Chef</a>&nbsp;or&nbsp;<a href="http://puppetlabs.com/" title="Puppet">Puppet</a>&nbsp;you are kind of documenting things on the fly.</p>
-<p><span style="font-size:medium;">Server security</span></p>
-<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest  way to prevent accidentally breaking things. Create another user that  can execute superuser commands using sudo. Use this non-root user all  the time. You should use SSH key authentication to protect your server  against brute-force password cracking attacks. Furthermore, you should  disable SSH password authentication and the ability to login as root.  Read more on this in Linode&#8217;s guide on how to&nbsp;<a href="http://library.linode.com/securing-your-server" title="Securing your server">secure your server</a>.</p>
-<p><span style="font-size:medium;">Start clean on boot</span></p>
-<p>All the services that are being used by the application need to start  cleanly when the server boots up - there should be no need for manual  intervention. If you are deploying to Ubuntu,&nbsp;<a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html" title="update-rc.d">update-rc.d</a>&nbsp;can be used for init.d processes.&nbsp;And, for the application Procfile-based processes you can use the&nbsp;<a href="https://github.com/ddollar/foreman" title="foreman gem">foreman gem</a>&nbsp;and there is an easy&nbsp;<a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/" title="foreman export to upstart">export to  upstart</a>&nbsp;for monitoring and boot start up setup.</p>
-<p><span style="font-size:medium;">Log files</span></p>
-<p>Prevent log files from growing to the point where you don&#8217;t have any  space left on disc device by using&nbsp;<a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/" title="logrotate">logrotate</a>. Analyze request log of  your Rails application to produce a performance report with&nbsp;<a href="https://github.com/wvanbergen/request-log-analyzer" title="request-log-analyzer gem">request-log-analyzer</a>.</p>
-<p><span style="font-size:medium;">Cron jobs</span></p>
-<p>Whether it&#8217;s a backup script or background task that needs to be  run as a job, it&#8217;s a good idea to have documentation on it within the  application. Cron&#8217;s scheduling format is often&nbsp;difficult to read so we suggest using the&nbsp;<a href="https://github.com/javan/whenever/" title="whenever gem">whenever gem</a>&nbsp;to make it more readable.</p>
-<p><span style="font-size:medium;">Backups</span></p>
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup" title="backup gem">backup gem</a> is very handy tool for that.</p>
-<p><span style="font-size:medium;">Failover</span></p>
-<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer&nbsp;daily/weekly/monthly&nbsp;<a href="http://www.linode.com/backups/" title="Linode backups">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
-<p><span style="font-size:medium;">External monitoring tools</span></p>
-<p>Service like <a href="http://www.pingdom.com/" title="Pingdom monitoring">Pingdom</a> or <a href="http://www.alertra.com/" title="Alerta monitoring">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
-<p><span style="font-size:medium;">Notifications for Exceptions</span></p>
-<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification" title="exception_notification gem">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/" title="Airbrake exception notifications">Airbrake</a> or <a href="http://www.exceptional.io/" title="Exceptional exception notifications">Exceptional</a>.</p>
-<p><span style="font-size:medium;">Process monitoring tools</span></p>
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory.&nbsp;Tools like <a href="http://upstart.ubuntu.com/" title="Upstart process monitoring tool">Upstart</a>,&nbsp;<a href="https://github.com/arya/bluepill" title="Bluepill monitor">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/" title="God monitor">God</a>&nbsp;and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/" title="Monit monitor">Monit</a>&nbsp;are useful.</p>
-<p><span style="font-size:medium;">Server performance</span></p>
-<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat" title="vmstat server performance">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/" title="Server performance monitor">scoutapp</a>.</p>
-<p><span style="font-size:medium;">Application performance</span></p>
-<p>Monitor your application performance, uptime, slow DB&nbsp;queries, background tasks with <a href="http://newrelic.com/" title="New Relic">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring" title="Availability monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
+    <content type="html"><![CDATA[<p>We recently undertook an audit of a Rails deployment for a system  developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a> . It is a Rails 3.2 application that  integrates with 3 different storage systems (CouchDB, PostgreSQL and  Redis). It is deployed using Capistrano and the server setup and  management is done using Chef.</p>
+
+<p>We shared our Rails Deployment experience with Red Comet Labs, and in  this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a>  practices and  tools we are familiar with.</p>
+
+<p>Extract sensitive data</p>
+
+<p>All sensitive data like passwords, API keys &amp;  tokens that are in the application are extracted as environment  variables outside of the source code repository. We are using <a href="https://github.com/sstephenson/rbenv">rbevn</a>  for  managing rubies, there is a nice plugin for setting up environment  variables<a href="https://github.com/sstephenson/rbenv-vars">rbenv-vars</a> .</p>
+
+<p>Continuous Integration &amp; Deployment</p>
+
+<p>There are many great open source and commercial tools out there for <a href="https://www.ruby-toolbox.com/categories/continuous_integration">Continuous Integration</a> . We are using <a href="http://jenkins-ci.org/">Jenkins CI</a>  to run our test suite  and handle Continuous Deployment (if the tests are green) for our  staging branch. For production releases, we suggest doing releases  manually at a scheduled time with the whole team ready and available.</p>
+
+<p>Deployment tools</p>
+
+<p>If you need more advanced tool for doing the deploy, <a href="https://github.com/capistrano/capistrano">Capistrano</a>  is the definitely the tool to go with. However, if you want  something more light-weight you can try <a href="https://github.com/brentd/gitploy">gitploy</a>  (bare minimum,  git-based tool for deployment). Alternatively, check out another tool  from this <a href="https://www.ruby-toolbox.com/categories/deployment_automation">list</a> .</p>
+
+<p>Deployment Documentation</p>
+
+<p>Document server setup and everything about the deployment process.  It may seem tedious now but in the long-run it will help because setups  are easily forgetten and the person who initially setup the server is  not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a>  or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
+
+<p>Server security</p>
+
+<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest  way to prevent accidentally breaking things. Create another user that  can execute superuser commands using sudo. Use this non-root user all  the time. You should use SSH key authentication to protect your server  against brute-force password cracking attacks. Furthermore, you should  disable SSH password authentication and the ability to login as root.  Read more on this in Linode&#8217;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a> .</p>
+
+<p>Start clean on boot</p>
+
+<p>All the services that are being used by the application need to start  cleanly when the server boots up - there should be no need for manual  intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to  upstart</a>  for monitoring and boot start up setup.</p>
+
+<p>Log files</p>
+
+<p>Prevent log files from growing to the point where you don&#8217;t have any  space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a> . Analyze request log of  your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a> .</p>
+
+<p>Cron jobs</p>
+
+<p>Whether it&#8217;s a backup script or background task that needs to be  run as a job, it&#8217;s a good idea to have documentation on it within the  application. Cron&#8217;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
+
+<p>Backups</p>
+
+<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations,<a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
+
+<p>Failover</p>
+
+<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer daily/weekly/monthly <a href="http://www.linode.com/backups/">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
+
+<p>External monitoring tools</p>
+
+<p>Service like<a href="http://www.pingdom.com/">Pingdom</a> or<a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
+
+<p>Notifications for Exceptions</p>
+
+<p>Setup exception notifications to receive email notifications when application crashes. You can use<a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like<a href="http://airbrake.io/">Airbrake</a> or<a href="http://www.exceptional.io/">Exceptional</a> .</p>
+
+<p>Process monitoring tools</p>
+
+<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like<a href="http://upstart.ubuntu.com/">Upstart</a> , <a href="https://github.com/arya/bluepill">Bluepill</a> ,<a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a>  and<a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a>  are useful.</p>
+
+<p>Server performance</p>
+
+<p>Monitor server performance with<a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like<a href="https://scoutapp.com/">scoutapp</a> .</p>
+
+<p>Application performance</p>
+
+<p>Monitor your application performance, uptime, slow DB queries, background tasks with<a href="http://newrelic.com/">New Relic</a> . They also have<a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
+
 <p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
-  
 ]]></content>
   </entry>
   
@@ -163,107 +178,73 @@
     <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
     <updated>2012-07-03T16:39:23+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-ii</id>
-    <content type="html"><![CDATA[    <p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the&nbsp;<a href="http://pragprog.com/book/dnvim/practical-vim" title="Practical Vim Book">Practical Vim</a> book. You can also read the first part in this series&nbsp;<a href="http://blog.siyelo.com/vim-tips-part-i" title="Vim Tips - Part I">Vim Tips - Part I</a> at our blog.</p>
-<p><span style="font-size:medium;">1. Replace in multiple files</span></p>
-<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the&nbsp;<strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:args app/assets/javascripts/hrt*.js</pre></div>
-</div>
+    <content type="html"><![CDATA[<p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
 
-<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:args</pre></div>
-</div>
+<ol>
+<li>Replace in multiple files</li>
+</ol>
 
-<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:argdo %s/Hrt/Hrt2/g</pre></div>
-</div>
 
-<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:argdo update</pre></div>
-</div>
+<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the <strong>:args</strong>command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:
+:args app/assets/javascripts/hrt*.js</p>
 
-<p><span style="font-size:medium;">2. Search and replace in&nbsp;</span><span style="font-size:medium;">multiple&nbsp;</span><span style="font-size:medium;">files</span></p>
-<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files. <strong>vimgrep</strong>&nbsp;command creates quicklist with files matching the pattern which list we can see by opening it with&nbsp;<strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the&nbsp;<strong>:Qargs</strong>&nbsp;mapping&nbsp;which we have in our vimrc file:</p>
-<div class="CodeRay">
-  <div class="code"><pre>command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+<p>We can see which files are loaded in the arguments list by running only the<strong>:args</strong>command:
+:args</p>
 
-&quot; populate the argument list with each of the files named in the quickfix list
+<p>Having the arguments list prepared, we can execute search &amp; replace with:
+:argdo %s/Hrt/Hrt2/g</p>
+
+<p>Once changes have been made in the files, we can save all the files in arguments list with:
+:argdo update</p>
+
+<ol>
+<li>Search and replace in multiple files</li>
+</ol>
+
+
+<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using<strong>vimgrep</strong>command to find a pattern in files.<strong>vimgrep</strong> command creates quicklist with files matching the pattern which list we can see by opening it with <strong>:copen</strong>command. If we want quicklist to be useful, we need to convert it to arguments list by using the <strong>:Qargs</strong> mapping which we have in our vimrc file:
+command! -nargs=0 -bar Qargs execute &#8216;args&#8217; QuickfixFilenames()</p>
+
+<p>&#8221; populate the argument list with each of the files named in the quickfix list
 function! QuickfixFilenames()
   let buffer_numbers = {}
-  for quickfix_item in getqflist()
-    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
-  endfor
-  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
-endfunction</pre></div>
-</div>
+  for quickfix_item in getqflist()</p>
 
-<div>Finally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:</div>
-<div>
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>:vimgrep /CurrencyNumberHelper/ app/models/*.rb
+<pre><code>let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+</code></pre>
+
+<p>  endfor
+  return join(map(values(buffer_numbers), &#8216;fnameescape(v:val)&#8217;))
+endfunctionFinally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:
+:vimgrep /CurrencyNumberHelper/ app/models/*.rb
 :Qargs
 :argdo %s/CurrencyNumberHelper/CurrencyHelper/g
-:argdo update</pre></div>
-</div>
+:argdo update</p>
 
-</div>
-<p />
-<div><span style="font-size:medium;">3. Edit already recorded macro</span></div>
-<br />While recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with&nbsp;<strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.
-<p />
-<div><span style="font-size:medium;">4. Execute macro in multiple files</span></div>
-<div><br />We have&nbsp;already&nbsp;recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:</div>
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>:args app/models/*.rb</pre></div>
-</div>
+<ol>
+<li><p>Edit already recorded macroWhile recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register<strong>a</strong>. We can print the content of the macro in the current buffer using<strong>:put a</strong>and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with<strong>@a</strong>.</p></li>
+<li><p>Execute macro in multiple filesWe have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:
+:args app/models/*.rb Then we run the macro (that is recorded in register a) with:
+:argdo normal @aIn the end we save all the buffers with:
+:argdo update</p></li>
+</ol>
 
-</div>
-<div>&nbsp;Then we run the macro (that is recorded in register a) with:</div>
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>:argdo normal @a</pre></div>
-</div>
 
-</div>
-<div>In the end we save all the buffers with:</div>
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>:argdo update</pre></div>
-</div>
+<p>5. Delete commandsWe can run the following command in<strong>Insert mode</strong>,<strong>Vim Command Line mode</strong>or<strong>Shell Command Line</strong>:
+<C-h> &#8221; delete back one character (backspace)
+<C-w> &#8221; delete back one word
+<C-u> &#8221; delete back to start of line</p>
 
-</div>
-<p />
-<div><span style="font-size:medium;">5.&nbsp;Delete commands</span></div>
-<br />We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:
-<div class="CodeRay">
-  <div class="code"><pre>&lt;C-h&gt; &quot; delete back one character (backspace)
-&lt;C-w&gt; &quot; delete back one word
-&lt;C-u&gt; &quot; delete back to start of line</pre></div>
-</div>
+<ol>
+<li>Vi mode on command lineBash shell provides two modes for command line editing -<strong>emacs</strong>and<strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:
+set -o viThen while on command line, we can press<strong>ESC</strong>to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press<strong>v</strong>that will popup editor where we can edit and save buffer that will be executed on command line.</li>
+</ol>
 
-<p><span style="font-size:medium;">6. Vi mode on command line</span></p>
-<div>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</div>
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>set -o vi</pre></div>
-</div>
 
-<div>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</div>
-<p />
-<div>To go back to emacs mode, we need to type:</div>
-</div>
-</div>
-<div class="CodeRay">
-  <div class="code"><pre>set -o emacs</pre></div>
-</div>
+<p>To go back to emacs mode, we need to type:
+set -o emacs</p>
 
-<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s&nbsp;<a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt" title="Vi editing mode cheatsheet">cheatsheet</a> for that.</p>
-  
+<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
 ]]></content>
   </entry>
   
@@ -272,72 +253,84 @@ endfunction</pre></div>
     <link href="http://blog.siyelo.com/vim-tips-part-i"/>
     <updated>2012-06-27T09:50:00+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-i</id>
-    <content type="html"><![CDATA[    <p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim" title="Practical Vim book">Practical Vim</a> book&nbsp;by Drew Neil.</p>
-<p><span style="font-size:medium;">1. Repeat the last Ex command</span></p>
-<p>In Vim there are 3 command line mode prompts:</p>
-<ul style="margin-left:40px;">
-<li>Ex command prompt: <strong>:something</strong> </li>
-<li>Search prompt: <strong>/something</strong> </li>
-<li>Expression prompt (from insert mode type <strong>&lt;C-r&gt;=</strong>):&nbsp;<strong>=1+1</strong> </li>
-</ul>
-<p>Let say we run a spec from the Ex command prompt like this:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:!rspec spec/models/code_spec.rb</pre></div>
-</div>
+    <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great<a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
 
-<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
-<p><span style="font-size:medium;">2. Repeat the last substitute command</span></p>
-<p>If substitute command is run, like for example:</p>
-<div class="CodeRay">
-  <div class="code"><pre>:s/current_user/user/g</pre></div>
-</div>
+<ol>
+<li>Repeat the last Ex command</li>
+</ol>
 
-<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&#8217;s handy having the following mappings in the vimrc file:</p>
-<div class="CodeRay">
-  <div class="code"><pre>&quot; make &amp; trigger :&amp;&amp; so it preserves flags
-nnoremap &amp; :&amp;&amp;&lt;Enter&gt;
-xnoremap &amp; :&amp;&amp;&lt;Enter&gt;</pre></div>
-</div>
 
-<p><span style="font-size:medium;">3. Sort properties in CSS</span></p>
-<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
-<div class="CodeRay">
-  <div class="code"><pre>h4 {
+<p>In Vim there are 3 command line mode prompts:
+- Ex command prompt:<strong>:something</strong>
+- Search prompt:<strong>/something</strong>
+- Expression prompt (from insert mode type<strong><C-r>=</strong>): <strong>=1+1</strong></p>
+
+<p>Let say we run a spec from the Ex command prompt like this:
+:!rspec spec/models/code_spec.rb</p>
+
+<p>We can repeat the last Ex command by typing<strong>@:</strong>from normal mode.</p>
+
+<ol>
+<li>Repeat the last substitute command</li>
+</ol>
+
+
+<p>If substitute command is run, like for example:
+:s/current_user/user/g</p>
+
+<p>We can repeat it with<strong>:s</strong>or<strong>&amp;</strong>which is synonym for<strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that<strong>:&amp;&amp;</strong>should be used. It&#8217;s handy having the following mappings in the vimrc file:
+&#8221; make &amp; trigger :&amp;&amp; so it preserves flags
+nnoremap &amp; :&amp;&amp;<Enter>
+xnoremap &amp; :&amp;&amp;<Enter></p>
+
+<ol>
+<li>Sort properties in CSS</li>
+</ol>
+
+
+<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.
+h4 {
   font-size: 11px;
   margin: 15px;
   background: red;
-}</pre></div>
-</div>
+}</p>
 
-<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
-<div class="CodeRay">
-  <div class="code"><pre>h4 {
+<p>Just append them at the end, select the lines and in visual mode type<strong>:sort</strong>, or from normal mode select everything inside {} with<strong>vi{</strong>and then<strong>:sort</strong>.
+h4 {
   background: red;
   font-size: 11px;
   margin: 15px;
-}</pre></div>
-</div>
+}</p>
 
-<p><span style="font-size:medium;">4. Select texts</span></p>
-<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
-<div class="CodeRay">
-  <div class="code"><pre>&quot; select last paste in visual mode
-nnoremap &lt;expr&gt; gb '`[' . strpart(getregtype(), 0, 1) . '`]'</pre></div>
-</div>
+<ol>
+<li>Select texts</li>
+</ol>
 
-<p><span style="font-size:medium;">5. Paste from register without leaving insert mode &lt;C-r&gt;{register}</span></p>
-<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong>&lt;C-r&gt;0</strong>. If yanked text contains new line characters, <strong>&lt;C-r&gt;&lt;C-p&gt;0</strong> will take care of fixing the indentation.</p>
-<p><span style="font-size:medium;">6. Run normal mode commands across a range</span></p>
-<p>Say we want to append ; at the end of the following lines:</p>
-<div class="CodeRay">
-  <div class="code"><pre>var element = $(this)
-var tabName = element.data('tab')
-var report  = element.data('report')</pre></div>
-</div>
 
-<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
+<p>Select the original yanked text with<strong>gv</strong>or select the last pasted text with<strong>gb</strong>(custom mapping).<strong>gb</strong>is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with<strong>gb&lt;</strong>. For<strong>gb</strong>to work, the following mapping need to be defined in the vimrc file.
+&#8221; select last paste in visual mode
+nnoremap <expr> gb &#8217;<code>[' . strpart(getregtype(), 0, 1) . '</code>]&#8217;</p>
+
+<ol>
+<li>Paste from register without leaving insert mode <C-r>{register}</li>
+</ol>
+
+
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with<strong><C-r>0</strong>. If yanked text contains new line characters,<strong><C-r><C-p>0</strong>will take care of fixing the indentation.</p>
+
+<ol>
+<li>Run normal mode commands across a range</li>
+</ol>
+
+
+<p>Say we want to append ; at the end of the following lines:
+var element = $(this)
+var tabName = element.data(&#8216;tab&#8217;)
+var report  = element.data(&#8216;report&#8217;)</p>
+
+<p>We can visually select the 3 lines and type<strong>:normal A;</strong>or we can just select all lines in the file with<strong>%</strong>and execute the same command<strong>:%normal A;</strong>.</p>
+
 <p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
-  
 ]]></content>
   </entry>
   
@@ -346,157 +339,151 @@ var report  = element.data('report')</pre></div>
     <link href="http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6"/>
     <updated>2012-06-21T18:10:35+02:00</updated>
     <id>http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6</id>
-    <content type="html"><![CDATA[    <p>We&#8217;ve just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we&#8217;ll share some details about the experience and the process we took for the upgrade. Before the upgrade, it&#8217;s advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
-<p><span style="color:#888888;font-size:large;">Versions running out of support&#8230;</span></p>
-<p>Why upgrade? Ruby 1.8.7 is slowly <a href="http://www.ruby-lang.org/en/news/2011/10/06/plans-for-1-8-7/" title="Ruby 1.8.7 support plans">running out of support</a> and Ruby on Rails 2.3.x is already <a href="https://groups.google.com/forum/#!topic/rubyonrails-security/CdoMUVpsRmQ/discussion">out of maintenance and out of security support</a>. If wondering which Ruby on Rails version are supported at the moment, it&#8217;s 3.2 for bugfixes and 3.1 for security fixes (see this <a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/30ff7f618a6428f3/a767ba1bbf526fde?q=#50a39e4694704f14" title="Ruby on Rails support">thread discussion</a> on rails-core mailing list).&nbsp;</p>
-<p><span style="color:#888888;font-size:large;">How to approach the upgrade&#8230;</span></p>
-<p>There are several schools of thought regarding this matter:</p>
-<ul>
-<li>Upgrade both your ruby version to 1.9.1+ and your stack to Rails stack simultaniously.</li>
-<li>Upgrade your Rails stack and then upgrade your Ruby version</li>
-<li>Upgrade your Ruby version and then your Rails stack      
-<ul>
-</ul>
-</li>
-</ul>
-<p>We went with the first.</p>
-<p>This was because although we have a relatively large application, we found that most of the gems being used were easily replaced and had no conflicts with Rails 3.x.</p>
-<p><span style="color:#888888;font-size:large;">Upgrade now&#8230;</span></p>
-<p>The upgrade process to Rails 3.x is rather straight forward as most of the gems have already been ported to support Rails 3.x and many and most have documentated how to do the change. In the rare case that one of your gems does not support rails 3, they are easily replaced.</p>
-<p>Here is how we upgraded:</p>
-<p>Start by installing the <a href="https://github.com/rails/rails_upgrade" title="Rails Upgrade plugin">rails_upgrade</a> plugin:</p>
-<div class="CodeRay">
-  <div class="code"><pre>ruby script/plugin install git://github.com/rails/rails_upgrade.git</pre></div>
-</div>
+    <content type="html"><![CDATA[<p>We&#8217;ve just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we&#8217;ll share some details about the experience and the process we took for the upgrade. Before the upgrade, it&#8217;s advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
 
-<p>Then run the rake task that does a check for required upgrades:</p>
-<div class="CodeRay">
-  <div class="code"><pre>rake rails:upgrade:check</pre></div>
-</div>
+<p>Versions running out of support&#8230;</p>
+
+<p>Why upgrade? Ruby 1.8.7 is slowly<a href="http://www.ruby-lang.org/en/news/2011/10/06/plans-for-1-8-7/">running out of support</a> and Ruby on Rails 2.3.x is already<a href="https://groups.google.com/forum/#!topic/rubyonrails-security/CdoMUVpsRmQ/discussion">out of maintenance and out of security support</a> . If wondering which Ruby on Rails version are supported at the moment, it&#8217;s 3.2 for bugfixes and 3.1 for security fixes (see this<a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/30ff7f618a6428f3/a767ba1bbf526fde?q=#50a39e4694704f14">thread discussion</a> on rails-core mailing list). </p>
+
+<p>How to approach the upgrade&#8230;</p>
+
+<p>There are several schools of thought regarding this matter:
+- Upgrade both your ruby version to 1.9.1+ and your stack to Rails stack simultaniously.
+- Upgrade your Rails stack and then upgrade your Ruby version
+- Upgrade your Ruby version and then your Rails stack</p>
+
+<p>We went with the first.</p>
+
+<p>This was because although we have a relatively large application, we found that most of the gems being used were easily replaced and had no conflicts with Rails 3.x.</p>
+
+<p>Upgrade now&#8230;</p>
+
+<p>The upgrade process to Rails 3.x is rather straight forward as most of the gems have already been ported to support Rails 3.x and many and most have documentated how to do the change. In the rare case that one of your gems does not support rails 3, they are easily replaced.</p>
+
+<p>Here is how we upgraded:</p>
+
+<p>Start by installing the<a href="https://github.com/rails/rails_upgrade">rails_upgrade</a> plugin:
+ruby script/plugin install git://github.com/rails/rails_upgrade.git</p>
+
+<p>Then run the rake task that does a check for required upgrades:
+rake rails:upgrade:check</p>
 
 <p>The output is rather descriptive. It hightlights all the changes required and even links to blog posts for those of you who would like additional information on how to approach the changes.</p>
-<p>Run the backup task. This backs up all of your routes, environments, application, etc.</p>
-<div class="CodeRay">
-  <div class="code"><pre>rake rails:upgrade:backup</pre></div>
-</div>
 
-<p>There is a rake task to upgrade all of your routes to the new DSL. We found that we needed to make minor changes after this task was run.</p>
-<div class="CodeRay">
-  <div class="code"><pre>rake rails:upgrade:routes</pre></div>
-</div>
+<p>Run the backup task. This backs up all of your routes, environments, application, etc.
+rake rails:upgrade:backup</p>
+
+<p>There is a rake task to upgrade all of your routes to the new DSL. We found that we needed to make minor changes after this task was run.
+rake rails:upgrade:routes</p>
 
 <p>Yet another rake task for generating a Gemfile from config.gem directives.</p>
-<p>In Rails 3, bundler handles all your gems and dependencies (Fortunately our app was already using bundler). If yours isn&#8217;t the&nbsp;<a href="https://github.com/rails/rails_upgrade" title="Rails Upgrade plugin">rails_upgrade</a>&nbsp;plugin is nice enough to do this for you!</p>
-<div class="CodeRay">
-  <div class="code"><pre>rake rails:upgrade:gems</pre></div>
-</div>
 
-<p>Now it&#8217;s just a matter of upgrading the Rails version ensuring that you have not locked any of the other gems at a version incompatible with your upgrade. Then let bundler do it&#8217;s thing:</p>
-<div class="CodeRay">
-  <div class="code"><pre>bundle install</pre></div>
-</div>
+<p>In Rails 3, bundler handles all your gems and dependencies (Fortunately our app was already using bundler). If yours isn&#8217;t the <a href="https://github.com/rails/rails_upgrade">rails_upgrade</a>  plugin is nice enough to do this for you!
+rake rails:upgrade:gems</p>
 
-<p>Then run all the generators for gems like rspec, cucumber and setup spork, guard.</p>
-<div class="CodeRay">
-  <div class="code"><pre>rails g rspec:install --spork
-rails g cucumber:install --rspec --capybara --spork
+<p>Now it&#8217;s just a matter of upgrading the Rails version ensuring that you have not locked any of the other gems at a version incompatible with your upgrade. Then let bundler do it&#8217;s thing:
+bundle install</p>
+
+<p>Then run all the generators for gems like rspec, cucumber and setup spork, guard.
+rails g rspec:install &#8211;spork
+rails g cucumber:install &#8211;rspec &#8211;capybara &#8211;spork
 bundle exec guard init
-bundle exec guard init spork</pre></div>
-</div>
+bundle exec guard init spork</p>
 
-<p>If using cucumber and it&#8217;s old web steps, you&#8217;ll need to add&nbsp;<a href="https://github.com/cucumber/cucumber-rails-training-wheels" title="Cucumber Rails training wheels">cucumber-rails-training-wheels</a>&nbsp;to the Gemfile. It&#8217;s also good to setup the&nbsp;<a href="http://guides.rubyonrails.org/asset_pipeline.html" title="Rails assets pipeline">assets pipeline</a>&nbsp;in order to get the full benefits from newest version of Rails.</p>
+<p>If using cucumber and it&#8217;s old web steps, you&#8217;ll need to add <a href="https://github.com/cucumber/cucumber-rails-training-wheels">cucumber-rails-training-wheels</a>  to the Gemfile. It&#8217;s also good to setup the <a href="http://guides.rubyonrails.org/asset_pipeline.html">assets pipeline</a>  in order to get the full benefits from newest version of Rails.</p>
+
 <p>From here we went about fixing our specs (aren&#8217;t they just fabulous?). We feel this is an important step as it will expose problems and give you deprecation warnings.</p>
+
 <p>We didn&#8217;t go as far as to fix every spec and cuke. Just to the point where we felt comfortable upgrading again!</p>
+
 <p>So we generated a new Rails 3.2.6 application in another folder and carefuly moved across the Rails configuration files (production.rb, development.rb, Rakefile, etc).</p>
+
 <p>After some more bug and deprecation warning fixes we have a stable app once again! :)</p>
+
 <p>Now all that&#8217;s left to do is clean up the old backup files, old rails scripts/* files and your vendor/plugins and you&#8217;re done!</p>
+
 <p>Happy upgrades!</p>
-  
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN]]></title>
+    <title type="html"><![CDATA[Were Hiring Social Media Marketing Intern]]></title>
     <link href="http://blog.siyelo.com/were-hiring-social-media-marketing-intern"/>
-    <updated>2012-05-11T16:07:00+02:00</updated>
+    <updated>2012-05-11T00:00:00+02:00</updated>
     <id>http://blog.siyelo.com/were-hiring-social-media-marketing-intern</id>
-    <content type="html"><![CDATA[    <div>Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</div>
-<p />
-<div>&ndash;</div>
-<p />
-<div><strong>Location</strong>: Cape Town, South Africa</div>
-<p />
-<div><strong>Start date</strong>: June 2012</div>
-<p />
-<div><strong>Duration</strong>: 8 to 12 weeks</div>
-<p />
-<div><strong>Funding</strong>: Expenses and reasonable honorarium</div>
-<p />
-<p />
-<div><strong>Internship Description:</strong></div>
-<p />
-<div>Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community. &nbsp;A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.</div>
-<p />
-<p />
-<div><strong>Skills &amp; Experience Required:</strong></div>
-<p />
-<div>- Energetic, independent, and detail-oriented.</div>
-<p />
-<div>- Strong written and oral communication skills - in English</div>
-<p />
-<div>- Available at least 16 to 24 hours a week.</div>
-<p />
-<div>- Studying for or recently graduated with a degree in business, communication, social sciences, with good grades</div>
-<p />
-<div>- Highly sociable and witty</div>
-<p />
-<div>- Knowledge of HTML is a plus</div>
-<p />
-<p />
-<div><strong>Sample projects you will work on:</strong></div>
-<p />
-<div>- Support to all Marketing activities</div>
-<p />
-<div>- Manage integrated social media campaigns.</div>
-<p />
-<div>- Social strategy and overviews</div>
-<p />
-<div>- Evaluate positioning and activity of competitors.</div>
-<p />
-<div>- Take charge of managing posting and profile upkeep.</div>
-<p />
-<div>- Identify opportunities for increased social interaction.</div>
-<p />
-<div>- Research new social techniques, platforms and trends.</div>
-<p />
-<div>- Testing new products</div>
-<p />
-<p />
-<div><strong>Benefits for Intern:</strong></div>
-<p />
-<div>- Siyelo offers an international, fast-paced and dynamic environment in hot web techologies.</div>
-<p />
-<div>- A great office in central Cape Town. Open, creative and vibrant.</div>
-<p />
-<div>- Ping-pong, putt-putt, and Playstation3.</div>
-<p />
-<div>- Other fun things not beginning with the letter &#8216;P&#8217;.</div>
-<p />
-<div>- Learn the basics of web technogies, product development and consulting.</div>
-<p />
-<p />
-<div><strong>Application procedure:</strong></div>
-<p />
-<div>Send application before May 20th 2012 to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a> with a subject line of &rdquo;Social Media Marketing Internship application: &lt;your name&gt;&rdquo;.</div>
-<p />
-<div>Please include;</div>
-<p />
-<div>1. A brief explanation of who you are and how you would help us.</div>
-<p />
-<div>2. A copy of your CV</div>
-<p />
-<div>3. The time and dates you will be available to work at our office.</div>
-  
+    <content type="html"><![CDATA[<hr />
+
+<p>layout: post
+title: &#8220;WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN&#8221;
+date: 2012-05-11 14:07:00
+comments: true
+categories:
+author:
+&#8212;Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</p>
+
+<p>–</p>
+
+<p><strong>Location</strong>: Cape Town, South Africa</p>
+
+<p><strong>Start date</strong>: June 2012</p>
+
+<p><strong>Duration</strong>: 8 to 12 weeks</p>
+
+<p><strong>Funding</strong>: Expenses and reasonable honorarium</p>
+
+<p><strong>Internship Description:</strong></p>
+
+<p>Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community.  A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.</p>
+
+<p><strong>Skills &amp; Experience Required:</strong></p>
+
+<ul>
+<li><p>Energetic, independent, and detail-oriented.</p></li>
+<li><p>Strong written and oral communication skills - in English</p></li>
+<li><p>Available at least 16 to 24 hours a week.</p></li>
+<li><p>Studying for or recently graduated with a degree in business, communication, social sciences, with good grades</p></li>
+<li><p>Highly sociable and witty</p></li>
+<li><p>Knowledge of HTML is a plus</p></li>
+</ul>
+
+
+<p><strong>Sample projects you will work on:</strong></p>
+
+<ul>
+<li><p>Support to all Marketing activities</p></li>
+<li><p>Manage integrated social media campaigns.</p></li>
+<li><p>Social strategy and overviews</p></li>
+<li><p>Evaluate positioning and activity of competitors.</p></li>
+<li><p>Take charge of managing posting and profile upkeep.</p></li>
+<li><p>Identify opportunities for increased social interaction.</p></li>
+<li><p>Research new social techniques, platforms and trends.</p></li>
+<li><p>Testing new products</p></li>
+</ul>
+
+
+<p><strong>Benefits for Intern:</strong></p>
+
+<ul>
+<li><p>Siyelo offers an international, fast-paced and dynamic environment in hot web techologies.</p></li>
+<li><p>A great office in central Cape Town. Open, creative and vibrant.</p></li>
+<li><p>Ping-pong, putt-putt, and Playstation3.</p></li>
+<li><p>Other fun things not beginning with the letter &#8216;P&#8217;.</p></li>
+<li><p>Learn the basics of web technogies, product development and consulting.</p></li>
+</ul>
+
+
+<p><strong>Application procedure:</strong></p>
+
+<p>Send application before May 20th 2012 to<a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a> with a subject line of ”Social Media Marketing Internship application: <your name>”.</p>
+
+<p>Please include;</p>
+
+<ol>
+<li><p>A brief explanation of who you are and how you would help us.</p></li>
+<li><p>A copy of your CV</p></li>
+<li><p>The time and dates you will be available to work at our office.</p></li>
+</ol>
+
 ]]></content>
   </entry>
   
@@ -505,114 +492,47 @@ bundle exec guard init spork</pre></div>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
     <updated>2011-12-30T11:41:00+01:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
-    <content type="html"><![CDATA[<pre><code>&lt;p&gt;Machine learning is branch of &lt;strong&gt;A&lt;/strong&gt;rtificial &lt;strong&gt;I&lt;/strong&gt;ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.&lt;/p&gt;
-</code></pre>
+    <content type="html"><![CDATA[<p>Machine learning is branch of<strong>A</strong>rtificial<strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 
-<p>&nbsp;</p>
+<p> </p>
 
+<p>Let&#8217;s build&#8230;</p>
 
-<p><span style="color:#888888;font-size:large;">Let&#8217;s build&#8230;</span></p>
+<p> </p>
 
+<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML articles from the <a href="http://www.timeslive.co.za/">Times Live</a> newspaper.</p>
 
-<p>&nbsp;</p>
+<p>For the job, we will use<strong>nokogiri</strong>gem and 2 ruby standard libraries:<strong>open-uri</strong>and<strong>rss/2.0</strong>.</p>
 
+<p>RSS Parser</p>
 
-<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML&nbsp;articles from the&nbsp;<a href="http://www.timeslive.co.za/" title="Times Live newspaper">Times Live</a> newspaper.</p>
+<p>To find sources of articles for processing,  we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links.<strong>RssParser</strong>class does exactly that, you initialize it with a<a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
 
+<p>HTML Parser</p>
 
-<p>For the job, we will use <strong>nokogiri</strong> gem and 2 ruby standard libraries: <strong>open-uri</strong> and <strong>rss/2.0</strong>.</p>
+<p>Having article links, we need to parse page content and extract meaningful parts from these pages.<strong>HtmlParser</strong>class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles -<a href="http://getfirebug.com/">Firebug</a> and<a href="http://jquery.com/">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice<strong>clean_whitespace</strong>method which cleans the whitespace characters from the extracted text.</p>
 
-
-<p><span style="font-size:large;color:#888888;">RSS Parser</span></p>
-
-
-<p>To find sources of articles for processing, &nbsp;we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links. <strong>RssParser</strong> class does exactly that, you initialize it with a <a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss" title="Times Live feed">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
-
-
-
-
-<figure class='code'><figcaption><span>Rss Parser </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class RssParser
-</span><span class='line'>  attr_accessor :url
-</span><span class='line'>
-</span><span class='line'>  def initialize(url)
-</span><span class='line'>    @url = url
-</span><span class='line'>  end
-</span><span class='line'>
-</span><span class='line'>  def article_urls
-</span><span class='line'>    RSS::Parser.parse(open(url), false).items.map{|item| item.link }
-</span><span class='line'>  end
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p><span style="font-size:large;color:#888888;">HTML Parser</span></p>
-
-
-<p>Having article links, we need to parse page content and extract meaningful parts from these pages. <strong>HtmlParser</strong> class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles - <a href="http://getfirebug.com/" title="Firebug">Firebug</a> and <a href="http://jquery.com/" title="jQuery">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice <strong>clean_whitespace</strong> method which cleans the whitespace characters from the extracted text.</p>
-
-
-<p>
-
-</p>
-
-
-<p><span style="font-size:large;color:#888888;">Statistical Classifier</span></p>
-
+<p>Statistical Classifier</p>
 
 <p>We introduce a class that is responsible for classification of articles. It is initialized with a hash that consists of categories (keys) and training data (values).</p>
 
+<p>Training data is used to discoverpotential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the <strong>train_data()</strong>method).</p>
 
-<p>Training data is used to discover <span class="st">potential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the&nbsp;<strong>train_data()</strong> method). </span></p>
+<p>In this example we are usingcontent ofWikipedia articles for<a href="http://en.wikipedia.org/wiki/Economy">economy</a> ,<a href="http://en.wikipedia.org/wiki/Sport">sport</a> and<a href="http://en.wikipedia.org/wiki/Health">health</a> as training data for ourcategories.</p>
 
+<p>When classifying articles we want to compare only meaningful words and ignore other wordsthat do not add any value for a certain category. We (partially) solve this problem using <a href="https://gist.github.com/1534053">stop words</a> .</p>
 
-<p><span class="st">In this example we are using </span><span class="st">content of </span><span class="st">Wikipedia articles for</span><span class="st"> <a href="http://en.wikipedia.org/wiki/Economy" title="Economy Wikipedia">economy</a>, <a href="http://en.wikipedia.org/wiki/Sport" title="Sport Wikipedia">sport</a> and <a href="http://en.wikipedia.org/wiki/Health" title="Health Wikipedia">health</a></span><span class="st"> </span><span class="st">as training data&nbsp;for our </span><span class="st">categories</span><span class="st">.</span></p>
+<p>Finally, the <strong>scores()</strong>method creates the scores for each category (per text) that we are testing.</p>
 
-
-<p><span class="st">When classifying articles we want to compare only meaningful words and ignore other words </span><span class="st">that do not add any value for a certain category.</span><span class="st">&nbsp;We (partially) solve this problem using&nbsp;<a href="https://gist.github.com/1534053" title="Stop words">stop words</a>.</span></p>
-
-
-<p>Finally, the&nbsp;<strong>scores()</strong> method creates the scores for each category (per text) that we are testing.</p>
-
-
-<p>
-
-</p>
-
-
-<p><span style="font-size:large;color:#888888;">Lets have a go</span></p>
-
+<p>Lets have a go</p>
 
 <p>Here is the script that runs the program:</p>
 
+<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like<a href="http://en.wikipedia.org/wiki/Bayesian_probability">Bayesian probability</a>  and <a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis">Latent Semantic Analysis</a> .</p>
 
-<p>
+<p>If you are interested in amore indepth exampleof a news aggregator application - you can check<a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
 
-</p>
-
-
-<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like <a href="http://en.wikipedia.org/wiki/Bayesian_probability" title="Bayesian probability">Bayesian probability</a>&nbsp;and&nbsp;<a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis" title="Latent Semantic Analysis">Latent Semantic Analysis</a>.</p>
-
-
-<p>If you are interested in a<span style="color:#333333;font-family:Lucida Grande, verdana, arial, helvetica, sans-serif;font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:left;text-indent:0;background-color:#ffffff;display:inline!important;float:none;"><span> </span></span><span style="color:#333333;font-family:Lucida Grande, verdana, arial, helvetica, sans-serif;font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:left;text-indent:0;background-color:#ffffff;display:inline!important;float:none;">more indepth example </span>of a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg" title="NewsAgg application at Github">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
-
-
-<p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do" title="Programming Collective Intelligence">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511" title="Scripting Intelilgence">Scripting Intelligence</a> - code examples written in Ruby.</p>
-
-
-
+<p>If you want to learn more about Machine Learning, checkout<a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and<a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
 ]]></content>
   </entry>
   
@@ -621,41 +541,51 @@ bundle exec guard init spork</pre></div>
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
     <updated>2011-12-28T22:01:00+01:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
-    <content type="html"><![CDATA[    <p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro" title="Redis Data Types">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub" title="Redis Publish/Subsscribe">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions" title="Redis transactions">transactions</a>.</p>
+    <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote<strong>D</strong>Ictionary<strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several<a href="http://redis.io/topics/data-types-intro">data types</a> : Strings, Hashes, Lists, Sets and Sorted Sets; implements<a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has<a href="http://redis.io/topics/transactions">transactions</a> .</p>
+
 <p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
-<p><span style="font-size:large;color:#888888;">Give us some ACID</span></p>
-<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be <a href="http://en.wikipedia.org/wiki/ACID" title="ACID properties for databases">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other <a href="http://nosql-database.org/" title="NoSQL databases">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default <strong>fsync()</strong> is set to <strong>everysec</strong> which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the <strong>appendfsync</strong> command (you can use <strong>appendfsync always</strong> and system will fsync data after every write - it&#8217;s slow but safest!).</p>
-<p><span style="font-size:large;color:#888888;">When to use Redis?</span></p>
-<p>In your production environment you don&#8217;t need to switch to Redis. You can just <a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html" title="Redis usage">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
-<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.<p />If you need a more featured document oriented database that allows you to perform <strong>range queries</strong>, <strong>regular expression searches</strong>, <strong>indexing</strong>, and <strong>MapReduce</strong> you should check <strong>MongoDB</strong>, <strong>CouchDB</strong> or similar. If you need a simple <strong>caching</strong> with better expiration algorhitms than Redis has then you should check <strong>memcache</strong>.</p>
-<p><span style="font-size:medium;color:#888888;">Redis Use-Cases</span></p>
-<ul>
-<li>Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.</li>
-<li>Counting Downloads: <a href="https://github.com/rubygems/rubygems.org" title="Rubygems on Github">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the <a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb" title="Rubygems Download model ">Download</a> model.</li>
-<li>High Score tables: Redis supports data type functions that can be very <a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/" title="Redis High Score tables">handy</a>.</li>
-<li>Who&#8217;s Online: Use Redis to implement <a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/" title="Who is online - Redis example">who is online</a> logic in your application.</li>
-<li>Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.</li>
-<li>Queues: <a href="https://github.com/defunkt/resque" title="Resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.</li>
-<li>Live debugging: You need to do live debugging or roll out new features for production testing for specific users only - <a href="https://github.com/jamesgolick/rollout" title="Rollout">Rollout</a> gem does exactly that.</li>
-<li>HN style social news site written in Ruby/Sinatra/Redis/jQuery - <a href="https://github.com/antirez/lamernews" title="Lamernews - Ruby/Sinatra/Redis/jQuery">lamernews</a>.</li>
-</ul>
-<p><span style="font-size:medium;color:#888888;">Play with Redis (install, start and stop server)<br /></span></p>
-<p>
 
-<p /><span style="font-size:large;color:#888888;">Redis console</span></p>
-<p>You can use redis-cli to connect to a local or remote Redis server and call com-<br />mands. Here is an example (first connect to the server using: redis-cli -p 6379):<p />
+<p>Give us some ACID</p>
 
-<p /><span style="font-size:large;color:#888888;">Redis from Ruby<br /></span></p>
-<p>Here is an example using Ruby to execute commands on Redis server. You need to install <a href="https://github.com/ezmobius/redis-rb" title="Redis gem for Ruby">redis gem</a> by executing <em>gem install redis</em> first.</p>
+<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be<a href="http://en.wikipedia.org/wiki/ACID">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other<a href="http://nosql-database.org/">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default<strong>fsync()</strong>is set to<strong>everysec</strong>which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the<strong>appendfsync</strong>command (you can use<strong>appendfsync always</strong>and system will fsync data after every write - it&#8217;s slow but safest!).</p>
 
-<p>Learn more about Redis <a href="http://redis.io/commands" title="Redis commands">commands</a> and give some speed to your web applications for free.</p>
-<p><span style="font-size:large;color:#888888;">Real world Redis example</span></p>
-<p>At the end, lets show a real world example how Redis is used in <a href="http://rubygems.org/" title="Rubygems">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
-<p><p />
+<p>When to use Redis?</p>
 
-First, in the initializer a new redis object as a global variable <strong>$redis</strong> is instantiated. This object is used in Download model for updating the downloads count for a gem with <strong>self.incr(name)</strong> method and reading the downloads count for a gem with <strong>self.for_rubygem(name)</strong> method. Rubygems is using Sinatra application <strong>Hostess</strong> to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines <strong>get &#8220;/gems/*.gem&#8221;</strong> route which triggers the downloads count to be updated in the Redis database.</p>
-<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at <a href="https://github.com/rubygems/rubygems.org" title="Rubygems source code">Github</a> for more details.</p>
-  
+<p>In your production environment you don&#8217;t need to switch to Redis. You can just<a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
+
+<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.</p>
+
+<p>If you need a more featured document oriented database that allows you to perform<strong>range queries</strong>,<strong>regular expression searches</strong>,<strong>indexing</strong>, and<strong>MapReduce</strong>you should check<strong>MongoDB</strong>,<strong>CouchDB</strong>or similar. If you need a simple<strong>caching</strong>with better expiration algorhitms than Redis has then you should check<strong>memcache</strong>.</p>
+
+<p>Redis Use-Cases
+- Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.
+- Counting Downloads:<a href="https://github.com/rubygems/rubygems.org">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the<a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb">Download</a> model.
+- High Score tables: Redis supports data type functions that can be very<a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/">handy</a> .
+- Who&#8217;s Online: Use Redis to implement<a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/">who is online</a> logic in your application.
+- Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.
+- Queues:<a href="https://github.com/defunkt/resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.
+- Live debugging: You need to do live debugging or roll out new features for production testing for specific users only -<a href="https://github.com/jamesgolick/rollout">Rollout</a> gem does exactly that.
+- HN style social news site written in Ruby/Sinatra/Redis/jQuery -<a href="https://github.com/antirez/lamernews">lamernews</a> .</p>
+
+<p>Play with Redis (install, start and stop server)</p>
+
+<p>Redis console</p>
+
+<p>You can use redis-cli to connect to a local or remote Redis server and call com-mands. Here is an example (first connect to the server using: redis-cli -p 6379):</p>
+
+<p>Redis from Ruby</p>
+
+<p>Here is an example using Ruby to execute commands on Redis server. You need to install<a href="https://github.com/ezmobius/redis-rb">redis gem</a> by executing<em>gem install redis</em>first.</p>
+
+<p>Learn more about Redis<a href="http://redis.io/commands">commands</a> and give some speed to your web applications for free.</p>
+
+<p>Real world Redis example</p>
+
+<p>At the end, lets show a real world example how Redis is used in<a href="http://rubygems.org/">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
+
+<p>First, in the initializer a new redis object as a global variable<strong>$redis</strong>is instantiated. This object is used in Download model for updating the downloads count for a gem with<strong>self.incr(name)</strong>method and reading the downloads count for a gem with<strong>self.for_rubygem(name)</strong>method. Rubygems is using Sinatra application<strong>Hostess</strong>to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines<strong>get &#8220;/gems/*.gem&#8221;</strong>route which triggers the downloads count to be updated in the Redis database.</p>
+
+<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at<a href="https://github.com/rubygems/rubygems.org">Github</a> for more details.</p>
 ]]></content>
   </entry>
   
@@ -664,33 +594,41 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
     <updated>2011-12-14T10:51:00+01:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
-    <content type="html"><![CDATA[    <p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
-<p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/" title="jQuery Mobile" target="_blank">jQuery Mobile</a>, the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/" target="_blank">graded support</a> for a wide range of mobile browsers and platforms.<p />Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
-<p><span style="font-size:large;">Building a mobile application with jQuery Mobile is extremely easy and fast</span></p>
+    <content type="html"><![CDATA[<p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
+
+<p>It&#8217;s been almost a month since the 1.0 stable release of<a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive<a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
+
+<p>Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
+
+<p>Building a mobile application with jQuery Mobile is extremely easy and fast</p>
+
 <p>One of the biggest advantages of jQuery Mobile is that even as a newcomer to the framework you can develop a rough version of your application in a matter of days as opposed to the native application development for Android and iOS where the learning curve is not quite as steep.</p>
+
 <p>To make your application mobile just include the jQuery Mobile files in your header</p>
-<p>
 
-</p>
 <p>Add the data attributes to your HTML markup</p>
-<p>
 
-</p>
 <p>And this is the result:</p>
-<p><div class='p_embed p_image_embed'>
-<img alt="34522551610-orig" height="506" src="http://blog.siyelo.com/images/old/2011/12/34522551610-orig.png" width="320" />
-</div>
-</p>
-<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the <a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/" target="_blank">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
-<p>The important part in the html snippet above are the HTML5 data-* attributes. The framework relies on these data attributes in order to do it&#8217;s magic. Older browser will ignore this attributes and just render the regular html. Basically the layout of a jQuery Mobile application is defined by the data-role attribute. In the above example we can see that we have a divs with data-roles &#8220;header&#8221;, &#8220;content&#8221; and &#8220;footer&#8221; all of which belong to the main page wrapper. Also we added a data-role on the list element in order for the framework to &ldquo;widgetize&rdquo; it.</p>
-<p>By default, linking to other pages is automatically done via Ajax in a single-page model. All you need to do is define a standard links and the framework will take care of it. If the device doesn&#8217;t support Ajax for some reason the framework falls back to standard http requests. Another cool feature of the framework is linking within a multi-page document. A single page can contain many page containers defined by the data-role of &ldquo;page&rdquo; which means immediate display of the clicked page. When using this techniques combined with the page transition effects, the user experience feels almost &ldquo;native app&rdquo; like.</p>
-<p><span style="font-size:large;">Web vs Native</span></p>
-<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like <a href="http://phonegap.com/" target="_blank">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
-<p>Hopefully we will see a quick adoption of the proposed <a href="https://wiki.mozilla.org/WebAPI" target="_blank">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
-<p><span style="font-size:large;">Conclusion</span></p>
-<p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
-<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/" target="_blank">jQTouch</a> or <a href="http://www.sencha.com/" target="_blank">Sencha</a>) but it probably be fixed in near future with the polishing of the rough edges.</p>
 
+<p>![34522551610-orig][/images/old/2011/12/34522551610-orig.png]</p>
+
+<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the<a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
+
+<p>The important part in the html snippet above are the HTML5 data-* attributes. The framework relies on these data attributes in order to do it&#8217;s magic. Older browser will ignore this attributes and just render the regular html. Basically the layout of a jQuery Mobile application is defined by the data-role attribute. In the above example we can see that we have a divs with data-roles &#8220;header&#8221;, &#8220;content&#8221; and &#8220;footer&#8221; all of which belong to the main page wrapper. Also we added a data-role on the list element in order for the framework to “widgetize” it.</p>
+
+<p>By default, linking to other pages is automatically done via Ajax in a single-page model. All you need to do is define a standard links and the framework will take care of it. If the device doesn&#8217;t support Ajax for some reason the framework falls back to standard http requests. Another cool feature of the framework is linking within a multi-page document. A single page can contain many page containers defined by the data-role of “page” which means immediate display of the clicked page. When using this techniques combined with the page transition effects, the user experience feels almost “native app” like.</p>
+
+<p>Web vs Native</p>
+
+<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like<a href="http://phonegap.com/">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
+
+<p>Hopefully we will see a quick adoption of the proposed<a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
+
+<p>Conclusion</p>
+
+<p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
+
+<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or<a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
 ]]></content>
   </entry>
   
@@ -699,8 +637,10 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
     <updated>2011-12-13T19:07:14+01:00</updated>
     <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
-    <content type="html"><![CDATA[    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit:http://americancensorship.org/posts/4672/uncensor
-  
+    <content type="html"><![CDATA[<pre><code>We've censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet--a bill that could pass THIS WEEK.A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████.
+</code></pre>
+
+<p>To see the uncensored text, and to stop internet censorship, visit:http://americancensorship.org/posts/4672/uncensor</p>
 ]]></content>
   </entry>
   
@@ -709,19 +649,62 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
     <updated>2011-12-12T10:53:00+01:00</updated>
     <id>http://blog.siyelo.com/siyelos-git-workflow</id>
-    <content type="html"><![CDATA[    <p><span style="color:#9da7b0;font-family:Avenir Blog, Arial, Helvetica, sans-serif;"><span style="color:#000000;font-family:arial;font-size:small;">Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I&rsquo;m going to give a brief outline of how we work:</span><br /><span>&nbsp;</span><p /><span><strong><span style="font-size:large;">Named Branches</span></strong></span><p /><span>We rarely work on dev/master. Almost every feature we work on will get it&rsquo;s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</span><p /><span><span style="font-size:large;"><strong>Pull Requests</strong></span></span><p /><span>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</span><p /><span>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</span><p /><span><strong><span style="font-size:medium;">Why pull requests?</span></strong></span><p /><span>Pull requests serve 2 functions:</span><p /><span>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</span><p /><span>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</span><p /><span><strong><span style="font-size:large;">Merging</span></strong></span><p /><span>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</span><p /><span><strong><span style="font-size:large;">Deploying</span></strong></span><p /><span>Once merged in, the branch is immediately deployed to staging.</span><p /><span>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced. &nbsp;It also gives us more time to locate possible defects, if any.</span><p /><span>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</span></span></p>
-<p>&nbsp;</p>
-  
+    <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
+
+<p><strong>Named Branches</strong></p>
+
+<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
+
+<p><strong>Pull Requests</strong></p>
+
+<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
+
+<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
+
+<p><strong>Why pull requests?</strong></p>
+
+<p>Pull requests serve 2 functions:</p>
+
+<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
+
+<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
+
+<p><strong>Merging</strong></p>
+
+<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
+
+<p><strong>Deploying</strong></p>
+
+<p>Once merged in, the branch is immediately deployed to staging.</p>
+
+<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
+
+<p>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</p>
+
+<p> </p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[We have a new phone number!]]></title>
+    <title type="html"><![CDATA[We Have A New Phone Number]]></title>
     <link href="http://blog.siyelo.com/we-have-a-new-phone-number"/>
-    <updated>2011-12-08T09:04:32+01:00</updated>
+    <updated>2011-12-08T00:00:00+01:00</updated>
     <id>http://blog.siyelo.com/we-have-a-new-phone-number</id>
-    <content type="html"><![CDATA[    <div>Siyelo has changed its Cape Town office number to &nbsp;<b>+27 (0) 21 461 2050</b>.</div><p /><div>Our old landline number (<span>+27 21 461 2559)</span>&nbsp;was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</div><p /><blockquote class="webkit-indent-blockquote" style="margin:0 0 0 40px;border:none;padding:0;"><div>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221;</div><div>&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221;</div><div><i>*facepalm*</i></div></blockquote><p /><div>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</div>
-  
+    <content type="html"><![CDATA[<hr />
+
+<p>layout: post
+title: &#8220;We have a new phone number!&#8221;
+date: 2011-12-08 08:04:32
+comments: true
+categories:
+author:
+&#8212;Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050.</p>
+
+<p>Our old landline number (+27 21 461 2559) was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</p>
+
+<blockquote><p>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221;&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221;<em>facepalm</em></p></blockquote>
+
+<p>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</p>
 ]]></content>
   </entry>
   
@@ -730,31 +713,30 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
     <updated>2011-11-03T09:37:00+01:00</updated>
     <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
-    <content type="html"><![CDATA[    <p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/" title="Remote pair-programming options" target="_blank">here</a>).</p>
-<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
-<ul style="margin-left:30px;">
-<li>you don&#8217;t have control over the other screen</li>
-<li>you cannot have both screen sharing and video</li>
-<li>bandwidth of the internet connection sometimes can be a problem</li>
-<li>it&#8217;s not a tool for pair programming</li>
-</ul>
-<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
-<p>The solution: <a href="http://www.gnu.org/s/screen/" title="GNU Screen" target="_blank">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
-<ul style="margin-left:30px;">
-<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
-<li>permissive - useful as a real time code collaboration tool</li>
-</ul>
-<ul>
-</ul>
-<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.<p />First we need to install SSH server because all communication will happen over secure channel:</p>
-<p>
+    <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available<a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a> ).</p>
 
-</p>
-<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash" title="RBash shell" target="_blank">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/" title="Restricted Bash shell" target="_blank">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:
+- you don&#8217;t have control over the other screen
+- you cannot have both screen sharing and video
+- bandwidth of the internet connection sometimes can be a problem
+- it&#8217;s not a tool for pair programming</p>
+
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+
+<p>The solution:<a href="http://www.gnu.org/s/screen/">screen</a> . Screen can have many useful scenarios, but here I will focus on following two:
+- read only - useful as a screen sharing tool by hosting read only screen session
+- permissive - useful as a real time code collaboration tool</p>
+
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
+
+<p>First we need to install SSH server because all communication will happen over secure channel:</p>
+
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with<a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
 
 <p>Next we need to setup the guest shell .profile. Add the following to /home/guest/.profile</p>
 
 <p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+
 <p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
 
 <p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
@@ -762,20 +744,20 @@ First, in the initializer a new redis object as a global variable <strong>$redis
 <p>Then you need to add the following screen config in ~/.screenrc file</p>
 
 <p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+
 <p>Finally, communication goes like this: screen session is started by host with:</p>
 
 <p>Guest SSH to the host machine and automatically joins the screen session:</p>
 
-<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser" title="Screen commands" target="_blank">here</a>.</p>
+<p>Then they can interact in the same terminal. More on the screen commands<a href="http://aperiodic.net/screen/multiuser">here</a> .</p>
+
 <p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
 
 <p>And is starting pairprog screen session with:</p>
 
 <p>Then user2 can join that session with:</p>
 
-<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference" title="Screen reference" target="_blank">screen reference</a>. Basic commands are:</p>
-
-  
+<p>More info on screen command here in this<a href="http://aperiodic.net/screen/quick_reference">screen reference</a> . Basic commands are:</p>
 ]]></content>
   </entry>
   
@@ -784,11 +766,12 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
     <updated>2011-10-04T14:45:00+02:00</updated>
     <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
-    <content type="html"><![CDATA[    A great photo from the programming class @glennrob is involved with. <p /> (they&#8217;re learning ruby)<p><div class='p_embed p_image_embed'>
-<a href="http://blog.siyelo.com/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img alt="Koding_in_khayelitsha" height="747" src="http://blog.siyelo.com/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" width="500" /></a>
-</div>
-</p>
+    <content type="html"><![CDATA[<pre><code>A great photo from the programming class @glennrob is involved with.
+</code></pre>
 
+<p>(they&#8217;re learning ruby)</p>
+
+<p><a href="http://blog.siyelo.com/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg">![Koding_in_khayelitsha][/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg] </a></p>
 ]]></content>
   </entry>
   
@@ -797,81 +780,66 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video"/>
     <updated>2011-09-23T12:11:28+02:00</updated>
     <id>http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video</id>
-    <content type="html"><![CDATA[    [vimeo http://www.vimeo.com/29374463 w=500&h=283]
-  
+    <content type="html"><![CDATA[<pre><code>[vimeo http://www.vimeo.com/29374463 w=500&amp;h=283]
+</code></pre>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Installing a gem in all your global RVM gemsets]]></title>
+    <title type="html"><![CDATA[Installing A Gem In All Your Global Rvm Gemsets]]></title>
     <link href="http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets"/>
-    <updated>2011-09-08T20:46:00+02:00</updated>
+    <updated>2011-09-08T00:00:00+02:00</updated>
     <id>http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets</id>
-    <content type="html"><![CDATA[    <div>Across different projects like us, you probably have a lot of development gems you like to use.&nbsp;</div>
-<div>E.g. we like;</div>
+    <content type="html"><![CDATA[<hr />
 
-<div>but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</div>
-<p>So, give this a shot;</p>
-<div><span class="Apple-tab-span"> </span>for x in $(rvm list strings); do rvm use $x@global &amp;&amp; gem install &lt;RAD DEVELOPMENT GEM NAME&gt;; done<br />
-<div>This installs a specific gem into all your global RVM gemsets. For great justice!</div>
-</div>
-  
+<p>layout: post
+title: &#8220;Installing a gem in all your global RVM gemsets&#8221;
+date: 2011-09-08 18:46:00
+comments: true
+categories:
+author:
+&#8212;Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</p>
+
+<p>So, give this a shot;for x in $(rvm list strings); do rvm use $x@global &amp;&amp; gem install <RAD DEVELOPMENT GEM NAME>; doneThis installs a specific gem into all your global RVM gemsets. For great justice!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to bulk delete remote git tags]]></title>
+    <title type="html"><![CDATA[How To Bulk Delete Remote Git Tags]]></title>
     <link href="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags"/>
-    <updated>2011-08-01T00:48:00+02:00</updated>
+    <updated>2011-07-31T00:00:00+02:00</updated>
     <id>http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags</id>
-    <content type="html"><![CDATA[    <div>Our project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</div>
+    <content type="html"><![CDATA[<hr />
 
-<div>I needed a one-liner to find all these prerelease tags (i.e.&nbsp;all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</div>
-<p />
-<div>
-<div>Given that &#8220;git ls-remote&#8221; gives output like &#8220;&lt;SHA&gt; &nbsp; &nbsp;refs/tags/&lt;tag&gt;&#8221;. E.g.;</div>
+<p>layout: post
+title: &#8220;How to bulk delete remote git tags&#8221;
+date: 2011-07-31 22:48:00
+comments: true
+categories:
+author:
+&#8212;Our project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
-<p />
-<div>With a bit of awk and regexp love, we can match that output with;</div>
+<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.;</p>
 
-</div>
-<div>And we know that to delete a git tag on a remote you use;</div>
-<p />
+<p>With a bit of awk and regexp love, we can match that output with;And we know that to delete a git tag on a remote you use;</p>
 
-<p />
-<div>So putting it all together we get;</div>
-<p />
+<p>So putting it all together we get;</p>
 
-<p />
-<div>
-<div>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</div>
-</div>
-<p />
-<div>
-<div>Booyaka.</div>
-<p />
-<div>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;</div>
-</div>
-<blockquote style="margin:0 0 0 40px;border:none;padding:0;">
-<div>
-<p />
-<div>a) make sure you have the tags backed up in your local repo first and&nbsp;</div>
-<div>b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</div>
-</div>
-</blockquote>
-<p />
-<div>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</div>
-<p />
+<p>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</p>
 
-<p />
-<div>Similarly for removing these pre-release tags from a local git repo;</div>
-<p />
+<p>Booyaka.</p>
 
-<p />
-<div>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler.&nbsp;Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</div>
-<p />
-<div>Final step: Profit</div>
-  
+<p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
+
+<blockquote><p>a) make sure you have the tags backed up in your local repo first and b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
+
+<p>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
+
+<p>Similarly for removing these pre-release tags from a local git repo;</p>
+
+<p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
+
+<p>Final step: Profit</p>
 ]]></content>
   </entry>
   
@@ -880,12 +848,19 @@ First, in the initializer a new redis object as a global variable <strong>$redis
     <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
     <updated>2011-07-27T15:08:00+02:00</updated>
     <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
-    <content type="html"><![CDATA[    <p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e. <p /> Step 1	 <br />
+    <content type="html"><![CDATA[<p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
 
-<p /> Step 2 <p /> 
+<p>Step 1</p>
 
-<p /> Step 3 <p />  ??? <p /> Step 4 <p />  Profit</p>
-  
+<p>Step 2</p>
+
+<p>Step 3</p>
+
+<p>???</p>
+
+<p>Step 4</p>
+
+<p>Profit</p>
 ]]></content>
   </entry>
   
