@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="We&#8217;ve all heard it, the browser is the future for the mobile applications. Mobile web frameworks are getting a lot of traction lately. Is this &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Siyelo</a></h1>
+  
+    <h2>A blogging framework for siyelos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/jquery-mobile-overview">jQuery Mobile Overview</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-14T10:51:00+01:00" pubdate data-updated="true">Dec 14<span>th</span>, 2011</time>
+        
+         | <a href="/jquery-mobile-overview#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
+
+<p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
+
+<p>Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
+
+<p>Building a mobile application with jQuery Mobile is extremely easy and fast</p>
+
+<p>One of the biggest advantages of jQuery Mobile is that even as a newcomer to the framework you can develop a rough version of your application in a matter of days as opposed to the native application development for Android and iOS where the learning curve is not quite as steep.</p>
+
+<p>To make your application mobile just include the jQuery Mobile files in your header</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.6.4.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add the data attributes to your HTML markup</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;page&quot;</span> <span class="na">data-theme=</span><span class="s">&quot;e&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h1&gt;</span>My Title<span class="nt">&lt;/h1&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul</span> <span class="na">data-role=</span><span class="s">&quot;listview&quot;</span> <span class="na">data-inset=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 1<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 2<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>jQuery Mobile<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;footer&quot;</span> <span class="na">data-position=</span><span class="s">&quot;fixed&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;h4&gt;</span>Footer<span class="nt">&lt;/h4&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And this is the result:</p>
+
+<p><img src="/images/old/2011/12/34522551610-orig.png" alt="34522551610-orig" /></p>
+
+<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the <a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
+
+<p>The important part in the html snippet above are the HTML5 data-* attributes. The framework relies on these data attributes in order to do it&#8217;s magic. Older browser will ignore this attributes and just render the regular html. Basically the layout of a jQuery Mobile application is defined by the data-role attribute. In the above example we can see that we have a divs with data-roles &#8220;header&#8221;, &#8220;content&#8221; and &#8220;footer&#8221; all of which belong to the main page wrapper. Also we added a data-role on the list element in order for the framework to “widgetize” it.</p>
+
+<p>By default, linking to other pages is automatically done via Ajax in a single-page model. All you need to do is define a standard links and the framework will take care of it. If the device doesn&#8217;t support Ajax for some reason the framework falls back to standard http requests. Another cool feature of the framework is linking within a multi-page document. A single page can contain many page containers defined by the data-role of “page” which means immediate display of the clicked page. When using this techniques combined with the page transition effects, the user experience feels almost “native app” like.</p>
+
+<h3>Web vs Native</h3>
+
+<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like <a href="http://phonegap.com/">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
+
+<p>Hopefully we will see a quick adoption of the proposed <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
+
+<h3>Conclusion</h3>
+
+<p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
+
+<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or <a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/stop-internet-censorship-fight-sopa">Stop Internet Censorship - FIGHT SOPA</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T19:07:14+01:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+         | <a href="/stop-internet-censorship-fight-sopa#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/siyelos-git-workflow">Siyelos&#8217; Git Workflow</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-12T10:53:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2011</time>
+        
+         | <a href="/siyelos-git-workflow#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
+
+<h3>Named Branches</h3>
+
+<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
+
+<h3>Pull Requests</h3>
+
+<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
+
+<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
+
+<h3>Why pull requests?</h3>
+
+<p>Pull requests serve 2 functions:</p>
+
+<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
+
+<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
+
+<h3>Merging</h3>
+
+<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
+
+<h3>Deploying</h3>
+
+<p>Once merged in, the branch is immediately deployed to staging.</p>
+
+<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
+
+<p>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/we-have-a-new-phone-number">We Have a New Phone Number!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-08T09:04:32+01:00" pubdate data-updated="true">Dec 8<span>th</span>, 2011</time>
+        
+         | <a href="/we-have-a-new-phone-number#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050.</p>
+
+<p>Our old landline number (+27 21 461 2559) was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</p>
+
+<blockquote><p>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221; <br />
+&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221; <br />
+<strong>facepalm</strong></p></blockquote>
+
+<p>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/remote-pair-programming-with-screen">Remote Pair-programming With Screen</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-03T09:37:00+01:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2011</time>
+        
+         | <a href="/remote-pair-programming-with-screen#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a> ).</p>
+
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
+
+<ul>
+<li>you don&#8217;t have control over the other screen</li>
+<li>you cannot have both screen sharing and video</li>
+<li>bandwidth of the internet connection sometimes can be a problem</li>
+<li>it&#8217;s not a tool for pair programming</li>
+</ul>
+
+
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+
+<p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
+
+<ul>
+<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive - useful as a real time code collaboration tool</li>
+</ul>
+
+
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
+
+<p>First we need to install SSH server because all communication will happen over secure channel:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ssh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo useradd -s /bin/rbash guest
+</span><span class='line'>sudo passwd guest
+</span><span class='line'>sudo mkdir /home/guest
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we need to setup the guest shell.profile. Add the following to /home/guest/.profile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">trap</span> <span class="s2">&quot;&quot;</span> 2 3 19 <span class="c"># stop user getting to shell</span>
+</span><span class='line'>clear
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Welcome to pair-programming session&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -n <span class="s2">&quot;Press Enter to continue...&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span>
+</span><span class='line'>screen -x dalibor/pairprog
+</span><span class='line'><span class="nb">exit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+
+<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo chmod +s /usr/bin/screen
+</span><span class='line'>sudo chmod 755 /var/run/screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you need to add the following screen config in ~/.screenrc file</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>hardstatus on
+</span><span class='line'>hardstatus alwayslastline
+</span><span class='line'>startup_message off
+</span><span class='line'>termcapinfo xterm ti@:te@
+</span><span class='line'>hardstatus string <span class="s2">&quot;%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a &quot;</span>
+</span><span class='line'>screen -t bash1 1
+</span><span class='line'>
+</span><span class='line'><span class="c"># multiuser setup</span>
+</span><span class='line'>multiuser on
+</span><span class='line'>aclchg guest -wx <span class="s2">&quot;#,?&quot;</span>
+</span><span class='line'>aclchg guest +x <span class="s2">&quot;colon,wall,detach&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+
+<p>Finally, communication goes like this: screen session is started by host with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Guest SSH to the host machine and automatically joins the screen session:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh guest@host
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
+
+<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>multiuser on
+</span><span class='line'>acladd user2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And is starting pairprog screen session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then user2 can join that session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -x user1/pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference">screen reference</a>. Basic commands are:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Ctrl-a d <span class="c"># detach screen window</span>
+</span><span class='line'>Ctrl-a Ctrl-a <span class="c"># flip-flop between two windows</span>
+</span><span class='line'>screen -r <span class="c"># re-attach screen window</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Siyelo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="You want to make; Rails scale?
+Ruby faster?
+your code more attractive? and have more XML in your life? The enterprise gem allows all this! It’s easy &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/7/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Siyelo</a></h1>
+  
+    <h2>A blogging framework for siyelos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/scaling-ruby-on-rails-for-the-enterprise">Scaling Ruby on Rails for the Enterprise</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-19T01:14:38+02:00" pubdate data-updated="true">Jun 19<span>th</span>, 2010</time>
+        
+         | <a href="/scaling-ruby-on-rails-for-the-enterprise#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You want to make;</p>
+
+<ul>
+<li>Rails scale?</li>
+<li>Ruby faster?</li>
+<li>your code more attractive?</li>
+</ul>
+
+
+<p><strong>and</strong> have more XML in your life?</p>
+
+<p>The enterprise gem allows all this!</p>
+
+<ul>
+<li>It’s easy to read!</li>
+<li>It scales!</li>
+<li>Cross platform</li>
+<li>TRANSFORM! your code using XSLT!</li>
+<li>Search your AST with XPath <strong>or</strong> CSS!</li>
+</ul>
+
+
+<p>Start converting your existing <strong>legacy</strong> Ruby code in to scaleable, easy to read XML files today: <a href="http://github.com/tenderlove/enterprise">http://github.com/tenderlove/enterprise</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/handy-rake-tasks-for-heroku">Handy Rake Tasks for Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-18T00:00:00+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2010</time>
+        
+         | <a href="/handy-rake-tasks-for-heroku#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><hr />
+
+<p>layout: post
+title: &#8220;Handy rake tasks for Heroku&#8221;
+date: 2010-06-18 08:42:07
+comments: true
+categories:
+author:
+&#8212;We&#8217;ve been using a standalone rake task to generate the .gems for our Heroku apps. Recently Heroku raised the bar by making you specify the rails version too in this file (gah). So all your 2.3.5 or lower full redeploys will start breaking without this line in .gems.</p>
+
+<p>Theres some great gists and blogposts floating around there showing you how to generate .gems, but who wants to manage individual rake tasks across projects? Not me. A little bit of hunting and I found a nice plugin ‘heroku_san’ by Elijah Miller with several cool Heroku rake tasks, including one to generate the .gems file. </p>
+
+<p>Plugins are pants though, so I&#8217;ve updated heroku_san to a gem now too. No more copying .rake tasks between projects!</p>
+
+<p>Grab</p>
+
+<p>  <a href="http://github.com/glennr/heroku_san">http://github.com/glennr/heroku_san</a> and</p>
+
+<p>  rake heroku:gems</p>
+
+<p>til your hearts&#8217; content!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror">GitHub Gem: A JSON Text Must at Least Contain Two Octets! (JSON::ParserError)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-07T23:25:00+02:00" pubdate data-updated="true">Jun 7<span>th</span>, 2010</time>
+        
+         | <a href="/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Matt Jones and I came up with a fix for this error during Dr Nic&#8217;s OSS tutorial at RailsConf &#8216;10;</p>
+
+<p>Seems like GitHub is not returning correct JSON for the<a href="http://github.com/#">http://github.com/#</a> {user}/#{project}/network_meta endpoint.</p>
+
+<p>Fork our fix here:</p>
+
+<p><a href="http://github.com/glennr/github-gem">http://github.com/glennr/github-gem</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/the-easiest-way-to-make-sasscompass-work-on-heroku">The Easiest Way to Make Sass/compass Work on Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-03T15:31:52+02:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2010</time>
+        
+         | <a href="/the-easiest-way-to-make-sasscompass-work-on-heroku#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Configure your sass or compass options (config/compass.config):</p>
+
+<p>config.css_dir = “tmp/stylesheets/compiled”</p>
+
+<p>And then create and initializer (e.g. config/initializers/compass.rb) which contains:</p>
+
+<p>123
+require&#8221;fileutils&#8221;FileUtils.mkdir_p(Rails.root.join(&#8220;tmp&#8221;,&#8221;stylesheets&#8221;,&#8221;compiled&#8221;))ActionController::Dispatcher.middleware.use(Rack::Static,:root=>&#8221;tmp/&#8221;,:urls=>[&#8220;/stylesheets/compiled&#8221;])And your stylesheets will always compile to tmp/ !</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/scalable-full-screen-background-image">Scalable Full Screen Background Image</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-28T09:52:00+02:00" pubdate data-updated="true">Apr 28<span>th</span>, 2010</time>
+        
+         | <a href="/scalable-full-screen-background-image#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of the alternatives is Flash and anyone who appreciates usability and web standards will probably resent that very thought.</p>
+
+<p>Recently I worked on a website for a<a href="http://freezing-light-25.heroku.com/">branding agency</a> that required a bit more avant-garde design with a large background image that could resize according to the browser’s window size and resolution. My research showed that most of the non-flash websites were done by JavaScript, but there was something else that caught my attention – a solution done with straight HTML, CSS and guess what – tables! Yeah, I know, the old arch-nemesis of web design. We almost started forgetting they existed, but they pop-up from time to time, reminding us of the good old days of poorly designed websites. And yet it was a solution so simple it’s almost creative and I was urged to try it out.</p>
+
+<p>The whole trick is to create a single cell table, and apply few styles to make the magic work.</p>
+
+<p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it:<a href="http://haml-lang.com/">http://haml-lang.com/</a></p>
+
+<p>1234567</p>
+
+<h1>bg  #bg_wrapper    %table{ :cellspacing => &#8220;0&#8221;, :cellpadding => &#8220;0&#8221; }      %tbody        %tr          %td            %img#background{ :src => &#8220;images/index.jpg&#8221; }</h1>
+
+<p>So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:</p>
+
+<p>1234567891011121314151617181920212223242526
+body  width: 100%  height: 100%  overflow: hidden#bg, table, td, #content    width: 100%    height: 100%    overflow: hidden  #bg_wrapper    width: 200%    left: -50%    position: absolute    top: -50%    height: 200%  td    text-align: center    vertical-align: middle  #bg img    margin: 0 auto    min-height: 50%    min-width: 50%</p>
+
+<p>After this you can continue styling the rest of the page with straight CSS without worrying about the background. Leave the table as it is and nest the rest of your DIV’s straight in the body.</p>
+
+<p> </p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/8/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/6/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Siyelo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

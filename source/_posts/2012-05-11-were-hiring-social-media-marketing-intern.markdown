@@ -1,13 +1,13 @@
-
-
 ---
 layout: post
 title: "WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN"
 date: 2012-05-11 14:07:00
 comments: true
 categories:
-author: 
----Siyelo is growing fast and we're looking for a bright, hardworking individual to join our team as a Social Media Intern!
+author:
+---
+
+Siyelo is growing fast and we're looking for a bright, hardworking individual to join our team as a Social Media Intern!
 
 –
 
@@ -20,11 +20,9 @@ author:
 **Funding**: Expenses and reasonable honorarium
 
 
-
 **Internship Description:**
 
-Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community.  A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.
-
+Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community. A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.
 
 
 **Skills & Experience Required:**
@@ -40,7 +38,6 @@ Siyelo is a web design and development agency, consulting to a wide variety of c
 - Highly sociable and witty
 
 - Knowledge of HTML is a plus
-
 
 
 **Sample projects you will work on:**
@@ -62,7 +59,6 @@ Siyelo is a web design and development agency, consulting to a wide variety of c
 - Testing new products
 
 
-
 **Benefits for Intern:**
 
 - Siyelo offers an international, fast-paced and dynamic environment in hot web techologies.
@@ -74,7 +70,6 @@ Siyelo is a web design and development agency, consulting to a wide variety of c
 - Other fun things not beginning with the letter 'P'.
 
 - Learn the basics of web technogies, product development and consulting.
-
 
 
 **Application procedure:**

@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="Some handy bash aliases to speed up your Heroku deploys 1234
+alias gphm=&#8217;git push heroku master&#8217;alias hmig=&#8217;heroku rake db:migrate &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/12/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Siyelo</a></h1>
+  
+    <h2>A blogging framework for siyelos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/aliases-for-common-heroku-commands">Aliases for Common Heroku Commands</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-24T14:25:12+01:00" pubdate data-updated="true">Nov 24<span>th</span>, 2009</time>
+        
+         | <a href="/aliases-for-common-heroku-commands#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>Some handy bash aliases to speed up your Heroku deploys
+</code></pre>
+
+<p>1234
+alias gphm=&#8217;git push heroku master&#8217;alias hmig=&#8217;heroku rake db:migrate&#8217;alias hlog=&#8217;heroku logs&#8217;alias hopen=&#8217;heroku open&#8217;</p>
+
+<p>![Pastedgraphic][/images/old/2009/11/pastedgraphic.png]</p>
+
+<p><a href="http://www.heroku.com">www.heroku.com</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/installing-imagemagick-on-osx-leopard">Installing ImageMagick on OSX Leopard</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+        
+         | <a href="/installing-imagemagick-on-osx-leopard#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I found a great script for compiling ImageMagick on OSX from scratch via ThoughtBot&#8217;s Paperclip installation instructions.</p>
+
+<p>Unfortunately it didnt work perfectly out of the box;
+123
+Undefined symbols:“<em>iconv_close”, referenced from:</em>opvp_to_utf8 in gdevopvp.o &#8230;</p>
+
+<p>So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;</p>
+
+<p>12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697</p>
+
+<h1>!/bin/sh# Install ImageMagick on Snow Leopard: by kain, improved by mislav and samsoffes# Updated by glenn roberts to include libiconv, and the latest stable ImageMagick## http://www.icoretech.org/2009/08/install-imagemagick-in-leopard-snow-leopard/# Work with 64bit kernel mode set-e PREFIX=/usr/local# Passenger users: amend your Apache global configuration with the following directive# SetEnv PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin# The Apache config file is located at /etc/apache2/httpd.conf # FreeTypewgethttp://sourceforge.net/projects/freetype/files/freetype2/2.3.9/freetype-2.3.9.tar.gz/download-O-|tarxzcdfreetype-2.3.9./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libpng#wget ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.2.40.tar.bz2 -O- | tar xjwgethttp://www.imagemagick.org/download/delegates/libpng-1.2.40.tar.bz2-O-|tarxjcdlibpng-1.2.40./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # jpegwgethttp://www.ijg.org/files/jpegsrc.v7.tar.gz-O-|tarxzcdjpeg-7ln-s<code>which glibtool</code>./libtoolexportMACOSX_DEPLOYMENT_TARGET=10.6./configure&#8211;enable-shared&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libtiffwgethttp://dl.maptools.org/dl/libtiff/tiff-3.8.2.tar.gz-O-|tarxzcdtiff-3.8.2./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libwmfwgethttp://sourceforge.net/projects/wvware/files/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz/download-O-|tarxzcdlibwmf-0.2.8.4./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # LittleCmswgethttp://www.littlecms.com/lcms-1.18a.tar.gz-O-|tarxzcdlcms-1.18./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # Ghostscriptwgethttp://ghostscript.com/releases/ghostscript-8.70.tar.gz-O-|tarxzcdghostscript-8.70./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # Ghostscript Fontswgethttp://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download-O-|tarxzsudomv-ffonts$PREFIX/share/ghostscript# libiconvwgethttp://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz-O-|tarxzcdlibiconv-1.13.1./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd..# ImageMagickwgethttp://mirror.is.co.za/pub/imagemagick/ImageMagick-6.5.7-10.tar.gz-O-|tarxzcdImageMagick-6.5.7-10exportCPPFLAGS=-I$PREFIX/includeexportLDFLAGS=-L$PREFIX/lib./configure&#8211;prefix=$PREFIX&#8211;disable-static&#8211;with-modules&#8211;without-perl&#8211;without-magick-plus-plus&#8211;with-quantum-depth=8&#8211;with-gs-font-dir=$PREFIX/share/ghostscript/fontsmakesudomakeinstallcd.. # Clean uprm-rffreetype-2.3.9libpng-1.2.40jpeg-7tiff-3.8.2libwmf-0.2.8.4lcms-1.18libiconv-1.13.1ghostscript-8.70ImageMagick-6.5.7-10</h1>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/make-textmate-your-editor-of-choice">Make Textmate Your $EDITOR of Choice</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-19T09:46:59+01:00" pubdate data-updated="true">Nov 19<span>th</span>, 2009</time>
+        
+         | <a href="/make-textmate-your-editor-of-choice#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>If you are a master of Vim and feel like a sea-change, or if you're just plain scared, you can set up Textmate as your default editor.
+</code></pre>
+
+<p>12
+export EDITOR=&#8217;mate -w&#8217;export GIT_EDITOR=&#8217;mate -wl1&#8217;. #This instructs TextMate to open with the caret at line 1 rather than where it last was.</p>
+
+<p>Whack this in your .profile (e.g. ~/.bash_profile), re-source it ( source ~/.bash_profile ), and off you go.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/great-gitignore-files-for-your-next-rails-project">Great .gitignore File(s) for Your Next Rails Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+        
+         | <a href="/great-gitignore-files-for-your-next-rails-project#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here&#8217;s great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
+
+<p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
+
+<p>`run &#8220;touch tmp/.gitignore log/.gitignore vendor/.gitignore&#8221;</p>
+
+<p>run %{find . -type d -empty | grep -v &#8220;vendor&#8221; | grep -v &#8220;.git&#8221; | grep -v &#8220;tmp&#8221; | xargs -I xxx touch xxx/.gitignore}</p>
+
+<p>file &#8216;.gitignore&#8217;, &lt;&lt;-EOS.gsub(/^ /, &#8221;)
+.DS_Store
+log/<em>.log
+tmp/**/</em>
+config/database.yml
+config/initializers/site_keys.rb
+db/*.sqlite3
+EOS`</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/textmate-tip-align-statments">Textmate Tip: Align Statments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-18T07:53:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+        
+         | <a href="/textmate-tip-align-statments#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you want to go from this;</p>
+
+<p>![Pastedgraphic][/images/old/2009/11/pastedgraphic1.png]</p>
+
+<p>to an aligned, and much more legible statement list like this;</p>
+
+<p>![0pastedgraphic][/images/old/2009/11/0pastedgraphic.png]</p>
+
+<p>The textmate key combination for this is:<strong>⌥⌘]</strong>(Alt + Cmd + Bracket)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/13/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/11/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Siyelo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

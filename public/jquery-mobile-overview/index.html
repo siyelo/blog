@@ -106,7 +106,7 @@
 
 <div class="entry-content"><p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
 
-<p>It&#8217;s been almost a month since the 1.0 stable release of<a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive<a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
+<p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
 
 <p>Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
 
@@ -116,29 +116,75 @@
 
 <p>To make your application mobile just include the jQuery Mobile files in your header</p>
 
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.6.4.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 <p>Add the data attributes to your HTML markup</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;page&quot;</span> <span class="na">data-theme=</span><span class="s">&quot;e&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h1&gt;</span>My Title<span class="nt">&lt;/h1&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul</span> <span class="na">data-role=</span><span class="s">&quot;listview&quot;</span> <span class="na">data-inset=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 1<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 2<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>jQuery Mobile<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;footer&quot;</span> <span class="na">data-position=</span><span class="s">&quot;fixed&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;h4&gt;</span>Footer<span class="nt">&lt;/h4&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And this is the result:</p>
 
-<p>![34522551610-orig][/images/old/2011/12/34522551610-orig.png]</p>
+<p><img src="/images/old/2011/12/34522551610-orig.png" alt="34522551610-orig" /></p>
 
-<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the<a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
+<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the <a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
 
 <p>The important part in the html snippet above are the HTML5 data-* attributes. The framework relies on these data attributes in order to do it&#8217;s magic. Older browser will ignore this attributes and just render the regular html. Basically the layout of a jQuery Mobile application is defined by the data-role attribute. In the above example we can see that we have a divs with data-roles &#8220;header&#8221;, &#8220;content&#8221; and &#8220;footer&#8221; all of which belong to the main page wrapper. Also we added a data-role on the list element in order for the framework to “widgetize” it.</p>
 
 <p>By default, linking to other pages is automatically done via Ajax in a single-page model. All you need to do is define a standard links and the framework will take care of it. If the device doesn&#8217;t support Ajax for some reason the framework falls back to standard http requests. Another cool feature of the framework is linking within a multi-page document. A single page can contain many page containers defined by the data-role of “page” which means immediate display of the clicked page. When using this techniques combined with the page transition effects, the user experience feels almost “native app” like.</p>
 
-<p>Web vs Native</p>
+<h3>Web vs Native</h3>
 
-<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like<a href="http://phonegap.com/">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
+<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like <a href="http://phonegap.com/">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
 
-<p>Hopefully we will see a quick adoption of the proposed<a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
+<p>Hopefully we will see a quick adoption of the proposed <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
 
-<p>Conclusion</p>
+<h3>Conclusion</h3>
 
 <p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
 
-<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or<a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
+<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or <a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
 </div>
 
 
@@ -147,7 +193,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Naum Kostovski</span></span>
 
       
 
@@ -202,11 +248,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
       </li>
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
