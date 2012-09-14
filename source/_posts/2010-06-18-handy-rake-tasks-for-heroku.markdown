@@ -3,7 +3,7 @@ layout: post
 title: "Handy rake tasks for Heroku"
 date: 2010-06-18 08:42:07
 comments: true
-categories:
+categories: Open-Source
 author: Glenn Roberts
 ---
 

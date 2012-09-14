@@ -270,7 +270,7 @@
   </header>
 
 
-  <div class="entry-content"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</p>
+  <div class="entry-content"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -283,7 +283,7 @@
 
 <p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
-<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.;</p>
+<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -294,7 +294,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>With a bit of awk and regexp love, we can match that output with;</p>
+<p>With a bit of awk and regexp love, we can match that output with:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -305,14 +305,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And we know that to delete a git tag on a remote you use;</p>
+<p>And we know that to delete a git tag on a remote you use:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So putting it all together we get;</p>
+<p>So putting it all together we get:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
@@ -339,7 +339,7 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Similarly for removing these pre-release tags from a local git repo;</p>
+<p>Similarly for removing these pre-release tags from a local git repo:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

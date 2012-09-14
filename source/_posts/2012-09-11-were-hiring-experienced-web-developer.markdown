@@ -3,7 +3,7 @@ layout: post
 title: "We're Hiring - Experienced Web Developer"
 date: 2012-09-11 13:45:00
 comments: true
-categories:
+categories: Jobs
 author: Sachin Ranchod
 ---
 
@@ -40,12 +40,10 @@ We are working on an exciting mix of improving and scaling existing apps and dev
 * Vim
 * In-depth knowledge of 90's boy band 'N Sync
 
-
 **Location**
 
 * Skopje or Cape Town
 
-
 **How to Apply**
 
-Please send your portfolio and open source links to[jobs@siyelo.com](mailto:jobs@siyelo.com). Attach a CV if you must.
+Please send your portfolio and open source links to [jobs@siyelo.com](mailto:jobs@siyelo.com). Attach a CV if you must.

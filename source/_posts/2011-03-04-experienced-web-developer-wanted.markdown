@@ -3,7 +3,7 @@ layout: post
 title: "Experienced Web Developer wanted"
 date: 2011-03-04 12:20:27
 comments: true
-categories:
+categories: Jobs
 author: Dalibor Nasevic
 ---
 

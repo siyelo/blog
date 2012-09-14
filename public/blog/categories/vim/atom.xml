@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-09-14T14:11:16+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tips - Part II]]></title>
+    <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
+    <updated>2012-07-03T16:39:23+02:00</updated>
+    <id>http://blog.siyelo.com/vim-tips-part-ii</id>
+    <content type="html"><![CDATA[<p>This week we'll share few more userful Vim tips that we've learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
+
+<h3>1. Replace in multiple files</h3>
+
+<p>To search &amp; replace in multiple files, we need to create list of files in which we'll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the "hrt" string:</p>
+
+<p><code>vim
+:args app/assets/javascripts/hrt*.js
+</code></p>
+
+<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
+
+<p><code>vim
+:args
+</code></p>
+
+<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
+
+<p><code>vim
+:argdo %s/Hrt/Hrt2/g
+</code></p>
+
+<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
+
+<p><code>vim
+:argdo update
+</code></p>
+
+<h3>2. Search and replace in multiple files</h3>
+
+<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files .<strong>vimgrep</strong> command creates quicklist with files matching the pattern which list we can see by opening it with <strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the <strong>:Qargs</strong> mapping which we have in our vimrc file:</p>
+
+<p>```vim
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+" populate the argument list with each of the files named in the quickfix list
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()</p>
+
+<pre><code>let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+</code></pre>
+
+<p>  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+```</p>
+
+<p>Finally, here's an example of what needs to be run to do search &amp; replace in files:</p>
+
+<p><code>vim
+:vimgrep /CurrencyNumberHelper/ app/models/*.rb
+:Qargs
+:argdo %s/CurrencyNumberHelper/CurrencyHelper/g
+:argdo update
+</code></p>
+
+<h3>3. Edit already recorded macro</h3>
+
+<p>While recording a macro it's easy to do mistakes. And when that happens, it's easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>"ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
+
+<h3>4. Execute macro in multiple files</h3>
+
+<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let's load all models from a Rails app:
+:args app/models/*.rb Then we run the macro (that is recorded in register a) with:
+:argdo normal @aIn the end we save all the buffers with:
+:argdo update</p>
+
+<h3>5. Delete commands</h3>
+
+<p>We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:</p>
+
+<p><code>vim
+&lt;C-h&gt; " delete back one character (backspace)
+&lt;C-w&gt; " delete back one word
+&lt;C-u&gt; " delete back to start of line
+</code></p>
+
+<h3>6. Vi mode on command line</h3>
+
+<p>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
+
+<p><code>vim
+set -o vi
+</code></p>
+
+<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim's single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
+
+<p>To go back to emacs mode, we need to type:</p>
+
+<p><code>vim
+set -o emacs
+</code></p>
+
+<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here's <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tips - Part I]]></title>
+    <link href="http://blog.siyelo.com/vim-tips-part-i"/>
+    <updated>2012-06-27T09:50:00+02:00</updated>
+    <id>http://blog.siyelo.com/vim-tips-part-i</id>
+    <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful. Most of the tips we've learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+
+<h3>1. Repeat the last Ex command</h3>
+
+<p>In Vim there are 3 command line mode prompts:</p>
+
+<ul>
+<li>Ex command prompt: <strong>:something</strong></li>
+<li>Search prompt: <strong>/something</strong></li>
+<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
+</ul>
+
+
+<p>Let say we run a spec from the Ex command prompt like this:</p>
+
+<p><code>vim
+:!rspec spec/models/code_spec.rb
+</code></p>
+
+<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
+
+<h3>2. Repeat the last substitute command</h3>
+
+<p>If substitute command is run, like for example:</p>
+
+<p><code>vim
+:s/current_user/user/g
+</code></p>
+
+<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It's handy having the following mappings in the vimrc file:</p>
+
+<p><code>vim
+" make &amp; trigger :&amp;&amp; so it preserves flags
+nnoremap &amp; :&amp;&amp;&lt;Enter&gt;
+xnoremap &amp; :&amp;&amp;&lt;Enter&gt;
+</code></p>
+
+<h3>3. Sort properties in CSS</h3>
+
+<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
+
+<p><code>vim
+h4 {
+  font-size: 11px;
+  margin: 15px;
+  background: red;
+}
+</code></p>
+
+<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
+
+<p><code>vim
+h4 {
+  background: red;
+  font-size: 11px;
+  margin: 15px;
+}
+</code></p>
+
+<h3>4. Select texts</h3>
+
+<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
+
+<p><code>vim
+" select last paste in visual mode
+nnoremap &lt;expr&gt; gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+</code></p>
+
+<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
+
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
+
+<h3>6. Run normal mode commands across a range</h3>
+
+<p>Say we want to append ; at the end of the following lines:</p>
+
+<p><code>vim
+var element = $(this)
+var tabName = element.data('tab')
+var report  = element.data('report')
+</code></p>
+
+<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
+
+<p>Next week we're coming with few more tips to improve your vimfu.</p>
+]]></content>
+  </entry>
+  
+</feed>

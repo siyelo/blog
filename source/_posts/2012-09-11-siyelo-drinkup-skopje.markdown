@@ -3,7 +3,7 @@ layout: post
 title: "Siyelo Drinkup: Skopje"
 date: 2012-09-11 14:09:00
 comments: true
-categories:
+categories: Fun
 author: Glenn Roberts
 ---
 

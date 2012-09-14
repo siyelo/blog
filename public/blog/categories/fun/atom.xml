@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Fun | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/fun/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-09-14T14:11:16+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Siyelo Drinkup: Skopje]]></title>
+    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
+    <updated>2012-09-11T16:09:00+02:00</updated>
+    <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
+    <content type="html"><![CDATA[<p>There'll be <a href="https://github.com/dalibor">three</a> <a href="https://github.com/Dime">Siyelo</a> <a href="https://github.com/glennr">folks</a> in town next week, and we're looking forward to meeting up with our friends in the web design/development community in MK.</p>
+
+<p><img src="/images/old/2012/09/pastedgraphic-4.png" alt="Github Siyelo members" /></p>
+
+<p>If you're into web technologies, come and join us next Wednesday night for a great time at La Bodeguita in Skopje - drinks are on us!</p>
+
+<p><img src="/images/old/2012/09/pastedgraphic-1.png" alt="Bar people" /></p>
+
+<p><strong>Details:</strong></p>
+
+<ul>
+<li><strong>Where</strong>: <a href="http://www.bodeguita.com.mk/">La Bodeguita Del Medio</a> 13 Noembri 180, Skopje</li>
+<li><strong>When</strong>:  Wednesday, 19 Sep, 7PM!</li>
+</ul>
+
+
+<p><img src="/images/old/2012/09/pastedgraphic-2.png" alt="La Bodeguita Del Medio map" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Koding in Khayelitsha - great photo]]></title>
+    <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
+    <updated>2011-10-04T14:45:00+02:00</updated>
+    <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
+    <content type="html"><![CDATA[<p>A great photo from the programming class @glennrob is involved with.</p>
+
+<p>(they're learning ruby)</p>
+
+<p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Siyelo: An equal opportunity employer.]]></title>
+    <link href="http://blog.siyelo.com/siyelo-an-equal-opportunity-employer"/>
+    <updated>2011-06-18T16:32:53+02:00</updated>
+    <id>http://blog.siyelo.com/siyelo-an-equal-opportunity-employer</id>
+    <content type="html"><![CDATA[<p>We don't even mind if our employees wear makeup sometimes...</p>
+
+<p><a href="/images/old/2011/06/imag0142-scaled-1000.jpg"><img src="/images/old/2011/06/imag0142-scaled-1000.jpg" alt="Imag0142" /> </a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Siyelo fridge]]></title>
+    <link href="http://blog.siyelo.com/the-siyelo-fridge"/>
+    <updated>2010-12-16T19:53:25+01:00</updated>
+    <id>http://blog.siyelo.com/the-siyelo-fridge</id>
+    <content type="html"><![CDATA[<p>After a visit from our favourite Argentinian friend, this is what our fridge looks like;</p>
+
+<p><a href="/images/old/2010/12/photo.jpg"><img src="/images/old/2010/12/photo.jpg" alt="Photo" /> </a></p>
+
+<p>So much Quilmes, so little time!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Scaling Ruby on Rails for the Enterprise]]></title>
+    <link href="http://blog.siyelo.com/scaling-ruby-on-rails-for-the-enterprise"/>
+    <updated>2010-06-19T01:14:38+02:00</updated>
+    <id>http://blog.siyelo.com/scaling-ruby-on-rails-for-the-enterprise</id>
+    <content type="html"><![CDATA[<p>You want to make;</p>
+
+<ul>
+<li>Rails scale?</li>
+<li>Ruby faster?</li>
+<li>your code more attractive?</li>
+</ul>
+
+
+<p><strong>and</strong> have more XML in your life?</p>
+
+<p>The enterprise gem allows all this!</p>
+
+<ul>
+<li>It’s easy to read!</li>
+<li>It scales!</li>
+<li>Cross platform</li>
+<li>TRANSFORM! your code using XSLT!</li>
+<li>Search your AST with XPath <strong>or</strong> CSS!</li>
+</ul>
+
+
+<p>Start converting your existing <strong>legacy</strong> Ruby code in to scaleable, easy to read XML files today: <a href="http://github.com/tenderlove/enterprise">http://github.com/tenderlove/enterprise</a></p>
+]]></content>
+  </entry>
+  
+</feed>

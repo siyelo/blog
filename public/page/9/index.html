@@ -99,7 +99,7 @@
   
 
 
-<time datetime="2010-02-19T18:08:00+02:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
+<time datetime="2010-02-19T17:08:00+01:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
         
          | <a href="/siyelo-sortfolio#disqus_thread">Comments</a>
         
@@ -139,7 +139,7 @@
   
 
 
-<time datetime="2010-02-19T15:56:23+02:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
+<time datetime="2010-02-19T14:56:23+01:00" pubdate data-updated="true">Feb 19<span>th</span>, 2010</time>
         
          | <a href="/the-least-you-can-do-on-usability#disqus_thread">Comments</a>
         
@@ -152,7 +152,7 @@
 
 <p><a href="http://blip.tv/file/1557737/">http://blip.tv/file/1557737/</a></p>
 
-<p>Plus there&#8217;s some helpful resources on <a href="http://sensible.com/">his website</a> .</p>
+<p>Plus there&#8217;s some helpful resources on <a href="http://sensible.com/">his website</a>.</p>
 </div>
   
   
@@ -181,7 +181,7 @@
   
 
 
-<time datetime="2010-02-18T16:26:00+02:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+<time datetime="2010-02-18T15:26:00+01:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
         
          | <a href="/rails-2-3devise-changing-your-email-content-type#disqus_thread">Comments</a>
         
@@ -221,7 +221,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a></p>
+<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a>.</p>
 </div>
   
   
@@ -250,7 +250,7 @@
   
 
 
-<time datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+<time datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
         
          | <a href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0#disqus_thread">Comments</a>
         
@@ -287,14 +287,18 @@
 <p>So obviously my Devise resource, User in this case, is fubar.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="err">  </span>   <span class="n">devise</span> <span class="ss">:all</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:all</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
+<p>Hmm nothing changed there. But wait, <code>devise :all</code> is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Basedevise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -327,7 +331,7 @@
   
 
 
-<time datetime="2010-01-28T16:07:00+02:00" pubdate data-updated="true">Jan 28<span>th</span>, 2010</time>
+<time datetime="2010-01-28T15:07:00+01:00" pubdate data-updated="true">Jan 28<span>th</span>, 2010</time>
         
          | <a href="/paperclip-attachment-validations#disqus_thread">Comments</a>
         
@@ -339,7 +343,7 @@
   <div class="entry-content"><p>Using Paperclip, if you need to check if your model has an attachment, you don&#8217;t use the standard ActiveRecord validation helper i.e.;</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span><span class="ss">:logo</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -348,21 +352,23 @@
 <p>Instead you use Paperclip&#8217;s helper</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span><span class="ss">:logo</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>But be sure to put that <strong>after your attachment definition</strong></p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">has_attached_file</span><span class="ss">:logovalidates_attachment_presence:logo</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">has_attached_file</span> <span class="ss">:logo</span>
+</span><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>And if you&#8217;re doing something tricky, like allowing your model to be saved without an attachment first, but enforcing that an attachment is present on update then; </p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span><span class="ss">:logo</span><span class="p">,</span><span class="ss">:unless</span><span class="o">=&gt;</span><span class="ss">:new_record?</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span><span class="p">,</span> <span class="ss">:unless</span> <span class="o">=&gt;</span> <span class="ss">:new_record?</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

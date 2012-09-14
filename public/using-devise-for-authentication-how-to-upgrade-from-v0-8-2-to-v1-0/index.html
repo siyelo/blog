@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+<time datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -132,14 +132,18 @@
 <p>So obviously my Devise resource, User in this case, is fubar.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="err">  </span>   <span class="n">devise</span> <span class="ss">:all</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:all</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
+<p>Hmm nothing changed there. But wait, <code>devise :all</code> is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Basedevise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -166,8 +170,14 @@
   
 
 
-<time datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+<time datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>Rails</a>
+  
+</span>
 
 
     </p>

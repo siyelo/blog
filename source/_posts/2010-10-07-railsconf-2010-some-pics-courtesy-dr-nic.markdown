@@ -3,7 +3,7 @@ layout: post
 title: "RailsConf 2010 - some pics courtesy Dr Nic"
 date: 2010-10-07 07:09:17
 comments: true
-categories:
+categories: Rails Conferences
 author: Glenn Roberts
 ---
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-09-14T11:35:38+02:00</updated>
+  <updated>2012-09-14T14:11:16+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -90,7 +90,7 @@
 
 <p><strong>How to Apply</strong></p>
 
-<p>Please send your portfolio and open source links to<a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
+<p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
 ]]></content>
   </entry>
   
@@ -103,12 +103,15 @@
 
 <p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word &#8216;should&#8217; and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
 
-<ul>
-<li>it &#8220;should be true&#8221;                -> it &#8220;is true&#8221;</li>
-<li>it &#8220;should action something&#8221; -> it &#8220;actions something&#8221;</li>
-<li>it &#8220;should push something&#8221;   -> it &#8220;pushes something&#8221;</li>
-<li>it &#8220;should by default be 1&#8221;    -> it &#8220;by default is 1&#8221;</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">it</span> <span class="s2">&quot;should be true&quot;</span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="c1">#=&gt; it &quot;is true&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should action something&quot;</span> <span class="c1">#=&gt; it &quot;actions something&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should push something&quot;</span> <span class="err"> </span> <span class="c1">#=&gt; it &quot;pushes something&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should by default be 1&quot;</span> <span class="err"> </span><span class="c1">#=&gt; it &quot;by default is 1&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Are a few extra &#8216;shoulds&#8217; really that big of deal? Probably not - it really boils down to a matter of preference.  For us, running this tool on projects with large test suites helps:</p>
@@ -120,9 +123,7 @@
 </ol>
 
 
-<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a> )</p>
-
-<p> </p>
+<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
 ]]></content>
   </entry>
   
@@ -616,7 +617,7 @@
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
-    <updated>2011-12-30T12:41:00+02:00</updated>
+    <updated>2011-12-30T11:41:00+01:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 
@@ -887,7 +888,7 @@
   <entry>
     <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
-    <updated>2011-12-28T23:01:00+02:00</updated>
+    <updated>2011-12-28T22:01:00+01:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
     <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
 
@@ -942,7 +943,7 @@
   <entry>
     <title type="html"><![CDATA[jQuery Mobile overview]]></title>
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
-    <updated>2011-12-14T11:51:00+02:00</updated>
+    <updated>2011-12-14T10:51:00+01:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
     <content type="html"><![CDATA[<p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
 
@@ -954,7 +955,7 @@
 
 <p>One of the biggest advantages of jQuery Mobile is that even as a newcomer to the framework you can develop a rough version of your application in a matter of days as opposed to the native application development for Android and iOS where the learning curve is not quite as steep.</p>
 
-<p>To make your application mobile just include the jQuery Mobile files in your header</p>
+<p>To make your application mobile just include the jQuery Mobile files in your header:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -965,7 +966,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Add the data attributes to your HTML markup</p>
+<p>Add the data attributes to your HTML markup:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1031,7 +1032,7 @@
   <entry>
     <title type="html"><![CDATA[Stop Internet Censorship - FIGHT SOPA]]></title>
     <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
-    <updated>2011-12-13T20:07:14+02:00</updated>
+    <updated>2011-12-13T19:07:14+01:00</updated>
     <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
     <content type="html"><![CDATA[<div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
 </div>
@@ -1042,7 +1043,7 @@
   <entry>
     <title type="html"><![CDATA[Siyelos' git workflow]]></title>
     <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
-    <updated>2011-12-12T11:53:00+02:00</updated>
+    <updated>2011-12-12T10:53:00+01:00</updated>
     <id>http://blog.siyelo.com/siyelos-git-workflow</id>
     <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
 
@@ -1081,7 +1082,7 @@
   <entry>
     <title type="html"><![CDATA[We have a new phone number!]]></title>
     <link href="http://blog.siyelo.com/we-have-a-new-phone-number"/>
-    <updated>2011-12-08T10:04:32+02:00</updated>
+    <updated>2011-12-08T09:04:32+01:00</updated>
     <id>http://blog.siyelo.com/we-have-a-new-phone-number</id>
     <content type="html"><![CDATA[<p>Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050.</p>
 
@@ -1098,9 +1099,9 @@
   <entry>
     <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
     <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
-    <updated>2011-11-03T10:37:00+02:00</updated>
+    <updated>2011-11-03T09:37:00+01:00</updated>
     <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
-    <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a> ).</p>
+    <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
 
 <p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 
@@ -1339,7 +1340,7 @@
     <link href="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags"/>
     <updated>2011-08-01T00:48:00+02:00</updated>
     <id>http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags</id>
-    <content type="html"><![CDATA[<p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</p>
+    <content type="html"><![CDATA[<p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1352,7 +1353,7 @@
 
 <p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
-<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.;</p>
+<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1363,7 +1364,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>With a bit of awk and regexp love, we can match that output with;</p>
+<p>With a bit of awk and regexp love, we can match that output with:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1374,14 +1375,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And we know that to delete a git tag on a remote you use;</p>
+<p>And we know that to delete a git tag on a remote you use:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So putting it all together we get;</p>
+<p>So putting it all together we get:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
@@ -1408,7 +1409,7 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Similarly for removing these pre-release tags from a local git repo;</p>
+<p>Similarly for removing these pre-release tags from a local git repo:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

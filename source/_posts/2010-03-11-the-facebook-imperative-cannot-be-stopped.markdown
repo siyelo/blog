@@ -3,7 +3,7 @@ layout: post
 title: "The Facebook imperative cannot be stopped"
 date: 2010-03-11 11:05:32
 comments: true
-categories:
+categories: Business
 author: Glenn Roberts
 ---
 

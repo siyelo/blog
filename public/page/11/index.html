@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="I stumbled across a great article  which outlines how to deal with User-Experience/graphic design in the context of an agile project. The problem: &hellip;">
+  <meta name="description" content="I stumbled across a great article which outlines how to deal with User-Experience/graphic design in the context of an agile project. The problem: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2010-01-10T19:55:19+02:00" pubdate data-updated="true">Jan 10<span>th</span>, 2010</time>
+<time datetime="2010-01-10T18:55:19+01:00" pubdate data-updated="true">Jan 10<span>th</span>, 2010</time>
         
          | <a href="/design-chunking-with-scrum#disqus_thread">Comments</a>
         
@@ -107,7 +107,7 @@
   </header>
 
 
-  <div class="entry-content"><p>I stumbled across a <a href="http://www.nomad8.com/files/b577d3dbe4a561a9b0f9f7ac2c27eda3-0.php">great article</a>  which outlines how to deal with User-Experience/graphic design in the context of an agile project.</p>
+  <div class="entry-content"><p>I stumbled across a <a href="http://www.nomad8.com/files/b577d3dbe4a561a9b0f9f7ac2c27eda3-0.php">great article</a> which outlines how to deal with User-Experience/graphic design in the context of an agile project.</p>
 
 <p>The problem: coming up with a consistent user interface design across a website while working iteratively and incrementally.  </p>
 
@@ -150,7 +150,7 @@
   
 
 
-<time datetime="2009-12-17T11:06:32+02:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
+<time datetime="2009-12-17T10:06:32+01:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
         
          | <a href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty#disqus_thread">Comments</a>
         
@@ -159,7 +159,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Do you lie awake at night dreaming of a way to save your fingers from typing &#8216;git status&#8217; too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you;</p>
+  <div class="entry-content"><p>Do you lie awake at night dreaming of a way to save your fingers from typing &#8216;git status&#8217; too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.</p>
 
 <p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34"><img src="http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg" alt="Terminal 2014 bash 2014 108ճ4" /></a></p>
 
@@ -221,7 +221,7 @@
   
 
 
-<time datetime="2009-12-15T15:33:00+02:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+<time datetime="2009-12-15T14:33:00+01:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
         
          | <a href="/fix-for-annoying-bug-in-emailspec#disqus_thread">Comments</a>
         
@@ -230,7 +230,7 @@
   </header>
 
 
-  <div class="entry-content"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
+  <div class="entry-content"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -255,10 +255,35 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you;</p>
+<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you:</p>
 
-<pre><code>gem install glennr-email-spec
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>You have a nil object when you didn<span class="s1">&#39;t expect it!</span>
+</span><span class='line'><span class="s1">You might have expected an instance of Array.</span>
+</span><span class='line'><span class="s1">The error occurred while evaluating nil.include? (NoMethodError)</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#39;</span>
+</span><span class='line'>/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <span class="sb">`</span><span class="k">select</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#39;</span>
+</span><span class='line'>/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in <span class="sb">`</span>mailbox_for<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#39;</span>
+</span><span class='line'>./features/step_definitions/email_steps.rb:52
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install glennr-email-spec
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p><em><em>or via GitHub</em> <a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a></em></p>
 
@@ -291,7 +316,7 @@
   
 
 
-<time datetime="2009-12-12T11:10:22+02:00" pubdate data-updated="true">Dec 12<span>th</span>, 2009</time>
+<time datetime="2009-12-12T10:10:22+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2009</time>
         
          | <a href="/browser-market-share-applying-the-8020-rule#disqus_thread">Comments</a>
         
@@ -304,7 +329,7 @@
 
 <p>Axiis came up with <a href="http://www.axiis.org/examples/BrowserMarketShare.html">this clever visual representation</a> of browser market share based on the W3C usage stats.</p>
 
-<p>  <img src="/images/old/2009/12/pastedgraphic-png-scaled-500.jpg" alt="Pastedgraphic" /></p>
+<p><img src="/images/old/2009/12/pastedgraphic-png-scaled-500.jpg" alt="Pastedgraphic" /></p>
 
 <p>Its great to see browsers like IE6/7 losing their grip on the market. Its good news for web developers, and for their clients. Save time. Save money. Go Firefox.</p>
 </div>
@@ -335,7 +360,7 @@
   
 
 
-<time datetime="2009-11-30T12:53:00+02:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+<time datetime="2009-11-30T11:53:00+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
         
          | <a href="/handy-git-aliases-and-config-directives#disqus_thread">Comments</a>
         

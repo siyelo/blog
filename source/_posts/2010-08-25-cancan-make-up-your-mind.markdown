@@ -3,7 +3,7 @@ layout: post
 title: "CanCan - make up your mind!"
 date: 2010-08-25 15:05:00
 comments: true
-categories:
+categories: Rails
 author: Glenn Roberts
 ---
 

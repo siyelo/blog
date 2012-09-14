@@ -3,7 +3,7 @@ layout: post
 title: "A Zerigo DNS template for Heroku and Google Apps"
 date: 2010-12-01 09:23:45
 comments: true
-categories:
+categories: Heroku
 author: Glenn Roberts
 ---
 

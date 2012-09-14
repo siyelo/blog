@@ -3,7 +3,7 @@ layout: post
 title: "Handy git aliases and config directives"
 date: 2009-11-30 10:53:00
 comments: true
-categories:
+categories: Git
 author: Glenn Roberts
 ---
 
@@ -18,7 +18,6 @@ br = branch
 {% endcodeblock %}
 
 Also, you might find these will come in handy;
-
 
 {% codeblock %}
 [merge]

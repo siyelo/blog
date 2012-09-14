@@ -3,11 +3,11 @@ layout: post
 title: "Design Chunking with Scrum"
 date: 2010-01-10 17:55:19
 comments: true
-categories:
+categories: UX
 author: Glenn Roberts
 ---
 
-I stumbled across a [great article](http://www.nomad8.com/files/b577d3dbe4a561a9b0f9f7ac2c27eda3-0.php)  which outlines how to deal with User-Experience/graphic design in the context of an agile project.
+I stumbled across a [great article](http://www.nomad8.com/files/b577d3dbe4a561a9b0f9f7ac2c27eda3-0.php) which outlines how to deal with User-Experience/graphic design in the context of an agile project.
 
 The problem: coming up with a consistent user interface design across a website while working iteratively and incrementally.  
 

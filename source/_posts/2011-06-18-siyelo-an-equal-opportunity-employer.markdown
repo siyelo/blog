@@ -3,10 +3,9 @@ layout: post
 title: "Siyelo: An equal opportunity employer."
 date: 2011-06-18 14:32:53
 comments: true
-categories:
-author:
+categories: Fun
+author: Glenn Roberts
 ---
-
 
 We don't even mind if our employees wear makeup sometimes...
 

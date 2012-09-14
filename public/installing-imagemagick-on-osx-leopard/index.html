@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -108,10 +108,14 @@
 
 <p>Unfortunately it didnt work perfectly out of the box;</p>
 
-<pre><code>Undefined symbols:
-“_iconv_close”, referenced from:
-_opvp_to_utf8 in gdevopvp.o ...
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Undefined symbols:
+</span><span class='line'>“_iconv_close”, referenced from:
+</span><span class='line'>_opvp_to_utf8 in gdevopvp.o ...
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;</p>
 
@@ -335,8 +339,14 @@ _opvp_to_utf8 in gdevopvp.o ...
   
 
 
-<time datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/osx/'>OSX</a>
+  
+</span>
 
 
     </p>

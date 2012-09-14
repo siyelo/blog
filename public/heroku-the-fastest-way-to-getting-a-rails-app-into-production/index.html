@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -106,14 +106,20 @@
 
 <div class="entry-content"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
 
-<p>Its as easy as;</p>
+<p>Its as easy as:</p>
 
-<pre><code>sudo gem install heroku
-heroku create
-git push heroku master
-heroku rake db:migrate
-heroku open
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install heroku
+</span><span class='line'>heroku create
+</span><span class='line'>git push heroku master
+</span><span class='line'>heroku rake db:migrate
+</span><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Sit back and watch your app open automagically in your browser.</p>
 
@@ -140,8 +146,14 @@ heroku open
   
 
 
-<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/heroku/'>Heroku</a>
+  
+</span>
 
 
     </p>

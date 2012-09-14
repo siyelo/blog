@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2009-11-17T22:04:30+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T21:04:30+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a>
         
@@ -113,25 +113,17 @@
 
 <p>Begin forwarded message:</p>
 
-<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486)</p>
+<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486) <br />
+<strong>glenn.roberts, Nov 17 12:04 am (PST):</strong> <br />
+Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ? <br />
+Regards <br />
+Glenn</p>
 
-<p><strong>glenn.roberts, Nov 17 12:04 am (PST):</strong></p>
-
-<p>Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ?</p>
-
-<p>Regards</p>
-
-<p>Glenn</p>
-
-<p><strong>morten, Nov 17 11:04 am (PST):</strong></p>
-
-<p>Glenn,</p>
-
-<p>The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo).</p>
-
-<p>/Morten</p>
-
-<p>This email is a service from Support</p></blockquote>
+<p><strong>morten, Nov 17 11:04 am (PST):</strong> <br />
+Glenn, <br />
+The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo). <br />
+/Morten <br />
+This email is a service from Support <br /></p></blockquote>
 </div>
   
   
@@ -160,7 +152,7 @@
   
 
 
-<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production#disqus_thread">Comments</a>
         
@@ -171,14 +163,20 @@
 
   <div class="entry-content"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
 
-<p>Its as easy as;</p>
+<p>Its as easy as:</p>
 
-<pre><code>sudo gem install heroku
-heroku create
-git push heroku master
-heroku rake db:migrate
-heroku open
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install heroku
+</span><span class='line'>heroku create
+</span><span class='line'>git push heroku master
+</span><span class='line'>heroku rake db:migrate
+</span><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Sit back and watch your app open automagically in your browser.</p>
 
@@ -211,7 +209,7 @@ heroku open
   
 
 
-<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a>
         
@@ -220,27 +218,35 @@ heroku open
   </header>
 
 
-  <div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it;</p>
+  <div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it:</p>
 
-<pre><code>export -n VAR_NAME
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export</span> -n VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
 
-<p>or</p>
-
-<pre><code>unset VAR_NAME
-</code></pre>
 
 <p>or</p>
 
-<pre><code>unexport VAR_NAME
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">unset </span>VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>unexport VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>(Im just kidding about the latter)</p>
 
-<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this;</p>
+<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this:</p>
 
-<pre><code>alias unexport='unset'
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -269,7 +275,7 @@ heroku open
   
 
 
-<time datetime="2009-11-04T12:02:59+02:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
+<time datetime="2009-11-04T11:02:59+01:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
         
          | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a>
         
@@ -307,7 +313,7 @@ heroku open
   
 
 
-<time datetime="2009-11-04T11:09:04+02:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
+<time datetime="2009-11-04T10:09:04+01:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
         
          | <a href="/agile-contracts-working-group#disqus_thread">Comments</a>
         

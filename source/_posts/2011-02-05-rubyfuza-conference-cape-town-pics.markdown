@@ -3,7 +3,7 @@ layout: post
 title: "RubyFuZa conference, Cape Town - pics"
 date: 2011-02-05 10:14:27
 comments: true
-categories:
+categories: Ruby Conferences
 author: Glenn Roberts
 ---
 

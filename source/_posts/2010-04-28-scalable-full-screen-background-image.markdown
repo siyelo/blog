@@ -3,7 +3,7 @@ layout: post
 title: "Scalable full screen background image"
 date: 2010-04-28 07:52:00
 comments: true
-categories:
+categories: Design
 author: Glenn Roberts
 ---
 
@@ -13,7 +13,7 @@ Recently I worked on a website for a [branding agency](http://freezing-light-25.
 
 The whole trick is to create a single cell table, and apply few styles to make the magic work.
 
-Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: [http://haml-lang.com/](http://haml-lang.com/)
+Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: [http://haml-lang.com/](http://haml-lang.com/).
 
 
 {% codeblock lang:haml %}
@@ -28,7 +28,6 @@ Note: I will use HAML and SASS for the code. Read here if you want to learn more
 
 
 So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:
-
 
 {% codeblock lang:sass %}
 body

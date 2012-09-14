@@ -3,7 +3,7 @@ layout: post
 title: "Vim Tips - Part II"
 date: 2012-07-03 14:39:23
 comments: true
-categories:
+categories: Vim Tutorial
 author: Dalibor Nasevic
 ---
 

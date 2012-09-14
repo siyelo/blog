@@ -3,7 +3,7 @@ layout: post
 title: "Using Devise for authentication? How to upgrade from v0.8.2 to v1.0"
 date: 2010-02-11 13:28:51
 comments: true
-categories:
+categories: Rails
 author: Glenn Roberts
 ---
 
@@ -32,13 +32,15 @@ ActionView::TemplateError (undefined local variable or method `new_user_session_
 So obviously my Devise resource, User in this case, is fubar.
 
 {% codeblock lang:ruby %}
-class User < ActiveRecord::Base  	  devise :all
+class User < ActiveRecord::Base
+  devise :all
 {% endcodeblock %}
 
-Hmm nothing changed there. But wait, 'devise :all' is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.
+Hmm nothing changed there. But wait, `devise :all` is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.
 
 {% codeblock lang:ruby %}
-class User < ActiveRecord::Basedevise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable
+class User < ActiveRecord::Base
+  devise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable
 {% endcodeblock %}
 
 So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.

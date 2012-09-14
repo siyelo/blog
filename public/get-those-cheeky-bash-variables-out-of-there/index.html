@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -104,27 +104,35 @@
   </header>
 
 
-<div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it;</p>
+<div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it:</p>
 
-<pre><code>export -n VAR_NAME
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export</span> -n VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
 
-<p>or</p>
-
-<pre><code>unset VAR_NAME
-</code></pre>
 
 <p>or</p>
 
-<pre><code>unexport VAR_NAME
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">unset </span>VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>unexport VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>(Im just kidding about the latter)</p>
 
-<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this;</p>
+<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this:</p>
 
-<pre><code>alias unexport='unset'
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -147,8 +155,14 @@
   
 
 
-<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bash/'>Bash</a>
+  
+</span>
 
 
     </p>

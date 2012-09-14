@@ -3,7 +3,7 @@ layout: post
 title: "Rails Deployment Audit"
 date: 2012-07-13 14:13:00
 comments: true
-categories:
+categories: Rails Tools
 author: Dalibor Nasevic
 ---
 

@@ -3,11 +3,11 @@ layout: post
 title: "Remote pair-programming with Screen"
 date: 2011-11-03 08:37:00
 comments: true
-categories:
+categories: Agile Tools
 author: Dalibor Nasevic
 ---
 
-At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available [here](http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/) ).
+At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available [here](http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/)).
 
 In the past, we often used Skype for screen sharing, but the problems with Skype are:
 

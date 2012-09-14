@@ -143,7 +143,7 @@
   
 
 
-<time datetime="2010-03-24T18:03:04+02:00" pubdate data-updated="true">Mar 24<span>th</span>, 2010</time>
+<time datetime="2010-03-24T17:03:04+01:00" pubdate data-updated="true">Mar 24<span>th</span>, 2010</time>
         
          | <a href="/tired-of-textmates-slow-find-in-project-nix-to-the-rescue#disqus_thread">Comments</a>
         
@@ -156,19 +156,27 @@
 
 <p>If you&#8217;re generally only really wanting to search .rb files, here&#8217;s a script which I call &#8216;findrb&#8217;</p>
 
-<pre><code>#! /bin/shfind . -name*.rb -type f | xargs grep -nHr"$1"
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#! /bin/shfind . -name*.rb -type f | xargs grep -nHr&quot;$1&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Drop this in a file in your $PATH, <code>chmod +x</code> it, and off you go.</p>
 
 <p>E.g.</p>
 
-<pre><code>glenn-roberts-4 ~/ba[master*]$ findrb 'show'
-./app/controllers/home_controller.rb:13: def show
-./app/controllers/live_profiles_controller.rb:2: before_filter :authenticate_user!, :except =&gt; [ :index, :show ]
-./app/controllers/live_profiles_controller.rb:22: def show
-./app/controllers/live_profiles_controller.rb:26: format.html # show.html.haml`
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>glenn-roberts-4 ~/ba<span class="o">[</span>master*<span class="o">]</span><span class="nv">$ </span>findrb <span class="s1">&#39;show&#39;</span>
+</span><span class='line'>./app/controllers/home_controller.rb:13: def show
+</span><span class='line'>./app/controllers/live_profiles_controller.rb:2: before_filter :authenticate_user!, :except <span class="o">=</span>&gt; <span class="o">[</span> :index, :show <span class="o">]</span>
+</span><span class='line'>./app/controllers/live_profiles_controller.rb:22: def show
+</span><span class='line'>./app/controllers/live_profiles_controller.rb:26: format.html <span class="c"># show.html.haml`</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -197,7 +205,7 @@
   
 
 
-<time datetime="2010-03-19T19:02:57+02:00" pubdate data-updated="true">Mar 19<span>th</span>, 2010</time>
+<time datetime="2010-03-19T18:02:57+01:00" pubdate data-updated="true">Mar 19<span>th</span>, 2010</time>
         
          | <a href="/speeding-up-bash-aliasing-to-speed-up-your-rails-development#disqus_thread">Comments</a>
         
@@ -210,12 +218,14 @@
 
 <p>All excellent developers are masters of the shell.</p>
 
-<p>All uber developers issue <a href="http://github.com/glennr/bash_profile">shell commands with obtuse aliases</a> .</p>
+<p>All uber developers issue <a href="http://github.com/glennr/bash_profile">shell commands with obtuse aliases</a>.</p>
 
 <p>So, if you&#8217;re uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here&#8217;s a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you&#8217;re done.</p>
 
-<pre><code>alias mbp='mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile'
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">mbp</span><span class="o">=</span><span class="s1">&#39;mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The speedy way to create aliases that speed up your development.</p>
 
@@ -248,7 +258,7 @@
   
 
 
-<time datetime="2010-03-11T13:05:32+02:00" pubdate data-updated="true">Mar 11<span>th</span>, 2010</time>
+<time datetime="2010-03-11T12:05:32+01:00" pubdate data-updated="true">Mar 11<span>th</span>, 2010</time>
         
          | <a href="/the-facebook-imperative-cannot-be-stopped#disqus_thread">Comments</a>
         
@@ -288,7 +298,7 @@
   
 
 
-<time datetime="2010-02-22T12:35:00+02:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2010</time>
+<time datetime="2010-02-22T11:35:00+01:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2010</time>
         
          | <a href="/did-you-vote#disqus_thread">Comments</a>
         

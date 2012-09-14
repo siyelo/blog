@@ -3,7 +3,7 @@ layout: post
 title: "Agile Contracts - Working group"
 date: 2009-11-04 09:09:04
 comments: true
-categories:
+categories: Agile
 author: Glenn Roberts
 ---
 

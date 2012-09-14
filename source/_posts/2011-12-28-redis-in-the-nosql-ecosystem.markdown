@@ -3,7 +3,7 @@ layout: post
 title: "Redis in the NoSQL ecosystem"
 date: 2011-12-28 21:01:00
 comments: true
-categories:
+categories: Tools
 author: Dalibor Nasevic
 ---
 

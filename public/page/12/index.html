@@ -9,9 +9,12 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Some handy bash aliases to speed up your Heroku deploys alias gphm='git push heroku master'
-alias hmig='heroku rake db:migrate'
-alias hlog='heroku &hellip;">
+  <meta name="description" content="Some handy bash aliases to speed up your Heroku deploys: 1
+2
+3
+4
+alias gphm=&#39;git push heroku master&#39;
+alias hmig=&#39;heroku rake db:migrate&# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,7 +103,7 @@ alias hlog='heroku &hellip;">
   
 
 
-<time datetime="2009-11-24T15:25:12+02:00" pubdate data-updated="true">Nov 24<span>th</span>, 2009</time>
+<time datetime="2009-11-24T14:25:12+01:00" pubdate data-updated="true">Nov 24<span>th</span>, 2009</time>
         
          | <a href="/aliases-for-common-heroku-commands#disqus_thread">Comments</a>
         
@@ -109,13 +112,18 @@ alias hlog='heroku &hellip;">
   </header>
 
 
-  <div class="entry-content"><p>Some handy bash aliases to speed up your Heroku deploys</p>
+  <div class="entry-content"><p>Some handy bash aliases to speed up your Heroku deploys:</p>
 
-<pre><code>alias gphm='git push heroku master'
-alias hmig='heroku rake db:migrate'
-alias hlog='heroku logs'
-alias hopen='heroku open'
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">gphm</span><span class="o">=</span><span class="s1">&#39;git push heroku master&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hmig</span><span class="o">=</span><span class="s1">&#39;heroku rake db:migrate&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hlog</span><span class="o">=</span><span class="s1">&#39;heroku logs&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hopen</span><span class="o">=</span><span class="s1">&#39;heroku open&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p><img src="/images/old/2009/11/pastedgraphic.png" alt="Pastedgraphic" /></p>
 </div>
@@ -146,7 +154,7 @@ alias hopen='heroku open'
   
 
 
-<time datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
         
          | <a href="/installing-imagemagick-on-osx-leopard#disqus_thread">Comments</a>
         
@@ -159,10 +167,14 @@ alias hopen='heroku open'
 
 <p>Unfortunately it didnt work perfectly out of the box;</p>
 
-<pre><code>Undefined symbols:
-“_iconv_close”, referenced from:
-_opvp_to_utf8 in gdevopvp.o ...
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Undefined symbols:
+</span><span class='line'>“_iconv_close”, referenced from:
+</span><span class='line'>_opvp_to_utf8 in gdevopvp.o ...
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;</p>
 
@@ -392,7 +404,7 @@ _opvp_to_utf8 in gdevopvp.o ...
   
 
 
-<time datetime="2009-11-19T10:46:59+02:00" pubdate data-updated="true">Nov 19<span>th</span>, 2009</time>
+<time datetime="2009-11-19T09:46:59+01:00" pubdate data-updated="true">Nov 19<span>th</span>, 2009</time>
         
          | <a href="/make-textmate-your-editor-of-choice#disqus_thread">Comments</a>
         
@@ -403,14 +415,19 @@ _opvp_to_utf8 in gdevopvp.o ...
 
   <div class="entry-content"><p>If you are a master of Vim and feel like a sea-change, or if you&#8217;re just plain scared, you can set up Textmate as your default editor.</p>
 
-<pre><code>export EDITOR='mate -w'
-export GIT_EDITOR='mate -wl1'. #This instructs TextMate to open with the caret at line 1 rather than where it last was.
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span><span class="s1">&#39;mate -w&#39;</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">GIT_EDITOR</span><span class="o">=</span><span class="s1">&#39;mate -wl1&#39;</span>. <span class="c">#This instructs TextMate to open with the caret at line 1 rather than where it last was.</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Whack this in your .profile (e.g. ~/.bash_profile), re-source it</p>
 
-<pre><code>source ~/.bash_profile
-</code></pre>
+<p>Whack this in your .profile (e.g. ~/.bash_profile), re-source it:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And off you go.</p>
 </div>
@@ -441,7 +458,7 @@ export GIT_EDITOR='mate -wl1'. #This instructs TextMate to open with the caret a
   
 
 
-<time datetime="2009-11-18T10:11:00+02:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+<time datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
         
          | <a href="/great-gitignore-files-for-your-next-rails-project#disqus_thread">Comments</a>
         
@@ -454,17 +471,28 @@ export GIT_EDITOR='mate -wl1'. #This instructs TextMate to open with the caret a
 
 <p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
 
-<pre><code>run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
-run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore}
-file '.gitignore', &lt;&lt;-EOS.gsub(/^ /, '')
-.DS_Store
-log/*.log
-tmp/**/*
-config/database.yml
-config/initializers/site_keys.rb
-db/*.sqlite3
-EOS
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>run <span class="s2">&quot;touch tmp/.gitignore log/.gitignore vendor/.gitignore&quot;</span>
+</span><span class='line'>run %<span class="o">{</span>find . -type d -empty | grep -v <span class="s2">&quot;vendor&quot;</span> | grep -v <span class="s2">&quot;.git&quot;</span> | grep -v <span class="s2">&quot;tmp&quot;</span> | xargs -I xxx touch xxx/.gitignore<span class="o">}</span>
+</span><span class='line'>file <span class="s1">&#39;.gitignore&#39;</span>, <span class="s">&lt;&lt;-EOS.gsub(/^ /, &#39;&#39;)</span>
+</span><span class='line'><span class="s">.DS_Store</span>
+</span><span class='line'><span class="s">log/*.log</span>
+</span><span class='line'><span class="s">tmp/**/*</span>
+</span><span class='line'><span class="s">config/database.yml</span>
+</span><span class='line'><span class="s">config/initializers/site_keys.rb</span>
+</span><span class='line'><span class="s">db/*.sqlite3</span>
+</span><span class='line'><span class="s">EOS</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -493,7 +521,7 @@ EOS
   
 
 
-<time datetime="2009-11-18T08:53:00+02:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+<time datetime="2009-11-18T07:53:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
         
          | <a href="/textmate-tip-align-statments#disqus_thread">Comments</a>
         
@@ -502,15 +530,15 @@ EOS
   </header>
 
 
-  <div class="entry-content"><p>If you want to go from this;</p>
+  <div class="entry-content"><p>If you want to go from this:</p>
 
 <p><img src="/images/old/2009/11/pastedgraphic1.png" alt="Pastedgraphic" /></p>
 
-<p>to an aligned, and much more legible statement list like this;</p>
+<p>to an aligned, and much more legible statement list like this:</p>
 
 <p><img src="/images/old/2009/11/0pastedgraphic.png" alt="Pastedgraphic" /></p>
 
-<p>The textmate key combination for this is:<strong>⌥⌘]</strong>(Alt + Cmd + Bracket)</p>
+<p>The textmate key combination for this is: <strong>⌥⌘]</strong> (Alt + Cmd + Bracket)</p>
 </div>
   
   

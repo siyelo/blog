@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-18T10:11:00+02:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+<time datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -108,17 +108,28 @@
 
 <p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
 
-<pre><code>run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
-run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore}
-file '.gitignore', &lt;&lt;-EOS.gsub(/^ /, '')
-.DS_Store
-log/*.log
-tmp/**/*
-config/database.yml
-config/initializers/site_keys.rb
-db/*.sqlite3
-EOS
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>run <span class="s2">&quot;touch tmp/.gitignore log/.gitignore vendor/.gitignore&quot;</span>
+</span><span class='line'>run %<span class="o">{</span>find . -type d -empty | grep -v <span class="s2">&quot;vendor&quot;</span> | grep -v <span class="s2">&quot;.git&quot;</span> | grep -v <span class="s2">&quot;tmp&quot;</span> | xargs -I xxx touch xxx/.gitignore<span class="o">}</span>
+</span><span class='line'>file <span class="s1">&#39;.gitignore&#39;</span>, <span class="s">&lt;&lt;-EOS.gsub(/^ /, &#39;&#39;)</span>
+</span><span class='line'><span class="s">.DS_Store</span>
+</span><span class='line'><span class="s">log/*.log</span>
+</span><span class='line'><span class="s">tmp/**/*</span>
+</span><span class='line'><span class="s">config/database.yml</span>
+</span><span class='line'><span class="s">config/initializers/site_keys.rb</span>
+</span><span class='line'><span class="s">db/*.sqlite3</span>
+</span><span class='line'><span class="s">EOS</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -141,8 +152,14 @@ EOS
   
 
 
-<time datetime="2009-11-18T10:11:00+02:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
+<time datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">Nov 18<span>th</span>, 2009</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>Git</a>
+  
+</span>
 
 
     </p>

@@ -3,7 +3,7 @@ layout: post
 title: "Siyelos' git workflow"
 date: 2011-12-12 09:53:00
 comments: true
-categories:
+categories: Git Tools
 author: Peter Garbers
 ---
 

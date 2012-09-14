@@ -3,7 +3,7 @@ layout: post
 title: "Installing ImageMagick on OSX Leopard"
 date: 2009-11-23 11:05:00
 comments: true
-categories:
+categories: OSX
 author: Glenn Roberts
 ---
 
@@ -11,9 +11,11 @@ I found a great script for compiling ImageMagick on OSX from scratch via Thought
 
 Unfortunately it didnt work perfectly out of the box;
 
-    Undefined symbols:
-    “_iconv_close”, referenced from:
-    _opvp_to_utf8 in gdevopvp.o ...
+``` bash
+Undefined symbols:
+“_iconv_close”, referenced from:
+_opvp_to_utf8 in gdevopvp.o ...
+```
 
 So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;
 

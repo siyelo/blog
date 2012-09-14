@@ -3,7 +3,7 @@ layout: post
 title: "Koding in Khayelitsha - great photo"
 date: 2011-10-04 12:45:00
 comments: true
-categories:
+categories: Ruby Fun
 author: Glenn Roberts
 ---
 
