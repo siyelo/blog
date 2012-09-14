@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Source | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/source/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-09-14T11:08:22+02:00</updated>
+  <updated>2012-09-14T11:25:17+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Announcing Fuselage - Get your Rails project off to a flying start!]]></title>
     <link href="http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start"/>
-    <updated>2009-11-04T11:08:00+02:00</updated>
+    <updated>2009-11-04T10:08:00+01:00</updated>
     <id>http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start</id>
     <content type="html"><![CDATA[<p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the "rails" command gives you.</p>
 
