@@ -1,17 +1,15 @@
-
-
 ---
 layout: post
 title: "Experienced Web Developer wanted"
 date: 2011-03-04 12:20:27
 comments: true
 categories:
-author: 
+author: Dalibor Nasevic
 ---
 
 [Siyelo](http://www.siyelo.com) is an international Ruby on Rails agency, with solid backing and a growing portfolio of great projects, and happy clients.
 
-Opportunity
+### Opportunity
 
 This is an opportunity to be a part of an entrepreneurial and focused Ruby/Rails consultancy. We are looking for people with strong web development backgrounds, with a passion for clean code and great software.
 
@@ -20,30 +18,24 @@ We're all "full-stack" developers, so whilst you don't necessarily need to know 
 We are working on an exciting mix of improving and scaling existing apps and developing entirely new apps. Our team is fast, talented and independent, and we encourage Open Source contributions and community participation.
 
 Requirements
-- 3+ years web development or related experience
-- Experience in Object Oriented languages & domain modeling
-- Agile development practices: TDD/BDD, pair programming, refactoring
-- Relational databases: PostgreSQL or MySQL
-- English proficiency a must.
 
-
-
-
+* 3+ years web development or related experience
+* Experience in Object Oriented languages & domain modeling
+* Agile development practices: TDD/BDD, pair programming, refactoring
+* Relational databases: PostgreSQL or MySQL
+* English proficiency a must.
 
 Highly Regarded
-- Ruby / Python / Smalltalk / Java experience
-- UI/UX design (HTML, CSS, Javascript)
-- jQuery or similar framework
-- NoSQL databases
-- Open source contributions
-- Git & Github
 
-
-
-
+* Ruby / Python / Smalltalk / Java experience
+* UI/UX design (HTML, CSS, Javascript)
+* jQuery or similar framework
+* NoSQL databases
+* Open source contributions
+* Git & Github
 
 How to Apply
 
-Please send your CV (including any portfolio/open source links) to[jobs@siyelo.com](mailto:jobs@siyelo.com) .
+Please send your CV (including any portfolio/open source links) to [jobs@siyelo.com](mailto:jobs@siyelo.com).
 
-[Optional] For BONUS points, you can apply using our fun little[Github application](http://github.com/siyelo/job-application) .[](http://github.com/siyelo/job-application) 
+[Optional] For BONUS points, you can apply using our fun little [Github application](http://github.com/siyelo/job-application).

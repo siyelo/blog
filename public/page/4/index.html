@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="A great photo from the programming class @glennrob is involved with. (they&#8217;re learning ruby) ![Koding_in_khayelitsha][/images/old/2011/10/ &hellip;">
+  <meta name="description" content="A great photo from the programming class @glennrob is involved with. (they&#8217;re learning ruby) ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,12 +107,11 @@
   </header>
 
 
-  <div class="entry-content"><pre><code>A great photo from the programming class @glennrob is involved with.
-</code></pre>
+  <div class="entry-content"><p>A great photo from the programming class @glennrob is involved with.</p>
 
 <p>(they&#8217;re learning ruby)</p>
 
-<p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg">![Koding_in_khayelitsha][/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg] </a></p>
+<p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
 </div>
   
   
@@ -150,8 +149,8 @@
   </header>
 
 
-  <div class="entry-content"><pre><code>[vimeo http://www.vimeo.com/29374463 w=500&amp;h=283]
-</code></pre>
+  <div class="entry-content"><iframe src="http://player.vimeo.com/video/29374463?portrait=0" frameborder="0" height="283" width="500"></iframe>
+
 </div>
   
   
@@ -164,7 +163,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/installing-a-gem-in-all-your-global-rvm-gemsets">Installing a Gem in All Your Global Rvm Gemsets</a></h1>
+      <h1 class="entry-title"><a href="/installing-a-gem-in-all-your-global-rvm-gemsets">Installing a Gem in All Your Global RVM Gemsets</a></h1>
     
     
       <p class="meta">
@@ -180,7 +179,7 @@
   
 
 
-<time datetime="2011-09-08T00:00:00+02:00" pubdate data-updated="true">Sep 8<span>th</span>, 2011</time>
+<time datetime="2011-09-08T20:46:00+02:00" pubdate data-updated="true">Sep 8<span>th</span>, 2011</time>
         
          | <a href="/installing-a-gem-in-all-your-global-rvm-gemsets#disqus_thread">Comments</a>
         
@@ -189,17 +188,51 @@
   </header>
 
 
-  <div class="entry-content"><hr />
+  <div class="entry-content"><p>Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;</p>
 
-<p>layout: post
-title: &#8220;Installing a gem in all your global RVM gemsets&#8221;
-date: 2011-09-08 18:46:00
-comments: true
-categories:
-author:
-&#8212;Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;annotate&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;awesome_print&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s2">&quot;ap&quot;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 2.1.2&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;hirb&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;interactive_editor&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;open_gem&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;rails-footnotes&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;ruby-debug&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sketches&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;slurper&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sqlite3-ruby&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;taps&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;wirble&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>So, give this a shot;for x in $(rvm list strings); do rvm use $x@global &amp;&amp; gem install <RAD DEVELOPMENT GEM NAME>; doneThis installs a specific gem into all your global RVM gemsets. For great justice!</p>
+
+<p>but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</p>
+
+<p>So, give this a shot;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">for </span>x in <span class="k">$(</span>rvm list strings<span class="k">)</span>; <span class="k">do </span>rvm use <span class="nv">$x</span>@global <span class="o">&amp;&amp;</span> gem install &lt;RAD DEVELOPMENT GEM NAME&gt;; <span class="k">done</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This installs a specific gem into all your global RVM gemsets. For great justice!</p>
 </div>
   
   
@@ -228,7 +261,7 @@ author:
   
 
 
-<time datetime="2011-07-31T00:00:00+02:00" pubdate data-updated="true">Jul 31<span>st</span>, 2011</time>
+<time datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">Aug 1<span>st</span>, 2011</time>
         
          | <a href="/how-to-bulk-delete-remote-git-tags#disqus_thread">Comments</a>
         
@@ -237,21 +270,54 @@ author:
   </header>
 
 
-  <div class="entry-content"><hr />
+  <div class="entry-content"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</p>
 
-<p>layout: post
-title: &#8220;How to bulk delete remote git tags&#8221;
-date: 2011-07-31 22:48:00
-comments: true
-categories:
-author:
-&#8212;Our project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>0.9.6c
+</span><span class='line'>0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
 <p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.;</p>
 
-<p>With a bit of awk and regexp love, we can match that output with;And we know that to delete a git tag on a remote you use;</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>d16aeb86430afc26fb17f182f567d39c8c732188 refs/tags/0.9.6c
+</span><span class='line'>390c9a3251b813775ccdb96c375d50fed67d058f refs/tags/0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With a bit of awk and regexp love, we can match that output with;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>^<span class="o">(</span>.*<span class="o">)</span>  -  the SHA <span class="o">(</span>at the start of the line ^<span class="o">)</span>
+</span><span class='line'><span class="o">(</span><span class="se">\s</span>+<span class="o">)</span>  - a cupla spaces
+</span><span class='line'><span class="o">(</span>.*<span class="o">[</span>a-z<span class="o">])</span><span class="nv">$ </span> - a string ending in a letter, followed by end of line <span class="o">(</span><span class="nv">$)</span>  <span class="o">(</span>there are more exact/safer ways of doing this regexp, I know<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And we know that to delete a git tag on a remote you use;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>So putting it all together we get;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</p>
 
@@ -259,11 +325,32 @@ author:
 
 <p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
 
-<blockquote><p>a) make sure you have the tags backed up in your local repo first and b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
+<blockquote><p>a) make sure you have the tags backed up in your local repo first and <br />
+b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
 
 <p>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
 
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6c
+</span><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
 <p>Similarly for removing these pre-release tags from a local git repo;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git tag -l | awk <span class="s1">&#39;/^(.*[a-z])$/ {print $1}&#39;</span>  | xargs git tag -d
+</span><span class='line'>
+</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0c&#39;</span> <span class="o">(</span>was e373098<span class="o">)</span>
+</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0d&#39;</span> <span class="o">(</span>was 5566b43<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
 
@@ -307,17 +394,27 @@ author:
 
   <div class="entry-content"><p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
 
-<p>Step 1</p>
+<h3>Step 1</h3>
 
-<p>Step 2</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Step 3</p>
+
+<h3>Step 2</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3</h3>
 
 <p>???</p>
 
-<p>Step 4</p>
+<h3>Step 4</h3>
 
-<p>Profit</p>
+<h3>Profit</h3>
 </div>
   
   
@@ -342,11 +439,11 @@ author:
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
       </li>
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">

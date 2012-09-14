@@ -9,7 +9,8 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e. Step 1 Step 2 &hellip;">
+  <meta name="description" content="If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e. Step 1 1
+$ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,17 +107,27 @@
 
 <div class="entry-content"><p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
 
-<p>Step 1</p>
+<h3>Step 1</h3>
 
-<p>Step 2</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Step 3</p>
+
+<h3>Step 2</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Step 3</h3>
 
 <p>???</p>
 
-<p>Step 4</p>
+<h3>Step 4</h3>
 
-<p>Profit</p>
+<h3>Profit</h3>
 </div>
 
 
@@ -125,7 +136,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -159,7 +170,7 @@
         <a class="basic-alignment left" href="/siyelo-an-equal-opportunity-employer" title="Previous Post: Siyelo: An equal opportunity employer.">&laquo; Siyelo: An equal opportunity employer.</a>
       
       
-        <a class="basic-alignment right" href="/how-to-bulk-delete-remote-git-tags" title="Next Post: How To Bulk Delete Remote Git Tags">How To Bulk Delete Remote Git Tags &raquo;</a>
+        <a class="basic-alignment right" href="/how-to-bulk-delete-remote-git-tags" title="Next Post: How to bulk delete remote git tags">How to bulk delete remote git tags &raquo;</a>
       
     </p>
   </footer>
@@ -180,11 +191,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
       </li>
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
+        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
       </li>
     
       <li class="post">
