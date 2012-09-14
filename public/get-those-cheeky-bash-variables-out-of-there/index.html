@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -106,22 +106,25 @@
 
 <div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it;</p>
 
-<p>1
-export -n VAR_NAME</p>
+<pre><code>export -n VAR_NAME
+</code></pre>
 
 <p>or</p>
 
-<p>1
-unset VAR_NAME</p>
+<pre><code>unset VAR_NAME
+</code></pre>
 
 <p>or</p>
+
+<pre><code>unexport VAR_NAME
+</code></pre>
 
 <p>(Im just kidding about the latter)</p>
 
 <p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this;</p>
 
-<p>1
-alias unexport=&#8217;unset&#8217;</p>
+<pre><code>alias unexport='unset'
+</code></pre>
 </div>
 
 
@@ -144,7 +147,7 @@ alias unexport=&#8217;unset&#8217;</p>
   
 
 
-<time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
       
 
 
@@ -161,7 +164,7 @@ alias unexport=&#8217;unset&#8217;</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/heroku-the-5mb-free-plan-is-it-enough" title="Previous Post: Heroku The 5mb Free Plan Is It Enough">&laquo; Heroku The 5mb Free Plan Is It Enough</a>
+        <a class="basic-alignment left" href="/bert-the-lizard-resident-code-critic-at-siyelo" title="Previous Post: Bert the Lizard - Resident code critic at Siyelo">&laquo; Bert the Lizard - Resident code critic at Siyelo</a>
       
       
         <a class="basic-alignment right" href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production" title="Next Post: Heroku - the fastest way to getting a Rails app into Production">Heroku - the fastest way to getting a Rails app into Production &raquo;</a>

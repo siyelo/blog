@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a &hellip;">
+  <meta name="description" content="We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+<time datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -104,35 +104,44 @@
   </header>
 
 
-<div class="entry-content"><pre><code>We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.
-</code></pre>
+<div class="entry-content"><p>We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.</p>
 
 <p>It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place).</p>
 
 <p>On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.</p>
 
-<p>1
-  config.gem &#8216;devise&#8217;</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>becomes</p>
 
-<p>1
-config.gem &#8216;devise&#8217;, :version => &#8216;>=1.0.0&#8217;</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s1">&#39;&gt;=1.0.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And after restarting the server, a barf.</p>
 
-<p>1
-ActionView::TemplateError (undefined local variable or method `new_user_session_path&#8217; for #&lt;ActionView::Base:0x243fca4>) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &#8220;Join&#8221;, join_url 27: %li= link_to &#8220;Sign In&#8221;, new_user_session_path</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ActionView</span><span class="o">::</span><span class="no">TemplateError</span> <span class="p">(</span><span class="n">undefined</span> <span class="n">local</span> <span class="n">variable</span> <span class="ow">or</span> <span class="nb">method</span> <span class="sb">`new_user_session_path&#39; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>So obviously my Devise resource, User in this case, is fubar.</p>
 
-<p>12
-class User &lt; ActiveRecord::Base     devise :all</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="err">  </span>   <span class="n">devise</span> <span class="ss">:all</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Hmm nothing changed there. But wait, &#8216;devise :all&#8217; is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
 
-<p>12
-class User &lt; ActiveRecord::Basedevise :authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Basedevise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.</p>
 </div>
@@ -143,7 +152,7 @@ class User &lt; ActiveRecord::Basedevise :authenticatable, :confirmable, :recove
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -157,7 +166,7 @@ class User &lt; ActiveRecord::Basedevise :authenticatable, :confirmable, :recove
   
 
 
-<time datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
+<time datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
       
 
 
@@ -174,7 +183,7 @@ class User &lt; ActiveRecord::Basedevise :authenticatable, :confirmable, :recove
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/paperclip-attachment-validations" title="Previous Post: Paperclip Attachment Validations">&laquo; Paperclip Attachment Validations</a>
+        <a class="basic-alignment left" href="/paperclip-attachment-validations" title="Previous Post: Paperclip - attachment validations">&laquo; Paperclip - attachment validations</a>
       
       
         <a class="basic-alignment right" href="/rails-2-3devise-changing-your-email-content-type" title="Next Post: Rails 2.3/Devise : changing your email content type.">Rails 2.3/Devise : changing your email content type. &raquo;</a>

@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -106,15 +106,213 @@
 
 <div class="entry-content"><p>I found a great script for compiling ImageMagick on OSX from scratch via ThoughtBot&#8217;s Paperclip installation instructions.</p>
 
-<p>Unfortunately it didnt work perfectly out of the box;
-123
-Undefined symbols:“<em>iconv_close”, referenced from:</em>opvp_to_utf8 in gdevopvp.o &#8230;</p>
+<p>Unfortunately it didnt work perfectly out of the box;</p>
+
+<pre><code>Undefined symbols:
+“_iconv_close”, referenced from:
+_opvp_to_utf8 in gdevopvp.o ...
+</code></pre>
 
 <p>So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;</p>
 
-<p>12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="c"># Install ImageMagick on Snow Leopard: by kain, improved by mislav and samsoffes</span>
+</span><span class='line'><span class="c"># Updated by glenn roberts to include libiconv, and the latest stable ImageMagick</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># http://www.icoretech.org/2009/08/install-imagemagick-in-leopard-snow-leopard/</span>
+</span><span class='line'><span class="c"># Work with 64bit kernel mode</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">set</span> -e
+</span><span class='line'>
+</span><span class='line'><span class="nv">PREFIX</span><span class="o">=</span>/usr/local
+</span><span class='line'><span class="c"># Passenger users: amend your Apache global configuration with the following directive</span>
+</span><span class='line'><span class="c"># SetEnv PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</span>
+</span><span class='line'><span class="c"># The Apache config file is located at /etc/apache2/httpd.conf</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># FreeType</span>
+</span><span class='line'>wget http://sourceforge.net/projects/freetype/files/freetype2/2.3.9/freetype-2.3.9.tar.gz/download -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>freetype-2.3.9
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libpng</span>
+</span><span class='line'><span class="c">#wget ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.2.40.tar.bz2 -O- | tar xj</span>
+</span><span class='line'>wget http://www.imagemagick.org/download/delegates/libpng-1.2.40.tar.bz2 -O- | tar xj
+</span><span class='line'><span class="nb">cd </span>libpng-1.2.40
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># jpeg</span>
+</span><span class='line'>wget http://www.ijg.org/files/jpegsrc.v7.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>jpeg-7
+</span><span class='line'>ln -s <span class="sb">`</span>which glibtool<span class="sb">`</span> ./libtool
+</span><span class='line'><span class="nb">export </span><span class="nv">MACOSX_DEPLOYMENT_TARGET</span><span class="o">=</span>10.6
+</span><span class='line'>./configure --enable-shared --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libtiff</span>
+</span><span class='line'>wget http://dl.maptools.org/dl/libtiff/tiff-3.8.2.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>tiff-3.8.2
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libwmf</span>
+</span><span class='line'>wget http://sourceforge.net/projects/wvware/files/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz/download -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>libwmf-0.2.8.4
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># LittleCms</span>
+</span><span class='line'>wget http://www.littlecms.com/lcms-1.18a.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>lcms-1.18
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Ghostscript</span>
+</span><span class='line'>wget http://ghostscript.com/releases/ghostscript-8.70.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>ghostscript-8.70
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Ghostscript Fonts</span>
+</span><span class='line'>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download -O- | tar xz
+</span><span class='line'>sudo mv -f fonts <span class="nv">$PREFIX</span>/share/ghostscript
+</span><span class='line'>
+</span><span class='line'><span class="c"># libiconv</span>
+</span><span class='line'>wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>libiconv-1.13.1
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># ImageMagick</span>
+</span><span class='line'>wget http://mirror.is.co.za/pub/imagemagick/ImageMagick-6.5.7-10.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>ImageMagick-6.5.7-10
+</span><span class='line'><span class="nb">export </span><span class="nv">CPPFLAGS</span><span class="o">=</span>-I<span class="nv">$PREFIX</span>/include
+</span><span class='line'><span class="nb">export </span><span class="nv">LDFLAGS</span><span class="o">=</span>-L<span class="nv">$PREFIX</span>/lib
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span> --disable-static --with-modules --without-perl --without-magick-plus-plus --with-quantum-depth<span class="o">=</span>8 --with-gs-font-dir<span class="o">=</span><span class="nv">$PREFIX</span>/share/ghostscript/fonts
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Clean up</span>
+</span><span class='line'>rm -rf freetype-2.3.9 libpng-1.2.40 jpeg-7 tiff-3.8.2 libwmf-0.2.8.4 lcms-1.18 libiconv-1.13.1 ghostscript-8.70 ImageMagick-6.5.7-10
+</span></code></pre></td></tr></table></div></figure>
 
-<h1>!/bin/sh# Install ImageMagick on Snow Leopard: by kain, improved by mislav and samsoffes# Updated by glenn roberts to include libiconv, and the latest stable ImageMagick## http://www.icoretech.org/2009/08/install-imagemagick-in-leopard-snow-leopard/# Work with 64bit kernel mode set-e PREFIX=/usr/local# Passenger users: amend your Apache global configuration with the following directive# SetEnv PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin# The Apache config file is located at /etc/apache2/httpd.conf # FreeTypewgethttp://sourceforge.net/projects/freetype/files/freetype2/2.3.9/freetype-2.3.9.tar.gz/download-O-|tarxzcdfreetype-2.3.9./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libpng#wget ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.2.40.tar.bz2 -O- | tar xjwgethttp://www.imagemagick.org/download/delegates/libpng-1.2.40.tar.bz2-O-|tarxjcdlibpng-1.2.40./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # jpegwgethttp://www.ijg.org/files/jpegsrc.v7.tar.gz-O-|tarxzcdjpeg-7ln-s<code>which glibtool</code>./libtoolexportMACOSX_DEPLOYMENT_TARGET=10.6./configure&#8211;enable-shared&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libtiffwgethttp://dl.maptools.org/dl/libtiff/tiff-3.8.2.tar.gz-O-|tarxzcdtiff-3.8.2./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # libwmfwgethttp://sourceforge.net/projects/wvware/files/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz/download-O-|tarxzcdlibwmf-0.2.8.4./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # LittleCmswgethttp://www.littlecms.com/lcms-1.18a.tar.gz-O-|tarxzcdlcms-1.18./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # Ghostscriptwgethttp://ghostscript.com/releases/ghostscript-8.70.tar.gz-O-|tarxzcdghostscript-8.70./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd.. # Ghostscript Fontswgethttp://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download-O-|tarxzsudomv-ffonts$PREFIX/share/ghostscript# libiconvwgethttp://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz-O-|tarxzcdlibiconv-1.13.1./configure&#8211;prefix=$PREFIXmakesudomakeinstallcd..# ImageMagickwgethttp://mirror.is.co.za/pub/imagemagick/ImageMagick-6.5.7-10.tar.gz-O-|tarxzcdImageMagick-6.5.7-10exportCPPFLAGS=-I$PREFIX/includeexportLDFLAGS=-L$PREFIX/lib./configure&#8211;prefix=$PREFIX&#8211;disable-static&#8211;with-modules&#8211;without-perl&#8211;without-magick-plus-plus&#8211;with-quantum-depth=8&#8211;with-gs-font-dir=$PREFIX/share/ghostscript/fontsmakesudomakeinstallcd.. # Clean uprm-rffreetype-2.3.9libpng-1.2.40jpeg-7tiff-3.8.2libwmf-0.2.8.4lcms-1.18libiconv-1.13.1ghostscript-8.70ImageMagick-6.5.7-10</h1>
+
+
 </div>
 
 
@@ -123,7 +321,7 @@ Undefined symbols:“<em>iconv_close”, referenced from:</em>opvp_to_utf8 in gd
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -137,7 +335,7 @@ Undefined symbols:“<em>iconv_close”, referenced from:</em>opvp_to_utf8 in gd
   
 
 
-<time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
+<time datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2009</time>
       
 
 

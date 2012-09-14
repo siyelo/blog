@@ -9,7 +9,8 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Configure your sass or compass options (config/compass.config): config.css_dir = “tmp/stylesheets/compiled” And then create and initializer (e.g. &hellip;">
+  <meta name="description" content="Configure your sass or compass options (config/compass.config): 1
+config.css_dir = “tmp/stylesheets/compiled” And then create and initializer (e.g. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -106,12 +107,25 @@
 
 <div class="entry-content"><p>Configure your sass or compass options (config/compass.config):</p>
 
-<p>config.css_dir = “tmp/stylesheets/compiled”</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">css_dir</span> <span class="o">=</span> <span class="err">“</span><span class="n">tmp</span><span class="o">/</span><span class="n">stylesheets</span><span class="o">/</span><span class="n">compiled</span><span class="err">”</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And then create and initializer (e.g. config/initializers/compass.rb) which contains:</p>
 
-<p>123
-require&#8221;fileutils&#8221;FileUtils.mkdir_p(Rails.root.join(&#8220;tmp&#8221;,&#8221;stylesheets&#8221;,&#8221;compiled&#8221;))ActionController::Dispatcher.middleware.use(Rack::Static,:root=>&#8221;tmp/&#8221;,:urls=>[&#8220;/stylesheets/compiled&#8221;])And your stylesheets will always compile to tmp/ !</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s2">&quot;fileutils&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tmp&quot;</span><span class="p">,</span><span class="s2">&quot;stylesheets&quot;</span><span class="p">,</span><span class="s2">&quot;compiled&quot;</span><span class="p">))</span>
+</span><span class='line'><span class="no">ActionController</span><span class="o">::</span><span class="no">Dispatcher</span><span class="o">.</span><span class="n">middleware</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="no">Rack</span><span class="o">::</span><span class="no">Static</span><span class="p">,</span><span class="ss">:root</span><span class="o">=&gt;</span><span class="s2">&quot;tmp/&quot;</span><span class="p">,</span><span class="ss">:urls</span><span class="o">=&gt;[</span><span class="s2">&quot;/stylesheets/compiled&quot;</span><span class="o">]</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And your stylesheets will always compile to tmp/ !</p>
 </div>
 
 
@@ -120,7 +134,7 @@ require&#8221;fileutils&#8221;FileUtils.mkdir_p(Rails.root.join(&#8220;tmp&#8221
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 

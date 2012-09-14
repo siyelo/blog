@@ -1,12 +1,10 @@
-
-
 ---
 layout: post
 title: "What makes a good website?"
 date: 2010-01-20 12:16:00
 comments: true
 categories:
-author: 
+author: Glenn Roberts
 ---
 
 Your website is often the first point of contact for so many people and most people who have found their way to your site will navigate away too easily if there’s not something there to hold their attention.  Good graphics are important of course, but what else helps to hold the attention of your reader?
@@ -20,8 +18,6 @@ This is your opportunity to make a good first impression, making it too flashy o
 - Contact details
 - Why they should explore the rest of your site 
 
-
-
 Your homepage needs to be able to load quickly.  If your audience has to wait a minute before they see anything, they’re probably going to go elsewhere.
 
 **Get people to come back, and back, and back**
@@ -34,14 +30,11 @@ Make sure your content is credible and original.  Try to provide new relevant 
 
 Here are some ideas for keeping your content up to date:
 
-
 - Providing a news digest (or blog), which keeps people updated on the relevant subject matter.  
 - Offering objective analysis and feedback on current events in your industry
 - Listening to and offering feedback to your customers’ comments, concerns and ideas
 - Inviting informed contacts to write articles for you
 - Avoid using Flash extensively - its not as search-engine friendly as a clean, css-driven, standards-compliant website (like the ones Siyelo design) 
-
-
 
 **Navigation**
 
@@ -54,12 +47,11 @@ Try to view the website from the customer’s perspective - if you were a custom
 The visuals of a site are important, but unless they are supported by compelling content, easy navigation and good solid coding, visuals on their own won’t be able to attract people to your site and keep them coming back.  
 
 There are some annoying things that can make people navigate away immediately:
+
 - Poor, dated or cookie cutter designs. Invest in a professional web designer.
 - Intros designed in Flash
 - Too many pop-up or pop-under boxes
 - Autoplay music. Let your customer choose to play music, if offering it strengthens your message
 - Busy backgrounds.
-
-
 
  Your website is a sales team on constant duty.  Make sure your team is informed, informative and of good quality.

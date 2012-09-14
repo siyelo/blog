@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (*) on &hellip;">
+  <meta name="description" content="Do you lie awake at night dreaming of a way to save your fingers from typing &#8216;git status&#8217; too often? Ever wish you could just have an &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-12-17T10:06:32+01:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
+<time datetime="2009-12-17T11:06:32+02:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -104,16 +104,40 @@
   </header>
 
 
-<div class="entry-content"><pre><code>Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (*) on the command prompt to tell you that the working directory is dirty? No more insomnia for you;
-</code></pre>
+<div class="entry-content"><p>Do you lie awake at night dreaming of a way to save your fingers from typing &#8216;git status&#8217; too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you;</p>
 
-<p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34">![Terminal 2014 bash 2014 108ճ4][http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg] </a> Uploaded with<a href="http://plasq.com/">plasq</a> &#8216;s<a href="http://skitch.com">Skitch</a> !</p>
+<p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34"><img src="http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg" alt="Terminal 2014 bash 2014 108ճ4" /></a></p>
 
 <p>Paste this code into your .bash_profile and off you go.</p>
 
-<p>123456789101112</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># Bash prompt showing current git branch &amp; marking if dirty:</span>
+</span><span class='line'><span class="c"># Based on http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="k">$(</span>git status 2&gt; /dev/null | tail -n1<span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;nothing to commit (working directory clean)&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
+</span><span class='line'>  git branch --no-color 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s2">&quot;s/* \(.*\)/[\1$(parse_git_dirty)]/&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h1>Bash prompt showing current git branch &amp; marking if dirty:# Based on http://henrik.nyh.se/2008/12/git-dirty-promptfunction parse_git_dirty {  [[ $(git status 2> /dev/null | tail -n1) != &#8220;nothing to commit (working directory clean)&#8221; ]] &amp;&amp; echo &#8221;<em>&#8220;}function parse_git_branch {  git branch &#8211;no-color 2> /dev/null | sed -e &#8216;/<sup>[<sup>*]/d&#8217;</sup></sup> -e &#8220;s/</em> (.*)/[1$(parse_git_dirty)]/&#8221;}export PS1=$(echo &#8220;$PS1&#8221; | sed &#8216;s/\w/\w[33[35m]$(parse_git_branch)[33[0m]/g&#8217;)</h1>
+
+
 </div>
 
 
@@ -122,7 +146,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -136,7 +160,7 @@
   
 
 
-<time datetime="2009-12-17T10:06:32+01:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
+<time datetime="2009-12-17T11:06:32+02:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
       
 
 
@@ -156,7 +180,7 @@
         <a class="basic-alignment left" href="/fix-for-annoying-bug-in-emailspec" title="Previous Post: Fix for annoying bug in EmailSpec">&laquo; Fix for annoying bug in EmailSpec</a>
       
       
-        <a class="basic-alignment right" href="/design-chunking-with-scrum" title="Next Post: Design Chunking With Scrum">Design Chunking With Scrum &raquo;</a>
+        <a class="basic-alignment right" href="/design-chunking-with-scrum" title="Next Post: Design Chunking with Scrum">Design Chunking with Scrum &raquo;</a>
       
     </p>
   </footer>

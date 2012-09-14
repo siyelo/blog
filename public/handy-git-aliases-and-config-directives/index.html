@@ -9,8 +9,14 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc: 12345
-[alias]st = statusci = &hellip;">
+  <meta name="description" content="By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc: 1
+2
+3
+4
+5
+[alias]
+st = status
+ci = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,7 +102,7 @@
   
 
 
-<time datetime="2009-11-30T11:53:00+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+<time datetime="2009-11-30T12:53:00+02:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,19 +113,72 @@
 
 <div class="entry-content"><p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc:</p>
 
-<p>12345
-[alias]st = statusci = commitco = checkoutbr = branch</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>st = status
+</span><span class='line'>ci = commit
+</span><span class='line'>co = checkout
+</span><span class='line'>br = branch</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Also, you might find these will come in handy;</p>
 
-<p>12345678
-[merge]tool = opendiffsummary = true[color]diff = autostatus = autobranch = autointeractive = auto</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[merge]
+</span><span class='line'>tool = opendiff
+</span><span class='line'>summary = true
+</span><span class='line'>
+</span><span class='line'>[color]
+</span><span class='line'>diff = auto
+</span><span class='line'>status = auto
+</span><span class='line'>branch = auto
+</span><span class='line'>interactive = auto</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
 
-<p>12345678910111213</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
+</span><span class='line'><span class="c"># http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/</span>
+</span><span class='line'><span class="c"># http://gist.github.com/47546</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  git diff --quiet HEAD &amp;&gt;/dev/null
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> 1 <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
+</span><span class='line'>  <span class="nb">local </span><span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>__git_ps1 <span class="s2">&quot;%s&quot;</span><span class="k">)</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$branch</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;[$branch$(parse_git_dirty)]&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h1>http://henrik.nyh.se/2008/12/git-dirty-prompt# http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/# http://gist.github.com/47546 function parse_git_dirty {  git diff &#8211;quiet HEAD &amp;>/dev/null  [[ $? == 1 ]] &amp;&amp; echo &#8220;*&#8221;}function parse_git_branch {  local branch=$(__git_ps1 &#8220;%s&#8221;)  [[ $branch ]] &amp;&amp; echo &#8220;[$branch$(parse_git_dirty)]&#8221;}export PS1=$(echo &#8220;$PS1&#8221; | sed &#8216;s/\w/\w[33[35m]$(parse_git_branch)[33[0m]/g&#8217;)</h1>
+
+
 </div>
 
 
@@ -128,7 +187,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -142,7 +201,7 @@
   
 
 
-<time datetime="2009-11-30T11:53:00+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+<time datetime="2009-11-30T12:53:00+02:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
       
 
 
@@ -162,7 +221,7 @@
         <a class="basic-alignment left" href="/aliases-for-common-heroku-commands" title="Previous Post: Aliases for common Heroku commands">&laquo; Aliases for common Heroku commands</a>
       
       
-        <a class="basic-alignment right" href="/browser-market-share-applying-the-8020-rule" title="Next Post: Browser Market Share Applying The 8020 Rule">Browser Market Share Applying The 8020 Rule &raquo;</a>
+        <a class="basic-alignment right" href="/browser-market-share-applying-the-8020-rule" title="Next Post: Browser market share: Applying the 80:20 rule ">Browser market share: Applying the 80:20 rule  &raquo;</a>
       
     </p>
   </footer>

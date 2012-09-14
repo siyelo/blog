@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then Herokuhttp://heroku.com/ may just be &hellip;">
+  <meta name="description" content="Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then Heroku may just be the fastest way to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -104,15 +104,20 @@
   </header>
 
 
-<div class="entry-content"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then Heroku<a href="http://heroku.com/">http://heroku.com/</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
+<div class="entry-content"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
 
-<p>Its as easy as;
-12345
-sudo gem install herokuheroku creategit push heroku masterheroku rake db:migrateheroku open</p>
+<p>Its as easy as;</p>
+
+<pre><code>sudo gem install heroku
+heroku create
+git push heroku master
+heroku rake db:migrate
+heroku open
+</code></pre>
 
 <p>Sit back and watch your app open automagically in your browser.</p>
 
-<p>Also note, Siyelo Fuselage<a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
+<p>Also note, Siyelo <a href="http://github.com/siyelo/fuselage">Fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
 </div>
 
 
@@ -121,7 +126,7 @@ sudo gem install herokuheroku creategit push heroku masterheroku rake db:migrate
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -135,7 +140,7 @@ sudo gem install herokuheroku creategit push heroku masterheroku rake db:migrate
   
 
 
-<time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
       
 
 
@@ -155,7 +160,7 @@ sudo gem install herokuheroku creategit push heroku masterheroku rake db:migrate
         <a class="basic-alignment left" href="/get-those-cheeky-bash-variables-out-of-there" title="Previous Post: Get those cheeky bash variables out of there">&laquo; Get those cheeky bash variables out of there</a>
       
       
-        <a class="basic-alignment right" href="/textmate-tip-align-statments" title="Next Post: Textmate tip: Align statments">Textmate tip: Align statments &raquo;</a>
+        <a class="basic-alignment right" href="/heroku-the-5mb-free-plan-is-it-enough" title="Next Post: Heroku - the 5mb free plan - is it enough?">Heroku - the 5mb free plan - is it enough? &raquo;</a>
       
     </p>
   </footer>

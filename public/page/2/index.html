@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Siyelo</a></h1>
+  
+    <h2>A blogging framework for siyelos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/vim-tips-part-i">Vim Tips - Part I</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-27T09:50:00+02:00" pubdate data-updated="true">Jun 27<span>th</span>, 2012</time>
+        
+         | <a href="/vim-tips-part-i#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great<a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+
+<ol>
+<li>Repeat the last Ex command</li>
+</ol>
+
+
+<p>In Vim there are 3 command line mode prompts:
+- Ex command prompt:<strong>:something</strong>
+- Search prompt:<strong>/something</strong>
+- Expression prompt (from insert mode type<strong><C-r>=</strong>): <strong>=1+1</strong></p>
+
+<p>Let say we run a spec from the Ex command prompt like this:
+:!rspec spec/models/code_spec.rb</p>
+
+<p>We can repeat the last Ex command by typing<strong>@:</strong>from normal mode.</p>
+
+<ol>
+<li>Repeat the last substitute command</li>
+</ol>
+
+
+<p>If substitute command is run, like for example:
+:s/current_user/user/g</p>
+
+<p>We can repeat it with<strong>:s</strong>or<strong>&amp;</strong>which is synonym for<strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that<strong>:&amp;&amp;</strong>should be used. It&#8217;s handy having the following mappings in the vimrc file:
+&#8221; make &amp; trigger :&amp;&amp; so it preserves flags
+nnoremap &amp; :&amp;&amp;<Enter>
+xnoremap &amp; :&amp;&amp;<Enter></p>
+
+<ol>
+<li>Sort properties in CSS</li>
+</ol>
+
+
+<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.
+h4 {
+  font-size: 11px;
+  margin: 15px;
+  background: red;
+}</p>
+
+<p>Just append them at the end, select the lines and in visual mode type<strong>:sort</strong>, or from normal mode select everything inside {} with<strong>vi{</strong>and then<strong>:sort</strong>.
+h4 {
+  background: red;
+  font-size: 11px;
+  margin: 15px;
+}</p>
+
+<ol>
+<li>Select texts</li>
+</ol>
+
+
+<p>Select the original yanked text with<strong>gv</strong>or select the last pasted text with<strong>gb</strong>(custom mapping).<strong>gb</strong>is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with<strong>gb&lt;</strong>. For<strong>gb</strong>to work, the following mapping need to be defined in the vimrc file.
+&#8221; select last paste in visual mode
+nnoremap <expr> gb &#8217;<code>[' . strpart(getregtype(), 0, 1) . '</code>]&#8217;</p>
+
+<ol>
+<li>Paste from register without leaving insert mode <C-r>{register}</li>
+</ol>
+
+
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with<strong><C-r>0</strong>. If yanked text contains new line characters,<strong><C-r><C-p>0</strong>will take care of fixing the indentation.</p>
+
+<ol>
+<li>Run normal mode commands across a range</li>
+</ol>
+
+
+<p>Say we want to append ; at the end of the following lines:
+var element = $(this)
+var tabName = element.data(&#8216;tab&#8217;)
+var report  = element.data(&#8216;report&#8217;)</p>
+
+<p>We can visually select the 3 lines and type<strong>:normal A;</strong>or we can just select all lines in the file with<strong>%</strong>and execute the same command<strong>:%normal A;</strong>.</p>
+
+<p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6">Rails 3 Upgrade Process (the Road From 2.3.14 to 3.2.6)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-21T18:10:35+02:00" pubdate data-updated="true">Jun 21<span>st</span>, 2012</time>
+        
+         | <a href="/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&#8217;ve just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we&#8217;ll share some details about the experience and the process we took for the upgrade. Before the upgrade, it&#8217;s advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
+
+<p>Versions running out of support&#8230;</p>
+
+<p>Why upgrade? Ruby 1.8.7 is slowly<a href="http://www.ruby-lang.org/en/news/2011/10/06/plans-for-1-8-7/">running out of support</a> and Ruby on Rails 2.3.x is already<a href="https://groups.google.com/forum/#!topic/rubyonrails-security/CdoMUVpsRmQ/discussion">out of maintenance and out of security support</a> . If wondering which Ruby on Rails version are supported at the moment, it&#8217;s 3.2 for bugfixes and 3.1 for security fixes (see this<a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/30ff7f618a6428f3/a767ba1bbf526fde?q=#50a39e4694704f14">thread discussion</a> on rails-core mailing list). </p>
+
+<p>How to approach the upgrade&#8230;</p>
+
+<p>There are several schools of thought regarding this matter:
+- Upgrade both your ruby version to 1.9.1+ and your stack to Rails stack simultaniously.
+- Upgrade your Rails stack and then upgrade your Ruby version
+- Upgrade your Ruby version and then your Rails stack</p>
+
+<p>We went with the first.</p>
+
+<p>This was because although we have a relatively large application, we found that most of the gems being used were easily replaced and had no conflicts with Rails 3.x.</p>
+
+<p>Upgrade now&#8230;</p>
+
+<p>The upgrade process to Rails 3.x is rather straight forward as most of the gems have already been ported to support Rails 3.x and many and most have documentated how to do the change. In the rare case that one of your gems does not support rails 3, they are easily replaced.</p>
+
+<p>Here is how we upgraded:</p>
+
+<p>Start by installing the<a href="https://github.com/rails/rails_upgrade">rails_upgrade</a> plugin:
+ruby script/plugin install git://github.com/rails/rails_upgrade.git</p>
+
+<p>Then run the rake task that does a check for required upgrades:
+rake rails:upgrade:check</p>
+
+<p>The output is rather descriptive. It hightlights all the changes required and even links to blog posts for those of you who would like additional information on how to approach the changes.</p>
+
+<p>Run the backup task. This backs up all of your routes, environments, application, etc.
+rake rails:upgrade:backup</p>
+
+<p>There is a rake task to upgrade all of your routes to the new DSL. We found that we needed to make minor changes after this task was run.
+rake rails:upgrade:routes</p>
+
+<p>Yet another rake task for generating a Gemfile from config.gem directives.</p>
+
+<p>In Rails 3, bundler handles all your gems and dependencies (Fortunately our app was already using bundler). If yours isn&#8217;t the <a href="https://github.com/rails/rails_upgrade">rails_upgrade</a>  plugin is nice enough to do this for you!
+rake rails:upgrade:gems</p>
+
+<p>Now it&#8217;s just a matter of upgrading the Rails version ensuring that you have not locked any of the other gems at a version incompatible with your upgrade. Then let bundler do it&#8217;s thing:
+bundle install</p>
+
+<p>Then run all the generators for gems like rspec, cucumber and setup spork, guard.
+rails g rspec:install &#8211;spork
+rails g cucumber:install &#8211;rspec &#8211;capybara &#8211;spork
+bundle exec guard init
+bundle exec guard init spork</p>
+
+<p>If using cucumber and it&#8217;s old web steps, you&#8217;ll need to add <a href="https://github.com/cucumber/cucumber-rails-training-wheels">cucumber-rails-training-wheels</a>  to the Gemfile. It&#8217;s also good to setup the <a href="http://guides.rubyonrails.org/asset_pipeline.html">assets pipeline</a>  in order to get the full benefits from newest version of Rails.</p>
+
+<p>From here we went about fixing our specs (aren&#8217;t they just fabulous?). We feel this is an important step as it will expose problems and give you deprecation warnings.</p>
+
+<p>We didn&#8217;t go as far as to fix every spec and cuke. Just to the point where we felt comfortable upgrading again!</p>
+
+<p>So we generated a new Rails 3.2.6 application in another folder and carefuly moved across the Rails configuration files (production.rb, development.rb, Rakefile, etc).</p>
+
+<p>After some more bug and deprecation warning fixes we have a stable app once again! :)</p>
+
+<p>Now all that&#8217;s left to do is clean up the old backup files, old rails scripts/* files and your vendor/plugins and you&#8217;re done!</p>
+
+<p>Happy upgrades!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/were-hiring-social-media-marketing-intern">Were Hiring Social Media Marketing Intern</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-11T00:00:00+02:00" pubdate data-updated="true">May 11<span>th</span>, 2012</time>
+        
+         | <a href="/were-hiring-social-media-marketing-intern#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><hr />
+
+<p>layout: post
+title: &#8220;WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN&#8221;
+date: 2012-05-11 14:07:00
+comments: true
+categories:
+author:
+&#8212;Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</p>
+
+<p>–</p>
+
+<p><strong>Location</strong>: Cape Town, South Africa</p>
+
+<p><strong>Start date</strong>: June 2012</p>
+
+<p><strong>Duration</strong>: 8 to 12 weeks</p>
+
+<p><strong>Funding</strong>: Expenses and reasonable honorarium</p>
+
+<p><strong>Internship Description:</strong></p>
+
+<p>Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community.  A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.</p>
+
+<p><strong>Skills &amp; Experience Required:</strong></p>
+
+<ul>
+<li><p>Energetic, independent, and detail-oriented.</p></li>
+<li><p>Strong written and oral communication skills - in English</p></li>
+<li><p>Available at least 16 to 24 hours a week.</p></li>
+<li><p>Studying for or recently graduated with a degree in business, communication, social sciences, with good grades</p></li>
+<li><p>Highly sociable and witty</p></li>
+<li><p>Knowledge of HTML is a plus</p></li>
+</ul>
+
+
+<p><strong>Sample projects you will work on:</strong></p>
+
+<ul>
+<li><p>Support to all Marketing activities</p></li>
+<li><p>Manage integrated social media campaigns.</p></li>
+<li><p>Social strategy and overviews</p></li>
+<li><p>Evaluate positioning and activity of competitors.</p></li>
+<li><p>Take charge of managing posting and profile upkeep.</p></li>
+<li><p>Identify opportunities for increased social interaction.</p></li>
+<li><p>Research new social techniques, platforms and trends.</p></li>
+<li><p>Testing new products</p></li>
+</ul>
+
+
+<p><strong>Benefits for Intern:</strong></p>
+
+<ul>
+<li><p>Siyelo offers an international, fast-paced and dynamic environment in hot web techologies.</p></li>
+<li><p>A great office in central Cape Town. Open, creative and vibrant.</p></li>
+<li><p>Ping-pong, putt-putt, and Playstation3.</p></li>
+<li><p>Other fun things not beginning with the letter &#8216;P&#8217;.</p></li>
+<li><p>Learn the basics of web technogies, product development and consulting.</p></li>
+</ul>
+
+
+<p><strong>Application procedure:</strong></p>
+
+<p>Send application before May 20th 2012 to<a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a> with a subject line of ”Social Media Marketing Internship application: <your name>”.</p>
+
+<p>Please include;</p>
+
+<ol>
+<li><p>A brief explanation of who you are and how you would help us.</p></li>
+<li><p>A copy of your CV</p></li>
+<li><p>The time and dates you will be available to work at our office.</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/intro-to-machine-learning-in-ruby">Intro to Machine Learning in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-30T12:41:00+02:00" pubdate data-updated="true">Dec 30<span>th</span>, 2011</time>
+        
+         | <a href="/intro-to-machine-learning-in-ruby#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Machine learning is branch of<strong>A</strong>rtificial<strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
+
+<p> </p>
+
+<p>Let&#8217;s build&#8230;</p>
+
+<p> </p>
+
+<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML articles from the <a href="http://www.timeslive.co.za/">Times Live</a> newspaper.</p>
+
+<p>For the job, we will use<strong>nokogiri</strong>gem and 2 ruby standard libraries:<strong>open-uri</strong>and<strong>rss/2.0</strong>.</p>
+
+<p>RSS Parser</p>
+
+<p>To find sources of articles for processing,  we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links.<strong>RssParser</strong>class does exactly that, you initialize it with a<a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
+
+<p>HTML Parser</p>
+
+<p>Having article links, we need to parse page content and extract meaningful parts from these pages.<strong>HtmlParser</strong>class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles -<a href="http://getfirebug.com/">Firebug</a> and<a href="http://jquery.com/">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice<strong>clean_whitespace</strong>method which cleans the whitespace characters from the extracted text.</p>
+
+<p>Statistical Classifier</p>
+
+<p>We introduce a class that is responsible for classification of articles. It is initialized with a hash that consists of categories (keys) and training data (values).</p>
+
+<p>Training data is used to discoverpotential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the <strong>train_data()</strong>method).</p>
+
+<p>In this example we are usingcontent ofWikipedia articles for<a href="http://en.wikipedia.org/wiki/Economy">economy</a> ,<a href="http://en.wikipedia.org/wiki/Sport">sport</a> and<a href="http://en.wikipedia.org/wiki/Health">health</a> as training data for ourcategories.</p>
+
+<p>When classifying articles we want to compare only meaningful words and ignore other wordsthat do not add any value for a certain category. We (partially) solve this problem using <a href="https://gist.github.com/1534053">stop words</a> .</p>
+
+<p>Finally, the <strong>scores()</strong>method creates the scores for each category (per text) that we are testing.</p>
+
+<p>Lets have a go</p>
+
+<p>Here is the script that runs the program:</p>
+
+<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like<a href="http://en.wikipedia.org/wiki/Bayesian_probability">Bayesian probability</a>  and <a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis">Latent Semantic Analysis</a> .</p>
+
+<p>If you are interested in amore indepth exampleof a news aggregator application - you can check<a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
+
+<p>If you want to learn more about Machine Learning, checkout<a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and<a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/redis-in-the-nosql-ecosystem">Redis in the NoSQL Ecosystem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T23:01:00+02:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+         | <a href="/redis-in-the-nosql-ecosystem#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Redis (<strong>RE</strong>mote<strong>D</strong>Ictionary<strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several<a href="http://redis.io/topics/data-types-intro">data types</a> : Strings, Hashes, Lists, Sets and Sorted Sets; implements<a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has<a href="http://redis.io/topics/transactions">transactions</a> .</p>
+
+<p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
+
+<p>Give us some ACID</p>
+
+<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be<a href="http://en.wikipedia.org/wiki/ACID">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other<a href="http://nosql-database.org/">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default<strong>fsync()</strong>is set to<strong>everysec</strong>which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the<strong>appendfsync</strong>command (you can use<strong>appendfsync always</strong>and system will fsync data after every write - it&#8217;s slow but safest!).</p>
+
+<p>When to use Redis?</p>
+
+<p>In your production environment you don&#8217;t need to switch to Redis. You can just<a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
+
+<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.</p>
+
+<p>If you need a more featured document oriented database that allows you to perform<strong>range queries</strong>,<strong>regular expression searches</strong>,<strong>indexing</strong>, and<strong>MapReduce</strong>you should check<strong>MongoDB</strong>,<strong>CouchDB</strong>or similar. If you need a simple<strong>caching</strong>with better expiration algorhitms than Redis has then you should check<strong>memcache</strong>.</p>
+
+<p>Redis Use-Cases
+- Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.
+- Counting Downloads:<a href="https://github.com/rubygems/rubygems.org">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the<a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb">Download</a> model.
+- High Score tables: Redis supports data type functions that can be very<a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/">handy</a> .
+- Who&#8217;s Online: Use Redis to implement<a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/">who is online</a> logic in your application.
+- Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.
+- Queues:<a href="https://github.com/defunkt/resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.
+- Live debugging: You need to do live debugging or roll out new features for production testing for specific users only -<a href="https://github.com/jamesgolick/rollout">Rollout</a> gem does exactly that.
+- HN style social news site written in Ruby/Sinatra/Redis/jQuery -<a href="https://github.com/antirez/lamernews">lamernews</a> .</p>
+
+<p>Play with Redis (install, start and stop server)</p>
+
+<p>Redis console</p>
+
+<p>You can use redis-cli to connect to a local or remote Redis server and call com-mands. Here is an example (first connect to the server using: redis-cli -p 6379):</p>
+
+<p>Redis from Ruby</p>
+
+<p>Here is an example using Ruby to execute commands on Redis server. You need to install<a href="https://github.com/ezmobius/redis-rb">redis gem</a> by executing<em>gem install redis</em>first.</p>
+
+<p>Learn more about Redis<a href="http://redis.io/commands">commands</a> and give some speed to your web applications for free.</p>
+
+<p>Real world Redis example</p>
+
+<p>At the end, lets show a real world example how Redis is used in<a href="http://rubygems.org/">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
+
+<p>First, in the initializer a new redis object as a global variable<strong>$redis</strong>is instantiated. This object is used in Download model for updating the downloads count for a gem with<strong>self.incr(name)</strong>method and reading the downloads count for a gem with<strong>self.for_rubygem(name)</strong>method. Rubygems is using Sinatra application<strong>Hostess</strong>to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines<strong>get &#8220;/gems/*.gem&#8221;</strong>route which triggers the downloads count to be updated in the Redis database.</p>
+
+<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at<a href="https://github.com/rubygems/rubygems.org">Github</a> for more details.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Siyelo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

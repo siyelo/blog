@@ -9,8 +9,17 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as; 12345678910
-Scenario Outline:Register new userGivenI &hellip;">
+  <meta name="description" content="EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as; 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Scenario Outline: Register new &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,7 +105,7 @@ Scenario Outline:Register new userGivenI &hellip;">
   
 
 
-<time datetime="2009-12-15T14:33:00+01:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+<time datetime="2009-12-15T15:33:00+02:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,18 +116,35 @@ Scenario Outline:Register new userGivenI &hellip;">
 
 <div class="entry-content"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
 
-<p>12345678910
-Scenario Outline:Register new userGivenI am on the signup pageAndI fill in &#8220;Email&#8221; with &#8220;&#8221;AndI fill in &#8220;Password&#8221; with &#8220;&#8221;AndI press &#8220;Create My Account&#8221;ThenI shouldAndI should receive an emailWhenI open the emailThenI should see &#8220;Please activate your new account&#8221; in the subjectWhenI click the first link in the email</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Scenario</span> <span class="no">Outline</span><span class="p">:</span> <span class="no">Register</span> <span class="kp">new</span> <span class="n">user</span>
+</span><span class='line'><span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="n">signup</span> <span class="n">page</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Email&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Password&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">press</span> <span class="s2">&quot;Create My Account&quot;</span>
+</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">should</span> <span class="n">receive</span> <span class="n">an</span> <span class="n">email</span>
+</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">email</span>
+</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;Please activate your new account&quot;</span> <span class="k">in</span> <span class="n">the</span> <span class="n">subject</span>
+</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="n">click</span> <span class="n">the</span> <span class="n">first</span> <span class="n">link</span> <span class="k">in</span> <span class="n">the</span> <span class="n">email</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you;</p>
 
-<p>123456789
-You have a nil object when you didn&#8217;t expect it!You might have expected an instance of Array.The error occurred while evaluating nil.include? (NoMethodError)/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <code>mailbox_for'/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in</code>select&#8217;/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <code>mailbox_for'/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in</code>mailbox_for&#8217;/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#8217;./features/step_definitions/email_steps.rb:52**I fixed the offending bug - grab the code either at Gemcutter</p>
+<pre><code>gem install glennr-email-spec
+</code></pre>
 
-<p>1
-gem install glennr-email-spec**or via GitHub</p>
-
-<p>*<a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a> *</p>
+<p><em><em>or via GitHub</em> <a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a></em></p>
 
 <p>If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
 </div>
@@ -129,7 +155,7 @@ gem install glennr-email-spec**or via GitHub</p>
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -143,7 +169,7 @@ gem install glennr-email-spec**or via GitHub</p>
   
 
 
-<time datetime="2009-12-15T14:33:00+01:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+<time datetime="2009-12-15T15:33:00+02:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
       
 
 
@@ -160,7 +186,7 @@ gem install glennr-email-spec**or via GitHub</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/browser-market-share-applying-the-8020-rule" title="Previous Post: Browser Market Share Applying The 8020 Rule">&laquo; Browser Market Share Applying The 8020 Rule</a>
+        <a class="basic-alignment left" href="/browser-market-share-applying-the-8020-rule" title="Previous Post: Browser market share: Applying the 80:20 rule ">&laquo; Browser market share: Applying the 80:20 rule </a>
       
       
         <a class="basic-alignment right" href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty" title="Next Post: Using Git? How to know what branch you're on, and if its dirty.">Using Git? How to know what branch you're on, and if its dirty. &raquo;</a>

@@ -1,12 +1,10 @@
-
-
 ---
 layout: post
 title: "Rails 2.3/Devise : changing your email content type."
 date: 2010-02-18 14:26:00
 comments: true
 categories:
-author: 
+author: Glenn Roberts
 ---
 
 Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the "standard" authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?).
@@ -15,16 +13,24 @@ A minor issue on Rails 2.3 is that Devise (v1.0) doesn't allow you to override t
 
 I've patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file
 
-UPDATE: Its been merged into Devise v1.0.2[http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4...](http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4ff18b039d) 
+UPDATE: Its been merged into Devise v1.0.2
 
-
-123
-  Devise.setup do |config|    ...    config.mailer_content_type = 'text/plain'
+{% codeblock lang:ruby %}
+Devise.setup do |config|
+    #...    
+    config.mailer_content_type = 'text/plain'
+{% endcodeblock %}
 
 The gem on gemcutter
 
+{% codeblock lang:ruby %}
+gem install glennr-devise
+{% endcodeblock %}
 
-123
-  gem install glennr-devise  or  config.gem 'glennr-devise', :lib => 'devise', :source => 'http://gemcutter.org'
+or
 
-The github branch is here, and should be merged into the Devise trunk shortly:[http://github.com/glennr/devise](http://github.com/glennr/devise) 
+{% codeblock lang:ruby %}
+config.gem 'glennr-devise', :lib => 'devise', :source => 'http://gemcutter.org'
+{% endcodeblock %}
+
+The github branch is here, and should be merged into the Devise trunk shortly: [http://github.com/glennr/devise](http://github.com/glennr/devise)

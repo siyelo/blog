@@ -1,19 +1,20 @@
-
-
 ---
 layout: post
 title: "Heroku - the 5mb free plan - is it enough?"
 date: 2009-11-17 20:04:30
 comments: true
 categories:
-author: 
----Heroku just got better. 
+author: Glenn Roberts
+---
+
+Heroku just got better. 
 
 If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku's free (5mb) plan, then you're in luck. Read on;
 
-Begin forwarded message:> Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar... (ticket #2486)Reply-To:Support <[support@heroku.com](mailto:support@heroku.com) >
+Begin forwarded message:
 
-> 
+> Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar... (ticket #2486)
+
 > **glenn.roberts, Nov 17 12:04 am (PST):**
 
 > Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ?
@@ -21,7 +22,7 @@ Begin forwarded message:> Subject:[Support] Re: Do the gems installed as part of
 > Regards
 
 > Glenn
-> 
+>
 
 > **morten, Nov 17 11:04 am (PST):**
 

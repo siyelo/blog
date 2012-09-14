@@ -106,24 +106,79 @@
 
 <div class="entry-content"><p>Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of the alternatives is Flash and anyone who appreciates usability and web standards will probably resent that very thought.</p>
 
-<p>Recently I worked on a website for a<a href="http://freezing-light-25.heroku.com/">branding agency</a> that required a bit more avant-garde design with a large background image that could resize according to the browser’s window size and resolution. My research showed that most of the non-flash websites were done by JavaScript, but there was something else that caught my attention – a solution done with straight HTML, CSS and guess what – tables! Yeah, I know, the old arch-nemesis of web design. We almost started forgetting they existed, but they pop-up from time to time, reminding us of the good old days of poorly designed websites. And yet it was a solution so simple it’s almost creative and I was urged to try it out.</p>
+<p>Recently I worked on a website for a <a href="http://freezing-light-25.heroku.com/">branding agency</a> that required a bit more avant-garde design with a large background image that could resize according to the browser’s window size and resolution. My research showed that most of the non-flash websites were done by JavaScript, but there was something else that caught my attention – a solution done with straight HTML, CSS and guess what – tables! Yeah, I know, the old arch-nemesis of web design. We almost started forgetting they existed, but they pop-up from time to time, reminding us of the good old days of poorly designed websites. And yet it was a solution so simple it’s almost creative and I was urged to try it out.</p>
 
 <p>The whole trick is to create a single cell table, and apply few styles to make the magic work.</p>
 
-<p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it:<a href="http://haml-lang.com/">http://haml-lang.com/</a></p>
+<p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: <a href="http://haml-lang.com/">http://haml-lang.com/</a></p>
 
-<p>1234567</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nf">#bg</span>  
+</span><span class='line'>  <span class="nf">#bg_wrapper</span>    
+</span><span class='line'>    <span class="nt">%table</span><span class="p">{</span> <span class="ss">:cellspacing</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="ss">:cellpadding</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span> <span class="p">}</span>      
+</span><span class='line'>      <span class="nt">%tbody</span>        
+</span><span class='line'>        <span class="nt">%tr</span>          
+</span><span class='line'>          <span class="nt">%td</span>            
+</span><span class='line'>            <span class="nt">%img</span><span class="nf">#background</span><span class="p">{</span> <span class="ss">:src</span> <span class="o">=&gt;</span> <span class="s2">&quot;images/index.jpg&quot;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<h1>bg  #bg_wrapper    %table{ :cellspacing => &#8220;0&#8221;, :cellpadding => &#8220;0&#8221; }      %tbody        %tr          %td            %img#background{ :src => &#8220;images/index.jpg&#8221; }</h1>
 
 <p>So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:</p>
 
-<p>1234567891011121314151617181920212223242526
-body  width: 100%  height: 100%  overflow: hidden#bg, table, td, #content    width: 100%    height: 100%    overflow: hidden  #bg_wrapper    width: 200%    left: -50%    position: absolute    top: -50%    height: 200%  td    text-align: center    vertical-align: middle  #bg img    margin: 0 auto    min-height: 50%    min-width: 50%</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'><span class="na">  height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'><span class="na">  overflow</span><span class="o">:</span> <span class="no">hidden</span>
+</span><span class='line'><span class="nn">#bg</span><span class="o">,</span> <span class="nt">table</span><span class="o">,</span> <span class="nt">td</span>
+</span><span class='line'>  <span class="nn">#content</span>
+</span><span class='line'>  <span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">  height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">  overflow</span><span class="o">:</span> <span class="no">hidden</span>
+</span><span class='line'><span class="err">  </span><span class="nn">#bg_wrapper</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="mi">200</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    left</span><span class="o">:</span> <span class="mi">-50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'><span class="na">    top</span><span class="o">:</span> <span class="mi">-50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    height</span><span class="o">:</span> <span class="mi">200</span><span class="kt">%</span>
+</span><span class='line'><span class="err">  </span><span class="nt">td</span>
+</span><span class='line'><span class="na">    text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'><span class="na">    vertical-align</span><span class="o">:</span> <span class="no">middle</span>
+</span><span class='line'><span class="err">  </span><span class="nn">#bg</span> <span class="nt">img</span>
+</span><span class='line'><span class="na">    margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="na">    min-height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    min-width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>After this you can continue styling the rest of the page with straight CSS without worrying about the background. Leave the table as it is and nest the rest of your DIV’s straight in the body.</p>
-
-<p> </p>
 </div>
 
 
@@ -132,7 +187,7 @@ body  width: 100%  height: 100%  overflow: hidden#bg, table, td, #content�
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -163,7 +218,7 @@ body  width: 100%  height: 100%  overflow: hidden#bg, table, td, #content�
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/tip-of-the-day-mime-types-for-paperclip-ie8" title="Previous Post: Tip Of The Day Mime Types For Paperclip Ie8">&laquo; Tip Of The Day Mime Types For Paperclip Ie8</a>
+        <a class="basic-alignment left" href="/tip-of-the-day-mime-types-for-paperclip-ie8" title="Previous Post: Tip of the day: MIME types for Paperclip & IE8">&laquo; Tip of the day: MIME types for Paperclip & IE8</a>
       
       
         <a class="basic-alignment right" href="/the-easiest-way-to-make-sasscompass-work-on-heroku" title="Next Post: The easiest way to make sass/compass work on Heroku">The easiest way to make sass/compass work on Heroku &raquo;</a>

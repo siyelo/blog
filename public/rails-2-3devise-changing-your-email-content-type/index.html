@@ -95,7 +95,7 @@
   
 
 
-<time datetime="2010-02-18T15:26:00+01:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+<time datetime="2010-02-18T16:26:00+02:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -110,17 +110,32 @@
 
 <p>I&#8217;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
 
-<p>UPDATE: Its been merged into Devise v1.0.2<a href="http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4ff18b039d">http://github.com/plataformatec/devise/commit/23568bda82d04062615b79570949ed4&#8230;</a></p>
+<p>UPDATE: Its been merged into Devise v1.0.2</p>
 
-<p>123
-  Devise.setup do |config|    &#8230;    config.mailer_content_type = &#8216;text/plain&#8217;</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Devise</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'><span class="err">    </span><span class="c1">#...    </span>
+</span><span class='line'>    <span class="n">config</span><span class="o">.</span><span class="n">mailer_content_type</span> <span class="o">=</span> <span class="s1">&#39;text/plain&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The gem on gemcutter</p>
 
-<p>123
-  gem install glennr-devise  or  config.gem &#8216;glennr-devise&#8217;, :lib => &#8216;devise&#8217;, :source => &#8216;http://gemcutter.org&#8217;</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">glennr</span><span class="o">-</span><span class="n">devise</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>The github branch is here, and should be merged into the Devise trunk shortly:<a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a></p>
+
+<p>or</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;glennr-devise&#39;</span><span class="p">,</span> <span class="ss">:lib</span> <span class="o">=&gt;</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:source</span> <span class="o">=&gt;</span> <span class="s1">&#39;http://gemcutter.org&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a></p>
 </div>
 
 
@@ -129,7 +144,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Siyelo</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
 
       
 
@@ -143,7 +158,7 @@
   
 
 
-<time datetime="2010-02-18T15:26:00+01:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
+<time datetime="2010-02-18T16:26:00+02:00" pubdate data-updated="true">Feb 18<span>th</span>, 2010</time>
       
 
 
@@ -163,7 +178,7 @@
         <a class="basic-alignment left" href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0" title="Previous Post: Using Devise for authentication? How to upgrade from v0.8.2 to v1.0">&laquo; Using Devise for authentication? How to upgrade from v0.8.2 to v1.0</a>
       
       
-        <a class="basic-alignment right" href="/the-least-you-can-do-on-usability" title="Next Post: The Least You Can Do On Usability">The Least You Can Do On Usability &raquo;</a>
+        <a class="basic-alignment right" href="/the-least-you-can-do-on-usability" title="Next Post: 'The least you can do' on Usability">'The least you can do' on Usability &raquo;</a>
       
     </p>
   </footer>

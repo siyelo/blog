@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Open | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/open/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-09-14T10:51:56+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Fuselage - Get your Rails project off to a flying start!]]></title>
+    <link href="http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start"/>
+    <updated>2009-11-04T11:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start</id>
+    <content type="html"><![CDATA[<p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the "rails" command gives you.</p>
+
+<p>What's different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template.</p>
+
+<p>Fuselage avoids asking a lot of questions, so if you want to customize your install, edit "template.rb" manually.</p>
+
+<p>Usage is very simple. You can invoke it directly from your "rails -m" command with:</p>
+
+<pre><code>rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+</code></pre>
+
+<p>(note this does a git clone of Fuselage for you automatically)</p>
+
+<p>Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable.</p>
+
+<p>Full feature list</p>
+
+<p>Currently Fuselage includes the following;</p>
+
+<p><strong>Rails</strong></p>
+
+<ul>
+<li>basic template for a clean a rails install</li>
+<li>SCS</li>
+<li>git</li>
+</ul>
+
+
+<p><strong>DB + Models</strong></p>
+
+<ul>
+<li>MySQL</li>
+<li>authlogic</li>
+<li>recaptcha</li>
+<li>paperclip</li>
+</ul>
+
+
+<p><strong>Design/Layout</strong></p>
+
+<ul>
+<li>jQuery</li>
+<li>haml</li>
+<li>sass</li>
+<li>compass + blueprint</li>
+<li>formtastic</li>
+<li>cufon</li>
+<li>friendly_id</li>
+</ul>
+
+
+<p><strong>Controllers</strong></p>
+
+<ul>
+<li>make_resourceful</li>
+<li>will_paginate</li>
+</ul>
+
+
+<p><strong>Testing</strong></p>
+
+<ul>
+<li>machinist</li>
+<li>faker</li>
+<li>cucumber</li>
+<li>rspec</li>
+<li>webrat</li>
+<li>watchr - alternative to autotest</li>
+</ul>
+
+
+<p><strong>Search</strong></p>
+
+<ul>
+<li>thinking-sphinx</li>
+</ul>
+
+
+<p><strong>Security</strong></p>
+
+<ul>
+<li>tarantula</li>
+</ul>
+
+
+<p><strong>Metrics</strong></p>
+
+<ul>
+<li>metric_Fu</li>
+</ul>
+
+
+<p><strong>Production</strong></p>
+
+<ul>
+<li>passenger</li>
+<li>capistrano</li>
+<li>exception_notification</li>
+</ul>
+
+
+<p><strong>Extra templates included</strong></p>
+
+<p>These templates are included, but not installed by default. Manually edit template.rb to include them.</p>
+
+<ul>
+<li>compass with 960 grid system</li>
+<li>restful_authentication</li>
+<li>forgery</li>
+<li>asset_packager</li>
+<li>whenever</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

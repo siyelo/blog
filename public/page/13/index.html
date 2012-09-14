@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="Heroku just got better.  If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) plan &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/13/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Siyelo</a></h1>
+  
+    <h2>A blogging framework for siyelos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/heroku-the-5mb-free-plan-is-it-enough">Heroku - the 5mb Free Plan - Is It Enough?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T22:04:30+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+         | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Heroku just got better. </p>
+
+<p>If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) plan, then you&#8217;re in luck. Read on;</p>
+
+<p>Begin forwarded message:</p>
+
+<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486)</p>
+
+<p><strong>glenn.roberts, Nov 17 12:04 am (PST):</strong></p>
+
+<p>Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ?</p>
+
+<p>Regards</p>
+
+<p>Glenn</p>
+
+<p><strong>morten, Nov 17 11:04 am (PST):</strong></p>
+
+<p>Glenn,</p>
+
+<p>The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo).</p>
+
+<p>/Morten</p>
+
+<p>This email is a service from Support</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production">Heroku - the Fastest Way to Getting a Rails App Into Production</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+         | <a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
+
+<p>Its as easy as;</p>
+
+<pre><code>sudo gem install heroku
+heroku create
+git push heroku master
+heroku rake db:migrate
+heroku open
+</code></pre>
+
+<p>Sit back and watch your app open automagically in your browser.</p>
+
+<p>Also note, Siyelo <a href="http://github.com/siyelo/fuselage">Fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/get-those-cheeky-bash-variables-out-of-there">Get Those Cheeky Bash Variables Out of There</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">Nov 17<span>th</span>, 2009</time>
+        
+         | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it;</p>
+
+<pre><code>export -n VAR_NAME
+</code></pre>
+
+<p>or</p>
+
+<pre><code>unset VAR_NAME
+</code></pre>
+
+<p>or</p>
+
+<pre><code>unexport VAR_NAME
+</code></pre>
+
+<p>(Im just kidding about the latter)</p>
+
+<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this;</p>
+
+<pre><code>alias unexport='unset'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/bert-the-lizard-resident-code-critic-at-siyelo">Bert the Lizard - Resident Code Critic at Siyelo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-04T12:02:59+02:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
+        
+         | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/images/old/2009/11/pastedgraphic11.png"><img src="/images/old/2009/11/pastedgraphic11.png" alt="Pastedgraphic" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/agile-contracts-working-group">Agile Contracts - Working Group</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-04T11:09:04+02:00" pubdate data-updated="true">Nov 4<span>th</span>, 2009</time>
+        
+         | <a href="/agile-contracts-working-group#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.coactivate.org/projects/agile-contracts/">The Agile Contracts working group</a> has an excellent sample (<a href="http://www.coactivate.org/projects/agile-contracts/sample-fixed-price-agile-contract">fixed-price</a>) contract for a project delivery using SCRUM.</p>
+
+<p>From memory it was posted by Jeff Sutherland and is from an actual project, so its fairly comprehensive.</p>
+
+<p>(Note these are only samples and you should always seek legal advice before using 3rd-party contracts.)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/14/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/12/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup Skopje</a>
+      </li>
+    
+      <li class="post">
+        <a href="/scratching-an-itch">Scratching an itch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Siyelo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
