@@ -45,16 +45,32 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Siyelo</a></h1>
-  
-    <h2>A blogging framework for siyelos.</h2>
-  
-</hgroup>
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://www.siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -71,19 +87,12 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
+</nav> -->
+  <div>
 <article class="hentry" role="article">
   
   <header>
     
-      <h1 class="entry-title">A Zerigo DNS Template for Heroku and Google Apps</h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -95,12 +104,18 @@
   
 
 
-<time datetime="2010-12-01T10:23:45+01:00" pubdate data-updated="true">Dec 1<span>st</span>, 2010</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
+
+<section><time datetime="2010-12-01T10:23:45+01:00" pubdate data-updated="true">Dec 1<span>st</span>, 2010</time></section>
     
+      <h1 class="entry-title">A Zerigo DNS Template for Heroku and Google Apps</h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
   </header>
 
 
@@ -153,7 +168,8 @@
   
 
 
-<time datetime="2010-12-01T10:23:45+01:00" pubdate data-updated="true">Dec 1<span>st</span>, 2010</time>
+
+<section><time datetime="2010-12-01T10:23:45+01:00" pubdate data-updated="true">Dec 1<span>st</span>, 2010</time></section>
       
 
 <span class="categories">
@@ -276,8 +292,6 @@
 </aside>
 
 
-    </div>
-  </div>
   <footer role="contentinfo"><p>
   Copyright &copy; 2012 - Siyelo -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>

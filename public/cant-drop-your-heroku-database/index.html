@@ -46,16 +46,32 @@ $ &hellip;">
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Siyelo</a></h1>
-  
-    <h2>A blogging framework for siyelos.</h2>
-  
-</hgroup>
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://www.siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -72,19 +88,12 @@ $ &hellip;">
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
+</nav> -->
+  <div>
 <article class="hentry" role="article">
   
   <header>
     
-      <h1 class="entry-title">Can't Drop Your Heroku Database?</h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -96,12 +105,18 @@ $ &hellip;">
   
 
 
-<time datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">Jul 27<span>th</span>, 2011</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
+
+<section><time datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">Jul 27<span>th</span>, 2011</time></section>
     
+      <h1 class="entry-title">Can't Drop Your Heroku Database?</h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
   </header>
 
 
@@ -150,7 +165,8 @@ $ &hellip;">
   
 
 
-<time datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">Jul 27<span>th</span>, 2011</time>
+
+<section><time datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">Jul 27<span>th</span>, 2011</time></section>
       
 
 <span class="categories">
@@ -273,8 +289,6 @@ $ &hellip;">
 </aside>
 
 
-    </div>
-  </div>
   <footer role="contentinfo"><p>
   Copyright &copy; 2012 - Siyelo -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>

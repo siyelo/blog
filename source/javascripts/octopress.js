@@ -117,7 +117,7 @@ function renderDeliciousLinks(items) {
 }
 
 $.domReady(function() {
-  testFeatures();
+  // testFeatures();
   wrapFlashVideos();
   flashVideoFallback();
   addCodeLineNumbers();
