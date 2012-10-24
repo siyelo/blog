@@ -1,3 +1,37 @@
+## Getting Started
+
+#### Writing a blog post
+
+``` ruby
+rake new_post["title"]
+```
+
+Add the Author to the YAML Front Matter
+
+``` ruby
+---
+layout: post
+title: "Zombie Ninjas Attack: A survivor's retrospective"
+date: 2011-07-03 5:59
+comments: true
+external-url:
+categories: []
+author:
+---
+```
+
+If you are working on a draft, you can add `published: false` to prevent it from being posted when you generate your blog.
+
+Blog posts are written in Markdown.  Inserting a `<!-- more -->` comment into your post will prevent the post content below this mark from being displayed on the index page for the blog posts, a “Continue →” button links to the full post.
+
+#### Previewing and Generating
+
+``` ruby
+rake generate   # Generates posts and pages into the public directory
+rake watch      # Watches source/ and sass/ for changes and regenerates
+rake preview    # Watches, and mounts a webserver at http://localhost:4000
+```
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
