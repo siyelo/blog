@@ -4,6 +4,26 @@ body, html
 #blog
   font-family: Arial, Helvetica, sans-serif
   text-align: left
+  
+  p
+    font-size: 14px
+    line-height: 1.5
+    margin-bottom: 1.2em
+    
+  p + ul
+    margin: -1.2em 0 1.2em
+  p + .code
+    margin: -.9em 0 1.2em
+    
+  h2
+    background: none
+    border-bottom: 0
+    color: $light
+    font: 22px "Avenir Medium", sans-serif
+    margin: 1.6em 0 .4em
+    padding: 0
+    text-align: left
+    text-transform: none
 
   #page_header
     float: left
@@ -13,7 +33,9 @@ body, html
       margin: 0
       padding-left: 23%
 
-  #sidebar
+  .sidebar
+    border-top: 0
+    float: right
     margin: 0
     width: 25%
 
@@ -21,6 +43,8 @@ body, html
       font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
       font-size: 14px
       margin-bottom: 25px
+      margin-top: 0
+      padding-top: 10px
       text-align: left
     li
       font-size: 12px
@@ -33,17 +57,22 @@ body, html
       width: 140px
 
   #articles
+    border-right: 0
+    float: left
     font-size: 12px
-    width: 70%
+    width: 85%
+    
+    > article
+      float: left
+      width: 100%
 
     article header section
       margin-top: 5px
       margin-right: 3%
-      width: 20%
+      width: 12%
       float: left
       text-align: right
       padding-top: 17px
-      margin-right: 25px
       display: inline
 
     header
@@ -55,18 +84,20 @@ body, html
         width: 20%
 
       h1
-        font-size: 22px
+        margin-bottom: .1em
         padding-top: 0
         float: left
-        width: 500px
+        width: 77%
+        a
+          font: 32px "Avenir Medium", sans-serif
 
     article
       width: 100%
 
       .body
         float: left
-        padding-left: 23%
-        width: 75%
+        padding-left: 15%
+        width: 85%
 
     time
       background: $light
