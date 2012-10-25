@@ -5,7 +5,7 @@ body, html
   font-family: Arial, Helvetica, sans-serif
   text-align: left
   
-  p
+  #articles p
     font-size: 14px
     line-height: 1.5
     margin-bottom: 1.2em
@@ -41,68 +41,83 @@ body, html
 
     h1
       font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
-      font-size: 14px
+      font-size: 18px
       margin-bottom: 25px
       margin-top: 0
       padding-top: 10px
       text-align: left
     li
-      font-size: 12px
-      margin-bottom: 5px
+      font-size: 14px
+      line-height: 1.5
 
     #tags li
       margin-bottom: 3px
 
     form.search input.text
       width: 140px
+    .on-github
+      font-size: 14px
+      font-style: italic
+      margin-top: 5px
 
   #articles
     border-right: 0
     float: left
     font-size: 12px
-    width: 85%
+    width: 75%
     
     > article
       float: left
+      margin-bottom: 4em
       width: 100%
 
     article header section
-      margin-top: 5px
-      margin-right: 3%
-      width: 12%
-      float: left
-      text-align: right
-      padding-top: 17px
-      display: inline
+      left: 0
+      position: absolute
+      text-align: center
+      top: 0
+      width: 6%
 
     header
       +pie-clearfix
       width: 100%
       border: none !important
-      section
-        margin-right: 3%
-        width: 20%
 
       h1
         margin-bottom: .1em
         padding-top: 0
-        float: left
-        width: 77%
         a
-          font: 32px "Avenir Medium", sans-serif
+          font: 32px/1 "Avenir Medium", sans-serif
 
     article
       width: 100%
 
       .body
         float: left
-        padding-left: 15%
+        padding-left: 10%
         width: 85%
 
     time
       background: $light
-      padding: 5px 10px
       color: #fff
+      display: block
+      letter-spacing: 1px
+      margin-top: 5px
+      padding: 10px 15px
+      +pie-clearfix
+      span
+        display: block
+        font-weight: bold
+        text-transform: uppercase
+        &.day
+          font-size: 2.2em
+          line-height: 1
+        &.month
+          font-size: 1.15em
+          line-height: 0.9
+        &.year
+          font-size: 1em
+          line-height: 1.2
       a
         color: #fff
         font-size: 11px

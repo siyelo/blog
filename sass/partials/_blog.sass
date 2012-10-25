@@ -4,10 +4,8 @@ article
     @extend .force-wrap
   header
     position: relative
-    padding-top: 2em
-    padding-bottom: 1em
     margin-bottom: 1em
-    // background: $img-border bottom left repeat-x
+    padding-left: 10%
     h1
       margin: 0
       a
@@ -141,3 +139,53 @@ article + article
       &:before, &:after
         content: '\2014'
         padding: 0 .3em
+
+
+//
+// Octopress overrides
+//
+
+aside.sidebar
+  padding: 0
+
+#blog #articles
+  ul, ol
+    color: #666
+    font-size: 14px
+    line-height: 1.4
+    margin-bottom: 1.2em
+    padding-left: 30px
+  ol
+    list-style: decimal
+  ul
+    list-style: disc
+  li
+    margin-bottom: 3px
+
+.pre-code span, html .gist .gist-file .gist-syntax .gist-highlight pre span, .highlight code span
+  line-height: 1.57
+
+#gh_repos
+  a
+    display: inline-block
+    margin-bottom: 5px
+  li > a
+    font-weight: bold
+    
+.sidebar #tweets
+  padding-right: 2em
+  
+  a[href*=status]:first-child
+    font-size: 14px
+    padding: 0 0 .1em 1em
+    right: -1.3em
+    text-shadow: #fff 0 1px
+    span
+      font-size: 1.4em
+    text-decoration: none
+    &:hover
+      color: $sidebar-link-color-subdued-hover
+      text-decoration: none
+
+.twitter-follow-button
+  margin-top: 5px
