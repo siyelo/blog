@@ -8,8 +8,9 @@ author: Nicole Dirks
 ---
 
 Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to [@railsonfire](http://www.twitter.com/railsonfire)):
-- [How to get 4x the performance out of Heroku with Unicorn](http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html)
-- [Make your website super fast with Asset Pipeline, Sprites & Cloudfront](http://blog.railsonfire.com/2012/05/18/Assets-Sprites-CDN.html)
+
+* [How to get 4x the performance out of Heroku with Unicorn](http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html)
+* [Make your website super fast with Asset Pipeline, Sprites & Cloudfront](http://blog.railsonfire.com/2012/05/18/Assets-Sprites-CDN.html)
 
 Glenn's been checking out Flask as a Python alternative to Ruby's Sinatra; [@maxinebf](https://twitter.com/maximebf) have a great [tutorial](http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.UIE8sGmwUqt) on the topic.  
 
