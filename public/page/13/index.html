@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="17 Nov 2009 Heroku - the 5mb Free Plan - Is It Enough? &#8211;> Comments &#8211;> &#8211;> Heroku just got better.  If you like to go a little crazy &hellip;">
+  <meta name="description" content="15 Dec 2009 Fix for Annoying Bug in EmailSpec &#8211;> Comments &#8211;> &#8211;> EmailSpec with Cucumber is a great combo. How else could you get &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,106 +113,82 @@
 
 
 
-<section><time datetime="2009-11-17T21:04:30+01:00" pubdate data-updated="true">
-    <span class='day'> 17</span>
-    <span class='month'> Nov</span>
+<section><time datetime="2009-12-15T14:33:00+01:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
+    <span class='month'> Dec</span>
     <span class='year'> 2009</span>
   </time></section>
     
-      <h1 class="entry-title"><a href="/heroku-the-5mb-free-plan-is-it-enough">Heroku - the 5mb Free Plan - Is It Enough?</a></h1>
+      <h1 class="entry-title"><a href="/fix-for-annoying-bug-in-emailspec">Fix for Annoying Bug in EmailSpec</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/fix-for-annoying-bug-in-emailspec#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>Heroku just got better. </p>
+  <div class="body"><div class="inner"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as:</p>
 
-<p>If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) plan, then you&#8217;re in luck. Read on;</p>
-
-<p>Begin forwarded message:</p>
-
-<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486) <br />
-<strong>glenn.roberts, Nov 17 12:04 am (PST):</strong> <br />
-Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ? <br />
-Regards <br />
-Glenn</p>
-
-<p><strong>morten, Nov 17 11:04 am (PST):</strong> <br />
-Glenn, <br />
-The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo). <br />
-/Morten <br />
-This email is a service from Support <br /></p></blockquote>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Scenario</span> <span class="no">Outline</span><span class="p">:</span> <span class="no">Register</span> <span class="kp">new</span> <span class="n">user</span>
+</span><span class='line'><span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="n">signup</span> <span class="n">page</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Email&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Password&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">press</span> <span class="s2">&quot;Create My Account&quot;</span>
+</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span>
+</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">should</span> <span class="n">receive</span> <span class="n">an</span> <span class="n">email</span>
+</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">email</span>
+</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;Please activate your new account&quot;</span> <span class="k">in</span> <span class="n">the</span> <span class="n">subject</span>
+</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="n">click</span> <span class="n">the</span> <span class="n">first</span> <span class="n">link</span> <span class="k">in</span> <span class="n">the</span> <span class="n">email</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">
-    <span class='day'> 17</span>
-    <span class='month'> Nov</span>
-    <span class='year'> 2009</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production">Heroku - the Fastest Way to Getting a Rails App Into Production</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
-
-<p>Its as easy as:</p>
+<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install heroku
-</span><span class='line'>heroku create
-</span><span class='line'>git push heroku master
-</span><span class='line'>heroku rake db:migrate
-</span><span class='line'>heroku open
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>You have a nil object when you didn<span class="s1">&#39;t expect it!</span>
+</span><span class='line'><span class="s1">You might have expected an instance of Array.</span>
+</span><span class='line'><span class="s1">The error occurred while evaluating nil.include? (NoMethodError)</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#39;</span>
+</span><span class='line'>/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in <span class="sb">`</span><span class="k">select</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/deliveries.rb:45:in `mailbox_for&#39;</span>
+</span><span class='line'>/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:138:in <span class="sb">`</span>mailbox_for<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">/Users/glennroberts/.gem/ruby/1.8/gems/glennr-email_spec-0.3.5/lib/email_spec/helpers.rb:48:in `unread_emails_for&#39;</span>
+</span><span class='line'>./features/step_definitions/email_steps.rb:52
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Sit back and watch your app open automagically in your browser.</p>
 
-<p>Also note, Siyelo <a href="http://github.com/siyelo/fuselage">Fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install glennr-email-spec
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em><em>or via GitHub</em> <a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a></em></p>
+
+<p>If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
 </div></div>
   
   
@@ -240,52 +216,143 @@ This email is a service from Support <br /></p></blockquote>
 
 
 
-<section><time datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">
-    <span class='day'> 17</span>
-    <span class='month'> Nov</span>
+<section><time datetime="2009-12-12T10:10:22+01:00" pubdate data-updated="true">
+    <span class='day'> 12</span>
+    <span class='month'> Dec</span>
     <span class='year'> 2009</span>
   </time></section>
     
-      <h1 class="entry-title"><a href="/get-those-cheeky-bash-variables-out-of-there">Get Those Cheeky Bash Variables Out of There</a></h1>
+      <h1 class="entry-title"><a href="/browser-market-share-applying-the-8020-rule">Browser Market Share: Applying the 80:20 Rule</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/browser-market-share-applying-the-8020-rule#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it:</p>
+  <div class="body"><div class="inner"><p>80% of the effort in many web development projects we&#8217;ve done was spent making the site work on ~20% of the browsers out there. Thats why its worth explaining to clients about standards-compliance, and focusing on making their sites work in those web browsers.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export</span> -n VAR_NAME
+<p>Axiis came up with <a href="http://www.axiis.org/examples/BrowserMarketShare.html">this clever visual representation</a> of browser market share based on the W3C usage stats.</p>
+
+<p><img src="/images/old/2009/12/pastedgraphic-png-scaled-500.jpg" alt="Pastedgraphic" /></p>
+
+<p>Its great to see browsers like IE6/7 losing their grip on the market. Its good news for web developers, and for their clients. Save time. Save money. Go Firefox.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time datetime="2009-11-30T11:53:00+01:00" pubdate data-updated="true">
+    <span class='day'> 30</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/handy-git-aliases-and-config-directives">Handy Git Aliases and Config Directives</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/handy-git-aliases-and-config-directives#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>st = status
+</span><span class='line'>ci = commit
+</span><span class='line'>co = checkout
+</span><span class='line'>br = branch</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you might find these will come in handy;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[merge]
+</span><span class='line'>tool = opendiff
+</span><span class='line'>summary = true
+</span><span class='line'>
+</span><span class='line'>[color]
+</span><span class='line'>diff = auto
+</span><span class='line'>status = auto
+</span><span class='line'>branch = auto
+</span><span class='line'>interactive = auto</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
+</span><span class='line'><span class="c"># http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/</span>
+</span><span class='line'><span class="c"># http://gist.github.com/47546</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  git diff --quiet HEAD &amp;&gt;/dev/null
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> 1 <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
+</span><span class='line'>  <span class="nb">local </span><span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>__git_ps1 <span class="s2">&quot;%s&quot;</span><span class="k">)</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$branch</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;[$branch$(parse_git_dirty)]&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">unset </span>VAR_NAME
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>unexport VAR_NAME
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>(Im just kidding about the latter)</p>
-
-<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
 
 </div></div>
   
@@ -314,25 +381,38 @@ This email is a service from Support <br /></p></blockquote>
 
 
 
-<section><time datetime="2009-11-04T11:02:59+01:00" pubdate data-updated="true">
-    <span class='day'> 04</span>
+<section><time datetime="2009-11-24T14:25:12+01:00" pubdate data-updated="true">
+    <span class='day'> 24</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
   </time></section>
     
-      <h1 class="entry-title"><a href="/bert-the-lizard-resident-code-critic-at-siyelo">Bert the Lizard - Resident Code Critic at Siyelo</a></h1>
+      <h1 class="entry-title"><a href="/aliases-for-common-heroku-commands">Aliases for Common Heroku Commands</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/aliases-for-common-heroku-commands#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p><a href="/images/old/2009/11/pastedgraphic11.png"><img src="/images/old/2009/11/pastedgraphic11.png" alt="Pastedgraphic" /></a></p>
+  <div class="body"><div class="inner"><p>Some handy bash aliases to speed up your Heroku deploys:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">gphm</span><span class="o">=</span><span class="s1">&#39;git push heroku master&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hmig</span><span class="o">=</span><span class="s1">&#39;heroku rake db:migrate&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hlog</span><span class="o">=</span><span class="s1">&#39;heroku logs&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hopen</span><span class="o">=</span><span class="s1">&#39;heroku open&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/old/2009/11/pastedgraphic.png" alt="Pastedgraphic" /></p>
 </div></div>
   
   
@@ -360,29 +440,237 @@ This email is a service from Support <br /></p></blockquote>
 
 
 
-<section><time datetime="2009-11-04T10:09:04+01:00" pubdate data-updated="true">
-    <span class='day'> 04</span>
+<section><time datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">
+    <span class='day'> 23</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
   </time></section>
     
-      <h1 class="entry-title"><a href="/agile-contracts-working-group">Agile Contracts - Working Group</a></h1>
+      <h1 class="entry-title"><a href="/installing-imagemagick-on-osx-leopard">Installing ImageMagick on OSX Leopard</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/agile-contracts-working-group#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/installing-imagemagick-on-osx-leopard#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p><a href="http://www.coactivate.org/projects/agile-contracts/">The Agile Contracts working group</a> has an excellent sample (<a href="http://www.coactivate.org/projects/agile-contracts/sample-fixed-price-agile-contract">fixed-price</a>) contract for a project delivery using SCRUM.</p>
+  <div class="body"><div class="inner"><p>I found a great script for compiling ImageMagick on OSX from scratch via ThoughtBot&#8217;s Paperclip installation instructions.</p>
 
-<p>From memory it was posted by Jeff Sutherland and is from an actual project, so its fairly comprehensive.</p>
+<p>Unfortunately it didnt work perfectly out of the box;</p>
 
-<p>(Note these are only samples and you should always seek legal advice before using 3rd-party contracts.)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Undefined symbols:
+</span><span class='line'>“_iconv_close”, referenced from:
+</span><span class='line'>_opvp_to_utf8 in gdevopvp.o ...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So a few tweaks to the script to installlibiconvtoo, as well as the latest stable ImageMagick and voila!;</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="c"># Install ImageMagick on Snow Leopard: by kain, improved by mislav and samsoffes</span>
+</span><span class='line'><span class="c"># Updated by glenn roberts to include libiconv, and the latest stable ImageMagick</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># http://www.icoretech.org/2009/08/install-imagemagick-in-leopard-snow-leopard/</span>
+</span><span class='line'><span class="c"># Work with 64bit kernel mode</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">set</span> -e
+</span><span class='line'>
+</span><span class='line'><span class="nv">PREFIX</span><span class="o">=</span>/usr/local
+</span><span class='line'><span class="c"># Passenger users: amend your Apache global configuration with the following directive</span>
+</span><span class='line'><span class="c"># SetEnv PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</span>
+</span><span class='line'><span class="c"># The Apache config file is located at /etc/apache2/httpd.conf</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># FreeType</span>
+</span><span class='line'>wget http://sourceforge.net/projects/freetype/files/freetype2/2.3.9/freetype-2.3.9.tar.gz/download -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>freetype-2.3.9
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libpng</span>
+</span><span class='line'><span class="c">#wget ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.2.40.tar.bz2 -O- | tar xj</span>
+</span><span class='line'>wget http://www.imagemagick.org/download/delegates/libpng-1.2.40.tar.bz2 -O- | tar xj
+</span><span class='line'><span class="nb">cd </span>libpng-1.2.40
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># jpeg</span>
+</span><span class='line'>wget http://www.ijg.org/files/jpegsrc.v7.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>jpeg-7
+</span><span class='line'>ln -s <span class="sb">`</span>which glibtool<span class="sb">`</span> ./libtool
+</span><span class='line'><span class="nb">export </span><span class="nv">MACOSX_DEPLOYMENT_TARGET</span><span class="o">=</span>10.6
+</span><span class='line'>./configure --enable-shared --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libtiff</span>
+</span><span class='line'>wget http://dl.maptools.org/dl/libtiff/tiff-3.8.2.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>tiff-3.8.2
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># libwmf</span>
+</span><span class='line'>wget http://sourceforge.net/projects/wvware/files/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz/download -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>libwmf-0.2.8.4
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># LittleCms</span>
+</span><span class='line'>wget http://www.littlecms.com/lcms-1.18a.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>lcms-1.18
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Ghostscript</span>
+</span><span class='line'>wget http://ghostscript.com/releases/ghostscript-8.70.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>ghostscript-8.70
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Ghostscript Fonts</span>
+</span><span class='line'>wget http://sourceforge.net/projects/gs-fonts/files/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz/download -O- | tar xz
+</span><span class='line'>sudo mv -f fonts <span class="nv">$PREFIX</span>/share/ghostscript
+</span><span class='line'>
+</span><span class='line'><span class="c"># libiconv</span>
+</span><span class='line'>wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>libiconv-1.13.1
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># ImageMagick</span>
+</span><span class='line'>wget http://mirror.is.co.za/pub/imagemagick/ImageMagick-6.5.7-10.tar.gz -O- | tar xz
+</span><span class='line'><span class="nb">cd </span>ImageMagick-6.5.7-10
+</span><span class='line'><span class="nb">export </span><span class="nv">CPPFLAGS</span><span class="o">=</span>-I<span class="nv">$PREFIX</span>/include
+</span><span class='line'><span class="nb">export </span><span class="nv">LDFLAGS</span><span class="o">=</span>-L<span class="nv">$PREFIX</span>/lib
+</span><span class='line'>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span> --disable-static --with-modules --without-perl --without-magick-plus-plus --with-quantum-depth<span class="o">=</span>8 --with-gs-font-dir<span class="o">=</span><span class="nv">$PREFIX</span>/share/ghostscript/fonts
+</span><span class='line'>make
+</span><span class='line'>sudo make install
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>
+</span><span class='line'><span class="c"># Clean up</span>
+</span><span class='line'>rm -rf freetype-2.3.9 libpng-1.2.40 jpeg-7 tiff-3.8.2 libwmf-0.2.8.4 lcms-1.18 libiconv-1.13.1 ghostscript-8.70 ImageMagick-6.5.7-10
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div></div>
   
   
@@ -407,23 +695,23 @@ This email is a service from Support <br /></p></blockquote>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/this-weeks-tldr-82702">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+        <a href="/this-weeks-tldr-92708">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/scratching-an-itch">Scratching an itch</a>
+        <a href="/this-weeks-tldr-24557">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+        <a href="/its-not-you-its-me">It&#8217;s not you, it&#8217;s me&#8230;</a>
       </li>
     
       <li class="post">
-        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+        <a href="/this-weeks-tldr-22431">This week&#8217;s TL;DR</a>
       </li>
     
   </ul>

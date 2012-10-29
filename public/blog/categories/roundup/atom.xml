@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Roundup | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/roundup/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-10-29T15:08:34+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-82702"/>
+    <updated>2012-10-19T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-82702</id>
+    <content type="html"><![CDATA[<p>Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to <a href="http://www.twitter.com/railsonfire">@railsonfire</a>):
+- <a href="http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html">How to get 4x the performance out of Heroku with Unicorn</a>
+- <a href="http://blog.railsonfire.com/2012/05/18/Assets-Sprites-CDN.html">Make your website super fast with Asset Pipeline, Sprites &amp; Cloudfront</a></p>
+
+<p>Glenn's been checking out Flask as a Python alternative to Ruby's Sinatra; <a href="https://twitter.com/maximebf">@maxinebf</a> have a great <a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.UIE8sGmwUqt">tutorial</a> on the topic.  </p>
+
+<p>If you haven't already seen it, Sachin recommends watching <a href="https://twitter.com/sandimetz">@sandimetz</a> 's <a href="http://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess">excellent presentation</a> at GoGaRuCo with practical examples of how OO design can help you manage your mess</p>
+
+<p>Finally, one of Google's data centers has street view...and <a href="https://maps.google.com/maps?hl=en&amp;ll=35.898176,-81.548166&amp;spn=0.007622,0.013486&amp;sll=35.900197,-81.547024&amp;layer=c&amp;cid=7373938251588581469&amp;panoid=qlcZPzXMS12y_CrDh64Qvw&amp;cbp=13,339.35,,0,4.29&amp;gl=US&amp;t=m&amp;cbll=35.898186,-81.548184&amp;z=17">odd security</a> ...</p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-92708"/>
+    <updated>2012-10-12T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-92708</id>
+    <content type="html"><![CDATA[<p>Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here's this week's edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.</p>
+
+<p>Sachin and Glenn shared some tips &amp; tricks:
+- <a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">Chrome dev tools</a> - a great primer to getting the most out of Chrome as a developer;
+- <a href="http://betterspecs.org/">How to create a great RSpec test suite</a> - a simple and easy guide to whipping your tests into shape.</p>
+
+<p>Sachin also shared an article about the <a href="http://blogs.hbr.org/cs/2012/10/the_secrets_to_tripadvisors_im.html">secrets to TripAdvisors impressive growth</a> (warning: not related to scaling their site but an interesting read none the less).</p>
+
+<p>Dalibor was looking at different ways of eliminating the need to store user passwords on your site:
+- <a href="https://github.com/alsmola/nopassword">No Password</a> - a Rails gem that uses the 'Forgot Password' email token functionality to give you authentication without passwords. 
+- <a href="https://hacks.mozilla.org/2012/09/first-beta-release-of-mozilla-persona-login-without-passwords/">Mozilla Persona</a> - an authentication alternative to OpenID or Facebook Connect, with a focus on privacy and browser integration.</p>
+
+<p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">"The Copernicus Method"</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
+
+<p>Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-24557"/>
+    <updated>2012-10-05T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-24557</id>
+    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
+
+<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">'Lean from the Trenches: Managing Large-Scale Projects with Kanban'</a>  by Henrik Kniberg.  It's a great look at a practical implementation of Kanban.  We'll definitely be trying this out with future projects.</p>
+
+<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year's MountainWest RubyConf.</p>
+
+<p>Codegram's Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to 'force' yourself into achieving a better OO design. You might not agree with all the rules but it's a good catalyst for discussion.</p>
+
+<p>Glenn's been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
+
+<p>Finally, we were debating that all important, utterly-mystifying question... "<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?". What do you think?Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-22431"/>
+    <updated>2012-09-28T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-22431</id>
+    <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you'll find something thought provoking. </p>
+
+<p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer's Guide</a>, it's not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
+
+<p>Has the optimism around Rails disappeared? Peter took a look at "<a href="http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html">Why Rail critics have it all wrong</a>?" Share your thoughts with us.</p>
+
+<p>Glenn has been updating Siyelo's business plan using these <a href="http://www.sequoiacap.com/ideas">guideline ideas</a> from Sequoia Capital. (<a href="http://blog.siyelo.com/siyelo-drinkup-skopje">While partying in Macedonia</a>) </p>
+
+<p>Want to run fast tests in your Rails application? Dalibor recommended <a href="https://github.com/burke/zeus">Zeus</a>. You'll avoid writing prefork blocks in your spec helper with Spork. It also works with other Rails development tasks such as console, server, generate, and it just takes less than one second to run.</p>
+
+<p>Dime stumbled onto quite a few interesting articles this week from <a href="http://www.vanseodesign.com/web-design/grid-choices/">choosing the right grids</a> for your projects to the <a href="http://jbrewer.github.com/Responsive-Measure/">final piece of responsive design</a> - scalable fonts!  </p>
+
+<p>This week's video features none other than the legendary graphic designer Milton Glaser: "<a href="http://brendandawes.com/blog/Glaser">I move things around until they look right</a>", his outlook on creativity and the path to success. </p>
+
+<p>"Anything I've really discovered has come through the act of making things."</p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr"/>
+    <updated>2012-09-13T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr</id>
+    <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn't safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
+
+<p>This post starts a series of weekly articles where we'll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
+
+<p>This week Peter has been mulling over ways of preventing a "<a href="http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html">knowledge debt problem</a>". He's also recommended that you watch Rich Hickey's presentation on <a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple made Easy</a>.  </p>
+
+<p>Glenn has been meditating on <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> - a brilliant list of guiding principles for software developers.</p>
+
+<p>Sachin stumbled across an interview with Peter Thiel from <a href="http://www.newyorker.com/reporting/2011/11/28/111128fa_fact_packer?currentPage=all">The New Yorker</a> where he talks about why Silicon Valley hasn't done enough to disrupt and revolutionize the world.  It was also pretty cool to see our <a href="https://github.com/siyelo/should_clean">ShouldClean</a> gem being used in a commit to <a href="https://github.com/rspec/rspec-rails/commit/69a63cef280310c1164dda457bdecfd7700b10f0">Rspec</a>.</p>
+
+<p>Dalibor has been thinking about how to pitch his next big business plan - David McClure makes it clear that you should <a href="http://500hats.typepad.com/500blogs/2009/08/your-solution-is-not-my-problem.html">put the problem before the solution</a>.</p>
+
+<p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
+
+<p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so... <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
+]]></content>
+  </entry>
+  
+</feed>
