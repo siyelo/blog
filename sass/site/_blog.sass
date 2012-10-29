@@ -76,11 +76,10 @@ body, html
       position: absolute
       text-align: center
       top: 0
-      width: 6%
+      width: 7%
 
     header
       +pie-clearfix
-      width: 100%
       border: none !important
 
       h1
@@ -92,10 +91,10 @@ body, html
     article
       width: 100%
 
-      .body
+      .body, .entry-content, footer
         float: left
-        padding-left: 10%
-        width: 85%
+        padding-left: 11%
+        width: 82%
 
     time
       background: $light
@@ -104,7 +103,8 @@ body, html
       font-family: Arial
       letter-spacing: 1px
       margin-top: 5px
-      padding: 10px 15px
+      padding: 10px 0
+      width: 100%
       +pie-clearfix
       span
         display: block
@@ -196,6 +196,9 @@ body, html
       .gist-file
         border: 0
         background: #bbb
+
+  #blog > div
+    border: none
 
   .comment_label
     width: 10%
