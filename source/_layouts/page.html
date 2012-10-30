@@ -3,14 +3,9 @@ layout: default
 ---
 
 <div class="wrapper multiclouds">
-  <div id="articles">
+  <div id="articles" class="blog-archives">
     <article role="article">
-      {% if page.title %}
-      <header>
-        <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
-        {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
-      </header>
-      {% endif %}
+      
       {{ content }}
       {% unless page.footer == false %}
         <footer>
@@ -27,7 +22,6 @@ layout: default
     </article>
     {% if site.disqus_short_name and page.comments == true %}
       <section>
-        <h1>Comments</h1>
         <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
       </section>
     {% endif %}

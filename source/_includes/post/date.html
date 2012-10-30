@@ -10,7 +10,7 @@
 {% capture was_updated %}{{ updated | size }}{% endcapture %}
 
 {% if has_date != '0' %}
-{% capture time %}<section><time datetime="{{ date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>
+{% capture time %}<section><time class="timestamp" datetime="{{ date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>
     <span class='day'> {{ formatted_day }}</span>
     <span class='month'> {{ formatted_month }}</span>
     <span class='year'> {{ formatted_year }}</span>

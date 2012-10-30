@@ -2,7 +2,7 @@ body, html
   height: auto !important
 
 #blog
-  font-family: "Avenir Blog", "open sans", Arial, Helvetica, sans-serif
+  font-family: "Avenir Light", "open sans", Arial, Helvetica, sans-serif
   text-align: left
   
   #articles p
@@ -40,7 +40,7 @@ body, html
     width: 25%
 
     h1
-      font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
+      font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
       font-size: 18px
       margin-bottom: 25px
       margin-top: 0
@@ -69,14 +69,11 @@ body, html
     > article
       float: left
       margin-bottom: 4em
+      position: relative
       width: 100%
 
     article header section
-      left: 0
-      position: absolute
-      text-align: center
-      top: 0
-      width: 7%
+      
 
     header
       +pie-clearfix
@@ -96,38 +93,9 @@ body, html
         padding-left: 11%
         width: 89%
 
-      header time
-        background: $light
-        color: #fff
-        display: block
-        font-family: Arial
-        letter-spacing: 1px
-        margin-top: 5px
-        padding: 10px 0
-        width: 100%
-        +pie-clearfix
-        span
-          display: block
-          font-weight: bold
-          text-transform: uppercase
-          &.day
-            font-size: 2.2em
-            line-height: 1
-          &.month
-            font-size: 1.15em
-            line-height: 0.9
-          &.year
-            font-size: 1em
-            line-height: 1.2
-        a
-          color: #fff
-          font-size: 11px
-          text-transform: uppercase
-          +text-shadow($light - #222 0 1px 0)
-
     h1
       color: #193045
-      font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
+      font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
       font-size: 28px !important
       letter-spacing: 0
       margin-top: 0
@@ -135,7 +103,7 @@ body, html
       text-align: left
       a
         color: #193045
-        font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
+        font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
 
     .post
       footer
@@ -179,7 +147,7 @@ body, html
       margin-bottom: 10px
 
     .webkit-indent-blockquote
-      font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
+      font-family: 'Avenir Light', Arial, Helvetica, sans-serif
       color: #666
       font-size: 12px
       font-style: italic
@@ -189,7 +157,7 @@ body, html
       padding-left: 10px
 
     .gist
-      font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
+      font-family: 'Avenir Light', Arial, Helvetica, sans-serif
       color: #666
       font-size: 11px
       font-style: italic
@@ -225,6 +193,41 @@ body, html
     a.back_to_blog
       font-size: 12px
       margin: 0
+
+time.timestamp
+  background: $light
+  color: #fff
+  display: block
+  font-family: Arial
+  font-style: normal
+  letter-spacing: 1px
+  margin-top: 5px
+  padding: 10px 0
+  width: 100%
+  +pie-clearfix
+  left: 0
+  position: absolute
+  text-align: center
+  top: 0
+  width: 7%
+  span
+    display: block
+    font-weight: bold
+    text-transform: uppercase
+    &.day
+      font-size: 2.2em
+      line-height: 1
+    &.month
+      font-size: 1.15em
+      line-height: 0.9
+    &.year
+      font-size: 1em
+      line-height: 1.2
+  a
+    color: #fff
+    font-size: 11px
+    text-transform: uppercase
+    +text-shadow($light - #222 0 1px 0)
 
 @media only screen and (min-width: 320px) and (max-width: 859px)
   #blog
