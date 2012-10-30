@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-29T14:40:45+01:00</updated>
+  <updated>2012-10-30T01:38:45+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,240 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-82702"/>
+    <updated>2012-10-19T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-82702</id>
+    <content type="html"><![CDATA[<p>Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to <a href="http://www.twitter.com/railsonfire">@railsonfire</a>):</p>
+
+<ul>
+<li><a href="http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html">How to get 4x the performance out of Heroku with Unicorn</a></li>
+<li><a href="http://blog.railsonfire.com/2012/05/18/Assets-Sprites-CDN.html">Make your website super fast with Asset Pipeline, Sprites &amp; Cloudfront</a></li>
+</ul>
+
+
+<p>Glenn&#8217;s been checking out Flask as a Python alternative to Ruby&#8217;s Sinatra; <a href="https://twitter.com/maximebf">@maxinebf</a> have a great <a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.UIE8sGmwUqt">tutorial</a> on the topic.  </p>
+
+<p>If you haven&#8217;t already seen it, Sachin recommends watching <a href="https://twitter.com/sandimetz">@sandimetz</a> &#8216;s <a href="http://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess">excellent presentation</a> at GoGaRuCo with practical examples of how OO design can help you manage your mess</p>
+
+<p>Finally, one of Google&#8217;s data centers has street view&#8230;and <a href="https://maps.google.com/maps?hl=en&amp;ll=35.898176,-81.548166&amp;spn=0.007622,0.013486&amp;sll=35.900197,-81.547024&amp;layer=c&amp;cid=7373938251588581469&amp;panoid=qlcZPzXMS12y_CrDh64Qvw&amp;cbp=13,339.35,,0,4.29&amp;gl=US&amp;t=m&amp;cbll=35.898186,-81.548184&amp;z=17">odd security</a> &#8230;</p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-92708"/>
+    <updated>2012-10-12T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-92708</id>
+    <content type="html"><![CDATA[<p>Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here&#8217;s this week&#8217;s edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.</p>
+
+<p>Sachin and Glenn shared some tips &amp; tricks:</p>
+
+<ul>
+<li><a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">Chrome dev tools</a> - a great primer to getting the most out of Chrome as a developer;</li>
+<li><a href="http://betterspecs.org/">How to create a great RSpec test suite</a> - a simple and easy guide to whipping your tests into shape.</li>
+</ul>
+
+
+<p>Sachin also shared an article about the <a href="http://blogs.hbr.org/cs/2012/10/the_secrets_to_tripadvisors_im.html">secrets to TripAdvisors impressive growth</a> (warning: not related to scaling their site but an interesting read none the less).</p>
+
+<p>Dalibor was looking at different ways of eliminating the need to store user passwords on your site:</p>
+
+<ul>
+<li><a href="https://github.com/alsmola/nopassword">No Password</a> - a Rails gem that uses the &#8216;Forgot Password&#8217; email token functionality to give you authentication without passwords. </li>
+<li><a href="https://hacks.mozilla.org/2012/09/first-beta-release-of-mozilla-persona-login-without-passwords/">Mozilla Persona</a> - an authentication alternative to OpenID or Facebook Connect, with a focus on privacy and browser integration.</li>
+</ul>
+
+
+<p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
+
+<p>Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-24557"/>
+    <updated>2012-10-05T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-24557</id>
+    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
+
+<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
+
+<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
+
+<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
+
+<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
+
+<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It's not you, it's me...]]></title>
+    <link href="http://blog.siyelo.com/its-not-you-its-me"/>
+    <updated>2012-10-05T15:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/its-not-you-its-me</id>
+    <content type="html"><![CDATA[<p>Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here&#8217;s the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;</p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg"><img src="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg" alt="" /></a></p>
+
+<p><em>Dear Siyelo</em></p>
+
+<p><em>The time has finally come for me to leave you. My time with the company has been something I will always remember. I have had much more fun than I would have ever thought and learnt a lot in the process. However, there are several reasons that have forced my decision.</em></p>
+
+<p><em>The truth of the matter is that, I&#8217;m feeling rather inadequate around all the other members of the team:</em></p>
+
+<p><em><strong>Glenn:</strong>Your knowledge of bad music is something I don&#8217;t think that I will ever be able to compete with. (<a href="http://www.youtube.com/watch?v=nNhNLi2oac8">http://www.youtube.com/watch?v=nNhNLi2oac8</a>). Need I say more?</em></p>
+
+<p><em><strong>Sachin:</strong>I&#8217;m afraid I don&#8217;t think I will ever be able to grow a beard like you. It&#8217;s emasculating. What really irks me is that you refuse to embrace this gift bestowed upon you.</em></p>
+
+<p><em><strong>Dalibor:</strong>I was the king of table tennis, or so I thought until you arrived earlier this year and smashed those dreams into little pieces.</em></p>
+
+<p><em><strong>Dime:</strong>Your knowledge of metal music is far superior to mine. It hurts me to admit this so I won&#8217;t expand on it further.</em></p>
+
+<p><em><strong>Wendy:</strong>I&#8217;ll never be as persistent as you. No, I haven&#8217;t done timesheets for today.</em></p>
+
+<p><em>Now, with our latest addition to the team, Nicole, I&#8217;m not even the prettiest person in the team!</em></p>
+
+<p><em>I&#8217;ll always treasure my time here and hope you enjoyed having me as much as I enjoyed being here.</em></p>
+
+<p><em>Peter</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr-22431"/>
+    <updated>2012-09-28T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr-22431</id>
+    <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you&#8217;ll find something thought provoking. </p>
+
+<p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer&#8217;s Guide</a>, it&#8217;s not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
+
+<p>Has the optimism around Rails disappeared? Peter took a look at &#8221;<a href="http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html">Why Rail critics have it all wrong</a>?&#8221; Share your thoughts with us.</p>
+
+<p>Glenn has been updating Siyelo&#8217;s business plan using these <a href="http://www.sequoiacap.com/ideas">guideline ideas</a> from Sequoia Capital. (<a href="http://blog.siyelo.com/siyelo-drinkup-skopje">While partying in Macedonia</a>) </p>
+
+<p>Want to run fast tests in your Rails application? Dalibor recommended <a href="https://github.com/burke/zeus">Zeus</a>. You&#8217;ll avoid writing prefork blocks in your spec helper with Spork. It also works with other Rails development tasks such as console, server, generate, and it just takes less than one second to run.</p>
+
+<p>Dime stumbled onto quite a few interesting articles this week from <a href="http://www.vanseodesign.com/web-design/grid-choices/">choosing the right grids</a> for your projects to the <a href="http://jbrewer.github.com/Responsive-Measure/">final piece of responsive design</a> - scalable fonts!  </p>
+
+<p>This week&#8217;s video features none other than the legendary graphic designer Milton Glaser: &#8221;<a href="http://brendandawes.com/blog/Glaser">I move things around until they look right</a>&#8221;, his outlook on creativity and the path to success. </p>
+
+<p>&#8220;Anything I&#8217;ve really discovered has come through the act of making things.&#8221;</p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Siyelo Drinkup Skopje, the photos]]></title>
+    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje-the-photos"/>
+    <updated>2012-09-24T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/siyelo-drinkup-skopje-the-photos</id>
+    <content type="html"><![CDATA[<p>Some photos from our drinkup on Wednesday night. Thanks to all who came along!</p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0003.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0003.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0006.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0006.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0035.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0035.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0037.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0037.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0042.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0042.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0045.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0045.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0059.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0059.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0070.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0070.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0073.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0073.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0076.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0076.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0083.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0083.jpg" alt="" /></a></p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0084.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0084.jpg" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Junior Web Developer Wanted]]></title>
+    <link href="http://blog.siyelo.com/junior-web-developer-wanted"/>
+    <updated>2012-09-20T16:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/junior-web-developer-wanted</id>
+    <content type="html"><![CDATA[<p>Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.</p>
+
+<h2>Opportunity</h2>
+
+<p>We are looking for people with passion to learn the web craft quickly and be &#8220;full-stack&#8221; developers. People that want to be part of a small team and want to work in an agile environment (TDD, pairing, short release cycles).</p>
+
+<p>This job will offer experience with product development, front-end development and design (Javascript, HTML and CSS), back-end work (Ruby / Ruby on Rails / other tools) and deployment practices to Linux based distros and cloud platforms.</p>
+
+<p>We value quality (writing tests) and encourage Open Source contributions and community participation.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Familiarity with Ruby, Python or Javascript</li>
+<li>Experience with SQL data stores</li>
+<li>Skills in all tiers of the web application stack</li>
+<li>Skills to navigate the command-line in a Linux environment</li>
+</ul>
+
+
+<h2>Highly Regarded</h2>
+
+<ul>
+<li>Git</li>
+<li>Vim</li>
+<li>Linux skills</li>
+</ul>
+
+
+<h2>Location</h2>
+
+<ul>
+<li>Skopje</li>
+</ul>
+
+
+<h2>How to Apply</h2>
+
+<p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[This week's TL;DR]]></title>
+    <link href="http://blog.siyelo.com/this-weeks-tldr"/>
+    <updated>2012-09-13T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/this-weeks-tldr</id>
+    <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn&#8217;t safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
+
+<p>This post starts a series of weekly articles where we&#8217;ll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
+
+<p>This week Peter has been mulling over ways of preventing a &#8221;<a href="http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html">knowledge debt problem</a>&#8221;. He&#8217;s also recommended that you watch Rich Hickey&#8217;s presentation on <a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple made Easy</a>.  </p>
+
+<p>Glenn has been meditating on <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> - a brilliant list of guiding principles for software developers.</p>
+
+<p>Sachin stumbled across an interview with Peter Thiel from <a href="http://www.newyorker.com/reporting/2011/11/28/111128fa_fact_packer?currentPage=all">The New Yorker</a> where he talks about why Silicon Valley hasn&#8217;t done enough to disrupt and revolutionize the world.  It was also pretty cool to see our <a href="https://github.com/siyelo/should_clean">ShouldClean</a> gem being used in a commit to <a href="https://github.com/rspec/rspec-rails/commit/69a63cef280310c1164dda457bdecfd7700b10f0">Rspec</a>.</p>
+
+<p>Dalibor has been thinking about how to pitch his next big business plan - David McClure makes it clear that you should <a href="http://500hats.typepad.com/500blogs/2009/08/your-solution-is-not-my-problem.html">put the problem before the solution</a>.</p>
+
+<p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
+
+<p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so&#8230; <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Siyelo Drinkup: Skopje]]></title>
@@ -150,7 +384,7 @@
 
 <h2>Deployment Documentation</h2>
 
-<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a>  or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
+<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
 
 <h2>Server security</h2>
 
@@ -170,7 +404,7 @@
 
 <h2>Backups</h2>
 
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations,<a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
+<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
 
 <h2>Failover</h2>
 
@@ -178,23 +412,23 @@
 
 <h2>External monitoring tools</h2>
 
-<p>Service like<a href="http://www.pingdom.com/">Pingdom</a> or<a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
+<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
 
 <h2>Notifications for Exceptions</h2>
 
-<p>Setup exception notifications to receive email notifications when application crashes. You can use<a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like<a href="http://airbrake.io/">Airbrake</a> or<a href="http://www.exceptional.io/">Exceptional</a>.</p>
+<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
 
 <h2>Process monitoring tools</h2>
 
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like<a href="http://upstart.ubuntu.com/">Upstart</a> , <a href="https://github.com/arya/bluepill">Bluepill</a> ,<a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a>  and<a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a>  are useful.</p>
+<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
 
 <h2>Server performance</h2>
 
-<p>Monitor server performance with<a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like<a href="https://scoutapp.com/">scoutapp</a>.</p>
+<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
 
 <h2>Application performance</h2>
 
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with<a href="http://newrelic.com/">New Relic</a>. They also have<a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
+<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
 
 <p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
 ]]></content>
@@ -1037,425 +1271,6 @@
     <content type="html"><![CDATA[<div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Siyelos' git workflow]]></title>
-    <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
-    <updated>2011-12-12T10:53:00+01:00</updated>
-    <id>http://blog.siyelo.com/siyelos-git-workflow</id>
-    <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
-
-<h3>Named Branches</h3>
-
-<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
-
-<h3>Pull Requests</h3>
-
-<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
-
-<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
-
-<h3>Why pull requests?</h3>
-
-<p>Pull requests serve 2 functions:</p>
-
-<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
-
-<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
-
-<h3>Merging</h3>
-
-<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
-
-<h3>Deploying</h3>
-
-<p>Once merged in, the branch is immediately deployed to staging.</p>
-
-<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
-
-<p>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[We have a new phone number!]]></title>
-    <link href="http://blog.siyelo.com/we-have-a-new-phone-number"/>
-    <updated>2011-12-08T09:04:32+01:00</updated>
-    <id>http://blog.siyelo.com/we-have-a-new-phone-number</id>
-    <content type="html"><![CDATA[<p>Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050.</p>
-
-<p>Our old landline number (+27 21 461 2559) was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</p>
-
-<blockquote><p>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221; <br />
-&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221; <br />
-<strong>facepalm</strong></p></blockquote>
-
-<p>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
-    <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
-    <updated>2011-11-03T09:37:00+01:00</updated>
-    <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
-    <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
-
-<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
-
-<ul>
-<li>you don&#8217;t have control over the other screen</li>
-<li>you cannot have both screen sharing and video</li>
-<li>bandwidth of the internet connection sometimes can be a problem</li>
-<li>it&#8217;s not a tool for pair programming</li>
-</ul>
-
-
-<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
-
-<p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
-
-<ul>
-<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
-<li>permissive - useful as a real time code collaboration tool</li>
-</ul>
-
-
-<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
-
-<p>First we need to install SSH server because all communication will happen over secure channel:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ssh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo useradd -s /bin/rbash guest
-</span><span class='line'>sudo passwd guest
-</span><span class='line'>sudo mkdir /home/guest
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Next we need to setup the guest shell.profile. Add the following to /home/guest/.profile</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">trap</span> <span class="s2">&quot;&quot;</span> 2 3 19 <span class="c"># stop user getting to shell</span>
-</span><span class='line'>clear
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Welcome to pair-programming session&quot;</span>
-</span><span class='line'><span class="nb">echo</span> -n <span class="s2">&quot;Press Enter to continue...&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span>
-</span><span class='line'>screen -x dalibor/pairprog
-</span><span class='line'><span class="nb">exit</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
-
-<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install screen
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo chmod +s /usr/bin/screen
-</span><span class='line'>sudo chmod 755 /var/run/screen
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then you need to add the following screen config in ~/.screenrc file</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>hardstatus on
-</span><span class='line'>hardstatus alwayslastline
-</span><span class='line'>startup_message off
-</span><span class='line'>termcapinfo xterm ti@:te@
-</span><span class='line'>hardstatus string <span class="s2">&quot;%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a &quot;</span>
-</span><span class='line'>screen -t bash1 1
-</span><span class='line'>
-</span><span class='line'><span class="c"># multiuser setup</span>
-</span><span class='line'>multiuser on
-</span><span class='line'>aclchg guest -wx <span class="s2">&quot;#,?&quot;</span>
-</span><span class='line'>aclchg guest +x <span class="s2">&quot;colon,wall,detach&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
-
-<p>Finally, communication goes like this: screen session is started by host with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Guest SSH to the host machine and automatically joins the screen session:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh guest@host
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
-
-<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>multiuser on
-</span><span class='line'>acladd user2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And is starting pairprog screen session with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then user2 can join that session with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -x user1/pairprog
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference">screen reference</a>. Basic commands are:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Ctrl-a d <span class="c"># detach screen window</span>
-</span><span class='line'>Ctrl-a Ctrl-a <span class="c"># flip-flop between two windows</span>
-</span><span class='line'>screen -r <span class="c"># re-attach screen window</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Koding in Khayelitsha - great photo]]></title>
-    <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
-    <updated>2011-10-04T14:45:00+02:00</updated>
-    <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
-    <content type="html"><![CDATA[<p>A great photo from the programming class @glennrob is involved with.</p>
-
-<p>(they&#8217;re learning ruby)</p>
-
-<p><a href="http://blog.siyelo.com/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="http://blog.siyelo.com/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Siyelo Office Graffiti: stop-motion video]]></title>
-    <link href="http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video"/>
-    <updated>2011-09-23T12:11:28+02:00</updated>
-    <id>http://blog.siyelo.com/siyelo-office-graffiti-stop-motion-video</id>
-    <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/29374463?portrait=0" frameborder="0" height="283" width="500"></iframe>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Installing a gem in all your global RVM gemsets]]></title>
-    <link href="http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets"/>
-    <updated>2011-09-08T20:46:00+02:00</updated>
-    <id>http://blog.siyelo.com/installing-a-gem-in-all-your-global-rvm-gemsets</id>
-    <content type="html"><![CDATA[<p>Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;annotate&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;awesome_print&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s2">&quot;ap&quot;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 2.1.2&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;hirb&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;interactive_editor&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;open_gem&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;rails-footnotes&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;ruby-debug&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sketches&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;slurper&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sqlite3-ruby&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">&#39;sqlite3&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;taps&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;wirble&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</p>
-
-<p>So, give this a shot;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">for </span>x in <span class="k">$(</span>rvm list strings<span class="k">)</span>; <span class="k">do </span>rvm use <span class="nv">$x</span>@global <span class="o">&amp;&amp;</span> gem install &lt;RAD DEVELOPMENT GEM NAME&gt;; <span class="k">done</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This installs a specific gem into all your global RVM gemsets. For great justice!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to bulk delete remote git tags]]></title>
-    <link href="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags"/>
-    <updated>2011-08-01T00:48:00+02:00</updated>
-    <id>http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags</id>
-    <content type="html"><![CDATA[<p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>0.9.6c
-</span><span class='line'>0.9.6d
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
-
-<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>d16aeb86430afc26fb17f182f567d39c8c732188 refs/tags/0.9.6c
-</span><span class='line'>390c9a3251b813775ccdb96c375d50fed67d058f refs/tags/0.9.6d
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With a bit of awk and regexp love, we can match that output with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>^<span class="o">(</span>.*<span class="o">)</span>  -  the SHA <span class="o">(</span>at the start of the line ^<span class="o">)</span>
-</span><span class='line'><span class="o">(</span><span class="se">\s</span>+<span class="o">)</span>  - a cupla spaces
-</span><span class='line'><span class="o">(</span>.*<span class="o">[</span>a-z<span class="o">])</span><span class="nv">$ </span> - a string ending in a letter, followed by end of line <span class="o">(</span><span class="nv">$)</span>  <span class="o">(</span>there are more exact/safer ways of doing this regexp, I know<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And we know that to delete a git tag on a remote you use:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>So putting it all together we get:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</p>
-
-<p>Booyaka.</p>
-
-<p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
-
-<blockquote><p>a) make sure you have the tags backed up in your local repo first and <br />
-b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
-
-<p>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6c
-</span><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6d
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Similarly for removing these pre-release tags from a local git repo:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git tag -l | awk <span class="s1">&#39;/^(.*[a-z])$/ {print $1}&#39;</span>  | xargs git tag -d
-</span><span class='line'>
-</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0c&#39;</span> <span class="o">(</span>was e373098<span class="o">)</span>
-</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0d&#39;</span> <span class="o">(</span>was 5566b43<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
-
-<p>Final step: Profit</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Can't drop your Heroku database?]]></title>
-    <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
-    <updated>2011-07-27T15:08:00+02:00</updated>
-    <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
-    <content type="html"><![CDATA[<p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
-
-<h3>Step 1</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 2</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 3</h3>
-
-<p>???</p>
-
-<h3>Step 4</h3>
-
-<h3>Profit</h3>
 ]]></content>
   </entry>
   

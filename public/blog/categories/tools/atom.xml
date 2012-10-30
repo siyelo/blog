@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-29T14:40:45+01:00</updated>
+  <updated>2012-10-30T01:38:45+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -36,7 +36,7 @@
 
 <h2>Deployment Documentation</h2>
 
-<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a>  or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
+<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
 
 <h2>Server security</h2>
 
@@ -56,7 +56,7 @@
 
 <h2>Backups</h2>
 
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations,<a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
+<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
 
 <h2>Failover</h2>
 
@@ -64,23 +64,23 @@
 
 <h2>External monitoring tools</h2>
 
-<p>Service like<a href="http://www.pingdom.com/">Pingdom</a> or<a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
+<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
 
 <h2>Notifications for Exceptions</h2>
 
-<p>Setup exception notifications to receive email notifications when application crashes. You can use<a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like<a href="http://airbrake.io/">Airbrake</a> or<a href="http://www.exceptional.io/">Exceptional</a>.</p>
+<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
 
 <h2>Process monitoring tools</h2>
 
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like<a href="http://upstart.ubuntu.com/">Upstart</a> , <a href="https://github.com/arya/bluepill">Bluepill</a> ,<a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a>  and<a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a>  are useful.</p>
+<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
 
 <h2>Server performance</h2>
 
-<p>Monitor server performance with<a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like<a href="https://scoutapp.com/">scoutapp</a>.</p>
+<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
 
 <h2>Application performance</h2>
 
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with<a href="http://newrelic.com/">New Relic</a>. They also have<a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don't want to use other service for checking that your server is up and running.</p>
+<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don't want to use other service for checking that your server is up and running.</p>
 
 <p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
 ]]></content>

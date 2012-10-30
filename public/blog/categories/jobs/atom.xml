@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Jobs | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/jobs/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-29T14:40:45+01:00</updated>
+  <updated>2012-10-30T01:38:45+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Junior Web Developer Wanted]]></title>
+    <link href="http://blog.siyelo.com/junior-web-developer-wanted"/>
+    <updated>2012-09-20T16:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/junior-web-developer-wanted</id>
+    <content type="html"><![CDATA[<p>Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.</p>
+
+<h2>Opportunity</h2>
+
+<p>We are looking for people with passion to learn the web craft quickly and be "full-stack" developers. People that want to be part of a small team and want to work in an agile environment (TDD, pairing, short release cycles).</p>
+
+<p>This job will offer experience with product development, front-end development and design (Javascript, HTML and CSS), back-end work (Ruby / Ruby on Rails / other tools) and deployment practices to Linux based distros and cloud platforms.</p>
+
+<p>We value quality (writing tests) and encourage Open Source contributions and community participation.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Familiarity with Ruby, Python or Javascript</li>
+<li>Experience with SQL data stores</li>
+<li>Skills in all tiers of the web application stack</li>
+<li>Skills to navigate the command-line in a Linux environment</li>
+</ul>
+
+
+<h2>Highly Regarded</h2>
+
+<ul>
+<li>Git</li>
+<li>Vim</li>
+<li>Linux skills</li>
+</ul>
+
+
+<h2>Location</h2>
+
+<ul>
+<li>Skopje</li>
+</ul>
+
+
+<h2>How to Apply</h2>
+
+<p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[We're Hiring - Experienced Web Developer]]></title>

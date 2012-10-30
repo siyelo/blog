@@ -96,36 +96,37 @@ body, html
         padding-left: 11%
         width: 89%
 
-    time
-      background: $light
-      color: #fff
-      display: block
-      font-family: Arial
-      letter-spacing: 1px
-      margin-top: 5px
-      padding: 10px 0
-      width: 100%
-      +pie-clearfix
-      span
-        display: block
-        font-weight: bold
-        text-transform: uppercase
-        &.day
-          font-size: 2.2em
-          line-height: 1
-        &.month
-          font-size: 1.15em
-          line-height: 0.9
-        &.year
-          font-size: 1em
-          line-height: 1.2
-      a
+      header time
+        background: $light
         color: #fff
-        font-size: 11px
-        text-transform: uppercase
-        +text-shadow($light - #222 0 1px 0)
+        display: block
+        font-family: Arial
+        letter-spacing: 1px
+        margin-top: 5px
+        padding: 10px 0
+        width: 100%
+        +pie-clearfix
+        span
+          display: block
+          font-weight: bold
+          text-transform: uppercase
+          &.day
+            font-size: 2.2em
+            line-height: 1
+          &.month
+            font-size: 1.15em
+            line-height: 0.9
+          &.year
+            font-size: 1em
+            line-height: 1.2
+        a
+          color: #fff
+          font-size: 11px
+          text-transform: uppercase
+          +text-shadow($light - #222 0 1px 0)
 
     h1
+      color: #193045
       font-family: 'Avenir Blog', Arial, Helvetica, sans-serif
       font-size: 28px !important
       letter-spacing: 0
@@ -197,7 +198,7 @@ body, html
         border: 0
         background: #bbb
 
-  #blog > div
+  > div
     border: none
 
   .comment_label

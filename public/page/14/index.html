@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="04 Nov 2009 Announcing Fuselage - Get Your Rails Project Off to a Flying Start! &#8211;> Comments &#8211;> &#8211;> Fuselage takes all the hassle &hellip;">
+  <meta name="description" content="19 Nov 2009 Make Textmate Your $EDITOR of Choice &#8211;> Comments &#8211;> &#8211;> If you are a master of Vim and feel like a sea-change, or if &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,139 +113,293 @@
 
 
 
-<section><time datetime="2009-11-04T10:08:00+01:00" pubdate data-updated="true">
-    <span class='day'> 04</span>
+<section><time datetime="2009-11-19T09:46:59+01:00" pubdate data-updated="true">
+    <span class='day'> 19</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
   </time></section>
     
-      <h1 class="entry-title"><a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start">Announcing Fuselage - Get Your Rails Project Off to a Flying Start!</a></h1>
+      <h1 class="entry-title"><a href="/make-textmate-your-editor-of-choice">Make Textmate Your $EDITOR of Choice</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/make-textmate-your-editor-of-choice#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the &#8220;rails&#8221; command gives you.</p>
-
-<p>What&#8217;s different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template.</p>
-
-<p>Fuselage avoids asking a lot of questions, so if you want to customize your install, edit &#8220;template.rb&#8221; manually.</p>
-
-<p>Usage is very simple. You can invoke it directly from your &#8220;rails -m&#8221; command with:</p>
+  <div class="body"><div class="inner"><p>If you are a master of Vim and feel like a sea-change, or if you&#8217;re just plain scared, you can set up Textmate as your default editor.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span><span class="s1">&#39;mate -w&#39;</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">GIT_EDITOR</span><span class="o">=</span><span class="s1">&#39;mate -wl1&#39;</span>. <span class="c">#This instructs TextMate to open with the caret at line 1 rather than where it last was.</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>(note this does a git clone of Fuselage for you automatically)</p>
+<p>Whack this in your .profile (e.g. ~/.bash_profile), re-source it:</p>
 
-<p>Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable.</p>
-
-<p>Full feature list</p>
-
-<p>Currently Fuselage includes the following;</p>
-
-<p><strong>Rails</strong></p>
-
-<ul>
-<li>basic template for a clean a rails install</li>
-<li>SCS</li>
-<li>git</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>DB + Models</strong></p>
-
-<ul>
-<li>MySQL</li>
-<li>authlogic</li>
-<li>recaptcha</li>
-<li>paperclip</li>
-</ul>
+<p>And off you go.</p>
+</div></div>
+  
+  
 
 
-<p><strong>Design/Layout</strong></p>
-
-<ul>
-<li>jQuery</li>
-<li>haml</li>
-<li>sass</li>
-<li>compass + blueprint</li>
-<li>formtastic</li>
-<li>cufon</li>
-<li>friendly_id</li>
-</ul>
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
 
 
-<p><strong>Controllers</strong></p>
-
-<ul>
-<li>make_resourceful</li>
-<li>will_paginate</li>
-</ul>
 
 
-<p><strong>Testing</strong></p>
-
-<ul>
-<li>machinist</li>
-<li>faker</li>
-<li>cucumber</li>
-<li>rspec</li>
-<li>webrat</li>
-<li>watchr - alternative to autotest</li>
-</ul>
 
 
-<p><strong>Search</strong></p>
-
-<ul>
-<li>thinking-sphinx</li>
-</ul>
 
 
-<p><strong>Security</strong></p>
-
-<ul>
-<li>tarantula</li>
-</ul>
 
 
-<p><strong>Metrics</strong></p>
-
-<ul>
-<li>metric_Fu</li>
-</ul>
 
 
-<p><strong>Production</strong></p>
-
-<ul>
-<li>passenger</li>
-<li>capistrano</li>
-<li>exception_notification</li>
-</ul>
 
 
-<p><strong>Extra templates included</strong></p>
 
-<p>These templates are included, but not installed by default. Manually edit template.rb to include them.</p>
+<section><time datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/great-gitignore-files-for-your-next-rails-project">Great .gitignore File(s) for Your Next Rails Project</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/great-gitignore-files-for-your-next-rails-project#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
 
-<ul>
-<li>compass with 960 grid system</li>
-<li>restful_authentication</li>
-<li>forgery</li>
-<li>asset_packager</li>
-<li>whenever</li>
-</ul>
 
+  <div class="body"><div class="inner"><p>Here&#8217;s great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
+
+<p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>run <span class="s2">&quot;touch tmp/.gitignore log/.gitignore vendor/.gitignore&quot;</span>
+</span><span class='line'>run %<span class="o">{</span>find . -type d -empty | grep -v <span class="s2">&quot;vendor&quot;</span> | grep -v <span class="s2">&quot;.git&quot;</span> | grep -v <span class="s2">&quot;tmp&quot;</span> | xargs -I xxx touch xxx/.gitignore<span class="o">}</span>
+</span><span class='line'>file <span class="s1">&#39;.gitignore&#39;</span>, <span class="s">&lt;&lt;-EOS.gsub(/^ /, &#39;&#39;)</span>
+</span><span class='line'><span class="s">.DS_Store</span>
+</span><span class='line'><span class="s">log/*.log</span>
+</span><span class='line'><span class="s">tmp/**/*</span>
+</span><span class='line'><span class="s">config/database.yml</span>
+</span><span class='line'><span class="s">config/initializers/site_keys.rb</span>
+</span><span class='line'><span class="s">db/*.sqlite3</span>
+</span><span class='line'><span class="s">EOS</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time datetime="2009-11-18T07:53:00+01:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/textmate-tip-align-statments">Textmate Tip: Align Statments</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/textmate-tip-align-statments#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>If you want to go from this:</p>
+
+<p><img src="/images/old/2009/11/pastedgraphic1.png" alt="Pastedgraphic" /></p>
+
+<p>to an aligned, and much more legible statement list like this:</p>
+
+<p><img src="/images/old/2009/11/0pastedgraphic.png" alt="Pastedgraphic" /></p>
+
+<p>The textmate key combination for this is: <strong>⌥⌘]</strong> (Alt + Cmd + Bracket)</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time datetime="2009-11-17T21:04:30+01:00" pubdate data-updated="true">
+    <span class='day'> 17</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/heroku-the-5mb-free-plan-is-it-enough">Heroku - the 5mb Free Plan - Is It Enough?</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Heroku just got better. </p>
+
+<p>If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) plan, then you&#8217;re in luck. Read on;</p>
+
+<p>Begin forwarded message:</p>
+
+<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486) <br />
+<strong>glenn.roberts, Nov 17 12:04 am (PST):</strong> <br />
+Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ? <br />
+Regards <br />
+Glenn</p>
+
+<p><strong>morten, Nov 17 11:04 am (PST):</strong> <br />
+Glenn, <br />
+The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo). <br />
+/Morten <br />
+This email is a service from Support <br /></p></blockquote>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">
+    <span class='day'> 17</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production">Heroku - the Fastest Way to Getting a Rails App Into Production</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/heroku-the-fastest-way-to-getting-a-rails-app-into-production#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
+
+<p>Its as easy as:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo gem install heroku
+</span><span class='line'>heroku create
+</span><span class='line'>git push heroku master
+</span><span class='line'>heroku rake db:migrate
+</span><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sit back and watch your app open automagically in your browser.</p>
+
+<p>Also note, Siyelo <a href="http://github.com/siyelo/fuselage">Fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
 </div></div>
   
   
@@ -255,9 +409,11 @@
     
     <div class="pagination">
       
+        <a class="prev" href="/page/15/">Older</a>
+      
       <a href="/blog/archives">Blog Archives</a>
       
-      <a class="next" href="/page/13/">Newer &rarr;</a>
+      <a class="next" href="/page/13/">Newer</a>
       
     </div>
   </div>
@@ -268,23 +424,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/this-weeks-tldr-82702">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+        <a href="/this-weeks-tldr-92708">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/scratching-an-itch">Scratching an itch</a>
+        <a href="/this-weeks-tldr-24557">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+        <a href="/its-not-you-its-me">It&#8217;s not you, it&#8217;s me&#8230;</a>
       </li>
     
       <li class="post">
-        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+        <a href="/this-weeks-tldr-22431">This week&#8217;s TL;DR</a>
       </li>
     
   </ul>
@@ -344,11 +500,55 @@
   </aside>
 </div>
 
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Siyelo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
+    </div>
+  </footer>
 </footer>
   
 

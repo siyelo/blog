@@ -25,7 +25,7 @@ If you need more advanced tool for doing the deploy, [Capistrano](https://githu
 
 ## Deployment Documentation
 
-Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like [Chef](http://wiki.opscode.com/display/chef/)  or [Puppet](http://puppetlabs.com/)  you are kind of documenting things on the fly.
+Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like [Chef](http://wiki.opscode.com/display/chef/) or [Puppet](http://puppetlabs.com/)  you are kind of documenting things on the fly.
 
 ## Server security
 
@@ -45,7 +45,7 @@ Whether it's a backup script or background task that needs to be run as a job, i
 
 ## Backups
 
-For both database & uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations,[backup gem](https://github.com/meskyanichi/backup) is very handy tool for that.
+For both database & uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, [backup gem](https://github.com/meskyanichi/backup) is very handy tool for that.
 
 ## Failover
 
@@ -53,22 +53,22 @@ If server crashes, can you fail over to another server? How much time do you nee
 
 ## External monitoring tools
 
-Service like[Pingdom](http://www.pingdom.com/) or[Alerta](http://www.alertra.com/) are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.
+Service like [Pingdom](http://www.pingdom.com/) or [Alerta](http://www.alertra.com/) are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.
 
 ## Notifications for Exceptions
 
-Setup exception notifications to receive email notifications when application crashes. You can use[exception_notification gem](https://github.com/smartinez87/exception_notification) or some paid service like[Airbrake](http://airbrake.io/) or[Exceptional](http://www.exceptional.io/).
+Setup exception notifications to receive email notifications when application crashes. You can use [exception_notification gem](https://github.com/smartinez87/exception_notification) or some paid service like [Airbrake](http://airbrake.io/) or [Exceptional](http://www.exceptional.io/).
 
 ## Process monitoring tools
 
-Monitor your DB server, web server & background processes and restart them if they consume too much memory. Tools like[Upstart](http://upstart.ubuntu.com/) , [Bluepill](https://github.com/arya/bluepill) ,[God](http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/)  and[Monit](http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/)  are useful.
+Monitor your DB server, web server & background processes and restart them if they consume too much memory. Tools like [Upstart](http://upstart.ubuntu.com/), [Bluepill](https://github.com/arya/bluepill), [God](http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/) and [Monit](http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/) are useful.
 
 ## Server performance
 
-Monitor server performance with[vmstat](http://library.linode.com/linux-tools/common-commands/vmstat) or some 3rd party tool like[scoutapp](https://scoutapp.com/).
+Monitor server performance with [vmstat](http://library.linode.com/linux-tools/common-commands/vmstat) or some 3rd party tool like [scoutapp](https://scoutapp.com/).
 
 ## Application performance
 
-Monitor your application performance, uptime, slow DB queries, background tasks with[New Relic](http://newrelic.com/). They also have[Availability monitoring](http://newrelic.com/features/availability-monitoring) if you don't want to use other service for checking that your server is up and running.
+Monitor your application performance, uptime, slow DB queries, background tasks with [New Relic](http://newrelic.com/). They also have [Availability monitoring](http://newrelic.com/features/availability-monitoring) if you don't want to use other service for checking that your server is up and running.
 
 The list is long, but it takes lots of patience in understanding the software business and delivering great software.
