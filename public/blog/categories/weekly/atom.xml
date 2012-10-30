@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Weekly | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/weekly/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-30T16:53:48+02:00</updated>
+  <updated>2012-10-30T17:17:26+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[This week's TL;DR]]></title>
-    <link href="http://blog.siyelo.com/this-weeks-tldr-82702"/>
+    <title type="html"><![CDATA[Weekly roundup #5: Making Rails fast, Practical OO & Google data centers]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-5"/>
     <updated>2012-10-19T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/this-weeks-tldr-82702</id>
+    <id>http://blog.siyelo.com/weekly-roundup-5</id>
     <content type="html"><![CDATA[<p>Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to <a href="http://www.twitter.com/railsonfire">@railsonfire</a>):</p>
 
 <ul>
@@ -37,10 +37,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[This week's TL;DR]]></title>
-    <link href="http://blog.siyelo.com/this-weeks-tldr-92708"/>
+    <title type="html"><![CDATA[Weekly Roundup #4: Great RSpect tests, TripAdvisors growth & Going password-less]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-4"/>
     <updated>2012-10-12T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/this-weeks-tldr-92708</id>
+    <id>http://blog.siyelo.com/weekly-roundup-4</id>
     <content type="html"><![CDATA[<p>Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here's this week's edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.</p>
 
 <p>Sachin and Glenn shared some tips &amp; tricks:</p>
@@ -68,10 +68,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[This week's TL;DR]]></title>
-    <link href="http://blog.siyelo.com/this-weeks-tldr-24557"/>
+    <title type="html"><![CDATA[Weekly Roundup #3: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
     <updated>2012-10-05T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/this-weeks-tldr-24557</id>
+    <id>http://blog.siyelo.com/weekly-roundup-3</id>
     <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
 
 <p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">'Lean from the Trenches: Managing Large-Scale Projects with Kanban'</a>  by Henrik Kniberg.  It's a great look at a practical implementation of Kanban.  We'll definitely be trying this out with future projects.</p>
@@ -87,10 +87,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[This week's TL;DR]]></title>
-    <link href="http://blog.siyelo.com/this-weeks-tldr-22431"/>
+    <title type="html"><![CDATA[Weekly Roundup #2: Ruby Security Guide, Macedonian parties & Moving things around]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-2"/>
     <updated>2012-09-28T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/this-weeks-tldr-22431</id>
+    <id>http://blog.siyelo.com/weekly-roundup-2</id>
     <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you'll find something thought provoking. </p>
 
 <p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer's Guide</a>, it's not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
@@ -112,10 +112,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[This week's TL;DR]]></title>
-    <link href="http://blog.siyelo.com/this-weeks-tldr"/>
+    <title type="html"><![CDATA[Weekly Roundup #1 - Sachin's beard, Skeuomorphism & Knowledge debt]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-1"/>
     <updated>2012-09-13T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/this-weeks-tldr</id>
+    <id>http://blog.siyelo.com/weekly-roundup-1</id>
     <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn't safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
 
 <p>This post starts a series of weekly articles where we'll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>

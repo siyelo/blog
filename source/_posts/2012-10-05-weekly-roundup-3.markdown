@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This week's TL;DR"
+title: "Weekly Roundup #3: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges"
 date: 2012-10-05 16:00:00
 comments: true
 categories: Weekly Roundup
