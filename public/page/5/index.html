@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="We don&#8217;t even mind if our employees wear makeup sometimes&#8230; ">
+  <meta name="description" content="12 Dec 2011 Siyelos&#8217; Git Workflow &#8211;> Comments &#8211;> &#8211;> Here at Siyelo we have a rather robust flow that we feel works quite &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,6 +25,7 @@
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -45,16 +46,32 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Siyelo</a></h1>
-  
-    <h2>A blogging framework for siyelos.</h2>
-  
-</hgroup>
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -71,312 +88,472 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
+</nav> -->
+  <div class="wrapper multiclouds">
+  <div id="articles">
+    
+    
+    
+      <article>
+        
   <header>
     
-      <h1 class="entry-title"><a href="/siyelo-an-equal-opportunity-employer">Siyelo: An Equal Opportunity Employer.</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-12-12T10:53:00+01:00" pubdate data-updated="true">
+    <span class='day'> 12</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time></section>
     
+      <h1 class="entry-title"><a href="/siyelos-git-workflow">Siyelos&#8217; Git Workflow</a></h1>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-18T16:32:53+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2011</time>
-        
-         | <a href="/siyelo-an-equal-opportunity-employer#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/siyelos-git-workflow#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
   </header>
 
 
-  <div class="entry-content"><p>We don&#8217;t even mind if our employees wear makeup sometimes&#8230;</p>
+  <div class="body"><div class="inner"><p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
 
-<p><a href="/images/old/2011/06/imag0142-scaled-1000.jpg"><img src="/images/old/2011/06/imag0142-scaled-1000.jpg" alt="Imag0142" /> </a></p>
-</div>
+<h3>Named Branches</h3>
+
+<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
+
+<h3>Pull Requests</h3>
+
+<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
+
+<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
+
+<h3>Why pull requests?</h3>
+
+<p>Pull requests serve 2 functions:</p>
+
+<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
+
+<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
+
+<h3>Merging</h3>
+
+<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
+
+<h3>Deploying</h3>
+
+<p>Once merged in, the branch is immediately deployed to staging.</p>
+
+<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
+
+<p>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</p>
+</div></div>
   
   
 
 
-    </article>
-  
-  
-    <article>
-      
+      </article>
+    
+    
+      <article>
+        
   <header>
     
-      <h1 class="entry-title"><a href="/experienced-web-developer-wanted">Experienced Web Developer Wanted</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-12-08T09:04:32+01:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time></section>
     
+      <h1 class="entry-title"><a href="/we-have-a-new-phone-number">We Have a New Phone Number!</a></h1>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-03-04T14:20:27+02:00" pubdate data-updated="true">Mar 4<span>th</span>, 2011</time>
-        
-         | <a href="/experienced-web-developer-wanted#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/we-have-a-new-phone-number#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.siyelo.com">Siyelo</a> is an international Ruby on Rails agency, with solid backing and a growing portfolio of great projects, and happy clients.</p>
+  <div class="body"><div class="inner"><p>Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050.</p>
 
-<h3>Opportunity</h3>
+<p>Our old landline number (+27 21 461 2559) was previously registered to the Dept of Home Affairs, and was still listed on their website, so we were getting several nuisance calls a day from irate visa applicants;</p>
 
-<p>This is an opportunity to be a part of an entrepreneurial and focused Ruby/Rails consultancy. We are looking for people with strong web development backgrounds, with a passion for clean code and great software.</p>
+<blockquote><p>&#8220;Good morning, Siyelo Software, Glenn speaking&#8221; <br />
+&#8220;Hi, my boyfriend is having problems with his visa application&#8230;&#8221; <br />
+<strong>facepalm</strong></p></blockquote>
 
-<p>We&#8217;re all &#8220;full-stack&#8221; developers, so whilst you don&#8217;t necessarily need to know how to rewrite PacMan in Javascript, familiarity with jQuery and HTML/CSS is needed. We care about quality too. Writing tests first using modern frameworks should be second nature to you.</p>
+<p>We decided it was easier to deal with the notorious Telkom than it was to ask Home Affairs to update their website. Talk about having to choose the lesser of two evils!</p>
+</div></div>
+  
+  
 
-<p>We are working on an exciting mix of improving and scaling existing apps and developing entirely new apps. Our team is fast, talented and independent, and we encourage Open Source contributions and community participation.</p>
 
-<p>Requirements</p>
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-11-03T09:37:00+01:00" pubdate data-updated="true">
+    <span class='day'> 03</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2011</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/remote-pair-programming-with-screen">Remote Pair-programming With Screen</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/remote-pair-programming-with-screen#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
+
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 
 <ul>
-<li>3+ years web development or related experience</li>
-<li>Experience in Object Oriented languages &amp; domain modeling</li>
-<li>Agile development practices: TDD/BDD, pair programming, refactoring</li>
-<li>Relational databases: PostgreSQL or MySQL</li>
-<li>English proficiency a must.</li>
+<li>you don&#8217;t have control over the other screen</li>
+<li>you cannot have both screen sharing and video</li>
+<li>bandwidth of the internet connection sometimes can be a problem</li>
+<li>it&#8217;s not a tool for pair programming</li>
 </ul>
 
 
-<p>Highly Regarded</p>
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+
+<p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
 
 <ul>
-<li>Ruby / Python / Smalltalk / Java experience</li>
-<li>UI/UX design (HTML, CSS, Javascript)</li>
-<li>jQuery or similar framework</li>
-<li>NoSQL databases</li>
-<li>Open source contributions</li>
-<li>Git &amp; Github</li>
+<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive - useful as a real time code collaboration tool</li>
 </ul>
 
 
-<p>How to Apply</p>
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
 
-<p>Please send your CV (including any portfolio/open source links) to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>.</p>
+<p>First we need to install SSH server because all communication will happen over secure channel:</p>
 
-<p>[Optional] For BONUS points, you can apply using our fun little <a href="http://github.com/siyelo/job-application">Github application</a>.</p>
-</div>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ssh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo useradd -s /bin/rbash guest
+</span><span class='line'>sudo passwd guest
+</span><span class='line'>sudo mkdir /home/guest
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we need to setup the guest shell.profile. Add the following to /home/guest/.profile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">trap</span> <span class="s2">&quot;&quot;</span> 2 3 19 <span class="c"># stop user getting to shell</span>
+</span><span class='line'>clear
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Welcome to pair-programming session&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -n <span class="s2">&quot;Press Enter to continue...&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span>
+</span><span class='line'>screen -x dalibor/pairprog
+</span><span class='line'><span class="nb">exit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+
+<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo chmod +s /usr/bin/screen
+</span><span class='line'>sudo chmod 755 /var/run/screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you need to add the following screen config in ~/.screenrc file</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>hardstatus on
+</span><span class='line'>hardstatus alwayslastline
+</span><span class='line'>startup_message off
+</span><span class='line'>termcapinfo xterm ti@:te@
+</span><span class='line'>hardstatus string <span class="s2">&quot;%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a &quot;</span>
+</span><span class='line'>screen -t bash1 1
+</span><span class='line'>
+</span><span class='line'><span class="c"># multiuser setup</span>
+</span><span class='line'>multiuser on
+</span><span class='line'>aclchg guest -wx <span class="s2">&quot;#,?&quot;</span>
+</span><span class='line'>aclchg guest +x <span class="s2">&quot;colon,wall,detach&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+
+<p>Finally, communication goes like this: screen session is started by host with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Guest SSH to the host machine and automatically joins the screen session:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh guest@host
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
+
+<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>multiuser on
+</span><span class='line'>acladd user2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And is starting pairprog screen session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then user2 can join that session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -x user1/pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference">screen reference</a>. Basic commands are:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Ctrl-a d <span class="c"># detach screen window</span>
+</span><span class='line'>Ctrl-a Ctrl-a <span class="c"># flip-flop between two windows</span>
+</span><span class='line'>screen -r <span class="c"># re-attach screen window</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
   
   
 
 
-    </article>
-  
-  
-    <article>
-      
+      </article>
+    
+    
+      <article>
+        
   <header>
     
-      <h1 class="entry-title"><a href="/rubyfuza-conference-cape-town-pics">RubyFuZa Conference, Cape Town - Pics</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-10-04T14:45:00+02:00" pubdate data-updated="true">
+    <span class='day'> 04</span>
+    <span class='month'> Oct</span>
+    <span class='year'> 2011</span>
+  </time></section>
     
+      <h1 class="entry-title"><a href="/koding-in-khayelitsha-great-photo">Koding in Khayelitsha - Great Photo</a></h1>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-02-05T12:14:27+02:00" pubdate data-updated="true">Feb 5<span>th</span>, 2011</time>
-        
-         | <a href="/rubyfuza-conference-cape-town-pics#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/koding-in-khayelitsha-great-photo#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
   </header>
 
 
-  <div class="entry-content"><p><a href="/images/old/2011/02/img_1419-scaled-1000.jpg"><img src="/images/old/2011/02/img_1419-scaled-1000.jpg" alt="Img_1419" /> </a>
-<a href="/images/old/2011/02/img_1420-scaled-1000.jpg"><img src="/images/old/2011/02/img_1420-scaled-1000.jpg" alt="Img_1420" /> </a>
-<a href="/images/old/2011/02/img_1421-scaled-1000.jpg"><img src="/images/old/2011/02/img_1421-scaled-1000.jpg" alt="Img_1421" /> </a>
-<a href="/images/old/2011/02/img_1422-scaled-1000.jpg"><img src="/images/old/2011/02/img_1422-scaled-1000.jpg" alt="Img_1422" /> </a>
-<a href="/images/old/2011/02/img_1423-scaled-1000.jpg"><img src="/images/old/2011/02/img_1423-scaled-1000.jpg" alt="Img_1423" /> </a>
-<a href="/images/old/2011/02/img_1424-scaled-1000.jpg"><img src="/images/old/2011/02/img_1424-scaled-1000.jpg" alt="Img_1424" /> </a>
-<a href="/images/old/2011/02/img_1425-scaled-1000.jpg"><img src="/images/old/2011/02/img_1425-scaled-1000.jpg" alt="Img_1425" /> </a>
-<a href="/images/old/2011/02/img_1427-scaled-1000.jpg"><img src="/images/old/2011/02/img_1427-scaled-1000.jpg" alt="Img_1427" /> </a></p>
-</div>
+  <div class="body"><div class="inner"><p>A great photo from the programming class @glennrob is involved with.</p>
+
+<p>(they&#8217;re learning ruby)</p>
+
+<p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
+</div></div>
   
   
 
 
-    </article>
-  
-  
-    <article>
-      
+      </article>
+    
+    
+      <article>
+        
   <header>
     
-      <h1 class="entry-title"><a href="/the-siyelo-fridge">The Siyelo Fridge</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-09-23T12:11:28+02:00" pubdate data-updated="true">
+    <span class='day'> 23</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2011</span>
+  </time></section>
     
+      <h1 class="entry-title"><a href="/siyelo-office-graffiti-stop-motion-video">Siyelo Office Graffiti: Stop-motion Video</a></h1>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-16T20:53:25+02:00" pubdate data-updated="true">Dec 16<span>th</span>, 2010</time>
-        
-         | <a href="/the-siyelo-fridge#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/siyelo-office-graffiti-stop-motion-video#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
   </header>
 
 
-  <div class="entry-content"><p>After a visit from our favourite Argentinian friend, this is what our fridge looks like;</p>
+  <div class="body"><div class="inner"><iframe src="http://player.vimeo.com/video/29374463?portrait=0" frameborder="0" height="283" width="500"></iframe>
 
-<p><a href="/images/old/2010/12/photo.jpg"><img src="/images/old/2010/12/photo.jpg" alt="Photo" /> </a></p>
-
-<p>So much Quilmes, so little time!</p>
-</div>
+</div></div>
   
   
 
 
-    </article>
-  
-  
-    <article>
+      </article>
+    
+    <div class="pagination">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/a-zerigo-dns-template-for-heroku-and-google-apps">A Zerigo DNS Template for Heroku and Google Apps</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-01T11:23:45+02:00" pubdate data-updated="true">Dec 1<span>st</span>, 2010</time>
-        
-         | <a href="/a-zerigo-dns-template-for-heroku-and-google-apps#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While recently switching over a client&#8217;s web app, and their mailservers to Google Apps, I found that Zerigo&#8217;s template feature would make me less likely to murder kittens whenever I&#8217;m asked to do anything related to DNS.</p>
-
-<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
-
-<p>So here&#8217;s our Zerigo DNS template for a Heroku + Google Apps setup.</p>
-
-<h3>Part A - Heroku</h3>
-
-<p><a href="/images/old/2010/12/pastedgraphic-7.png"><img src="/images/old/2010/12/pastedgraphic-7.png" alt="Pastedgraphic-7" /> </a></p>
-
-<p>Heroku docs: <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a></p>
-
-<h3>Part B - Google Apps Mail</h3>
-
-<p><a href="http://getfile4.posterous.com/getfile/files.posterous.com/siyelo/tHuMks4RfHiRhJBNSrNopDqnjeg2OqVXvkhl7rBqbD4ZzqlzL0hAHyPLiIvM/PastedGraphic-6.png"><img src="/images/old/2010/12/pastedgraphic-6-png-scaled-500.jpg" alt="Pastedgraphic-6" /> </a></p>
-
-<p>Google apps mail help article: <a href="http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866">http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866</a></p>
-
-<h3>Part C - Google Apps miscellany </h3>
-
-<p>This is for webmail/docs/calendar</p>
-
-<p><a href="http://getfile9.posterous.com/getfile/files.posterous.com/siyelo/FmL94NEY7i4CsVB58RiTsqMOmOUEiLeiHXMAiWYQvrL915QmPdMGCCzvdHV7/PastedGraphic-8.png"><img src="/images/old/2010/12/pastedgraphic-8-png-scaled-500.jpg" alt="Pastedgraphic-8" /> </a></p>
-
-<p>And there you go! Never kill a kitten (again).</p>
-
-<p>Other similar links you might find useful: <a href="http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/">http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/page/6/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/page/4/">Newer &rarr;</a>
-    
+        <a class="prev" href="/page/6/">Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/4/">Newer</a>
+      
+    </div>
   </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
+  <aside class="sidebar">
+    
+      <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/this-weeks-tldr-82702">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+        <a href="/this-weeks-tldr-92708">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/scratching-an-itch">Scratching an itch</a>
+        <a href="/this-weeks-tldr-24557">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+        <a href="/its-not-you-its-me">It&#8217;s not you, it&#8217;s me&#8230;</a>
       </li>
     
       <li class="post">
-        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+        <a href="/this-weeks-tldr-22431">This week&#8217;s TL;DR</a>
       </li>
     
   </ul>
@@ -388,7 +565,7 @@
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
   
   <script type="text/javascript">
     $.domReady(function(){
@@ -432,16 +609,59 @@
 
 
 
-  
-</aside>
+    
+  </aside>
+</div>
 
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Siyelo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
+  </footer>
 </footer>
   
 

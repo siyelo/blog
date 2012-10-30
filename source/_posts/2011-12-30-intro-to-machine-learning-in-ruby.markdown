@@ -3,7 +3,7 @@ layout: post
 title: "Intro to Machine Learning in Ruby"
 date: 2011-12-30 10:41:00
 comments: true
-categories:
+categories: Ruby Tutorial
 author: Dalibor Nasevic
 ---
 

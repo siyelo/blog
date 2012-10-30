@@ -3,7 +3,7 @@ layout: post
 title: "Solving HTML5 compatibility issues"
 date: 2010-08-25 12:24:00
 comments: true
-categories:
+categories: Design
 author: Dime Pashoski
 ---
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Business | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/business/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-10-30T13:41:44+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Facebook imperative cannot be stopped]]></title>
+    <link href="http://blog.siyelo.com/the-facebook-imperative-cannot-be-stopped"/>
+    <updated>2010-03-11T12:05:32+01:00</updated>
+    <id>http://blog.siyelo.com/the-facebook-imperative-cannot-be-stopped</id>
+    <content type="html"><![CDATA[<p>Marc Benioff of SalesForce.com with his take on the <a href="http://techcrunch.com/2010/03/10/facebook-imperative-cannot-be-stopped/">next-big-thing in enterprise software </a> - which will be more social, more mobile, more instant, and (hopefully) more productive.</p>
+
+<p>We had an interesting conversation about this in Siyelo's daily stand-up meeting, and we tend to agree with Marc's outlook. Indeed many software applications could be improved with "social-networking" features/integration points to enable organizations to spread ideas and information.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The real cost of bad software]]></title>
+    <link href="http://blog.siyelo.com/the-real-cost-of-bad-software"/>
+    <updated>2010-01-21T13:28:40+01:00</updated>
+    <id>http://blog.siyelo.com/the-real-cost-of-bad-software</id>
+    <content type="html"><![CDATA[<p>The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake. All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.</p>
+
+<p>Below are some of the general characteristics of a software project</p>
+
+<ul>
+<li>Objectives - what is the scope and what are the deliverables</li>
+<li>Resources - people/finance etc</li>
+<li>Finiteness - there is a fixed time scale</li>
+<li>Quality, which can be measured in terms of customer satisfaction and the organisation’s image. (1)</li>
+</ul>
+
+
+<h3>Bad software</h3>
+
+<p>So how much is this going to cost you?  Let’s say that bad software is lacking in quality, which means that customer satisfaction is affected as is the organisation’s image.  </p>
+
+<p>Let’s have a look at some of the associated costs </p>
+
+<p><strong>Initial development cost (IDC)</strong></p>
+
+<p>Consider this as spent, a sunk cost, and if the output is unsatisfactory there are costs that arise as a result  </p>
+
+<p><strong>Continuing maintenance costs (MC)</strong></p>
+
+<p>If rework is not included in your contract you may find yourself paying for bugs to be fixed.  If the scope of the project was not clear and agreed upon you may find that you’re not covered for any additional work.  This can be pricey and above any formally agreed maintenance costs.</p>
+
+<p><strong>Time (T)</strong></p>
+
+<p>A lot of time would have been invested in the initial software development, with meetings to discuss the objectives, identifying deliverables etc.  If there’s bug fixing to be done you can be sure that this will result in more time being spent running backwards and forwards between supplier and customer.  Time should be an investment, but taking time out to fix bugs is just an unnecessary expense.</p>
+
+<p><strong>Effort (E)</strong></p>
+
+<p>It’s hard to allocate the cost of stress, frustration and bad relationships that result from deliverables not being met, but they’re there and they’re material. </p>
+
+<p><img src="/images/old/2010/01/pastedgraphic-1.png" alt="Pastedgraphic-1" /></p>
+
+<p><strong>Rework costs (RC)</strong></p>
+
+<p>It’s unlikely that you’d pay the same supplier to do the work over again from scratch, but the possibility is there that you find yourself contracting someone new.  </p>
+
+<p><strong>Opportunity costs (OC)</strong></p>
+
+<p>If your business depends on the software to run, then you are losing out every minute when it doesn’t work.  If you have made promises of your own which depend on functioning software you could be damaging your customer relations, and there is a potential to hurt your brand image.</p>
+
+<p><strong>Unforeseeable costs (UC)</strong></p>
+
+<p>Impossible to anticipate, but glitches in software can be catastrophic.  Errors which end up paying someone $100,000 instead of $10,000 can cripple a company.   </p>
+
+<p><strong>Total cost (TC):</strong></p>
+
+<p><code>TC = IDC + MC + T + E + RC + OC +UC</code></p>
+
+<p>If the software that you are handed results in any of the above costs (MC, T, E, RC, OC, UC) then that makes up the cost of bad software.   And these costs are the reason why you need to ensure that your software developer is able to provide you with quality, and that quality is one of their core values.  As with all things in life you get what you pay for, and spending a bit more upfront can potentially save your entire company later on.</p>
+
+<p>1: Integrated Management, Ann Norton, Elsevier, 2008</p>
+]]></content>
+  </entry>
+  
+</feed>

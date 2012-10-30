@@ -1,0 +1,67 @@
+#footer
+  background: image_url("/images/bg.png")
+  font-family: Arial, sans-serif
+  margin-top: 50px
+  padding-top: 60px
+
+  aside
+    background: rgba(0, 0, 0, 0.2)
+    clear: both
+    margin-top: 50px
+    padding: 15px 20px 10px
+    +pie-clearfix
+    a, p
+      color: $light
+      font-size: 12px
+      text-decoration: none
+    a
+      &:hover, &:focus
+        text-decoration: underline
+
+  .fourth
+    margin-bottom: 40px
+    .marker
+      background: image_url("/images/marker.png") no-repeat
+      color: $light
+      display: block
+      float: left
+      max-width: 36px
+      opacity: 0.5
+      padding: 10px 0 40px
+      text-align: center
+      text-decoration: none
+      width: 20%
+      &:hover, &:focus
+        opacity: 1
+
+    span, ul
+      float: right
+
+    span
+      color: $lighter
+      font: 16px 'Avenir Medium'
+      padding-bottom: 5px
+      width: 80%
+
+    ul
+      color: $light
+      font-size: 12px
+      padding-left: 3%
+      width: 77%
+
+    li a
+      color: $light
+      text-decoration: none
+      &:hover, &:focus
+        opacity: 1
+        text-decoration: underline
+        +transition(all 0.5s)
+
+  .social img
+    opacity: 0.9
+    padding: 0 10px 10px 0
+    width: 20%
+    &:hover, &:focus
+      opacity: 1
+      +scale(1.05)
+      +transition(all .2s)

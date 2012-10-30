@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="17 Nov 2009 Get Those Cheeky Bash Variables Out of There &#8211;> Comments &#8211;> &#8211;> Wanting to &#8220;unexport&#8221; a bash shell variable &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/15/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4054156-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
+
+</header>
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav> -->
+  <div class="wrapper multiclouds">
+  <div id="articles">
+    
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">
+    <span class='day'> 17</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/get-those-cheeky-bash-variables-out-of-there">Get Those Cheeky Bash Variables Out of There</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export</span> -n VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">unset </span>VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>unexport VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Im just kidding about the latter)</p>
+
+<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-04T11:02:59+01:00" pubdate data-updated="true">
+    <span class='day'> 04</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/bert-the-lizard-resident-code-critic-at-siyelo">Bert the Lizard - Resident Code Critic at Siyelo</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p><a href="/images/old/2009/11/pastedgraphic11.png"><img src="/images/old/2009/11/pastedgraphic11.png" alt="Pastedgraphic" /></a></p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-04T10:09:04+01:00" pubdate data-updated="true">
+    <span class='day'> 04</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/agile-contracts-working-group">Agile Contracts - Working Group</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/agile-contracts-working-group#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p><a href="http://www.coactivate.org/projects/agile-contracts/">The Agile Contracts working group</a> has an excellent sample (<a href="http://www.coactivate.org/projects/agile-contracts/sample-fixed-price-agile-contract">fixed-price</a>) contract for a project delivery using SCRUM.</p>
+
+<p>From memory it was posted by Jeff Sutherland and is from an actual project, so its fairly comprehensive.</p>
+
+<p>(Note these are only samples and you should always seek legal advice before using 3rd-party contracts.)</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-04T10:08:00+01:00" pubdate data-updated="true">
+    <span class='day'> 04</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start">Announcing Fuselage - Get Your Rails Project Off to a Flying Start!</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the &#8220;rails&#8221; command gives you.</p>
+
+<p>What&#8217;s different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template.</p>
+
+<p>Fuselage avoids asking a lot of questions, so if you want to customize your install, edit &#8220;template.rb&#8221; manually.</p>
+
+<p>Usage is very simple. You can invoke it directly from your &#8220;rails -m&#8221; command with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(note this does a git clone of Fuselage for you automatically)</p>
+
+<p>Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable.</p>
+
+<p>Full feature list</p>
+
+<p>Currently Fuselage includes the following;</p>
+
+<p><strong>Rails</strong></p>
+
+<ul>
+<li>basic template for a clean a rails install</li>
+<li>SCS</li>
+<li>git</li>
+</ul>
+
+
+<p><strong>DB + Models</strong></p>
+
+<ul>
+<li>MySQL</li>
+<li>authlogic</li>
+<li>recaptcha</li>
+<li>paperclip</li>
+</ul>
+
+
+<p><strong>Design/Layout</strong></p>
+
+<ul>
+<li>jQuery</li>
+<li>haml</li>
+<li>sass</li>
+<li>compass + blueprint</li>
+<li>formtastic</li>
+<li>cufon</li>
+<li>friendly_id</li>
+</ul>
+
+
+<p><strong>Controllers</strong></p>
+
+<ul>
+<li>make_resourceful</li>
+<li>will_paginate</li>
+</ul>
+
+
+<p><strong>Testing</strong></p>
+
+<ul>
+<li>machinist</li>
+<li>faker</li>
+<li>cucumber</li>
+<li>rspec</li>
+<li>webrat</li>
+<li>watchr - alternative to autotest</li>
+</ul>
+
+
+<p><strong>Search</strong></p>
+
+<ul>
+<li>thinking-sphinx</li>
+</ul>
+
+
+<p><strong>Security</strong></p>
+
+<ul>
+<li>tarantula</li>
+</ul>
+
+
+<p><strong>Metrics</strong></p>
+
+<ul>
+<li>metric_Fu</li>
+</ul>
+
+
+<p><strong>Production</strong></p>
+
+<ul>
+<li>passenger</li>
+<li>capistrano</li>
+<li>exception_notification</li>
+</ul>
+
+
+<p><strong>Extra templates included</strong></p>
+
+<p>These templates are included, but not installed by default. Manually edit template.rb to include them.</p>
+
+<ul>
+<li>compass with 960 grid system</li>
+<li>restful_authentication</li>
+<li>forgery</li>
+<li>asset_packager</li>
+<li>whenever</li>
+</ul>
+
+</div></div>
+  
+  
+
+
+      </article>
+    
+    <div class="pagination">
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/14/">Newer</a>
+      
+    </div>
+  </div>
+  <aside class="sidebar">
+    
+      <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/this-weeks-tldr-82702">This week&#8217;s TL;DR</a>
+      </li>
+    
+      <li class="post">
+        <a href="/this-weeks-tldr-92708">This week&#8217;s TL;DR</a>
+      </li>
+    
+      <li class="post">
+        <a href="/this-weeks-tldr-24557">This week&#8217;s TL;DR</a>
+      </li>
+    
+      <li class="post">
+        <a href="/its-not-you-its-me">It&#8217;s not you, it&#8217;s me&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/this-weeks-tldr-22431">This week&#8217;s TL;DR</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+
+
+
+    
+  </aside>
+</div>
+
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
+    </div>
+  </footer>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

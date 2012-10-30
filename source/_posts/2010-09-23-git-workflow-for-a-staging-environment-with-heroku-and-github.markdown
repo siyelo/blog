@@ -3,7 +3,7 @@ layout: post
 title: "Git workflow for a staging environment with Heroku and GitHub"
 date: 2010-09-23 10:39:00
 comments: true
-categories:
+categories: Bash
 author: Glenn Roberts
 ---
 

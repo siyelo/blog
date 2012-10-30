@@ -3,7 +3,7 @@ layout: post
 title: "What makes a good website?"
 date: 2010-01-20 12:16:00
 comments: true
-categories:
+categories: Web
 author: Glenn Roberts
 ---
 
@@ -13,8 +13,7 @@ Your website is often the first point of contact for so many people and most peo
 
 This is your opportunity to make a good first impression, making it too flashy or with too much content on it could result in an information overload.Some guidelines as to what information you should have:
 
-
--  An outline of what is on your site, and where the reader can find it
+- An outline of what is on your site, and where the reader can find it
 - Contact details
 - Why they should explore the rest of your site 
 

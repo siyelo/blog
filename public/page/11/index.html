@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="I stumbled across a great article  which outlines how to deal with User-Experience/graphic design in the context of an agile project. The problem: &hellip;">
+  <meta name="description" content="18 Feb 2010 Rails 2.3/Devise : Changing Your Email Content Type. &#8211;> Comments &#8211;> &#8211;> Devise is a great rails authentication solution &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,6 +25,7 @@
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -45,16 +46,32 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Siyelo</a></h1>
-  
-    <h2>A blogging framework for siyelos.</h2>
-  
-</hgroup>
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -71,388 +88,461 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
+</nav> -->
+  <div class="wrapper multiclouds">
+  <div id="articles">
+    
+    
+    
+      <article>
+        
   <header>
     
-      <h1 class="entry-title"><a href="/design-chunking-with-scrum">Design Chunking With Scrum</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-02-18T15:26:00+01:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2010</span>
+  </time></section>
     
+      <h1 class="entry-title"><a href="/rails-2-3devise-changing-your-email-content-type">Rails 2.3/Devise : Changing Your Email Content Type.</a></h1>
     
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-10T19:55:19+02:00" pubdate data-updated="true">Jan 10<span>th</span>, 2010</time>
-        
-         | <a href="/design-chunking-with-scrum#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/rails-2-3devise-changing-your-email-content-type#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
   </header>
 
 
-  <div class="entry-content"><p>I stumbled across a <a href="http://www.nomad8.com/files/b577d3dbe4a561a9b0f9f7ac2c27eda3-0.php">great article</a>  which outlines how to deal with User-Experience/graphic design in the context of an agile project.</p>
+  <div class="body"><div class="inner"><p>Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the &#8220;standard&#8221; authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?).</p>
 
-<p>The problem: coming up with a consistent user interface design across a website while working iteratively and incrementally.  </p>
+<p>A minor issue on Rails 2.3 is that Devise (v1.0) doesn&#8217;t allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to &#8216;text/html&#8217;, unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on.</p>
+
+<p>I&#8217;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
+
+<p>UPDATE: Its been merged into Devise v1.0.2</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Devise</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+</span><span class='line'><span class="err">    </span><span class="c1">#...    </span>
+</span><span class='line'>    <span class="n">config</span><span class="o">.</span><span class="n">mailer_content_type</span> <span class="o">=</span> <span class="s1">&#39;text/plain&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The gem on gemcutter</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">glennr</span><span class="o">-</span><span class="n">devise</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;glennr-devise&#39;</span><span class="p">,</span> <span class="ss">:lib</span> <span class="o">=&gt;</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:source</span> <span class="o">=&gt;</span> <span class="s1">&#39;http://gemcutter.org&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a>.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-02-11T14:28:51+01:00" pubdate data-updated="true">
+    <span class='day'> 11</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0">Using Devise for Authentication? How to Upgrade From v0.8.2 to v1.0</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.</p>
+
+<p>It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place).</p>
+
+<p>On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>becomes</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s1">&#39;&gt;=1.0.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And after restarting the server, a barf.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ActionView</span><span class="o">::</span><span class="no">TemplateError</span> <span class="p">(</span><span class="n">undefined</span> <span class="n">local</span> <span class="n">variable</span> <span class="ow">or</span> <span class="nb">method</span> <span class="sb">`new_user_session_path&#39; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So obviously my Devise resource, User in this case, is fubar.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:all</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hmm nothing changed there. But wait, <code>devise :all</code> is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-01-28T15:07:00+01:00" pubdate data-updated="true">
+    <span class='day'> 28</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/paperclip-attachment-validations">Paperclip - Attachment Validations</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/paperclip-attachment-validations#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Using Paperclip, if you need to check if your model has an attachment, you don&#8217;t use the standard ActiveRecord validation helper i.e.;</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:logo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Erroneous!</p>
+
+<p>Instead you use Paperclip&#8217;s helper</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But be sure to put that <strong>after your attachment definition</strong></p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">has_attached_file</span> <span class="ss">:logo</span>
+</span><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And if you&#8217;re doing something tricky, like allowing your model to be saved without an attachment first, but enforcing that an attachment is present on update then; </p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span><span class="p">,</span> <span class="ss">:unless</span> <span class="o">=&gt;</span> <span class="ss">:new_record?</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-01-22T12:19:37+01:00" pubdate data-updated="true">
+    <span class='day'> 22</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/programmer-or-software-developer">Programmer or Software Developer?</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/programmer-or-software-developer#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>A software developer would not be worth his salt if he couldn’t put some code together, but there are a multitude of skills and attributes that separate him from just being a programmer. In a world where hundreds are programmers are thrown at problems, software solutions are often not what they should be. Ultimately the quality of the work produced by good software developers is on a whole different plane, and it’s for some very good reasons.</p>
+
+<p><strong>Commitment to mastering a craft</strong></p>
+
+<p>The distinction between a job and a vocation is made clear by developers who push themselves in the following areas:</p>
+
+<p>Keeping up with technology - The realm of possibility in software is constantly changing, and what may be a suitable way to solve a problem now may be replaced by something much better tomorrow.  In such a dynamic environment, a passion for learning and being up to date is invaluable.</p>
+
+<p>Maintaining a good attitude - a good level of output cannot be achieved if developers are defensive about their work, and cannot handle a bit of constructive criticism.  Individual sections of work may be perfect, but may not fit together well with others.  Keeping an open mind and listening to other developers’ opinions facilitates learning, and can help to cut down the amount of time and effort needed for a project.</p>
+
+<p>Good enough is not enough - a good developer comes back to what they’ve done, and looks at it critically, wondering if there are any areas which could be improved.  Critiquing work can be good for future projects, and ensuring that all solutions are always of a high quality.</p>
+
+<p>Knowing where their limits lie - there is a definite benefit to knowing where your strengths lie, and asking for advice or help in areas where you may be lacking some skills.  No developer can know everything, and acknowledging that is a strength, as is knowing where to go to ask for help. </p>
+
+<p>Gaining experience - there is a lot to be said for having a strong technical background, but it’s often in the application of knowledge that a developer comes into their own.  Having said this, the experience needs to be relevant and varied, as doing the same thing over and over again doesn’t necessarily mean you’ve been doing it the right way, or that you’d be able to tackle other challenges well.</p>
+
+<p>Planning before coding - a good developer should be doing more than just writing good code, he should have a good idea of the various system components, data repositories, data flows etc before he even starts coding.  Having an overview of the solution means that when coding starts it will follow a design, and the project can move more efficiently towards completion. </p>
+
+<p>Test, do some testing and when that’s finished, test it again - testing should occur from the outset, and time should be put aside for it.  The assumption should never be made that code works, testing should be done to prove that this is the case.  A good software developer acknowledges this and incorporates testing at all phases of programming.</p>
+
+<p>And then when all this achieved?</p>
+
+<p>&#8220;Just as importantly - and this is where a lot of developers fall short - a good developer possesses excellent soft skills - communication; time management; awareness; tactical and strategic thinking (detailed planning with an eye on the big picture); an ability to identify risk, weigh-up options and make decisions quickly; objectivity and pragmatism. He also has the courage of his convictions. A good software developer has the ability to &#8216;think&#8217; in different dimensions.&#8221;  (1)</p>
+
+<p>Well said.</p>
+
+<p>1 Agile in action - <a href="http://blog.energizedwork.com/2005/05/what-makes-good-software-developer.html">http://blog.energizedwork.com/2005/05/what-makes-good-software-developer.html</a>  </p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-01-21T13:28:40+01:00" pubdate data-updated="true">
+    <span class='day'> 21</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/the-real-cost-of-bad-software">The Real Cost of Bad Software</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/the-real-cost-of-bad-software#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake. All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.</p>
+
+<p>Below are some of the general characteristics of a software project</p>
 
 <ul>
-<li>Attempt 1: Fully agile - out of the book Scrum  </li>
-<li>Attempt 2: Upfront IA and graphic design  </li>
-<li>Attempt 3: Post skinning  </li>
-<li>Attempt 4: &#8220;Design Chunking&#8221;. The winner. i..e. Iteration Zero begins with design, design stays 1 iteration ahead.</li>
+<li>Objectives - what is the scope and what are the deliverables</li>
+<li>Resources - people/finance etc</li>
+<li>Finiteness - there is a fixed time scale</li>
+<li>Quality, which can be measured in terms of customer satisfaction and the organisation’s image. (1)</li>
 </ul>
 
 
-<p><img src="/images/old/2010/01/pastedgraphic1.png" alt="Pastedgraphic" /></p>
+<h3>Bad software</h3>
 
-<p>Design Chunking is essentially how our projects at Siyelo have naturally evolved to-date. WIth 1-week sprint lengths, we are tending to use a 1-week planning &amp; design concept phase (&#8220;iteration zero&#8221;) before starting development (though you can start doing non-UI features during this time too).</p>
-</div>
+<p>So how much is this going to cost you?  Let’s say that bad software is lacking in quality, which means that customer satisfaction is affected as is the organisation’s image.  </p>
+
+<p>Let’s have a look at some of the associated costs </p>
+
+<p><strong>Initial development cost (IDC)</strong></p>
+
+<p>Consider this as spent, a sunk cost, and if the output is unsatisfactory there are costs that arise as a result  </p>
+
+<p><strong>Continuing maintenance costs (MC)</strong></p>
+
+<p>If rework is not included in your contract you may find yourself paying for bugs to be fixed.  If the scope of the project was not clear and agreed upon you may find that you’re not covered for any additional work.  This can be pricey and above any formally agreed maintenance costs.</p>
+
+<p><strong>Time (T)</strong></p>
+
+<p>A lot of time would have been invested in the initial software development, with meetings to discuss the objectives, identifying deliverables etc.  If there’s bug fixing to be done you can be sure that this will result in more time being spent running backwards and forwards between supplier and customer.  Time should be an investment, but taking time out to fix bugs is just an unnecessary expense.</p>
+
+<p><strong>Effort (E)</strong></p>
+
+<p>It’s hard to allocate the cost of stress, frustration and bad relationships that result from deliverables not being met, but they’re there and they’re material. </p>
+
+<p><img src="/images/old/2010/01/pastedgraphic-1.png" alt="Pastedgraphic-1" /></p>
+
+<p><strong>Rework costs (RC)</strong></p>
+
+<p>It’s unlikely that you’d pay the same supplier to do the work over again from scratch, but the possibility is there that you find yourself contracting someone new.  </p>
+
+<p><strong>Opportunity costs (OC)</strong></p>
+
+<p>If your business depends on the software to run, then you are losing out every minute when it doesn’t work.  If you have made promises of your own which depend on functioning software you could be damaging your customer relations, and there is a potential to hurt your brand image.</p>
+
+<p><strong>Unforeseeable costs (UC)</strong></p>
+
+<p>Impossible to anticipate, but glitches in software can be catastrophic.  Errors which end up paying someone $100,000 instead of $10,000 can cripple a company.   </p>
+
+<p><strong>Total cost (TC):</strong></p>
+
+<p><code>TC = IDC + MC + T + E + RC + OC +UC</code></p>
+
+<p>If the software that you are handed results in any of the above costs (MC, T, E, RC, OC, UC) then that makes up the cost of bad software.   And these costs are the reason why you need to ensure that your software developer is able to provide you with quality, and that quality is one of their core values.  As with all things in life you get what you pay for, and spending a bit more upfront can potentially save your entire company later on.</p>
+
+<p>1: Integrated Management, Ann Norton, Elsevier, 2008</p>
+</div></div>
   
   
 
 
-    </article>
-  
-  
-    <article>
+      </article>
+    
+    <div class="pagination">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty">Using Git? How to Know What Branch You&#8217;re on, and if Its Dirty.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-17T11:06:32+02:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
-        
-         | <a href="/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do you lie awake at night dreaming of a way to save your fingers from typing &#8216;git status&#8217; too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you;</p>
-
-<p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34"><img src="http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg" alt="Terminal 2014 bash 2014 108ճ4" /></a></p>
-
-<p>Paste this code into your .bash_profile and off you go.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># Bash prompt showing current git branch &amp; marking if dirty:</span>
-</span><span class='line'><span class="c"># Based on http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
-</span><span class='line'>  <span class="o">[[</span> <span class="k">$(</span>git status 2&gt; /dev/null | tail -n1<span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;nothing to commit (working directory clean)&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
-</span><span class='line'>  git branch --no-color 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s2">&quot;s/* \(.*\)/[\1$(parse_git_dirty)]/&quot;</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="prev" href="/page/12/">Older</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/fix-for-annoying-bug-in-emailspec">Fix for Annoying Bug in EmailSpec</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-15T15:33:00+02:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
-        
-         | <a href="/fix-for-annoying-bug-in-emailspec#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as;</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Scenario</span> <span class="no">Outline</span><span class="p">:</span> <span class="no">Register</span> <span class="kp">new</span> <span class="n">user</span>
-</span><span class='line'><span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="n">signup</span> <span class="n">page</span>
-</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Email&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
-</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">fill</span> <span class="k">in</span> <span class="s2">&quot;Password&quot;</span> <span class="n">with</span> <span class="s2">&quot;&quot;</span>
-</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">press</span> <span class="s2">&quot;Create My Account&quot;</span>
-</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span>
-</span><span class='line'><span class="no">And</span> <span class="n">I</span> <span class="n">should</span> <span class="n">receive</span> <span class="n">an</span> <span class="n">email</span>
-</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">email</span>
-</span><span class='line'><span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;Please activate your new account&quot;</span> <span class="k">in</span> <span class="n">the</span> <span class="n">subject</span>
-</span><span class='line'><span class="no">When</span> <span class="n">I</span> <span class="n">click</span> <span class="n">the</span> <span class="n">first</span> <span class="n">link</span> <span class="k">in</span> <span class="n">the</span> <span class="n">email</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And if you happen to be using EmailSpec 0.3.5 and you&#8217;re getting an error like this, I may have a solution for you;</p>
-
-<pre><code>gem install glennr-email-spec
-</code></pre>
-
-<p><em><em>or via GitHub</em> <a href="http://github.com/glennr/email-spec">http://github.com/glennr/email-spec</a></em></p>
-
-<p>If you&#8217;re reading this Mr Mabey, please include in the next email-spec patch :-)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+      <a href="/blog/archives">Blog Archives</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/browser-market-share-applying-the-8020-rule">Browser Market Share: Applying the 80:20 Rule</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-12T11:10:22+02:00" pubdate data-updated="true">Dec 12<span>th</span>, 2009</time>
-        
-         | <a href="/browser-market-share-applying-the-8020-rule#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>80% of the effort in many web development projects we&#8217;ve done was spent making the site work on ~20% of the browsers out there. Thats why its worth explaining to clients about standards-compliance, and focusing on making their sites work in those web browsers.</p>
-
-<p>Axiis came up with <a href="http://www.axiis.org/examples/BrowserMarketShare.html">this clever visual representation</a> of browser market share based on the W3C usage stats.</p>
-
-<p>  <img src="/images/old/2009/12/pastedgraphic-png-scaled-500.jpg" alt="Pastedgraphic" /></p>
-
-<p>Its great to see browsers like IE6/7 losing their grip on the market. Its good news for web developers, and for their clients. Save time. Save money. Go Firefox.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+      <a class="next" href="/page/10/">Newer</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/handy-git-aliases-and-config-directives">Handy Git Aliases and Config Directives</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-11-30T12:53:00+02:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
-        
-         | <a href="/handy-git-aliases-and-config-directives#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
-</span><span class='line'>st = status
-</span><span class='line'>ci = commit
-</span><span class='line'>co = checkout
-</span><span class='line'>br = branch</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also, you might find these will come in handy;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[merge]
-</span><span class='line'>tool = opendiff
-</span><span class='line'>summary = true
-</span><span class='line'>
-</span><span class='line'>[color]
-</span><span class='line'>diff = auto
-</span><span class='line'>status = auto
-</span><span class='line'>branch = auto
-</span><span class='line'>interactive = auto</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
-</span><span class='line'><span class="c"># http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/</span>
-</span><span class='line'><span class="c"># http://gist.github.com/47546</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
-</span><span class='line'>  git diff --quiet HEAD &amp;&gt;/dev/null
-</span><span class='line'>  <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> 1 <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
-</span><span class='line'>  <span class="nb">local </span><span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>__git_ps1 <span class="s2">&quot;%s&quot;</span><span class="k">)</span>
-</span><span class='line'>  <span class="o">[[</span> <span class="nv">$branch</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;[$branch$(parse_git_dirty)]&quot;</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/page/12/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/page/10/">Newer &rarr;</a>
-    
+    </div>
   </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
+  <aside class="sidebar">
+    
+      <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/this-weeks-tldr-82702">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We&#8217;re Hiring - Experienced Web Developer</a>
+        <a href="/this-weeks-tldr-92708">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/scratching-an-itch">Scratching an itch</a>
+        <a href="/this-weeks-tldr-24557">This week&#8217;s TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+        <a href="/its-not-you-its-me">It&#8217;s not you, it&#8217;s me&#8230;</a>
       </li>
     
       <li class="post">
-        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+        <a href="/this-weeks-tldr-22431">This week&#8217;s TL;DR</a>
       </li>
     
   </ul>
@@ -464,7 +554,7 @@
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
   
   <script type="text/javascript">
     $.domReady(function(){
@@ -508,16 +598,59 @@
 
 
 
-  
-</aside>
+    
+  </aside>
+</div>
 
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Siyelo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
+  </footer>
 </footer>
   
 

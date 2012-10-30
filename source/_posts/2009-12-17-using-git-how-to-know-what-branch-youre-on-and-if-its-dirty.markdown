@@ -3,11 +3,11 @@ layout: post
 title: "Using Git? How to know what branch you're on, and if its dirty."
 date: 2009-12-17 09:06:32
 comments: true
-categories:
+categories: Git Bash
 author: Glenn Roberts
 ---
 
-Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (`*`) on the command prompt to tell you that the working directory is dirty? No more insomnia for you;
+Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (`*`) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.
 
 [![Terminal 2014 bash 2014 108ճ4](http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg)](http://skitch.com/glennr/ncyku/terminal-bash-108x34)
 

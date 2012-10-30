@@ -3,7 +3,7 @@ layout: post
 title: "Can't drop your Heroku database?"
 date: 2011-07-27 13:08:00
 comments: true
-categories:
+categories: Heroku
 author: Glenn Roberts
 ---
 

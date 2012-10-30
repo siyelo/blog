@@ -3,13 +3,13 @@ layout: post
 title: "Vim Tips - Part II"
 date: 2012-07-03 14:39:23
 comments: true
-categories:
+categories: Vim Tutorial
 author: Dalibor Nasevic
 ---
 
 This week we'll share few more userful Vim tips that we've learned recently, most of them from the [Practical Vim](http://pragprog.com/book/dnvim/practical-vim) book. You can also read the first part in this series [Vim Tips - Part I](http://blog.siyelo.com/vim-tips-part-i) at our blog.
 
-### 1. Replace in multiple files
+## 1. Replace in multiple files
 
 To search & replace in multiple files, we need to create list of files in which we'll execute a command. We do that by using the **:args** command. For example, lets load all javascript files that start with the "hrt" string:
 
@@ -35,7 +35,7 @@ Once changes have been made in the files, we can save all the files in arguments
 :argdo update
 ```
 
-### 2. Search and replace in multiple files
+## 2. Search and replace in multiple files
 
 Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using **vimgrep** command to find a pattern in files .**vimgrep** command creates quicklist with files matching the pattern which list we can see by opening it with **:copen** command. If we want quicklist to be useful, we need to convert it to arguments list by using the **:Qargs** mapping which we have in our vimrc file:
 
@@ -60,18 +60,18 @@ Finally, here's an example of what needs to be run to do search & replace in fil
 :argdo update
 ```
 
-### 3. Edit already recorded macro
+## 3. Edit already recorded macro
 
 While recording a macro it's easy to do mistakes. And when that happens, it's easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register **a**. We can print the content of the macro in the current buffer using **:put a** and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with **"ay**. Then we are ready to execute the new macro from register a with **@a**.
 
-### 4. Execute macro in multiple files
+## 4. Execute macro in multiple files
 
 We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let's load all models from a Rails app:
 :args app/models/*.rb Then we run the macro (that is recorded in register a) with:
 :argdo normal @aIn the end we save all the buffers with:
 :argdo update
 
-### 5. Delete commands
+## 5. Delete commands
 
 We can run the following command in **Insert mode**, **Vim Command Line mode** or **Shell Command Line**:
 
@@ -81,7 +81,7 @@ We can run the following command in **Insert mode**, **Vim Command Line mode** o
 <C-u> " delete back to start of line
 ```
 
-### 6. Vi mode on command line
+## 6. Vi mode on command line
 
 Bash shell provides two modes for command line editing - **emacs** and **vi**. Emacs editing mode is the default one, and we can change it to vi mode using:
 

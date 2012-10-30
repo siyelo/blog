@@ -3,7 +3,7 @@ layout: post
 title: "Rails 3 upgrade process (the road from 2.3.14 to 3.2.6)"
 date: 2012-06-21 16:10:35
 comments: true
-categories:
+categories: Rails
 author:
 ---
 
@@ -79,7 +79,6 @@ rails g cucumber:install --rspec --capybara --spork
 bundle exec guard init
 bundle exec guard init spork
 ```
-
 
 If using cucumber and it's old web steps, you'll need to add [cucumber-rails-training-wheels](https://github.com/cucumber/cucumber-rails-training-wheels)  to the Gemfile. It's also good to setup the [assets pipeline](http://guides.rubyonrails.org/asset_pipeline.html)  in order to get the full benefits from newest version of Rails.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Scaling Ruby on Rails for the Enterprise"
 date: 2010-06-18 23:14:38
 comments: true
-categories:
+categories: Fun
 author: Glenn Roberts
 ---
 

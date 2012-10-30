@@ -3,8 +3,8 @@ layout: post
 title: "WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN"
 date: 2012-05-11 14:07:00
 comments: true
-categories:
-author:
+categories: Jobs
+author: Glenn Roberts
 ---
 
 Siyelo is growing fast and we're looking for a bright, hardworking individual to join our team as a Social Media Intern!

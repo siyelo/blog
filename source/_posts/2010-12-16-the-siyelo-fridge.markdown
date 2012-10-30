@@ -3,7 +3,7 @@ layout: post
 title: "The Siyelo fridge"
 date: 2010-12-16 18:53:25
 comments: true
-categories:
+categories: Fun
 author: Glenn Roberts
 ---
 

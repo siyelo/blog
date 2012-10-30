@@ -3,7 +3,7 @@ layout: post
 title: "Rails 2.3/Devise : changing your email content type."
 date: 2010-02-18 14:26:00
 comments: true
-categories:
+categories: Rails
 author: Glenn Roberts
 ---
 
@@ -33,4 +33,4 @@ or
 config.gem 'glennr-devise', :lib => 'devise', :source => 'http://gemcutter.org'
 {% endcodeblock %}
 
-The github branch is here, and should be merged into the Devise trunk shortly: [http://github.com/glennr/devise](http://github.com/glennr/devise)
+The github branch is here, and should be merged into the Devise trunk shortly: [http://github.com/glennr/devise](http://github.com/glennr/devise).

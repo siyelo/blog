@@ -1,0 +1,244 @@
+body, html
+  height: auto !important
+
+#blog
+  font-family: "Avenir Light", "open sans", Arial, Helvetica, sans-serif
+  text-align: left
+  
+  #articles p
+    font-size: 14px
+    line-height: 1.5
+    margin-bottom: 1.2em
+    
+  p + ul
+    margin: -1.2em 0 1.2em
+  p + .code
+    margin: -.9em 0 1.2em
+    
+  h2
+    background: none
+    border-bottom: 0
+    color: $light
+    font: 22px "Avenir Medium", sans-serif
+    margin: 1.6em 0 .4em
+    padding: 0
+    text-align: left
+    text-transform: none
+
+  #page_header
+    float: left
+    margin-left: 0
+    width: 70%
+    #extra_links
+      margin: 0
+      padding-left: 23%
+
+  .sidebar
+    border-top: 0
+    float: right
+    margin: 0
+    width: 25%
+
+    h1
+      font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
+      font-size: 18px
+      margin-bottom: 25px
+      margin-top: 0
+      padding-top: 10px
+      text-align: left
+    li
+      font-size: 14px
+      line-height: 1.5
+
+    #tags li
+      margin-bottom: 3px
+
+    form.search input.text
+      width: 140px
+    .on-github
+      font-size: 14px
+      font-style: italic
+      margin-top: 5px
+
+  #articles
+    border-right: 0
+    float: left
+    font-size: 12px
+    width: 70%
+    
+    > article
+      float: left
+      margin-bottom: 4em
+      position: relative
+      width: 100%
+
+    article header section
+      
+
+    header
+      +pie-clearfix
+      border: none !important
+
+      h1
+        margin-bottom: .1em
+        padding-top: 0
+        a
+          font: 32px/1 "Avenir Medium", sans-serif
+
+    article
+      width: 100%
+
+      .body, .entry-content, footer
+        float: left
+        padding-left: 11%
+        width: 89%
+
+    h1
+      color: #193045
+      font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
+      font-size: 28px !important
+      letter-spacing: 0
+      margin-top: 0
+      margin-bottom: 15px
+      text-align: left
+      a
+        color: #193045
+        font-family: 'Avenir Medium', Arial, Helvetica, sans-serif
+
+    .post
+      footer
+        font-size: 11px
+        margin: 0 0 50px
+        position: relative
+        float: left
+        padding-left: 23%
+        width: 75%
+
+        .author, .comments
+          font-size: 11px
+
+        .share
+          margin-top: 10px
+          border-top: 1px #ccc solid
+          padding-top: 10px
+
+        .comments h1
+          border-bottom: 3px #ccc solid
+          padding-bottom: 10px
+          margin-left: 0
+
+        .comments, .author
+          h1
+            font-size: 12px !important
+            padding-top: 0 !important
+
+    .comment
+      width: 100%
+
+    .comments_list h1
+      width: 100%
+
+    .comment_avatar
+      float: left
+      margin: 0 10px 10px 0
+
+    .commentname
+      height: 35px
+      margin-bottom: 10px
+
+    .webkit-indent-blockquote
+      font-family: 'Avenir Light', Arial, Helvetica, sans-serif
+      color: #666
+      font-size: 12px
+      font-style: italic
+      padding-left: 10px
+
+    blockquote
+      padding-left: 10px
+
+    .gist
+      font-family: 'Avenir Light', Arial, Helvetica, sans-serif
+      color: #666
+      font-size: 11px
+      font-style: italic
+
+      .gist-file
+        border: 0
+        background: #bbb
+
+  > div
+    border: none
+
+  .comment_label
+    width: 10%
+
+  .commentunit
+    margin: 0
+    padding: 15px 0 0
+    .comment
+      margin-left: 0
+      width: 70% !important
+
+  .comment_date
+    font-size: 12px
+    text-align: left
+
+  #pagination
+    font-size: 11px
+    margin: 10px 0 0 175px
+
+  section#extra_links
+    margin: 60px 0 -30px 10px
+    padding-bottom: 2px
+    a.back_to_blog
+      font-size: 12px
+      margin: 0
+
+time.timestamp
+  background: $light
+  color: #fff
+  display: block
+  font-family: Arial
+  font-style: normal
+  letter-spacing: 1px
+  margin-top: 5px
+  padding: 10px 0
+  width: 100%
+  +pie-clearfix
+  left: 0
+  position: absolute
+  text-align: center
+  top: 0
+  width: 7%
+  span
+    display: block
+    font-weight: bold
+    text-transform: uppercase
+    &.day
+      font-size: 2.2em
+      line-height: 1
+    &.month
+      font-size: 1.15em
+      line-height: 0.9
+    &.year
+      font-size: 1em
+      line-height: 1.2
+  a
+    color: #fff
+    font-size: 11px
+    text-transform: uppercase
+    +text-shadow($light - #222 0 1px 0)
+
+@media only screen and (min-width: 320px) and (max-width: 859px)
+  #blog
+    #multiclouds
+      background: none
+    #header, #footer, #page__header, #articles, .sidebar
+      display: block
+      float: none
+      width: 100%
+    h1
+      font-size: 70%
+      white-space: normal
+    #sidebar
+      display: none

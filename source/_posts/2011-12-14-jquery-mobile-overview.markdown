@@ -3,10 +3,9 @@ layout: post
 title: "jQuery Mobile overview"
 date: 2011-12-14 09:51:00
 comments: true
-categories:
+categories: Mobile
 author: Naum Kostovski
 ---
-
 
 We've all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?
 
@@ -18,7 +17,7 @@ Building a mobile application with jQuery Mobile is extremely easy and fast
 
 One of the biggest advantages of jQuery Mobile is that even as a newcomer to the framework you can develop a rough version of your application in a matter of days as opposed to the native application development for Android and iOS where the learning curve is not quite as steep.
 
-To make your application mobile just include the jQuery Mobile files in your header
+To make your application mobile just include the jQuery Mobile files in your header:
 
 ``` html
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
@@ -26,7 +25,7 @@ To make your application mobile just include the jQuery Mobile files in your hea
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 ```
 
-Add the data attributes to your HTML markup
+Add the data attributes to your HTML markup:
 
 ``` html
 <div data-role="page" data-theme="e">

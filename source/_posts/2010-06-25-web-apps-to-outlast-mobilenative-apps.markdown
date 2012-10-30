@@ -3,10 +3,9 @@ layout: post
 title: "Web apps to outlast mobile/native apps"
 date: 2010-06-25 13:29:08
 comments: true
-categories:
+categories: Web Design
 author: Glenn Roberts
 ---
-
 
 Tourrey Rice of SitePen and dojo fame, presents an excellent case for the longevity of web applications, especially with the introduction of HTML5 / CSS3 and mobile browsers.
 

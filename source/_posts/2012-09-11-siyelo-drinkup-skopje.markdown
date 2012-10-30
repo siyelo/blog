@@ -3,7 +3,7 @@ layout: post
 title: "Siyelo Drinkup: Skopje"
 date: 2012-09-11 14:09:00
 comments: true
-categories:
+categories: Fun
 author: Glenn Roberts
 ---
 
@@ -15,7 +15,7 @@ If you're into web technologies, come and join us next Wednesday night for a gre
 
 ![Bar people](/images/old/2012/09/pastedgraphic-1.png)
 
-**Details:**
+## Details:
 
 * **Where**: [La Bodeguita Del Medio](http://www.bodeguita.com.mk/) 13 Noembri 180, Skopje
 * **When**:  Wednesday, 19 Sep, 7PM!

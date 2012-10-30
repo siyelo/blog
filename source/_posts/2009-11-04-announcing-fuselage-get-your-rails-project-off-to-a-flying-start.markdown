@@ -3,7 +3,7 @@ layout: post
 title: "Announcing Fuselage - Get your Rails project off to a flying start!"
 date: 2009-11-04 09:08:00
 comments: true
-categories: Open Source
+categories: Open-Source Rails
 author: Glenn Roberts
 ---
 
@@ -15,7 +15,9 @@ Fuselage avoids asking a lot of questions, so if you want to customize your inst
 
 Usage is very simple. You can invoke it directly from your "rails -m" command with:
 
-    rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+``` bash
+rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+```
 
 (note this does a git clone of Fuselage for you automatically)
 
@@ -27,9 +29,9 @@ Currently Fuselage includes the following;
 
 **Rails**
 
-*   basic template for a clean a rails install
-*   SCS
-*   git
+* basic template for a clean a rails install
+* SCS
+* git
 
 **DB + Models**
 

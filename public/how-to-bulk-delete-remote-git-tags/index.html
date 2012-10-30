@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.; 1
+  <meta name="description" content="project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.: 1
 2
 3
 0.9.6c
@@ -30,6 +30,7 @@
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -50,16 +51,32 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Siyelo</a></h1>
-  
-    <h2>A blogging framework for siyelos.</h2>
-  
-</hgroup>
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -76,40 +93,48 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
+</nav> -->
+  <div class="wrapper multiclouds">
+  <div id="articles">
+    
+    <article class="hentry" role="article" class="post clearfix">
+      
   <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 01</span>
+    <span class='month'> Aug</span>
+    <span class='year'> 2011</span>
+  </time></section>
     
       <h1 class="entry-title">How to Bulk Delete Remote Git Tags</h1>
     
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">Aug 1<span>st</span>, 2011</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
-    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
   </header>
 
 
-<div class="entry-content"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.;</p>
+<div class="entry-content"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -122,7 +147,7 @@
 
 <p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
-<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.;</p>
+<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -133,7 +158,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>With a bit of awk and regexp love, we can match that output with;</p>
+<p>With a bit of awk and regexp love, we can match that output with:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -144,14 +169,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And we know that to delete a git tag on a remote you use;</p>
+<p>And we know that to delete a git tag on a remote you use:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So putting it all together we get;</p>
+<p>So putting it all together we get:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
@@ -178,7 +203,7 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Similarly for removing these pre-release tags from a local git repo;</p>
+<p>Similarly for removing these pre-release tags from a local git repo:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -197,32 +222,47 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        
+        <div class="meta-data">          
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span>
+<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span></p>
 
-      
-
-
+          
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 01</span>
+    <span class='month'> Aug</span>
+    <span class='year'> 2011</span>
+  </time></section>
+          
+
+<span class="categories">
   
+    <a class='category' href='/blog/categories/git/'>Git</a>
+  
+</span>
 
 
-<time datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">Aug 1<span>st</span>, 2011</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
+          
+          
+            <div class="sharing right">
   
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags" data-via="siyelo" data-counturl="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags" >Tweet</a>
   
@@ -230,50 +270,54 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
   
 </div>
 
+          
+        </div>
+        
+        <p class="meta pagination">
+          
+            <a class="basic-alignment left" href="/cant-drop-your-heroku-database" title="Previous Post: Can't drop your Heroku database?">Can't drop your Heroku database?</a>
+          
+          
+            <a class="basic-alignment right" href="/installing-a-gem-in-all-your-global-rvm-gemsets" title="Next Post: Installing a gem in all your global RVM gemsets">Installing a gem in all your global RVM gemsets</a>
+          
+        </p>
+        
+      </footer>
+    </article>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/cant-drop-your-heroku-database" title="Previous Post: Can't drop your Heroku database?">&laquo; Can't drop your Heroku database?</a>
-      
-      
-        <a class="basic-alignment right" href="/installing-a-gem-in-all-your-global-rvm-gemsets" title="Next Post: Installing a gem in all your global RVM gemsets">Installing a gem in all your global RVM gemsets &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      <section class="comments">
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+      </section>
+    
+  </div>
 
-</div>
-
-<aside class="sidebar">
   
-    <section>
+  <aside class="sidebar">
+    
+      <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a>
+        <a href="/this-weeks-tldr-82702">This week's TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/were-hiring-experienced-web-developer">We're Hiring - Experienced Web Developer</a>
+        <a href="/this-weeks-tldr-92708">This week's TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/scratching-an-itch">Scratching an itch</a>
+        <a href="/this-weeks-tldr-24557">This week's TL;DR</a>
       </li>
     
       <li class="post">
-        <a href="/rails-deployment-audit">Rails Deployment Audit</a>
+        <a href="/its-not-you-its-me">It's not you, it's me...</a>
       </li>
     
       <li class="post">
-        <a href="/vim-tips-part-ii">Vim Tips - Part II</a>
+        <a href="/this-weeks-tldr-22431">This week's TL;DR</a>
       </li>
     
   </ul>
@@ -285,7 +329,7 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
     <li class="loading">Status updating...</li>
   </ul>
   
-  <a href="https://github.com/siyelo">@siyelo</a> on GitHub
+  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
   
   <script type="text/javascript">
     $.domReady(function(){
@@ -329,17 +373,59 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 
 
 
+    
+  </aside>
   
-</aside>
-
-
+</div>
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Siyelo -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
+  </footer>
 </footer>
   
 

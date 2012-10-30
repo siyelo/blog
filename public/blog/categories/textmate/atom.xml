@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Textmate | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/textmate/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-10-30T13:41:44+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Make Textmate your $EDITOR of choice]]></title>
+    <link href="http://blog.siyelo.com/make-textmate-your-editor-of-choice"/>
+    <updated>2009-11-19T09:46:59+01:00</updated>
+    <id>http://blog.siyelo.com/make-textmate-your-editor-of-choice</id>
+    <content type="html"><![CDATA[<p>If you are a master of Vim and feel like a sea-change, or if you're just plain scared, you can set up Textmate as your default editor.</p>
+
+<p><code>bash
+export EDITOR='mate -w'
+export GIT_EDITOR='mate -wl1'. #This instructs TextMate to open with the caret at line 1 rather than where it last was.
+</code></p>
+
+<p>Whack this in your .profile (e.g. ~/.bash_profile), re-source it:</p>
+
+<p><code>bash
+source ~/.bash_profile
+</code></p>
+
+<p>And off you go.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Textmate tip: Align statments]]></title>
+    <link href="http://blog.siyelo.com/textmate-tip-align-statments"/>
+    <updated>2009-11-18T07:53:00+01:00</updated>
+    <id>http://blog.siyelo.com/textmate-tip-align-statments</id>
+    <content type="html"><![CDATA[<p>If you want to go from this:</p>
+
+<p><img src="/images/old/2009/11/pastedgraphic1.png" alt="Pastedgraphic" /></p>
+
+<p>to an aligned, and much more legible statement list like this:</p>
+
+<p><img src="/images/old/2009/11/0pastedgraphic.png" alt="Pastedgraphic" /></p>
+
+<p>The textmate key combination for this is: <strong>⌥⌘]</strong> (Alt + Cmd + Bracket)</p>
+]]></content>
+  </entry>
+  
+</feed>

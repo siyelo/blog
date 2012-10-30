@@ -3,11 +3,11 @@ layout: post
 title: "The real cost of bad software"
 date: 2010-01-21 12:28:40
 comments: true
-categories:
+categories: Business
 author: Vivi Walsh
 ---
 
-The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake.   All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.
+The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake. All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.
 
 Below are some of the general characteristics of a software project
 
@@ -54,7 +54,7 @@ Impossible to anticipate, but glitches in software can be catastrophic.  Errors
 
 **Total cost (TC):**
 
-TC = IDC + MC + T + E + RC + OC +UC
+`TC = IDC + MC + T + E + RC + OC +UC`
 
 If the software that you are handed results in any of the above costs (MC, T, E, RC, OC, UC) then that makes up the cost of bad software.   And these costs are the reason why you need to ensure that your software developer is able to provide you with quality, and that quality is one of their core values.  As with all things in life you get what you pay for, and spending a bit more upfront can potentially save your entire company later on.
 

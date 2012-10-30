@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Heroku | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/heroku/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2012-10-30T13:41:44+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Can't drop your Heroku database?]]></title>
+    <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
+    <updated>2011-07-27T15:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
+    <content type="html"><![CDATA[<p>If you're trying to drop your database on Heroku, and it's not working, be sure you put it in maintenance mode first. i.e.</p>
+
+<h3>Step 1</h3>
+
+<p><code>bash
+$ heroku maintenance:on --app
+</code></p>
+
+<h3>Step 2</h3>
+
+<p><code>bash
+$ heroku pg:reset SHARED_DATABASE --app
+</code></p>
+
+<h3>Step 3</h3>
+
+<p>???</p>
+
+<h3>Step 4</h3>
+
+<h3>Profit</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Zerigo DNS template for Heroku and Google Apps]]></title>
+    <link href="http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps"/>
+    <updated>2010-12-01T10:23:45+01:00</updated>
+    <id>http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps</id>
+    <content type="html"><![CDATA[<p>While recently switching over a client's web app, and their mailservers to Google Apps, I found that Zerigo's template feature would make me less likely to murder kittens whenever I'm asked to do anything related to DNS.</p>
+
+<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
+
+<p>So here's our Zerigo DNS template for a Heroku + Google Apps setup.</p>
+
+<h3>Part A - Heroku</h3>
+
+<p><a href="/images/old/2010/12/pastedgraphic-7.png"><img src="/images/old/2010/12/pastedgraphic-7.png" alt="Pastedgraphic-7" /> </a></p>
+
+<p>Heroku docs: <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a></p>
+
+<h3>Part B - Google Apps Mail</h3>
+
+<p><a href="http://getfile4.posterous.com/getfile/files.posterous.com/siyelo/tHuMks4RfHiRhJBNSrNopDqnjeg2OqVXvkhl7rBqbD4ZzqlzL0hAHyPLiIvM/PastedGraphic-6.png"><img src="/images/old/2010/12/pastedgraphic-6-png-scaled-500.jpg" alt="Pastedgraphic-6" /> </a></p>
+
+<p>Google apps mail help article: <a href="http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866">http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866</a></p>
+
+<h3>Part C - Google Apps miscellany </h3>
+
+<p>This is for webmail/docs/calendar</p>
+
+<p><a href="http://getfile9.posterous.com/getfile/files.posterous.com/siyelo/FmL94NEY7i4CsVB58RiTsqMOmOUEiLeiHXMAiWYQvrL915QmPdMGCCzvdHV7/PastedGraphic-8.png"><img src="/images/old/2010/12/pastedgraphic-8-png-scaled-500.jpg" alt="Pastedgraphic-8" /> </a></p>
+
+<p>And there you go! Never kill a kitten (again).</p>
+
+<p>Other similar links you might find useful: <a href="http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/">http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Full text search on Heroku with Texticle]]></title>
+    <link href="http://blog.siyelo.com/full-text-search-on-heroku-with-texticle"/>
+    <updated>2010-01-12T10:44:47+01:00</updated>
+    <id>http://blog.siyelo.com/full-text-search-on-heroku-with-texticle</id>
+    <content type="html"><![CDATA[<p>We just spent some time investigating some alternative to full text search on Heroku. The initial solutions were either ThinkingSphinx (with a remote sphinx daemon, and another copy of the app running - yuck), or one of the paid options like WebSolr. None tickled our fancy. Free and simple tickle our fancy.</p>
+
+<p>Along comes Texticle. Not sure about the name, but it simple, and works a treat.</p>
+
+<p><a href="http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/">http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/</a></p>
+
+<p><img src="/images/old/2010/01/pastedgraphic.png" alt="Pastedgraphic" /></p>
+
+<p>He's even sporting a mullet in his <a href="http://github.com/tenderlove/texticle">github avatar</a>. Bonus points for that.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Heroku - the 5mb free plan - is it enough?]]></title>
+    <link href="http://blog.siyelo.com/heroku-the-5mb-free-plan-is-it-enough"/>
+    <updated>2009-11-17T21:04:30+01:00</updated>
+    <id>http://blog.siyelo.com/heroku-the-5mb-free-plan-is-it-enough</id>
+    <content type="html"><![CDATA[<p>Heroku just got better. </p>
+
+<p>If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku's free (5mb) plan, then you're in luck. Read on;</p>
+
+<p>Begin forwarded message:</p>
+
+<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar... (ticket #2486) <br />
+<strong>glenn.roberts, Nov 17 12:04 am (PST):</strong> <br />
+Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ? <br />
+Regards <br />
+Glenn</p>
+
+<p><strong>morten, Nov 17 11:04 am (PST):</strong> <br />
+Glenn, <br />
+The database plans cover database (rows) storage only. Additionally, you're allowed a compiled code repo size of 50mb (that's your git repo). <br />
+/Morten <br />
+This email is a service from Support <br /></p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Heroku - the fastest way to getting a Rails app into Production]]></title>
+    <link href="http://blog.siyelo.com/heroku-the-fastest-way-to-getting-a-rails-app-into-production"/>
+    <updated>2009-11-17T17:44:00+01:00</updated>
+    <id>http://blog.siyelo.com/heroku-the-fastest-way-to-getting-a-rails-app-into-production</id>
+    <content type="html"><![CDATA[<p>Ok, unless you already have a nice Capistrano deploy script lying around and a tasty Linode/Slicehost VPS, then <a href="http://heroku.com/">Heroku</a> may just be the fastest way to get a Rails app deployed on a production system.</p>
+
+<p>Its as easy as:</p>
+
+<p><code>bash
+sudo gem install heroku
+heroku create
+git push heroku master
+heroku rake db:migrate
+heroku open
+</code></p>
+
+<p>Sit back and watch your app open automagically in your browser.</p>
+
+<p>Also note, Siyelo <a href="http://github.com/siyelo/fuselage">Fuselage</a> has been updated to be compatible with a Heroku deployment.</p>
+]]></content>
+  </entry>
+  
+</feed>
