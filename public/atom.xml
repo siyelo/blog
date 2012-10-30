@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-30T17:17:26+02:00</updated>
+  <updated>2012-10-30T17:24:42+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,6 +18,7 @@
     <link href="http://blog.siyelo.com/weekly-roundup-5"/>
     <updated>2012-10-19T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-5</id>
+    <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to <a href="http://www.twitter.com/railsonfire">@railsonfire</a>):</p>
 
 <ul>
@@ -41,6 +42,7 @@
     <link href="http://blog.siyelo.com/weekly-roundup-4"/>
     <updated>2012-10-12T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-4</id>
+    <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here&#8217;s this week&#8217;s edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.</p>
 
 <p>Sachin and Glenn shared some tips &amp; tricks:</p>
@@ -72,6 +74,7 @@
     <link href="http://blog.siyelo.com/weekly-roundup-3"/>
     <updated>2012-10-05T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-3</id>
+    <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
 
 <p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
@@ -91,6 +94,7 @@
     <link href="http://blog.siyelo.com/its-not-you-its-me"/>
     <updated>2012-10-05T15:00:00+02:00</updated>
     <id>http://blog.siyelo.com/its-not-you-its-me</id>
+    <author>Peter Garbers</author>
     <content type="html"><![CDATA[<p>Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here&#8217;s the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;</p>
 
 <p><a href="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg"><img src="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg" alt="" /></a></p>
@@ -124,6 +128,7 @@
     <link href="http://blog.siyelo.com/weekly-roundup-2"/>
     <updated>2012-09-28T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-2</id>
+    <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you&#8217;ll find something thought provoking. </p>
 
 <p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer&#8217;s Guide</a>, it&#8217;s not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
@@ -149,6 +154,7 @@
     <link href="http://blog.siyelo.com/siyelo-drinkup-skopje-the-photos"/>
     <updated>2012-09-24T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/siyelo-drinkup-skopje-the-photos</id>
+    <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>Some photos from our drinkup on Wednesday night. Thanks to all who came along!</p>
 
 <p><a href="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0003.jpg"><img src="http://blog.siyelo.com/images/old/2012/09/drinkup/scaled/DSC_0003.jpg" alt="" /></a></p>
@@ -182,6 +188,7 @@
     <link href="http://blog.siyelo.com/junior-web-developer-wanted"/>
     <updated>2012-09-20T16:00:00+02:00</updated>
     <id>http://blog.siyelo.com/junior-web-developer-wanted</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.</p>
 
 <h2>Opportunity</h2>
@@ -229,6 +236,7 @@
     <link href="http://blog.siyelo.com/weekly-roundup-1"/>
     <updated>2012-09-13T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-1</id>
+    <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn&#8217;t safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
 
 <p>This post starts a series of weekly articles where we&#8217;ll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
@@ -252,6 +260,7 @@
     <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
     <updated>2012-09-11T16:09:00+02:00</updated>
     <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
+    <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>There&#8217;ll be <a href="https://github.com/dalibor">three</a> <a href="https://github.com/Dime">Siyelo</a> <a href="https://github.com/glennr">folks</a> in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.</p>
 
 <p><img src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-4.png" alt="Github Siyelo members" /></p>
@@ -277,6 +286,7 @@
     <link href="http://blog.siyelo.com/were-hiring-experienced-web-developer"/>
     <updated>2012-09-11T15:45:00+02:00</updated>
     <id>http://blog.siyelo.com/were-hiring-experienced-web-developer</id>
+    <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p><a href="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg"><img src="http://blog.siyelo.com/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg" alt="Nsyncsongpics1llj5txulpx8qrm" /> </a></p>
 
 <p>Siyelo is growing and we&#8217;re looking for talented software developers to join our team!</p>
@@ -333,6 +343,7 @@
     <link href="http://blog.siyelo.com/scratching-an-itch"/>
     <updated>2012-09-07T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/scratching-an-itch</id>
+    <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>This week we released a very simple gem called <a href="https://rubygems.org/gems/should_clean">ShouldClean</a>. ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;).  </p>
 
 <p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word &#8216;should&#8217; and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
@@ -366,6 +377,7 @@
     <link href="http://blog.siyelo.com/rails-deployment-audit"/>
     <updated>2012-07-13T16:13:00+02:00</updated>
     <id>http://blog.siyelo.com/rails-deployment-audit</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
 
 <p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
@@ -439,6 +451,7 @@
     <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
     <updated>2012-07-03T16:39:23+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-ii</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
 
 <h2>1. Replace in multiple files</h2>
@@ -560,6 +573,7 @@
     <link href="http://blog.siyelo.com/vim-tips-part-i"/>
     <updated>2012-06-27T09:50:00+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-i</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
 
 <h3>1. Repeat the last Ex command</h3>
@@ -673,6 +687,7 @@
     <link href="http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6"/>
     <updated>2012-06-21T18:10:35+02:00</updated>
     <id>http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6</id>
+    <author></author>
     <content type="html"><![CDATA[<p>We&#8217;ve just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we&#8217;ll share some details about the experience and the process we took for the upgrade. Before the upgrade, it&#8217;s advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
 
 <h3>Versions running out of support&#8230;</h3>
@@ -780,6 +795,7 @@
     <link href="http://blog.siyelo.com/were-hiring-social-media-marketing-intern"/>
     <updated>2012-05-11T16:07:00+02:00</updated>
     <id>http://blog.siyelo.com/were-hiring-social-media-marketing-intern</id>
+    <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</p>
 
 <p>–</p>
@@ -853,6 +869,7 @@
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
     <updated>2011-12-30T12:41:00+02:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 
 <h3>Let&#8217;s build&#8230;</h3>
@@ -1124,6 +1141,7 @@
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
     <updated>2011-12-28T23:01:00+02:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
+    <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
 
 <p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
@@ -1179,6 +1197,7 @@
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
     <updated>2011-12-14T11:51:00+02:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
+    <author>Naum Kostovski</author>
     <content type="html"><![CDATA[<p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
 
 <p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
@@ -1268,6 +1287,7 @@
     <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
     <updated>2011-12-13T20:07:14+02:00</updated>
     <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
+    <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
 </div>
 
