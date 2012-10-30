@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-30T15:19:05+01:00</updated>
+  <updated>2012-10-30T16:53:48+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -851,7 +851,7 @@
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
-    <updated>2011-12-30T11:41:00+01:00</updated>
+    <updated>2011-12-30T12:41:00+02:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 
@@ -1122,7 +1122,7 @@
   <entry>
     <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
-    <updated>2011-12-28T22:01:00+01:00</updated>
+    <updated>2011-12-28T23:01:00+02:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
     <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
 
@@ -1177,7 +1177,7 @@
   <entry>
     <title type="html"><![CDATA[jQuery Mobile overview]]></title>
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
-    <updated>2011-12-14T10:51:00+01:00</updated>
+    <updated>2011-12-14T11:51:00+02:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
     <content type="html"><![CDATA[<p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
 
@@ -1266,7 +1266,7 @@
   <entry>
     <title type="html"><![CDATA[Stop Internet Censorship - FIGHT SOPA]]></title>
     <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
-    <updated>2011-12-13T19:07:14+01:00</updated>
+    <updated>2011-12-13T20:07:14+02:00</updated>
     <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
     <content type="html"><![CDATA[<div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
 </div>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-10-30T15:19:05+01:00</updated>
+  <updated>2012-10-30T16:53:48+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -45,7 +45,7 @@ it "should by default be 1"  #=&gt; it "by default is 1"
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
-    <updated>2011-12-30T11:41:00+01:00</updated>
+    <updated>2011-12-30T12:41:00+02:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 
@@ -249,7 +249,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[RubyFuZa conference, Cape Town - pics]]></title>
     <link href="http://blog.siyelo.com/rubyfuza-conference-cape-town-pics"/>
-    <updated>2011-02-05T11:14:27+01:00</updated>
+    <updated>2011-02-05T12:14:27+02:00</updated>
     <id>http://blog.siyelo.com/rubyfuza-conference-cape-town-pics</id>
     <content type="html"><![CDATA[<p><a href="/images/old/2011/02/img_1419-scaled-1000.jpg"><img src="/images/old/2011/02/img_1419-scaled-1000.jpg" alt="Img_1419" /> </a></p>
 
