@@ -5,10 +5,12 @@ body, html
   font-family: "Avenir Light", "open sans", Arial, Helvetica, sans-serif
   text-align: left
   
-  #articles p
-    font-size: 14px
-    line-height: 1.5
-    margin-bottom: 1.2em
+  #articles
+    +pie-clearfix
+    p
+      font-size: 14px
+      line-height: 1.5
+      margin-bottom: 1.2em
     
   p + ul
     margin: -1.2em 0 1.2em
@@ -71,9 +73,6 @@ body, html
       margin-bottom: 4em
       position: relative
       width: 100%
-
-    article header section
-      
 
     header
       +pie-clearfix

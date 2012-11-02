@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Agile | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-02T16:11:21+02:00</updated>
+  <updated>2012-11-02T15:44:52+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
     <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
-    <updated>2011-11-03T10:37:00+02:00</updated>
+    <updated>2011-11-03T09:37:00+01:00</updated>
     <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
     <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
 
@@ -147,7 +147,7 @@ screen -r # re-attach screen window
   <entry>
     <title type="html"><![CDATA[Are Agile Projects Doomed to Half-Baked Design?]]></title>
     <link href="http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design"/>
-    <updated>2010-01-10T22:23:08+02:00</updated>
+    <updated>2010-01-10T21:23:08+01:00</updated>
     <id>http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design</id>
     <content type="html"><![CDATA[<p>The answer is no.</p>
 
@@ -163,7 +163,7 @@ screen -r # re-attach screen window
   <entry>
     <title type="html"><![CDATA[Agile Contracts - Working group]]></title>
     <link href="http://blog.siyelo.com/agile-contracts-working-group"/>
-    <updated>2009-11-04T11:09:04+02:00</updated>
+    <updated>2009-11-04T10:09:04+01:00</updated>
     <id>http://blog.siyelo.com/agile-contracts-working-group</id>
     <content type="html"><![CDATA[<p><a href="http://www.coactivate.org/projects/agile-contracts/">The Agile Contracts working group</a> has an excellent sample (<a href="http://www.coactivate.org/projects/agile-contracts/sample-fixed-price-agile-contract">fixed-price</a>) contract for a project delivery using SCRUM.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-02T16:11:21+02:00</updated>
+  <updated>2012-11-02T15:44:52+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
     <link href="http://blog.siyelo.com/welcoming-ile"/>
-    <updated>2012-11-02T15:20:00+02:00</updated>
+    <updated>2012-11-02T15:20:00+01:00</updated>
     <id>http://blog.siyelo.com/welcoming-ile</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
@@ -903,7 +903,7 @@
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
-    <updated>2011-12-30T12:41:00+02:00</updated>
+    <updated>2011-12-30T11:41:00+01:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
@@ -1175,7 +1175,7 @@
   <entry>
     <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
-    <updated>2011-12-28T23:01:00+02:00</updated>
+    <updated>2011-12-28T22:01:00+01:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
     <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
@@ -1231,7 +1231,7 @@
   <entry>
     <title type="html"><![CDATA[jQuery Mobile overview]]></title>
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
-    <updated>2011-12-14T11:51:00+02:00</updated>
+    <updated>2011-12-14T10:51:00+01:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
     <author>Naum Kostovski</author>
     <content type="html"><![CDATA[<p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
