@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Weekly Roundup #4: Great RSpect tests, TripAdvisors growth & Going password-less"
+title: "TL;DR #4: Great RSpect tests, TripAdvisors growth & Going password-less"
 date: 2012-10-12 16:00:00
 comments: true
 categories: Weekly Roundup
