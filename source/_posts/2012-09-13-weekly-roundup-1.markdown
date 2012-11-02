@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TL;DR #1 - Sachin's beard, Skeuomorphism & Knowledge debt"
+title: "TL;DR: Sachin's beard, Skeuomorphism & Knowledge debt"
 date: 2012-09-13 16:00:00
 comments: true
 categories: Weekly Roundup

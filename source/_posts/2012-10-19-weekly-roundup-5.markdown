@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TL;DR #5: Making Rails fast, Practical OO & Google data centers"
+title: "TL;DR: Making Rails fast, Practical OO & Google data centers"
 date: 2012-10-19 16:00:00
 comments: true
 categories: Weekly Roundup

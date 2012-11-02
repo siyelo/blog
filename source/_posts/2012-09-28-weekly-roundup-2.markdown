@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Weekly Roundup #2: Ruby Security Guide, Macedonian parties & Moving things around"
+title: "TL;DR: Ruby Security Guide, Macedonian parties & Moving things around"
 date: 2012-09-28 16:00:00
 comments: true
 categories: Weekly Roundup
