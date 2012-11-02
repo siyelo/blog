@@ -7,7 +7,7 @@ categories: team
 author: Nicole Dirks
 ---
 
-We're very proud to announce the newest addition to the Siyelo team - Ile 'Rakia' Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.
+We're very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.
 
 ![](/images/posts/ile.jpg)
 
