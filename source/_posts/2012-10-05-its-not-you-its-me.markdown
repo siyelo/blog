@@ -3,7 +3,7 @@ layout: post
 title: "It's not you, it's me..."
 date: 2012-10-05 13:00:00
 comments: true
-categories: Fun
+categories: Team, Fun
 author: Peter Garbers
 ---
 

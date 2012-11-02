@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-02T11:24:46+02:00</updated>
+  <updated>2012-11-02T16:01:59+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
+    <link href="http://blog.siyelo.com/welcoming-ile"/>
+    <updated>2012-11-02T15:20:00+02:00</updated>
+    <id>http://blog.siyelo.com/welcoming-ile</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile &#8216;Rakia&#8217; Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
+
+<p><img src="http://blog.siyelo.com/images/posts/ile.jpg" alt="" /></p>
+
+<p><strong>How would you describe yourself?</strong></p>
+
+<p>&#8220;I would describe myself as a friendly, funny and chubby guy (although I&#8217;ve lost a few kilos in the last few months) :)&#8221;</p>
+
+<p><strong>What interests you about Rails?</strong></p>
+
+<p>&#8220;I really like open source and its philosophy. So PHP was my getaway drug to open source. After attending a local meetup about Ruby, I got in touch with Dalibor and he showed me the beauty of Rails. I really like the Rails community, it has a lot of great resources to learn. Also, I like the way the software is done (methodologies, Agile, XP, Kanban etc) and I like testing, which is a new thing for me.&#8221;</p>
+
+<p><strong>How have you found working at Siyelo so far?</strong></p>
+
+<p>&#8220;I really like it here (at Siyelo). Everybody is friendly &amp; there are really nice and constructive discussions. I have learned a lot in the past 2 weeks and I am looking forward to learning more.&#8221;</p>
+
+<p><strong>Tell us a &#8216;Yo mama&#8217; joke</strong></p>
+
+<p>&#8220;Yo mama is so fat she wears a belt from the brand &#8216;Equator&#8217;!&#8221;</p>
+
+<p><strong>Are you willing to grow a moustache for Movember?</strong></p>
+
+<p>&#8220;I would, if I could :(&#8221;</p>
+
+<p>We are really excited to have Ile on the team and we watch him develop as a Rails developer in the coming months.</p>
+
+<p>Got a question for Ile? Ask him in the comments below.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TL;DR: Making Rails fast, Practical OO & Google data centers]]></title>
@@ -1279,18 +1315,6 @@
 <p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
 
 <p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or <a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Stop Internet Censorship - FIGHT SOPA]]></title>
-    <link href="http://blog.siyelo.com/stop-internet-censorship-fight-sopa"/>
-    <updated>2011-12-13T20:07:14+02:00</updated>
-    <id>http://blog.siyelo.com/stop-internet-censorship-fight-sopa</id>
-    <author>Glenn Roberts</author>
-    <content type="html"><![CDATA[<div class="entry-content">    We&#8217;ve censored the following, in protest of a bill that gives any corporation and the US government the power to censor the internet&#8211;a bill that could pass THIS WEEK. <br />A █████ ████ of █████████ █████ ███████████ ███████ the ████████: █████, ████, █████ █████, █████, █████ ██████ and ████, ███████. ██████ we act now. █████ ████. <p /> To see the uncensored text, and to stop internet censorship, visit: http://americancensorship.org/posts/4672/uncensor
-</div>
-
 ]]></content>
   </entry>
   
