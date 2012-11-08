@@ -22,9 +22,9 @@ task :anno do
 end
 
 namespace :db do
-  desc 'migrate and run annotations'
+  desc 'migrate database [and annotate models]'
   task :migrate do
-    Rake::Task[:anno].invoke
+    Rake::Task[:anno].invoke if Rails.env == 'development'
   end
 end
 ```
