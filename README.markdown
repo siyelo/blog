@@ -31,6 +31,12 @@ rake generate   # Generates posts and pages into the public directory
 rake watch      # Watches source/ and sass/ for changes and regenerates
 rake preview    # Watches, and mounts a webserver at http://localhost:4000
 ```
+#### Publishing
+
+1. Generate the required HTML/XML files (rake generate)
+2. Commit and push to origin/master
+3. Push to Heroku (siyelo-blog)
+
 
 ## What is Octopress?
 
