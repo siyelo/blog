@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Ruby - Siyelo</title>
+  <title>Annotation without thought - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Category: Ruby">
+  <meta name="description" content="If you like your schema definitions handy in the current ActiveRecord
+model you&#8217;re looking at, you&#8217;re probably using the
+annotate_models &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.comblog/categories/ruby/">
+  <link rel="canonical" href="http://blog.siyelo.com/annotation-without-thought">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -90,77 +92,146 @@
 
 </nav> -->
   <div class="wrapper multiclouds">
-  <div id="articles" class="blog-archives">
-    <article role="article">
+  <div id="articles">
 
-      <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h3><a href="/scratching-an-itch">Scratching an itch</a></h3>
-<time datetime="2012-09-07T18:00:00+02:00" pubdate><span class='day'>07</span> <span class='month'>Sep</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open-source/'>Open-Source</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
-
-
-</article>
+    <article class="hentry" role="article" class="post clearfix">
+      
+  <header>
+    
 
 
 
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h3><a href="/intro-to-machine-learning-in-ruby">Intro to Machine Learning in Ruby</a></h3>
-<time datetime="2011-12-30T12:41:00+02:00" pubdate><span class='day'>30</span> <span class='month'>Dec</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/tutorial/'>Tutorial</a></span>
-</footer>
-
-
-</article>
 
 
 
-<article>
-  
-<h3><a href="/koding-in-khayelitsha-great-photo">Koding in Khayelitsha - great photo</a></h3>
-<time datetime="2011-10-04T14:45:00+02:00" pubdate><span class='day'>04</span> <span class='month'>Oct</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/fun/'>Fun</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
-
-
-</article>
 
 
 
-<article>
-  
-<h3><a href="/rubyfuza-conference-cape-town-pics">RubyFuZa conference, Cape Town - pics</a></h3>
-<time datetime="2011-02-05T12:14:27+02:00" pubdate><span class='day'>05</span> <span class='month'>Feb</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
 
 
-</article>
 
+
+
+
+<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title">Annotation Without Thought</h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
+  </header>
+
+
+<div class="entry-content"><p>If you like your schema definitions handy in the current ActiveRecord
+model you&#8217;re looking at, you&#8217;re probably using the
+<a href="" title="https://github.com/ctran/annotate_models">annotate_models gem</a></p>
+
+<p>If you&#8217;re on Rails and want to automagically &#8216;annotate your models when running rake db:migrate, include this rake task in your project;</p>
+
+<figure class='code'><figcaption><span>&#8216;lib/tasks/annotate.rb&#8217;</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s1">&#39;Annotate persisted models&#39;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:anno</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;annotating models...&#39;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s1">&#39;annotate --exclude tests,fixtures -p after -s&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate and run annotations&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you can annotate your models manually with;</p>
+
+<pre><code>rake anno
+</code></pre>
 </div>
 
-      
+
+      <footer>
+
+        <div class="meta-data">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+          
+  
+
+<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span></p>
+
+          <span> in </span>
+          
+
+
+
+          
+            <div class="sharing right">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/annotation-without-thought" data-via="siyelo" data-counturl="http://blog.siyelo.com/annotation-without-thought" >Tweet</a>
+  
+  
+  
+</div>
+
+          
+        </div>
+
+        <p class="meta pagination">
+          
+            <a class="basic-alignment left" href="/welcoming-ile" title="Previous Post: Welcoming Ile - Our newest team member">Previous</a>
+          
+          
+        </p>
+
+      </footer>
     </article>
+
+    
+      <section class="comments">
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
     
   </div>
 
@@ -316,7 +387,10 @@
       var disqus_shortname = 'siyelo';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.siyelo.com/annotation-without-thought';
+        var disqus_url = 'http://blog.siyelo.com/annotation-without-thought';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

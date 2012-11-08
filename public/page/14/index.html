@@ -9,7 +9,10 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="23 Nov 2009 Installing ImageMagick on OSX Leopard &#8211;> Comments &#8211;> &#8211;> I found a great script for compiling ImageMagick on OSX from &hellip;">
+  <meta name="description" content="24 Nov 2009 Aliases for Common Heroku Commands &#8211;> Comments &#8211;> &#8211;> Some handy bash aliases to speed up your Heroku deploys: 1
+2
+3
+4 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,7 +116,66 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-23T12:05:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-24T15:25:12+02:00" pubdate data-updated="true">
+    <span class='day'> 24</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/aliases-for-common-heroku-commands">Aliases for Common Heroku Commands</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/aliases-for-common-heroku-commands#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Some handy bash aliases to speed up your Heroku deploys:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">gphm</span><span class="o">=</span><span class="s1">&#39;git push heroku master&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hmig</span><span class="o">=</span><span class="s1">&#39;heroku rake db:migrate&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hlog</span><span class="o">=</span><span class="s1">&#39;heroku logs&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hopen</span><span class="o">=</span><span class="s1">&#39;heroku open&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/old/2009/11/pastedgraphic.png" alt="Pastedgraphic" /></p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-23T13:05:00+02:00" pubdate data-updated="true">
     <span class='day'> 23</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -371,7 +433,7 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-19T09:46:59+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-19T10:46:59+02:00" pubdate data-updated="true">
     <span class='day'> 19</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -433,7 +495,7 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-18T09:11:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-18T10:11:00+02:00" pubdate data-updated="true">
     <span class='day'> 18</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -504,7 +566,7 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-18T07:53:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-18T08:53:00+02:00" pubdate data-updated="true">
     <span class='day'> 18</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -538,68 +600,6 @@
 
       </article>
     
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2009-11-17T21:04:30+01:00" pubdate data-updated="true">
-    <span class='day'> 17</span>
-    <span class='month'> Nov</span>
-    <span class='year'> 2009</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/heroku-the-5mb-free-plan-is-it-enough">Heroku - the 5mb Free Plan - Is It Enough?</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/heroku-the-5mb-free-plan-is-it-enough#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Heroku just got better. </p>
-
-<p>If you like to go a little crazy vendoring gems in your Rails apps, and you like the idea of Heroku&#8217;s free (5mb) plan, then you&#8217;re in luck. Read on;</p>
-
-<p>Begin forwarded message:</p>
-
-<blockquote><p>Subject:[Support] Re: Do the gems installed as part of a .gems manifest count towar&#8230; (ticket #2486) <br />
-<strong>glenn.roberts, Nov 17 12:04 am (PST):</strong> <br />
-Do the gems installed as part of a .gems manifest count toward your storage limit? E.g. would installing 5.1mb of gems push your app over the 5mb limit on the free Blossom plan ? <br />
-Regards <br />
-Glenn</p>
-
-<p><strong>morten, Nov 17 11:04 am (PST):</strong> <br />
-Glenn, <br />
-The database plans cover database (rows) storage only. Additionally, you&#8217;re allowed a compiled code repo size of 50mb (that&#8217;s your git repo). <br />
-/Morten <br />
-This email is a service from Support <br /></p></blockquote>
-</div></div>
-  
-  
-
-
-      </article>
-    
     <div class="pagination">
       
         <a class="prev" href="/page/15/">Older</a>
@@ -616,7 +616,10 @@ This email is a service from Support <br /></p></blockquote>
   <h1>About</h1>
   <ul id="about">
     <li>
-      <p>Siyelo is a web development consultancy based in South Africa and Macedonia. We create bespoke web application that are profitable and enjoyable to use. This is our blog where we collect our thoughts and finds - please comment and let us know what you think.</p>
+      <p>Siyelo is a web development consultancy based in South Africa
+      and Macedonia. We create bespoke web and mobile apps. Interested
+      in working with us? <a href='mailto:info@siyelo.com'>Contact us</a>
+      anytime.</p>
     </li>
   </ul>
 </section>

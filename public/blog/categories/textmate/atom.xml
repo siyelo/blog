@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Textmate | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/textmate/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-02T15:44:52+01:00</updated>
+  <updated>2012-11-08T13:34:12+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Make Textmate your $EDITOR of choice]]></title>
     <link href="http://blog.siyelo.com/make-textmate-your-editor-of-choice"/>
-    <updated>2009-11-19T09:46:59+01:00</updated>
+    <updated>2009-11-19T10:46:59+02:00</updated>
     <id>http://blog.siyelo.com/make-textmate-your-editor-of-choice</id>
     <content type="html"><![CDATA[<p>If you are a master of Vim and feel like a sea-change, or if you're just plain scared, you can set up Textmate as your default editor.</p>
 
@@ -38,7 +38,7 @@ source ~/.bash_profile
   <entry>
     <title type="html"><![CDATA[Textmate tip: Align statments]]></title>
     <link href="http://blog.siyelo.com/textmate-tip-align-statments"/>
-    <updated>2009-11-18T07:53:00+01:00</updated>
+    <updated>2009-11-18T08:53:00+02:00</updated>
     <id>http://blog.siyelo.com/textmate-tip-align-statments</id>
     <content type="html"><![CDATA[<p>If you want to go from this:</p>
 
