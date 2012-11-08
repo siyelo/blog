@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-08T13:34:12+02:00</updated>
+  <updated>2012-11-08T16:56:53+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,153 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Siyelo Book Club]]></title>
+    <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
+    <updated>2012-11-08T16:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/the-siyelo-book-club</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
+
+<p>If you are interested in joining the Hangout, let us know (through the comments or on Twitter).  The next one will be on 12 Nov at 13:30 (GMT+2). We&#8217;ll be chatting about <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/">The Pragmatic Programmer</a>.</p>
+
+<p>So far we&#8217;ve finished the following books:</p>
+
+<ul>
+<li>Lean from the Trenches</li>
+<li>Rocket Surgery Made Easy</li>
+<li>Seductive Interaction Design</li>
+</ul>
+
+
+<p>Here is the full list of books we would like to get through.  Some might not be well suited for a book club but we all want to tackle them at some point.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>**Personal Development**
+</span><span class='line'>The Passionate Programmer
+</span><span class='line'>The Pragmatic Programmer
+</span><span class='line'>
+</span><span class='line'>**Ruby**
+</span><span class='line'>The Ruby Programming Language - David Flanagan, Yukihiro Matsumoto
+</span><span class='line'>Programming Ruby 1.9 - Dave Thomas, Chad Fowler, Andy Hunt
+</span><span class='line'>Eloquent Ruby - Russ Olsen
+</span><span class='line'>The Well Grounded Rubyist - David A. Black
+</span><span class='line'>Design Patterns in Ruby - Russ Olsen
+</span><span class='line'>Metaprogramming Ruby - Paolo Perrotta
+</span><span class='line'>Refactoring Ruby Edition - Jay Fields, Shane Harvie, Martin Fowler, Kent Beck
+</span><span class='line'>
+</span><span class='line'>**Rails:**
+</span><span class='line'>The Rails 3 Way - Obie Fernandez
+</span><span class='line'>Agile Web Development with Rails - Sam Ruby, Dave Thomas, David Heinemeier Hansson
+</span><span class='line'>Ruby on Rails 3 Tutorial - Michael Hartl
+</span><span class='line'>Beginning Rails 3 - Cloves Carneiro Jr., and Rida Al Barazi
+</span><span class='line'>Security on Rails - Ben Poweski, David Raphael
+</span><span class='line'>The Rails View - John Athayde, Bruce Williams
+</span><span class='line'>Rails Antipatterns - Chad Pytel, Tammer Saleh
+</span><span class='line'>
+</span><span class='line'>**XP/TDD/BDD:**
+</span><span class='line'>The RSpec Book - David Chelimsky, Dave Astels, Aslak Hellesoy, Bryan Helmkamp, Dan North
+</span><span class='line'>The Cucumber Book - Matt Wynne, Aslak Hellesoy
+</span><span class='line'>Specification By Example - Gojko Adzic
+</span><span class='line'>Test-Driven Development by Example - Kent Beck
+</span><span class='line'>Extreme Programming Explained - Kent Beck
+</span><span class='line'>User Stories Applied - Cohn
+</span><span class='line'>Agile Retrospectives - Esther Derby, Diana Larsen
+</span><span class='line'>The Agile Samurai - Jonathan Rasmusson
+</span><span class='line'>Lean from the Trenches - Henrik Kniberg
+</span><span class='line'>
+</span><span class='line'>**Design:**
+</span><span class='line'>Practical Object Orientated Design -Sandi Metz
+</span><span class='line'>Domain Driven Design - Eric Evans
+</span><span class='line'>Patterns of Enteprise Application Architecture - Martin Fowler
+</span><span class='line'>Refactoring - Martin Fowler, Kent Beck
+</span><span class='line'>Clean Code - Robert C. Martin
+</span><span class='line'>Agile Software Development - Robert C. Martin
+</span><span class='line'>Software Craftsmanship - Pete McBreen
+</span><span class='line'>
+</span><span class='line'>**UX:**
+</span><span class='line'>The Design of Everyday Things - Donald A. Norman
+</span><span class='line'>Don't Make Me Think - Steve Krug
+</span><span class='line'>Rocket Surgery Made Easy - Steve Krug
+</span><span class='line'>Seductive Interaction Design - Stephen Anderson
+</span><span class='line'>
+</span><span class='line'>**Business/General:**
+</span><span class='line'>The Lean Startup - Eric Ries
+</span><span class='line'>ReWork - Jason Fried and DHH
+</span><span class='line'>Product Development Flow -Reinertsen
+</span><span class='line'>
+</span><span class='line'>**Psychology / Behaviour:**
+</span><span class='line'>Moonwalking with Einstein: The Art and Science of Remembering Everything - Joshua Foer
+</span><span class='line'>Thinking, Fast and Slow - Daniel Kahneman
+</span><span class='line'>The Power of Habit - Charles Duhigg
+</span><span class='line'>Influence: The Psychology of Persuasion - Robert B. Cialdini
+</span><span class='line'>Drive: The Surprising Truth About What Motivates Us - Daniel Pink</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The full list is available at <a href="https://gist.github.com/4039087">https://gist.github.com/4039087</a> - Please feel free to fork it and make changes.</p>
+
+<p>Leave a comment and let us know if you have any book recommendations.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotation without thought]]></title>
@@ -44,9 +191,9 @@ model you&#8217;re looking at, you&#8217;re probably using the
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate and run annotations&#39;</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
 </span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
-</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -1215,62 +1362,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>If you are interested in amore indepth exampleof a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
 
 <p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
-    <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
-    <updated>2011-12-28T23:01:00+02:00</updated>
-    <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
-    <author>Dalibor Nasevic</author>
-    <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
-
-<p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
-
-<h3>Give us some ACID</h3>
-
-<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be <a href="http://en.wikipedia.org/wiki/ACID">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other <a href="http://nosql-database.org/">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default <strong>fsync()</strong> is set to <strong>everysec</strong> which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the <strong>appendfsync</strong> command (you can use <strong>appendfsync always</strong> and system will fsync data after every write - it&#8217;s slow but safest!).</p>
-
-<h3>When to use Redis?</h3>
-
-<p>In your production environment you don&#8217;t need to switch to Redis. You can just <a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
-
-<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.</p>
-
-<p>If you need a more featured document oriented database that allows you to perform <strong>range queries</strong>, <strong>regular expression searches</strong>, <strong>indexing</strong>, and <strong>MapReduce</strong> you should check <strong>MongoDB</strong>, <strong>CouchDB</strong> or similar. If you need a simple <strong>caching</strong> with better expiration algorhitms than Redis has then you should check <strong>memcache</strong>.</p>
-
-<h3>Redis Use-Cases</h3>
-
-<ul>
-<li>Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.</li>
-<li>Counting Downloads: <a href="https://github.com/rubygems/rubygems.org">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the <a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb">Download</a> model.</li>
-<li>High Score tables: Redis supports data type functions that can be very <a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/">handy</a>.</li>
-<li>Who&#8217;s Online: Use Redis to implement <a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/">who is online</a> logic in your application.</li>
-<li>Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.</li>
-<li>Queues: <a href="https://github.com/defunkt/resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.</li>
-<li>Live debugging: You need to do live debugging or roll out new features for production testing for specific users only - <a href="https://github.com/jamesgolick/rollout">Rollout</a> gem does exactly that.</li>
-<li>HN style social news site written in Ruby/Sinatra/Redis/jQuery - <a href="https://github.com/antirez/lamernews">lamernews</a>.</li>
-</ul>
-
-
-<h3>Redis console</h3>
-
-<p>You can use redis-cli to connect to a local or remote Redis server and call com-mands. Here is an example (first connect to the server using: redis-cli -p 6379):</p>
-
-<h3>Redis from Ruby</h3>
-
-<p>Here is an example using Ruby to execute commands on Redis server. You need to install <a href="https://github.com/ezmobius/redis-rb">redis gem</a> by executing<em>gem install redis</em>first.</p>
-
-<p>Learn more about Redis <a href="http://redis.io/commands">commands</a> and give some speed to your web applications for free.</p>
-
-<h3>Real world Redis example</h3>
-
-<p>At the end, lets show a real world example how Redis is used in <a href="http://rubygems.org/">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
-
-<p>First, in the initializer a new redis object as a global variable <strong>$redis</strong> is instantiated. This object is used in Download model for updating the downloads count for a gem with <strong>self.incr(name)</strong> method and reading the downloads count for a gem with <strong>self.for_rubygem(name)</strong> method. Rubygems is using Sinatra application <strong>Hostess</strong> to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines <strong>get &#8220;/gems/*.gem&#8221;</strong> route which triggers the downloads count to be updated in the Redis database.</p>
-
-<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at <a href="https://github.com/rubygems/rubygems.org">Github</a> for more details.</p>
 ]]></content>
   </entry>
   

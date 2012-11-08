@@ -156,9 +156,9 @@ model you&#8217;re looking at, you&#8217;re probably using the
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate and run annotations&#39;</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
 </span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
-</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -222,6 +222,8 @@ model you&#8217;re looking at, you&#8217;re probably using the
             <a class="basic-alignment left" href="/welcoming-ile" title="Previous Post: Welcoming Ile - Our newest team member">Previous</a>
           
           
+            <a class="basic-alignment right" href="/the-siyelo-book-club" title="Next Post: The Siyelo Book Club">Next</a>
+          
         </p>
 
       </footer>
@@ -254,6 +256,10 @@ model you&#8217;re looking at, you&#8217;re probably using the
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/the-siyelo-book-club">The Siyelo Book Club</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotation-without-thought">Annotation without thought</a>
       </li>
     
@@ -267,10 +273,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
     
       <li class="post">
         <a href="/weekly-roundup-4">TL;DR: Great RSpect tests, TripAdvisors growth & Going password-less</a>
-      </li>
-    
-      <li class="post">
-        <a href="/weekly-roundup-3">TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges</a>
       </li>
     
   </ul>
