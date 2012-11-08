@@ -3,7 +3,7 @@
 #### Writing a blog post
 
 ``` ruby
-rake new_post "title"
+rake new_post\["title"\]
 ```
 
 Add the Author to the YAML Front Matter
