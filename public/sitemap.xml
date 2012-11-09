@@ -332,4 +332,8 @@
         <loc>http://blog.siyelo.com/</loc>
         <lastmod>2012-11-08T16:56:43+02:00</lastmod>
     </url>
+    <url>
+        <loc>http://blog.siyelo.com/rss.xml</loc>
+        <lastmod>2012-11-09T13:10:00+02:00</lastmod>
+    </url>
 </urlset>
