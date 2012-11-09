@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="01 Dec 2010 A Zerigo DNS Template for Heroku and Google Apps &#8211;> Comments &#8211;> &#8211;> While recently switching over a client&#8217;s web &hellip;">
+  <meta name="description" content="16 Dec 2010 The Siyelo Fridge &#8211;> Comments &#8211;> &#8211;> After a visit from our favourite Argentinian friend, this is what our fridge looks &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,56 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-12-16T20:53:25+02:00" pubdate data-updated="true">
+    <span class='day'> 16</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/the-siyelo-fridge">The Siyelo Fridge</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/the-siyelo-fridge#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>After a visit from our favourite Argentinian friend, this is what our fridge looks like;</p>
+
+<p><a href="/images/old/2010/12/photo.jpg"><img src="/images/old/2010/12/photo.jpg" alt="Photo" /> </a></p>
+
+<p>So much Quilmes, so little time!</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -384,80 +434,6 @@
 
 
 <p>, you might save yourself a murder (or at the very least a weapons) charge.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-08-25T14:24:00+02:00" pubdate data-updated="true">
-    <span class='day'> 25</span>
-    <span class='month'> Aug</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/solving-html5-compatibility-issues">Solving HTML5 Compatibility Issues</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/solving-html5-compatibility-issues#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>By now you&#8217;ve probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics. Why use <code>&lt;div id="header"&gt;</code> when you can use just <code>&lt;header&gt;?</code> This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.</p>
-
-<p>But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won&#8217;t be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it&#8217;s a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
-
-<p>The first solution is a very simple one and apllies to normal type of browsers like Firefox, Safari, Opera, Chrome: just put the CSS property <code>{ display: block; }</code> in your stylesheets:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">&lt;</span><span class="nt">style</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="nt">header</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">article</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">example</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and you&#8217;re done. This converted them into block elements and returned them in the flow, so you can use the tags in your document.</p>
-
-<p>But this is not so easy when it comes to Internet Explorer. You always need to put more effort into explaining something to a deaf, dumb and blind person, and so is this monstrocity spawned by Microsoft. What you need to do here is add some javascript, otherwise your html5 elements won&#8217;t be recognized even by applying the block property. In the head of the document place this piece of code:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">);</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This just created the <date> tag. You can use this method to create all the elements you require to make your html5-ish website acceptable for IE. There&#8217;s also <a href="http://remysharp.com/downloads/html5.js">a script</a> made by Remy Sharp that will take care of this for you.</p>
-
-<p>But nowdays we have more complete solutions to this problem, that also deal with cross-browser compatibility, improved css degradation and add some extra features. We have <a href="http://www.modernizr.com/">Modernizr</a> , JavaScript created by Faruk Ateş and Paul Irish that creates support for HTML5 and a lot of CSS3, and <a href="http://html5boilerplate.com/">Boilerplate</a> created by Paul Irish and Divya Manian, a cross-browser compatible and future-proof HTML template that support HTML5 and CSS3. What&#8217;s really cool about Boilerplate is that they are working on a HAML/SASS port.</p>
-
-<p>And for the end here are some cool examples of HTML5 websites, published recently by <a href="http://webdesignledger.com/inspiration/55-excellent-examples-of-websites-using-html5">WDL</a> . I know i&#8217;ll be using HTML5 on my next website.</p>
 </div></div>
   
   

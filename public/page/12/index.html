@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="28 Jan 2010 Paperclip - Attachment Validations &#8211;> Comments &#8211;> &#8211;> Using Paperclip, if you need to check if your model has an &hellip;">
+  <meta name="description" content="11 Feb 2010 Using Devise for Authentication? How to Upgrade From v0.8.2 to v1.0 &#8211;> Comments &#8211;> &#8211;> We&#8217;re using PlataformaTec &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,95 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-02-11T15:28:51+02:00" pubdate data-updated="true">
+    <span class='day'> 11</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0">Using Devise for Authentication? How to Upgrade From v0.8.2 to v1.0</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We&#8217;re using PlataformaTec&#8217;s fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.</p>
+
+<p>It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place).</p>
+
+<p>On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>becomes</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s1">&#39;&gt;=1.0.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And after restarting the server, a barf.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ActionView</span><span class="o">::</span><span class="no">TemplateError</span> <span class="p">(</span><span class="n">undefined</span> <span class="n">local</span> <span class="n">variable</span> <span class="ow">or</span> <span class="nb">method</span> <span class="sb">`new_user_session_path&#39; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So obviously my Devise resource, User in this case, is fubar.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:all</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hmm nothing changed there. But wait, <code>devise :all</code> is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So it seems though that the old Devise way of defining :all strategies is no longer supported. Fix that, and the order of the universe improves a little.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -434,60 +523,6 @@
 
 
 <p> Your website is a sales team on constant duty.  Make sure your team is informed, informative and of good quality.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-01-12T11:44:47+02:00" pubdate data-updated="true">
-    <span class='day'> 12</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/full-text-search-on-heroku-with-texticle">Full Text Search on Heroku With Texticle</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/full-text-search-on-heroku-with-texticle#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We just spent some time investigating some alternative to full text search on Heroku. The initial solutions were either ThinkingSphinx (with a remote sphinx daemon, and another copy of the app running - yuck), or one of the paid options like WebSolr. None tickled our fancy. Free and simple tickle our fancy.</p>
-
-<p>Along comes Texticle. Not sure about the name, but it simple, and works a treat.</p>
-
-<p><a href="http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/">http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/</a></p>
-
-<p><img src="/images/old/2010/01/pastedgraphic.png" alt="Pastedgraphic" /></p>
-
-<p>He&#8217;s even sporting a mullet in his <a href="http://github.com/tenderlove/texticle">github avatar</a>. Bonus points for that.</p>
 </div></div>
   
   
