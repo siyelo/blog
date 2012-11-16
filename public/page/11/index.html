@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="11 Mar 2010 The Facebook Imperative Cannot Be Stopped &#8211;> Comments &#8211;> &#8211;> Marc Benioff of SalesForce.com with his take on the next- &hellip;">
+  <meta name="description" content="19 Mar 2010 Speeding Up Bash Aliasing to Speed Up Your Rails Development &#8211;> Comments &#8211;> &#8211;> All good developers love the terminal, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,67 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-03-19T19:02:57+02:00" pubdate data-updated="true">
+    <span class='day'> 19</span>
+    <span class='month'> Mar</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/speeding-up-bash-aliasing-to-speed-up-your-rails-development">Speeding Up Bash Aliasing to Speed Up Your Rails Development</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/speeding-up-bash-aliasing-to-speed-up-your-rails-development#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>All good developers love the terminal, and spend many hours at the command prompt.</p>
+
+<p>All excellent developers are masters of the shell.</p>
+
+<p>All uber developers issue <a href="http://github.com/glennr/bash_profile">shell commands with obtuse aliases</a>.</p>
+
+<p>So, if you&#8217;re uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here&#8217;s a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you&#8217;re done.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">mbp</span><span class="o">=</span><span class="s1">&#39;mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The speedy way to create aliases that speed up your development.</p>
+
+<p>And remember, keep it DRY.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -284,83 +345,6 @@
 <p><a href="http://blip.tv/file/1557737/">http://blip.tv/file/1557737/</a></p>
 
 <p>Plus there&#8217;s some helpful resources on <a href="http://sensible.com/">his website</a>.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-02-18T16:26:00+02:00" pubdate data-updated="true">
-    <span class='day'> 18</span>
-    <span class='month'> Feb</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/rails-2-3devise-changing-your-email-content-type">Rails 2.3/Devise : Changing Your Email Content Type.</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/rails-2-3devise-changing-your-email-content-type#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the &#8220;standard&#8221; authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?).</p>
-
-<p>A minor issue on Rails 2.3 is that Devise (v1.0) doesn&#8217;t allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to &#8216;text/html&#8217;, unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on.</p>
-
-<p>I&#8217;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
-
-<p>UPDATE: Its been merged into Devise v1.0.2</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Devise</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-</span><span class='line'><span class="err">    </span><span class="c1">#...    </span>
-</span><span class='line'>    <span class="n">config</span><span class="o">.</span><span class="n">mailer_content_type</span> <span class="o">=</span> <span class="s1">&#39;text/plain&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The gem on gemcutter</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">glennr</span><span class="o">-</span><span class="n">devise</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;glennr-devise&#39;</span><span class="p">,</span> <span class="ss">:lib</span> <span class="o">=&gt;</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:source</span> <span class="o">=&gt;</span> <span class="s1">&#39;http://gemcutter.org&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a>.</p>
 </div></div>
   
   

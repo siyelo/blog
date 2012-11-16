@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="13 Jul 2012 Rails Deployment Audit &#8211;> Comments &#8211;> &#8211;> We recently undertook an audit of a Rails deployment for a system developed &hellip;">
+  <meta name="description" content="07 Sep 2012 Scratching an Itch &#8211;> Comments &#8211;> &#8211;> This week we released a very simple gem called ShouldClean. ShouldClean is a tool &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,76 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-09-07T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 07</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/scratching-an-itch">Scratching an Itch</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/scratching-an-itch#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>This week we released a very simple gem called <a href="https://rubygems.org/gems/should_clean">ShouldClean</a>. ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;).  </p>
+
+<p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word &#8216;should&#8217; and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">it</span> <span class="s2">&quot;should be true&quot;</span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="c1">#=&gt; it &quot;is true&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should action something&quot;</span> <span class="c1">#=&gt; it &quot;actions something&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should push something&quot;</span> <span class="err"> </span> <span class="c1">#=&gt; it &quot;pushes something&quot;</span>
+</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should by default be 1&quot;</span> <span class="err"> </span><span class="c1">#=&gt; it &quot;by default is 1&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Are a few extra &#8216;shoulds&#8217; really that big of deal? Probably not - it really boils down to a matter of preference.  For us, running this tool on projects with large test suites helps:</p>
+
+<ol>
+<li>make the tests more readable;</li>
+<li>it reduces unneccessary duplication in the spec files and the test output;</li>
+<li>An added benefit is that the test suite has a mood of certainty about it - reading the tests tells you what the code does, not what it should do when everything falls into place. </li>
+</ol>
+
+
+<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -648,116 +718,6 @@
 <p>Now all that&#8217;s left to do is clean up the old backup files, old rails scripts/* files and your vendor/plugins and you&#8217;re done!</p>
 
 <p>Happy upgrades!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-05-11T16:07:00+02:00" pubdate data-updated="true">
-    <span class='day'> 11</span>
-    <span class='month'> May</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/were-hiring-social-media-marketing-intern">WE’RE HIRING! – SOCIAL MEDIA MARKETING INTERN</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/were-hiring-social-media-marketing-intern#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Siyelo is growing fast and we&#8217;re looking for a bright, hardworking individual to join our team as a Social Media Intern!</p>
-
-<p>–</p>
-
-<p><strong>Location</strong>: Cape Town, South Africa</p>
-
-<p><strong>Start date</strong>: June 2012</p>
-
-<p><strong>Duration</strong>: 8 to 12 weeks</p>
-
-<p><strong>Funding</strong>: Expenses and reasonable honorarium</p>
-
-<p><strong>Internship Description:</strong></p>
-
-<p>Siyelo is a web design and development agency, consulting to a wide variety of clients and industries. You will work alongside our team to create engaging social content that inspires and motivates a passionate tech community. A successful intern will be able to learn fast, thrive on juggling a lot of tasks, enjoy tracking details; and has the ability to keep cool under deadlines.</p>
-
-<p><strong>Skills &amp; Experience Required:</strong></p>
-
-<ul>
-<li><p>Energetic, independent, and detail-oriented.</p></li>
-<li><p>Strong written and oral communication skills - in English</p></li>
-<li><p>Available at least 16 to 24 hours a week.</p></li>
-<li><p>Studying for or recently graduated with a degree in business, communication, social sciences, with good grades</p></li>
-<li><p>Highly sociable and witty</p></li>
-<li><p>Knowledge of HTML is a plus</p></li>
-</ul>
-
-
-<p><strong>Sample projects you will work on:</strong></p>
-
-<ul>
-<li><p>Support to all Marketing activities</p></li>
-<li><p>Manage integrated social media campaigns.</p></li>
-<li><p>Social strategy and overviews</p></li>
-<li><p>Evaluate positioning and activity of competitors.</p></li>
-<li><p>Take charge of managing posting and profile upkeep.</p></li>
-<li><p>Identify opportunities for increased social interaction.</p></li>
-<li><p>Research new social techniques, platforms and trends.</p></li>
-<li><p>Testing new products</p></li>
-</ul>
-
-
-<p><strong>Benefits for Intern:</strong></p>
-
-<ul>
-<li><p>Siyelo offers an international, fast-paced and dynamic environment in hot web techologies.</p></li>
-<li><p>A great office in central Cape Town. Open, creative and vibrant.</p></li>
-<li><p>Ping-pong, putt-putt, and Playstation3.</p></li>
-<li><p>Other fun things not beginning with the letter &#8216;P&#8217;.</p></li>
-<li><p>Learn the basics of web technogies, product development and consulting.</p></li>
-</ul>
-
-
-<p><strong>Application procedure:</strong></p>
-
-<p>Send application before May 20th 2012 to<a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a> with a subject line of ”Social Media Marketing Internship application: <your name>”.</p>
-
-<p>Please include;</p>
-
-<ol>
-<li><p>A brief explanation of who you are and how you would help us.</p></li>
-<li><p>A copy of your CV</p></li>
-<li><p>The time and dates you will be available to work at our office.</p></li>
-</ol>
-
 </div></div>
   
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="08 Dec 2011 We Have a New Phone Number! &#8211;> Comments &#8211;> &#8211;> Siyelo has changed its Cape Town office number to  +27 (0) 21 461 2050. &hellip;">
+  <meta name="description" content="12 Dec 2011 Siyelos&#8217; Git Workflow &#8211;> Comments &#8211;> &#8211;> Here at Siyelo we have a rather robust flow that we feel works quite &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,82 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-12-12T11:53:00+02:00" pubdate data-updated="true">
+    <span class='day'> 12</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/siyelos-git-workflow">Siyelos&#8217; Git Workflow</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/siyelos-git-workflow#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn&#8217;t come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
+
+<h3>Named Branches</h3>
+
+<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
+
+<h3>Pull Requests</h3>
+
+<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
+
+<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
+
+<h3>Why pull requests?</h3>
+
+<p>Pull requests serve 2 functions:</p>
+
+<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
+
+<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
+
+<h3>Merging</h3>
+
+<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
+
+<h3>Deploying</h3>
+
+<p>Once merged in, the branch is immediately deployed to staging.</p>
+
+<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
+
+<p>If you&#8217;re looking for something more specific, don&#8217;t hesitate to ask :)</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -437,96 +513,6 @@
 
   <div class="body"><div class="inner"><iframe src="http://player.vimeo.com/video/29374463?portrait=0" frameborder="0" height="283" width="500"></iframe>
 
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2011-09-08T20:46:00+02:00" pubdate data-updated="true">
-    <span class='day'> 08</span>
-    <span class='month'> Sep</span>
-    <span class='year'> 2011</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/installing-a-gem-in-all-your-global-rvm-gemsets">Installing a Gem in All Your Global RVM Gemsets</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/installing-a-gem-in-all-your-global-rvm-gemsets#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;annotate&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;awesome_print&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s2">&quot;ap&quot;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 2.1.2&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;hirb&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;interactive_editor&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;open_gem&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;rails-footnotes&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;ruby-debug&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sketches&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;slurper&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;sqlite3-ruby&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">&#39;sqlite3&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;taps&#39;</span>
-</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;wirble&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>but obviously it&#8217;s a PITA (Pain In The ****) to add this gem spec to all your projects.</p>
-
-<p>So, give this a shot;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">for </span>x in <span class="k">$(</span>rvm list strings<span class="k">)</span>; <span class="k">do </span>rvm use <span class="nv">$x</span>@global <span class="o">&amp;&amp;</span> gem install &lt;RAD DEVELOPMENT GEM NAME&gt;; <span class="k">done</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This installs a specific gem into all your global RVM gemsets. For great justice!</p>
 </div></div>
   
   
