@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Rails | Siyelo]]></title>
+  <title><![CDATA[Category: rails | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-16T17:23:39+02:00</updated>
+  <updated>2012-11-27T10:27:51+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,286 +14,58 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Rails Deployment Audit]]></title>
-    <link href="http://blog.siyelo.com/rails-deployment-audit"/>
-    <updated>2012-07-13T16:13:00+02:00</updated>
-    <id>http://blog.siyelo.com/rails-deployment-audit</id>
-    <content type="html"><![CDATA[<p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
+    <title type="html"><![CDATA[Active Merchant and Spree]]></title>
+    <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
+    <updated>2012-11-27T10:01:00+02:00</updated>
+    <id>http://blog.siyelo.com/active-merchant-and-spree</id>
+    <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn't particularly well documented.  Below are the steps we followed to get it working:</p>
 
-<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we'll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
+<p>For the purposes of this example, we'll be adding PayGate PayXML as a Spree payment gateway.</p>
 
-<h2>Extract sensitive data</h2>
+<p>Add the ActiveMerchant gem:</p>
 
-<p>All sensitive data like passwords, API keys &amp; tokens that are in the application are extracted as environment variables outside of the source code repository. We are using <a href="https://github.com/sstephenson/rbenv">rbevn</a>  for managing rubies, there is a nice plugin for setting up environment variables<a href="https://github.com/sstephenson/rbenv-vars">rbenv-vars</a>.</p>
+<p>```ruby</p>
 
-<h2>Continuous Integration &amp; Deployment</h2>
+<h1>Gemfile</h1>
 
-<p>There are many great open source and commercial tools out there for <a href="https://www.ruby-toolbox.com/categories/continuous_integration">Continuous Integration</a>. We are using <a href="http://jenkins-ci.org/">Jenkins CI</a>  to run our test suite and handle Continuous Deployment (if the tests are green) for our staging branch. For production releases, we suggest doing releases manually at a scheduled time with the whole team ready and available.</p>
+<p>gem 'activemerchant'
+```</p>
 
-<h2>Deployment tools</h2>
+<p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
 
-<p>If you need more advanced tool for doing the deploy, <a href="https://github.com/capistrano/capistrano">Capistrano</a>  is the definitely the tool to go with. However, if you want something more light-weight you can try <a href="https://github.com/brentd/gitploy">gitploy</a>  (bare minimum, git-based tool for deployment). Alternatively, check out another tool from this <a href="https://www.ruby-toolbox.com/categories/deployment_automation">list</a>.</p>
+<p>```ruby</p>
 
-<h2>Deployment Documentation</h2>
+<h1>/app/models/spree/gateway/pay_gate.rb</h1>
 
-<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
+<p>class Spree::Gateway::PayGate &lt; Spree::Gateway
+  preference :login, :string
+  preference :password, :string</p>
 
-<h2>Server security</h2>
+<p>  attr_accessible :preferred_login, :preferred_password</p>
 
-<p>Don't use your root user when you access your server - it's the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode's guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
+<p>  def provider_class</p>
 
-<h2>Start clean on boot</h2>
+<pre><code>ActiveMerchant::Billing::PayGateXmlGateway
+</code></pre>
 
-<p>All the services that are being used by the application need to start cleanly when the server boots up - there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
+<p>  end
+end
+```</p>
 
-<h2>Log files</h2>
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree's preferences system so that they can be filled in via the admin backend.</p>
 
-<p>Prevent log files from growing to the point where you don't have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
+<p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
 
-<h2>Cron jobs</h2>
+<p>```ruby</p>
 
-<p>Whether it's a backup script or background task that needs to be run as a job, it's a good idea to have documentation on it within the application. Cron's scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
+<h1>/config/application.rb</h1>
 
-<h2>Backups</h2>
+<p>config.after_initialize do
+  Rails.configuration.spree.payment_methods &lt;&lt; Spree::Gateway::PayGate
+end
+```</p>
 
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
-
-<h2>Failover</h2>
-
-<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer daily/weekly/monthly <a href="http://www.linode.com/backups/">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
-
-<h2>External monitoring tools</h2>
-
-<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
-
-<h2>Notifications for Exceptions</h2>
-
-<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
-
-<h2>Process monitoring tools</h2>
-
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
-
-<h2>Server performance</h2>
-
-<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
-
-<h2>Application performance</h2>
-
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don't want to use other service for checking that your server is up and running.</p>
-
-<p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails 3 upgrade process (the road from 2.3.14 to 3.2.6)]]></title>
-    <link href="http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6"/>
-    <updated>2012-06-21T18:10:35+02:00</updated>
-    <id>http://blog.siyelo.com/rails-3-upgrade-process-the-road-from-2-3-14-to-3-2-6</id>
-    <content type="html"><![CDATA[<p>We've just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we'll share some details about the experience and the process we took for the upgrade. Before the upgrade, it's advisable to migrate to the latest Rails 2.3 version (2.3.14).</p>
-
-<h3>Versions running out of support...</h3>
-
-<p>Why upgrade? Ruby 1.8.7 is slowly <a href="http://www.ruby-lang.org/en/news/2011/10/06/plans-for-1-8-7/">running out of support</a> and Ruby on Rails 2.3.x is already <a href="https://groups.google.com/forum/#!topic/rubyonrails-security/CdoMUVpsRmQ/discussion">out of maintenance and out of security support</a>. If wondering which Ruby on Rails version are supported at the moment, it's 3.2 for bugfixes and 3.1 for security fixes (see this <a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/30ff7f618a6428f3/a767ba1bbf526fde?q=#50a39e4694704f14">thread discussion</a> on rails-core mailing list). </p>
-
-<h3>How to approach the upgrade...</h3>
-
-<p>There are several schools of thought regarding this matter:</p>
-
-<ul>
-<li>Upgrade both your ruby version to 1.9.1+ and your stack to Rails stack simultaniously.</li>
-<li>Upgrade your Rails stack and then upgrade your Ruby version</li>
-<li>Upgrade your Ruby version and then your Rails stack</li>
-</ul>
-
-
-<p>We went with the first.</p>
-
-<p>This was because although we have a relatively large application, we found that most of the gems being used were easily replaced and had no conflicts with Rails 3.x.</p>
-
-<h3>Upgrade now...</h3>
-
-<p>The upgrade process to Rails 3.x is rather straight forward as most of the gems have already been ported to support Rails 3.x and many and most have documentated how to do the change. In the rare case that one of your gems does not support rails 3, they are easily replaced.</p>
-
-<p>Here is how we upgraded:</p>
-
-<p>Start by installing the <a href="https://github.com/rails/rails_upgrade">rails_upgrade</a> plugin:</p>
-
-<p><code>bash
-ruby script/plugin install git://github.com/rails/rails_upgrade.git
-</code></p>
-
-<p>Then run the rake task that does a check for required upgrades:</p>
-
-<p><code>bash
-rake rails:upgrade:check
-</code></p>
-
-<p>The output is rather descriptive. It hightlights all the changes required and even links to blog posts for those of you who would like additional information on how to approach the changes.</p>
-
-<p>Run the backup task. This backs up all of your routes, environments, application, etc.</p>
-
-<p><code>bash
-rake rails:upgrade:backup
-</code></p>
-
-<p>There is a rake task to upgrade all of your routes to the new DSL. We found that we needed to make minor changes after this task was run.</p>
-
-<p><code>bash
-rake rails:upgrade:routes
-</code></p>
-
-<p>Yet another rake task for generating a Gemfile from config.gem directives.</p>
-
-<p>In Rails 3, bundler handles all your gems and dependencies (Fortunately our app was already using bundler). If yours isn't the <a href="https://github.com/rails/rails_upgrade">rails_upgrade</a>  plugin is nice enough to do this for you!</p>
-
-<p><code>bash
-rake rails:upgrade:gems
-</code></p>
-
-<p>Now it's just a matter of upgrading the Rails version ensuring that you have not locked any of the other gems at a version incompatible with your upgrade. Then let bundler do it's thing:</p>
-
-<p><code>bash
-bundle install
-</code></p>
-
-<p>Then run all the generators for gems like rspec, cucumber and setup spork, guard.</p>
-
-<p><code>bash
-rails g rspec:install --spork
-rails g cucumber:install --rspec --capybara --spork
-bundle exec guard init
-bundle exec guard init spork
-</code></p>
-
-<p>If using cucumber and it's old web steps, you'll need to add <a href="https://github.com/cucumber/cucumber-rails-training-wheels">cucumber-rails-training-wheels</a>  to the Gemfile. It's also good to setup the <a href="http://guides.rubyonrails.org/asset_pipeline.html">assets pipeline</a>  in order to get the full benefits from newest version of Rails.</p>
-
-<p>From here we went about fixing our specs (aren't they just fabulous?). We feel this is an important step as it will expose problems and give you deprecation warnings.</p>
-
-<p>We didn't go as far as to fix every spec and cuke. Just to the point where we felt comfortable upgrading again!</p>
-
-<p>So we generated a new Rails 3.2.6 application in another folder and carefuly moved across the Rails configuration files (production.rb, development.rb, Rakefile, etc).</p>
-
-<p>After some more bug and deprecation warning fixes we have a stable app once again! :)</p>
-
-<p>Now all that's left to do is clean up the old backup files, old rails scripts/* files and your vendor/plugins and you're done!</p>
-
-<p>Happy upgrades!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[RailsConf 2010 - some pics courtesy Dr Nic]]></title>
-    <link href="http://blog.siyelo.com/railsconf-2010-some-pics-courtesy-dr-nic"/>
-    <updated>2010-10-07T09:09:17+02:00</updated>
-    <id>http://blog.siyelo.com/railsconf-2010-some-pics-courtesy-dr-nic</id>
-    <content type="html"><![CDATA[<p>Check out the iphone pic of everyone on their iphones at the dinner table. Very meta.</p>
-
-<p><a href="/images/old/2010/10/img_3914-scaled-1000.jpg"><img src="/images/old/2010/10/img_3914-scaled-1000.jpg" alt="Img_3914" /> </a>
-<a href="/images/old/2010/10/img_3917-scaled-1000.jpg"><img src="/images/old/2010/10/img_3917-scaled-1000.jpg" alt="Img_3917" /> </a>
-<a href="/images/old/2010/10/img_3919-scaled-1000.jpg"><img src="/images/old/2010/10/img_3919-scaled-1000.jpg" alt="Img_3919" /> </a>
-<a href="/images/old/2010/10/img_3922-scaled-1000.jpg"><img src="/images/old/2010/10/img_3922-scaled-1000.jpg" alt="Img_3922" /> </a>
-<a href="/images/old/2010/10/img_3923-scaled-1000.jpg"><img src="/images/old/2010/10/img_3923-scaled-1000.jpg" alt="Img_3923" /> </a>
-<a href="/images/old/2010/10/img_3928-scaled-1000.jpg"><img src="/images/old/2010/10/img_3928-scaled-1000.jpg" alt="Img_3928" /> </a>
-<a href="/images/old/2010/10/img_3929-scaled-1000.jpg"><img src="/images/old/2010/10/img_3929-scaled-1000.jpg" alt="Img_3929" /> </a>
-<a href="/images/old/2010/10/img_3930-scaled-1000.jpg"><img src="/images/old/2010/10/img_3930-scaled-1000.jpg" alt="Img_3930" /> </a>
-<a href="/images/old/2010/10/img_3931-scaled-1000.jpg"><img src="/images/old/2010/10/img_3931-scaled-1000.jpg" alt="Img_3931" /> </a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[CanCan - make up your mind!]]></title>
-    <link href="http://blog.siyelo.com/cancan-make-up-your-mind"/>
-    <updated>2010-08-25T17:05:00+02:00</updated>
-    <id>http://blog.siyelo.com/cancan-make-up-your-mind</id>
-    <content type="html"><![CDATA[<p>If you're using CanCan and came across an error like this;</p>
-
-<p><code>bash
-The :class option has been renamed to :resource for specifying the class in CanCan.
-</code></p>
-
-<p>And you duly updated your controller code from;</p>
-
-<p><code>ruby
-authorize_resource :class =&gt; FundingFlow
-</code></p>
-
-<p>To something like this;</p>
-
-<p><code>ruby
-authorize_resource :resource =&gt; FundingFlow
-</code></p>
-
-<p>Since, like all good programmers, you do what you're told by error-messages. But then like some sick joke it starts mocking you with the inverse error message i.e;</p>
-
-<p><code>bash
-The :resource option has been renamed back to :class, use false if no class.
-</code></p>
-
-<p>Before you go and stalk Ryan B (the CanCan author) with a fully automatic assault rifle, first check your CanCan versions.</p>
-
-<p><code>bash
-$ gem open cancan
-Open which gem? 
-1. cancan 1.1.1 
-2. cancan 1.3.2
-</code></p>
-
-<p>Ah ha. And if you're using RVM like we do, then your default.gems might be specifying a different version (which in our case manifested in our staging server, not on local development).</p>
-
-<p>So by making sure you're using the latest version (>= 1.3.2), and using the :class syntax i.e.</p>
-
-<p><code>ruby
-authorize_resource :class =&gt; FundingFlow
-</code></p>
-
-<p>, you might save yourself a murder (or at the very least a weapons) charge.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails 2.3/Devise : changing your email content type.]]></title>
-    <link href="http://blog.siyelo.com/rails-2-3devise-changing-your-email-content-type"/>
-    <updated>2010-02-18T16:26:00+02:00</updated>
-    <id>http://blog.siyelo.com/rails-2-3devise-changing-your-email-content-type</id>
-    <content type="html"><![CDATA[<p>Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the "standard" authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?).</p>
-
-<p>A minor issue on Rails 2.3 is that Devise (v1.0) doesn't allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to 'text/html', unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on.</p>
-
-<p>I've patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
-
-<p>UPDATE: Its been merged into Devise v1.0.2</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Devise</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
-</span><span class='line'><span class="err">    </span><span class="c1">#...    &lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">config</span><span class="o">.</span><span class="n">mailer_content_type</span> <span class="o">=</span> <span class="s1">&#39;text/plain&#39;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>The gem on gemcutter</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">glennr</span><span class="o">-</span><span class="n">devise</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>or</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;glennr-devise&#39;</span><span class="p">,</span> <span class="ss">:lib</span> <span class="o">=&gt;</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:source</span> <span class="o">=&gt;</span> <span class="s1">&#39;http://gemcutter.org&#39;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>The github branch is here, and should be merged into the Devise trunk shortly: <a href="http://github.com/glennr/devise">http://github.com/glennr/devise</a>.</p>
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click 'New payment method'.  Fill in the name of the payment method as 'Credit Card' (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You'll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
 ]]></content>
   </entry>
   

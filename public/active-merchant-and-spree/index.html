@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Conferences - Siyelo</title>
+  <title>Active Merchant and Spree - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Category: Conferences">
+  <meta name="description" content="Integrating an ActiveMerchant supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.comblog/categories/conferences/">
+  <link rel="canonical" href="http://blog.siyelo.com/active-merchant-and-spree">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -90,49 +90,173 @@
 
 </nav> -->
   <div class="wrapper multiclouds">
-  <div id="articles" class="blog-archives">
-    <article role="article">
+  <div id="articles">
 
-      <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h3><a href="/rubyfuza-conference-cape-town-pics">RubyFuZa conference, Cape Town - pics</a></h3>
-<time datetime="2011-02-05T12:14:27+02:00" pubdate><span class='day'>05</span> <span class='month'>Feb</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
-
-
-</article>
+    <article class="hentry" role="article" class="post clearfix">
+      
+  <header>
+    
 
 
 
-  
-  <h2>2010</h2>
-
-<article>
-  
-<h3><a href="/railsconf-2010-some-pics-courtesy-dr-nic">RailsConf 2010 - some pics courtesy Dr Nic</a></h3>
-<time datetime="2010-10-07T09:09:17+02:00" pubdate><span class='day'>07</span> <span class='month'>Oct</span> <span class='year'>2010</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/rails/'>Rails</a></span>
-</footer>
 
 
-</article>
 
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-27T10:01:00+02:00" pubdate data-updated="true">
+    <span class='day'> 27</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title">Active Merchant and Spree</h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
+  </header>
+
+
+<div class="entry-content"><p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
+
+<p>For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spree payment gateway.</p>
+
+<p>Add the ActiveMerchant gem:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#Gemfile</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;activemerchant&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/app/models/spree/gateway/pay_gate.rb</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span> <span class="o">&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:login</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">attr_accessible</span> <span class="ss">:preferred_login</span><span class="p">,</span> <span class="ss">:preferred_password</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">provider_class</span>
+</span><span class='line'>    <span class="no">ActiveMerchant</span><span class="o">::</span><span class="no">Billing</span><span class="o">::</span><span class="no">PayGateXmlGateway</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&#8217;s preferences system so that they can be filled in via the admin backend.</p>
+
+<p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/config/application.rb</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">after_initialize</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">Rails</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">spree</span><span class="o">.</span><span class="n">payment_methods</span> <span class="o">&lt;&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
 </div>
 
-      
+
+      <footer>
+
+        <div class="meta-data">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-27T10:01:00+02:00" pubdate data-updated="true">
+    <span class='day'> 27</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+          
+  
+
+<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Sachin Ranchod</span></span></p>
+
+          <span> in </span>
+          
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+
+          
+            <div class="sharing right">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/active-merchant-and-spree" data-via="siyelo" data-counturl="http://blog.siyelo.com/active-merchant-and-spree" >Tweet</a>
+  
+  
+  
+</div>
+
+          
+        </div>
+
+        <p class="meta pagination">
+          
+            <a class="basic-alignment left" href="/weekly-roundup-7" title="Previous Post: TL;DR: Rails 4, a responsive cat & a free book">Previous</a>
+          
+          
+        </p>
+
+      </footer>
     </article>
+
+    
+      <section class="comments">
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
     
   </div>
 
@@ -288,7 +412,10 @@
       var disqus_shortname = 'siyelo';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.siyelo.com/active-merchant-and-spree';
+        var disqus_url = 'http://blog.siyelo.com/active-merchant-and-spree';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
