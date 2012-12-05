@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-27T10:27:51+02:00</updated>
+  <updated>2012-12-05T10:06:19+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Siyelos' git workflow]]></title>
     <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
-    <updated>2011-12-12T11:53:00+02:00</updated>
+    <updated>2011-12-12T10:53:00+01:00</updated>
     <id>http://blog.siyelo.com/siyelos-git-workflow</id>
     <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
 
@@ -130,7 +130,7 @@ Deleted tag '0.9.0d' (was 5566b43)
   <entry>
     <title type="html"><![CDATA[Using Git? How to know what branch you're on, and if its dirty.]]></title>
     <link href="http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty"/>
-    <updated>2009-12-17T11:06:32+02:00</updated>
+    <updated>2009-12-17T10:06:32+01:00</updated>
     <id>http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty</id>
     <content type="html"><![CDATA[<p>Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.</p>
 
@@ -175,7 +175,7 @@ Deleted tag '0.9.0d' (was 5566b43)
   <entry>
     <title type="html"><![CDATA[Handy git aliases and config directives]]></title>
     <link href="http://blog.siyelo.com/handy-git-aliases-and-config-directives"/>
-    <updated>2009-11-30T12:53:00+02:00</updated>
+    <updated>2009-11-30T11:53:00+01:00</updated>
     <id>http://blog.siyelo.com/handy-git-aliases-and-config-directives</id>
     <content type="html"><![CDATA[<p>By adding a few lines to ~/.gitconfig and you can alias "git co" to "git checkout", etc:</p>
 
@@ -254,7 +254,7 @@ Deleted tag '0.9.0d' (was 5566b43)
   <entry>
     <title type="html"><![CDATA[Great .gitignore file(s) for your next Rails project]]></title>
     <link href="http://blog.siyelo.com/great-gitignore-files-for-your-next-rails-project"/>
-    <updated>2009-11-18T10:11:00+02:00</updated>
+    <updated>2009-11-18T09:11:00+01:00</updated>
     <id>http://blog.siyelo.com/great-gitignore-files-for-your-next-rails-project</id>
     <content type="html"><![CDATA[<p>Here's great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
 

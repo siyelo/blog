@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-27T10:27:51+02:00</updated>
+  <updated>2012-12-05T10:06:19+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -29,7 +29,7 @@
   <entry>
     <title type="html"><![CDATA[What makes a good website?]]></title>
     <link href="http://blog.siyelo.com/what-makes-a-good-website"/>
-    <updated>2010-01-20T14:16:00+02:00</updated>
+    <updated>2010-01-20T13:16:00+01:00</updated>
     <id>http://blog.siyelo.com/what-makes-a-good-website</id>
     <content type="html"><![CDATA[<p>Your website is often the first point of contact for so many people and most people who have found their way to your site will navigate away too easily if there’s not something there to hold their attention.  Good graphics are important of course, but what else helps to hold the attention of your reader?</p>
 
@@ -90,7 +90,7 @@
   <entry>
     <title type="html"><![CDATA[Browser market share: Applying the 80:20 rule ]]></title>
     <link href="http://blog.siyelo.com/browser-market-share-applying-the-8020-rule"/>
-    <updated>2009-12-12T11:10:22+02:00</updated>
+    <updated>2009-12-12T10:10:22+01:00</updated>
     <id>http://blog.siyelo.com/browser-market-share-applying-the-8020-rule</id>
     <content type="html"><![CDATA[<p>80% of the effort in many web development projects we've done was spent making the site work on ~20% of the browsers out there. Thats why its worth explaining to clients about standards-compliance, and focusing on making their sites work in those web browsers.</p>
 

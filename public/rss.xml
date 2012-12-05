@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-11-27T10:27:51+02:00</updated>
+  <updated>2012-12-05T10:06:19+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,9 +14,29 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Global Day Of Coderetreat 2012]]></title>
+    <link href="http://blog.siyelo.com/global-day-of-coderetreat-2012"/>
+    <updated>2012-12-05T09:32:00+01:00</updated>
+    <id>http://blog.siyelo.com/global-day-of-coderetreat-2012</id>
+    <author>Dalibor Nasevic</author>
+    <content type="html"><![CDATA[<p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
+
+<p><img src="http://blog.siyelo.com/images/posts/coderetreat_skopje_2012.png" alt="Global Day Of Coderetreat 2012 in Skopje (Macedonia)" /></p>
+
+<p><a href="http://coderetreat.org">Coderetreat</a> is a day-long, intensive practice event focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of &#8216;getting things done&#8217;, the coderetreat format has proven itself to be a fun and highly effective means of skill improvement.</p>
+
+<p>While on a Coderetreat the participants try to improve their craft by learning from each other, focusing on fundamental design principles (such as the Simple Rules of Design and the SOLID principles) and by challenging many of their every day assumptions.</p>
+
+<p>On December 8th, Coderetreats will be held all over the world as part of the <a href="http://globalday.coderetreat.org">Global Day of Coderetreat</a>. The Global Day of Coderetreat helps to raise awareness of Coderetreats and brings people together from all over the world. Most importantly, The Global Day of Coderetreat helps to support global efforts to find, encourage, and educate the next generation of software developers.</p>
+
+<p>Last year, 94 cities participated. This year, it is expected approximately 200 cities to participate with an average of 15-20 participants per city.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Active Merchant and Spree]]></title>
     <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
-    <updated>2012-11-27T10:01:00+02:00</updated>
+    <updated>2012-11-27T10:01:00+01:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
@@ -83,7 +103,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-7"/>
-    <updated>2012-11-16T17:09:00+02:00</updated>
+    <updated>2012-11-16T17:09:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-7</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
@@ -103,7 +123,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-6"/>
-    <updated>2012-11-09T15:36:00+02:00</updated>
+    <updated>2012-11-09T15:36:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-6</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
@@ -135,7 +155,7 @@
   <entry>
     <title type="html"><![CDATA[The Siyelo Book Club]]></title>
     <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
-    <updated>2012-11-08T16:08:00+02:00</updated>
+    <updated>2012-11-08T16:08:00+01:00</updated>
     <id>http://blog.siyelo.com/the-siyelo-book-club</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
@@ -282,7 +302,7 @@
   <entry>
     <title type="html"><![CDATA[Annotation without thought]]></title>
     <link href="http://blog.siyelo.com/annotation-without-thought"/>
-    <updated>2012-11-08T11:48:00+02:00</updated>
+    <updated>2012-11-08T11:48:00+01:00</updated>
     <id>http://blog.siyelo.com/annotation-without-thought</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>If you like your schema definitions handy in the current ActiveRecord
@@ -328,7 +348,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
   <entry>
     <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
     <link href="http://blog.siyelo.com/welcoming-ile"/>
-    <updated>2012-11-02T15:20:00+02:00</updated>
+    <updated>2012-11-02T15:20:00+01:00</updated>
     <id>http://blog.siyelo.com/welcoming-ile</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
@@ -913,120 +933,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 
 
 <p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Vim Tips - Part I]]></title>
-    <link href="http://blog.siyelo.com/vim-tips-part-i"/>
-    <updated>2012-06-27T09:50:00+02:00</updated>
-    <id>http://blog.siyelo.com/vim-tips-part-i</id>
-    <author>Dalibor Nasevic</author>
-    <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
-
-<h3>1. Repeat the last Ex command</h3>
-
-<p>In Vim there are 3 command line mode prompts:</p>
-
-<ul>
-<li>Ex command prompt: <strong>:something</strong></li>
-<li>Search prompt: <strong>/something</strong></li>
-<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
-</ul>
-
-
-<p>Let say we run a spec from the Ex command prompt like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:!</span>rspec spec<span class="sr">/models/</span>code_spec.rb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
-
-<h3>2. Repeat the last substitute command</h3>
-
-<p>If substitute command is run, like for example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">s</span><span class="sr">/current_user/</span>user/<span class="k">g</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&#8217;s handy having the following mappings in the vimrc file:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; make &amp; trigger :&amp;&amp; so it preserves flags</span>
-</span><span class='line'><span class="nb">nnoremap</span> &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
-</span><span class='line'>xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>3. Sort properties in CSS</h3>
-
-<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
-</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
-</span><span class='line'>  margin: <span class="m">15</span>px;
-</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
-</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
-</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
-</span><span class='line'>  margin: <span class="m">15</span>px;
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>4. Select texts</h3>
-
-<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; select last paste in visual mode</span>
-</span><span class='line'><span class="nb">nnoremap</span> <span class="p">&lt;</span>expr<span class="p">&gt;</span> gb <span class="s1">&#39;`[&#39;</span> . strpart<span class="p">(</span>getregtype<span class="p">(),</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span> . <span class="s1">&#39;`]&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
-
-<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
-
-<h3>6. Run normal mode commands across a range</h3>
-
-<p>Say we want to append ; at the end of the following lines:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>var element <span class="p">=</span> $<span class="p">(</span>this<span class="p">)</span>
-</span><span class='line'>var tabName <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;tab&#39;</span><span class="p">)</span>
-</span><span class='line'>var <span class="nb">report</span>  <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;report&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
-
-<p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
 ]]></content>
   </entry>
   

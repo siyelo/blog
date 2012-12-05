@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="11 Sep 2012 We&#8217;re Hiring - Experienced Web Developer &#8211;> Comments &#8211;> &#8211;> Siyelo is growing and we&#8217;re looking for &hellip;">
+  <meta name="description" content="11 Sep 2012 Siyelo Drinkup: Skopje &#8211;> Comments &#8211;> &#8211;> There&#8217;ll be three Siyelo folks in town next week, and we&#8217;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,68 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-09-11T16:09:00+02:00" pubdate data-updated="true">
+    <span class='day'> 11</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/siyelo-drinkup-skopje">Siyelo Drinkup: Skopje</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/siyelo-drinkup-skopje#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>There&#8217;ll be <a href="https://github.com/dalibor">three</a> <a href="https://github.com/Dime">Siyelo</a> <a href="https://github.com/glennr">folks</a> in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.</p>
+
+<p><img src="/images/old/2012/09/pastedgraphic-4.png" alt="Github Siyelo members" /></p>
+
+<p>If you&#8217;re into web technologies, come and join us next Wednesday night for a great time at La Bodeguita in Skopje - drinks are on us!</p>
+
+<p><img src="/images/old/2012/09/pastedgraphic-1.png" alt="Bar people" /></p>
+
+<h2>Details:</h2>
+
+<ul>
+<li><strong>Where</strong>: <a href="http://www.bodeguita.com.mk/">La Bodeguita Del Medio</a> 13 Noembri 180, Skopje</li>
+<li><strong>When</strong>:  Wednesday, 19 Sep, 7PM!</li>
+</ul>
+
+
+<p><img src="/images/old/2012/09/pastedgraphic-2.png" alt="La Bodeguita Del Medio map" /></p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -517,156 +579,6 @@
 
 
 <p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-06-27T09:50:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Jun</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/vim-tips-part-i">Vim Tips - Part I</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/vim-tips-part-i#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
-
-<h3>1. Repeat the last Ex command</h3>
-
-<p>In Vim there are 3 command line mode prompts:</p>
-
-<ul>
-<li>Ex command prompt: <strong>:something</strong></li>
-<li>Search prompt: <strong>/something</strong></li>
-<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
-</ul>
-
-
-<p>Let say we run a spec from the Ex command prompt like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:!</span>rspec spec<span class="sr">/models/</span>code_spec.rb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
-
-<h3>2. Repeat the last substitute command</h3>
-
-<p>If substitute command is run, like for example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">s</span><span class="sr">/current_user/</span>user/<span class="k">g</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&#8217;s handy having the following mappings in the vimrc file:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; make &amp; trigger :&amp;&amp; so it preserves flags</span>
-</span><span class='line'><span class="nb">nnoremap</span> &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
-</span><span class='line'>xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>3. Sort properties in CSS</h3>
-
-<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
-</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
-</span><span class='line'>  margin: <span class="m">15</span>px;
-</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
-</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
-</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
-</span><span class='line'>  margin: <span class="m">15</span>px;
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>4. Select texts</h3>
-
-<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; select last paste in visual mode</span>
-</span><span class='line'><span class="nb">nnoremap</span> <span class="p">&lt;</span>expr<span class="p">&gt;</span> gb <span class="s1">&#39;`[&#39;</span> . strpart<span class="p">(</span>getregtype<span class="p">(),</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span> . <span class="s1">&#39;`]&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
-
-<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
-
-<h3>6. Run normal mode commands across a range</h3>
-
-<p>Say we want to append ; at the end of the following lines:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>var element <span class="p">=</span> $<span class="p">(</span>this<span class="p">)</span>
-</span><span class='line'>var tabName <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;tab&#39;</span><span class="p">)</span>
-</span><span class='line'>var <span class="nb">report</span>  <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;report&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
-
-<p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
 </div></div>
   
   
