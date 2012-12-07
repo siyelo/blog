@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing"
 date: 2012-11-09 15:36
 comments: true
-categories:
+categories: Weekly Roundup
 author: Nicole Dirks
 ---
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Weekly | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/weekly/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-12-05T10:06:19+01:00</updated>
+  <updated>2012-12-07T14:00:30+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-8"/>
+    <updated>2012-12-07T13:46:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-8</id>
+    <content type="html"><![CDATA[<p>It's that time again... Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
+
+<p>Dime shared Data Driven Documents, <a href="http://d3js.org/">D3.js</a> is a JavaScript library for manipulating documents based on data.</p>
+
+<p>Dalibor found the following articles <a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">7 Patterns to Refactor  at ActiveRecord</a> Models and Demeter: It's not just a good idea. It's the law, very insightful as well as sharing <a href="http://www.sdruby.org/podcast/94">Refactoring ActiveRecord</a> Models podcast as Ben Hughes explores several techniques for refactoring models and preventing them from getting out of hand. Purchase <a href="http://railsantipatterns.com/">Rails AntiPatterns: Best Practice Ruby on Rails Refactoring</a> on amazon and learn how to identify and fix over 300 of the most common mistakes made in Ruby on Rails applications.</p>
+
+<p>Glenn suggested reading about <a href="http://blog.obiefernandez.com/content/2008/09/master-services-agreement-part-1.html">Obie Fernandez's great MSA and SoW templates for consulting engagements</a>. Sachin shared project management theory <a href="https://aidylewis.heroku.com/2012/11/18/kanban-no-it-cant/">Kanban</a> and <a href="http://blog.headius.com/2012/11/refining-ruby.html">Refining Ruby</a>.</p>
+
+<p>Last but not least Ile shared Know your gems and create <a href="http://robots.thoughtbot.com/post/35717411108/a-healthy-bundle">A Healthy Bundle</a> and <a href="http://blog.steveklabnik.com/posts/2012-11-22-introducing-the-rails-api-project">Introducing the Rails API Project
+</a></p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-7"/>
+    <updated>2012-11-16T17:09:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-7</id>
+    <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!... Happy friday from Siyelo.</p>
+
+<p>If you love freebies check this out. Dalibor received a free "<a href="http://https://twitter.com/sandimetz/status/268753825916133376">Practical Object-Oriented Design in Ruby</a>" book thanks to Sandi Metz and InformIT.  Great customer service!</p>
+
+<p>Dali has been fully emerged in the <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">Rails 4 compilation links</a>, a curated list of intersting links about the next release of Rails.  It's got pull requests, issues, commits, examples, posts, videos and much more.</p>
+
+<p>Sachin spent way too much time playing with the <a href="http://roxik.com/cat/">Responsive cat</a>.  You may not have heard the term  <a href="http://kkovacs.eu/the-death-star-design-pattern">'The Death Star design pattern'</a> before but we're sure you've come across it.  Finally, Sachin shared an article about <a href="http://tx.pignata.com/2012/11/being-for-the-benefit-of-future-developer.html">being for the benefit of future developer</a> - an interesting read with tips about what you can do to look after the next person that'll working on your code.</p>
+
+<p>Glenn shared an article on <a href="http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10">How Startups Are Killing Off Bosses</a>. Dime recommended downloading <a href="http://fitvidsjs.com/">Responsive videos</a>, A lightweight, easy-to-use jQuery plugin for fluid width video embeds and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> an iconic font designed for use with Twitter Bootstrap.</p>
+
+<p>Ile found <a href="http://www.youtube.com/watch?v=aBgnlBoIkVM">10 things you didn't know you could do with Ruby</a> while watching cat videos on YouTube.  He also spent some time learning about things <a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">you didn't know you could do with Chrome dev tools</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-6"/>
+    <updated>2012-11-09T15:36:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-6</id>
+    <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week's links with this week to give you quite a bit to cover.</p>
+
+<p>Dali shared a few great articles with us this week:</p>
+
+<ul>
+<li><a href="http://blog.8thlight.com/uncle-bob/2012/09/06/I-am-Your-New-CTO.html">New CTO</a> by Uncle Bob is an interesting read about how rational expectations from a new CTO may not always appear that way...until you look closely.</li>
+<li><a href="http://blog.8thlight.com/paul-pagel/2011/12/16/fixed-feature.html">Fixed Feature</a> - an Agile method of fixed bid compensation where clients only pay for the product they receive.</li>
+<li>The <a href="http://homepages.gold.ac.uk/polovina/learnpyramid/index.html">Learning Pyramid</a> diagram illustrates how much better teaching or doing is for retention of new information.</li>
+</ul>
+
+
+<p>It’s all too easy to give bad advice these days, Sachin recommends reading <a href="https://blog.intercom.io/asking-questions-versus-giving-advice/">asking questions versus giving advice</a>.</p>
+
+<p>Our newest addition Ile shared <a href="http://http://www.netmagazine.com/shop/magazines/december-2012-235">Killer features that are coming in Ruby 2.0.</a>.</p>
+
+<p>Dime introduced “<a href="http://www.netmagazine.com/shop/magazines/december-2012-235">how to achieve a more dynamic workflow</a>”, a Q&amp;A on <a href="http://uxdesign.smashingmagazine.com/2012/11/08/ux-design-qa-with-christian-holst/">Adaptive VS Responsive design</a> and lastly <a href="http://css-tricks.com/off-canvas-menu-with-css-target/">Off Canvas menu</a> layouts.</p>
+
+<p>Finally, we think 3Sheets may have just discovered the future of User Testing:</p>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/4cMVKW-fR1M?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TL;DR: Making Rails fast, Practical OO & Google data centers]]></title>
@@ -64,73 +134,6 @@
 <p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">"The Copernicus Method"</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
 
 <p>Have a great weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
-    <updated>2012-10-05T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-3</id>
-    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
-
-<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">'Lean from the Trenches: Managing Large-Scale Projects with Kanban'</a>  by Henrik Kniberg.  It's a great look at a practical implementation of Kanban.  We'll definitely be trying this out with future projects.</p>
-
-<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year's MountainWest RubyConf.</p>
-
-<p>Codegram's Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to 'force' yourself into achieving a better OO design. You might not agree with all the rules but it's a good catalyst for discussion.</p>
-
-<p>Glenn's been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
-
-<p>Finally, we were debating that all important, utterly-mystifying question... "<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?". What do you think?Have a great weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Ruby Security Guide, Macedonian parties & Moving things around]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-2"/>
-    <updated>2012-09-28T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-2</id>
-    <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you'll find something thought provoking. </p>
-
-<p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer's Guide</a>, it's not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
-
-<p>Has the optimism around Rails disappeared? Peter took a look at "<a href="http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html">Why Rail critics have it all wrong</a>?" Share your thoughts with us.</p>
-
-<p>Glenn has been updating Siyelo's business plan using these <a href="http://www.sequoiacap.com/ideas">guideline ideas</a> from Sequoia Capital. (<a href="http://blog.siyelo.com/siyelo-drinkup-skopje">While partying in Macedonia</a>) </p>
-
-<p>Want to run fast tests in your Rails application? Dalibor recommended <a href="https://github.com/burke/zeus">Zeus</a>. You'll avoid writing prefork blocks in your spec helper with Spork. It also works with other Rails development tasks such as console, server, generate, and it just takes less than one second to run.</p>
-
-<p>Dime stumbled onto quite a few interesting articles this week from <a href="http://www.vanseodesign.com/web-design/grid-choices/">choosing the right grids</a> for your projects to the <a href="http://jbrewer.github.com/Responsive-Measure/">final piece of responsive design</a> - scalable fonts!  </p>
-
-<p>This week's video features none other than the legendary graphic designer Milton Glaser: "<a href="http://brendandawes.com/blog/Glaser">I move things around until they look right</a>", his outlook on creativity and the path to success. </p>
-
-<p>"Anything I've really discovered has come through the act of making things."</p>
-
-<p>Enjoy your weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Sachin's beard, Skeuomorphism & Knowledge debt]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-1"/>
-    <updated>2012-09-13T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-1</id>
-    <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn't safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
-
-<p>This post starts a series of weekly articles where we'll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
-
-<p>This week Peter has been mulling over ways of preventing a "<a href="http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html">knowledge debt problem</a>". He's also recommended that you watch Rich Hickey's presentation on <a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple made Easy</a>.  </p>
-
-<p>Glenn has been meditating on <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> - a brilliant list of guiding principles for software developers.</p>
-
-<p>Sachin stumbled across an interview with Peter Thiel from <a href="http://www.newyorker.com/reporting/2011/11/28/111128fa_fact_packer?currentPage=all">The New Yorker</a> where he talks about why Silicon Valley hasn't done enough to disrupt and revolutionize the world.  It was also pretty cool to see our <a href="https://github.com/siyelo/should_clean">ShouldClean</a> gem being used in a commit to <a href="https://github.com/rspec/rspec-rails/commit/69a63cef280310c1164dda457bdecfd7700b10f0">Rspec</a>.</p>
-
-<p>Dalibor has been thinking about how to pitch his next big business plan - David McClure makes it clear that you should <a href="http://500hats.typepad.com/500blogs/2009/08/your-solution-is-not-my-problem.html">put the problem before the solution</a>.</p>
-
-<p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
-
-<p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so... <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
 ]]></content>
   </entry>
   

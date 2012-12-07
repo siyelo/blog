@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Rails 4, a responsive cat & a free book"
 date: 2012-11-16 17:09
 comments: true
-categories:
+categories: Weekly Roundup
 author: Nicole Dirks
 ---
 
@@ -17,5 +17,4 @@ Sachin spent way too much time playing with the [Responsive cat](http://roxik.co
 
 Glenn shared an article on [How Startups Are Killing Off Bosses](http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10). Dime recommended downloading [Responsive videos](http://fitvidsjs.com/), A lightweight, easy-to-use jQuery plugin for fluid width video embeds and [Font Awesome](http://fortawesome.github.com/Font-Awesome ) an iconic font designed for use with Twitter Bootstrap.
 
-Ile found [10 things you didn't know you could do with Ruby](http://www.youtube.com/watch?v=aBgnlBoIkVM) while watching cat videos on YouTube.  He also spent some time learning about things [you didn't know you could do with Chrome dev tools](http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/ ) .
-
+Ile found [10 things you didn't know you could do with Ruby](http://www.youtube.com/watch?v=aBgnlBoIkVM) while watching cat videos on YouTube.  He also spent some time learning about things [you didn't know you could do with Chrome dev tools](http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/ ).
