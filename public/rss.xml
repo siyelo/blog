@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-12-07T14:00:30+01:00</updated>
+  <updated>2012-12-21T15:04:33+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,9 +14,29 @@
 
   
   <entry>
+    <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-9"/>
+    <updated>2012-12-21T14:35:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-9</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>So the Mayan apocalypse was a dud&#8230; Thankfully so because it would&#8217;ve ruined a perfect day in Cape Town.</p>
+
+<p>This week Dalibor got one step closer to his goal of <a href="http://blog.iterate.no/2012/06/20/programming-like-kent-beck/">Programming like Kent Beck</a>.  He also spent some time reading up on what constitutes good design and why PG thinks it&#8217;s not <a href="http://paulgraham.com/taste.html">subjective or abstract</a>.</p>
+
+<p>Ile has been beefing up his <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim skills</a> thanks to <a href="http://twitter.com/mislav">@mislav&#8217;s</a> great post.  Starting with a simple <code>.vimrc</code> which you fully understand will make it easier to &#8216;get&#8217; the fundamentals.</p>
+
+<p>He&#8217;s also shared <a href="http://twitter.com/davetron5000">David Copeland&#8217;s</a> article on ways to improve reusability in your application - <a href="http://www.naildrivin5.com/blog/2012/12/19/re-use-in-oo-inheritance.html">Re-use in OO: Inheritance, Composition and Mixins</a></p>
+
+<p>Sachin was reading up on ways of improving your application&#8217;s performance on Heroku whilst <a href="http://www.stormconsultancy.co.uk/blog/development/6-ways-to-get-more-bang-for-your-heroku-buck-while-making-your-rails-site-super-snappy/">staying within budget</a></p>
+
+<p>Wishing you well over the festive season from Siyelo!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-8"/>
-    <updated>2012-12-07T13:46:00+01:00</updated>
+    <updated>2012-12-07T13:46:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-8</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
@@ -37,7 +57,7 @@
   <entry>
     <title type="html"><![CDATA[Global Day Of Coderetreat 2012]]></title>
     <link href="http://blog.siyelo.com/global-day-of-coderetreat-2012"/>
-    <updated>2012-12-05T09:32:00+01:00</updated>
+    <updated>2012-12-05T09:32:00+02:00</updated>
     <id>http://blog.siyelo.com/global-day-of-coderetreat-2012</id>
     <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
@@ -57,7 +77,7 @@
   <entry>
     <title type="html"><![CDATA[Active Merchant and Spree]]></title>
     <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
-    <updated>2012-11-27T10:01:00+01:00</updated>
+    <updated>2012-11-27T10:01:00+02:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
@@ -124,7 +144,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-7"/>
-    <updated>2012-11-16T17:09:00+01:00</updated>
+    <updated>2012-11-16T17:09:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-7</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
@@ -144,7 +164,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-6"/>
-    <updated>2012-11-09T15:36:00+01:00</updated>
+    <updated>2012-11-09T15:36:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-6</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
@@ -176,7 +196,7 @@
   <entry>
     <title type="html"><![CDATA[The Siyelo Book Club]]></title>
     <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
-    <updated>2012-11-08T16:08:00+01:00</updated>
+    <updated>2012-11-08T16:08:00+02:00</updated>
     <id>http://blog.siyelo.com/the-siyelo-book-club</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
@@ -323,7 +343,7 @@
   <entry>
     <title type="html"><![CDATA[Annotation without thought]]></title>
     <link href="http://blog.siyelo.com/annotation-without-thought"/>
-    <updated>2012-11-08T11:48:00+01:00</updated>
+    <updated>2012-11-08T11:48:00+02:00</updated>
     <id>http://blog.siyelo.com/annotation-without-thought</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>If you like your schema definitions handy in the current ActiveRecord
@@ -369,7 +389,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
   <entry>
     <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
     <link href="http://blog.siyelo.com/welcoming-ile"/>
-    <updated>2012-11-02T15:20:00+01:00</updated>
+    <updated>2012-11-02T15:20:00+02:00</updated>
     <id>http://blog.siyelo.com/welcoming-ile</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
@@ -758,80 +778,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 
 
 <p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails Deployment Audit]]></title>
-    <link href="http://blog.siyelo.com/rails-deployment-audit"/>
-    <updated>2012-07-13T16:13:00+02:00</updated>
-    <id>http://blog.siyelo.com/rails-deployment-audit</id>
-    <author>Dalibor Nasevic</author>
-    <content type="html"><![CDATA[<p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
-
-<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
-
-<h2>Extract sensitive data</h2>
-
-<p>All sensitive data like passwords, API keys &amp; tokens that are in the application are extracted as environment variables outside of the source code repository. We are using <a href="https://github.com/sstephenson/rbenv">rbevn</a>  for managing rubies, there is a nice plugin for setting up environment variables<a href="https://github.com/sstephenson/rbenv-vars">rbenv-vars</a>.</p>
-
-<h2>Continuous Integration &amp; Deployment</h2>
-
-<p>There are many great open source and commercial tools out there for <a href="https://www.ruby-toolbox.com/categories/continuous_integration">Continuous Integration</a>. We are using <a href="http://jenkins-ci.org/">Jenkins CI</a>  to run our test suite and handle Continuous Deployment (if the tests are green) for our staging branch. For production releases, we suggest doing releases manually at a scheduled time with the whole team ready and available.</p>
-
-<h2>Deployment tools</h2>
-
-<p>If you need more advanced tool for doing the deploy, <a href="https://github.com/capistrano/capistrano">Capistrano</a>  is the definitely the tool to go with. However, if you want something more light-weight you can try <a href="https://github.com/brentd/gitploy">gitploy</a>  (bare minimum, git-based tool for deployment). Alternatively, check out another tool from this <a href="https://www.ruby-toolbox.com/categories/deployment_automation">list</a>.</p>
-
-<h2>Deployment Documentation</h2>
-
-<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
-
-<h2>Server security</h2>
-
-<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode&#8217;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
-
-<h2>Start clean on boot</h2>
-
-<p>All the services that are being used by the application need to start cleanly when the server boots up - there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
-
-<h2>Log files</h2>
-
-<p>Prevent log files from growing to the point where you don&#8217;t have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
-
-<h2>Cron jobs</h2>
-
-<p>Whether it&#8217;s a backup script or background task that needs to be run as a job, it&#8217;s a good idea to have documentation on it within the application. Cron&#8217;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
-
-<h2>Backups</h2>
-
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
-
-<h2>Failover</h2>
-
-<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer daily/weekly/monthly <a href="http://www.linode.com/backups/">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
-
-<h2>External monitoring tools</h2>
-
-<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
-
-<h2>Notifications for Exceptions</h2>
-
-<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
-
-<h2>Process monitoring tools</h2>
-
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
-
-<h2>Server performance</h2>
-
-<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
-
-<h2>Application performance</h2>
-
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
-
-<p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
 ]]></content>
   </entry>
   

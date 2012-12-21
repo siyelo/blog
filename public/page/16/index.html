@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="18 Nov 2009 Textmate Tip: Align Statments &#8211;> Comments &#8211;> &#8211;> If you want to go from this: to an aligned, and much more legible &hellip;">
+  <meta name="description" content="18 Nov 2009 Great .gitignore File(s) for Your Next Rails Project &#8211;> Comments &#8211;> &#8211;> Here&#8217;s great rails template snippet to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,7 +113,78 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-18T07:53:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-18T10:11:00+02:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/great-gitignore-files-for-your-next-rails-project">Great .gitignore File(s) for Your Next Rails Project</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/great-gitignore-files-for-your-next-rails-project#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Here&#8217;s great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
+
+<p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>run <span class="s2">&quot;touch tmp/.gitignore log/.gitignore vendor/.gitignore&quot;</span>
+</span><span class='line'>run %<span class="o">{</span>find . -type d -empty | grep -v <span class="s2">&quot;vendor&quot;</span> | grep -v <span class="s2">&quot;.git&quot;</span> | grep -v <span class="s2">&quot;tmp&quot;</span> | xargs -I xxx touch xxx/.gitignore<span class="o">}</span>
+</span><span class='line'>file <span class="s1">&#39;.gitignore&#39;</span>, <span class="s">&lt;&lt;-EOS.gsub(/^ /, &#39;&#39;)</span>
+</span><span class='line'><span class="s">.DS_Store</span>
+</span><span class='line'><span class="s">log/*.log</span>
+</span><span class='line'><span class="s">tmp/**/*</span>
+</span><span class='line'><span class="s">config/database.yml</span>
+</span><span class='line'><span class="s">config/initializers/site_keys.rb</span>
+</span><span class='line'><span class="s">db/*.sqlite3</span>
+</span><span class='line'><span class="s">EOS</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-18T08:53:00+02:00" pubdate data-updated="true">
     <span class='day'> 18</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -167,7 +238,7 @@
 
 
 
-<section><time class="timestamp" datetime="2009-11-17T21:04:30+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-17T22:04:30+02:00" pubdate data-updated="true">
     <span class='day'> 17</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -229,7 +300,7 @@ This email is a service from Support <br /></p></blockquote>
 
 
 
-<section><time class="timestamp" datetime="2009-11-17T17:44:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-17T18:44:00+02:00" pubdate data-updated="true">
     <span class='day'> 17</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -294,7 +365,7 @@ This email is a service from Support <br /></p></blockquote>
 
 
 
-<section><time class="timestamp" datetime="2009-11-17T17:35:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">
     <span class='day'> 17</span>
     <span class='month'> Nov</span>
     <span class='year'> 2009</span>
@@ -341,52 +412,6 @@ This email is a service from Support <br /></p></blockquote>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2009-11-04T11:02:59+01:00" pubdate data-updated="true">
-    <span class='day'> 04</span>
-    <span class='month'> Nov</span>
-    <span class='year'> 2009</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/bert-the-lizard-resident-code-critic-at-siyelo">Bert the Lizard - Resident Code Critic at Siyelo</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/bert-the-lizard-resident-code-critic-at-siyelo#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p><a href="/images/old/2009/11/pastedgraphic11.png"><img src="/images/old/2009/11/pastedgraphic11.png" alt="Pastedgraphic" /></a></p>
 </div></div>
   
   

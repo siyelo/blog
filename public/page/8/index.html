@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="27 Jul 2011 Can&#8217;t Drop Your Heroku Database? &#8211;> Comments &#8211;> &#8211;> If you&#8217;re trying to drop your database on Heroku, and &hellip;">
+  <meta name="description" content="01 Aug 2011 How to Bulk Delete Remote Git Tags &#8211;> Comments &#8211;> &#8211;> project had a lot of old, unwanted pre-release branch tags in our &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,136 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-08-01T00:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 01</span>
+    <span class='month'> Aug</span>
+    <span class='year'> 2011</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/how-to-bulk-delete-remote-git-tags">How to Bulk Delete Remote Git Tags</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/how-to-bulk-delete-remote-git-tags#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>0.9.6c
+</span><span class='line'>0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
+
+<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>d16aeb86430afc26fb17f182f567d39c8c732188 refs/tags/0.9.6c
+</span><span class='line'>390c9a3251b813775ccdb96c375d50fed67d058f refs/tags/0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With a bit of awk and regexp love, we can match that output with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>^<span class="o">(</span>.*<span class="o">)</span>  -  the SHA <span class="o">(</span>at the start of the line ^<span class="o">)</span>
+</span><span class='line'><span class="o">(</span><span class="se">\s</span>+<span class="o">)</span>  - a cupla spaces
+</span><span class='line'><span class="o">(</span>.*<span class="o">[</span>a-z<span class="o">])</span><span class="nv">$ </span> - a string ending in a letter, followed by end of line <span class="o">(</span><span class="nv">$)</span>  <span class="o">(</span>there are more exact/safer ways of doing this regexp, I know<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And we know that to delete a git tag on a remote you use:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/0.9.6c
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So putting it all together we get:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git ls-remote --tags origin | awk <span class="s1">&#39;/^(.*)(\s+)(.*[a-z])$/ {print &quot;:&quot; $2}&#39;</span> | xargs git push origin
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</p>
+
+<p>Booyaka.</p>
+
+<p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
+
+<blockquote><p>a) make sure you have the tags backed up in your local repo first and <br />
+b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
+
+<p>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6c
+</span><span class='line'>- <span class="o">[</span>deleted<span class="o">]</span>         0.9.6d
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Similarly for removing these pre-release tags from a local git repo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git tag -l | awk <span class="s1">&#39;/^(.*[a-z])$/ {print $1}&#39;</span>  | xargs git tag -d
+</span><span class='line'>
+</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0c&#39;</span> <span class="o">(</span>was e373098<span class="o">)</span>
+</span><span class='line'>Deleted tag <span class="s1">&#39;0.9.0d&#39;</span> <span class="o">(</span>was 5566b43<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
+
+<p>Final step: Profit</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -229,7 +359,7 @@
 
 
 
-<section><time class="timestamp" datetime="2011-03-04T13:20:27+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2011-03-04T14:20:27+02:00" pubdate data-updated="true">
     <span class='day'> 04</span>
     <span class='month'> Mar</span>
     <span class='year'> 2011</span>
@@ -312,7 +442,7 @@
 
 
 
-<section><time class="timestamp" datetime="2011-02-05T11:14:27+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2011-02-05T12:14:27+02:00" pubdate data-updated="true">
     <span class='day'> 05</span>
     <span class='month'> Feb</span>
     <span class='year'> 2011</span>
@@ -345,56 +475,6 @@
 <p><a href="/images/old/2011/02/img_1425-scaled-1000.jpg"><img src="/images/old/2011/02/img_1425-scaled-1000.jpg" alt="Img_1425" /> </a></p>
 
 <p><a href="/images/old/2011/02/img_1427-scaled-1000.jpg"><img src="/images/old/2011/02/img_1427-scaled-1000.jpg" alt="Img_1427" /> </a></p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-12-16T19:53:25+01:00" pubdate data-updated="true">
-    <span class='day'> 16</span>
-    <span class='month'> Dec</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/the-siyelo-fridge">The Siyelo Fridge</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/the-siyelo-fridge#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>After a visit from our favourite Argentinian friend, this is what our fridge looks like;</p>
-
-<p><a href="/images/old/2010/12/photo.jpg"><img src="/images/old/2010/12/photo.jpg" alt="Photo" /> </a></p>
-
-<p>So much Quilmes, so little time!</p>
 </div></div>
   
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="13 Sep 2012 TL;DR: Sachin&#8217;s Beard, Skeuomorphism & Knowledge Debt &#8211;> Comments &#8211;> &#8211;> We share a lot of stuff in our Dev Chat &hellip;">
+  <meta name="description" content="20 Sep 2012 Junior Web Developer Wanted &#8211;> Comments &#8211;> &#8211;> Siyelo is a specialist Ruby on Rails consultancy and we are hiring a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,90 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-09-20T16:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 20</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/junior-web-developer-wanted">Junior Web Developer Wanted</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/junior-web-developer-wanted#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.</p>
+
+<h2>Opportunity</h2>
+
+<p>We are looking for people with passion to learn the web craft quickly and be &#8220;full-stack&#8221; developers. People that want to be part of a small team and want to work in an agile environment (TDD, pairing, short release cycles).</p>
+
+<p>This job will offer experience with product development, front-end development and design (Javascript, HTML and CSS), back-end work (Ruby / Ruby on Rails / other tools) and deployment practices to Linux based distros and cloud platforms.</p>
+
+<p>We value quality (writing tests) and encourage Open Source contributions and community participation.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Familiarity with Ruby, Python or Javascript</li>
+<li>Experience with SQL data stores</li>
+<li>Skills in all tiers of the web application stack</li>
+<li>Skills to navigate the command-line in a Linux environment</li>
+</ul>
+
+
+<h2>Highly Regarded</h2>
+
+<ul>
+<li>Git</li>
+<li>Vim</li>
+<li>Linux skills</li>
+</ul>
+
+
+<h2>Location</h2>
+
+<ul>
+<li>Skopje</li>
+</ul>
+
+
+<h2>How to Apply</h2>
+
+<p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -371,116 +455,6 @@
 
 
 <p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-07-13T16:13:00+02:00" pubdate data-updated="true">
-    <span class='day'> 13</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/rails-deployment-audit">Rails Deployment Audit</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/rails-deployment-audit#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
-
-<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
-
-<h2>Extract sensitive data</h2>
-
-<p>All sensitive data like passwords, API keys &amp; tokens that are in the application are extracted as environment variables outside of the source code repository. We are using <a href="https://github.com/sstephenson/rbenv">rbevn</a>  for managing rubies, there is a nice plugin for setting up environment variables<a href="https://github.com/sstephenson/rbenv-vars">rbenv-vars</a>.</p>
-
-<h2>Continuous Integration &amp; Deployment</h2>
-
-<p>There are many great open source and commercial tools out there for <a href="https://www.ruby-toolbox.com/categories/continuous_integration">Continuous Integration</a>. We are using <a href="http://jenkins-ci.org/">Jenkins CI</a>  to run our test suite and handle Continuous Deployment (if the tests are green) for our staging branch. For production releases, we suggest doing releases manually at a scheduled time with the whole team ready and available.</p>
-
-<h2>Deployment tools</h2>
-
-<p>If you need more advanced tool for doing the deploy, <a href="https://github.com/capistrano/capistrano">Capistrano</a>  is the definitely the tool to go with. However, if you want something more light-weight you can try <a href="https://github.com/brentd/gitploy">gitploy</a>  (bare minimum, git-based tool for deployment). Alternatively, check out another tool from this <a href="https://www.ruby-toolbox.com/categories/deployment_automation">list</a>.</p>
-
-<h2>Deployment Documentation</h2>
-
-<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
-
-<h2>Server security</h2>
-
-<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode&#8217;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
-
-<h2>Start clean on boot</h2>
-
-<p>All the services that are being used by the application need to start cleanly when the server boots up - there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
-
-<h2>Log files</h2>
-
-<p>Prevent log files from growing to the point where you don&#8217;t have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
-
-<h2>Cron jobs</h2>
-
-<p>Whether it&#8217;s a backup script or background task that needs to be run as a job, it&#8217;s a good idea to have documentation on it within the application. Cron&#8217;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
-
-<h2>Backups</h2>
-
-<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
-
-<h2>Failover</h2>
-
-<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer daily/weekly/monthly <a href="http://www.linode.com/backups/">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
-
-<h2>External monitoring tools</h2>
-
-<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
-
-<h2>Notifications for Exceptions</h2>
-
-<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
-
-<h2>Process monitoring tools</h2>
-
-<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
-
-<h2>Server performance</h2>
-
-<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
-
-<h2>Application performance</h2>
-
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
-
-<p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
 </div></div>
   
   
