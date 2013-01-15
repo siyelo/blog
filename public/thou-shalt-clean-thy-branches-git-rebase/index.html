@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Are Agile Projects Doomed to Half-Baked Design? - Siyelo</title>
+  <title>Thou shalt clean thy branches: git rebase - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="The answer is no. An excellent presentation from Alex &amp; Leslie from PivotalLabs and GetSatisfaction respectively tells why: Are Agile Projects &hellip;">
+  <meta name="description" content="I often find myself wondering when to do a interactive rebase (git rebase) vs a squashed merge (git merge --squash). The answer is rather subtle and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design">
+  <link rel="canonical" href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -111,13 +111,13 @@
 
 
 
-<section><time class="timestamp" datetime="2010-01-10T22:23:08+02:00" pubdate data-updated="true">
-    <span class='day'> 10</span>
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
     <span class='month'> Jan</span>
-    <span class='year'> 2010</span>
+    <span class='year'> 2013</span>
   </time></section>
     
-      <h1 class="entry-title">Are Agile Projects Doomed to Half-Baked Design?</h1>
+      <h1 class="entry-title">Thou Shalt Clean Thy Branches: Git Rebase</h1>
     
     <!--  -->
     <!--   <p class="meta"> -->
@@ -129,14 +129,31 @@
   </header>
 
 
-<div class="entry-content"><p>The answer is no.</p>
+<div class="entry-content"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
 
-<p>An <a href="http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design">excellent presentation</a> from Alex &amp; Leslie from PivotalLabs and GetSatisfaction respectively tells why:</p>
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
 
-<iframe src="http://www.slideshare.net/slideshow/embed_code/39852" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article
+from Paul
+Stadig</a>
+which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid,
+and necessary parts of a healthly git workflow.</p>
 
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
 
-<p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design" title="Are Agile Projects Doomed to Half-Baked Design?" target="_blank">Are Agile Projects Doomed to Half-Baked Design?</a> </strong> from <strong><a href="http://www.slideshare.net/theinfonaut" target="_blank">theinfonaut</a></strong> </div></p>
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
 </div>
 
 
@@ -159,10 +176,10 @@
 
 
 
-<section><time class="timestamp" datetime="2010-01-10T22:23:08+02:00" pubdate data-updated="true">
-    <span class='day'> 10</span>
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
     <span class='month'> Jan</span>
-    <span class='year'> 2010</span>
+    <span class='year'> 2013</span>
   </time></section>
           
   
@@ -174,7 +191,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/agile/'>Agile</a>
+    <a class='category' href='/blog/categories/git/'>git</a>
   
 </span>
 
@@ -183,7 +200,7 @@
           
             <div class="sharing right">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design" data-via="siyelo" data-counturl="http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase" data-via="siyelo" data-counturl="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase" >Tweet</a>
   
   
   
@@ -194,10 +211,8 @@
 
         <p class="meta pagination">
           
-            <a class="basic-alignment left" href="/design-chunking-with-scrum" title="Previous Post: Design Chunking with Scrum">Previous</a>
+            <a class="basic-alignment left" href="/annotation-without-thought" title="Previous Post: Annotation without thought">Previous</a>
           
-          
-            <a class="basic-alignment right" href="/full-text-search-on-heroku-with-texticle" title="Next Post: Full text search on Heroku with Texticle">Next</a>
           
         </p>
 
@@ -365,8 +380,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design';
-        var disqus_url = 'http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design';
+        var disqus_identifier = 'http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase';
+        var disqus_url = 'http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="08 Nov 2012 Annotation Without Thought &#8211;> Comments &#8211;> &#8211;> If you like your schema definitions handy in the current ActiveRecord &hellip;">
+  <meta name="description" content="15 Jan 2013 Thou Shalt Clean Thy Branches: Git Rebase &#8211;> Comments &#8211;> &#8211;> I often find myself wondering when to do a interactive &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,6 +113,76 @@
 
 
 
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/thou-shalt-clean-thy-branches-git-rebase">Thou Shalt Clean Thy Branches: Git Rebase</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/thou-shalt-clean-thy-branches-git-rebase#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
+
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article
+from Paul
+Stadig</a>
+which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid,
+and necessary parts of a healthly git workflow.</p>
+
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
     <span class='day'> 08</span>
     <span class='month'> Nov</span>
@@ -156,9 +226,9 @@ model you&#8217;re looking at, you&#8217;re probably using the
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
-</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate and run annotations&#39;</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
 </span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
-</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -368,62 +438,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
 
 <p>Have a great weekend!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-10-05T18:00:00+02:00" pubdate data-updated="true">
-    <span class='day'> 05</span>
-    <span class='month'> Oct</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-3">TL;DR: Lean From the Trenches, Schemaless SQL & Blowing in Nintendo Cartridges</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-3#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
-
-<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
-
-<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
-
-<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
-
-<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
-
-<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
 </div></div>
   
   
