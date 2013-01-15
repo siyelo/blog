@@ -12,12 +12,8 @@ I often find myself wondering when to do a interactive rebase (`` git rebase ``)
 Either way, you are rewriting histories, so you have to know what you're
 doing.
 
-A google search of ('git merge squash vs rebase') turns up [this article
-from Paul
-Stadig](http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html)
-which rather irks me. Paul's stance in this article is that you should
-'never' use git rebase/amend/squash. But these are all perfectly valid,
-and necessary parts of a healthly git workflow.
+A google search of ('git merge squash vs rebase') turns up [this article from Paul Stadig](http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html) which rather irks me. Paul's stance in this article is that you should
+'never' use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.
 
 Interactive rebasing and merge squashing are essential if you care about having a *clean* git
 history.  Linus explains it perfectly [here](http://lwn.net/Articles/328438/)

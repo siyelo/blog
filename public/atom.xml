@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-15T12:26:49+02:00</updated>
+  <updated>2013-01-15T12:27:58+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -24,12 +24,8 @@
 <p>Either way, you are rewriting histories, so you have to know what you&#8217;re
 doing.</p>
 
-<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article
-from Paul
-Stadig</a>
-which rather irks me. Paul&#8217;s stance in this article is that you should
-&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid,
-and necessary parts of a healthly git workflow.</p>
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
 
 <p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
 history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
