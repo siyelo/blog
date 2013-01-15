@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2012-12-21T15:04:33+02:00</updated>
+  <updated>2013-01-15T12:26:49+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Thou shalt clean thy branches: git rebase]]></title>
+    <link href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase"/>
+    <updated>2013-01-15T10:18:00+02:00</updated>
+    <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
+    <author>Glenn Roberts</author>
+    <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
+
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article
+from Paul
+Stadig</a>
+which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid,
+and necessary parts of a healthly git workflow.</p>
+
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
@@ -744,40 +778,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <h2>How to Apply</h2>
 
 <p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Scratching an itch]]></title>
-    <link href="http://blog.siyelo.com/scratching-an-itch"/>
-    <updated>2012-09-07T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/scratching-an-itch</id>
-    <author>Sachin Ranchod</author>
-    <content type="html"><![CDATA[<p>This week we released a very simple gem called <a href="https://rubygems.org/gems/should_clean">ShouldClean</a>. ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it &#8216;should do this&#8230;&#8217;, it &#8216;should do that&#8230;&#8217;) into a cleaner and simpler imperative style (it &#8216;does this&#8230;&#8217;, it &#8216;does that&#8230;&#8217;).  </p>
-
-<p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word &#8216;should&#8217; and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">it</span> <span class="s2">&quot;should be true&quot;</span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span><span class="c1">#=&gt; it &quot;is true&quot;</span>
-</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should action something&quot;</span> <span class="c1">#=&gt; it &quot;actions something&quot;</span>
-</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should push something&quot;</span> <span class="err"> </span> <span class="c1">#=&gt; it &quot;pushes something&quot;</span>
-</span><span class='line'><span class="n">it</span> <span class="s2">&quot;should by default be 1&quot;</span> <span class="err"> </span><span class="c1">#=&gt; it &quot;by default is 1&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Are a few extra &#8216;shoulds&#8217; really that big of deal? Probably not - it really boils down to a matter of preference.  For us, running this tool on projects with large test suites helps:</p>
-
-<ol>
-<li>make the tests more readable;</li>
-<li>it reduces unneccessary duplication in the spec files and the test output;</li>
-<li>An added benefit is that the test suite has a mood of certainty about it - reading the tests tells you what the code does, not what it should do when everything falls into place. </li>
-</ol>
-
-
-<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
 ]]></content>
   </entry>
   

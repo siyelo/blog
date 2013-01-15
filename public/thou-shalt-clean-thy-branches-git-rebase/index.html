@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: rails - Siyelo</title>
+  <title>Thou shalt clean thy branches: git rebase - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Category: rails">
+  <meta name="description" content="I often find myself wondering when to do a interactive rebase (git rebase) vs a squashed merge (git merge --squash). The answer is rather subtle and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.comblog/categories/rails/">
+  <link rel="canonical" href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -90,32 +90,140 @@
 
 </nav> -->
   <div class="wrapper multiclouds">
-  <div id="articles" class="blog-archives">
-    <article role="article">
+  <div id="articles">
 
-      <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h3><a href="/active-merchant-and-spree">Active Merchant and Spree</a></h3>
-<time datetime="2012-11-27T10:01:00+02:00" pubdate><span class='day'>27</span> <span class='month'>Nov</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/rails/'>rails</a></span>
-</footer>
+    <article class="hentry" role="article" class="post clearfix">
+      
+  <header>
+    
 
 
-</article>
 
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title">Thou Shalt Clean Thy Branches: Git Rebase</h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> -->
+    <!--      -->
+    <!--      | <a href="#disqus_thread">Comments</a> -->
+    <!--      -->
+    <!--   </p> -->
+    <!--  -->
+  </header>
+
+
+<div class="entry-content"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
+
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article
+from Paul
+Stadig</a>
+which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid,
+and necessary parts of a healthly git workflow.</p>
+
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
 </div>
 
-      
+
+      <footer>
+
+        <div class="meta-data">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+          
+  
+
+<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span></p>
+
+          <span> in </span>
+          
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>git</a>
+  
+</span>
+
+
+
+          
+            <div class="sharing right">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase" data-via="siyelo" data-counturl="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase" >Tweet</a>
+  
+  
+  
+</div>
+
+          
+        </div>
+
+        <p class="meta pagination">
+          
+            <a class="basic-alignment left" href="/weekly-roundup-9" title="Previous Post: TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use">Previous</a>
+          
+          
+        </p>
+
+      </footer>
     </article>
+
+    
+      <section class="comments">
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
     
   </div>
 
@@ -271,7 +379,10 @@
       var disqus_shortname = 'siyelo';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase';
+        var disqus_url = 'http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
