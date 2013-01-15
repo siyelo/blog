@@ -1,8 +1,22 @@
-{% if post.author %}
-  {% assign author = post.author %}
-{% elsif page.author %}
-  {% assign author = page.author %}
-{% else %}
-  {% assign author = site.author %}
-{% endif %}
-{% if author %}<p class="meta"><span class="byline author vcard">Posted by <span class="fn">{{ author }}</span></span></p>{% endif %}
+<div class='octopress-authorbox'>
+  <div class="author-pic">
+    <img src="{{ gravatar }}" alt="{{ author.name }}" />
+  </div>
+
+  <div class="author-about">
+    <h3>{{ author.name }}</h3>
+    <p>{{ author.description }}</p>
+    <ul class="author-links">
+      {% if author.twitter %}
+      <li>
+      <a href="http://twitter.com/{{ author.twitter}}">@{{ author.twitter }}</a>
+      </li>
+      {% endif %}
+      {% if author.blog %}
+      <li>
+      <a href="{{ author.blog }}">個人網站</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
