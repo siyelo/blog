@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-15T12:27:58+02:00</updated>
+  <updated>2013-01-16T18:09:52+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Active Merchant and Spree]]></title>
     <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
-    <updated>2012-11-27T10:01:00+02:00</updated>
+    <updated>2012-11-27T10:01:00+01:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn't particularly well documented.  Below are the steps we followed to get it working:</p>
 
