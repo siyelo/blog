@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="03 Jul 2012 Vim Tips - Part II &#8211;> Comments &#8211;> &#8211;> This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned &hellip;">
+  <meta name="description" content="27 Jun 2012 Vim Tips - Part I &#8211;> Comments &#8211;> &#8211;> At Siyelo all developers exclusively use Vim editor for coding. In this two-parts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,164 +92,6 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-07-03T16:39:23+02:00" pubdate data-updated="true">
-    <span class='day'> 03</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/vim-tips-part-ii">Vim Tips - Part II</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/vim-tips-part-ii#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
-
-<h2>1. Replace in multiple files</h2>
-
-<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span>args app<span class="sr">/assets/</span>javascripts/hrt*.<span class="nb">js</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span>args
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">argdo</span> %<span class="k">s</span><span class="sr">/Hrt/</span>Hrt2/<span class="k">g</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">argdo</span> <span class="k">update</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>2. Search and replace in multiple files</h2>
-
-<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files .<strong>vimgrep</strong> command creates quicklist with files matching the pattern which list we can see by opening it with <strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the <strong>:Qargs</strong> mapping which we have in our vimrc file:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'>command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">0</span> <span class="p">-</span><span class="k">bar</span> Qargs execute <span class="s1">&#39;args&#39;</span> QuickfixFilenames<span class="p">()</span>
-</span><span class='line'><span class="c">&quot; populate the argument list with each of the files named in the quickfix list</span>
-</span><span class='line'><span class="k">function</span><span class="p">!</span> QuickfixFilenames<span class="p">()</span>
-</span><span class='line'>  <span class="k">let</span> buffer_numbers <span class="p">=</span> {}
-</span><span class='line'>  <span class="k">for</span> quickfix_item <span class="k">in</span> getqflist<span class="p">()</span>
-</span><span class='line'>    <span class="k">let</span> buffer_numbers[quickfix_item[<span class="s1">&#39;bufnr&#39;</span>]] <span class="p">=</span> bufname<span class="p">(</span>quickfix_item[<span class="s1">&#39;bufnr&#39;</span>]<span class="p">)</span>
-</span><span class='line'>  <span class="k">endfor</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">join</span><span class="p">(</span>map<span class="p">(</span>values<span class="p">(</span>buffer_numbers<span class="p">),</span> <span class="s1">&#39;fnameescape(v:val)&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="k">endfunction</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">vimgrep</span> <span class="sr">/CurrencyNumberHelper/</span> app<span class="sr">/models/</span>*.rb
-</span><span class='line'><span class="p">:</span>Qargs
-</span><span class='line'><span class="p">:</span><span class="k">argdo</span> %<span class="k">s</span><span class="sr">/CurrencyNumberHelper/</span>CurrencyHelper/<span class="k">g</span>
-</span><span class='line'><span class="p">:</span><span class="k">argdo</span> <span class="k">update</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>3. Edit already recorded macro</h2>
-
-<p>While recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
-
-<h2>4. Execute macro in multiple files</h2>
-
-<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:
-:args app/models/*.rb Then we run the macro (that is recorded in register a) with:
-:argdo normal @aIn the end we save all the buffers with:
-:argdo update</p>
-
-<h2>5. Delete commands</h2>
-
-<p>We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="c">&quot; delete back one character (backspace)</span>
-</span><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span> <span class="c">&quot; delete back one word</span>
-</span><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">u</span><span class="p">&gt;</span> <span class="c">&quot; delete back to start of line</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>6. Vi mode on command line</h2>
-
-<p>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="p">-</span><span class="k">o</span> <span class="k">vi</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
-
-<p>To go back to emacs mode, we need to type:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="p">-</span><span class="k">o</span> emacs
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
-</div></div>
-  
-  
-
-
-      </article>
     
     
       <article>
@@ -956,6 +798,98 @@
 <p>If you are interested in amore indepth exampleof a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
 
 <p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-12-28T22:01:00+01:00" pubdate data-updated="true">
+    <span class='day'> 28</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/redis-in-the-nosql-ecosystem">Redis in the NoSQL Ecosystem</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/redis-in-the-nosql-ecosystem#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
+
+<p>All these different options place Redis in the NoSQL ecosystem somewhere between simple caching systems like memcache and feature-heavy document databases like MongoDB and CouchDB. The question is: when do you pick Redis over other NoSQL systems?</p>
+
+<h3>Give us some ACID</h3>
+
+<p>Before going into the use-cases, let&#8217;s say one more important thing about Redis. Redis is single threaded which allows it to be <a href="http://en.wikipedia.org/wiki/ACID">ACID compliant</a> (Atomicity, Consistency, Isolation and Durability). Other <a href="http://nosql-database.org/">NoSQL databases</a> generally don&#8217;t provide ACID compliance, or they provide it partially. By default Redis trades some durability in return for speed (default <strong>fsync()</strong> is set to <strong>everysec</strong> which means it will save data to disk every second). But, because Redis is very configurable, you can change how many times it will fsync() the data on disk by using the <strong>appendfsync</strong> command (you can use <strong>appendfsync always</strong> and system will fsync data after every write - it&#8217;s slow but safest!).</p>
+
+<h3>When to use Redis?</h3>
+
+<p>In your production environment you don&#8217;t need to switch to Redis. You can just <a href="http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html">use it for the new things</a> you are implementing. Always pick right tool for the job. For stable, predictable and relational data pick relational database. For temporary, highly dynamic data pick NoSQL database; schema changes can be a big problem and can take forever in big relational databases.</p>
+
+<p>If you have a highly dynamic data that changes often, storage tends to grow quickly and further involves schema adjusting to store them, then Redis can be a potential good choice.</p>
+
+<p>If you need a more featured document oriented database that allows you to perform <strong>range queries</strong>, <strong>regular expression searches</strong>, <strong>indexing</strong>, and <strong>MapReduce</strong> you should check <strong>MongoDB</strong>, <strong>CouchDB</strong> or similar. If you need a simple <strong>caching</strong> with better expiration algorhitms than Redis has then you should check <strong>memcache</strong>.</p>
+
+<h3>Redis Use-Cases</h3>
+
+<ul>
+<li>Access Logger: When you need to log different activities, Redis is a good solution. Because Redis has to keep all stored objects in memory, don&#8217;t forget to archive data to relational/document database because it can grow quickly after some time.</li>
+<li>Counting Downloads: <a href="https://github.com/rubygems/rubygems.org">Rubygems</a> uses Redis for counting downloads of gems. See how it&#8217;s implemented in the <a href="https://github.com/rubygems/rubygems.org/blob/master/app/models/download.rb">Download</a> model.</li>
+<li>High Score tables: Redis supports data type functions that can be very <a href="http://blog.agoragames.com/blog/2011/01/01/creating-high-score-tables-leaderboards-using-redis/">handy</a>.</li>
+<li>Who&#8217;s Online: Use Redis to implement <a href="http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/">who is online</a> logic in your application.</li>
+<li>Caching: Finding followings, followers or similar is very expensive operation in relational databases, use Redis to cache these data.</li>
+<li>Queues: <a href="https://github.com/defunkt/resque">Resque</a> is a Redis-backed Ruby library for creating background jobs, placing them on multiple queues, and processing them later.</li>
+<li>Live debugging: You need to do live debugging or roll out new features for production testing for specific users only - <a href="https://github.com/jamesgolick/rollout">Rollout</a> gem does exactly that.</li>
+<li>HN style social news site written in Ruby/Sinatra/Redis/jQuery - <a href="https://github.com/antirez/lamernews">lamernews</a>.</li>
+</ul>
+
+
+<h3>Redis console</h3>
+
+<p>You can use redis-cli to connect to a local or remote Redis server and call com-mands. Here is an example (first connect to the server using: redis-cli -p 6379):</p>
+
+<h3>Redis from Ruby</h3>
+
+<p>Here is an example using Ruby to execute commands on Redis server. You need to install <a href="https://github.com/ezmobius/redis-rb">redis gem</a> by executing<em>gem install redis</em>first.</p>
+
+<p>Learn more about Redis <a href="http://redis.io/commands">commands</a> and give some speed to your web applications for free.</p>
+
+<h3>Real world Redis example</h3>
+
+<p>At the end, lets show a real world example how Redis is used in <a href="http://rubygems.org/">Rubygems</a> for caching gem downloads count. For keeping the code snippet short some code is ommited and/or simplified.</p>
+
+<p>First, in the initializer a new redis object as a global variable <strong>$redis</strong> is instantiated. This object is used in Download model for updating the downloads count for a gem with <strong>self.incr(name)</strong> method and reading the downloads count for a gem with <strong>self.for_rubygem(name)</strong> method. Rubygems is using Sinatra application <strong>Hostess</strong> to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines <strong>get &#8220;/gems/*.gem&#8221;</strong> route which triggers the downloads count to be updated in the Redis database.</p>
+
+<p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at <a href="https://github.com/rubygems/rubygems.org">Github</a> for more details.</p>
 </div></div>
   
   

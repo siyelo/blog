@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="27 Jul 2011 Can&#8217;t Drop Your Heroku Database? &#8211;> Comments &#8211;> &#8211;> If you&#8217;re trying to drop your database on Heroku, and &hellip;">
+  <meta name="description" content="18 Jun 2011 Siyelo: An Equal Opportunity Employer. &#8211;> Comments &#8211;> &#8211;> We don&#8217;t even mind if our employees wear makeup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,74 +92,6 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2011</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/cant-drop-your-heroku-database">Can&#8217;t Drop Your Heroku Database?</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/cant-drop-your-heroku-database#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
-
-<h3>Step 1</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 2</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 3</h3>
-
-<p>???</p>
-
-<h3>Step 4</h3>
-
-<h3>Profit</h3>
-</div></div>
-  
-  
-
-
-      </article>
     
     
       <article>
@@ -395,6 +327,78 @@
 <p><a href="/images/old/2010/12/photo.jpg"><img src="/images/old/2010/12/photo.jpg" alt="Photo" /> </a></p>
 
 <p>So much Quilmes, so little time!</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-12-01T10:23:45+01:00" pubdate data-updated="true">
+    <span class='day'> 01</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/a-zerigo-dns-template-for-heroku-and-google-apps">A Zerigo DNS Template for Heroku and Google Apps</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/a-zerigo-dns-template-for-heroku-and-google-apps#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>While recently switching over a client&#8217;s web app, and their mailservers to Google Apps, I found that Zerigo&#8217;s template feature would make me less likely to murder kittens whenever I&#8217;m asked to do anything related to DNS.</p>
+
+<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
+
+<p>So here&#8217;s our Zerigo DNS template for a Heroku + Google Apps setup.</p>
+
+<h3>Part A - Heroku</h3>
+
+<p><a href="/images/old/2010/12/pastedgraphic-7.png"><img src="/images/old/2010/12/pastedgraphic-7.png" alt="Pastedgraphic-7" /> </a></p>
+
+<p>Heroku docs: <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a></p>
+
+<h3>Part B - Google Apps Mail</h3>
+
+<p><a href="http://getfile4.posterous.com/getfile/files.posterous.com/siyelo/tHuMks4RfHiRhJBNSrNopDqnjeg2OqVXvkhl7rBqbD4ZzqlzL0hAHyPLiIvM/PastedGraphic-6.png"><img src="/images/old/2010/12/pastedgraphic-6-png-scaled-500.jpg" alt="Pastedgraphic-6" /> </a></p>
+
+<p>Google apps mail help article: <a href="http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866">http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866</a></p>
+
+<h3>Part C - Google Apps miscellany </h3>
+
+<p>This is for webmail/docs/calendar</p>
+
+<p><a href="http://getfile9.posterous.com/getfile/files.posterous.com/siyelo/FmL94NEY7i4CsVB58RiTsqMOmOUEiLeiHXMAiWYQvrL915QmPdMGCCzvdHV7/PastedGraphic-8.png"><img src="/images/old/2010/12/pastedgraphic-8-png-scaled-500.jpg" alt="Pastedgraphic-8" /> </a></p>
+
+<p>And there you go! Never kill a kitten (again).</p>
+
+<p>Other similar links you might find useful: <a href="http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/">http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/</a></p>
 </div></div>
   
   

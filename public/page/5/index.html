@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="13 Sep 2012 TL;DR: Sachin&#8217;s Beard, Skeuomorphism & Knowledge Debt &#8211;> Comments &#8211;> &#8211;> We share a lot of stuff in our Dev Chat &hellip;">
+  <meta name="description" content="11 Sep 2012 Siyelo Drinkup: Skopje &#8211;> Comments &#8211;> &#8211;> There&#8217;ll be three Siyelo folks in town next week, and we&#8217;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,66 +92,6 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-09-13T18:00:00+02:00" pubdate data-updated="true">
-    <span class='day'> 13</span>
-    <span class='month'> Sep</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-1">TL;DR: Sachin&#8217;s Beard, Skeuomorphism & Knowledge Debt</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-1#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn&#8217;t safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
-
-<p>This post starts a series of weekly articles where we&#8217;ll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
-
-<p>This week Peter has been mulling over ways of preventing a &#8221;<a href="http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html">knowledge debt problem</a>&#8221;. He&#8217;s also recommended that you watch Rich Hickey&#8217;s presentation on <a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple made Easy</a>.  </p>
-
-<p>Glenn has been meditating on <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> - a brilliant list of guiding principles for software developers.</p>
-
-<p>Sachin stumbled across an interview with Peter Thiel from <a href="http://www.newyorker.com/reporting/2011/11/28/111128fa_fact_packer?currentPage=all">The New Yorker</a> where he talks about why Silicon Valley hasn&#8217;t done enough to disrupt and revolutionize the world.  It was also pretty cool to see our <a href="https://github.com/siyelo/should_clean">ShouldClean</a> gem being used in a commit to <a href="https://github.com/rspec/rspec-rails/commit/69a63cef280310c1164dda457bdecfd7700b10f0">Rspec</a>.</p>
-
-<p>Dalibor has been thinking about how to pitch his next big business plan - David McClure makes it clear that you should <a href="http://500hats.typepad.com/500blogs/2009/08/your-solution-is-not-my-problem.html">put the problem before the solution</a>.</p>
-
-<p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
-
-<p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so&#8230; <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
-</div></div>
-  
-  
-
-
-      </article>
     
     
       <article>
@@ -481,6 +421,164 @@
 <p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
 
 <p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-07-03T16:39:23+02:00" pubdate data-updated="true">
+    <span class='day'> 03</span>
+    <span class='month'> Jul</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/vim-tips-part-ii">Vim Tips - Part II</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/vim-tips-part-ii#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
+
+<h2>1. Replace in multiple files</h2>
+
+<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span>args app<span class="sr">/assets/</span>javascripts/hrt*.<span class="nb">js</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span>args
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">argdo</span> %<span class="k">s</span><span class="sr">/Hrt/</span>Hrt2/<span class="k">g</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">argdo</span> <span class="k">update</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>2. Search and replace in multiple files</h2>
+
+<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files .<strong>vimgrep</strong> command creates quicklist with files matching the pattern which list we can see by opening it with <strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the <strong>:Qargs</strong> mapping which we have in our vimrc file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">0</span> <span class="p">-</span><span class="k">bar</span> Qargs execute <span class="s1">&#39;args&#39;</span> QuickfixFilenames<span class="p">()</span>
+</span><span class='line'><span class="c">&quot; populate the argument list with each of the files named in the quickfix list</span>
+</span><span class='line'><span class="k">function</span><span class="p">!</span> QuickfixFilenames<span class="p">()</span>
+</span><span class='line'>  <span class="k">let</span> buffer_numbers <span class="p">=</span> {}
+</span><span class='line'>  <span class="k">for</span> quickfix_item <span class="k">in</span> getqflist<span class="p">()</span>
+</span><span class='line'>    <span class="k">let</span> buffer_numbers[quickfix_item[<span class="s1">&#39;bufnr&#39;</span>]] <span class="p">=</span> bufname<span class="p">(</span>quickfix_item[<span class="s1">&#39;bufnr&#39;</span>]<span class="p">)</span>
+</span><span class='line'>  <span class="k">endfor</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">join</span><span class="p">(</span>map<span class="p">(</span>values<span class="p">(</span>buffer_numbers<span class="p">),</span> <span class="s1">&#39;fnameescape(v:val)&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="k">endfunction</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">vimgrep</span> <span class="sr">/CurrencyNumberHelper/</span> app<span class="sr">/models/</span>*.rb
+</span><span class='line'><span class="p">:</span>Qargs
+</span><span class='line'><span class="p">:</span><span class="k">argdo</span> %<span class="k">s</span><span class="sr">/CurrencyNumberHelper/</span>CurrencyHelper/<span class="k">g</span>
+</span><span class='line'><span class="p">:</span><span class="k">argdo</span> <span class="k">update</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>3. Edit already recorded macro</h2>
+
+<p>While recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
+
+<h2>4. Execute macro in multiple files</h2>
+
+<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:
+:args app/models/*.rb Then we run the macro (that is recorded in register a) with:
+:argdo normal @aIn the end we save all the buffers with:
+:argdo update</p>
+
+<h2>5. Delete commands</h2>
+
+<p>We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="c">&quot; delete back one character (backspace)</span>
+</span><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span> <span class="c">&quot; delete back one word</span>
+</span><span class='line'><span class="p">&lt;</span>C<span class="p">-</span><span class="k">u</span><span class="p">&gt;</span> <span class="c">&quot; delete back to start of line</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>6. Vi mode on command line</h2>
+
+<p>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="p">-</span><span class="k">o</span> <span class="k">vi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
+
+<p>To go back to emacs mode, we need to type:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="p">-</span><span class="k">o</span> emacs
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here&#8217;s <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
 </div></div>
   
   
