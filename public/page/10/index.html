@@ -9,8 +9,9 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="25 Aug 2010 CanCan - Make Up Your Mind! &#8211;> Comments &#8211;> &#8211;> If you&#8217;re using CanCan and came across an error like this; 1
-The : &hellip;">
+  <meta name="description" content="23 Sep 2010 Git Workflow for a Staging Environment With Heroku and GitHub &#8211;> Comments &#8211;> &#8211;> Are you using git ?
+GitHub ?
+Heroku &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,80 @@ The : &hellip;">
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-09-23T12:39:00+02:00" pubdate data-updated="true">
+    <span class='day'> 23</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/git-workflow-for-a-staging-environment-with-heroku-and-github">Git Workflow for a Staging Environment With Heroku and GitHub</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/git-workflow-for-a-staging-environment-with-heroku-and-github#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Are you using</p>
+
+<ul>
+<li>git ?</li>
+<li>GitHub ?</li>
+<li>Heroku ? ( or some other nice git-backed hosting? )</li>
+<li>multiple Heroku environments ? (e.g. Production/Staging)</li>
+<li>good git team workflow practices ?</li>
+</ul>
+
+
+<p>Then check out this great post by the folks at New Forge;</p>
+
+<h2><a href="http://blog.newforge-tech.com/technical/2010/02/01/git-workflow.html">Git workflow for a staging environment with Heroku and GitHub</a></h2>
+
+<p>which tells you how to manage your git branches and keep them in sync with your Heroku instances. </p>
+
+<p>And here are some handy shell aliases to go with your newfound uber git/GitHub/Heroku workflow;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">gpow</span><span class="o">=</span><span class="s1">&#39;git push origin working&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gpsm</span><span class="o">=</span><span class="s1">&#39;git push heroku_staging staging:master&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gppm</span><span class="o">=</span><span class="s1">&#39;git push heroku_production&#39;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">hmig</span><span class="o">=</span><span class="s1">&#39;heroku rake db:migrate&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -375,58 +450,6 @@ The : &hellip;">
 
 
 <p>Start converting your existing <strong>legacy</strong> Ruby code in to scaleable, easy to read XML files today: <a href="http://github.com/tenderlove/enterprise">http://github.com/tenderlove/enterprise</a></p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-06-18T10:42:07+02:00" pubdate data-updated="true">
-    <span class='day'> 18</span>
-    <span class='month'> Jun</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/handy-rake-tasks-for-heroku">Handy Rake Tasks for Heroku</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/handy-rake-tasks-for-heroku#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We&#8217;ve been using a standalone rake task to generate the .gems for our Heroku apps. Recently Heroku raised the bar by making you specify the rails version too in this file (gah). So all your 2.3.5 or lower full redeploys will start breaking without this line in .gems.</p>
-
-<p>Theres some great gists and blogposts floating around there showing you how to generate .gems, but who wants to manage individual rake tasks across projects? Not me. A little bit of hunting and I found a nice plugin ‘heroku_san’ by Elijah Miller with several cool Heroku rake tasks, including one to generate the .gems file. </p>
-
-<p>Plugins are pants though, so I&#8217;ve updated heroku_san to a gem now too. No more copying .rake tasks between projects!</p>
-
-<p>Grab <a href="http://github.com/glennr/heroku_san">http://github.com/glennr/heroku_san</a> and <code>rake heroku:gems</code> til your hearts&#8217; content!</p>
 </div></div>
   
   

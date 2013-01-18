@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: git | Siyelo]]></title>
+  <title><![CDATA[Category: Git | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-15T12:27:58+02:00</updated>
+  <updated>2013-01-18T13:42:10+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,31 +14,264 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Thou shalt clean thy branches: git rebase]]></title>
-    <link href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase"/>
-    <updated>2013-01-15T10:18:00+02:00</updated>
-    <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
-    <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+    <title type="html"><![CDATA[Siyelos' git workflow]]></title>
+    <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
+    <updated>2011-12-12T10:53:00+01:00</updated>
+    <id>http://blog.siyelo.com/siyelos-git-workflow</id>
+    <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
 
-<p>Either way, you are rewriting histories, so you have to know what you're
-doing.</p>
+<h3>Named Branches</h3>
 
-<p>A google search of ('git merge squash vs rebase') turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul's stance in this article is that you should
-'never' use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
+<p>We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).</p>
 
-<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
-history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+<h3>Pull Requests</h3>
 
-<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
- pull into a branch that isn't already in good shape)</p>
+<p>When a branch is ready to be merged into dev we like to squash all the commits in that branch. This makes it easier for people reviewing the branch to get an overview of what is being done, it also makes for a cleaner git log.</p>
 
-<p>You must never EVER destroy other peoples history</p>
+<p>We do, however, avoid squashing commits in the even changes are requested after the branch has been reviewed. We find this helps with the review process as it is easier for the reviewers to digest.</p>
 
-<p>Keep your own history readable and dont expose your crap</p>
+<h3>Why pull requests?</h3>
 
-<p>Never pull into a branch that isn't already in good shape</p></blockquote>
+<p>Pull requests serve 2 functions:</p>
 
-<p>Stick to these simple rules, and rebase/squash as you please!</p>
+<p>Firstly they give a very transparent overview of what is being worked on and what is ready to be merged and deployed.</p>
+
+<p>This is also a great way to have your code peer reviewed. Github allows collaborators to comment directly on a line of code or on an entire commit or feature.</p>
+
+<h3>Merging</h3>
+
+<p>Once a branch has been given the go-ahead and the CI passes, one of the reviewers will merge the branch into dev. This is partly so there is a shared responsibility of the code in the repository and so there is always more than one person who understands that feature.</p>
+
+<h3>Deploying</h3>
+
+<p>Once merged in, the branch is immediately deployed to staging.</p>
+
+<p>Deploying immediately will reduce big merges (merges will be easier) and we are able to gain visibility of bugs as they are introduced.  It also gives us more time to locate possible defects, if any.</p>
+
+<p>If you're looking for something more specific, don't hesitate to ask :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to bulk delete remote git tags]]></title>
+    <link href="http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags"/>
+    <updated>2011-08-01T00:48:00+02:00</updated>
+    <id>http://blog.siyelo.com/how-to-bulk-delete-remote-git-tags</id>
+    <content type="html"><![CDATA[<p>project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:</p>
+
+<p><code>bash
+0.9.6c
+0.9.6d
+...
+</code></p>
+
+<p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
+
+<p>Given that "git ls-remote" gives output like "<SHA>    refs/tags/<tag>". E.g.:</p>
+
+<p><code>bash
+d16aeb86430afc26fb17f182f567d39c8c732188 refs/tags/0.9.6c
+390c9a3251b813775ccdb96c375d50fed67d058f refs/tags/0.9.6d
+...
+</code></p>
+
+<p>With a bit of awk and regexp love, we can match that output with:</p>
+
+<p><code>bash
+^(.*)  -  the SHA (at the start of the line ^)
+(\s+)  - a cupla spaces
+(.*[a-z])$  - a string ending in a letter, followed by end of line ($)  (there are more exact/safer ways of doing this regexp, I know)
+</code></p>
+
+<p>And we know that to delete a git tag on a remote you use:</p>
+
+<p><code>bash
+git push origin :refs/tags/0.9.6c
+</code></p>
+
+<p>So putting it all together we get:</p>
+
+<p><code>bash
+$ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*[a-z])$/ {print ":" $2}' | xargs git push origin
+</code></p>
+
+<p>(EDIT: thanks to @jamesconroyfinn for spotting the missing xargs)</p>
+
+<p>Booyaka.</p>
+
+<p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
+
+<blockquote><p>a) make sure you have the tags backed up in your local repo first and <br />
+b) check the output of the awk command first... (everything before "| xargs ..." )</p></blockquote>
+
+<p>Once you've done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
+
+<p><code>bash
+- [deleted]         0.9.6c
+- [deleted]         0.9.6d
+...
+</code></p>
+
+<p>Similarly for removing these pre-release tags from a local git repo:</p>
+
+<p>``` bash
+$ git tag -l | awk '/<sup>(.*[a-z])$/</sup> {print $1}'  | xargs git tag -d</p>
+
+<p>Deleted tag '0.9.0c' (was e373098)
+Deleted tag '0.9.0d' (was 5566b43)
+```</p>
+
+<p>(This command is a lot easier to figure out since the output from "git tag -l" is simpler. Alternatively, for synchronization, if you don't have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
+
+<p>Final step: Profit</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Git? How to know what branch you're on, and if its dirty.]]></title>
+    <link href="http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty"/>
+    <updated>2009-12-17T10:06:32+01:00</updated>
+    <id>http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty</id>
+    <content type="html"><![CDATA[<p>Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.</p>
+
+<p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34"><img src="http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg" alt="Terminal 2014 bash 2014 108ճ4" /></a></p>
+
+<p>Paste this code into your .bash_profile and off you go.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;Bash prompt showing current git branch &amp;amp; marking <span class="k">if </span>dirty:&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;Based on http://henrik.nyh.se/2008/12/git-dirty-prompt&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;function parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="k">$(</span>git status 2&gt; /dev/null | tail -n1<span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;nothing to commit (working directory clean)&quot;</span> <span class="o">]]</span> &amp;amp;&amp;amp; <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;function parse_git_branch <span class="o">{</span>
+</span><span class='line'>  git branch --no-color 2&gt; /dev/null | sed -e <span class="s1">&#39;/&lt;sup&gt;[&lt;sup&gt;*]/d&#39;</span>&lt;/sup&gt;&lt;/sup&gt; -e <span class="s2">&quot;s/&lt;em&gt; (.&lt;/em&gt;)/[\1$(parse_git_dirty)]/&quot;</span>
+</span><span class='line'><span class="o">}</span>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;export <span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\w/\w\[\033[35m\]$(parse_git_branch)\[\033[0m\]/g&#39;</span><span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Handy git aliases and config directives]]></title>
+    <link href="http://blog.siyelo.com/handy-git-aliases-and-config-directives"/>
+    <updated>2009-11-30T11:53:00+01:00</updated>
+    <id>http://blog.siyelo.com/handy-git-aliases-and-config-directives</id>
+    <content type="html"><![CDATA[<p>By adding a few lines to ~/.gitconfig and you can alias "git co" to "git checkout", etc:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>st = status
+</span><span class='line'>ci = commit
+</span><span class='line'>co = checkout
+</span><span class='line'>br = branch</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Also, you might find these will come in handy;</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[merge]
+</span><span class='line'>tool = opendiff
+</span><span class='line'>summary = true&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>[color]
+</span><span class='line'>diff = auto
+</span><span class='line'>status = auto
+</span><span class='line'>branch = auto
+</span><span class='line'>interactive = auto</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;http://henrik.nyh.se/2008/12/git-dirty-prompt&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;http://gist.github.com/47546&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;function parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  git diff --quiet HEAD &amp;amp;&gt;/dev/null
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> 1 <span class="o">]]</span> &amp;amp;&amp;amp; <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
+</span><span class='line'>  <span class="nb">local </span><span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>__git_ps1 <span class="s2">&quot;%s&quot;</span><span class="k">)</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$branch</span> <span class="o">]]</span> &amp;amp;&amp;amp; <span class="nb">echo</span> <span class="s2">&quot;[$branch$(parse_git_dirty)]&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\w/\w\[\033[35m\]$(parse_git_branch)\[\033[0m\]/g&#39;</span><span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Great .gitignore file(s) for your next Rails project]]></title>
+    <link href="http://blog.siyelo.com/great-gitignore-files-for-your-next-rails-project"/>
+    <updated>2009-11-18T09:11:00+01:00</updated>
+    <id>http://blog.siyelo.com/great-gitignore-files-for-your-next-rails-project</id>
+    <content type="html"><![CDATA[<p>Here's great rails template snippet to set up .gitignore files throughout your whole Rails project.</p>
+
+<p>It ignores unnecessary files in the root .gitignore, plus it ensures no vendor/ directories are checked into git.</p>
+
+<p><code>bash
+run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
+run %{find . -type d -empty | grep -v "vendor" | grep -v ".git" | grep -v "tmp" | xargs -I xxx touch xxx/.gitignore}
+file '.gitignore', &lt;&lt;-EOS.gsub(/^ /, '')
+.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+config/initializers/site_keys.rb
+db/*.sqlite3
+EOS
+</code></p>
 ]]></content>
   </entry>
   

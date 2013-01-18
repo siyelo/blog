@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open-Source | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-15T12:27:58+02:00</updated>
+  <updated>2013-01-18T13:42:10+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -75,7 +75,7 @@ it "should by default be 1"  #=&gt; it "by default is 1"
   <entry>
     <title type="html"><![CDATA[Fix for annoying bug in EmailSpec]]></title>
     <link href="http://blog.siyelo.com/fix-for-annoying-bug-in-emailspec"/>
-    <updated>2009-12-15T15:33:00+02:00</updated>
+    <updated>2009-12-15T14:33:00+01:00</updated>
     <id>http://blog.siyelo.com/fix-for-annoying-bug-in-emailspec</id>
     <content type="html"><![CDATA[<p>EmailSpec with Cucumber is a great combo. How else could you get such nice BDD syntax such as:</p>
 
@@ -128,7 +128,7 @@ gem install glennr-email-spec
   <entry>
     <title type="html"><![CDATA[Announcing Fuselage - Get your Rails project off to a flying start!]]></title>
     <link href="http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start"/>
-    <updated>2009-11-04T11:08:00+02:00</updated>
+    <updated>2009-11-04T10:08:00+01:00</updated>
     <id>http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start</id>
     <content type="html"><![CDATA[<p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the "rails" command gives you.</p>
 
