@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Conferences - Siyelo</title>
+  <title>Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Category: Conferences">
+  <meta name="description" content="04 Nov 2009 Announcing Fuselage - Get Your Rails Project Off to a Flying Start! &#8211;> Comments &#8211;> &#8211;> Fuselage takes all the hassle &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.comblog/categories/conferences/">
+  <link rel="canonical" href="http://blog.siyelo.com/page/18/">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -90,53 +90,177 @@
 
 </nav> -->
   <div class="wrapper multiclouds">
-  <div id="articles" class="blog-archives">
-    <article role="article">
-
-      <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h3><a href="/rubyfuza-conference-cape-town-pics">RubyFuZa conference, Cape Town - pics</a></h3>
-<time datetime="2011-02-05T12:14:27+02:00" pubdate><span class='day'>05</span> <span class='month'>Feb</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2010</h2>
-
-<article>
-  
-<h3><a href="/railsconf-2010-some-pics-courtesy-dr-nic">RailsConf 2010 - some pics courtesy Dr Nic</a></h3>
-<time datetime="2010-10-07T09:09:17+02:00" pubdate><span class='day'>07</span> <span class='month'>Oct</span> <span class='year'>2010</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/rails/'>Rails</a></span>
-</footer>
-
-
-</article>
-
-</div>
-
-      
-    </article>
+  <div id="articles">
     
-  </div>
+    
+    
+      <article>
+        
+  <header>
+    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-04T11:08:00+02:00" pubdate data-updated="true">
+    <span class='day'> 04</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start">Announcing Fuselage - Get Your Rails Project Off to a Flying Start!</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/announcing-fuselage-get-your-rails-project-off-to-a-flying-start#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Fuselage takes all the hassle out of installing several popular gems/plugins manually, as well as tidying up the default setup that the &#8220;rails&#8221; command gives you.</p>
+
+<p>What&#8217;s different about Fuselage? A lot of the Rails templates out there at the moment are quite primitive - a bunch of commands &amp; files shoved in to a single file. Fuselage has a separate template for each gem/plugin, allowing you to specify all the relevant installs/commands/files/etc in one place. The goal here is to capture a lot of the setup logic that most Rails gems have in a single, reusable template.</p>
+
+<p>Fuselage avoids asking a lot of questions, so if you want to customize your install, edit &#8220;template.rb&#8221; manually.</p>
+
+<p>Usage is very simple. You can invoke it directly from your &#8220;rails -m&#8221; command with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails app_name -m http://github.com/siyelo/fuselage/raw/master/template.rb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(note this does a git clone of Fuselage for you automatically)</p>
+
+<p>Or if you prefer, grab your own clone from <a href="http://github.com/siyelo/fuselage">http://github.com/siyelo/fuselage</a> and set the FUSELAGE_DIR environment variable.</p>
+
+<p>Full feature list</p>
+
+<p>Currently Fuselage includes the following;</p>
+
+<p><strong>Rails</strong></p>
+
+<ul>
+<li>basic template for a clean a rails install</li>
+<li>SCS</li>
+<li>git</li>
+</ul>
+
+
+<p><strong>DB + Models</strong></p>
+
+<ul>
+<li>MySQL</li>
+<li>authlogic</li>
+<li>recaptcha</li>
+<li>paperclip</li>
+</ul>
+
+
+<p><strong>Design/Layout</strong></p>
+
+<ul>
+<li>jQuery</li>
+<li>haml</li>
+<li>sass</li>
+<li>compass + blueprint</li>
+<li>formtastic</li>
+<li>cufon</li>
+<li>friendly_id</li>
+</ul>
+
+
+<p><strong>Controllers</strong></p>
+
+<ul>
+<li>make_resourceful</li>
+<li>will_paginate</li>
+</ul>
+
+
+<p><strong>Testing</strong></p>
+
+<ul>
+<li>machinist</li>
+<li>faker</li>
+<li>cucumber</li>
+<li>rspec</li>
+<li>webrat</li>
+<li>watchr - alternative to autotest</li>
+</ul>
+
+
+<p><strong>Search</strong></p>
+
+<ul>
+<li>thinking-sphinx</li>
+</ul>
+
+
+<p><strong>Security</strong></p>
+
+<ul>
+<li>tarantula</li>
+</ul>
+
+
+<p><strong>Metrics</strong></p>
+
+<ul>
+<li>metric_Fu</li>
+</ul>
+
+
+<p><strong>Production</strong></p>
+
+<ul>
+<li>passenger</li>
+<li>capistrano</li>
+<li>exception_notification</li>
+</ul>
+
+
+<p><strong>Extra templates included</strong></p>
+
+<p>These templates are included, but not installed by default. Manually edit template.rb to include them.</p>
+
+<ul>
+<li>compass with 960 grid system</li>
+<li>restful_authentication</li>
+<li>forgery</li>
+<li>asset_packager</li>
+<li>whenever</li>
+</ul>
+
+</div></div>
   
+  
+
+
+      </article>
+    
+    <div class="pagination">
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/17/">Newer</a>
+      
+    </div>
+  </div>
   <aside class="sidebar">
     
       <section>
@@ -150,37 +274,11 @@
     </li>
   </ul>
 </section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design">TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design</a>
-      </li>
-    
-      <li class="post">
-        <a href="/rails-security-vulnerabilities">Rails Security Vulnerabilities</a>
-      </li>
-    
-      <li class="post">
-        <a href="/thou-shalt-clean-thy-branches-git-rebase">Thou shalt clean thy branches: git rebase</a>
-      </li>
-    
-      <li class="post">
-        <a href="/weekly-roundup-9">TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use</a>
-      </li>
-    
-      <li class="post">
-        <a href="/weekly-roundup-8">TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements</a>
-      </li>
-    
-  </ul>
-</section>
 
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   
   <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
@@ -210,7 +308,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -224,12 +322,8 @@
 </section>
 
 
-
-
-
     
   </aside>
-  
 </div>
 
   <footer role="contentinfo"><footer id="footer">

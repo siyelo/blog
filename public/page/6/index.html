@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="21 Jun 2012 Rails 3 Upgrade Process (the Road From 2.3.14 to 3.2.6) &#8211;> Comments &#8211;> &#8211;> We&#8217;ve just upgraded an application &hellip;">
+  <meta name="description" content="27 Jun 2012 Vim Tips - Part I &#8211;> Comments &#8211;> &#8211;> At Siyelo all developers exclusively use Vim editor for coding. In this two-parts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,156 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-06-27T09:50:00+02:00" pubdate data-updated="true">
+    <span class='day'> 27</span>
+    <span class='month'> Jun</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/vim-tips-part-i">Vim Tips - Part I</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/vim-tips-part-i#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we&#8217;ll share few Vim tips that we find useful. Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+
+<h3>1. Repeat the last Ex command</h3>
+
+<p>In Vim there are 3 command line mode prompts:</p>
+
+<ul>
+<li>Ex command prompt: <strong>:something</strong></li>
+<li>Search prompt: <strong>/something</strong></li>
+<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
+</ul>
+
+
+<p>Let say we run a spec from the Ex command prompt like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:!</span>rspec spec<span class="sr">/models/</span>code_spec.rb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
+
+<h3>2. Repeat the last substitute command</h3>
+
+<p>If substitute command is run, like for example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span><span class="k">s</span><span class="sr">/current_user/</span>user/<span class="k">g</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&#8217;s handy having the following mappings in the vimrc file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; make &amp; trigger :&amp;&amp; so it preserves flags</span>
+</span><span class='line'><span class="nb">nnoremap</span> &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
+</span><span class='line'>xnoremap &amp; :&amp;&amp;<span class="p">&lt;</span>Enter<span class="p">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3. Sort properties in CSS</h3>
+
+<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
+</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
+</span><span class='line'>  margin: <span class="m">15</span>px;
+</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
+</span><span class='line'>}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>h4 {
+</span><span class='line'>  <span class="nb">background</span>: <span class="k">red</span>;
+</span><span class='line'>  font<span class="p">-</span>size: <span class="m">11</span>px;
+</span><span class='line'>  margin: <span class="m">15</span>px;
+</span><span class='line'>}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>4. Select texts</h3>
+
+<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="c">&quot; select last paste in visual mode</span>
+</span><span class='line'><span class="nb">nnoremap</span> <span class="p">&lt;</span>expr<span class="p">&gt;</span> gb <span class="s1">&#39;`[&#39;</span> . strpart<span class="p">(</span>getregtype<span class="p">(),</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span> . <span class="s1">&#39;`]&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
+
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
+
+<h3>6. Run normal mode commands across a range</h3>
+
+<p>Say we want to append ; at the end of the following lines:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>var element <span class="p">=</span> $<span class="p">(</span>this<span class="p">)</span>
+</span><span class='line'>var tabName <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;tab&#39;</span><span class="p">)</span>
+</span><span class='line'>var <span class="nb">report</span>  <span class="p">=</span> element.data<span class="p">(</span><span class="s1">&#39;report&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
+
+<p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -367,7 +517,7 @@
 
 
 
-<section><time class="timestamp" datetime="2011-12-30T11:41:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2011-12-30T12:41:00+02:00" pubdate data-updated="true">
     <span class='day'> 30</span>
     <span class='month'> Dec</span>
     <span class='year'> 2011</span>
@@ -675,7 +825,7 @@
 
 
 
-<section><time class="timestamp" datetime="2011-12-28T22:01:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2011-12-28T23:01:00+02:00" pubdate data-updated="true">
     <span class='day'> 28</span>
     <span class='month'> Dec</span>
     <span class='year'> 2011</span>
@@ -740,132 +890,6 @@
 <p>First, in the initializer a new redis object as a global variable <strong>$redis</strong> is instantiated. This object is used in Download model for updating the downloads count for a gem with <strong>self.incr(name)</strong> method and reading the downloads count for a gem with <strong>self.for_rubygem(name)</strong> method. Rubygems is using Sinatra application <strong>Hostess</strong> to speed up gem downloads. Sinatra application is registered as a  middleware in the application.rb config file. This application  defines <strong>get &#8220;/gems/*.gem&#8221;</strong> route which triggers the downloads count to be updated in the Redis database.</p>
 
 <p>Rubygems is doing more download stats like: total downloads, downloads per gem, downloads for a specific gem version, etc. Check out the source code at <a href="https://github.com/rubygems/rubygems.org">Github</a> for more details.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2011-12-14T10:51:00+01:00" pubdate data-updated="true">
-    <span class='day'> 14</span>
-    <span class='month'> Dec</span>
-    <span class='year'> 2011</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/jquery-mobile-overview">jQuery Mobile Overview</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/jquery-mobile-overview#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We&#8217;ve all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
-
-<p>It&#8217;s been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
-
-<p>Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
-
-<p>Building a mobile application with jQuery Mobile is extremely easy and fast</p>
-
-<p>One of the biggest advantages of jQuery Mobile is that even as a newcomer to the framework you can develop a rough version of your application in a matter of days as opposed to the native application development for Android and iOS where the learning curve is not quite as steep.</p>
-
-<p>To make your application mobile just include the jQuery Mobile files in your header:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.6.4.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Add the data attributes to your HTML markup:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;page&quot;</span> <span class="na">data-theme=</span><span class="s">&quot;e&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;h1&gt;</span>My Title<span class="nt">&lt;/h1&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>
-</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;ul</span> <span class="na">data-role=</span><span class="s">&quot;listview&quot;</span> <span class="na">data-inset=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 1<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;li&gt;</span>Page 2<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;li&gt;</span>jQuery Mobile<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>
-</span><span class='line'>     <span class="nt">&lt;div</span> <span class="na">data-role=</span><span class="s">&quot;footer&quot;</span> <span class="na">data-position=</span><span class="s">&quot;fixed&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;h4&gt;</span>Footer<span class="nt">&lt;/h4&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And this is the result:</p>
-
-<p><img src="/images/old/2011/12/34522551610-orig.png" alt="34522551610-orig" /></p>
-
-<p>The framework takes care of applying the styles and positioning the elements to fit and scale nicely on any device. With just a couple of html lines we have a template for our mobile application. Off course you can add your custom css styles to tweak the looks to your desires. Also with the release of the 1.0 support for the <a href="http://jquerymobile.com/blog/2011/10/28/announcing-themeroller-for-mobile-beta/">ThemeRoller</a> tool has been added, so quickly theming your application is a breeze.</p>
-
-<p>The important part in the html snippet above are the HTML5 data-* attributes. The framework relies on these data attributes in order to do it&#8217;s magic. Older browser will ignore this attributes and just render the regular html. Basically the layout of a jQuery Mobile application is defined by the data-role attribute. In the above example we can see that we have a divs with data-roles &#8220;header&#8221;, &#8220;content&#8221; and &#8220;footer&#8221; all of which belong to the main page wrapper. Also we added a data-role on the list element in order for the framework to “widgetize” it.</p>
-
-<p>By default, linking to other pages is automatically done via Ajax in a single-page model. All you need to do is define a standard links and the framework will take care of it. If the device doesn&#8217;t support Ajax for some reason the framework falls back to standard http requests. Another cool feature of the framework is linking within a multi-page document. A single page can contain many page containers defined by the data-role of “page” which means immediate display of the clicked page. When using this techniques combined with the page transition effects, the user experience feels almost “native app” like.</p>
-
-<h3>Web vs Native</h3>
-
-<p>Currently the biggest argument being used against the wider adoption of the mobile web applications is the limited access to the client device features. A common example to address this issue is combining the framework with tools like <a href="http://phonegap.com/">PhoneGap</a> and delivering the application as native. Combining the framework with tools like PhoneGap also minimizes the lower performance issues since all of the resources can be loaded from the device.</p>
-
-<p>Hopefully we will see a quick adoption of the proposed <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> specifications by Mozilla that define a standard of APIs that would give the browser high level access to the device components like GPS api, filesystem api, accelerometer api, dialer, messaging etc.</p>
-
-<h3>Conclusion</h3>
-
-<p>While all of those features provided by the jQuery Mobile framework are really cool and exciting, does the framework really provides a mature native-like feel and functionality to the applications built with it?</p>
-
-<p>The jQuery team have done a great job by providing a nicely packed framework with lots of features like progressive enhancement approach, theming framework, unified widgets, modular design, a great cross-browser compatibility, even for older and less capable browsers and devices. But there is much left to be desired in the performance area. Even when trying the simple examples on a high end devices the page transition effects and the general user flow feels a little clunky. This is the area that jQuery Mobile fails short when compared to the native applications and even other Mobile Application frameworks (<a href="http://jqtouch.com/">jQTouch</a> or <a href="http://www.sencha.com/">Sencha</a> ) but it probably be fixed in near future with the polishing of the rough edges.</p>
 </div></div>
   
   

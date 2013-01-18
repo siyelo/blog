@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="02 Nov 2012 Welcoming Ile - Our Newest Team Member &#8211;> Comments &#8211;> &#8211;> We&#8217;re very proud to announce the newest addition to the &hellip;">
+  <meta name="description" content="08 Nov 2012 Annotation Without Thought &#8211;> Comments &#8211;> &#8211;> If you like your schema definitions handy in the current ActiveRecord &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,7 +113,89 @@
 
 
 
-<section><time class="timestamp" datetime="2012-11-02T15:20:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/annotation-without-thought">Annotation Without Thought</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/annotation-without-thought#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>If you like your schema definitions handy in the current ActiveRecord
+model you&#8217;re looking at, you&#8217;re probably using the
+<a href="" title="https://github.com/ctran/annotate_models">annotate_models gem</a></p>
+
+<p>If you&#8217;re on Rails and want to automagically &#8216;annotate your models when running rake db:migrate, include this rake task in your project;</p>
+
+<figure class='code'><figcaption><span>&#8216;lib/tasks/annotate.rb&#8217;</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s1">&#39;Annotate persisted models&#39;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:anno</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;annotating models...&#39;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s1">&#39;annotate --exclude tests,fixtures -p after -s&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you can annotate your models manually with;</p>
+
+<pre><code>rake anno
+</code></pre>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-02T15:20:00+02:00" pubdate data-updated="true">
     <span class='day'> 02</span>
     <span class='month'> Nov</span>
     <span class='year'> 2012</span>
@@ -342,76 +424,6 @@
 <p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
 
 <p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-10-05T15:00:00+02:00" pubdate data-updated="true">
-    <span class='day'> 05</span>
-    <span class='month'> Oct</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/its-not-you-its-me">It&#8217;s Not You, It&#8217;s Me&#8230;</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/its-not-you-its-me#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here&#8217;s the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;</p>
-
-<p><a href="/images/old/2012/10/balls_of_fury.jpg"><img src="/images/old/2012/10/balls_of_fury.jpg" alt="" /></a></p>
-
-<p><em>Dear Siyelo</em></p>
-
-<p><em>The time has finally come for me to leave you. My time with the company has been something I will always remember. I have had much more fun than I would have ever thought and learnt a lot in the process. However, there are several reasons that have forced my decision.</em></p>
-
-<p><em>The truth of the matter is that, I&#8217;m feeling rather inadequate around all the other members of the team:</em></p>
-
-<p><em><strong>Glenn:</strong>Your knowledge of bad music is something I don&#8217;t think that I will ever be able to compete with. (<a href="http://www.youtube.com/watch?v=nNhNLi2oac8">http://www.youtube.com/watch?v=nNhNLi2oac8</a>). Need I say more?</em></p>
-
-<p><em><strong>Sachin:</strong>I&#8217;m afraid I don&#8217;t think I will ever be able to grow a beard like you. It&#8217;s emasculating. What really irks me is that you refuse to embrace this gift bestowed upon you.</em></p>
-
-<p><em><strong>Dalibor:</strong>I was the king of table tennis, or so I thought until you arrived earlier this year and smashed those dreams into little pieces.</em></p>
-
-<p><em><strong>Dime:</strong>Your knowledge of metal music is far superior to mine. It hurts me to admit this so I won&#8217;t expand on it further.</em></p>
-
-<p><em><strong>Wendy:</strong>I&#8217;ll never be as persistent as you. No, I haven&#8217;t done timesheets for today.</em></p>
-
-<p><em>Now, with our latest addition to the team, Nicole, I&#8217;m not even the prettiest person in the team!</em></p>
-
-<p><em>I&#8217;ll always treasure my time here and hope you enjoyed having me as much as I enjoyed being here.</em></p>
-
-<p><em>Peter</em></p>
 </div></div>
   
   

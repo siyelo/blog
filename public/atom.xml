@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-16T18:09:52+01:00</updated>
+  <updated>2013-01-18T17:12:34+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,43 +14,59 @@
 
   
   <entry>
+    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
+    <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
+    <updated>2013-01-18T13:36:00+02:00</updated>
+    <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
+
+<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
+
+<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
+
+<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
+
+<p>Happy reading and enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
     <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
-    <updated>2013-01-16T17:51:00+01:00</updated>
+    <updated>2013-01-16T17:51:00+02:00</updated>
     <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
     <author>Siyelo</author>
-    <content type="html"><![CDATA[<p>Last tuesday a <a href="https://twitter.com/rails/status/288743490744094720">tweet</a> sent from the official Ruby On Rails twitter account shook the ground for the Ruby on Rails world - a security vulnerability.
-&#8220;Upgrade IMMIDIATELY&#8221; was everything all the Rails developers in the world thought about for a day or two.</p>
+    <content type="html"><![CDATA[<p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
 
-<p>Like everyone else, we at Siyelo rushed to upgrade all of our apps to the newest Rails versions and we ran into problems. But, first things first&#8230;</p>
+<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves. But here&#8217;s how we went about it.</p>
 
 <h2>What happened?</h2>
 
-<p>I dont know if you people know this <a href="https://twitter.com/tenderlove">@tenderlove</a> guy, but, it was him who caused the earthquake.
-You dont know him? You should! Aaron Patterson a.k.a. <a href="https://twitter.com/tenderlove">@tenderlove</a> is Ruby core and Ruby On Rails developer and contributor and he found two [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] vulnerabilities in Ruby On Rails.</p>
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
 
-<h2>What he found?</h2>
+<h2>What&#8217;s the first issue?</h2>
 
-<p>Have you heard about Active Record? That &#8220;thingy&#8221; that handles the models, databases, tables, queries, etc etc in Ruby on Rails? Yes? Well, the first one is related to the way Active Record interprets parameters in combination with the way JSON is parsed. So what&#8217;s the problem? You see, if an attacker used this vulnerability it was possible for him to issue unexpected database queries with &#8220;IS NULL&#8221; or with empty WHERE clauses. And this was only the first half of the problem.</p>
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
 
-<h2>And what about the second half?</h2>
+<h2>And the second issue?</h2>
 
-<p>The second vulnerability was actually vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? Check this out - this vulnerability was found on <strong>ALL</strong> Rails versions. This means that every Rails application that you know of was affected by these vulnerabilities.</p>
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
 
-<h2>And what will happen now?</h2>
+<h2>What to do?</h2>
 
-<p>Well, thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We wont go into details about the vulnerabilities, but, believe us - you better upgrade your Rails applications!</p>
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
 
-<p>Did you upgrade your Rails applications? Did you have any problems while doing it? If yes, did you solve them?
-If not - Siyelo is preparing something really cool just for <strong>you</strong>.
-What? You&#8217;ll find out soon! :-)</p>
+<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Thou shalt clean thy branches: git rebase]]></title>
     <link href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase"/>
-    <updated>2013-01-15T10:18:00+01:00</updated>
+    <updated>2013-01-15T10:18:00+02:00</updated>
     <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
@@ -80,7 +96,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-9"/>
-    <updated>2012-12-21T14:35:00+01:00</updated>
+    <updated>2012-12-21T14:35:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-9</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>So the Mayan apocalypse was a dud&#8230; Thankfully so because it would&#8217;ve ruined a perfect day in Cape Town.</p>
@@ -100,7 +116,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-8"/>
-    <updated>2012-12-07T13:46:00+01:00</updated>
+    <updated>2012-12-07T13:46:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-8</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
@@ -121,7 +137,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Global Day Of Coderetreat 2012]]></title>
     <link href="http://blog.siyelo.com/global-day-of-coderetreat-2012"/>
-    <updated>2012-12-05T09:32:00+01:00</updated>
+    <updated>2012-12-05T09:32:00+02:00</updated>
     <id>http://blog.siyelo.com/global-day-of-coderetreat-2012</id>
     <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
@@ -141,7 +157,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Active Merchant and Spree]]></title>
     <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
-    <updated>2012-11-27T10:01:00+01:00</updated>
+    <updated>2012-11-27T10:01:00+02:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
@@ -208,7 +224,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-7"/>
-    <updated>2012-11-16T17:09:00+01:00</updated>
+    <updated>2012-11-16T17:09:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-7</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
@@ -228,7 +244,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-6"/>
-    <updated>2012-11-09T15:36:00+01:00</updated>
+    <updated>2012-11-09T15:36:00+02:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-6</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
@@ -260,7 +276,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[The Siyelo Book Club]]></title>
     <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
-    <updated>2012-11-08T16:08:00+01:00</updated>
+    <updated>2012-11-08T16:08:00+02:00</updated>
     <id>http://blog.siyelo.com/the-siyelo-book-club</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
@@ -407,7 +423,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Annotation without thought]]></title>
     <link href="http://blog.siyelo.com/annotation-without-thought"/>
-    <updated>2012-11-08T11:48:00+01:00</updated>
+    <updated>2012-11-08T11:48:00+02:00</updated>
     <id>http://blog.siyelo.com/annotation-without-thought</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>If you like your schema definitions handy in the current ActiveRecord
@@ -453,7 +469,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
   <entry>
     <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
     <link href="http://blog.siyelo.com/welcoming-ile"/>
-    <updated>2012-11-02T15:20:00+01:00</updated>
+    <updated>2012-11-02T15:20:00+02:00</updated>
     <id>http://blog.siyelo.com/welcoming-ile</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
@@ -725,32 +741,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
 
 <p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so&#8230; <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Siyelo Drinkup: Skopje]]></title>
-    <link href="http://blog.siyelo.com/siyelo-drinkup-skopje"/>
-    <updated>2012-09-11T16:09:00+02:00</updated>
-    <id>http://blog.siyelo.com/siyelo-drinkup-skopje</id>
-    <author>Glenn Roberts</author>
-    <content type="html"><![CDATA[<p>There&#8217;ll be <a href="https://github.com/dalibor">three</a> <a href="https://github.com/Dime">Siyelo</a> <a href="https://github.com/glennr">folks</a> in town next week, and we&#8217;re looking forward to meeting up with our friends in the web design/development community in MK.</p>
-
-<p><img src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-4.png" alt="Github Siyelo members" /></p>
-
-<p>If you&#8217;re into web technologies, come and join us next Wednesday night for a great time at La Bodeguita in Skopje - drinks are on us!</p>
-
-<p><img src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-1.png" alt="Bar people" /></p>
-
-<h2>Details:</h2>
-
-<ul>
-<li><strong>Where</strong>: <a href="http://www.bodeguita.com.mk/">La Bodeguita Del Medio</a> 13 Noembri 180, Skopje</li>
-<li><strong>When</strong>:  Wednesday, 19 Sep, 7PM!</li>
-</ul>
-
-
-<p><img src="http://blog.siyelo.com/images/old/2012/09/pastedgraphic-2.png" alt="La Bodeguita Del Medio map" /></p>
 ]]></content>
   </entry>
   

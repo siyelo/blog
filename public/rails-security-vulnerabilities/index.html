@@ -9,8 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Last tuesday a tweet sent from the official Ruby On Rails twitter account shook the ground for the Ruby on Rails world - a security vulnerability.
-&# &hellip;">
+  <meta name="description" content="Last Tuesday, everyone in the Rails world launched into action after this tweet. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory. We at Siyelo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -112,7 +111,7 @@
 
 
 
-<section><time class="timestamp" datetime="2013-01-16T17:51:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2013-01-16T17:51:00+02:00" pubdate data-updated="true">
     <span class='day'> 16</span>
     <span class='month'> Jan</span>
     <span class='year'> 2013</span>
@@ -130,31 +129,27 @@
   </header>
 
 
-<div class="entry-content"><p>Last tuesday a <a href="https://twitter.com/rails/status/288743490744094720">tweet</a> sent from the official Ruby On Rails twitter account shook the ground for the Ruby on Rails world - a security vulnerability.
-&#8220;Upgrade IMMIDIATELY&#8221; was everything all the Rails developers in the world thought about for a day or two.</p>
+<div class="entry-content"><p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
 
-<p>Like everyone else, we at Siyelo rushed to upgrade all of our apps to the newest Rails versions and we ran into problems. But, first things first&#8230;</p>
+<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves. But here&#8217;s how we went about it.</p>
 
 <h2>What happened?</h2>
 
-<p>I dont know if you people know this <a href="https://twitter.com/tenderlove">@tenderlove</a> guy, but, it was him who caused the earthquake.
-You dont know him? You should! Aaron Patterson a.k.a. <a href="https://twitter.com/tenderlove">@tenderlove</a> is Ruby core and Ruby On Rails developer and contributor and he found two [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] vulnerabilities in Ruby On Rails.</p>
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
 
-<h2>What he found?</h2>
+<h2>What&#8217;s the first issue?</h2>
 
-<p>Have you heard about Active Record? That &#8220;thingy&#8221; that handles the models, databases, tables, queries, etc etc in Ruby on Rails? Yes? Well, the first one is related to the way Active Record interprets parameters in combination with the way JSON is parsed. So what&#8217;s the problem? You see, if an attacker used this vulnerability it was possible for him to issue unexpected database queries with &#8220;IS NULL&#8221; or with empty WHERE clauses. And this was only the first half of the problem.</p>
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
 
-<h2>And what about the second half?</h2>
+<h2>And the second issue?</h2>
 
-<p>The second vulnerability was actually vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? Check this out - this vulnerability was found on <strong>ALL</strong> Rails versions. This means that every Rails application that you know of was affected by these vulnerabilities.</p>
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
 
-<h2>And what will happen now?</h2>
+<h2>What to do?</h2>
 
-<p>Well, thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We wont go into details about the vulnerabilities, but, believe us - you better upgrade your Rails applications!</p>
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
 
-<p>Did you upgrade your Rails applications? Did you have any problems while doing it? If yes, did you solve them?
-If not - Siyelo is preparing something really cool just for <strong>you</strong>.
-What? You&#8217;ll find out soon! :-)</p>
+<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
 </div>
 
 
@@ -177,7 +172,7 @@ What? You&#8217;ll find out soon! :-)</p>
 
 
 
-<section><time class="timestamp" datetime="2013-01-16T17:51:00+01:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2013-01-16T17:51:00+02:00" pubdate data-updated="true">
     <span class='day'> 16</span>
     <span class='month'> Jan</span>
     <span class='year'> 2013</span>
@@ -208,6 +203,8 @@ What? You&#8217;ll find out soon! :-)</p>
           
             <a class="basic-alignment left" href="/thou-shalt-clean-thy-branches-git-rebase" title="Previous Post: Thou shalt clean thy branches: git rebase">Previous</a>
           
+          
+            <a class="basic-alignment right" href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design" title="Next Post: TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design">Next</a>
           
         </p>
 
@@ -241,6 +238,10 @@ What? You&#8217;ll find out soon! :-)</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design">TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design</a>
+      </li>
+    
+      <li class="post">
         <a href="/rails-security-vulnerabilities">Rails Security Vulnerabilities</a>
       </li>
     
@@ -254,10 +255,6 @@ What? You&#8217;ll find out soon! :-)</p>
     
       <li class="post">
         <a href="/weekly-roundup-8">TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements</a>
-      </li>
-    
-      <li class="post">
-        <a href="/global-day-of-coderetreat-2012">Global Day Of Coderetreat 2012</a>
       </li>
     
   </ul>
