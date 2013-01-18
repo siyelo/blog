@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-18T17:12:34+02:00</updated>
+  <updated>2013-01-18T17:17:03+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,29 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
-    <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
-    <updated>2013-01-18T13:36:00+02:00</updated>
-    <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
-    <author>Nicole Dirks</author>
-    <content type="html"><![CDATA[<p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
-
-<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
-
-<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
-
-<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
-
-<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
-
-<p>Happy reading and enjoy your weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
     <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
-    <updated>2013-01-16T17:51:00+02:00</updated>
+    <updated>2013-01-18T17:51:00+02:00</updated>
     <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
     <author>Siyelo</author>
     <content type="html"><![CDATA[<p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
@@ -60,6 +40,56 @@
 <p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
 
 <p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
+    <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
+    <updated>2013-01-18T17:51:00+02:00</updated>
+    <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
+    <author>Ile Eftimov</author>
+    <content type="html"><![CDATA[<p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
+
+<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves.</p>
+
+<h2>What happened?</h2>
+
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
+
+<h2>What&#8217;s the first issue?</h2>
+
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
+
+<h2>And the second issue?</h2>
+
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
+
+<h2>What to do?</h2>
+
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
+
+<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
+    <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
+    <updated>2013-01-18T13:36:00+02:00</updated>
+    <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
+
+<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
+
+<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
+
+<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
+
+<p>Happy reading and enjoy your weekend!</p>
 ]]></content>
   </entry>
   
@@ -717,30 +747,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <h2>How to Apply</h2>
 
 <p>Please send your portfolio and open source links to <a href="mailto:jobs@siyelo.com">jobs@siyelo.com</a>. Attach a CV if you must.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Sachin's beard, Skeuomorphism & Knowledge debt]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-1"/>
-    <updated>2012-09-13T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-1</id>
-    <author>Sachin Ranchod</author>
-    <content type="html"><![CDATA[<p>We share a lot of stuff in our Dev Chat during the course of a week - most of it isn&#8217;t safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  </p>
-
-<p>This post starts a series of weekly articles where we&#8217;ll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: </p>
-
-<p>This week Peter has been mulling over ways of preventing a &#8221;<a href="http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html">knowledge debt problem</a>&#8221;. He&#8217;s also recommended that you watch Rich Hickey&#8217;s presentation on <a href="http://www.infoq.com/presentations/Simple-Made-Easy">Simple made Easy</a>.  </p>
-
-<p>Glenn has been meditating on <a href="http://www.python.org/dev/peps/pep-0020/">The Zen of Python</a> - a brilliant list of guiding principles for software developers.</p>
-
-<p>Sachin stumbled across an interview with Peter Thiel from <a href="http://www.newyorker.com/reporting/2011/11/28/111128fa_fact_packer?currentPage=all">The New Yorker</a> where he talks about why Silicon Valley hasn&#8217;t done enough to disrupt and revolutionize the world.  It was also pretty cool to see our <a href="https://github.com/siyelo/should_clean">ShouldClean</a> gem being used in a commit to <a href="https://github.com/rspec/rspec-rails/commit/69a63cef280310c1164dda457bdecfd7700b10f0">Rspec</a>.</p>
-
-<p>Dalibor has been thinking about how to pitch his next big business plan - David McClure makes it clear that you should <a href="http://500hats.typepad.com/500blogs/2009/08/your-solution-is-not-my-problem.html">put the problem before the solution</a>.</p>
-
-<p>On a lighter note - the internet has finally awoken the to the fact that skeuomorphism is getting out of hand - for instance, why would you want a <a href="http://skeu.it/post/28065979636/via-domwood-i-just-dont-even-what-this-is">weather app that looks like a pair of pants</a>?! </p>
-
-<p>Lastly if you have not followed <a href="http://www.twitter.com/sachinsbeard">@Sachinsbeard</a> this might convince you to do so&#8230; <a href="http://www.youtube.com/watch?v=KlgbKIswpzI&amp;feature=youtu.be&amp;hd=1">The Beards - Got Me a Beard (official music video)</a></p>
 ]]></content>
   </entry>
   

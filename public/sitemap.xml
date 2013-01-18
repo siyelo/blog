@@ -353,22 +353,26 @@
         <lastmod>2013-01-15T12:27:47+02:00</lastmod>
     </url>
     <url>
-        <loc>http://blog.siyelo.com/rails-security-vulnerabilities</loc>
-        <lastmod>2013-01-18T17:12:13+02:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design
         </loc>
         <lastmod>2013-01-18T17:12:20+02:00</lastmod>
     </url>
     <url>
+        <loc>http://blog.siyelo.com/rails-security-vulnerabilities</loc>
+        <lastmod>2013-01-18T17:15:59+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.siyelo.com/rails-security-vulnerabilities</loc>
+        <lastmod>2013-01-18T17:14:09+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.siyelo.com/blog/archives/</loc>
-        <lastmod>2013-01-18T17:12:20+02:00</lastmod>
+        <lastmod>2013-01-18T17:15:59+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/</loc>
-        <lastmod>2013-01-18T17:12:20+02:00</lastmod>
+        <lastmod>2013-01-18T17:15:59+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/rss.xml</loc>

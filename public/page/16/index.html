@@ -9,10 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="24 Nov 2009 Aliases for Common Heroku Commands &#8211;> Comments &#8211;> &#8211;> Some handy bash aliases to speed up your Heroku deploys: 1
-2
-3
-4 &hellip;">
+  <meta name="description" content="30 Nov 2009 Handy Git Aliases and Config Directives &#8211;> Comments &#8211;> &#8211;> By adding a few lines to ~/.gitconfig and you can alias &# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +92,119 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-30T12:53:00+02:00" pubdate data-updated="true">
+    <span class='day'> 30</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/handy-git-aliases-and-config-directives">Handy Git Aliases and Config Directives</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/handy-git-aliases-and-config-directives#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>By adding a few lines to ~/.gitconfig and you can alias &#8220;git co&#8221; to &#8220;git checkout&#8221;, etc:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>st = status
+</span><span class='line'>ci = commit
+</span><span class='line'>co = checkout
+</span><span class='line'>br = branch</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you might find these will come in handy;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[merge]
+</span><span class='line'>tool = opendiff
+</span><span class='line'>summary = true
+</span><span class='line'>
+</span><span class='line'>[color]
+</span><span class='line'>diff = auto
+</span><span class='line'>status = auto
+</span><span class='line'>branch = auto
+</span><span class='line'>interactive = auto</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, for a superb bash shell setup where you can see your current working branch, add this to your ~.bash_profile. As the comment suggests, you need to follow the instructions at these URLs to set up git properly first.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># http://henrik.nyh.se/2008/12/git-dirty-prompt</span>
+</span><span class='line'><span class="c"># http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/</span>
+</span><span class='line'><span class="c"># http://gist.github.com/47546</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">function </span>parse_git_dirty <span class="o">{</span>
+</span><span class='line'>  git diff --quiet HEAD &amp;&gt;/dev/null
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$?</span> <span class="o">==</span> 1 <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">function </span>parse_git_branch <span class="o">{</span>
+</span><span class='line'>  <span class="nb">local </span><span class="nv">branch</span><span class="o">=</span><span class="k">$(</span>__git_ps1 <span class="s2">&quot;%s&quot;</span><span class="k">)</span>
+</span><span class='line'>  <span class="o">[[</span> <span class="nv">$branch</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;[$branch$(parse_git_dirty)]&quot;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\\w/\\w\\[\\033[35m\\]$(parse_git_branch)\\[\\033[0m\\]/g&#39;</span><span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -539,60 +649,6 @@
 </span><span class='line'><span class="s">EOS</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2009-11-18T08:53:00+02:00" pubdate data-updated="true">
-    <span class='day'> 18</span>
-    <span class='month'> Nov</span>
-    <span class='year'> 2009</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/textmate-tip-align-statments">Textmate Tip: Align Statments</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/textmate-tip-align-statments#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>If you want to go from this:</p>
-
-<p><img src="/images/old/2009/11/pastedgraphic1.png" alt="Pastedgraphic" /></p>
-
-<p>to an aligned, and much more legible statement list like this:</p>
-
-<p><img src="/images/old/2009/11/0pastedgraphic.png" alt="Pastedgraphic" /></p>
-
-<p>The textmate key combination for this is: <strong>⌥⌘]</strong> (Alt + Cmd + Bracket)</p>
 </div></div>
   
   

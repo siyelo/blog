@@ -4,12 +4,12 @@ title: "Rails Security Vulnerabilities"
 date: 2013-01-18 17:51
 comments: true
 categories: []
-author: Ile Eftimov
+author: Siyelo
 ---
 
 Last Tuesday, everyone in the Rails world launched into action after this [tweet](https://twitter.com/rails/status/288743490744094720). An unusual "Upgrade IMMEDIATELY" advisory.
 
-We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It's not always trivial, and we ran into problems ourselves.
+We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It's not always trivial, and we ran into problems ourselves. But here's how we went about it.
 
 ## What happened?
 

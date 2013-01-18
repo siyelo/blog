@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="18 Jan 2013 TL;DR: Deploying With Gitploy; Is Your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design &#8211;> Comments &# &hellip;">
+  <meta name="description" content="18 Jan 2013 Rails Security Vulnerabilities &#8211;> Comments &#8211;> &#8211;> Last Tuesday, everyone in the Rails world launched into action after &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,64 +113,8 @@
 
 
 
-<section><time class="timestamp" datetime="2013-01-18T13:36:00+02:00" pubdate data-updated="true">
+<section><time class="timestamp" datetime="2013-01-18T17:51:00+02:00" pubdate data-updated="true">
     <span class='day'> 18</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design">TL;DR: Deploying With Gitploy; Is Your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
-
-<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
-
-<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
-
-<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
-
-<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
-
-<p>Happy reading and enjoy your weekend!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2013-01-16T17:51:00+02:00" pubdate data-updated="true">
-    <span class='day'> 16</span>
     <span class='month'> Jan</span>
     <span class='year'> 2013</span>
   </time></section>
@@ -208,6 +152,128 @@
 <p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
 
 <p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-01-18T17:51:00+02:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/rails-security-vulnerabilities">Rails Security Vulnerabilities</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/rails-security-vulnerabilities#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
+
+<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves.</p>
+
+<h2>What happened?</h2>
+
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
+
+<h2>What&#8217;s the first issue?</h2>
+
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
+
+<h2>And the second issue?</h2>
+
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
+
+<h2>What to do?</h2>
+
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
+
+<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-01-18T13:36:00+02:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design">TL;DR: Deploying With Gitploy; Is Your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
+
+<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
+
+<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
+
+<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
+
+<p>Happy reading and enjoy your weekend!</p>
 </div></div>
   
   
@@ -330,63 +396,6 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
 <p>Sachin was reading up on ways of improving your application&#8217;s performance on Heroku whilst <a href="http://www.stormconsultancy.co.uk/blog/development/6-ways-to-get-more-bang-for-your-heroku-buck-while-making-your-rails-site-super-snappy/">staying within budget</a></p>
 
 <p>Wishing you well over the festive season from Siyelo!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-12-07T13:46:00+02:00" pubdate data-updated="true">
-    <span class='day'> 07</span>
-    <span class='month'> Dec</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-8">TL;DR: D3, Refactoring ActveRecord Models & Templates for Consulting Engagements</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-8#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
-
-<p>Dime shared Data Driven Documents, <a href="http://d3js.org/">D3.js</a> is a JavaScript library for manipulating documents based on data.</p>
-
-<p>Dalibor found the following articles <a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">7 Patterns to Refactor  at ActiveRecord</a> Models and Demeter: It&#8217;s not just a good idea. It&#8217;s the law, very insightful as well as sharing <a href="http://www.sdruby.org/podcast/94">Refactoring ActiveRecord</a> Models podcast as Ben Hughes explores several techniques for refactoring models and preventing them from getting out of hand. Purchase <a href="http://railsantipatterns.com/">Rails AntiPatterns: Best Practice Ruby on Rails Refactoring</a> on amazon and learn how to identify and fix over 300 of the most common mistakes made in Ruby on Rails applications.</p>
-
-<p>Glenn suggested reading about <a href="http://blog.obiefernandez.com/content/2008/09/master-services-agreement-part-1.html">Obie Fernandez&#8217;s great MSA and SoW templates for consulting engagements</a>. Sachin shared project management theory <a href="https://aidylewis.heroku.com/2012/11/18/kanban-no-it-cant/">Kanban</a> and <a href="http://blog.headius.com/2012/11/refining-ruby.html">Refining Ruby</a>.</p>
-
-<p>Last but not least Ile shared Know your gems and create <a href="http://robots.thoughtbot.com/post/35717411108/a-healthy-bundle">A Healthy Bundle</a> and <a href="http://blog.steveklabnik.com/posts/2012-11-22-introducing-the-rails-api-project">Introducing the Rails API Project
-</a></p>
-
-<p>Enjoy your weekend!</p>
 </div></div>
   
   
