@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorial | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-18T16:34:09+01:00</updated>
+  <updated>2013-01-25T17:05:04+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -211,7 +211,7 @@ var report  = element.data('report')
   <entry>
     <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
     <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
-    <updated>2011-12-30T11:41:00+01:00</updated>
+    <updated>2011-12-30T12:41:00+02:00</updated>
     <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
     <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
 

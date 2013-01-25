@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="04 Oct 2011 Koding in Khayelitsha - Great Photo &#8211;> Comments &#8211;> &#8211;> A great photo from the programming class @glennrob is involved &hellip;">
+  <meta name="description" content="03 Nov 2011 Remote Pair-programming With Screen &#8211;> Comments &#8211;> &#8211;> At Siyelo we have 2 distributed teams, one in Cape Town and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,206 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2011-11-03T10:37:00+02:00" pubdate data-updated="true">
+    <span class='day'> 03</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2011</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/remote-pair-programming-with-screen">Remote Pair-programming With Screen</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/remote-pair-programming-with-screen#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
+
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
+
+<ul>
+<li>you don&#8217;t have control over the other screen</li>
+<li>you cannot have both screen sharing and video</li>
+<li>bandwidth of the internet connection sometimes can be a problem</li>
+<li>it&#8217;s not a tool for pair programming</li>
+</ul>
+
+
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+
+<p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
+
+<ul>
+<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive - useful as a real time code collaboration tool</li>
+</ul>
+
+
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
+
+<p>First we need to install SSH server because all communication will happen over secure channel:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install ssh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo useradd -s /bin/rbash guest
+</span><span class='line'>sudo passwd guest
+</span><span class='line'>sudo mkdir /home/guest
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we need to setup the guest shell.profile. Add the following to /home/guest/.profile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">trap</span> <span class="s2">&quot;&quot;</span> 2 3 19 <span class="c"># stop user getting to shell</span>
+</span><span class='line'>clear
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Welcome to pair-programming session&quot;</span>
+</span><span class='line'><span class="nb">echo</span> -n <span class="s2">&quot;Press Enter to continue...&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span>
+</span><span class='line'>screen -x dalibor/pairprog
+</span><span class='line'><span class="nb">exit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+
+<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo chmod +s /usr/bin/screen
+</span><span class='line'>sudo chmod 755 /var/run/screen
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you need to add the following screen config in ~/.screenrc file</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>hardstatus on
+</span><span class='line'>hardstatus alwayslastline
+</span><span class='line'>startup_message off
+</span><span class='line'>termcapinfo xterm ti@:te@
+</span><span class='line'>hardstatus string <span class="s2">&quot;%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a &quot;</span>
+</span><span class='line'>screen -t bash1 1
+</span><span class='line'>
+</span><span class='line'><span class="c"># multiuser setup</span>
+</span><span class='line'>multiuser on
+</span><span class='line'>aclchg guest -wx <span class="s2">&quot;#,?&quot;</span>
+</span><span class='line'>aclchg guest +x <span class="s2">&quot;colon,wall,detach&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+
+<p>Finally, communication goes like this: screen session is started by host with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Guest SSH to the host machine and automatically joins the screen session:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh guest@host
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
+
+<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>multiuser on
+</span><span class='line'>acladd user2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And is starting pairprog screen session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -S pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then user2 can join that session with:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>screen -x user1/pairprog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference">screen reference</a>. Basic commands are:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Ctrl-a d <span class="c"># detach screen window</span>
+</span><span class='line'>Ctrl-a Ctrl-a <span class="c"># flip-flop between two windows</span>
+</span><span class='line'>screen -r <span class="c"># re-attach screen window</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -403,74 +603,6 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 <p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
 
 <p>Final step: Profit</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2011</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/cant-drop-your-heroku-database">Can&#8217;t Drop Your Heroku Database?</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/cant-drop-your-heroku-database#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
-
-<h3>Step 1</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 2</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Step 3</h3>
-
-<p>???</p>
-
-<h3>Step 4</h3>
-
-<h3>Profit</h3>
 </div></div>
   
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-18T16:34:09+01:00</updated>
+  <updated>2013-01-25T17:05:04+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -89,7 +89,7 @@
   <entry>
     <title type="html"><![CDATA[Redis in the NoSQL ecosystem]]></title>
     <link href="http://blog.siyelo.com/redis-in-the-nosql-ecosystem"/>
-    <updated>2011-12-28T22:01:00+01:00</updated>
+    <updated>2011-12-28T23:01:00+02:00</updated>
     <id>http://blog.siyelo.com/redis-in-the-nosql-ecosystem</id>
     <content type="html"><![CDATA[<p>Redis (<strong>RE</strong>mote <strong>D</strong>Ictionary <strong>S</strong>erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several <a href="http://redis.io/topics/data-types-intro">data types</a>: Strings, Hashes, Lists, Sets and Sorted Sets; implements <a href="http://redis.io/topics/pubsub">publish/subscribe</a> messaging paradigm and has <a href="http://redis.io/topics/transactions">transactions</a>.</p>
 
@@ -144,7 +144,7 @@
   <entry>
     <title type="html"><![CDATA[Siyelos' git workflow]]></title>
     <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
-    <updated>2011-12-12T10:53:00+01:00</updated>
+    <updated>2011-12-12T11:53:00+02:00</updated>
     <id>http://blog.siyelo.com/siyelos-git-workflow</id>
     <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
 
@@ -183,7 +183,7 @@
   <entry>
     <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
     <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
-    <updated>2011-11-03T09:37:00+01:00</updated>
+    <updated>2011-11-03T10:37:00+02:00</updated>
     <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
     <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
 
