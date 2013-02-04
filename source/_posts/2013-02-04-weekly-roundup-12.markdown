@@ -43,8 +43,6 @@ Dime - Title says it all :)
 #### [Mobile sign up forms must die](http://www.lukew.com/ff/entry.asp?1678)
 Dime - The venerable Luke Wroblewski on why gradual engagement helps prevent you from scaring off new users.
 
-####
-
-Finally - this is how you handle annoying videobombers
+#### Finally - this is how you handle annoying videobombers
 
 <iframe width="640" height="360" src="http://www.youtube.com/embed/WshrVOTLn04?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
