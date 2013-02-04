@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="03 Jul 2012 Vim Tips - Part II &#8211;> Comments &#8211;> &#8211;> This week we&#8217;ll share few more userful Vim tips that we&#8217;ve learned &hellip;">
+  <meta name="description" content="13 Jul 2012 Rails Deployment Audit &#8211;> Comments &#8211;> &#8211;> We recently undertook an audit of a Rails deployment for a system developed &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,116 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-07-13T16:13:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Jul</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/rails-deployment-audit">Rails Deployment Audit</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/rails-deployment-audit#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
+
+<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
+
+<h2>Extract sensitive data</h2>
+
+<p>All sensitive data like passwords, API keys &amp; tokens that are in the application are extracted as environment variables outside of the source code repository. We are using <a href="https://github.com/sstephenson/rbenv">rbevn</a>  for managing rubies, there is a nice plugin for setting up environment variables<a href="https://github.com/sstephenson/rbenv-vars">rbenv-vars</a>.</p>
+
+<h2>Continuous Integration &amp; Deployment</h2>
+
+<p>There are many great open source and commercial tools out there for <a href="https://www.ruby-toolbox.com/categories/continuous_integration">Continuous Integration</a>. We are using <a href="http://jenkins-ci.org/">Jenkins CI</a>  to run our test suite and handle Continuous Deployment (if the tests are green) for our staging branch. For production releases, we suggest doing releases manually at a scheduled time with the whole team ready and available.</p>
+
+<h2>Deployment tools</h2>
+
+<p>If you need more advanced tool for doing the deploy, <a href="https://github.com/capistrano/capistrano">Capistrano</a>  is the definitely the tool to go with. However, if you want something more light-weight you can try <a href="https://github.com/brentd/gitploy">gitploy</a>  (bare minimum, git-based tool for deployment). Alternatively, check out another tool from this <a href="https://www.ruby-toolbox.com/categories/deployment_automation">list</a>.</p>
+
+<h2>Deployment Documentation</h2>
+
+<p>Document server setup and everything about the deployment process. It may seem tedious now but in the long-run it will help because setups are easily forgetten and the person who initially setup the server is not always on hand to assist. By using an automation tool like <a href="http://wiki.opscode.com/display/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a>  you are kind of documenting things on the fly.</p>
+
+<h2>Server security</h2>
+
+<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode&#8217;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
+
+<h2>Start clean on boot</h2>
+
+<p>All the services that are being used by the application need to start cleanly when the server boots up - there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
+
+<h2>Log files</h2>
+
+<p>Prevent log files from growing to the point where you don&#8217;t have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
+
+<h2>Cron jobs</h2>
+
+<p>Whether it&#8217;s a backup script or background task that needs to be run as a job, it&#8217;s a good idea to have documentation on it within the application. Cron&#8217;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
+
+<h2>Backups</h2>
+
+<p>For both database &amp; uploaded content (like images and documents) we need to have regular backups distributed in different physical or cloud locations, <a href="https://github.com/meskyanichi/backup">backup gem</a> is very handy tool for that.</p>
+
+<h2>Failover</h2>
+
+<p>If server crashes, can you fail over to another server? How much time do you need for that operation and have you tested the procedure before it actually happens? Hosting services offer daily/weekly/monthly <a href="http://www.linode.com/backups/">node backups</a> but the procedure need to be tested before there is a need for doing that.</p>
+
+<h2>External monitoring tools</h2>
+
+<p>Service like <a href="http://www.pingdom.com/">Pingdom</a> or <a href="http://www.alertra.com/">Alerta</a> are interesting for monitoring server uptime and performance and they can send email, text and twitter alerts when the server is not working.</p>
+
+<h2>Notifications for Exceptions</h2>
+
+<p>Setup exception notifications to receive email notifications when application crashes. You can use <a href="https://github.com/smartinez87/exception_notification">exception_notification gem</a> or some paid service like <a href="http://airbrake.io/">Airbrake</a> or <a href="http://www.exceptional.io/">Exceptional</a>.</p>
+
+<h2>Process monitoring tools</h2>
+
+<p>Monitor your DB server, web server &amp; background processes and restart them if they consume too much memory. Tools like <a href="http://upstart.ubuntu.com/">Upstart</a>, <a href="https://github.com/arya/bluepill">Bluepill</a>, <a href="http://pathfindersoftware.com/2010/09/monitoring-rails-processes-apache-passenger-delayed_job-using-god-and-capistrano/">God</a> and <a href="http://viktorpetersson.com/2010/07/09/setting-up-monit-to-monitor-apache-and-postgresql-on-ubuntu/">Monit</a> are useful.</p>
+
+<h2>Server performance</h2>
+
+<p>Monitor server performance with <a href="http://library.linode.com/linux-tools/common-commands/vmstat">vmstat</a> or some 3rd party tool like <a href="https://scoutapp.com/">scoutapp</a>.</p>
+
+<h2>Application performance</h2>
+
+<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
+
+<p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -648,314 +758,6 @@
 <li><p>The time and dates you will be available to work at our office.</p></li>
 </ol>
 
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2011-12-30T12:41:00+02:00" pubdate data-updated="true">
-    <span class='day'> 30</span>
-    <span class='month'> Dec</span>
-    <span class='year'> 2011</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/intro-to-machine-learning-in-ruby">Intro to Machine Learning in Ruby</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/intro-to-machine-learning-in-ruby#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It&#8217;s a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
-
-<h3>Let&#8217;s build&#8230;</h3>
-
-<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML articles from the <a href="http://www.timeslive.co.za/">Times Live</a> newspaper.</p>
-
-<p>For the job, we will use <strong>nokogiri</strong> gem and 2 ruby standard libraries: <strong>open-uri</strong> and <strong>rss/2.0</strong>.</p>
-
-<h3>RSS Parser</h3>
-
-<p>To find sources of articles for processing,  we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links. <strong>RssParser</strong> class does exactly that, you initialize it with a <a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">RssParser</span>
-</span><span class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:url</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@url</span> <span class="o">=</span> <span class="n">url</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">article_urls</span>
-</span><span class='line'>    <span class="no">RSS</span><span class="o">::</span><span class="no">Parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="kp">false</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="o">.</span><span class="n">link</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>HTML Parser</h3>
-
-<p>Having article links, we need to parse page content and extract meaningful parts from these pages. <strong>HtmlParser</strong> class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles - <a href="http://getfirebug.com/">Firebug</a> and <a href="http://jquery.com/">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice <strong>clean_whitespace</strong> method which cleans the whitespace characters from the extracted text.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">HtmlParser</span>
-</span><span class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:url</span><span class="p">,</span> <span class="ss">:selector</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@url</span>      <span class="o">=</span> <span class="n">url</span>
-</span><span class='line'>    <span class="vi">@selector</span> <span class="o">=</span> <span class="n">selector</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">content</span>
-</span><span class='line'>    <span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
-</span><span class='line'>    <span class="n">html_elements</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">selector</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">html_elements</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">element</span><span class="o">|</span> <span class="n">clean_whitespace</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="kp">private</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">clean_whitespace</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</span><span class='line'>      <span class="n">text</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\s{2,}|\t|\n/</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Statistical Classifier</h3>
-
-<p>We introduce a class that is responsible for classification of articles. It is initialized with a hash that consists of categories (keys) and training data (values).</p>
-
-<p>Training data is used to discoverpotential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the <strong>train_data()</strong>method).</p>
-
-<p>In this example we are usingcontent ofWikipedia articles for <a href="http://en.wikipedia.org/wiki/Economy">economy</a>, <a href="http://en.wikipedia.org/wiki/Sport">sport</a> and <a href="http://en.wikipedia.org/wiki/Health">health</a> as training data for ourcategories.</p>
-
-<p>When classifying articles we want to compare only meaningful words and ignore other wordsthat do not add any value for a certain category. We (partially) solve this problem using <a href="https://gist.github.com/1534053">stop words</a>.</p>
-
-<p>Finally, the <strong>scores()</strong> method creates the scores for each category (per text) that we are testing.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Classifier</span>
-</span><span class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:training_sets</span><span class="p">,</span> <span class="ss">:noise_words</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@training_sets</span> <span class="o">=</span> <span class="p">{}</span>
-</span><span class='line'>    <span class="n">filename</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s1">&#39;stop_words.txt&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@noise_words</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:chomp</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">train_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">scores</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[a-z]+/</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
-</span><span class='line'>    <span class="n">training_sets</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="p">,</span> <span class="n">word_weights</span><span class="o">|</span>
-</span><span class='line'>      <span class="n">scores</span><span class="o">[</span><span class="n">category</span><span class="o">]</span> <span class="o">=</span> <span class="n">score</span><span class="p">(</span><span class="n">word_weights</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">scores</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">train_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">data</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">category</span><span class="p">,</span> <span class="n">text</span><span class="o">|</span>
-</span><span class='line'>      <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/[a-z]+/</span><span class="p">)</span>
-</span><span class='line'>      <span class="n">word_weights</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">words</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">word_weights</span><span class="o">[</span><span class="n">word</span><span class="o">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">unless</span> <span class="n">noise_words</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">word</span><span class="p">)}</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span> <span class="n">words</span><span class="o">.</span><span class="n">length</span>
-</span><span class='line'>      <span class="n">word_weights</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="o">|</span> <span class="n">word_weights</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">*=</span> <span class="n">ratio</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">training_sets</span><span class="o">[</span><span class="n">category</span><span class="o">]</span> <span class="o">=</span> <span class="n">word_weights</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="kp">private</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="n">word_weights</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span>
-</span><span class='line'>      <span class="n">score</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">inject</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">acc</span><span class="p">,</span> <span class="n">word</span><span class="o">|</span> <span class="n">acc</span> <span class="o">+</span> <span class="n">word_weights</span><span class="o">[</span><span class="n">word</span><span class="o">]</span><span class="p">}</span>
-</span><span class='line'>      <span class="mi">1000</span><span class="o">.</span><span class="mi">0</span> <span class="o">*</span> <span class="n">score</span> <span class="o">/</span> <span class="n">words</span><span class="o">.</span><span class="n">size</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Lets have a go</h3>
-
-<p>Here is the script that runs the program:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;nokogiri&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;rss/2.0&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1"># training data samples</span>
-</span><span class='line'><span class="n">economy</span> <span class="o">=</span> <span class="no">HtmlParser</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;http://en.wikipedia.org/wiki/Economy&#39;</span><span class="p">,</span> <span class="s1">&#39;.mw-content-ltr&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">sport</span>   <span class="o">=</span> <span class="no">HtmlParser</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;http://en.wikipedia.org/wiki/Sport&#39;</span><span class="p">,</span> <span class="s1">&#39;.mw-content-ltr&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">health</span>  <span class="o">=</span> <span class="no">HtmlParser</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;http://en.wikipedia.org/wiki/Health&#39;</span><span class="p">,</span> <span class="s1">&#39;.mw-content-ltr&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">training_data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="ss">:economy</span> <span class="o">=&gt;</span> <span class="n">economy</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:sport</span> <span class="o">=&gt;</span> <span class="n">sport</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:health</span> <span class="o">=&gt;</span> <span class="n">health</span><span class="o">.</span><span class="n">content</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">classifier</span> <span class="o">=</span> <span class="no">Classifier</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">training_data</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">results</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="ss">:economy</span> <span class="o">=&gt;</span> <span class="o">[]</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:sport</span> <span class="o">=&gt;</span> <span class="o">[]</span><span class="p">,</span>
-</span><span class='line'>  <span class="ss">:health</span> <span class="o">=&gt;</span> <span class="o">[]</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">rss_parser</span> <span class="o">=</span> <span class="no">RssParser</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;http://avusa.feedsportal.com/c/33051/f/534658/index.rss&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">rss_parser</span><span class="o">.</span><span class="n">article_urls</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">article_url</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">article</span> <span class="o">=</span> <span class="no">HtmlParser</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">article_url</span><span class="p">,</span> <span class="s1">&#39;#article .area &gt; h3, #article .area &gt; p, #article &gt; h3&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">scores</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">scores</span><span class="p">(</span><span class="n">article</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">category_name</span><span class="p">,</span> <span class="n">score</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">max_by</span><span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="p">}</span>
-</span><span class='line'>  <span class="c1"># DEBUG info</span>
-</span><span class='line'>  <span class="c1"># p &quot;category: #{category_name}, score: #{score}, scores: #{scores}, url: #{article_url}&quot;</span>
-</span><span class='line'>  <span class="n">results</span><span class="o">[</span><span class="n">category_name</span><span class="o">]</span> <span class="o">&lt;&lt;</span> <span class="n">article_url</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">p</span> <span class="n">results</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like <a href="http://en.wikipedia.org/wiki/Bayesian_probability">Bayesian probability</a>  and <a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis">Latent Semantic Analysis</a>.</p>
-
-<p>If you are interested in amore indepth exampleof a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It&#8217;s a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates &#8216;clusters&#8217; of articles using statistical algorithms.</p>
-
-<p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
 </div></div>
   
   

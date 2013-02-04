@@ -4,7 +4,7 @@
   <title><![CDATA[Category: roundup | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/roundup/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-01-25T17:05:04+02:00</updated>
+  <updated>2013-02-04T11:13:02+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails security; Being the best newbie & Redesigning Google]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-12"/>
+    <updated>2013-02-04T11:11:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-12</id>
+    <content type="html"><![CDATA[<p>Here's our recommended reading list for the coming week:</p>
+
+<h4><a href="http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/">What the Rails security issue means for your startup</a></h4>
+
+<p>Glenn - A great overview of the Rails security issues and why they deserve your full attention.</p>
+
+<h4><a href="http://confreaks.com/videos/1103-madisonruby2012-making-a-difference-right-off-the-bat">Being the best newbie you can be</a></h4>
+
+<p>Ile - A great presentation on how you can start contributing to a successful team from Day 1 even if you don't have the technical skills yet.</p>
+
+<h4><a href="http://www.meetup.com/Code-Coffee-Cape-Town/">Code and Coffee meet up</a></h4>
+
+<p>Sachin - Code &amp; Coffee Cape Town is a meetup we host every 4 weeks.  It's a great opportunity to meet other devs in and learn something new.</p>
+
+<h4><a href="http://blog.nibbler.io/2013/01/rudebot-rolling-ubiquitous-display.html">Rudebot</a></h4>
+
+<p>Sachin - We want one of these for our distributed team!</p>
+
+<h4><a href="http://www.youtube.com/watch?v=pqeJFYwnkjE">Debt metaphor as motivation for refactoring</a></h4>
+
+<p>Dalibor - Writing good code even if you don't fully understand the problem you are facing can help reduce the time it will take to understand and refactor the code later on.</p>
+
+<iframe width="640" height="390" src="http://www.youtube.com/embed/pqeJFYwnkjE" frameborder="0" allowfullscreen></iframe>
+
+
+<h4><a href="http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm">What is Software Design</a></h4>
+
+<p>Dalibor - It is important to know and understand what software design actually is. Knowing that it is complex and fluid can help you react appropriately to radical changes.</p>
+
+<h4><a href="http://www.theverge.com/2013/1/24/3904134/google-redesign-how-larry-page-engineered-beautiful-revolution">Redesigning Google</a></h4>
+
+<p>Dime - It might have taken a few years, but we are starting to see the fruits of Larry Page's push for Google to have a cohesive and consistent visual style.</p>
+
+<h4><a href="http://uxdesign.smashingmagazine.com/2013/01/24/effectively-planning-ux-design-projects/">Effectively planning UX design projects</a></h4>
+
+<p>Dime - A step-by-step PM guide for UX projects which will help you get the most out of a tight budget</p>
+
+<h4><a href="https://www.uie.com/articles/strategy_for_responsive_design/">Devising a strategy for Responsive design.</a></h4>
+
+<p>Dime - Jumping head first into responsive design can be a problem if you don't fully understand how pervasive it's impact on your UX &amp; development process will be.</p>
+
+<h4><a href="http://www.netmagazine.com/features/best-image-compression-tools">The best image compression tools</a></h4>
+
+<p>Dime - Title says it all :)</p>
+
+<h4><a href="http://www.lukew.com/ff/entry.asp?1678">Mobile sign up forms must die</a></h4>
+
+<p>Dime - The venerable Luke Wroblewski on why gradual engagement helps prevent you from scaring off new users.</p>
+
+<h3>#</h3>
+
+<p>Finally - this is how you handle annoying videobombers</p>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/WshrVOTLn04?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
