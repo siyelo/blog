@@ -1,5 +1,11 @@
 ## Getting Started
 
+#### Installation
+
+```
+bundle install
+```
+
 #### Writing a blog post
 
 ``` ruby
