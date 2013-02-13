@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Can't drop your Heroku database? - Siyelo</title>
+  <title>Your git squash-merge is bad - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e. Step 1 1
-$ &hellip;">
+  <meta name="description" content="&#8230; and you should feel bad. Commit early &amp; commit often is the way to go. Then squash your commits before they get merged to [master]. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ $ &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.com/cant-drop-your-heroku-database">
+  <link rel="canonical" href="http://blog.siyelo.com/if-you-git-merge-squash">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -112,13 +111,13 @@ $ &hellip;">
 
 
 
-<section><time class="timestamp" datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2011</span>
+<section><time class="timestamp" datetime="2013-02-13T19:30:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2013</span>
   </time></section>
     
-      <h1 class="entry-title">Can't Drop Your Heroku Database?</h1>
+      <h1 class="entry-title">Your Git Squash-merge Is Bad</h1>
     
     <!--  -->
     <!--   <p class="meta"> -->
@@ -130,29 +129,31 @@ $ &hellip;">
   </header>
 
 
-<div class="entry-content"><p>If you&#8217;re trying to drop your database on Heroku, and it&#8217;s not working, be sure you put it in maintenance mode first. i.e.</p>
+<div class="entry-content"><p>&#8230; and you should feel bad.</p>
 
-<h3>Step 1</h3>
+<p>Commit early &amp; commit often is the way to go. Then squash your commits before they get merged to <code>[master]</code>. This is the gentlemanly thing to do.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku maintenance:on --app
-</span></code></pre></td></tr></table></div></figure>
+<p>With git, you can squash with an interactive rebase (<code>git rebase -i</code>), in which you squash your branch down to one (or two) commits. Alternatively you can use <code>git merge --squash</code> while merging the branch.</p>
 
+<p>Having someone else merge your branch into <code>[master]</code> (unless you already paired with someone on the code) is good practice. It formalizes the code review step, and makes sure someone else is signing off on the code in case you did <a href="http://www.youtube.com/watch?v=pUJJ-mdd9pw&amp;feature=youtu.be&amp;t=1m45s">this</a>. (In a way it also makes you feel the pain of code reviews where you might be pairing!)</p>
 
-<h3>Step 2</h3>
+<p>Both commit-squashing methods (interactive rebase or squash-merge) give you the major benefit of a cleaner <code>git log</code> and lots of warm and fuzzies. However if you follow the above process (like we do), an interactive rebase tends to work better than a squash-merge.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>heroku pg:reset SHARED_DATABASE --app
-</span></code></pre></td></tr></table></div></figure>
+<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &#8216;Merge Pull Request&#8217; button and shit won&#8217;t explode. Mostly.</p>
 
+<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&#8217;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
 
-<h3>Step 3</h3>
+<p>To illustrate; The &#8216;before&#8217; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &#8216;Glenn&#8217;. The &#8216;after&#8217; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
 
-<p>???</p>
+<p><em>Before:</em></p>
 
-<h3>Step 4</h3>
+<p><img src="https://www.evernote.com/shard/s99/sh/b3beac3a-fede-47d8-a3ba-0cb8c125536c/fdbc298748425a7c67012efd5c2efb8b/res/9c8cbeec-10d1-4f22-a6eb-3a0e2bd37e94/skitch.png?resizeSmall&amp;width=832" alt="Before merge" /></p>
 
-<h3>Profit</h3>
+<p><em>After:</em></p>
+
+<p><img src="https://www.evernote.com/shard/s99/sh/57d73554-f296-40c7-b792-e07ec4ef81f6/0ab50ac86495307c3f2e7cd2abd260c1/res/d61c83f4-a24b-4754-9f12-6f165656e2a0/skitch.png?resizeSmall&amp;width=832" alt="After bad squash" /></p>
+
+<p>Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!</p>
 </div>
 
 
@@ -175,10 +176,10 @@ $ &hellip;">
 
 
 
-<section><time class="timestamp" datetime="2011-07-27T15:08:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Jul</span>
-    <span class='year'> 2011</span>
+<section><time class="timestamp" datetime="2013-02-13T19:30:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2013</span>
   </time></section>
           
   
@@ -188,18 +189,12 @@ $ &hellip;">
           <span> in </span>
           
 
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/heroku/'>Heroku</a>
-  
-</span>
-
 
 
           
             <div class="sharing right">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/cant-drop-your-heroku-database" data-via="siyelo" data-counturl="http://blog.siyelo.com/cant-drop-your-heroku-database" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/if-you-git-merge-squash" data-via="siyelo" data-counturl="http://blog.siyelo.com/if-you-git-merge-squash" >Tweet</a>
   
   
   
@@ -210,10 +205,8 @@ $ &hellip;">
 
         <p class="meta pagination">
           
-            <a class="basic-alignment left" href="/siyelo-an-equal-opportunity-employer" title="Previous Post: Siyelo: An equal opportunity employer.">Previous</a>
+            <a class="basic-alignment left" href="/weekly-roundup-12" title="Previous Post: Rails security; Being the best newbie & Redesigning Google">Previous</a>
           
-          
-            <a class="basic-alignment right" href="/how-to-bulk-delete-remote-git-tags" title="Next Post: How to bulk delete remote git tags">Next</a>
           
         </p>
 
@@ -381,8 +374,8 @@ $ &hellip;">
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.siyelo.com/cant-drop-your-heroku-database';
-        var disqus_url = 'http://blog.siyelo.com/cant-drop-your-heroku-database';
+        var disqus_identifier = 'http://blog.siyelo.com/if-you-git-merge-squash';
+        var disqus_url = 'http://blog.siyelo.com/if-you-git-merge-squash';
         var disqus_script = 'embed.js';
       
     (function () {

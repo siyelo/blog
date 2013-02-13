@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="04 Feb 2013 Rails Security; Being the Best Newbie & Redesigning Google &#8211;> Comments &#8211;> &#8211;> Here&#8217;s our recommended reading list &hellip;">
+  <meta name="description" content="13 Feb 2013 Your Git Squash-merge Is Bad &#8211;> Comments &#8211;> &#8211;> &#8230; and you should feel bad. Commit early &amp; commit often is the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,76 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-02-13T19:30:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/if-you-git-merge-squash">Your Git Squash-merge Is Bad</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/if-you-git-merge-squash#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>&#8230; and you should feel bad.</p>
+
+<p>Commit early &amp; commit often is the way to go. Then squash your commits before they get merged to <code>[master]</code>. This is the gentlemanly thing to do.</p>
+
+<p>With git, you can squash with an interactive rebase (<code>git rebase -i</code>), in which you squash your branch down to one (or two) commits. Alternatively you can use <code>git merge --squash</code> while merging the branch.</p>
+
+<p>Having someone else merge your branch into <code>[master]</code> (unless you already paired with someone on the code) is good practice. It formalizes the code review step, and makes sure someone else is signing off on the code in case you did <a href="http://www.youtube.com/watch?v=pUJJ-mdd9pw&amp;feature=youtu.be&amp;t=1m45s">this</a>. (In a way it also makes you feel the pain of code reviews where you might be pairing!)</p>
+
+<p>Both commit-squashing methods (interactive rebase or squash-merge) give you the major benefit of a cleaner <code>git log</code> and lots of warm and fuzzies. However if you follow the above process (like we do), an interactive rebase tends to work better than a squash-merge.</p>
+
+<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &#8216;Merge Pull Request&#8217; button and shit won&#8217;t explode. Mostly.</p>
+
+<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&#8217;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
+
+<p>To illustrate; The &#8216;before&#8217; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &#8216;Glenn&#8217;. The &#8216;after&#8217; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
+
+<p><em>Before:</em></p>
+
+<p><img src="https://www.evernote.com/shard/s99/sh/b3beac3a-fede-47d8-a3ba-0cb8c125536c/fdbc298748425a7c67012efd5c2efb8b/res/9c8cbeec-10d1-4f22-a6eb-3a0e2bd37e94/skitch.png?resizeSmall&amp;width=832" alt="Before merge" /></p>
+
+<p><em>After:</em></p>
+
+<p><img src="https://www.evernote.com/shard/s99/sh/57d73554-f296-40c7-b792-e07ec4ef81f6/0ab50ac86495307c3f2e7cd2abd260c1/res/d61c83f4-a24b-4754-9f12-6f165656e2a0/skitch.png?resizeSmall&amp;width=832" alt="After bad squash" /></p>
+
+<p>Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -362,72 +432,6 @@
 <p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
 
 <p>Happy reading and enjoy your weekend!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
-    <span class='day'> 15</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/thou-shalt-clean-thy-branches-git-rebase">Thou Shalt Clean Thy Branches: Git Rebase</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/thou-shalt-clean-thy-branches-git-rebase#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
-
-<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
-doing.</p>
-
-<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&#8217;s stance in this article is that you should
-&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
-
-<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
-history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
-
-<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
- pull into a branch that isn&#8217;t already in good shape)</p>
-
-<p>You must never EVER destroy other peoples history</p>
-
-<p>Keep your own history readable and dont expose your crap</p>
-
-<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
-
-<p>Stick to these simple rules, and rebase/squash as you please!</p>
 </div></div>
   
   

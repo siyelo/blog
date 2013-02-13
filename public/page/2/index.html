@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="21 Dec 2012 TL;DR: Worst Apocolypse Ever; Programming With Kent Beck & OO Re-use &#8211;> Comments &#8211;> &#8211;> So the Mayan apocalypse was a &hellip;">
+  <meta name="description" content="15 Jan 2013 Thou Shalt Clean Thy Branches: Git Rebase &#8211;> Comments &#8211;> &#8211;> I often find myself wondering when to do a interactive &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,72 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
+    <span class='day'> 15</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/thou-shalt-clean-thy-branches-git-rebase">Thou Shalt Clean Thy Branches: Git Rebase</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/thou-shalt-clean-thy-branches-git-rebase#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
+
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
+
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -358,62 +424,6 @@
 
 
 <p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-11-16T17:09:00+02:00" pubdate data-updated="true">
-    <span class='day'> 16</span>
-    <span class='month'> Nov</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-7">TL;DR: Rails 4, a Responsive Cat & a Free Book</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-7#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
-
-<p>If you love freebies check this out. Dalibor received a free &#8221;<a href="http://https://twitter.com/sandimetz/status/268753825916133376">Practical Object-Oriented Design in Ruby</a>&#8221; book thanks to Sandi Metz and InformIT.  Great customer service!</p>
-
-<p>Dali has been fully emerged in the <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">Rails 4 compilation links</a>, a curated list of intersting links about the next release of Rails.  It&#8217;s got pull requests, issues, commits, examples, posts, videos and much more.</p>
-
-<p>Sachin spent way too much time playing with the <a href="http://roxik.com/cat/">Responsive cat</a>.  You may not have heard the term  <a href="http://kkovacs.eu/the-death-star-design-pattern">&#8216;The Death Star design pattern&#8217;</a> before but we&#8217;re sure you&#8217;ve come across it.  Finally, Sachin shared an article about <a href="http://tx.pignata.com/2012/11/being-for-the-benefit-of-future-developer.html">being for the benefit of future developer</a> - an interesting read with tips about what you can do to look after the next person that&#8217;ll working on your code.</p>
-
-<p>Glenn shared an article on <a href="http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10">How Startups Are Killing Off Bosses</a>. Dime recommended downloading <a href="http://fitvidsjs.com/">Responsive videos</a>, A lightweight, easy-to-use jQuery plugin for fluid width video embeds and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> an iconic font designed for use with Twitter Bootstrap.</p>
-
-<p>Ile found <a href="http://www.youtube.com/watch?v=aBgnlBoIkVM">10 things you didn&#8217;t know you could do with Ruby</a> while watching cat videos on YouTube.  He also spent some time learning about things <a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">you didn&#8217;t know you could do with Chrome dev tools</a>.</p>
 </div></div>
   
   

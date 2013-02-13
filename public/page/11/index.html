@@ -9,7 +9,8 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="25 Aug 2010 Solving HTML5 Compatibility Issues &#8211;> Comments &#8211;> &#8211;> By now you&#8217;ve probably encountered the big wave of info &hellip;">
+  <meta name="description" content="25 Aug 2010 CanCan - Make Up Your Mind! &#8211;> Comments &#8211;> &#8211;> If you&#8217;re using CanCan and came across an error like this; 1
+The : &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +93,102 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-08-25T17:05:00+02:00" pubdate data-updated="true">
+    <span class='day'> 25</span>
+    <span class='month'> Aug</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/cancan-make-up-your-mind">CanCan - Make Up Your Mind!</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/cancan-make-up-your-mind#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>If you&#8217;re using CanCan and came across an error like this;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>The :class option has been renamed to :resource <span class="k">for </span>specifying the class in CanCan.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And you duly updated your controller code from;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">authorize_resource</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To something like this;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">authorize_resource</span> <span class="ss">:resource</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since, like all good programmers, you do what you&#8217;re told by error-messages. But then like some sick joke it starts mocking you with the inverse error message i.e;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>The :resource option has been renamed back to :class, use <span class="nb">false </span><span class="k">if </span>no class.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Before you go and stalk Ryan B (the CanCan author) with a fully automatic assault rifle, first check your CanCan versions.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem open cancan
+</span><span class='line'>Open which gem? 
+</span><span class='line'>1. cancan 1.1.1 
+</span><span class='line'>2. cancan 1.3.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ah ha. And if you&#8217;re using RVM like we do, then your default.gems might be specifying a different version (which in our case manifested in our staging server, not on local development).</p>
+
+<p>So by making sure you&#8217;re using the latest version (>= 1.3.2), and using the :class syntax i.e.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">authorize_resource</span> <span class="ss">:class</span> <span class="o">=&gt;</span> <span class="no">FundingFlow</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>, you might save yourself a murder (or at the very least a weapons) charge.</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -330,58 +427,6 @@
 <p>Plugins are pants though, so I&#8217;ve updated heroku_san to a gem now too. No more copying .rake tasks between projects!</p>
 
 <p>Grab <a href="http://github.com/glennr/heroku_san">http://github.com/glennr/heroku_san</a> and <code>rake heroku:gems</code> til your hearts&#8217; content!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-06-07T23:25:00+02:00" pubdate data-updated="true">
-    <span class='day'> 07</span>
-    <span class='month'> Jun</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror">GitHub Gem: A JSON Text Must at Least Contain Two Octets! (JSON::ParserError)</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Matt Jones and I came up with a fix for this error during Dr Nic&#8217;s OSS tutorial at RailsConf &#8216;10.</p>
-
-<p>Seems like GitHub is not returning correct JSON for the <code>http://github.com/#{user}/#{project}/network_meta</code> endpoint.</p>
-
-<p>Fork our fix here:</p>
-
-<p><a href="http://github.com/glennr/github-gem">http://github.com/glennr/github-gem</a></p>
 </div></div>
   
   

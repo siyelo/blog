@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="04 Nov 2009 Bert the Lizard - Resident Code Critic at Siyelo &#8211;> Comments &#8211;> &#8211;> 04 Nov 2009 Agile Contracts - Working Group &#8211 &hellip;">
+  <meta name="description" content="17 Nov 2009 Get Those Cheeky Bash Variables Out of There &#8211;> Comments &#8211;> &#8211;> Wanting to &#8220;unexport&#8221; a bash shell variable &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,80 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2009-11-17T18:35:00+02:00" pubdate data-updated="true">
+    <span class='day'> 17</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2009</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/get-those-cheeky-bash-variables-out-of-there">Get Those Cheeky Bash Variables Out of There</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/get-those-cheeky-bash-variables-out-of-there#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Wanting to &#8220;unexport&#8221; a bash shell variable, after several minutes too long trying to find the man page for &#8216;export&#8217;, I finally found the hard way to do it:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export</span> -n VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">unset </span>VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>unexport VAR_NAME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Im just kidding about the latter)</p>
+
+<p>Or if you&#8217;re a smart cookie, you can just make a bash alias like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">alias </span><span class="nv">unexport</span><span class="o">=</span><span class="s1">&#39;unset&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
