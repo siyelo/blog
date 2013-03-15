@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="07 Jun 2010 GitHub Gem: A JSON Text Must at Least Contain Two Octets! (JSON::ParserError) &#8211;> Comments &#8211;> &#8211;> Matt Jones and I came &hellip;">
+  <meta name="description" content="18 Jun 2010 Handy Rake Tasks for Heroku &#8211;> Comments &#8211;> &#8211;> We&#8217;ve been using a standalone rake task to generate the .gems for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +92,58 @@
   <div class="wrapper multiclouds">
   <div id="articles">
     
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2010-06-18T10:42:07+02:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Jun</span>
+    <span class='year'> 2010</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/handy-rake-tasks-for-heroku">Handy Rake Tasks for Heroku</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/handy-rake-tasks-for-heroku#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We&#8217;ve been using a standalone rake task to generate the .gems for our Heroku apps. Recently Heroku raised the bar by making you specify the rails version too in this file (gah). So all your 2.3.5 or lower full redeploys will start breaking without this line in .gems.</p>
+
+<p>Theres some great gists and blogposts floating around there showing you how to generate .gems, but who wants to manage individual rake tasks across projects? Not me. A little bit of hunting and I found a nice plugin ‘heroku_san’ by Elijah Miller with several cool Heroku rake tasks, including one to generate the .gems file. </p>
+
+<p>Plugins are pants though, so I&#8217;ve updated heroku_san to a gem now too. No more copying .rake tasks between projects!</p>
+
+<p>Grab <a href="http://github.com/glennr/heroku_san">http://github.com/glennr/heroku_san</a> and <code>rake heroku:gems</code> til your hearts&#8217; content!</p>
+</div></div>
+  
+  
+
+
+      </article>
     
     
       <article>
@@ -377,76 +429,6 @@
 <p>And your uber Cucumber regresssion tests aren&#8217;t picking it up, despite having the following standards-based MIME type validations;then you might check to see what browser they&#8217;re using.Are they using Internet Explorer? Internet Explorer 8 perhaps?</p>
 
 <p>Well you might want to add something along the lines of <strong>image/pjpeg</strong> to your validations. Google killed off IE6. Lets hope they do the same for IE6+2 soon.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2010-03-24T18:03:04+02:00" pubdate data-updated="true">
-    <span class='day'> 24</span>
-    <span class='month'> Mar</span>
-    <span class='year'> 2010</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/tired-of-textmates-slow-find-in-project-nix-to-the-rescue">Tired of Textmate&#8217;s Slow &#8216;Find in Project&#8217;? `*`nix to the Rescue</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/tired-of-textmates-slow-find-in-project-nix-to-the-rescue#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>We all know that Textmate&#8217;s &#8220;Find in Project&#8221; feature runs like a dog.</p>
-
-<p>If you&#8217;re generally only really wanting to search .rb files, here&#8217;s a script which I call &#8216;findrb&#8217;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#! /bin/shfind . -name*.rb -type f | xargs grep -nHr&quot;$1&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Drop this in a file in your $PATH, <code>chmod +x</code> it, and off you go.</p>
-
-<p>E.g.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>glenn-roberts-4 ~/ba<span class="o">[</span>master*<span class="o">]</span><span class="nv">$ </span>findrb <span class="s1">&#39;show&#39;</span>
-</span><span class='line'>./app/controllers/home_controller.rb:13: def show
-</span><span class='line'>./app/controllers/live_profiles_controller.rb:2: before_filter :authenticate_user!, :except <span class="o">=</span>&gt; <span class="o">[</span> :index, :show <span class="o">]</span>
-</span><span class='line'>./app/controllers/live_profiles_controller.rb:22: def show
-</span><span class='line'>./app/controllers/live_profiles_controller.rb:26: format.html <span class="c"># show.html.haml`</span>
-</span></code></pre></td></tr></table></div></figure>
-
 </div></div>
   
   

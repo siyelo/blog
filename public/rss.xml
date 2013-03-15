@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-02-13T20:46:33+02:00</updated>
+  <updated>2013-03-15T10:46:47+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -14,9 +14,37 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Focus Hocus Pocus]]></title>
+    <link href="http://blog.siyelo.com/focus-hocus-pocus"/>
+    <updated>2013-03-15T11:00:00+01:00</updated>
+    <id>http://blog.siyelo.com/focus-hocus-pocus</id>
+    <author>Dalibor Nasevic</author>
+    <content type="html"><![CDATA[<p>Hello <strong>Siyelo</strong>!</p>
+
+<p>Today is my last day at work before heading into a new adventure. In order to skip all the resignation letter bullshit and because I received the enormous list of bugs you have been saving for me, I&#8217;ll try to be very short.</p>
+
+<p>After fixing all the bugs, I&#8217;ll need to clean and leave the company laptop I work on too. So, I&#8217;ll just try if the following command works well on Ubuntu 12.04. :) Random readers of this blog are not advised to try this at home!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo rm -R /
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now that we are done with all of that, it&#8217;s time for some enjoyment.</p>
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/g4ouPGGLI6Q" frameborder="0" allowfullscreen></iframe>
+
+
+<p>All the best in future!</p>
+
+<p>/<strong>dalibor</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Your git squash-merge is bad]]></title>
     <link href="http://blog.siyelo.com/if-you-git-merge-squash"/>
-    <updated>2013-02-13T19:30:00+02:00</updated>
+    <updated>2013-02-13T19:30:00+01:00</updated>
     <id>http://blog.siyelo.com/if-you-git-merge-squash</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>&#8230; and you should feel bad.</p>
@@ -50,7 +78,7 @@
   <entry>
     <title type="html"><![CDATA[Rails security; Being the best newbie & Redesigning Google]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-12"/>
-    <updated>2013-02-04T11:11:00+02:00</updated>
+    <updated>2013-02-04T11:11:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-12</id>
     <author></author>
     <content type="html"><![CDATA[<p>Here&#8217;s our recommended reading list for the coming week:</p>
@@ -112,7 +140,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR - Bacon Pancakes, Dynamic attributes & MongoDB and Now I Know]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-11"/>
-    <updated>2013-01-25T16:51:00+02:00</updated>
+    <updated>2013-01-25T16:51:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-11</id>
     <author></author>
     <content type="html"><![CDATA[<p>This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- <a href="http://www.youtube.com/watch?v=zalYJacOhpo">Adventure Time Bacon Pancakes New York Remix!</a> - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.</p>
@@ -132,7 +160,7 @@
   <entry>
     <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
     <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
-    <updated>2013-01-18T17:51:00+02:00</updated>
+    <updated>2013-01-18T17:51:00+01:00</updated>
     <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
     <author>Siyelo</author>
     <content type="html"><![CDATA[<p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
@@ -162,7 +190,7 @@
   <entry>
     <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
     <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
-    <updated>2013-01-18T13:36:00+02:00</updated>
+    <updated>2013-01-18T13:36:00+01:00</updated>
     <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
@@ -182,7 +210,7 @@
   <entry>
     <title type="html"><![CDATA[Thou shalt clean thy branches: git rebase]]></title>
     <link href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase"/>
-    <updated>2013-01-15T10:18:00+02:00</updated>
+    <updated>2013-01-15T10:18:00+01:00</updated>
     <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
@@ -212,7 +240,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-9"/>
-    <updated>2012-12-21T14:35:00+02:00</updated>
+    <updated>2012-12-21T14:35:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-9</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>So the Mayan apocalypse was a dud&#8230; Thankfully so because it would&#8217;ve ruined a perfect day in Cape Town.</p>
@@ -232,7 +260,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-8"/>
-    <updated>2012-12-07T13:46:00+02:00</updated>
+    <updated>2012-12-07T13:46:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-8</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
@@ -253,7 +281,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Global Day Of Coderetreat 2012]]></title>
     <link href="http://blog.siyelo.com/global-day-of-coderetreat-2012"/>
-    <updated>2012-12-05T09:32:00+02:00</updated>
+    <updated>2012-12-05T09:32:00+01:00</updated>
     <id>http://blog.siyelo.com/global-day-of-coderetreat-2012</id>
     <author>Dalibor Nasevic</author>
     <content type="html"><![CDATA[<p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
@@ -273,7 +301,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Active Merchant and Spree]]></title>
     <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
-    <updated>2012-11-27T10:01:00+02:00</updated>
+    <updated>2012-11-27T10:01:00+01:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <author>Sachin Ranchod</author>
     <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
@@ -340,7 +368,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-7"/>
-    <updated>2012-11-16T17:09:00+02:00</updated>
+    <updated>2012-11-16T17:09:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-7</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
@@ -360,7 +388,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
     <link href="http://blog.siyelo.com/weekly-roundup-6"/>
-    <updated>2012-11-09T15:36:00+02:00</updated>
+    <updated>2012-11-09T15:36:00+01:00</updated>
     <id>http://blog.siyelo.com/weekly-roundup-6</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
@@ -392,7 +420,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[The Siyelo Book Club]]></title>
     <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
-    <updated>2012-11-08T16:08:00+02:00</updated>
+    <updated>2012-11-08T16:08:00+01:00</updated>
     <id>http://blog.siyelo.com/the-siyelo-book-club</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
@@ -539,7 +567,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
   <entry>
     <title type="html"><![CDATA[Annotation without thought]]></title>
     <link href="http://blog.siyelo.com/annotation-without-thought"/>
-    <updated>2012-11-08T11:48:00+02:00</updated>
+    <updated>2012-11-08T11:48:00+01:00</updated>
     <id>http://blog.siyelo.com/annotation-without-thought</id>
     <author>Glenn Roberts</author>
     <content type="html"><![CDATA[<p>If you like your schema definitions handy in the current ActiveRecord
@@ -585,7 +613,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
   <entry>
     <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
     <link href="http://blog.siyelo.com/welcoming-ile"/>
-    <updated>2012-11-02T15:20:00+02:00</updated>
+    <updated>2012-11-02T15:20:00+01:00</updated>
     <id>http://blog.siyelo.com/welcoming-ile</id>
     <author>Nicole Dirks</author>
     <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
@@ -725,32 +753,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p><em>I&#8217;ll always treasure my time here and hope you enjoyed having me as much as I enjoyed being here.</em></p>
 
 <p><em>Peter</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Ruby Security Guide, Macedonian parties & Moving things around]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-2"/>
-    <updated>2012-09-28T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-2</id>
-    <author>Sachin Ranchod</author>
-    <content type="html"><![CDATA[<p>This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you&#8217;ll find something thought provoking. </p>
-
-<p>First up, Sachin shared <a href="http://code.google.com/p/ruby-security/wiki/Guide">The Ruby Security Reviewer&#8217;s Guide</a>, it&#8217;s not the most comprehensive guide but it actually provides a great introduction to the Ruby language. </p>
-
-<p>Has the optimism around Rails disappeared? Peter took a look at &#8221;<a href="http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html">Why Rail critics have it all wrong</a>?&#8221; Share your thoughts with us.</p>
-
-<p>Glenn has been updating Siyelo&#8217;s business plan using these <a href="http://www.sequoiacap.com/ideas">guideline ideas</a> from Sequoia Capital. (<a href="http://blog.siyelo.com/siyelo-drinkup-skopje">While partying in Macedonia</a>) </p>
-
-<p>Want to run fast tests in your Rails application? Dalibor recommended <a href="https://github.com/burke/zeus">Zeus</a>. You&#8217;ll avoid writing prefork blocks in your spec helper with Spork. It also works with other Rails development tasks such as console, server, generate, and it just takes less than one second to run.</p>
-
-<p>Dime stumbled onto quite a few interesting articles this week from <a href="http://www.vanseodesign.com/web-design/grid-choices/">choosing the right grids</a> for your projects to the <a href="http://jbrewer.github.com/Responsive-Measure/">final piece of responsive design</a> - scalable fonts!  </p>
-
-<p>This week&#8217;s video features none other than the legendary graphic designer Milton Glaser: &#8221;<a href="http://brendandawes.com/blog/Glaser">I move things around until they look right</a>&#8221;, his outlook on creativity and the path to success. </p>
-
-<p>&#8220;Anything I&#8217;ve really discovered has come through the act of making things.&#8221;</p>
-
-<p>Enjoy your weekend!</p>
 ]]></content>
   </entry>
   
