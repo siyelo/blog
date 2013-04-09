@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OSX | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-03-15T10:46:47+01:00</updated>
+  <updated>2013-04-09T10:41:00+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Installing ImageMagick on OSX Leopard]]></title>
     <link href="http://blog.siyelo.com/installing-imagemagick-on-osx-leopard"/>
-    <updated>2009-11-23T12:05:00+01:00</updated>
+    <updated>2009-11-23T13:05:00+02:00</updated>
     <id>http://blog.siyelo.com/installing-imagemagick-on-osx-leopard</id>
     <content type="html"><![CDATA[<p>I found a great script for compiling ImageMagick on OSX from scratch via ThoughtBot's Paperclip installation instructions.</p>
 

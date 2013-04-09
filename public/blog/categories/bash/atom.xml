@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-03-15T10:46:47+01:00</updated>
+  <updated>2013-04-09T10:41:00+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -49,7 +49,7 @@ alias hmig='heroku rake db:migrate'
   <entry>
     <title type="html"><![CDATA[Tired of Textmate's slow 'Find in Project'? `*`nix to the rescue]]></title>
     <link href="http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue"/>
-    <updated>2010-03-24T17:03:04+01:00</updated>
+    <updated>2010-03-24T18:03:04+02:00</updated>
     <id>http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue</id>
     <content type="html"><![CDATA[<p>We all know that Textmate's "Find in Project" feature runs like a dog.</p>
 
@@ -78,7 +78,7 @@ glenn-roberts-4 ~/ba[master*]$ findrb 'show'
   <entry>
     <title type="html"><![CDATA[Speeding up bash aliasing to speed up your Rails development]]></title>
     <link href="http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development"/>
-    <updated>2010-03-19T18:02:57+01:00</updated>
+    <updated>2010-03-19T19:02:57+02:00</updated>
     <id>http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development</id>
     <content type="html"><![CDATA[<p>All good developers love the terminal, and spend many hours at the command prompt.</p>
 
@@ -101,7 +101,7 @@ alias mbp='mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile'
   <entry>
     <title type="html"><![CDATA[Using Git? How to know what branch you're on, and if its dirty.]]></title>
     <link href="http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty"/>
-    <updated>2009-12-17T10:06:32+01:00</updated>
+    <updated>2009-12-17T11:06:32+02:00</updated>
     <id>http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty</id>
     <content type="html"><![CDATA[<p>Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.</p>
 
@@ -146,7 +146,7 @@ alias mbp='mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile'
   <entry>
     <title type="html"><![CDATA[Aliases for common Heroku commands]]></title>
     <link href="http://blog.siyelo.com/aliases-for-common-heroku-commands"/>
-    <updated>2009-11-24T14:25:12+01:00</updated>
+    <updated>2009-11-24T15:25:12+02:00</updated>
     <id>http://blog.siyelo.com/aliases-for-common-heroku-commands</id>
     <content type="html"><![CDATA[<p>Some handy bash aliases to speed up your Heroku deploys:</p>
 
