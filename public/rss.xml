@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-04-09T10:41:00+02:00</updated>
+  <updated>2013-05-03T16:59:32+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing...]]></title>
+    <link href="http://blog.siyelo.com/introducing_stu_and_nic"/>
+    <updated>2013-05-03T15:37:00+02:00</updated>
+    <id>http://blog.siyelo.com/introducing_stu_and_nic</id>
+    <author>Nic Young</author>
+    <content type="html"><![CDATA[<p>The <a href="http://siyelo.com">Siyelo</a> entourage of geeks has grown in the last couple of months, and the newcomers would like to say hi. They&#8217;ve put a lot of effort into this pageant, so do us a favor and humor them with a smile.</p>
+
+<p><img style="float:left; clear:right;" src="images/posts/stu_pageant.jpg" alt="Stuart"/>Stuart Corbishley takes the stage in a charming, floral evening gown in autumn colours. He has eight years of professional development experience singing soulful backup, five of them sporting the latest Ruby fashions. Stuart is an established photographer and says he hasn&#8217;t been this nervous since that HTML competition he won when he twelve. His first act as the new face of Siyelo will be to end world hunger.</p>
+
+<br clear="left"/>
+
+
+<br/>
+
+
+<p><img style="float:right; clear:left;" src="images/posts/nic_pageant.jpg" alt="Stuart"/>A spotlight tracks Nic Young onto stage, scattering disco reflections off the sequins covering his otherwise classy cocktail dress. Three years of business analysis follow in tow, and he has seven years of development experience dancing backup. Six of them are busting Ruby moves, and one shameful stand-in rocks php like it&#8217;s &#8216;97. Nic is a published author of short fiction and appreciates a good playlist. If crowned Miss Siyelo he&#8217;d put a jumping castle in every home.</p>
+
+<p>Thank you and good night.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Abstracting a Service]]></title>
@@ -741,26 +763,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
 
 <p>Have a great weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
-    <updated>2012-10-05T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-3</id>
-    <author>Nicole Dirks</author>
-    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
-
-<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
-
-<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
-
-<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
-
-<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
-
-<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
 ]]></content>
   </entry>
   
