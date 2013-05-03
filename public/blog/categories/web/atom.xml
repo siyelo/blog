@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-04-09T10:41:00+02:00</updated>
+  <updated>2013-05-03T15:37:36+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -84,21 +84,6 @@
 
 
 <p> Your website is a sales team on constant duty.  Make sure your team is informed, informative and of good quality.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Browser market share: Applying the 80:20 rule ]]></title>
-    <link href="http://blog.siyelo.com/browser-market-share-applying-the-8020-rule"/>
-    <updated>2009-12-12T11:10:22+02:00</updated>
-    <id>http://blog.siyelo.com/browser-market-share-applying-the-8020-rule</id>
-    <content type="html"><![CDATA[<p>80% of the effort in many web development projects we've done was spent making the site work on ~20% of the browsers out there. Thats why its worth explaining to clients about standards-compliance, and focusing on making their sites work in those web browsers.</p>
-
-<p>Axiis came up with <a href="http://www.axiis.org/examples/BrowserMarketShare.html">this clever visual representation</a> of browser market share based on the W3C usage stats.</p>
-
-<p><img src="/images/old/2009/12/pastedgraphic-png-scaled-500.jpg" alt="Pastedgraphic" /></p>
-
-<p>Its great to see browsers like IE6/7 losing their grip on the market. Its good news for web developers, and for their clients. Save time. Save money. Go Firefox.</p>
 ]]></content>
   </entry>
   

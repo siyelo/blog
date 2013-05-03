@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-04-09T10:41:00+02:00</updated>
+  <updated>2013-05-03T15:37:36+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -56,34 +56,6 @@ width="560" height="400" frameBorder="0"></iframe>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Focus Hocus Pocus]]></title>
-    <link href="http://blog.siyelo.com/focus-hocus-pocus"/>
-    <updated>2013-03-15T12:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/focus-hocus-pocus</id>
-    <author>Dalibor Nasevic</author>
-    <content type="html"><![CDATA[<p>Hello <strong>Siyelo</strong>!</p>
-
-<p>Today is my last day at work before heading into a new adventure. In order to skip all the resignation letter bullshit and because I received the enormous list of bugs you have been saving for me, I&#8217;ll try to be very short.</p>
-
-<p>After fixing all the bugs, I&#8217;ll need to clean and leave the company laptop I work on too. So, I&#8217;ll just try if the following command works well on Ubuntu 12.04. :) Random readers of this blog are not advised to try this at home!</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo rm -R /
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now that we are done with all of that, it&#8217;s time for some enjoyment.</p>
-
-<iframe width="420" height="315" src="http://www.youtube.com/embed/g4ouPGGLI6Q" frameborder="0" allowfullscreen></iframe>
-
-
-<p>All the best in future!</p>
-
-<p>/<strong>dalibor</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Your git squash-merge is bad]]></title>
     <link href="http://blog.siyelo.com/if-you-git-merge-squash"/>
     <updated>2013-02-13T19:30:00+02:00</updated>
@@ -107,11 +79,11 @@ width="560" height="400" frameBorder="0"></iframe>
 
 <p><em>Before:</em></p>
 
-<p><img src="https://www.evernote.com/shard/s99/sh/b3beac3a-fede-47d8-a3ba-0cb8c125536c/fdbc298748425a7c67012efd5c2efb8b/res/9c8cbeec-10d1-4f22-a6eb-3a0e2bd37e94/skitch.png?resizeSmall&amp;width=832" alt="Before merge" /></p>
+<p><img src="http://i.imgur.com/4xWxJTi.png" alt="Before merge" /></p>
 
 <p><em>After:</em></p>
 
-<p><img src="https://www.evernote.com/shard/s99/sh/57d73554-f296-40c7-b792-e07ec4ef81f6/0ab50ac86495307c3f2e7cd2abd260c1/res/d61c83f4-a24b-4754-9f12-6f165656e2a0/skitch.png?resizeSmall&amp;width=832" alt="After bad squash" /></p>
+<p><img src="http://i.imgur.com/V0E8eUM.png" alt="After bad squash" /></p>
 
 <p>Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!</p>
 ]]></content>
@@ -761,6 +733,40 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
 
 <p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It's not you, it's me...]]></title>
+    <link href="http://blog.siyelo.com/its-not-you-its-me"/>
+    <updated>2012-10-05T15:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/its-not-you-its-me</id>
+    <author>Peter Garbers</author>
+    <content type="html"><![CDATA[<p>Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here&#8217;s the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;</p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg"><img src="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg" alt="" /></a></p>
+
+<p><em>Dear Siyelo</em></p>
+
+<p><em>The time has finally come for me to leave you. My time with the company has been something I will always remember. I have had much more fun than I would have ever thought and learnt a lot in the process. However, there are several reasons that have forced my decision.</em></p>
+
+<p><em>The truth of the matter is that, I&#8217;m feeling rather inadequate around all the other members of the team:</em></p>
+
+<p><em><strong>Glenn:</strong>Your knowledge of bad music is something I don&#8217;t think that I will ever be able to compete with. (<a href="http://www.youtube.com/watch?v=nNhNLi2oac8">http://www.youtube.com/watch?v=nNhNLi2oac8</a>). Need I say more?</em></p>
+
+<p><em><strong>Sachin:</strong>I&#8217;m afraid I don&#8217;t think I will ever be able to grow a beard like you. It&#8217;s emasculating. What really irks me is that you refuse to embrace this gift bestowed upon you.</em></p>
+
+<p><em><strong>Dalibor:</strong>I was the king of table tennis, or so I thought until you arrived earlier this year and smashed those dreams into little pieces.</em></p>
+
+<p><em><strong>Dime:</strong>Your knowledge of metal music is far superior to mine. It hurts me to admit this so I won&#8217;t expand on it further.</em></p>
+
+<p><em><strong>Wendy:</strong>I&#8217;ll never be as persistent as you. No, I haven&#8217;t done timesheets for today.</em></p>
+
+<p><em>Now, with our latest addition to the team, Nicole, I&#8217;m not even the prettiest person in the team!</em></p>
+
+<p><em>I&#8217;ll always treasure my time here and hope you enjoyed having me as much as I enjoyed being here.</em></p>
+
+<p><em>Peter</em></p>
 ]]></content>
   </entry>
   
