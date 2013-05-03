@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Siyelo]]></title>
+  <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-05-03T15:38:46+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Abstracting a Service]]></title>
+    <link href="http://blog.siyelo.com/abstracting-a-service"/>
+    <updated>2013-04-09T09:59:00+02:00</updated>
+    <id>http://blog.siyelo.com/abstracting-a-service</id>
+    <author>Stuart Corbishley</author>
+    <content type="html"><![CDATA[<p>Just as the dust settles from this years <a href="http://www.rubyfuza.co.za/">RubyFuza</a>, I finally have a moment to reflect on how great it was.<br/>
+This would be my 3rd attendence as a guest, and my 1st as a speaker.
+It is humbling to be around some amazingly talented and practiced
+developers, implementers and contributors of the Ruby community.<br/>
+So my talk was titled: <strong>Abstracting a Service: A Case Study in Forward
+Thinking with SOA</strong></p>
+
+<p>I gave a quick round up of how in a previous project we sensed the need
+to abstract early, how we came to realize this and how we approached it.</p>
+
+<p>Including the cheap and nasty middle step along the way.</p>
+
+<p>I name drop a few RubyGems along the way as well that helped immensely in
+making this process easier.</p>
+
+<p>Service Oriented Architecture is a massive subject on it&#8217;s own, so if
+anyone has any questions regarding my talk, please give me a shout.</p>
+
+<p>So without further ado, here is the video.</p>
+
+<iframe width="560" height="315"
+src="http://www.youtube.com/embed/kvcbzt8lZwk" frameborder="0"
+allowfullscreen></iframe>
+
+
+<p></p>
+
+<p>Also slides:</p>
+
+<iframe
+src="http://prezi.com/embed/wiolzae5tiho/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined"
+width="560" height="400" frameBorder="0"></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your git squash-merge is bad]]></title>
+    <link href="http://blog.siyelo.com/if-you-git-merge-squash"/>
+    <updated>2013-02-13T19:30:00+02:00</updated>
+    <id>http://blog.siyelo.com/if-you-git-merge-squash</id>
+    <author>Glenn Roberts</author>
+    <content type="html"><![CDATA[<p>&#8230; and you should feel bad.</p>
+
+<p>Commit early &amp; commit often is the way to go. Then squash your commits before they get merged to <code>[master]</code>. This is the gentlemanly thing to do.</p>
+
+<p>With git, you can squash with an interactive rebase (<code>git rebase -i</code>), in which you squash your branch down to one (or two) commits. Alternatively you can use <code>git merge --squash</code> while merging the branch.</p>
+
+<p>Having someone else merge your branch into <code>[master]</code> (unless you already paired with someone on the code) is good practice. It formalizes the code review step, and makes sure someone else is signing off on the code in case you did <a href="http://www.youtube.com/watch?v=pUJJ-mdd9pw&amp;feature=youtu.be&amp;t=1m45s">this</a>. (In a way it also makes you feel the pain of code reviews where you might be pairing!)</p>
+
+<p>Both commit-squashing methods (interactive rebase or squash-merge) give you the major benefit of a cleaner <code>git log</code> and lots of warm and fuzzies. However if you follow the above process (like we do), an interactive rebase tends to work better than a squash-merge.</p>
+
+<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &#8216;Merge Pull Request&#8217; button and shit won&#8217;t explode. Mostly.</p>
+
+<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&#8217;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
+
+<p>To illustrate; The &#8216;before&#8217; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &#8216;Glenn&#8217;. The &#8216;after&#8217; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
+
+<p><em>Before:</em></p>
+
+<p><img src="http://i.imgur.com/4xWxJTi.png" alt="Before merge" /></p>
+
+<p><em>After:</em></p>
+
+<p><img src="http://i.imgur.com/V0E8eUM.png" alt="After bad squash" /></p>
+
+<p>Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails security; Being the best newbie & Redesigning Google]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-12"/>
+    <updated>2013-02-04T11:11:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-12</id>
+    <author></author>
+    <content type="html"><![CDATA[<p>Here&#8217;s our recommended reading list for the coming week:</p>
+
+<h4><a href="http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/">What the Rails security issue means for your startup</a></h4>
+
+<p>Glenn - A great overview of the Rails security issues and why they deserve your full attention.</p>
+
+<h4><a href="http://confreaks.com/videos/1103-madisonruby2012-making-a-difference-right-off-the-bat">Being the best newbie you can be</a></h4>
+
+<p>Ile - A great presentation on how you can start contributing to a successful team from Day 1 even if you don&#8217;t have the technical skills yet.</p>
+
+<h4><a href="http://www.meetup.com/Code-Coffee-Cape-Town/">Code and Coffee meet up</a></h4>
+
+<p>Sachin - Code &amp; Coffee Cape Town is a meetup we host every 4 weeks.  It&#8217;s a great opportunity to meet other devs in and learn something new.</p>
+
+<h4><a href="http://blog.nibbler.io/2013/01/rudebot-rolling-ubiquitous-display.html">Rudebot</a></h4>
+
+<p>Sachin - We want one of these for our distributed team!</p>
+
+<h4><a href="http://www.youtube.com/watch?v=pqeJFYwnkjE">Debt metaphor as motivation for refactoring</a></h4>
+
+<p>Dalibor - Writing good code even if you don&#8217;t fully understand the problem you are facing can help reduce the time it will take to understand and refactor the code later on.</p>
+
+<iframe width="640" height="390" src="http://www.youtube.com/embed/pqeJFYwnkjE" frameborder="0" allowfullscreen></iframe>
+
+
+<h4><a href="http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm">What is Software Design</a></h4>
+
+<p>Dalibor - It is important to know and understand what software design actually is. Knowing that it is complex and fluid can help you react appropriately to radical changes.</p>
+
+<h4><a href="http://www.theverge.com/2013/1/24/3904134/google-redesign-how-larry-page-engineered-beautiful-revolution">Redesigning Google</a></h4>
+
+<p>Dime - It might have taken a few years, but we are starting to see the fruits of Larry Page&#8217;s push for Google to have a cohesive and consistent visual style.</p>
+
+<h4><a href="http://uxdesign.smashingmagazine.com/2013/01/24/effectively-planning-ux-design-projects/">Effectively planning UX design projects</a></h4>
+
+<p>Dime - A step-by-step PM guide for UX projects which will help you get the most out of a tight budget</p>
+
+<h4><a href="https://www.uie.com/articles/strategy_for_responsive_design/">Devising a strategy for Responsive design.</a></h4>
+
+<p>Dime - Jumping head first into responsive design can be a problem if you don&#8217;t fully understand how pervasive it&#8217;s impact on your UX &amp; development process will be.</p>
+
+<h4><a href="http://www.netmagazine.com/features/best-image-compression-tools">The best image compression tools</a></h4>
+
+<p>Dime - Title says it all :)</p>
+
+<h4><a href="http://www.lukew.com/ff/entry.asp?1678">Mobile sign up forms must die</a></h4>
+
+<p>Dime - The venerable Luke Wroblewski on why gradual engagement helps prevent you from scaring off new users.</p>
+
+<h4>Finally - this is how you handle annoying videobombers</h4>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/WshrVOTLn04?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR - Bacon Pancakes, Dynamic attributes & MongoDB and Now I Know]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-11"/>
+    <updated>2013-01-25T16:51:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-11</id>
+    <author></author>
+    <content type="html"><![CDATA[<p>This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- <a href="http://www.youtube.com/watch?v=zalYJacOhpo">Adventure Time Bacon Pancakes New York Remix!</a> - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.</p>
+
+<p>Glenn recommended <a href="http://onepagerapp.com/">Onepager</a> - a well designed site which solves a common problem. Glenn’s also just discovered the <a href="http://rubyrogues.com">Ruby Rogues</a> podcast (we know, he&#8217;s a bit delayed&#8230;).  They have great panelists and interesting topics - it is practically required listening at Siyelo these days.</p>
+
+<p>Ile is working on a college assignment on Rails and MongoDB for his post-graduate studie.  A great article on <a href="http://paul-wong-jr.blogspot.com/2012/03/dynamic-attributes-and-mongodbmongoid.html">Dynamic attributes and MongoDB/Mongoid</a> has been helping him on his way.</p>
+
+<p>Want to get a quick overview of NoSQL? Sachin shared <a href="http://martinfowler.com/articles/nosqlKeyPoints.html">key points from NoSQL Distilled</a> by Martin Fowler.</p>
+
+<p>Finally, if you haven&#8217;t already, we highly recommend that you sign up for the <a href="http://nowiknow.com/">“Now I know”</a> daily newsletter. In the words of Jimmy Wales: &#8220;It’s always fresh, always a surprise, and always interesting!&#8221;</p>
+
+<p>Happy friday!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
+    <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
+    <updated>2013-01-18T17:51:00+02:00</updated>
+    <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
+    <author>Siyelo</author>
+    <content type="html"><![CDATA[<p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
+
+<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves. But here&#8217;s how we went about it.</p>
+
+<h2>What happened?</h2>
+
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
+
+<h2>What&#8217;s the first issue?</h2>
+
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
+
+<h2>And the second issue?</h2>
+
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
+
+<h2>What to do?</h2>
+
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
+
+<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
+    <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
+    <updated>2013-01-18T13:36:00+02:00</updated>
+    <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
+
+<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
+
+<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
+
+<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
+
+<p>Happy reading and enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thou shalt clean thy branches: git rebase]]></title>
+    <link href="http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase"/>
+    <updated>2013-01-15T10:18:00+02:00</updated>
+    <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
+    <author>Glenn Roberts</author>
+    <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
+
+<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
+doing.</p>
+
+<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&#8217;s stance in this article is that you should
+&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
+
+<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
+history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
+
+<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
+ pull into a branch that isn&#8217;t already in good shape)</p>
+
+<p>You must never EVER destroy other peoples history</p>
+
+<p>Keep your own history readable and dont expose your crap</p>
+
+<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
+
+<p>Stick to these simple rules, and rebase/squash as you please!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-9"/>
+    <updated>2012-12-21T14:35:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-9</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>So the Mayan apocalypse was a dud&#8230; Thankfully so because it would&#8217;ve ruined a perfect day in Cape Town.</p>
+
+<p>This week Dalibor got one step closer to his goal of <a href="http://blog.iterate.no/2012/06/20/programming-like-kent-beck/">Programming like Kent Beck</a>.  He also spent some time reading up on what constitutes good design and why PG thinks it&#8217;s not <a href="http://paulgraham.com/taste.html">subjective or abstract</a>.</p>
+
+<p>Ile has been beefing up his <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim skills</a> thanks to <a href="http://twitter.com/mislav">@mislav&#8217;s</a> great post.  Starting with a simple <code>.vimrc</code> which you fully understand will make it easier to &#8216;get&#8217; the fundamentals.</p>
+
+<p>He&#8217;s also shared <a href="http://twitter.com/davetron5000">David Copeland&#8217;s</a> article on ways to improve reusability in your application - <a href="http://www.naildrivin5.com/blog/2012/12/19/re-use-in-oo-inheritance.html">Re-use in OO: Inheritance, Composition and Mixins</a></p>
+
+<p>Sachin was reading up on ways of improving your application&#8217;s performance on Heroku whilst <a href="http://www.stormconsultancy.co.uk/blog/development/6-ways-to-get-more-bang-for-your-heroku-buck-while-making-your-rails-site-super-snappy/">staying within budget</a></p>
+
+<p>Wishing you well over the festive season from Siyelo!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-8"/>
+    <updated>2012-12-07T13:46:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-8</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
+
+<p>Dime shared Data Driven Documents, <a href="http://d3js.org/">D3.js</a> is a JavaScript library for manipulating documents based on data.</p>
+
+<p>Dalibor found the following articles <a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">7 Patterns to Refactor  at ActiveRecord</a> Models and Demeter: It&#8217;s not just a good idea. It&#8217;s the law, very insightful as well as sharing <a href="http://www.sdruby.org/podcast/94">Refactoring ActiveRecord</a> Models podcast as Ben Hughes explores several techniques for refactoring models and preventing them from getting out of hand. Purchase <a href="http://railsantipatterns.com/">Rails AntiPatterns: Best Practice Ruby on Rails Refactoring</a> on amazon and learn how to identify and fix over 300 of the most common mistakes made in Ruby on Rails applications.</p>
+
+<p>Glenn suggested reading about <a href="http://blog.obiefernandez.com/content/2008/09/master-services-agreement-part-1.html">Obie Fernandez&#8217;s great MSA and SoW templates for consulting engagements</a>. Sachin shared project management theory <a href="https://aidylewis.heroku.com/2012/11/18/kanban-no-it-cant/">Kanban</a> and <a href="http://blog.headius.com/2012/11/refining-ruby.html">Refining Ruby</a>.</p>
+
+<p>Last but not least Ile shared Know your gems and create <a href="http://robots.thoughtbot.com/post/35717411108/a-healthy-bundle">A Healthy Bundle</a> and <a href="http://blog.steveklabnik.com/posts/2012-11-22-introducing-the-rails-api-project">Introducing the Rails API Project
+</a></p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Global Day Of Coderetreat 2012]]></title>
+    <link href="http://blog.siyelo.com/global-day-of-coderetreat-2012"/>
+    <updated>2012-12-05T09:32:00+02:00</updated>
+    <id>http://blog.siyelo.com/global-day-of-coderetreat-2012</id>
+    <author>Dalibor Nasevic</author>
+    <content type="html"><![CDATA[<p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
+
+<p><img src="http://blog.siyelo.com/images/posts/coderetreat_skopje_2012.png" alt="Global Day Of Coderetreat 2012 in Skopje (Macedonia)" /></p>
+
+<p><a href="http://coderetreat.org">Coderetreat</a> is a day-long, intensive practice event focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of &#8216;getting things done&#8217;, the coderetreat format has proven itself to be a fun and highly effective means of skill improvement.</p>
+
+<p>While on a Coderetreat the participants try to improve their craft by learning from each other, focusing on fundamental design principles (such as the Simple Rules of Design and the SOLID principles) and by challenging many of their every day assumptions.</p>
+
+<p>On December 8th, Coderetreats will be held all over the world as part of the <a href="http://globalday.coderetreat.org">Global Day of Coderetreat</a>. The Global Day of Coderetreat helps to raise awareness of Coderetreats and brings people together from all over the world. Most importantly, The Global Day of Coderetreat helps to support global efforts to find, encourage, and educate the next generation of software developers.</p>
+
+<p>Last year, 94 cities participated. This year, it is expected approximately 200 cities to participate with an average of 15-20 participants per city.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Active Merchant and Spree]]></title>
+    <link href="http://blog.siyelo.com/active-merchant-and-spree"/>
+    <updated>2012-11-27T10:01:00+02:00</updated>
+    <id>http://blog.siyelo.com/active-merchant-and-spree</id>
+    <author>Sachin Ranchod</author>
+    <content type="html"><![CDATA[<p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
+
+<p>For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spree payment gateway.</p>
+
+<p>Add the ActiveMerchant gem:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#Gemfile</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;activemerchant&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/app/models/spree/gateway/pay_gate.rb</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span> <span class="o">&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:login</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">attr_accessible</span> <span class="ss">:preferred_login</span><span class="p">,</span> <span class="ss">:preferred_password</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">provider_class</span>
+</span><span class='line'>    <span class="no">ActiveMerchant</span><span class="o">::</span><span class="no">Billing</span><span class="o">::</span><span class="no">PayGateXmlGateway</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&#8217;s preferences system so that they can be filled in via the admin backend.</p>
+
+<p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/config/application.rb</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">after_initialize</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">Rails</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">spree</span><span class="o">.</span><span class="n">payment_methods</span> <span class="o">&lt;&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Rails 4, a responsive cat & a free book]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-7"/>
+    <updated>2012-11-16T17:09:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-7</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
+
+<p>If you love freebies check this out. Dalibor received a free &#8221;<a href="http://https://twitter.com/sandimetz/status/268753825916133376">Practical Object-Oriented Design in Ruby</a>&#8221; book thanks to Sandi Metz and InformIT.  Great customer service!</p>
+
+<p>Dali has been fully emerged in the <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">Rails 4 compilation links</a>, a curated list of intersting links about the next release of Rails.  It&#8217;s got pull requests, issues, commits, examples, posts, videos and much more.</p>
+
+<p>Sachin spent way too much time playing with the <a href="http://roxik.com/cat/">Responsive cat</a>.  You may not have heard the term  <a href="http://kkovacs.eu/the-death-star-design-pattern">&#8216;The Death Star design pattern&#8217;</a> before but we&#8217;re sure you&#8217;ve come across it.  Finally, Sachin shared an article about <a href="http://tx.pignata.com/2012/11/being-for-the-benefit-of-future-developer.html">being for the benefit of future developer</a> - an interesting read with tips about what you can do to look after the next person that&#8217;ll working on your code.</p>
+
+<p>Glenn shared an article on <a href="http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10">How Startups Are Killing Off Bosses</a>. Dime recommended downloading <a href="http://fitvidsjs.com/">Responsive videos</a>, A lightweight, easy-to-use jQuery plugin for fluid width video embeds and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> an iconic font designed for use with Twitter Bootstrap.</p>
+
+<p>Ile found <a href="http://www.youtube.com/watch?v=aBgnlBoIkVM">10 things you didn&#8217;t know you could do with Ruby</a> while watching cat videos on YouTube.  He also spent some time learning about things <a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">you didn&#8217;t know you could do with Chrome dev tools</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-6"/>
+    <updated>2012-11-09T15:36:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-6</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
+
+<p>Dali shared a few great articles with us this week:</p>
+
+<ul>
+<li><a href="http://blog.8thlight.com/uncle-bob/2012/09/06/I-am-Your-New-CTO.html">New CTO</a> by Uncle Bob is an interesting read about how rational expectations from a new CTO may not always appear that way&#8230;until you look closely.</li>
+<li><a href="http://blog.8thlight.com/paul-pagel/2011/12/16/fixed-feature.html">Fixed Feature</a> - an Agile method of fixed bid compensation where clients only pay for the product they receive.</li>
+<li>The <a href="http://homepages.gold.ac.uk/polovina/learnpyramid/index.html">Learning Pyramid</a> diagram illustrates how much better teaching or doing is for retention of new information.</li>
+</ul>
+
+
+<p>It’s all too easy to give bad advice these days, Sachin recommends reading <a href="https://blog.intercom.io/asking-questions-versus-giving-advice/">asking questions versus giving advice</a>.</p>
+
+<p>Our newest addition Ile shared <a href="http://http://www.netmagazine.com/shop/magazines/december-2012-235">Killer features that are coming in Ruby 2.0.</a>.</p>
+
+<p>Dime introduced “<a href="http://www.netmagazine.com/shop/magazines/december-2012-235">how to achieve a more dynamic workflow</a>”, a Q&amp;A on <a href="http://uxdesign.smashingmagazine.com/2012/11/08/ux-design-qa-with-christian-holst/">Adaptive VS Responsive design</a> and lastly <a href="http://css-tricks.com/off-canvas-menu-with-css-target/">Off Canvas menu</a> layouts.</p>
+
+<p>Finally, we think 3Sheets may have just discovered the future of User Testing:</p>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/4cMVKW-fR1M?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Siyelo Book Club]]></title>
+    <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
+    <updated>2012-11-08T16:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/the-siyelo-book-club</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
+
+<p>If you are interested in joining the Hangout, let us know (through the comments or on Twitter).  The next one will be on 12 Nov at 13:30 (GMT+2). We&#8217;ll be chatting about <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/">The Pragmatic Programmer</a>.</p>
+
+<p>So far we&#8217;ve finished the following books:</p>
+
+<ul>
+<li>Lean from the Trenches</li>
+<li>Rocket Surgery Made Easy</li>
+<li>Seductive Interaction Design</li>
+</ul>
+
+
+<p>Here is the full list of books we would like to get through.  Some might not be well suited for a book club but we all want to tackle them at some point.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>**Personal Development**
+</span><span class='line'>The Passionate Programmer
+</span><span class='line'>The Pragmatic Programmer
+</span><span class='line'>
+</span><span class='line'>**Ruby**
+</span><span class='line'>The Ruby Programming Language - David Flanagan, Yukihiro Matsumoto
+</span><span class='line'>Programming Ruby 1.9 - Dave Thomas, Chad Fowler, Andy Hunt
+</span><span class='line'>Eloquent Ruby - Russ Olsen
+</span><span class='line'>The Well Grounded Rubyist - David A. Black
+</span><span class='line'>Design Patterns in Ruby - Russ Olsen
+</span><span class='line'>Metaprogramming Ruby - Paolo Perrotta
+</span><span class='line'>Refactoring Ruby Edition - Jay Fields, Shane Harvie, Martin Fowler, Kent Beck
+</span><span class='line'>
+</span><span class='line'>**Rails:**
+</span><span class='line'>The Rails 3 Way - Obie Fernandez
+</span><span class='line'>Agile Web Development with Rails - Sam Ruby, Dave Thomas, David Heinemeier Hansson
+</span><span class='line'>Ruby on Rails 3 Tutorial - Michael Hartl
+</span><span class='line'>Beginning Rails 3 - Cloves Carneiro Jr., and Rida Al Barazi
+</span><span class='line'>Security on Rails - Ben Poweski, David Raphael
+</span><span class='line'>The Rails View - John Athayde, Bruce Williams
+</span><span class='line'>Rails Antipatterns - Chad Pytel, Tammer Saleh
+</span><span class='line'>
+</span><span class='line'>**XP/TDD/BDD:**
+</span><span class='line'>The RSpec Book - David Chelimsky, Dave Astels, Aslak Hellesoy, Bryan Helmkamp, Dan North
+</span><span class='line'>The Cucumber Book - Matt Wynne, Aslak Hellesoy
+</span><span class='line'>Specification By Example - Gojko Adzic
+</span><span class='line'>Test-Driven Development by Example - Kent Beck
+</span><span class='line'>Extreme Programming Explained - Kent Beck
+</span><span class='line'>User Stories Applied - Cohn
+</span><span class='line'>Agile Retrospectives - Esther Derby, Diana Larsen
+</span><span class='line'>The Agile Samurai - Jonathan Rasmusson
+</span><span class='line'>Lean from the Trenches - Henrik Kniberg
+</span><span class='line'>
+</span><span class='line'>**Design:**
+</span><span class='line'>Practical Object Orientated Design -Sandi Metz
+</span><span class='line'>Domain Driven Design - Eric Evans
+</span><span class='line'>Patterns of Enteprise Application Architecture - Martin Fowler
+</span><span class='line'>Refactoring - Martin Fowler, Kent Beck
+</span><span class='line'>Clean Code - Robert C. Martin
+</span><span class='line'>Agile Software Development - Robert C. Martin
+</span><span class='line'>Software Craftsmanship - Pete McBreen
+</span><span class='line'>
+</span><span class='line'>**UX:**
+</span><span class='line'>The Design of Everyday Things - Donald A. Norman
+</span><span class='line'>Don't Make Me Think - Steve Krug
+</span><span class='line'>Rocket Surgery Made Easy - Steve Krug
+</span><span class='line'>Seductive Interaction Design - Stephen Anderson
+</span><span class='line'>
+</span><span class='line'>**Business/General:**
+</span><span class='line'>The Lean Startup - Eric Ries
+</span><span class='line'>ReWork - Jason Fried and DHH
+</span><span class='line'>Product Development Flow -Reinertsen
+</span><span class='line'>
+</span><span class='line'>**Psychology / Behaviour:**
+</span><span class='line'>Moonwalking with Einstein: The Art and Science of Remembering Everything - Joshua Foer
+</span><span class='line'>Thinking, Fast and Slow - Daniel Kahneman
+</span><span class='line'>The Power of Habit - Charles Duhigg
+</span><span class='line'>Influence: The Psychology of Persuasion - Robert B. Cialdini
+</span><span class='line'>Drive: The Surprising Truth About What Motivates Us - Daniel Pink</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The full list is available at <a href="https://gist.github.com/4039087">https://gist.github.com/4039087</a> - Please feel free to fork it and make changes.</p>
+
+<p>Leave a comment and let us know if you have any book recommendations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Annotation without thought]]></title>
+    <link href="http://blog.siyelo.com/annotation-without-thought"/>
+    <updated>2012-11-08T11:48:00+02:00</updated>
+    <id>http://blog.siyelo.com/annotation-without-thought</id>
+    <author>Glenn Roberts</author>
+    <content type="html"><![CDATA[<p>If you like your schema definitions handy in the current ActiveRecord
+model you&#8217;re looking at, you&#8217;re probably using the
+<a href="" title="https://github.com/ctran/annotate_models">annotate_models gem</a></p>
+
+<p>If you&#8217;re on Rails and want to automagically &#8216;annotate your models when running rake db:migrate, include this rake task in your project;</p>
+
+<figure class='code'><figcaption><span>&#8216;lib/tasks/annotate.rb&#8217;</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s1">&#39;Annotate persisted models&#39;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:anno</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;annotating models...&#39;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s1">&#39;annotate --exclude tests,fixtures -p after -s&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you can annotate your models manually with;</p>
+
+<pre><code>rake anno
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Welcoming Ile - Our newest team member]]></title>
+    <link href="http://blog.siyelo.com/welcoming-ile"/>
+    <updated>2012-11-02T15:20:00+02:00</updated>
+    <id>http://blog.siyelo.com/welcoming-ile</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We&#8217;re very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.</p>
+
+<p><img src="http://blog.siyelo.com/images/posts/ile.jpg" alt="" /></p>
+
+<p><strong>How would you describe yourself?</strong></p>
+
+<p>&#8220;I would describe myself as a friendly, funny and chubby guy (although I&#8217;ve lost a few kilos in the last few months) :)&#8221;</p>
+
+<p><strong>What interests you about Rails?</strong></p>
+
+<p>&#8220;I really like open source and its philosophy. So PHP was my getaway drug to open source. After attending a local meetup about Ruby, I got in touch with Dalibor and he showed me the beauty of Rails. I really like the Rails community, it has a lot of great resources to learn. Also, I like the way the software is done (methodologies, Agile, XP, Kanban etc) and I like testing, which is a new thing for me.&#8221;</p>
+
+<p><strong>How have you found working at Siyelo so far?</strong></p>
+
+<p>&#8220;I really like it here (at Siyelo). Everybody is friendly &amp; there are really nice and constructive discussions. I have learned a lot in the past 2 weeks and I am looking forward to learning more.&#8221;</p>
+
+<p><strong>Tell us a &#8216;Yo mama&#8217; joke</strong></p>
+
+<p>&#8220;Yo mama is so fat she wears a belt from the brand &#8216;Equator&#8217;!&#8221;</p>
+
+<p><strong>Are you willing to grow a moustache for Movember?</strong></p>
+
+<p>&#8220;I would, if I could :(&#8221;</p>
+
+<p>We are really excited to have Ile on the team and we watch him develop as a Rails developer in the coming months.</p>
+
+<p>Got a question for Ile? Ask him in the comments below.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Making Rails fast, Practical OO & Google data centers]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-5"/>
+    <updated>2012-10-19T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-5</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to <a href="http://www.twitter.com/railsonfire">@railsonfire</a>):</p>
+
+<ul>
+<li><a href="http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html">How to get 4x the performance out of Heroku with Unicorn</a></li>
+<li><a href="http://blog.railsonfire.com/2012/05/18/Assets-Sprites-CDN.html">Make your website super fast with Asset Pipeline, Sprites &amp; Cloudfront</a></li>
+</ul>
+
+
+<p>Glenn&#8217;s been checking out Flask as a Python alternative to Ruby&#8217;s Sinatra; <a href="https://twitter.com/maximebf">@maxinebf</a> have a great <a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.UIE8sGmwUqt">tutorial</a> on the topic.  </p>
+
+<p>If you haven&#8217;t already seen it, Sachin recommends watching <a href="https://twitter.com/sandimetz">@sandimetz</a> &#8216;s <a href="http://www.confreaks.com/videos/1115-gogaruco2012-go-ahead-make-a-mess">excellent presentation</a> at GoGaRuCo with practical examples of how OO design can help you manage your mess</p>
+
+<p>Finally, one of Google&#8217;s data centers has street view&#8230;and <a href="https://maps.google.com/maps?hl=en&amp;ll=35.898176,-81.548166&amp;spn=0.007622,0.013486&amp;sll=35.900197,-81.547024&amp;layer=c&amp;cid=7373938251588581469&amp;panoid=qlcZPzXMS12y_CrDh64Qvw&amp;cbp=13,339.35,,0,4.29&amp;gl=US&amp;t=m&amp;cbll=35.898186,-81.548184&amp;z=17">odd security</a> &#8230;</p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Great RSpect tests, TripAdvisors growth & Going password-less]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-4"/>
+    <updated>2012-10-12T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-4</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here&#8217;s this week&#8217;s edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.</p>
+
+<p>Sachin and Glenn shared some tips &amp; tricks:</p>
+
+<ul>
+<li><a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">Chrome dev tools</a> - a great primer to getting the most out of Chrome as a developer;</li>
+<li><a href="http://betterspecs.org/">How to create a great RSpec test suite</a> - a simple and easy guide to whipping your tests into shape.</li>
+</ul>
+
+
+<p>Sachin also shared an article about the <a href="http://blogs.hbr.org/cs/2012/10/the_secrets_to_tripadvisors_im.html">secrets to TripAdvisors impressive growth</a> (warning: not related to scaling their site but an interesting read none the less).</p>
+
+<p>Dalibor was looking at different ways of eliminating the need to store user passwords on your site:</p>
+
+<ul>
+<li><a href="https://github.com/alsmola/nopassword">No Password</a> - a Rails gem that uses the &#8216;Forgot Password&#8217; email token functionality to give you authentication without passwords. </li>
+<li><a href="https://hacks.mozilla.org/2012/09/first-beta-release-of-mozilla-persona-login-without-passwords/">Mozilla Persona</a> - an authentication alternative to OpenID or Facebook Connect, with a focus on privacy and browser integration.</li>
+</ul>
+
+
+<p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
+
+<p>Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
+    <updated>2012-10-05T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-3</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
+
+<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
+
+<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
+
+<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
+
+<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
+
+<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It's not you, it's me...]]></title>
+    <link href="http://blog.siyelo.com/its-not-you-its-me"/>
+    <updated>2012-10-05T15:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/its-not-you-its-me</id>
+    <author>Peter Garbers</author>
+    <content type="html"><![CDATA[<p>Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here&#8217;s the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;</p>
+
+<p><a href="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg"><img src="http://blog.siyelo.com/images/old/2012/10/balls_of_fury.jpg" alt="" /></a></p>
+
+<p><em>Dear Siyelo</em></p>
+
+<p><em>The time has finally come for me to leave you. My time with the company has been something I will always remember. I have had much more fun than I would have ever thought and learnt a lot in the process. However, there are several reasons that have forced my decision.</em></p>
+
+<p><em>The truth of the matter is that, I&#8217;m feeling rather inadequate around all the other members of the team:</em></p>
+
+<p><em><strong>Glenn:</strong>Your knowledge of bad music is something I don&#8217;t think that I will ever be able to compete with. (<a href="http://www.youtube.com/watch?v=nNhNLi2oac8">http://www.youtube.com/watch?v=nNhNLi2oac8</a>). Need I say more?</em></p>
+
+<p><em><strong>Sachin:</strong>I&#8217;m afraid I don&#8217;t think I will ever be able to grow a beard like you. It&#8217;s emasculating. What really irks me is that you refuse to embrace this gift bestowed upon you.</em></p>
+
+<p><em><strong>Dalibor:</strong>I was the king of table tennis, or so I thought until you arrived earlier this year and smashed those dreams into little pieces.</em></p>
+
+<p><em><strong>Dime:</strong>Your knowledge of metal music is far superior to mine. It hurts me to admit this so I won&#8217;t expand on it further.</em></p>
+
+<p><em><strong>Wendy:</strong>I&#8217;ll never be as persistent as you. No, I haven&#8217;t done timesheets for today.</em></p>
+
+<p><em>Now, with our latest addition to the team, Nicole, I&#8217;m not even the prettiest person in the team!</em></p>
+
+<p><em>I&#8217;ll always treasure my time here and hope you enjoyed having me as much as I enjoyed being here.</em></p>
+
+<p><em>Peter</em></p>
+]]></content>
+  </entry>
+  
+</feed>

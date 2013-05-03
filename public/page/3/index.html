@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Siyelo</title>
+  <meta name="author" content="Siyelo">
+
+  
+  <meta name="description" content="27 Nov 2012 Active Merchant and Spree &#8211;> Comments &#8211;> &#8211;> Integrating an ActiveMerchant supported payment gateway into Spree is &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.siyelo.com/page/3/">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6353020-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body id="blog"   >
+  <header role="banner"><header id="header">
+  <div class="wrapper">
+    <h1 class="left" id="logo_alt">
+      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
+    </h1>
+    <ul class="right horizontal" id="contact">
+      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+      <li>
+      <p>+27 21 461 2050</p>
+      </li>
+    </ul>
+    <nav class="right" id="main_nav">
+    <ul class="horizontal">
+      <li><a href="http://www.siyelo.com">Home</a></li>
+      <li><a href="http://www.siyelo.com/services">Services</a></li>
+      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+      <li><a href="http://www.siyelo.com/team">Team</a></li>
+      <li><a href="/" class="active">Blog</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
+
+</header>
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.siyelo.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav> -->
+  <div class="wrapper multiclouds">
+  <div id="articles">
+    
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-27T10:01:00+02:00" pubdate data-updated="true">
+    <span class='day'> 27</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/active-merchant-and-spree">Active Merchant and Spree</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/active-merchant-and-spree#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
+
+<p>For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spree payment gateway.</p>
+
+<p>Add the ActiveMerchant gem:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#Gemfile</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;activemerchant&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/app/models/spree/gateway/pay_gate.rb</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span> <span class="o">&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:login</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>  <span class="n">preference</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">:string</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">attr_accessible</span> <span class="ss">:preferred_login</span><span class="p">,</span> <span class="ss">:preferred_password</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">provider_class</span>
+</span><span class='line'>    <span class="no">ActiveMerchant</span><span class="o">::</span><span class="no">Billing</span><span class="o">::</span><span class="no">PayGateXmlGateway</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&#8217;s preferences system so that they can be filled in via the admin backend.</p>
+
+<p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/config/application.rb</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">after_initialize</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">Rails</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">spree</span><span class="o">.</span><span class="n">payment_methods</span> <span class="o">&lt;&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-16T17:09:00+02:00" pubdate data-updated="true">
+    <span class='day'> 16</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/weekly-roundup-7">TL;DR: Rails 4, a Responsive Cat & a Free Book</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-7#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
+
+<p>If you love freebies check this out. Dalibor received a free &#8221;<a href="http://https://twitter.com/sandimetz/status/268753825916133376">Practical Object-Oriented Design in Ruby</a>&#8221; book thanks to Sandi Metz and InformIT.  Great customer service!</p>
+
+<p>Dali has been fully emerged in the <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">Rails 4 compilation links</a>, a curated list of intersting links about the next release of Rails.  It&#8217;s got pull requests, issues, commits, examples, posts, videos and much more.</p>
+
+<p>Sachin spent way too much time playing with the <a href="http://roxik.com/cat/">Responsive cat</a>.  You may not have heard the term  <a href="http://kkovacs.eu/the-death-star-design-pattern">&#8216;The Death Star design pattern&#8217;</a> before but we&#8217;re sure you&#8217;ve come across it.  Finally, Sachin shared an article about <a href="http://tx.pignata.com/2012/11/being-for-the-benefit-of-future-developer.html">being for the benefit of future developer</a> - an interesting read with tips about what you can do to look after the next person that&#8217;ll working on your code.</p>
+
+<p>Glenn shared an article on <a href="http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10">How Startups Are Killing Off Bosses</a>. Dime recommended downloading <a href="http://fitvidsjs.com/">Responsive videos</a>, A lightweight, easy-to-use jQuery plugin for fluid width video embeds and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> an iconic font designed for use with Twitter Bootstrap.</p>
+
+<p>Ile found <a href="http://www.youtube.com/watch?v=aBgnlBoIkVM">10 things you didn&#8217;t know you could do with Ruby</a> while watching cat videos on YouTube.  He also spent some time learning about things <a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">you didn&#8217;t know you could do with Chrome dev tools</a>.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-09T15:36:00+02:00" pubdate data-updated="true">
+    <span class='day'> 09</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/weekly-roundup-6">TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-6#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
+
+<p>Dali shared a few great articles with us this week:</p>
+
+<ul>
+<li><a href="http://blog.8thlight.com/uncle-bob/2012/09/06/I-am-Your-New-CTO.html">New CTO</a> by Uncle Bob is an interesting read about how rational expectations from a new CTO may not always appear that way&#8230;until you look closely.</li>
+<li><a href="http://blog.8thlight.com/paul-pagel/2011/12/16/fixed-feature.html">Fixed Feature</a> - an Agile method of fixed bid compensation where clients only pay for the product they receive.</li>
+<li>The <a href="http://homepages.gold.ac.uk/polovina/learnpyramid/index.html">Learning Pyramid</a> diagram illustrates how much better teaching or doing is for retention of new information.</li>
+</ul>
+
+
+<p>It’s all too easy to give bad advice these days, Sachin recommends reading <a href="https://blog.intercom.io/asking-questions-versus-giving-advice/">asking questions versus giving advice</a>.</p>
+
+<p>Our newest addition Ile shared <a href="http://http://www.netmagazine.com/shop/magazines/december-2012-235">Killer features that are coming in Ruby 2.0.</a>.</p>
+
+<p>Dime introduced “<a href="http://www.netmagazine.com/shop/magazines/december-2012-235">how to achieve a more dynamic workflow</a>”, a Q&amp;A on <a href="http://uxdesign.smashingmagazine.com/2012/11/08/ux-design-qa-with-christian-holst/">Adaptive VS Responsive design</a> and lastly <a href="http://css-tricks.com/off-canvas-menu-with-css-target/">Off Canvas menu</a> layouts.</p>
+
+<p>Finally, we think 3Sheets may have just discovered the future of User Testing:</p>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/4cMVKW-fR1M?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+
+<p>Enjoy your weekend!</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-08T16:08:00+02:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/the-siyelo-book-club">The Siyelo Book Club</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/the-siyelo-book-club#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we&#8217;ve decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.</p>
+
+<p>If you are interested in joining the Hangout, let us know (through the comments or on Twitter).  The next one will be on 12 Nov at 13:30 (GMT+2). We&#8217;ll be chatting about <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/">The Pragmatic Programmer</a>.</p>
+
+<p>So far we&#8217;ve finished the following books:</p>
+
+<ul>
+<li>Lean from the Trenches</li>
+<li>Rocket Surgery Made Easy</li>
+<li>Seductive Interaction Design</li>
+</ul>
+
+
+<p>Here is the full list of books we would like to get through.  Some might not be well suited for a book club but we all want to tackle them at some point.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>**Personal Development**
+</span><span class='line'>The Passionate Programmer
+</span><span class='line'>The Pragmatic Programmer
+</span><span class='line'>
+</span><span class='line'>**Ruby**
+</span><span class='line'>The Ruby Programming Language - David Flanagan, Yukihiro Matsumoto
+</span><span class='line'>Programming Ruby 1.9 - Dave Thomas, Chad Fowler, Andy Hunt
+</span><span class='line'>Eloquent Ruby - Russ Olsen
+</span><span class='line'>The Well Grounded Rubyist - David A. Black
+</span><span class='line'>Design Patterns in Ruby - Russ Olsen
+</span><span class='line'>Metaprogramming Ruby - Paolo Perrotta
+</span><span class='line'>Refactoring Ruby Edition - Jay Fields, Shane Harvie, Martin Fowler, Kent Beck
+</span><span class='line'>
+</span><span class='line'>**Rails:**
+</span><span class='line'>The Rails 3 Way - Obie Fernandez
+</span><span class='line'>Agile Web Development with Rails - Sam Ruby, Dave Thomas, David Heinemeier Hansson
+</span><span class='line'>Ruby on Rails 3 Tutorial - Michael Hartl
+</span><span class='line'>Beginning Rails 3 - Cloves Carneiro Jr., and Rida Al Barazi
+</span><span class='line'>Security on Rails - Ben Poweski, David Raphael
+</span><span class='line'>The Rails View - John Athayde, Bruce Williams
+</span><span class='line'>Rails Antipatterns - Chad Pytel, Tammer Saleh
+</span><span class='line'>
+</span><span class='line'>**XP/TDD/BDD:**
+</span><span class='line'>The RSpec Book - David Chelimsky, Dave Astels, Aslak Hellesoy, Bryan Helmkamp, Dan North
+</span><span class='line'>The Cucumber Book - Matt Wynne, Aslak Hellesoy
+</span><span class='line'>Specification By Example - Gojko Adzic
+</span><span class='line'>Test-Driven Development by Example - Kent Beck
+</span><span class='line'>Extreme Programming Explained - Kent Beck
+</span><span class='line'>User Stories Applied - Cohn
+</span><span class='line'>Agile Retrospectives - Esther Derby, Diana Larsen
+</span><span class='line'>The Agile Samurai - Jonathan Rasmusson
+</span><span class='line'>Lean from the Trenches - Henrik Kniberg
+</span><span class='line'>
+</span><span class='line'>**Design:**
+</span><span class='line'>Practical Object Orientated Design -Sandi Metz
+</span><span class='line'>Domain Driven Design - Eric Evans
+</span><span class='line'>Patterns of Enteprise Application Architecture - Martin Fowler
+</span><span class='line'>Refactoring - Martin Fowler, Kent Beck
+</span><span class='line'>Clean Code - Robert C. Martin
+</span><span class='line'>Agile Software Development - Robert C. Martin
+</span><span class='line'>Software Craftsmanship - Pete McBreen
+</span><span class='line'>
+</span><span class='line'>**UX:**
+</span><span class='line'>The Design of Everyday Things - Donald A. Norman
+</span><span class='line'>Don't Make Me Think - Steve Krug
+</span><span class='line'>Rocket Surgery Made Easy - Steve Krug
+</span><span class='line'>Seductive Interaction Design - Stephen Anderson
+</span><span class='line'>
+</span><span class='line'>**Business/General:**
+</span><span class='line'>The Lean Startup - Eric Ries
+</span><span class='line'>ReWork - Jason Fried and DHH
+</span><span class='line'>Product Development Flow -Reinertsen
+</span><span class='line'>
+</span><span class='line'>**Psychology / Behaviour:**
+</span><span class='line'>Moonwalking with Einstein: The Art and Science of Remembering Everything - Joshua Foer
+</span><span class='line'>Thinking, Fast and Slow - Daniel Kahneman
+</span><span class='line'>The Power of Habit - Charles Duhigg
+</span><span class='line'>Influence: The Psychology of Persuasion - Robert B. Cialdini
+</span><span class='line'>Drive: The Surprising Truth About What Motivates Us - Daniel Pink</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The full list is available at <a href="https://gist.github.com/4039087">https://gist.github.com/4039087</a> - Please feel free to fork it and make changes.</p>
+
+<p>Leave a comment and let us know if you have any book recommendations.</p>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    
+      <article>
+        
+  <header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time></section>
+    
+      <h1 class="entry-title"><a href="/annotation-without-thought">Annotation Without Thought</a></h1>
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/annotation-without-thought#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+  <div class="body"><div class="inner"><p>If you like your schema definitions handy in the current ActiveRecord
+model you&#8217;re looking at, you&#8217;re probably using the
+<a href="" title="https://github.com/ctran/annotate_models">annotate_models gem</a></p>
+
+<p>If you&#8217;re on Rails and want to automagically &#8216;annotate your models when running rake db:migrate, include this rake task in your project;</p>
+
+<figure class='code'><figcaption><span>&#8216;lib/tasks/annotate.rb&#8217;</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">desc</span> <span class="s1">&#39;Annotate persisted models&#39;</span>
+</span><span class='line'><span class="n">task</span> <span class="ss">:anno</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s1">&#39;annotating models...&#39;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s1">&#39;annotate --exclude tests,fixtures -p after -s&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">namespace</span> <span class="ss">:db</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;migrate database [and annotate models]&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:migrate</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="o">[</span><span class="ss">:anno</span><span class="o">].</span><span class="n">invoke</span> <span class="k">if</span> <span class="no">Rails</span><span class="o">.</span><span class="n">env</span> <span class="o">==</span> <span class="s1">&#39;development&#39;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also, you can annotate your models manually with;</p>
+
+<pre><code>rake anno
+</code></pre>
+</div></div>
+  
+  
+
+
+      </article>
+    
+    <div class="pagination">
+      
+        <a class="prev" href="/page/4/">Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/page/2/">Newer</a>
+      
+    </div>
+  </div>
+  <aside class="sidebar">
+    
+      <section>
+  <h1>About</h1>
+  <ul id="about">
+    <li>
+      <p>Siyelo is a web development consultancy based in South Africa
+      and Macedonia. We create bespoke web and mobile apps. Interested
+      in working with us? <a href='mailto:info@siyelo.com'>Contact us</a>
+      anytime.</p>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'siyelo',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("siyelo", 3, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
+  
+</section>
+
+
+    
+  </aside>
+</div>
+
+  <footer role="contentinfo"><footer id="footer">
+    <div class="wrapper">
+      <ul class="clearfix">
+        <li class="fourth">
+          <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
+          <span>Contact</span>
+          <ul>
+            <li>phone</li>
+            <li>+27214612050</li>
+            <li>email:</li>
+            <li>
+              <a title="Email us - we want to hear from you" href="mailto:info@siyelo.com">info@siyelo.com</a>
+            </li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
+          <span>Cape Town</span>
+          <ul>
+            <li>Suite #1, 4th Floor</li>
+            <li>79 Roeland Street</li>
+            <li>Cape Town, 8001</li>
+            <li>South Africa</li>
+          </ul>
+        </li>
+        <li class="fourth">
+          <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
+          <span>Skopje</span>
+          <ul>
+            <li>Suite #5, 1st Floor</li>
+            <li>Marx &amp; Engels 7</li>
+            <li>Skopje</li>
+            <li>Macedonia</li>
+          </ul>
+        </li>
+        <li class="fourth social">
+          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+        </li>
+      </ul>
+      <aside>
+        <a class="left back_to_top" href="#header">Back to top</a>
+        <div class="right">
+          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+        </div>
+      </aside>
+    </div>
+  </footer>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'siyelo';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

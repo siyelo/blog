@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tutorial | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/tutorial/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-05-03T15:38:46+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tips - Part II]]></title>
+    <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
+    <updated>2012-07-03T16:39:23+02:00</updated>
+    <id>http://blog.siyelo.com/vim-tips-part-ii</id>
+    <content type="html"><![CDATA[<p>This week we'll share few more userful Vim tips that we've learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
+
+<h2>1. Replace in multiple files</h2>
+
+<p>To search &amp; replace in multiple files, we need to create list of files in which we'll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the "hrt" string:</p>
+
+<p><code>vim
+:args app/assets/javascripts/hrt*.js
+</code></p>
+
+<p>We can see which files are loaded in the arguments list by running only the <strong>:args</strong> command:</p>
+
+<p><code>vim
+:args
+</code></p>
+
+<p>Having the arguments list prepared, we can execute search &amp; replace with:</p>
+
+<p><code>vim
+:argdo %s/Hrt/Hrt2/g
+</code></p>
+
+<p>Once changes have been made in the files, we can save all the files in arguments list with:</p>
+
+<p><code>vim
+:argdo update
+</code></p>
+
+<h2>2. Search and replace in multiple files</h2>
+
+<p>Previous tip works OK if we know the files where we want to run the replace command. Most common need is to search for a string in files, and then run the replace command only in those files. We can do that by using <strong>vimgrep</strong> command to find a pattern in files .<strong>vimgrep</strong> command creates quicklist with files matching the pattern which list we can see by opening it with <strong>:copen</strong> command. If we want quicklist to be useful, we need to convert it to arguments list by using the <strong>:Qargs</strong> mapping which we have in our vimrc file:</p>
+
+<p>```vim
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+" populate the argument list with each of the files named in the quickfix list
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()</p>
+
+<pre><code>let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+</code></pre>
+
+<p>  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+```</p>
+
+<p>Finally, here's an example of what needs to be run to do search &amp; replace in files:</p>
+
+<p><code>vim
+:vimgrep /CurrencyNumberHelper/ app/models/*.rb
+:Qargs
+:argdo %s/CurrencyNumberHelper/CurrencyHelper/g
+:argdo update
+</code></p>
+
+<h2>3. Edit already recorded macro</h2>
+
+<p>While recording a macro it's easy to do mistakes. And when that happens, it's easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>"ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
+
+<h2>4. Execute macro in multiple files</h2>
+
+<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let's load all models from a Rails app:
+:args app/models/*.rb Then we run the macro (that is recorded in register a) with:
+:argdo normal @aIn the end we save all the buffers with:
+:argdo update</p>
+
+<h2>5. Delete commands</h2>
+
+<p>We can run the following command in <strong>Insert mode</strong>, <strong>Vim Command Line mode</strong> or <strong>Shell Command Line</strong>:</p>
+
+<p><code>vim
+&lt;C-h&gt; " delete back one character (backspace)
+&lt;C-w&gt; " delete back one word
+&lt;C-u&gt; " delete back to start of line
+</code></p>
+
+<h2>6. Vi mode on command line</h2>
+
+<p>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
+
+<p><code>vim
+set -o vi
+</code></p>
+
+<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim's single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
+
+<p>To go back to emacs mode, we need to type:</p>
+
+<p><code>vim
+set -o emacs
+</code></p>
+
+<p>If you want to learn more about which Vim commands you can run in bash shell vi mode, here's <a href="http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt">cheatsheet</a> for that.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tips - Part I]]></title>
+    <link href="http://blog.siyelo.com/vim-tips-part-i"/>
+    <updated>2012-06-27T09:50:00+02:00</updated>
+    <id>http://blog.siyelo.com/vim-tips-part-i</id>
+    <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful. Most of the tips we've learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+
+<h3>1. Repeat the last Ex command</h3>
+
+<p>In Vim there are 3 command line mode prompts:</p>
+
+<ul>
+<li>Ex command prompt: <strong>:something</strong></li>
+<li>Search prompt: <strong>/something</strong></li>
+<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
+</ul>
+
+
+<p>Let say we run a spec from the Ex command prompt like this:</p>
+
+<p><code>vim
+:!rspec spec/models/code_spec.rb
+</code></p>
+
+<p>We can repeat the last Ex command by typing <strong>@:</strong> from normal mode.</p>
+
+<h3>2. Repeat the last substitute command</h3>
+
+<p>If substitute command is run, like for example:</p>
+
+<p><code>vim
+:s/current_user/user/g
+</code></p>
+
+<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It's handy having the following mappings in the vimrc file:</p>
+
+<p><code>vim
+" make &amp; trigger :&amp;&amp; so it preserves flags
+nnoremap &amp; :&amp;&amp;&lt;Enter&gt;
+xnoremap &amp; :&amp;&amp;&lt;Enter&gt;
+</code></p>
+
+<h3>3. Sort properties in CSS</h3>
+
+<p>Some developers order the CSS properties by grouping them by width-height, margin-padding, other use to order them in alphabetical order. If you belong to the second group, this tip will help not search for the place where to enter the new properties.</p>
+
+<p><code>vim
+h4 {
+  font-size: 11px;
+  margin: 15px;
+  background: red;
+}
+</code></p>
+
+<p>Just append them at the end, select the lines and in visual mode type <strong>:sort</strong>, or from normal mode select everything inside {} with <strong>vi{</strong> and then <strong>:sort</strong>.</p>
+
+<p><code>vim
+h4 {
+  background: red;
+  font-size: 11px;
+  margin: 15px;
+}
+</code></p>
+
+<h3>4. Select texts</h3>
+
+<p>Select the original yanked text with <strong>gv</strong> or select the last pasted text with <strong>gb</strong> (custom mapping). <strong>gb</strong> is really usesful when doing extract method refactoring with cut-paste text and then fix the identation with <strong>gb&lt;</strong>. For <strong>gb</strong> to work, the following mapping need to be defined in the vimrc file.</p>
+
+<p><code>vim
+" select last paste in visual mode
+nnoremap &lt;expr&gt; gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+</code></p>
+
+<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
+
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
+
+<h3>6. Run normal mode commands across a range</h3>
+
+<p>Say we want to append ; at the end of the following lines:</p>
+
+<p><code>vim
+var element = $(this)
+var tabName = element.data('tab')
+var report  = element.data('report')
+</code></p>
+
+<p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
+
+<p>Next week we're coming with few more tips to improve your vimfu.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
+    <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
+    <updated>2011-12-30T12:41:00+02:00</updated>
+    <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
+    <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
+
+<h3>Let's build...</h3>
+
+<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML articles from the <a href="http://www.timeslive.co.za/">Times Live</a> newspaper.</p>
+
+<p>For the job, we will use <strong>nokogiri</strong> gem and 2 ruby standard libraries: <strong>open-uri</strong> and <strong>rss/2.0</strong>.</p>
+
+<h3>RSS Parser</h3>
+
+<p>To find sources of articles for processing,  we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links. <strong>RssParser</strong> class does exactly that, you initialize it with a <a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
+
+<p>``` ruby
+class RssParser
+  attr_accessor :url</p>
+
+<p>  def initialize(url)</p>
+
+<pre><code>@url = url
+</code></pre>
+
+<p>  end</p>
+
+<p>  def article_urls</p>
+
+<pre><code>RSS::Parser.parse(open(url), false).items.map{|item| item.link }
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<h3>HTML Parser</h3>
+
+<p>Having article links, we need to parse page content and extract meaningful parts from these pages. <strong>HtmlParser</strong> class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles - <a href="http://getfirebug.com/">Firebug</a> and <a href="http://jquery.com/">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice <strong>clean_whitespace</strong> method which cleans the whitespace characters from the extracted text.</p>
+
+<p>``` ruby
+class HtmlParser
+  attr_accessor :url, :selector</p>
+
+<p>  def initialize(url, selector)</p>
+
+<pre><code>@url      = url
+@selector = selector
+</code></pre>
+
+<p>  end</p>
+
+<p>  def content</p>
+
+<pre><code>doc = Nokogiri::HTML(open(url))
+html_elements = doc.search(selector)
+html_elements.map { |element| clean_whitespace(element.text) }.join(' ')
+</code></pre>
+
+<p>  end</p>
+
+<p>  private</p>
+
+<pre><code>def clean_whitespace(text)
+  text.gsub(/\s{2,}|\t|\n/, ' ').strip
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Statistical Classifier</h3>
+
+<p>We introduce a class that is responsible for classification of articles. It is initialized with a hash that consists of categories (keys) and training data (values).</p>
+
+<p>Training data is used to discoverpotential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the <strong>train_data()</strong>method).</p>
+
+<p>In this example we are usingcontent ofWikipedia articles for <a href="http://en.wikipedia.org/wiki/Economy">economy</a>, <a href="http://en.wikipedia.org/wiki/Sport">sport</a> and <a href="http://en.wikipedia.org/wiki/Health">health</a> as training data for ourcategories.</p>
+
+<p>When classifying articles we want to compare only meaningful words and ignore other wordsthat do not add any value for a certain category. We (partially) solve this problem using <a href="https://gist.github.com/1534053">stop words</a>.</p>
+
+<p>Finally, the <strong>scores()</strong> method creates the scores for each category (per text) that we are testing.</p>
+
+<p>``` ruby
+class Classifier
+  attr_accessor :training_sets, :noise_words</p>
+
+<p>  def initialize(data)</p>
+
+<pre><code>@training_sets = {}
+filename = File.join(File.dirname(__FILE__), 'stop_words.txt')
+@noise_words = File.new(filename).readlines.map(&amp;:chomp)
+train_data(data)
+</code></pre>
+
+<p>  end</p>
+
+<p>  def scores(text)</p>
+
+<pre><code>words = text.downcase.scan(/[a-z]+/)
+
+scores = {}
+training_sets.each_pair do |category, word_weights|
+  scores[category] = score(word_weights, words)
+end
+
+scores
+</code></pre>
+
+<p>  end</p>
+
+<p>  def train_data(data)</p>
+
+<pre><code>data.each_pair do |category, text|
+  words = text.downcase.scan(/[a-z]+/)
+  word_weights = Hash.new(0)
+
+  words.each {|word| word_weights[word] += 1 unless noise_words.index(word)}
+
+  ratio = 1.0 / words.length
+  word_weights.keys.each {|key| word_weights[key] *= ratio}
+
+  training_sets[category] = word_weights
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  private</p>
+
+<pre><code>def score(word_weights, words)
+  score = words.inject(0) {|acc, word| acc + word_weights[word]}
+  1000.0 * score / words.size
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Lets have a go</h3>
+
+<p>Here is the script that runs the program:</p>
+
+<p>``` ruby
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
+require 'rss/2.0'</p>
+
+<h1>training data samples</h1>
+
+<p>economy = HtmlParser.new('http://en.wikipedia.org/wiki/Economy', '.mw-content-ltr')
+sport   = HtmlParser.new('http://en.wikipedia.org/wiki/Sport', '.mw-content-ltr')
+health  = HtmlParser.new('http://en.wikipedia.org/wiki/Health', '.mw-content-ltr')</p>
+
+<p>training_data = {
+  :economy => economy.content,
+  :sport => sport.content,
+  :health => health.content
+}</p>
+
+<p>classifier = Classifier.new(training_data)</p>
+
+<p>results = {
+  :economy => [],
+  :sport => [],
+  :health => []
+}</p>
+
+<p>rss_parser = RssParser.new('http://avusa.feedsportal.com/c/33051/f/534658/index.rss')
+rss_parser.article_urls.each do |article_url|
+  article = HtmlParser.new(article_url, '#article .area > h3, #article .area > p, #article > h3')
+  scores = classifier.scores(article.content)
+  category_name, score = scores.max_by{ |k,v| v }
+  # DEBUG info
+  # p "category: #{category_name}, score: #{score}, scores: #{scores}, url: #{article_url}"
+  results[category_name] &lt;&lt; article_url
+end</p>
+
+<p>p results
+```</p>
+
+<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like <a href="http://en.wikipedia.org/wiki/Bayesian_probability">Bayesian probability</a>  and <a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis">Latent Semantic Analysis</a>.</p>
+
+<p>If you are interested in amore indepth exampleof a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It's a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates 'clusters' of articles using statistical algorithms.</p>
+
+<p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
+]]></content>
+  </entry>
+  
+</feed>

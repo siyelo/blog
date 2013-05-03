@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Marketing | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/marketing/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-05-03T15:38:46+02:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Siyelo @ Sortfolio]]></title>
+    <link href="http://blog.siyelo.com/siyelo-sortfolio"/>
+    <updated>2010-02-19T18:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/siyelo-sortfolio</id>
+    <content type="html"><![CDATA[<p>Visit our new profile at Sortfolio.</p>
+
+<p><a href="http://sortfolio.com/company/6148-siyelo">http://sortfolio.com/company/6148-siyelo</a></p>
+]]></content>
+  </entry>
+  
+</feed>
