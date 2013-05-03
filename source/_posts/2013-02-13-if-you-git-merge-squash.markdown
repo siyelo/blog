@@ -25,12 +25,12 @@ To illustrate; The 'before' shot below reveals a beautifully squashed branch (vi
 
 *Before:*
 
-![Before merge](https://www.evernote.com/shard/s99/sh/b3beac3a-fede-47d8-a3ba-0cb8c125536c/fdbc298748425a7c67012efd5c2efb8b/res/9c8cbeec-10d1-4f22-a6eb-3a0e2bd37e94/skitch.png?resizeSmall&width=832)
+![Before merge](http://i.imgur.com/4xWxJTi.png)
 
 
 *After:*
 
-![After bad squash](https://www.evernote.com/shard/s99/sh/57d73554-f296-40c7-b792-e07ec4ef81f6/0ab50ac86495307c3f2e7cd2abd260c1/res/d61c83f4-a24b-4754-9f12-6f165656e2a0/skitch.png?resizeSmall&width=832)
+![After bad squash](http://i.imgur.com/V0E8eUM.png)
 
 Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!
 
