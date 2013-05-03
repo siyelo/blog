@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-05-03T16:59:32+02:00</updated>
+  <updated>2013-05-03T17:02:18+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -24,6 +24,9 @@
 <p><img style="float:left; clear:right;" src="images/posts/stu_pageant.jpg" alt="Stuart"/>Stuart Corbishley takes the stage in a charming, floral evening gown in autumn colours. He has eight years of professional development experience singing soulful backup, five of them sporting the latest Ruby fashions. Stuart is an established photographer and says he hasn&#8217;t been this nervous since that HTML competition he won when he twelve. His first act as the new face of Siyelo will be to end world hunger.</p>
 
 <br clear="left"/>
+
+
+<br/>
 
 
 <br/>
@@ -78,34 +81,6 @@ width="560" height="400" frameBorder="0"></iframe>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Focus Hocus Pocus]]></title>
-    <link href="http://blog.siyelo.com/focus-hocus-pocus"/>
-    <updated>2013-03-15T12:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/focus-hocus-pocus</id>
-    <author>Dalibor Nasevic</author>
-    <content type="html"><![CDATA[<p>Hello <strong>Siyelo</strong>!</p>
-
-<p>Today is my last day at work before heading into a new adventure. In order to skip all the resignation letter bullshit and because I received the enormous list of bugs you have been saving for me, I&#8217;ll try to be very short.</p>
-
-<p>After fixing all the bugs, I&#8217;ll need to clean and leave the company laptop I work on too. So, I&#8217;ll just try if the following command works well on Ubuntu 12.04. :) Random readers of this blog are not advised to try this at home!</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo rm -R /
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now that we are done with all of that, it&#8217;s time for some enjoyment.</p>
-
-<iframe width="420" height="315" src="http://www.youtube.com/embed/g4ouPGGLI6Q" frameborder="0" allowfullscreen></iframe>
-
-
-<p>All the best in future!</p>
-
-<p>/<strong>dalibor</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Your git squash-merge is bad]]></title>
     <link href="http://blog.siyelo.com/if-you-git-merge-squash"/>
     <updated>2013-02-13T19:30:00+02:00</updated>
@@ -129,11 +104,11 @@ width="560" height="400" frameBorder="0"></iframe>
 
 <p><em>Before:</em></p>
 
-<p><img src="https://www.evernote.com/shard/s99/sh/b3beac3a-fede-47d8-a3ba-0cb8c125536c/fdbc298748425a7c67012efd5c2efb8b/res/9c8cbeec-10d1-4f22-a6eb-3a0e2bd37e94/skitch.png?resizeSmall&amp;width=832" alt="Before merge" /></p>
+<p><img src="http://i.imgur.com/4xWxJTi.png" alt="Before merge" /></p>
 
 <p><em>After:</em></p>
 
-<p><img src="https://www.evernote.com/shard/s99/sh/57d73554-f296-40c7-b792-e07ec4ef81f6/0ab50ac86495307c3f2e7cd2abd260c1/res/d61c83f4-a24b-4754-9f12-6f165656e2a0/skitch.png?resizeSmall&amp;width=832" alt="After bad squash" /></p>
+<p><img src="http://i.imgur.com/V0E8eUM.png" alt="After bad squash" /></p>
 
 <p>Oh well, at least The Glory Hunter will show up in the git-blame if anything goes awry. Merge-squash away!</p>
 ]]></content>
@@ -763,6 +738,26 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
 
 <p>Have a great weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
+    <updated>2012-10-05T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-3</id>
+    <author>Nicole Dirks</author>
+    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
+
+<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
+
+<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
+
+<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
+
+<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
+
+<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
 ]]></content>
   </entry>
   

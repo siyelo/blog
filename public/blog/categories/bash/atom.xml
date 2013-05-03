@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-05-03T16:59:32+02:00</updated>
+  <updated>2013-05-03T17:02:18+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -95,69 +95,6 @@ alias mbp='mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile'
 <p>The speedy way to create aliases that speed up your development.</p>
 
 <p>And remember, keep it DRY.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Git? How to know what branch you're on, and if its dirty.]]></title>
-    <link href="http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty"/>
-    <updated>2009-12-17T11:06:32+02:00</updated>
-    <id>http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty</id>
-    <content type="html"><![CDATA[<p>Do you lie awake at night dreaming of a way to save your fingers from typing 'git status' too often? Ever wish you could just have an asterisk (<code>*</code>) on the command prompt to tell you that the working directory is dirty? No more insomnia for you.</p>
-
-<p><a href="http://skitch.com/glennr/ncyku/terminal-bash-108x34"><img src="http://img.skitch.com/20091217-efbap1ndi2ttnyf88hkg4fstxg.preview.jpg" alt="Terminal 2014 bash 2014 108ճ4" /></a></p>
-
-<p>Paste this code into your .bash_profile and off you go.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;Bash prompt showing current git branch &amp;amp; marking <span class="k">if </span>dirty:&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;Based on http://henrik.nyh.se/2008/12/git-dirty-prompt&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;function parse_git_dirty <span class="o">{</span>
-</span><span class='line'>  <span class="o">[[</span> <span class="k">$(</span>git status 2&gt; /dev/null | tail -n1<span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;nothing to commit (working directory clean)&quot;</span> <span class="o">]]</span> &amp;amp;&amp;amp; <span class="nb">echo</span> <span class="s2">&quot;*&quot;</span>
-</span><span class='line'><span class="o">}</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;function parse_git_branch <span class="o">{</span>
-</span><span class='line'>  git branch --no-color 2&gt; /dev/null | sed -e <span class="s1">&#39;/&lt;sup&gt;[&lt;sup&gt;*]/d&#39;</span>&lt;/sup&gt;&lt;/sup&gt; -e <span class="s2">&quot;s/&lt;em&gt; (.&lt;/em&gt;)/[\1$(parse_git_dirty)]/&quot;</span>
-</span><span class='line'><span class="o">}</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;export <span class="nv">PS1</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;$PS1&quot;</span> | sed <span class="s1">&#39;s/\w/\w\[\033[35m\]$(parse_git_branch)\[\033[0m\]/g&#39;</span><span class="k">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aliases for common Heroku commands]]></title>
-    <link href="http://blog.siyelo.com/aliases-for-common-heroku-commands"/>
-    <updated>2009-11-24T15:25:12+02:00</updated>
-    <id>http://blog.siyelo.com/aliases-for-common-heroku-commands</id>
-    <content type="html"><![CDATA[<p>Some handy bash aliases to speed up your Heroku deploys:</p>
-
-<p><code>bash
-alias gphm='git push heroku master'
-alias hmig='heroku rake db:migrate'
-alias hlog='heroku logs'
-alias hopen='heroku open'
-</code></p>
-
-<p><img src="/images/old/2009/11/pastedgraphic.png" alt="Pastedgraphic" /></p>
 ]]></content>
   </entry>
   

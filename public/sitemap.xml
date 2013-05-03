@@ -1,72 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>
-            http://blog.siyelo.com/announcing-fuselage-get-your-rails-project-off-to-a-flying-start
-        </loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/agile-contracts-working-group</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/bert-the-lizard-resident-code-critic-at-siyelo</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/get-those-cheeky-bash-variables-out-of-there</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://blog.siyelo.com/heroku-the-fastest-way-to-getting-a-rails-app-into-production
-        </loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/heroku-the-5mb-free-plan-is-it-enough</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/textmate-tip-align-statments</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/great-gitignore-files-for-your-next-rails-project</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/make-textmate-your-editor-of-choice</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/installing-imagemagick-on-osx-leopard</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/aliases-for-common-heroku-commands</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/handy-git-aliases-and-config-directives</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/browser-market-share-applying-the-8020-rule</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/fix-for-annoying-bug-in-emailspec</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://blog.siyelo.com/using-git-how-to-know-what-branch-youre-on-and-if-its-dirty
-        </loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
         <loc>http://blog.siyelo.com/design-chunking-with-scrum</loc>
         <lastmod>2013-05-03T11:06:51+02:00</lastmod>
     </url>
@@ -372,11 +306,7 @@
     </url>
     <url>
         <loc>http://blog.siyelo.com/if-you-git-merge-squash</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/focus-hocus-pocus</loc>
-        <lastmod>2013-05-03T11:06:51+02:00</lastmod>
+        <lastmod>2013-05-03T17:01:53+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/abstracting-a-service</loc>
@@ -384,15 +314,15 @@
     </url>
     <url>
         <loc>http://blog.siyelo.com/introducing_stu_and_nic</loc>
-        <lastmod>2013-05-03T16:59:27+02:00</lastmod>
+        <lastmod>2013-05-03T16:59:55+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/blog/archives/</loc>
-        <lastmod>2013-05-03T16:59:27+02:00</lastmod>
+        <lastmod>2013-05-03T17:01:53+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/</loc>
-        <lastmod>2013-05-03T16:59:27+02:00</lastmod>
+        <lastmod>2013-05-03T17:01:53+02:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/rss.xml</loc>

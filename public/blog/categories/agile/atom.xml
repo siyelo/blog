@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Agile | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-05-03T16:59:32+02:00</updated>
+  <updated>2013-05-03T17:02:18+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -157,19 +157,6 @@ screen -r # re-attach screen window
 
 
 <p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design" title="Are Agile Projects Doomed to Half-Baked Design?" target="_blank">Are Agile Projects Doomed to Half-Baked Design?</a> </strong> from <strong><a href="http://www.slideshare.net/theinfonaut" target="_blank">theinfonaut</a></strong> </div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Agile Contracts - Working group]]></title>
-    <link href="http://blog.siyelo.com/agile-contracts-working-group"/>
-    <updated>2009-11-04T11:09:04+02:00</updated>
-    <id>http://blog.siyelo.com/agile-contracts-working-group</id>
-    <content type="html"><![CDATA[<p><a href="http://www.coactivate.org/projects/agile-contracts/">The Agile Contracts working group</a> has an excellent sample (<a href="http://www.coactivate.org/projects/agile-contracts/sample-fixed-price-agile-contract">fixed-price</a>) contract for a project delivery using SCRUM.</p>
-
-<p>From memory it was posted by Jeff Sutherland and is from an actual project, so its fairly comprehensive.</p>
-
-<p>(Note these are only samples and you should always seek legal advice before using 3rd-party contracts.)</p>
 ]]></content>
   </entry>
   
