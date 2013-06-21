@@ -5,11 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Introducing... - Siyelo</title>
+  <title>Git Glone - Siyelo</title>
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="The Siyelo entourage of geeks has grown in the last couple of months, and the newcomers would like to say hi. They&#8217;ve put a lot of effort into &hellip;">
+  <meta name="description" content="I often mis-type commands. 1
+2
+3
+4
+5
+git[master*] % git glone git@github.com:siyelo/toadhopper.git
+git: 'glone' is not a git command. See 'git --help &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.siyelo.com/introducing_stu_and_nic">
+  <link rel="canonical" href="http://blog.siyelo.com/git-glone">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -111,13 +117,13 @@
 
 
 
-<section><time class="timestamp" datetime="2013-05-03T15:37:00+02:00" pubdate data-updated="true">
-    <span class='day'> 03</span>
-    <span class='month'> May</span>
+<section><time class="timestamp" datetime="2013-06-21T09:56:00+02:00" pubdate data-updated="true">
+    <span class='day'> 21</span>
+    <span class='month'> Jun</span>
     <span class='year'> 2013</span>
   </time></section>
     
-      <h1 class="entry-title">Introducing...</h1>
+      <h1 class="entry-title">Git Glone</h1>
     
     <!--  -->
     <!--   <p class="meta"> -->
@@ -129,22 +135,43 @@
   </header>
 
 
-<div class="entry-content"><p>The <a href="http://siyelo.com">Siyelo</a> entourage of geeks has grown in the last couple of months, and the newcomers would like to say hi. They&#8217;ve put a lot of effort into this pageant, so do us a favor and humor them with a smile.</p>
+<div class="entry-content"><p>I often mis-type commands.</p>
 
-<p><img style="float:left; clear:right;" src="images/posts/stu_pageant.jpg" alt="Stuart"/>Stuart Corbishley takes the stage in a charming, floral evening gown in autumn colours. He has eight years of professional development experience singing soulful backup, five of them sporting the latest Ruby fashions. Stuart is an established photographer and says he hasn&#8217;t been this nervous since that HTML competition he won when he twelve. His first act as the new face of Siyelo will be to end world hunger.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git[master*] % git glone git@github.com:siyelo/toadhopper.git
+</span><span class='line'>git: 'glone' is not a git command. See 'git --help'.
+</span><span class='line'>
+</span><span class='line'>Did you mean this?
+</span><span class='line'>clone</span></code></pre></td></tr></table></div></figure>
 
-<br clear="left"/>
+
+<p>Yes I did git, yes I did.</p>
+
+<p>@sheldonh pointed out to me that if you add this to your ~/.gitconfig</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[help]
+</span><span class='line'>  autocorrect = 1</span></code></pre></td></tr></table></div></figure>
 
 
-<br/>
+<p>Then next time you stuff up a git command&#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git[master*] % git glone git@github.com:siyelo/toadhopper.git
+</span><span class='line'>WARNING: You called a Git command named 'glone', which does not exist.
+</span><span class='line'>Continuing under the assumption that you meant 'clone'
+</span><span class='line'>in 0.1 seconds automatically...</span></code></pre></td></tr></table></div></figure>
 
 
-<br/>
 
-
-<p><img style="float:right; clear:left;" src="images/posts/nic_pageant.jpg" alt="Stuart"/>A spotlight tracks Nic Young onto stage, scattering disco reflections off the sequins covering his otherwise classy cocktail dress. Three years of business analysis follow in tow, and he has seven years of development experience dancing backup. Six of them are busting Ruby moves, and one shameful stand-in rocks php like it&#8217;s &#8216;97. Nic is a published author of short fiction and appreciates a good playlist. If crowned Miss Siyelo he&#8217;d put a jumping castle in every home.</p>
-
-<p>Thank you and good night.</p>
 </div>
 
 
@@ -167,15 +194,15 @@
 
 
 
-<section><time class="timestamp" datetime="2013-05-03T15:37:00+02:00" pubdate data-updated="true">
-    <span class='day'> 03</span>
-    <span class='month'> May</span>
+<section><time class="timestamp" datetime="2013-06-21T09:56:00+02:00" pubdate data-updated="true">
+    <span class='day'> 21</span>
+    <span class='month'> Jun</span>
     <span class='year'> 2013</span>
   </time></section>
           
   
 
-<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Nic Young</span></span></p>
+<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span></p>
 
           <span> in </span>
           
@@ -185,7 +212,7 @@
           
             <div class="sharing right">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/introducing_stu_and_nic" data-via="siyelo" data-counturl="http://blog.siyelo.com/introducing_stu_and_nic" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/git-glone" data-via="siyelo" data-counturl="http://blog.siyelo.com/git-glone" >Tweet</a>
   
   
   
@@ -196,10 +223,8 @@
 
         <p class="meta pagination">
           
-            <a class="basic-alignment left" href="/abstracting-a-service" title="Previous Post: Abstracting a Service">Previous</a>
+            <a class="basic-alignment left" href="/introducing_stu_and_nic" title="Previous Post: Introducing...">Previous</a>
           
-          
-            <a class="basic-alignment right" href="/git-glone" title="Next Post: Git Glone">Next</a>
           
         </p>
 
@@ -367,8 +392,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.siyelo.com/introducing_stu_and_nic';
-        var disqus_url = 'http://blog.siyelo.com/introducing_stu_and_nic';
+        var disqus_identifier = 'http://blog.siyelo.com/git-glone';
+        var disqus_url = 'http://blog.siyelo.com/git-glone';
         var disqus_script = 'embed.js';
       
     (function () {

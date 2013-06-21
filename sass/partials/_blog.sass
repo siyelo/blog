@@ -1,279 +1,282 @@
 article
-	padding-top: 1em
-	a
-		@extend .force-wrap
-	header
-		position: relative
-		margin-bottom: 1em
-		padding-left: 11%
-		h1
-			margin: 0
-			a
-				text-decoration: none
-				&:hover
-					text-decoration: underline
-		p
-			font-size: .9em
-			// color: $text-color-light
-			margin: 0
-			&.meta
-				@extend .sans
-				text-transform: uppercase
-				position: absolute
-				top: 0
-		@media only screen and (min-width: 768px)
-			margin-bottom: 1.5em
-			padding-bottom: 1em
-			// background: $img-border bottom left repeat-x
-	h2
-		padding-top: 0.8em
-		// background: $img-border top left repeat-x
-	.entry-content & h2:first-child, header + h2
-		padding-top: 0
-	h2:first-child, header + h2
-		// background: none
-	.feature
-		padding-top: .5em
-		margin-bottom: 1em
-		padding-bottom: 1em
-		// background: $img-border bottom left repeat-x
-		font-size: 2.0em
-		font-style: italic
-		line-height: 1.3em
-	img, video, .flash-video
-		@extend .flex-content
-		@extend .basic-alignment
-		+shadow-box
-	video, .flash-video
-		margin: 0 auto 1.5em
-	video
-		display: block
-		width: 100%
-	.flash-video
-		> div
-			position: relative
-			display: block
-			padding-bottom: 56.25%
-			padding-top: 1px
-			height: 0
-			overflow: hidden
-			iframe, object, embed
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-	> footer
-		padding-bottom: 2.5em
-		margin-top: 2em
-		@extend .sans
-		p.meta
-			margin-bottom: .8em
-			font-size: .85em
-			clear: both
-			overflow: hidden
-		.byline + time:before, time + time:before, .comments:before, .byline ~ .categories:before
-			@extend .separator
+  padding-top: 1em
+  a
+    @extend .force-wrap
+  header
+    position: relative
+    margin-bottom: 1em
+    padding-left: 11%
+    h1
+      margin: 0
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+    p
+      font-size: .9em
+      // color: $text-color-light
+      margin: 0
+      &.meta
+        @extend .sans
+        text-transform: uppercase
+        position: absolute
+        top: 0
+    @media only screen and (min-width: 768px)
+      margin-bottom: 1.5em
+      padding-bottom: 1em
+      // background: $img-border bottom left repeat-x
+  h2
+    padding-top: 0.8em
+    // background: $img-border top left repeat-x
+  .entry-content & h2:first-child, header + h2
+    padding-top: 0
+  h2:first-child, header + h2
+    // background: none
+  .feature
+    padding-top: .5em
+    margin-bottom: 1em
+    padding-bottom: 1em
+    // background: $img-border bottom left repeat-x
+    font-size: 2.0em
+    font-style: italic
+    line-height: 1.3em
+  img, video, .flash-video
+    @extend .flex-content
+    @extend .basic-alignment
+    +shadow-box
+  video, .flash-video
+    margin: 0 auto 1.5em
+  video
+    display: block
+    width: 100%
+  .flash-video
+    > div
+      position: relative
+      display: block
+      padding-bottom: 56.25%
+      padding-top: 1px
+      height: 0
+      overflow: hidden
+      iframe, object, embed
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+  > footer
+    padding-bottom: 2.5em
+    margin-top: 2em
+    @extend .sans
+    p.meta
+      margin-bottom: .8em
+      font-size: .85em
+      clear: both
+      overflow: hidden
+    .byline + time:before, time + time:before, .comments:before, .byline ~ .categories:before
+      @extend .separator
 
 article + article
-	.blog-index &
-		// background: $img-border top left repeat-x
+  .blog-index &
+    // background: $img-border top left repeat-x
 
 #content .blog-index
-	padding:
-		top: 0
-		bottom: 0
-	article
-		padding-top: 2em
-	article header
-		// background: none
-		padding-bottom: 0
-	article h1
-		font-size: 2.2em
-		a
-			// color: inherit
-			&:hover
-				// color: $link-color-hover
-	a[rel=full-article]
-		// background: darken($main-bg, 5)
-		display: inline-block
-		padding: .4em .8em
-		margin-right: .5em
-		text-decoration: none
-		// color: mix($text-color, $text-color-light)
-		@extend .serif
-		// +transition(background-color 0.5s)
-		&:hover
-			// background: $link-color-hover
-			text-shadow: none
-			// color: $main-bg
-	footer
-		@extend .sans
-		margin-top: 1em
+  padding:
+    top: 0
+    bottom: 0
+  article
+    padding-top: 2em
+  article header
+    // background: none
+    padding-bottom: 0
+  article h1
+    font-size: 2.2em
+    a
+      // color: inherit
+      &:hover
+        // color: $link-color-hover
+  a[rel=full-article]
+    // background: darken($main-bg, 5)
+    display: inline-block
+    padding: .4em .8em
+    margin-right: .5em
+    text-decoration: none
+    // color: mix($text-color, $text-color-light)
+    @extend .serif
+    // +transition(background-color 0.5s)
+    &:hover
+      // background: $link-color-hover
+      text-shadow: none
+      // color: $main-bg
+  footer
+    @extend .sans
+    margin-top: 1em
 
 .separator
-	content: "\2022 "
-	padding: 0 .4em 0 .2em
-	display: inline-block
+  content: "\2022 "
+  padding: 0 .4em 0 .2em
+  display: inline-block
 
 #content div.pagination
-	text-align: center
-	font-size: .95em
-	position: relative
-	// background: $img-border top left repeat-x
-	padding:
-		top: 1.5em
-		bottom: 1.5em
-	a
-		text-decoration: none
-		// color: $text-color-light
-		&.prev
-			position: absolute
-			left: 0
-		&.next
-			position: absolute
-			right: 0
-		&:hover
-			// color: $link-color-hover
-		&[href*=archive]
-			&:before, &:after
-				content: '\2014'
-				padding: 0 .3em
+  text-align: center
+  font-size: .95em
+  position: relative
+  // background: $img-border top left repeat-x
+  padding:
+    top: 1.5em
+    bottom: 1.5em
+  a
+    text-decoration: none
+    // color: $text-color-light
+    &.prev
+      position: absolute
+      left: 0
+    &.next
+      position: absolute
+      right: 0
+    &:hover
+      // color: $link-color-hover
+    &[href*=archive]
+      &:before, &:after
+        content: '\2014'
+        padding: 0 .3em
 
 //
 // Octopress overrides
 //
 
 aside.sidebar
-	padding: 0
+  padding: 0
 
 #blog #articles
-	ul, ol
-		color: #666
-		font-size: 14px
-		line-height: 1.4
-		margin-bottom: 1.2em
-		padding-left: 30px
-	ol
-		list-style: decimal
-	ul
-		list-style: disc
-	li
-		margin-bottom: 3px
-	.comments
-		padding-left: 11%
+  ul, ol
+    color: #666
+    font-size: 14px
+    line-height: 1.4
+    margin-bottom: 1.2em
+    padding-left: 30px
+  ol
+    list-style: decimal
+  ul
+    list-style: disc
+  li
+    margin-bottom: 3px
+  .comments
+    padding-left: 11%
+
+pre
+  padding: 999px
 
 .pre-code span, html .gist .gist-file .gist-syntax .gist-highlight pre span, .highlight code span
-	line-height: 1.57
+  line-height: 1.57
 
 #gh_repos
-	a
-		display: inline-block
-		margin-bottom: 5px
-	li > a
-		font-weight: bold
+  a
+    display: inline-block
+    margin-bottom: 5px
+  li > a
+    font-weight: bold
 
 .sidebar #tweets
-	padding-right: 2em
+  padding-right: 2em
 
-	a[href*=status]:first-child
-		font-size: 14px
-		padding: 0 0 .1em 1em
-		right: -1.3em
-		text-shadow: #fff 0 1px
-		span
-			font-size: 1.4em
-		text-decoration: none
-		&:hover
-			color: $sidebar-link-color-subdued-hover
-			text-decoration: none
+  a[href*=status]:first-child
+    font-size: 14px
+    padding: 0 0 .1em 1em
+    right: -1.3em
+    text-shadow: #fff 0 1px
+    span
+      font-size: 1.4em
+    text-decoration: none
+    &:hover
+      color: $sidebar-link-color-subdued-hover
+      text-decoration: none
 
 .twitter-follow-button
-	margin-top: 5px
+  margin-top: 5px
 
 #blog
-	> footer
-		background: url("../images/bg.png")
-		+border-radius(0)
-		p
-			color: #ccc
-			+text-shadow(#111 0 1px 0)
+  > footer
+    background: url("../images/bg.png")
+    +border-radius(0)
+    p
+      color: #ccc
+      +text-shadow(#111 0 1px 0)
 
-	.pagination
-		border-top: 1px solid #e9e9e9
-		float: left
-		padding-top: 15px
-		width: 100%
-		+pie-clearfix
-		a
-			background-color: #9DA7B0
-			color: #fff
-			display: block
-			float: left
-			font-size: 14px
-			margin-right: 5px
-			padding: 8px 15px
-			text-decoration: none
-			+text-shadow(rgba(0, 0, 0, 0.15) 0 1px 1px)
-			&.prev, &.basic-alignment.left
-				background: url("../images/arrow-left.png") no-repeat 10% 50% #9DA7B0
-				padding-left: 32px
-			&.next, &.basic-alignment.right
-				background: url("../images/arrow-right.png") no-repeat 90% 50% #9DA7B0
-				padding-right: 32px
-			&:hover, &:focus
-				background-color: #193045
-		.right
-			float: right
+  .pagination
+    border-top: 1px solid #e9e9e9
+    float: left
+    padding-top: 15px
+    width: 100%
+    +pie-clearfix
+    a
+      background-color: #9DA7B0
+      color: #fff
+      display: block
+      float: left
+      font-size: 14px
+      margin-right: 5px
+      padding: 8px 15px
+      text-decoration: none
+      +text-shadow(rgba(0, 0, 0, 0.15) 0 1px 1px)
+      &.prev, &.basic-alignment.left
+        background: url("../images/arrow-left.png") no-repeat 10% 50% #9DA7B0
+        padding-left: 32px
+      &.next, &.basic-alignment.right
+        background: url("../images/arrow-right.png") no-repeat 90% 50% #9DA7B0
+        padding-right: 32px
+      &:hover, &:focus
+        background-color: #193045
+    .right
+      float: right
 
 article footer .meta-data
-	font-size: 14px
-	font-style: italic
-	padding: 10px 0
-	> *
-		color: #888
-		display: inline
-	.categories
-		margin-left: 7px
+  font-size: 14px
+  font-style: italic
+  padding: 10px 0
+  > *
+    color: #888
+    display: inline
+  .categories
+    margin-left: 7px
 
 #blog .blog-archives
-	article
-		margin: 0 0 13px 0
-		+pie-clearfix
-		article
-			border-top: 1px solid #e9e9e9
-			padding: 10px 0 0 2%
-		header
-			padding-left: 0
-	article[role=article] > header
-		padding-bottom: 0
+  article
+    margin: 0 0 13px 0
+    +pie-clearfix
+    article
+      border-top: 1px solid #e9e9e9
+      padding: 10px 0 0 2%
+    header
+      padding-left: 0
+  article[role=article] > header
+    padding-bottom: 0
 
-	&#articles article
-		footer
-			display: inline
-			float: none
-			font-size: 12px
-			padding-left: 0 !important
-			width: auto
-		time
-			background: #fff
-			display: inline-block
-			margin-right: 4px
-			padding: 2px 6px
-			+border-radius(2px)
-			+box-shadow(rgba(0, 0, 0, 0.2) 0 0 3px inset)
-	h1
-		margin-bottom: 0
-	h2
-		font-size: 15px
-		margin: 2em 0 7px
-		padding-top: 5px
-		width: 100%
-	h3
-		background: none
-		border-bottom: none
-		font-size: 20px
-		margin: 0 0 3px
-		padding: 0
-		text-align: left
-		text-transform: none
+  &#articles article
+    footer
+      display: inline
+      float: none
+      font-size: 12px
+      padding-left: 0 !important
+      width: auto
+    time
+      background: #fff
+      display: inline-block
+      margin-right: 4px
+      padding: 2px 6px
+      +border-radius(2px)
+      +box-shadow(rgba(0, 0, 0, 0.2) 0 0 3px inset)
+  h1
+    margin-bottom: 0
+  h2
+    font-size: 15px
+    margin: 2em 0 7px
+    padding-top: 5px
+    width: 100%
+  h3
+    background: none
+    border-bottom: none
+    font-size: 20px
+    margin: 0 0 3px
+    padding: 0
+    text-align: left
+    text-transform: none

@@ -4,7 +4,7 @@
   <title><![CDATA[Siyelo]]></title>
   <link href="http://blog.siyelo.com/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-05-03T17:02:18+02:00</updated>
+  <updated>2013-06-21T10:31:59+02:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Git Glone]]></title>
+    <link href="http://blog.siyelo.com/git-glone"/>
+    <updated>2013-06-21T09:56:00+02:00</updated>
+    <id>http://blog.siyelo.com/git-glone</id>
+    <author>Glenn Roberts</author>
+    <content type="html"><![CDATA[<p>I often mis-type commands.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git[master*] % git glone git@github.com:siyelo/toadhopper.git
+</span><span class='line'>git: 'glone' is not a git command. See 'git --help'.
+</span><span class='line'>
+</span><span class='line'>Did you mean this?
+</span><span class='line'>clone</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yes I did git, yes I did.</p>
+
+<p>@sheldonh pointed out to me that if you add this to your ~/.gitconfig</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[help]
+</span><span class='line'>  autocorrect = 1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then next time you stuff up a git command&#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git[master*] % git glone git@github.com:siyelo/toadhopper.git
+</span><span class='line'>WARNING: You called a Git command named 'glone', which does not exist.
+</span><span class='line'>Continuing under the assumption that you meant 'clone'
+</span><span class='line'>in 0.1 seconds automatically...</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introducing...]]></title>
@@ -738,26 +784,6 @@ model you&#8217;re looking at, you&#8217;re probably using the
 <p>And to end off, Peter shared <a href="http://www.futilitycloset.com/2012/09/25/the-copernicus-method/">&#8220;The Copernicus Method&#8221;</a>, which is a strangely accurate way of estimating the longevity of all sorts of things.</p>
 
 <p>Have a great weekend!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges]]></title>
-    <link href="http://blog.siyelo.com/weekly-roundup-3"/>
-    <updated>2012-10-05T18:00:00+02:00</updated>
-    <id>http://blog.siyelo.com/weekly-roundup-3</id>
-    <author>Nicole Dirks</author>
-    <content type="html"><![CDATA[<p>We bring you the third installment of our ever engaging Dev chat session shares.</p>
-
-<p>Dalibor recommended that we all read <a href="http://pragprog.com/book/hklean/lean-from-the-trenches">&#8216;Lean from the Trenches: Managing Large-Scale Projects with Kanban&#8217;</a>  by Henrik Kniberg.  It&#8217;s a great look at a practical implementation of Kanban.  We&#8217;ll definitely be trying this out with future projects.</p>
-
-<p>Peter was all about <a href="http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds">Schmaless SQL</a>  this week. Will Leinweber gave a great presentation on the topic at this year&#8217;s MountainWest RubyConf.</p>
-
-<p>Codegram&#8217;s Lightning talk on <a href="http://talks.codegram.com/object-oriented-nirvana#/intro">Object Orientated Nirvana</a>  got Sachin thinking about ways to &#8216;force&#8217; yourself into achieving a better OO design. You might not agree with all the rules but it&#8217;s a good catalyst for discussion.</p>
-
-<p>Glenn&#8217;s been trying to get <a href="http://www.rubyenterpriseedition.com/">REE-1.8.7</a> working on Mountain Lion and he found this <a href="http://coderwall.com/p/fywjrw">guide</a> particularly helpful.</p>
-
-<p>Finally, we were debating that all important, utterly-mystifying question&#8230; &#8221;<a href="http://www.mentalfloss.com/blogs/archives/142550">Did Blowing into Nintendo Cartridges Really Help</a>?&#8221;. What do you think?Have a great weekend!</p>
 ]]></content>
   </entry>
   
