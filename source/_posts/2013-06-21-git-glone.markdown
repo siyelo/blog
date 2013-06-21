@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Git Glone"
+date: 2013-06-21 09:56
+comments: true
+categories:
+author: Glenn Roberts
+---
+
+# Git Glone
+
+I often mis-type commands.
+
+
+    git[master*] % git glone git@github.com:siyelo/toadhopper.git
+    git: 'glone' is not a git command. See 'git --help'.
+
+    Did you mean this?
+    clone
+
+Yes I did git, yes I did.
+
+@sheldonh pointed out to me that if you add this to your ~/.gitconfig
+
+    [help]
+      autocorrect = 1
+
+Then next time you stuff up a git command...
+
+    git[master*] % git glone git@github.com:siyelo/toadhopper.git
+    WARNING: You called a Git command named 'glone', which does not exist.
+    Continuing under the assumption that you meant 'clone'
+    in 0.1 seconds automatically...
+
