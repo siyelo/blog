@@ -5,9 +5,12 @@ date: 2010-08-25 12:24:00
 comments: true
 categories: Design
 author: Dime Pashoski
+headline: By now you've probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics.
+image: /images/artwork/notebook.jpg
+avatar: /images/avatars/dime.jpg
 ---
 
-By now you've probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics. Why use `<div id="header">` when you can use just `<header>?` This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.
+Why use `<div id="header">` when you can use just `<header>?` This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.
 
 But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won't be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it's a process that will take a while. So, what do we do about jumping on the HTML5 train?
 

@@ -5,10 +5,10 @@ date: 2010-10-07 07:09:17
 comments: true
 categories: Rails Conferences
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/airplane.jpg
+headline: Check out the iphone pic of everyone on their iphones at the dinner table. Very meta.
 ---
-
-Check out the iphone pic of everyone on their iphones at the dinner table. Very meta.
-
 [![Img_3914](/images/old/2010/10/img_3914-scaled-1000.jpg) ](/images/old/2010/10/img_3914-scaled-1000.jpg)
 [![Img_3917](/images/old/2010/10/img_3917-scaled-1000.jpg) ](/images/old/2010/10/img_3917-scaled-1000.jpg)
 [![Img_3919](/images/old/2010/10/img_3919-scaled-1000.jpg) ](/images/old/2010/10/img_3919-scaled-1000.jpg)

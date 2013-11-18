@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T17:04:11+01:00</updated>
+  <updated>2013-11-18T20:52:14+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.siyelo.com/solving-html5-compatibility-issues"/>
     <updated>2010-08-25T14:24:00+02:00</updated>
     <id>http://blog.siyelo.com/solving-html5-compatibility-issues</id>
-    <content type="html"><![CDATA[<p>By now you've probably encountered the big wave of info that comes out regarding HTML5 and the improvements that it will bring. One of those are the awesome brand new tags, that with a proper usage can cure DIVitis and improve the overall semantics. Why use <code>&lt;div id="header"&gt;</code> when you can use just <code>&lt;header&gt;?</code> This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.</p>
+    <content type="html"><![CDATA[<p>Why use <code>&lt;div id="header"&gt;</code> when you can use just <code>&lt;header&gt;?</code> This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.</p>
 
 <p>But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won't be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it's a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
 
@@ -54,9 +54,7 @@
     <link href="http://blog.siyelo.com/web-apps-to-outlast-mobilenative-apps"/>
     <updated>2010-06-25T15:29:08+02:00</updated>
     <id>http://blog.siyelo.com/web-apps-to-outlast-mobilenative-apps</id>
-    <content type="html"><![CDATA[<p>Tourrey Rice of SitePen and dojo fame, presents an excellent case for the longevity of web applications, especially with the introduction of HTML5 / CSS3 and mobile browsers.</p>
-
-<p><img src="/images/old/2010/06/pastedgraphic-7.png" alt="Pastedgraphic-7" /></p>
+    <content type="html"><![CDATA[<p><img src="/images/old/2010/06/pastedgraphic-7.png" alt="Pastedgraphic-7" /></p>
 
 <p>Full presentation: <a href="http://www.infoq.com/presentations/Present-Future-Web-App-Design">http://www.infoq.com/presentations/Present-Future-Web-App-Design</a></p>
 ]]></content>

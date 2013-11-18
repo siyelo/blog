@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/web/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T17:04:11+01:00</updated>
+  <updated>2013-11-18T20:52:14+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.siyelo.com/web-apps-to-outlast-mobilenative-apps"/>
     <updated>2010-06-25T15:29:08+02:00</updated>
     <id>http://blog.siyelo.com/web-apps-to-outlast-mobilenative-apps</id>
-    <content type="html"><![CDATA[<p>Tourrey Rice of SitePen and dojo fame, presents an excellent case for the longevity of web applications, especially with the introduction of HTML5 / CSS3 and mobile browsers.</p>
-
-<p><img src="/images/old/2010/06/pastedgraphic-7.png" alt="Pastedgraphic-7" /></p>
+    <content type="html"><![CDATA[<p><img src="/images/old/2010/06/pastedgraphic-7.png" alt="Pastedgraphic-7" /></p>
 
 <p>Full presentation: <a href="http://www.infoq.com/presentations/Present-Future-Web-App-Design">http://www.infoq.com/presentations/Present-Future-Web-App-Design</a></p>
 ]]></content>

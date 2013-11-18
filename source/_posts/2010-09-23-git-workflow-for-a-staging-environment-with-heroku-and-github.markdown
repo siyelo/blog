@@ -5,6 +5,9 @@ date: 2010-09-23 10:39:00
 comments: true
 categories: Bash
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/branches.jpg
+headline: Very interesting blog post regarding your git workflow
 ---
 
 Are you using

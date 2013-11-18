@@ -5,10 +5,10 @@ date: 2010-08-25 15:05:00
 comments: true
 categories: Rails
 author: Glenn Roberts
+headline: If you're using CanCan and came across an error like this...
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/vim.jpg
 ---
-
-If you're using CanCan and came across an error like this;
-
 ``` bash
 The :class option has been renamed to :resource for specifying the class in CanCan.
 ```
