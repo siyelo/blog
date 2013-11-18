@@ -4,9 +4,11 @@ title: "Rails security; Being the best newbie & Redesigning Google"
 date: 2013-02-04 11:11
 comments: true
 categories: weekly roundup
+author: Nicole Dirks
+avatar: /images/avatar.jpg
+image: /images/artwork/applewars.jpg
+headline: Here's our recommended reading list for the coming week
 ---
-
-Here's our recommended reading list for the coming week:
 
 #### [What the Rails security issue means for your startup](http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/)
 Glenn - A great overview of the Rails security issues and why they deserve your full attention.

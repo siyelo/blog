@@ -9,8 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="Just as the dust settles from this years RubyFuza, I finally have a moment to reflect on how great it was.
-This would be my 3rd attendence as a guest &hellip;">
+  <meta name="description" content="Abstracting a Service 09 Apr 2013 By Stuart Corbishley --> Comments --> --> Just as the dust settles from this years RubyFuza, I finally have a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,12 +24,11 @@ This would be my 3rd attendence as a guest &hellip;">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/application.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
+<link href='http://fonts.googleapis.com/css?family=Oswald|Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -48,28 +46,26 @@ This would be my 3rd attendence as a guest &hellip;">
 </head>
 
 <body id="blog"   >
-  <header role="banner"><header id="header">
-  <div class="wrapper">
-    <h1 class="left" id="logo_alt">
-      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
-    </h1>
-    <ul class="right horizontal" id="contact">
-      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
-      <li>
-      <p>+27 21 461 2050</p>
-      </li>
-    </ul>
-    <nav class="right" id="main_nav">
-    <ul class="horizontal">
-      <li><a href="http://www.siyelo.com">Home</a></li>
-      <li><a href="http://www.siyelo.com/services">Services</a></li>
-      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
-      <li><a href="http://www.siyelo.com/team">Team</a></li>
-      <li><a href="/" class="active">Blog</a></li>
-    </ul>
-    </nav>
-  </div>
-</header>
+  <header id="b-header" role="banner">
+<h1 id="b-logo" class="left">
+  <a href="/"><img title="Siyelo" src="images/orbital.svg" alt="Siyelo logo"></a>
+</h1>
+<ul class="b-nav"></ul>
+<!--<ul class="right horizontal" id="contact">
+  <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+  <li>
+  <p>+27 21 461 2050</p>
+  </li>
+</ul>
+<nav class="right" id="main_nav">
+<ul class="horizontal">
+  <li><a href="http://www.siyelo.com">Home</a></li>
+  <li><a href="http://www.siyelo.com/services">Services</a></li>
+  <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+  <li><a href="http://www.siyelo.com/team">Team</a></li>
+  <li><a href="/" class="active">Blog</a></li>
+</ul>
+</nav>-->
 
 </header>
   <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -90,13 +86,17 @@ This would be my 3rd attendence as a guest &hellip;">
 </ul>
 
 </nav> -->
-  <div class="wrapper multiclouds">
   <div id="articles">
 
-    <article class="hentry" role="article" class="post clearfix">
-      
+  <article class="hentry" role="article" class="post clearfix">
+    
   <header>
     
+      <div class="artwork"><img src="/images/artwork/studio.jpg" />
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><span>Abstracting a Service</span></h1><br />
+          <p class="meta">
 
 
 
@@ -112,13 +112,15 @@ This would be my 3rd attendence as a guest &hellip;">
 
 
 
-<section><time class="timestamp" datetime="2013-04-09T09:59:00+02:00" pubdate data-updated="true">
+<time class="timestamp" datetime="2013-04-09T09:59:00+02:00" pubdate data-updated="true">
     <span class='day'> 09</span>
     <span class='month'> Apr</span>
     <span class='year'> 2013</span>
-  </time></section>
+  </time> <span>By Stuart Corbishley</span> <img src="/images/avatar.jpg"/> </p>
+        </div>
+      </section>
+      </div>
     
-      <h1 class="entry-title">Abstracting a Service</h1>
     
     <!--  -->
     <!--   <p class="meta"> -->
@@ -130,8 +132,11 @@ This would be my 3rd attendence as a guest &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Just as the dust settles from this years <a href="http://www.rubyfuza.co.za/">RubyFuza</a>, I finally have a moment to reflect on how great it was.<br/>
-This would be my 3rd attendence as a guest, and my 1st as a speaker.
+
+    <div class="entry-content block">
+      <div class="wrapper">
+        <p class="headline">Just as the dust settles from this years <a href="http://www.rubyfuza.co.za/">RubyFuza</a>, I finally have a moment to reflect on how great it was.</p>
+        <p>This would be my 3rd attendence as a guest, and my 1st as a speaker.
 It is humbling to be around some amazingly talented and practiced
 developers, implementers and contributors of the Ruby community.<br/>
 So my talk was titled: <strong>Abstracting a Service: A Case Study in Forward
@@ -163,15 +168,12 @@ allowfullscreen></iframe>
 src="http://prezi.com/embed/wiolzae5tiho/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined"
 width="560" height="400" frameBorder="0"></iframe>
 
-</div>
 
+        <footer class="b-footer block">
+          <div class="wrapper">
 
-      <footer>
-
-        <div class="meta-data">
-          
-
-
+            <div class="meta-data">
+              <!--<p class="meta">
 
 
 
@@ -185,18 +187,15 @@ width="560" height="400" frameBorder="0"></iframe>
 
 
 
-<section><time class="timestamp" datetime="2013-04-09T09:59:00+02:00" pubdate data-updated="true">
+
+
+<time class="timestamp" datetime="2013-04-09T09:59:00+02:00" pubdate data-updated="true">
     <span class='day'> 09</span>
     <span class='month'> Apr</span>
     <span class='year'> 2013</span>
-  </time></section>
-          
-  
-
-<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Stuart Corbishley</span></span></p>
-
-          <span> in </span>
-          
+  </time> <span>By Stuart Corbishley</span> <img src="/images/avatar.jpg"/> </p>
+              <span> in </span>
+              
 
 <span class="categories">
   
@@ -204,10 +203,10 @@ width="560" height="400" frameBorder="0"></iframe>
   
 </span>
 
+-->
 
-
-          
-            <div class="sharing right">
+              
+                <div class="sharing">
   
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/abstracting-a-service" data-via="siyelo" data-counturl="http://blog.siyelo.com/abstracting-a-service" >Tweet</a>
   
@@ -215,30 +214,88 @@ width="560" height="400" frameBorder="0"></iframe>
   
 </div>
 
-          
-        </div>
+              
+            </div>
 
-        <p class="meta pagination">
-          
-            <a class="basic-alignment left" href="/if-you-git-merge-squash" title="Previous Post: Your git squash-merge is bad">Previous</a>
-          
-          
-            <a class="basic-alignment right" href="/introducing_stu_and_nic" title="Next Post: Introducing...">Next</a>
-          
-        </p>
+          </div>
+        </footer>
+      </div>
+    </div>
 
-      </footer>
-    </article>
 
-    
-      <section class="comments">
-        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </article>
+
+  <!--
+    <section class="comments block">
+      <a class="show-comments wrapper" href="#">Show comments</a>
+      <div id="disqus_thread" class="wrapper" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-      </section>
-    
+    </section>
+  -->
+
+  <div class="pages block">
+    <div class="wrapper">
+      
+        <div class="half left">
+          <p>previous post</p>
+          <h3><a class="basic-alignment" href="/if-you-git-merge-squash" title="Previous Post: Your git squash-merge is bad">Your git squash-merge is bad</a></h3>
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2013-02-13T19:30:00+01:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Feb</span>
+    <span class='year'> 2013</span>
+  </time> <span>By Glenn Roberts</span> <img src="/images/avatar.jpg"/> </p>
+        </div>
+      
+      
+        <div class="half right">
+          <p>next post</p>
+          <h3><a class="basic-alignment" href="/introducing_stu_and_nic" title="Next Post: Introducing...">Introducing...</a></h3>
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2013-05-03T15:37:00+02:00" pubdate data-updated="true">
+    <span class='day'> 03</span>
+    <span class='month'> May</span>
+    <span class='year'> 2013</span>
+  </time> <span>By Nic Young</span> <img src="/images/avatar.jpg"/> </p>
+        </div>
+      
+    </div>
   </div>
 
-  
+</div>
+
+  <!-- 
   <aside class="sidebar">
     
       <section>
@@ -331,13 +388,11 @@ width="560" height="400" frameBorder="0"></iframe>
 
     
   </aside>
-  
-</div>
-
-  <footer role="contentinfo"><footer id="footer">
+   -->
+  <footer id="footer" role="contentinfo">
     <div class="wrapper">
       <ul class="clearfix">
-        <li class="fourth">
+        <li class="third">
           <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
           <span>Contact</span>
           <ul>
@@ -349,7 +404,7 @@ width="560" height="400" frameBorder="0"></iframe>
             </li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
           <span>Cape Town</span>
           <ul>
@@ -359,7 +414,7 @@ width="560" height="400" frameBorder="0"></iframe>
             <li>South Africa</li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
           <span>Skopje</span>
           <ul>
@@ -369,20 +424,20 @@ width="560" height="400" frameBorder="0"></iframe>
             <li>Macedonia</li>
           </ul>
         </li>
-        <li class="fourth social">
-          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
-          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
-          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
-        </li>
       </ul>
-      <aside>
-        <a class="left back_to_top" href="#header">Back to top</a>
+      <footer id="b-footer">
+        <a class="left back_to_top" href="#blog">Back to top</a>
         <div class="right">
-          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+          <p class="social">
+            <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+            <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+            <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+          </p>
+          <a class="cc" title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
         </div>
-      </aside>
+      </footer>
     </div>
-  </footer>
+
 </footer>
   
 

@@ -5,9 +5,9 @@ date: 2013-02-13 19:30
 comments: true
 categories:
 author: Glenn Roberts
+avatar: /images/avatar.jpg
+headline: ... and you should feel bad.
 ---
-
-... and you should feel bad.
 
 Commit early & commit often is the way to go. Then squash your commits before they get merged to `[master]`. This is the gentlemanly thing to do.
 

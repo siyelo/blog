@@ -9,9 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="If you like your schema definitions handy in the current ActiveRecord
-model you&#8217;re looking at, you&#8217;re probably using the
-annotate_models &hellip;">
+  <meta name="description" content="Annotation Without Thought 08 Nov 2012 By Glenn Roberts --> Comments --> --> If you like your schema definitions handy in the current ActiveRecord &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,12 +24,11 @@ annotate_models &hellip;">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/application.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
+<link href='http://fonts.googleapis.com/css?family=Oswald|Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -49,28 +46,26 @@ annotate_models &hellip;">
 </head>
 
 <body id="blog"   >
-  <header role="banner"><header id="header">
-  <div class="wrapper">
-    <h1 class="left" id="logo_alt">
-      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
-    </h1>
-    <ul class="right horizontal" id="contact">
-      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
-      <li>
-      <p>+27 21 461 2050</p>
-      </li>
-    </ul>
-    <nav class="right" id="main_nav">
-    <ul class="horizontal">
-      <li><a href="http://www.siyelo.com">Home</a></li>
-      <li><a href="http://www.siyelo.com/services">Services</a></li>
-      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
-      <li><a href="http://www.siyelo.com/team">Team</a></li>
-      <li><a href="/" class="active">Blog</a></li>
-    </ul>
-    </nav>
-  </div>
-</header>
+  <header id="b-header" role="banner">
+<h1 id="b-logo" class="left">
+  <a href="/"><img title="Siyelo" src="images/orbital.svg" alt="Siyelo logo"></a>
+</h1>
+<ul class="b-nav"></ul>
+<!--<ul class="right horizontal" id="contact">
+  <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+  <li>
+  <p>+27 21 461 2050</p>
+  </li>
+</ul>
+<nav class="right" id="main_nav">
+<ul class="horizontal">
+  <li><a href="http://www.siyelo.com">Home</a></li>
+  <li><a href="http://www.siyelo.com/services">Services</a></li>
+  <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+  <li><a href="http://www.siyelo.com/team">Team</a></li>
+  <li><a href="/" class="active">Blog</a></li>
+</ul>
+</nav>-->
 
 </header>
   <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -91,13 +86,17 @@ annotate_models &hellip;">
 </ul>
 
 </nav> -->
-  <div class="wrapper multiclouds">
   <div id="articles">
 
-    <article class="hentry" role="article" class="post clearfix">
-      
+  <article class="hentry" role="article" class="post clearfix">
+    
   <header>
     
+      <div class="artwork"><img src="" />
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><span>Annotation Without Thought</span></h1><br />
+          <p class="meta">
 
 
 
@@ -113,13 +112,15 @@ annotate_models &hellip;">
 
 
 
-<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+<time class="timestamp" datetime="2012-11-08T11:48:00+01:00" pubdate data-updated="true">
     <span class='day'> 08</span>
     <span class='month'> Nov</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Glenn Roberts</span> <img src=""/> </p>
+        </div>
+      </section>
+      </div>
     
-      <h1 class="entry-title">Annotation Without Thought</h1>
     
     <!--  -->
     <!--   <p class="meta"> -->
@@ -131,7 +132,11 @@ annotate_models &hellip;">
   </header>
 
 
-<div class="entry-content"><p>If you like your schema definitions handy in the current ActiveRecord
+
+    <div class="entry-content block">
+      <div class="wrapper">
+        <p class="headline"></p>
+        <p>If you like your schema definitions handy in the current ActiveRecord
 model you&#8217;re looking at, you&#8217;re probably using the
 <a href="" title="https://github.com/ctran/annotate_models">annotate_models gem</a></p>
 
@@ -168,15 +173,12 @@ model you&#8217;re looking at, you&#8217;re probably using the
 
 <pre><code>rake anno
 </code></pre>
-</div>
 
+        <footer class="b-footer block">
+          <div class="wrapper">
 
-      <footer>
-
-        <div class="meta-data">
-          
-
-
+            <div class="meta-data">
+              <!--<p class="meta">
 
 
 
@@ -190,23 +192,20 @@ model you&#8217;re looking at, you&#8217;re probably using the
 
 
 
-<section><time class="timestamp" datetime="2012-11-08T11:48:00+02:00" pubdate data-updated="true">
+
+
+<time class="timestamp" datetime="2012-11-08T11:48:00+01:00" pubdate data-updated="true">
     <span class='day'> 08</span>
     <span class='month'> Nov</span>
     <span class='year'> 2012</span>
-  </time></section>
-          
-  
+  </time> <span>By Glenn Roberts</span> <img src=""/> </p>
+              <span> in </span>
+              
 
-<p class="meta"><span class="byline author vcard">Posted by <span class="fn">Glenn Roberts</span></span></p>
+-->
 
-          <span> in </span>
-          
-
-
-
-          
-            <div class="sharing right">
+              
+                <div class="sharing">
   
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.siyelo.com/annotation-without-thought" data-via="siyelo" data-counturl="http://blog.siyelo.com/annotation-without-thought" >Tweet</a>
   
@@ -214,30 +213,88 @@ model you&#8217;re looking at, you&#8217;re probably using the
   
 </div>
 
-          
-        </div>
+              
+            </div>
 
-        <p class="meta pagination">
-          
-            <a class="basic-alignment left" href="/welcoming-ile" title="Previous Post: Welcoming Ile - Our newest team member">Previous</a>
-          
-          
-            <a class="basic-alignment right" href="/the-siyelo-book-club" title="Next Post: The Siyelo Book Club">Next</a>
-          
-        </p>
+          </div>
+        </footer>
+      </div>
+    </div>
 
-      </footer>
-    </article>
 
-    
-      <section class="comments">
-        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </article>
+
+  <!--
+    <section class="comments block">
+      <a class="show-comments wrapper" href="#">Show comments</a>
+      <div id="disqus_thread" class="wrapper" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-      </section>
-    
+    </section>
+  -->
+
+  <div class="pages block">
+    <div class="wrapper">
+      
+        <div class="half left">
+          <p>previous post</p>
+          <h3><a class="basic-alignment" href="/welcoming-ile" title="Previous Post: Welcoming Ile - Our newest team member">Welcoming Ile - Our newest team member</a></h3>
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-02T15:20:00+01:00" pubdate data-updated="true">
+    <span class='day'> 02</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p>
+        </div>
+      
+      
+        <div class="half right">
+          <p>next post</p>
+          <h3><a class="basic-alignment" href="/the-siyelo-book-club" title="Next Post: The Siyelo Book Club">The Siyelo Book Club</a></h3>
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-08T16:08:00+01:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p>
+        </div>
+      
+    </div>
   </div>
 
-  
+</div>
+
+  <!-- 
   <aside class="sidebar">
     
       <section>
@@ -330,13 +387,11 @@ model you&#8217;re looking at, you&#8217;re probably using the
 
     
   </aside>
-  
-</div>
-
-  <footer role="contentinfo"><footer id="footer">
+   -->
+  <footer id="footer" role="contentinfo">
     <div class="wrapper">
       <ul class="clearfix">
-        <li class="fourth">
+        <li class="third">
           <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
           <span>Contact</span>
           <ul>
@@ -348,7 +403,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
             </li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
           <span>Cape Town</span>
           <ul>
@@ -358,7 +413,7 @@ model you&#8217;re looking at, you&#8217;re probably using the
             <li>South Africa</li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
           <span>Skopje</span>
           <ul>
@@ -368,20 +423,20 @@ model you&#8217;re looking at, you&#8217;re probably using the
             <li>Macedonia</li>
           </ul>
         </li>
-        <li class="fourth social">
-          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
-          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
-          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
-        </li>
       </ul>
-      <aside>
-        <a class="left back_to_top" href="#header">Back to top</a>
+      <footer id="b-footer">
+        <a class="left back_to_top" href="#blog">Back to top</a>
         <div class="right">
-          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+          <p class="social">
+            <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+            <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+            <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+          </p>
+          <a class="cc" title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
         </div>
-      </aside>
+      </footer>
     </div>
-  </footer>
+
 </footer>
   
 

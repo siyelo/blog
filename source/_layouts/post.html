@@ -3,44 +3,41 @@ layout: default
 single: true
 ---
 
-<div class="wrapper multiclouds">
-  <div id="articles">
+<div id="articles">
 
-    <article class="hentry" role="article" class="post clearfix">
-      {% include article.html %}
-      <footer>
+  <article class="hentry" role="article" class="post clearfix">
+    {% include article.html %}
+  </article>
 
-        <div class="meta-data">
-          {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-          {% include post/author.html %}
-          <span> in </span>
-          {% include post/categories.html %}
+  <!--{% if site.disqus_short_name and page.comments == true %}
+    <section class="comments block">
+      <a class="show-comments wrapper" href="#">Show comments</a>
+      <div id="disqus_thread" class="wrapper" aria-live="polite">{% include post/disqus_thread.html %}</div>
+    </section>
+  {% endif %}-->
 
-          {% unless page.sharing == false %}
-            {% include post/sharing.html %}
-          {% endunless %}
+  <div class="pages block">
+    <div class="wrapper">
+      {% if page.previous.url %}
+        <div class="half left">
+          <p>previous post</p>
+          <h3><a class="basic-alignment" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">{{ page.previous.title }}</a></h3>
+          <p class="meta">{% include post/date-previous.html %}{{ time }} <span>By {{ page.previous.author }}</span> <img src="{{ page.previous.avatar }}"/> </p>
         </div>
-
-        <p class="meta pagination">
-          {% if page.previous.url %}
-            <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">{{'Previous'}}</a>
-          {% endif %}
-          {% if page.next.url %}
-            <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{'Next'}}</a>
-          {% endif %}
-        </p>
-
-      </footer>
-    </article>
-
-    {% if site.disqus_short_name and page.comments == true %}
-      <section class="comments">
-        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-      </section>
-    {% endif %}
+      {% endif %}
+      {% if page.next.url %}
+        <div class="half right">
+          <p>next post</p>
+          <h3><a class="basic-alignment" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{ page.next.title }}</a></h3>
+          <p class="meta">{% include post/date-next.html %}{{ time }} <span>By {{ page.next.author }}</span> <img src="{{ page.previous.avatar }}"/> </p>
+        </div>
+      {% endif %}
+    </div>
   </div>
 
-  {% unless page.sidebar == false %}
+</div>
+
+  <!-- {% unless page.sidebar == false %}
   <aside class="sidebar">
     {% if site.post_asides.size %}
       {% include_array post_asides %}
@@ -48,5 +45,4 @@ single: true
       {% include_array default_asides %}
     {% endif %}
   </aside>
-  {% endunless %}
-</div>
+  {% endunless %} -->

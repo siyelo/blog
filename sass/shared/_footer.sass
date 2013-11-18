@@ -1,0 +1,102 @@
+#footer
+	background: #fafafa
+	border-top: #eee 1px solid
+	font-family: "Noto", sans-serif
+	padding: 5em 0 2em
+	position: relative
+	z-index: 1
+	.wrapper
+		max-width: 1000px
+
+	aside
+		clear: both
+		padding: 25px 0
+		+pie-clearfix
+		a, p
+			color: $one
+			font-size: 12px
+			text-decoration: none
+		a
+			color: #ccc
+			&:hover, &:focus
+				text-decoration: underline
+
+	.third
+		margin-bottom: 5em
+		.marker
+			background: image_url("/images/marker.png") no-repeat
+			color: $one
+			display: block
+			float: left
+			max-width: 36px
+			opacity: 0.5
+			padding: 10px 0 40px
+			text-align: center
+			text-decoration: none
+			width: 20%
+			&:hover, &:focus
+				opacity: 1
+
+		span, ul
+			float: right
+
+		span
+			color: $one
+			display: inline-block
+			font: 16px Oswald
+			padding-bottom: 5px
+			padding-left: 3%
+			text-transform: uppercase
+			width: 77%
+
+		ul
+			color: $one
+			font-size: 12px
+			padding-left: 3%
+			width: 77%
+
+		li a
+			color: $one
+			text-decoration: none
+			&:hover, &:focus
+				opacity: 1
+				text-decoration: underline
+				+transition(all 0.5s)
+
+	.social
+		display: inline-block
+		margin: 0
+		padding: 0
+		+pie-clearfix
+		a
+			display: inline-block
+			+pie-clearfix
+		img
+			float: left
+			max-width: 30px
+			opacity: 0.9
+			padding: 0 10px 0 0
+			text-align: center
+			width: 100%
+			&:hover, &:focus
+				opacity: 1
+				+scale(1.05)
+				+transition(all .2s)
+
+	.cc
+		float: right
+		padding: 7px 0 7px 10px
+
+	.wrapper > ul
+		border-bottom: 1px solid #eee
+		+pie-clearfix
+
+	.back_to_top
+		color: #aaa
+		font: 13px Oswald
+		letter-spacing: 0.05em
+		padding: 10px 0
+		text-transform: uppercase
+		+transition(all .4s)
+		&:hover, &:focus
+			color: #444

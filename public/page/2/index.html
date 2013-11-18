@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="25 Jan 2013 TL;DR - Bacon Pancakes, Dynamic Attributes & MongoDB and Now I Know &#8211;> Comments &#8211;> &#8211;> This week we start of Dev Chat &hellip;">
+  <meta name="description" content="TL;DR: D3, Refactoring ActveRecord Models & Templates for Consulting Engagements 07 Dec 2012 By Nicole Dirks &#8211;> Comments &#8211;> &#8211;> &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,12 +24,11 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/application.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
+<link href='http://fonts.googleapis.com/css?family=Oswald|Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -47,28 +46,26 @@
 </head>
 
 <body id="blog"   >
-  <header role="banner"><header id="header">
-  <div class="wrapper">
-    <h1 class="left" id="logo_alt">
-      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
-    </h1>
-    <ul class="right horizontal" id="contact">
-      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
-      <li>
-      <p>+27 21 461 2050</p>
-      </li>
-    </ul>
-    <nav class="right" id="main_nav">
-    <ul class="horizontal">
-      <li><a href="http://www.siyelo.com">Home</a></li>
-      <li><a href="http://www.siyelo.com/services">Services</a></li>
-      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
-      <li><a href="http://www.siyelo.com/team">Team</a></li>
-      <li><a href="/" class="active">Blog</a></li>
-    </ul>
-    </nav>
-  </div>
-</header>
+  <header id="b-header" role="banner">
+<h1 id="b-logo" class="left">
+  <a href="/"><img title="Siyelo" src="images/orbital.svg" alt="Siyelo logo"></a>
+</h1>
+<ul class="b-nav"></ul>
+<!--<ul class="right horizontal" id="contact">
+  <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+  <li>
+  <p>+27 21 461 2050</p>
+  </li>
+</ul>
+<nav class="right" id="main_nav">
+<ul class="horizontal">
+  <li><a href="http://www.siyelo.com">Home</a></li>
+  <li><a href="http://www.siyelo.com/services">Services</a></li>
+  <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+  <li><a href="http://www.siyelo.com/team">Team</a></li>
+  <li><a href="/" class="active">Blog</a></li>
+</ul>
+</nav>-->
 
 </header>
   <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -89,137 +86,25 @@
 </ul>
 
 </nav> -->
-  <div class="wrapper multiclouds">
   <div id="articles">
+
+  
+  
+  
     
+    <article class="b-post first">
     
-    
-      <article>
-        
+      
   <header>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2013-01-25T16:51:00+02:00" pubdate data-updated="true">
-    <span class='day'> 25</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-11">TL;DR - Bacon Pancakes, Dynamic Attributes & MongoDB and Now I Know</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-11#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- <a href="http://www.youtube.com/watch?v=zalYJacOhpo">Adventure Time Bacon Pancakes New York Remix!</a> - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.</p>
-
-<p>Glenn recommended <a href="http://onepagerapp.com/">Onepager</a> - a well designed site which solves a common problem. Glenn’s also just discovered the <a href="http://rubyrogues.com">Ruby Rogues</a> podcast (we know, he&#8217;s a bit delayed&#8230;).  They have great panelists and interesting topics - it is practically required listening at Siyelo these days.</p>
-
-<p>Ile is working on a college assignment on Rails and MongoDB for his post-graduate studie.  A great article on <a href="http://paul-wong-jr.blogspot.com/2012/03/dynamic-attributes-and-mongodbmongoid.html">Dynamic attributes and MongoDB/Mongoid</a> has been helping him on his way.</p>
-
-<p>Want to get a quick overview of NoSQL? Sachin shared <a href="http://martinfowler.com/articles/nosqlKeyPoints.html">key points from NoSQL Distilled</a> by Martin Fowler.</p>
-
-<p>Finally, if you haven&#8217;t already, we highly recommend that you sign up for the <a href="http://nowiknow.com/">“Now I know”</a> daily newsletter. In the words of Jimmy Wales: &#8220;It’s always fresh, always a surprise, and always interesting!&#8221;</p>
-
-<p>Happy friday!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
+      <div class="artwork">
         
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2013-01-18T17:51:00+02:00" pubdate data-updated="true">
-    <span class='day'> 18</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/rails-security-vulnerabilities">Rails Security Vulnerabilities</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/rails-security-vulnerabilities#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual &#8220;Upgrade IMMEDIATELY&#8221; advisory.</p>
-
-<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&#8217;s not always trivial, and we ran into problems ourselves. But here&#8217;s how we went about it.</p>
-
-<h2>What happened?</h2>
-
-<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
-
-<h2>What&#8217;s the first issue?</h2>
-
-<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
-
-<h2>And the second issue?</h2>
-
-<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
-
-<h2>What to do?</h2>
-
-<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&#8217;t stress enough that you must upgrade your Rails applications now!</p>
-
-<p>If you haven&#8217;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
+          <img src="" />
         
-  <header>
-    
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-8"><span>TL;DR: D3, Refactoring ActveRecord Models & Templates for Consulting Engagements</span></a></h1><br />
+          <p class="meta">
 
 
 
@@ -235,177 +120,544 @@
 
 
 
-<section><time class="timestamp" datetime="2013-01-18T13:36:00+02:00" pubdate data-updated="true">
-    <span class='day'> 18</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design">TL;DR: Deploying With Gitploy; Is Your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>It&#8217;s a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.</p>
-
-<p>This week our dev chat we had quite a few interesting articles posted&#8230;</p>
-
-<p>Sachin had a keen interest in Dalibor&#8217;s <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
-
-<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
-
-<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
-
-<p>Happy reading and enjoy your weekend!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2013-01-15T10:18:00+02:00" pubdate data-updated="true">
-    <span class='day'> 15</span>
-    <span class='month'> Jan</span>
-    <span class='year'> 2013</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/thou-shalt-clean-thy-branches-git-rebase">Thou Shalt Clean Thy Branches: Git Rebase</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/thou-shalt-clean-thy-branches-git-rebase#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
-
-<p>Either way, you are rewriting histories, so you have to know what you&#8217;re
-doing.</p>
-
-<p>A google search of (&#8216;git merge squash vs rebase&#8217;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&#8217;s stance in this article is that you should
-&#8216;never&#8217; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
-
-<p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
-history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
-
-<blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
- pull into a branch that isn&#8217;t already in good shape)</p>
-
-<p>You must never EVER destroy other peoples history</p>
-
-<p>Keep your own history readable and dont expose your crap</p>
-
-<p>Never pull into a branch that isn&#8217;t already in good shape</p></blockquote>
-
-<p>Stick to these simple rules, and rebase/squash as you please!</p>
-</div></div>
-  
-  
-
-
-      </article>
-    
-    
-      <article>
-        
-  <header>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-12-21T14:35:00+02:00" pubdate data-updated="true">
-    <span class='day'> 21</span>
+<time class="timestamp" datetime="2012-12-07T13:46:00+01:00" pubdate data-updated="true">
+    <span class='day'> 07</span>
     <span class='month'> Dec</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
     
-      <h1 class="entry-title"><a href="/weekly-roundup-9">TL;DR: Worst Apocolypse Ever; Programming With Kent Beck & OO Re-use</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/weekly-roundup-9#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/weekly-roundup-8#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>So the Mayan apocalypse was a dud&#8230; Thankfully so because it would&#8217;ve ruined a perfect day in Cape Town.</p>
 
-<p>This week Dalibor got one step closer to his goal of <a href="http://blog.iterate.no/2012/06/20/programming-like-kent-beck/">Programming like Kent Beck</a>.  He also spent some time reading up on what constitutes good design and why PG thinks it&#8217;s not <a href="http://paulgraham.com/taste.html">subjective or abstract</a>.</p>
 
-<p>Ile has been beefing up his <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim skills</a> thanks to <a href="http://twitter.com/mislav">@mislav&#8217;s</a> great post.  Starting with a simple <code>.vimrc</code> which you fully understand will make it easier to &#8216;get&#8217; the fundamentals.</p>
 
-<p>He&#8217;s also shared <a href="http://twitter.com/davetron5000">David Copeland&#8217;s</a> article on ways to improve reusability in your application - <a href="http://www.naildrivin5.com/blog/2012/12/19/re-use-in-oo-inheritance.html">Re-use in OO: Inheritance, Composition and Mixins</a></p>
-
-<p>Sachin was reading up on ways of improving your application&#8217;s performance on Heroku whilst <a href="http://www.stormconsultancy.co.uk/blog/development/6-ways-to-get-more-bang-for-your-heroku-buck-while-making-your-rails-site-super-snappy/">staying within budget</a></p>
-
-<p>Wishing you well over the festive season from Siyelo!</p>
-</div></div>
+    </article>
   
   
-
-
-      </article>
     
-    <div class="pagination">
+    <article class="b-post list">
+    
       
-        <a class="prev" href="/page/3/">Older</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/global-day-of-coderetreat-2012"><span>Global Day of Coderetreat 2012</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-12-05T09:32:00+01:00" pubdate data-updated="true">
+    <span class='day'> 05</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Dalibor Nasevic</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/global-day-of-coderetreat-2012#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-      <a href="/blog/archives">Blog Archives</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/active-merchant-and-spree"><span>Active Merchant and Spree</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-27T10:01:00+01:00" pubdate data-updated="true">
+    <span class='day'> 27</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/active-merchant-and-spree#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-      <a class="next" href="/">Newer</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-7"><span>TL;DR: Rails 4, a Responsive Cat & a Free Book</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-16T17:09:00+01:00" pubdate data-updated="true">
+    <span class='day'> 16</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-7#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-    </div>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-6"><span>TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-09T15:36:00+01:00" pubdate data-updated="true">
+    <span class='day'> 09</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-6#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/the-siyelo-book-club"><span>The Siyelo Book Club</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-08T16:08:00+01:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/the-siyelo-book-club#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/annotation-without-thought"><span>Annotation Without Thought</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-08T11:48:00+01:00" pubdate data-updated="true">
+    <span class='day'> 08</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Glenn Roberts</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/annotation-without-thought#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/welcoming-ile"><span>Welcoming Ile - Our Newest Team Member</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-11-02T15:20:00+01:00" pubdate data-updated="true">
+    <span class='day'> 02</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/welcoming-ile#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-5"><span>TL;DR: Making Rails Fast, Practical OO & Google Data Centers</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-10-19T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 19</span>
+    <span class='month'> Oct</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-5#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-4"><span>TL;DR: Great RSpect Tests, TripAdvisors Growth & Going Password-less</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-10-12T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 12</span>
+    <span class='month'> Oct</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-4#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/3/">Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer</a>
+    
   </div>
-  <aside class="sidebar">
-    
-      <section>
+
+</div>
+
+
+<!-- <aside class="sidebar">
+  
+    <section>
   <h1>About</h1>
   <ul id="about">
     <li>
@@ -464,14 +716,12 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
 </section>
 
 
-    
-  </aside>
-</div>
-
-  <footer role="contentinfo"><footer id="footer">
+  
+</aside> &#8211;>
+  <footer id="footer" role="contentinfo">
     <div class="wrapper">
       <ul class="clearfix">
-        <li class="fourth">
+        <li class="third">
           <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
           <span>Contact</span>
           <ul>
@@ -483,7 +733,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
             </li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
           <span>Cape Town</span>
           <ul>
@@ -493,7 +743,7 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
             <li>South Africa</li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
           <span>Skopje</span>
           <ul>
@@ -503,20 +753,20 @@ history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">
             <li>Macedonia</li>
           </ul>
         </li>
-        <li class="fourth social">
-          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
-          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
-          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
-        </li>
       </ul>
-      <aside>
-        <a class="left back_to_top" href="#header">Back to top</a>
+      <footer id="b-footer">
+        <a class="left back_to_top" href="#blog">Back to top</a>
         <div class="right">
-          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+          <p class="social">
+            <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+            <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+            <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+          </p>
+          <a class="cc" title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
         </div>
-      </aside>
+      </footer>
     </div>
-  </footer>
+
 </footer>
   
 

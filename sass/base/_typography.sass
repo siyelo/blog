@@ -1,0 +1,35 @@
+body
+	font: 15px/1.7 "Noto Sans", "Helvetica Neue", Arial, sans-serif
+
+h1, h2, h3, h4, h5, h6
+	font-family: Oswald, "Helvetica Neue", Arial, sans-serif
+	line-height: 1.6
+	text-transform: uppercase
+
+h1
+	font-size: 54px
+h2
+	font-size: 40px
+h3
+	font-size: 32px
+h4
+	font-size: 24px
+h5
+	font-size: 18px
+h6
+	font-size: 14px
+
+p
+	color: #444
+	letter-spacing: .02em
+	margin-bottom: 2em
+
+a
+	color: $one
+	text-decoration: none
+	+transition(all .4s)
+	&:first-letter
+		text-decoration: underline
+	&:hover, &:focus
+		color: $one + #333
+		text-decoration: underline

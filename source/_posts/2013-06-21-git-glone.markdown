@@ -2,9 +2,12 @@
 layout: post
 title: "Git Glone"
 date: 2013-06-21 09:56
+image: /images/artwork/applewars.jpg
 comments: true
 categories:
 author: Glenn Roberts
+avatar: /images/avatar.jpg
+headline: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 ---
 
 I often mis-type commands.
@@ -16,6 +19,7 @@ git: 'glone' is not a git command. See 'git --help'.
 Did you mean this?
 clone
 ```
+<!--more-->
 
 Yes I did git, yes I did.
 

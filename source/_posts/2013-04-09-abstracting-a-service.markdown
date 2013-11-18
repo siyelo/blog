@@ -5,9 +5,11 @@ date: 2013-04-09 09:59
 comments: true
 categories: talks
 author: Stuart Corbishley
+avatar: /images/avatar.jpg
+image: /images/artwork/studio.jpg
+headline: Just as the dust settles from this years <a href="http://www.rubyfuza.co.za/">RubyFuza</a>, I finally have a moment to reflect on how great it was.
 ---
 
-Just as the dust settles from this years [RubyFuza](http://www.rubyfuza.co.za/), I finally have a moment to reflect on how great it was.  
 This would be my 3rd attendence as a guest, and my 1st as a speaker.
 It is humbling to be around some amazingly talented and practiced
 developers, implementers and contributors of the Ruby community.  

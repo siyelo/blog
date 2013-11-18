@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-06-21T10:32:20+02:00</updated>
+  <updated>2013-11-18T01:32:48+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -49,7 +49,7 @@ alias hmig='heroku rake db:migrate'
   <entry>
     <title type="html"><![CDATA[Tired of Textmate's slow 'Find in Project'? `*`nix to the rescue]]></title>
     <link href="http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue"/>
-    <updated>2010-03-24T18:03:04+02:00</updated>
+    <updated>2010-03-24T17:03:04+01:00</updated>
     <id>http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue</id>
     <content type="html"><![CDATA[<p>We all know that Textmate's "Find in Project" feature runs like a dog.</p>
 
@@ -78,7 +78,7 @@ glenn-roberts-4 ~/ba[master*]$ findrb 'show'
   <entry>
     <title type="html"><![CDATA[Speeding up bash aliasing to speed up your Rails development]]></title>
     <link href="http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development"/>
-    <updated>2010-03-19T19:02:57+02:00</updated>
+    <updated>2010-03-19T18:02:57+01:00</updated>
     <id>http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development</id>
     <content type="html"><![CDATA[<p>All good developers love the terminal, and spend many hours at the command prompt.</p>
 

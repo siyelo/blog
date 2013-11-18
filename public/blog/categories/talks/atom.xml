@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-06-21T10:32:20+02:00</updated>
+  <updated>2013-11-18T01:32:48+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,8 +18,7 @@
     <link href="http://blog.siyelo.com/abstracting-a-service"/>
     <updated>2013-04-09T09:59:00+02:00</updated>
     <id>http://blog.siyelo.com/abstracting-a-service</id>
-    <content type="html"><![CDATA[<p>Just as the dust settles from this years <a href="http://www.rubyfuza.co.za/">RubyFuza</a>, I finally have a moment to reflect on how great it was.<br/>
-This would be my 3rd attendence as a guest, and my 1st as a speaker.
+    <content type="html"><![CDATA[<p>This would be my 3rd attendence as a guest, and my 1st as a speaker.
 It is humbling to be around some amazingly talented and practiced
 developers, implementers and contributors of the Ruby community.<br/>
 So my talk was titled: <strong>Abstracting a Service: A Case Study in Forward

@@ -9,7 +9,7 @@
   <meta name="author" content="Siyelo">
 
   
-  <meta name="description" content="07 Dec 2012 TL;DR: D3, Refactoring ActveRecord Models & Templates for Consulting Engagements &#8211;> Comments &#8211;> &#8211;> It&#8217;s that &hellip;">
+  <meta name="description" content="TL;DR: Lean From the Trenches, Schemaless SQL & Blowing in Nintendo Cartridges 05 Oct 2012 By Nicole Dirks &#8211;> Comments &#8211;> &#8211;> It&# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,12 +24,11 @@
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/application.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Siyelo" type="application/atom+xml">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
+<link href='http://fonts.googleapis.com/css?family=Oswald|Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -47,28 +46,26 @@
 </head>
 
 <body id="blog"   >
-  <header role="banner"><header id="header">
-  <div class="wrapper">
-    <h1 class="left" id="logo_alt">
-      <a href="http://www.siyelo.com/"><img title="Siyelo" src="http://siyelo.com/images/logo_siyelo.png" alt="Siyelo logo"></a>
-    </h1>
-    <ul class="right horizontal" id="contact">
-      <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
-      <li>
-      <p>+27 21 461 2050</p>
-      </li>
-    </ul>
-    <nav class="right" id="main_nav">
-    <ul class="horizontal">
-      <li><a href="http://www.siyelo.com">Home</a></li>
-      <li><a href="http://www.siyelo.com/services">Services</a></li>
-      <li><a href="http://www.siyelo.com/projects">Projects</a></li>
-      <li><a href="http://www.siyelo.com/team">Team</a></li>
-      <li><a href="/" class="active">Blog</a></li>
-    </ul>
-    </nav>
-  </div>
-</header>
+  <header id="b-header" role="banner">
+<h1 id="b-logo" class="left">
+  <a href="/"><img title="Siyelo" src="images/orbital.svg" alt="Siyelo logo"></a>
+</h1>
+<ul class="b-nav"></ul>
+<!--<ul class="right horizontal" id="contact">
+  <li><a href="mailto:info@siyelo.com" title="Email us - we want to hear from you">info@siyelo.com</a></li>
+  <li>
+  <p>+27 21 461 2050</p>
+  </li>
+</ul>
+<nav class="right" id="main_nav">
+<ul class="horizontal">
+  <li><a href="http://www.siyelo.com">Home</a></li>
+  <li><a href="http://www.siyelo.com/services">Services</a></li>
+  <li><a href="http://www.siyelo.com/projects">Projects</a></li>
+  <li><a href="http://www.siyelo.com/team">Team</a></li>
+  <li><a href="/" class="active">Blog</a></li>
+</ul>
+</nav>-->
 
 </header>
   <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
@@ -89,72 +86,25 @@
 </ul>
 
 </nav> -->
-  <div class="wrapper multiclouds">
   <div id="articles">
-    
-    
-    
-      <article>
-        
-  <header>
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section><time class="timestamp" datetime="2012-12-07T13:46:00+02:00" pubdate data-updated="true">
-    <span class='day'> 07</span>
-    <span class='month'> Dec</span>
-    <span class='year'> 2012</span>
-  </time></section>
-    
-      <h1 class="entry-title"><a href="/weekly-roundup-8">TL;DR: D3, Refactoring ActveRecord Models & Templates for Consulting Engagements</a></h1>
-    
-    <!--  -->
-    <!--   <p class="meta"> &#8211;>
-    <!--      -->
-    <!--      | <a href="/weekly-roundup-8#disqus_thread">Comments</a> &#8211;>
-    <!--      -->
-    <!--   </p> &#8211;>
-    <!--  -->
-  </header>
-
-
-  <div class="body"><div class="inner"><p>It&#8217;s that time again&#8230; Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.</p>
-
-<p>Dime shared Data Driven Documents, <a href="http://d3js.org/">D3.js</a> is a JavaScript library for manipulating documents based on data.</p>
-
-<p>Dalibor found the following articles <a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">7 Patterns to Refactor  at ActiveRecord</a> Models and Demeter: It&#8217;s not just a good idea. It&#8217;s the law, very insightful as well as sharing <a href="http://www.sdruby.org/podcast/94">Refactoring ActiveRecord</a> Models podcast as Ben Hughes explores several techniques for refactoring models and preventing them from getting out of hand. Purchase <a href="http://railsantipatterns.com/">Rails AntiPatterns: Best Practice Ruby on Rails Refactoring</a> on amazon and learn how to identify and fix over 300 of the most common mistakes made in Ruby on Rails applications.</p>
-
-<p>Glenn suggested reading about <a href="http://blog.obiefernandez.com/content/2008/09/master-services-agreement-part-1.html">Obie Fernandez&#8217;s great MSA and SoW templates for consulting engagements</a>. Sachin shared project management theory <a href="https://aidylewis.heroku.com/2012/11/18/kanban-no-it-cant/">Kanban</a> and <a href="http://blog.headius.com/2012/11/refining-ruby.html">Refining Ruby</a>.</p>
-
-<p>Last but not least Ile shared Know your gems and create <a href="http://robots.thoughtbot.com/post/35717411108/a-healthy-bundle">A Healthy Bundle</a> and <a href="http://blog.steveklabnik.com/posts/2012-11-22-introducing-the-rails-api-project">Introducing the Rails API Project
-</a></p>
-
-<p>Enjoy your weekend!</p>
-</div></div>
   
   
-
-
-      </article>
+  
     
+    <article class="b-post first">
     
-      <article>
-        
+      
   <header>
     
+      <div class="artwork">
+        
+          <img src="" />
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-3"><span>TL;DR: Lean From the Trenches, Schemaless SQL & Blowing in Nintendo Cartridges</span></a></h1><br />
+          <p class="meta">
 
 
 
@@ -170,47 +120,46 @@
 
 
 
-<section><time class="timestamp" datetime="2012-12-05T09:32:00+02:00" pubdate data-updated="true">
+<time class="timestamp" datetime="2012-10-05T18:00:00+02:00" pubdate data-updated="true">
     <span class='day'> 05</span>
-    <span class='month'> Dec</span>
+    <span class='month'> Oct</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Nicole Dirks</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
     
-      <h1 class="entry-title"><a href="/global-day-of-coderetreat-2012">Global Day of Coderetreat 2012</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/global-day-of-coderetreat-2012#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/weekly-roundup-3#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>We are proud to announce that <a href="http://siyelo.com">Siyelo</a> is one of the sponsors of the <a href="http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia">Global Day Of Coderetreat in Skopje (Macedonia)</a> for the second year in a row and <a href="https://twitter.com/dnasevic">Dalibor Nasevic</a> will be facilitating the event.</p>
 
-<p><img src="/images/posts/coderetreat_skopje_2012.png" alt="Global Day Of Coderetreat 2012 in Skopje (Macedonia)" /></p>
 
-<p><a href="http://coderetreat.org">Coderetreat</a> is a day-long, intensive practice event focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of &#8216;getting things done&#8217;, the coderetreat format has proven itself to be a fun and highly effective means of skill improvement.</p>
 
-<p>While on a Coderetreat the participants try to improve their craft by learning from each other, focusing on fundamental design principles (such as the Simple Rules of Design and the SOLID principles) and by challenging many of their every day assumptions.</p>
-
-<p>On December 8th, Coderetreats will be held all over the world as part of the <a href="http://globalday.coderetreat.org">Global Day of Coderetreat</a>. The Global Day of Coderetreat helps to raise awareness of Coderetreats and brings people together from all over the world. Most importantly, The Global Day of Coderetreat helps to support global efforts to find, encourage, and educate the next generation of software developers.</p>
-
-<p>Last year, 94 cities participated. This year, it is expected approximately 200 cities to participate with an average of 15-20 participants per city.</p>
-</div></div>
+    </article>
   
   
-
-
-      </article>
     
+    <article class="b-post list">
     
-      <article>
-        
+      
   <header>
     
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/its-not-you-its-me"><span>It&#8217;s Not You, It&#8217;s Me&#8230;</span></a></h1><br />
+          <p class="meta">
 
 
 
@@ -226,94 +175,46 @@
 
 
 
-<section><time class="timestamp" datetime="2012-11-27T10:01:00+02:00" pubdate data-updated="true">
-    <span class='day'> 27</span>
-    <span class='month'> Nov</span>
+<time class="timestamp" datetime="2012-10-05T15:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 05</span>
+    <span class='month'> Oct</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Peter Garbers</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
     
-      <h1 class="entry-title"><a href="/active-merchant-and-spree">Active Merchant and Spree</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/active-merchant-and-spree#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/its-not-you-its-me#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>Integrating an <a href="https://github.com/Shopify/active_merchant">ActiveMerchant</a> supported payment gateway into Spree is really easy but unfortunately it isn&#8217;t particularly well documented.  Below are the steps we followed to get it working:</p>
-
-<p>For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spree payment gateway.</p>
-
-<p>Add the ActiveMerchant gem:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#Gemfile</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;activemerchant&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/app/models/spree/gateway/pay_gate.rb</span>
-</span><span class='line'><span class="k">class</span> <span class="nc">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span> <span class="o">&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span>
-</span><span class='line'>  <span class="n">preference</span> <span class="ss">:login</span><span class="p">,</span> <span class="ss">:string</span>
-</span><span class='line'>  <span class="n">preference</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">:string</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">attr_accessible</span> <span class="ss">:preferred_login</span><span class="p">,</span> <span class="ss">:preferred_password</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">provider_class</span>
-</span><span class='line'>    <span class="no">ActiveMerchant</span><span class="o">::</span><span class="no">Billing</span><span class="o">::</span><span class="no">PayGateXmlGateway</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&#8217;s preferences system so that they can be filled in via the admin backend.</p>
-
-<p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#/config/application.rb</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">after_initialize</span> <span class="k">do</span>
-</span><span class='line'>  <span class="no">Rails</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">spree</span><span class="o">.</span><span class="n">payment_methods</span> <span class="o">&lt;&lt;</span> <span class="no">Spree</span><span class="o">::</span><span class="no">Gateway</span><span class="o">::</span><span class="no">PayGate</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
-</div></div>
+    </article>
   
   
-
-
-      </article>
     
+    <article class="b-post list">
     
-      <article>
-        
+      
   <header>
     
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-2"><span>TL;DR: Ruby Security Guide, Macedonian Parties & Moving Things Around</span></a></h1><br />
+          <p class="meta">
 
 
 
@@ -329,47 +230,46 @@
 
 
 
-<section><time class="timestamp" datetime="2012-11-16T17:09:00+02:00" pubdate data-updated="true">
-    <span class='day'> 16</span>
-    <span class='month'> Nov</span>
+<time class="timestamp" datetime="2012-09-28T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 28</span>
+    <span class='month'> Sep</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
     
-      <h1 class="entry-title"><a href="/weekly-roundup-7">TL;DR: Rails 4, a Responsive Cat & a Free Book</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/weekly-roundup-7#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/weekly-roundup-2#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!&#8230; Happy friday from Siyelo.</p>
 
-<p>If you love freebies check this out. Dalibor received a free &#8221;<a href="http://https://twitter.com/sandimetz/status/268753825916133376">Practical Object-Oriented Design in Ruby</a>&#8221; book thanks to Sandi Metz and InformIT.  Great customer service!</p>
 
-<p>Dali has been fully emerged in the <a href="http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/">Rails 4 compilation links</a>, a curated list of intersting links about the next release of Rails.  It&#8217;s got pull requests, issues, commits, examples, posts, videos and much more.</p>
 
-<p>Sachin spent way too much time playing with the <a href="http://roxik.com/cat/">Responsive cat</a>.  You may not have heard the term  <a href="http://kkovacs.eu/the-death-star-design-pattern">&#8216;The Death Star design pattern&#8217;</a> before but we&#8217;re sure you&#8217;ve come across it.  Finally, Sachin shared an article about <a href="http://tx.pignata.com/2012/11/being-for-the-benefit-of-future-developer.html">being for the benefit of future developer</a> - an interesting read with tips about what you can do to look after the next person that&#8217;ll working on your code.</p>
-
-<p>Glenn shared an article on <a href="http://www.businessinsider.com/how-startups-are-killing-off-bosses-2012-10">How Startups Are Killing Off Bosses</a>. Dime recommended downloading <a href="http://fitvidsjs.com/">Responsive videos</a>, A lightweight, easy-to-use jQuery plugin for fluid width video embeds and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> an iconic font designed for use with Twitter Bootstrap.</p>
-
-<p>Ile found <a href="http://www.youtube.com/watch?v=aBgnlBoIkVM">10 things you didn&#8217;t know you could do with Ruby</a> while watching cat videos on YouTube.  He also spent some time learning about things <a href="http://www.igvita.com/2012/11/14/wait-chrome-devtools-could-do-that/">you didn&#8217;t know you could do with Chrome dev tools</a>.</p>
-</div></div>
+    </article>
   
   
-
-
-      </article>
     
+    <article class="b-post list">
     
-      <article>
-        
+      
   <header>
     
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/siyelo-drinkup-skopje-the-photos"><span>Siyelo Drinkup Skopje, the Photos</span></a></h1><br />
+          <p class="meta">
 
 
 
@@ -385,67 +285,379 @@
 
 
 
-<section><time class="timestamp" datetime="2012-11-09T15:36:00+02:00" pubdate data-updated="true">
-    <span class='day'> 09</span>
-    <span class='month'> Nov</span>
+<time class="timestamp" datetime="2012-09-24T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 24</span>
+    <span class='month'> Sep</span>
     <span class='year'> 2012</span>
-  </time></section>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
     
-      <h1 class="entry-title"><a href="/weekly-roundup-6">TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing</a></h1>
     
     <!--  -->
     <!--   <p class="meta"> &#8211;>
     <!--      -->
-    <!--      | <a href="/weekly-roundup-6#disqus_thread">Comments</a> &#8211;>
+    <!--      | <a href="/siyelo-drinkup-skopje-the-photos#disqus_thread">Comments</a> &#8211;>
     <!--      -->
     <!--   </p> &#8211;>
     <!--  -->
   </header>
 
 
-  <div class="body"><div class="inner"><p>We have had quite a informative week according to our Dev chat sessions, we combined last week&#8217;s links with this week to give you quite a bit to cover.</p>
-
-<p>Dali shared a few great articles with us this week:</p>
-
-<ul>
-<li><a href="http://blog.8thlight.com/uncle-bob/2012/09/06/I-am-Your-New-CTO.html">New CTO</a> by Uncle Bob is an interesting read about how rational expectations from a new CTO may not always appear that way&#8230;until you look closely.</li>
-<li><a href="http://blog.8thlight.com/paul-pagel/2011/12/16/fixed-feature.html">Fixed Feature</a> - an Agile method of fixed bid compensation where clients only pay for the product they receive.</li>
-<li>The <a href="http://homepages.gold.ac.uk/polovina/learnpyramid/index.html">Learning Pyramid</a> diagram illustrates how much better teaching or doing is for retention of new information.</li>
-</ul>
 
 
-<p>It’s all too easy to give bad advice these days, Sachin recommends reading <a href="https://blog.intercom.io/asking-questions-versus-giving-advice/">asking questions versus giving advice</a>.</p>
 
-<p>Our newest addition Ile shared <a href="http://http://www.netmagazine.com/shop/magazines/december-2012-235">Killer features that are coming in Ruby 2.0.</a>.</p>
-
-<p>Dime introduced “<a href="http://www.netmagazine.com/shop/magazines/december-2012-235">how to achieve a more dynamic workflow</a>”, a Q&amp;A on <a href="http://uxdesign.smashingmagazine.com/2012/11/08/ux-design-qa-with-christian-holst/">Adaptive VS Responsive design</a> and lastly <a href="http://css-tricks.com/off-canvas-menu-with-css-target/">Off Canvas menu</a> layouts.</p>
-
-<p>Finally, we think 3Sheets may have just discovered the future of User Testing:</p>
-
-<iframe width="640" height="360" src="http://www.youtube.com/embed/4cMVKW-fR1M?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-
-
-<p>Enjoy your weekend!</p>
-</div></div>
+    </article>
   
   
-
-
-      </article>
     
-    <div class="pagination">
+    <article class="b-post list">
+    
       
-        <a class="prev" href="/page/4/">Older</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/junior-web-developer-wanted"><span>Junior Web Developer Wanted</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-09-20T16:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 20</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Dalibor Nasevic</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/junior-web-developer-wanted#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-      <a href="/blog/archives">Blog Archives</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/weekly-roundup-1"><span>TL;DR: Sachin&#8217;s Beard, Skeuomorphism & Knowledge Debt</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-09-13T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/weekly-roundup-1#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-      <a class="next" href="/page/2/">Newer</a>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/siyelo-drinkup-skopje"><span>Siyelo Drinkup: Skopje</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-09-11T16:09:00+02:00" pubdate data-updated="true">
+    <span class='day'> 11</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Glenn Roberts</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/siyelo-drinkup-skopje#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
       
-    </div>
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/were-hiring-experienced-web-developer"><span>We&#8217;re Hiring - Experienced Web Developer</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-09-11T15:45:00+02:00" pubdate data-updated="true">
+    <span class='day'> 11</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/were-hiring-experienced-web-developer#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/scratching-an-itch"><span>Scratching an Itch</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-09-07T18:00:00+02:00" pubdate data-updated="true">
+    <span class='day'> 07</span>
+    <span class='month'> Sep</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Sachin Ranchod</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/scratching-an-itch#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  
+    
+    <article class="b-post list">
+    
+      
+  <header>
+    
+      <div class="artwork">
+        
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="/rails-deployment-audit"><span>Rails Deployment Audit</span></a></h1><br />
+          <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-07-13T16:13:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Jul</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Dalibor Nasevic</span> <img src=""/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper"></p></div>
+    
+    
+    <!--  -->
+    <!--   <p class="meta"> &#8211;>
+    <!--      -->
+    <!--      | <a href="/rails-deployment-audit#disqus_thread">Comments</a> &#8211;>
+    <!--      -->
+    <!--   </p> &#8211;>
+    <!--  -->
+  </header>
+
+
+
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/4/">Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/2/">Newer</a>
+    
   </div>
-  <aside class="sidebar">
-    
-      <section>
+
+</div>
+
+
+<!-- <aside class="sidebar">
+  
+    <section>
   <h1>About</h1>
   <ul id="about">
     <li>
@@ -504,14 +716,12 @@
 </section>
 
 
-    
-  </aside>
-</div>
-
-  <footer role="contentinfo"><footer id="footer">
+  
+</aside> &#8211;>
+  <footer id="footer" role="contentinfo">
     <div class="wrapper">
       <ul class="clearfix">
-        <li class="fourth">
+        <li class="third">
           <a title="Email us - we want to hear from you" class="marker" href="mailto:info@siyelo.com">@</a>
           <span>Contact</span>
           <ul>
@@ -523,7 +733,7 @@
             </li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Cape Town" class="marker" target="_blank" href="http://g.co/maps/7xbpg">A</a>
           <span>Cape Town</span>
           <ul>
@@ -533,7 +743,7 @@
             <li>South Africa</li>
           </ul>
         </li>
-        <li class="fourth">
+        <li class="third">
           <a title="Siyelo office in Skopje" class="marker" target="_blank" href="http://g.co/maps/ssf42">B</a>
           <span>Skopje</span>
           <ul>
@@ -543,20 +753,20 @@
             <li>Macedonia</li>
           </ul>
         </li>
-        <li class="fourth social">
-          <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
-          <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
-          <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
-        </li>
       </ul>
-      <aside>
-        <a class="left back_to_top" href="#header">Back to top</a>
+      <footer id="b-footer">
+        <a class="left back_to_top" href="#blog">Back to top</a>
         <div class="right">
-          <a title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
+          <p class="social">
+            <a title="Siyelo on Twitter" href="http://twitter.com/#!/siyelo"><img alt="Siyelo on Twitter" src="http://siyelo.com/images/icons/twitter.png"></a>
+            <a title="Siyelo on Github" href="http://github.com/siyelo"><img alt="Siyelo on Github" src="http://siyelo.com/images/icons/github.png"></a>
+            <a title="Siyelo blog RSS feed" href="http://blog.siyelo.com/rss.xml"><img alt="Siyelo blog RSS feed" src="http://siyelo.com/images/icons/rss.png"></a>
+          </p>
+          <a class="cc" title="Creative Commons - some rights reserved" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
         </div>
-      </aside>
+      </footer>
     </div>
-  </footer>
+
 </footer>
   
 

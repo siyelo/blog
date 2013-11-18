@@ -1,15 +1,27 @@
-// encoding: UTF-8
 
-@import compass
+// Compass imports
 
-+global-reset
+@import "compass/reset"
+@import "compass/utilities"
+@import "compass/css3"
 
-+reset-html5
 
-//@import custom/colors
-//@import custom/fonts
-//@import custom/layout
-//@import custom/styles
-@import base
-@import partials
+// Base stylesheets
 
+@import base/colors
+@import base/layout
+@import base/typography
+
+
+// Shared stylesheets
+
+@import shared/header
+@import shared/footer
+
+
+// Custom stylesheets
+
+@import partials/listing
+@import partials/article
+@import partials/aside
+@import partials/syntax

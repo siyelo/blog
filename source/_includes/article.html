@@ -1,11 +1,30 @@
 {% unless page.no_header %}
   <header>
-    {% include post/date.html %}{{ time }}
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <div class="artwork">
+        {% if post.title == paginator.posts.first.title && post.date == paginator.posts.first.date %}
+          <img src="{{ post.image }}" />
+        {% endif %}
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}"><span>{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</span></a></h1><br />
+          <p class="meta">{% include post/date.html %}{{ time }} <span>By {{ post.author }}</span> <img src="{{ post.avatar }}"/> </p><br/>
+          
+        </div>
+      </section>
+     </div>
+     <div class="home headline block"><p class="wrapper">{{ post.headline }}</p></div>
     {% else %}
-      <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      <div class="artwork"><img src="{{ page.image }}" />
+      <section class="title">
+        <div class="wrapper">
+          <h1 class="entry-title"><span>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</span></h1><br />
+          <p class="meta">{% include post/date.html %}{{ time }} <span>By {{ page.author }}</span> <img src="{{ page.avatar }}"/> </p>
+        </div>
+      </section>
+      </div>
     {% endif %}
+    
     <!-- {% unless page.meta == false %} -->
     <!--   <p class="meta"> -->
     <!--     {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %} -->
@@ -15,14 +34,28 @@
     <!-- {% endunless %} -->
   </header>
 {% endunless %}
-{% if index %}
-  <div class="body"><div class="inner">{{ content | excerpt }}</div></div>
-  {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-  {% if excerpted == 'true' %}
-    <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
-    </footer>
-  {% endif %}
-{% else %}
-<div class="entry-content">{{ content }}</div>
-{% endif %}
+
+{% unless index %}
+    <div class="entry-content block">
+      <div class="wrapper">
+        <p class="headline">{{ page.headline }}</p>
+        {{ content }}
+        <footer class="b-footer block">
+          <div class="wrapper">
+
+            <div class="meta-data">
+              <!--<p class="meta">{% include post/date.html %}{{ time }} <span>By {{ page.author }}</span> <img src="{{ page.avatar }}"/> </p>
+              <span> in </span>
+              {% include post/categories.html %}-->
+
+              {% unless page.sharing == false %}
+                {% include post/sharing.html %}
+              {% endunless %}
+            </div>
+
+          </div>
+        </footer>
+      </div>
+    </div>
+{% endunless %}
+

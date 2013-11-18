@@ -4,9 +4,11 @@ title: "TL;DR - Bacon Pancakes, Dynamic attributes & MongoDB and Now I Know"
 date: 2013-01-25 16:51
 comments: true
 categories:
+author: Siyelo
+avatar: /images/avatar.jpg
+image: /images/artwork/macbook.jpg
+headline: This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- <a href="http://www.youtube.com/watch?v=zalYJacOhpo">Adventure Time Bacon Pancakes New York Remix</a> - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.
 ---
-
-This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- [Adventure Time Bacon Pancakes New York Remix!](http://www.youtube.com/watch?v=zalYJacOhpo) - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.
 
 Glenn recommended [Onepager](http://onepagerapp.com/) - a well designed site which solves a common problem. Glenn’s also just discovered the [Ruby Rogues](http://rubyrogues.com) podcast (we know, he's a bit delayed...).  They have great panelists and interesting topics - it is practically required listening at Siyelo these days.
 
