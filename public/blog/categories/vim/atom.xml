@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T01:32:48+01:00</updated>
+  <updated>2013-11-18T17:04:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.siyelo.com/vim-tips-part-ii"/>
     <updated>2012-07-03T16:39:23+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-ii</id>
-    <content type="html"><![CDATA[<p>This week we'll share few more userful Vim tips that we've learned recently, most of them from the <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book. You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
+    <content type="html"><![CDATA[<p>You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
 
 <h2>1. Replace in multiple files</h2>
 
@@ -120,7 +120,7 @@ set -o emacs
     <link href="http://blog.siyelo.com/vim-tips-part-i"/>
     <updated>2012-06-27T09:50:00+02:00</updated>
     <id>http://blog.siyelo.com/vim-tips-part-i</id>
-    <content type="html"><![CDATA[<p>At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful. Most of the tips we've learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+    <content type="html"><![CDATA[<p>Most of the tips we've learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
 
 <h3>1. Repeat the last Ex command</h3>
 

@@ -4,7 +4,10 @@ title: "TL;DR: Making Rails fast, Practical OO & Google data centers"
 date: 2012-10-19 16:00:00
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/datacenter.jpg
+headline: Best picks from our lovely devchat.
 ---
 
 Dalibor has been reading up on how to boost the performance of Rails apps (hat tip to [@railsonfire](http://www.twitter.com/railsonfire)):

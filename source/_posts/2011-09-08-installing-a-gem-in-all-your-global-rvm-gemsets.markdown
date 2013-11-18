@@ -5,9 +5,11 @@ date: 2011-09-08 18:46:00
 comments: true
 categories:
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/macbook-keyboard.png
+headline: Across different projects like us, you probably have a lot of development gems you like to use.
 ---
-
-Across different projects like us, you probably have a lot of development gems you like to use. E.g. we like;
+E.g. we like;
 
 ``` ruby
 group :development do

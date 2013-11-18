@@ -5,9 +5,11 @@ date: 2012-12-05 09:32
 comments: true
 categories: coderetreat
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/citizen-space.jpg
+headline: We are proud to announce that Siyelo is one of the sponsors of the Global Day Of Coderetreat in Skopje (Macedonia) for the second year in a row and Dalibor Nasevic will be facilitating the event.
 ---
 
-We are proud to announce that [Siyelo](http://siyelo.com) is one of the sponsors of the [Global Day Of Coderetreat in Skopje (Macedonia)](http://coderetreat.org/events/global-day-of-coderetreat-2012-skopje-macedonia) for the second year in a row and [Dalibor Nasevic](https://twitter.com/dnasevic) will be facilitating the event.
 
 ![Global Day Of Coderetreat 2012 in Skopje (Macedonia)](/images/posts/coderetreat_skopje_2012.png)
 

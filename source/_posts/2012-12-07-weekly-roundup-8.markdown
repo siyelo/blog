@@ -4,10 +4,12 @@ title: "TL;DR: D3, Refactoring ActveRecord models & Templates for consulting eng
 date: 2012-12-07 13:46
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/studio.jpg
+headline: It's that time again... Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.
 ---
 
-It's that time again... Friday and we all know that means Dev Chat. This week we had an insightful and abundant sharing of links.
 
 Dime shared Data Driven Documents, [D3.js](http://d3js.org/) is a JavaScript library for manipulating documents based on data.
 

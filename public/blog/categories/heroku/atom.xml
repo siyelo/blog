@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Heroku | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T01:32:48+01:00</updated>
+  <updated>2013-11-18T17:04:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -47,9 +47,7 @@ $ heroku pg:reset SHARED_DATABASE --app
     <link href="http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps"/>
     <updated>2010-12-01T10:23:45+01:00</updated>
     <id>http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps</id>
-    <content type="html"><![CDATA[<p>While recently switching over a client's web app, and their mailservers to Google Apps, I found that Zerigo's template feature would make me less likely to murder kittens whenever I'm asked to do anything related to DNS.</p>
-
-<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
+    <content type="html"><![CDATA[<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
 
 <p>So here's our Zerigo DNS template for a Heroku + Google Apps setup.</p>
 

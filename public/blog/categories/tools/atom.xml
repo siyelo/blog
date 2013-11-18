@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T01:32:48+01:00</updated>
+  <updated>2013-11-18T17:04:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.siyelo.com/rails-deployment-audit"/>
     <updated>2012-07-13T16:13:00+02:00</updated>
     <id>http://blog.siyelo.com/rails-deployment-audit</id>
-    <content type="html"><![CDATA[<p>We recently undertook an audit of a Rails deployment for a system developed by <a href="http://www.redcometlabs.com/">Red Comet Labs</a>. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
-
-<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we'll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
+    <content type="html"><![CDATA[<p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we'll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
 
 <h2>Extract sensitive data</h2>
 
@@ -146,7 +144,7 @@
     <link href="http://blog.siyelo.com/siyelos-git-workflow"/>
     <updated>2011-12-12T10:53:00+01:00</updated>
     <id>http://blog.siyelo.com/siyelos-git-workflow</id>
-    <content type="html"><![CDATA[<p>Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: </p>
+    <content type="html"><![CDATA[<p>In this post I’m going to give a brief outline of how we work: </p>
 
 <h3>Named Branches</h3>
 
@@ -185,7 +183,7 @@
     <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
     <updated>2011-11-03T09:37:00+01:00</updated>
     <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
-    <content type="html"><![CDATA[<p>At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices. There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
+    <content type="html"><![CDATA[<p> There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
 
 <p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 

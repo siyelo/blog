@@ -5,6 +5,9 @@ date: 2011-02-05 10:14:27
 comments: true
 categories: Ruby Conferences
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/capetown.jpg
+headline: Couple of photos from this year's RubyFuZa in Cape Town
 ---
 
 [![Img_1419](/images/old/2011/02/img_1419-scaled-1000.jpg) ](/images/old/2011/02/img_1419-scaled-1000.jpg)

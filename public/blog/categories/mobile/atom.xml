@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T01:32:48+01:00</updated>
+  <updated>2013-11-18T17:04:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.siyelo.com/jquery-mobile-overview"/>
     <updated>2011-12-14T10:51:00+01:00</updated>
     <id>http://blog.siyelo.com/jquery-mobile-overview</id>
-    <content type="html"><![CDATA[<p>We've all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?</p>
-
-<p>It's been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
+    <content type="html"><![CDATA[<p>It's been almost a month since the 1.0 stable release of <a href="http://jquerymobile.com/">jQuery Mobile</a> , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive <a href="http://jquerymobile.com/gbs/">graded support</a> for a wide range of mobile browsers and platforms.</p>
 
 <p>Built upon the jQuery core and the jQuery UI, the framework aims to deliver a quick and easy way to build unified cross-platform HTML5 based user interfaces with a single code base. All you need to start building applications using the framework is knowledge of some JavaScript and some HTML5.</p>
 

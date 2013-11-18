@@ -4,10 +4,12 @@ title: "The Siyelo Book Club"
 date: 2012-11-08 16:08
 comments: true
 categories:
-author: Nicole Dirks
+author: Siyelo
+image: /images/artwork/bookshelf.jpg
+avatar: /images/avatars/siyelo.jpg
+headline: We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we've decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.
 ---
 
-We believe that reading books on a variety of topics is one of the easiest ways to sharpen the (professional and personal) saw. For this reason, we've decided to start a book club amongst the team. Every reads the same book and when we reach the deadline, we organize a Google+ Hangout to discuss our thoughts on it.
 
 If you are interested in joining the Hangout, let us know (through the comments or on Twitter).  The next one will be on 12 Nov at 13:30 (GMT+2). We'll be chatting about [The Pragmatic Programmer](http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/).
 

@@ -5,6 +5,9 @@ date: 2011-07-27 13:08:00
 comments: true
 categories: Heroku
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/macbook-color-keyboard.png
+headline: Our own Glenn shares a quick Heroku trick
 ---
 
 If you're trying to drop your database on Heroku, and it's not working, be sure you put it in maintenance mode first. i.e.

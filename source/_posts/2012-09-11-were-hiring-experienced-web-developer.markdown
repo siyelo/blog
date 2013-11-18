@@ -5,12 +5,10 @@ date: 2012-09-11 13:45:00
 comments: true
 categories: Jobs
 author: Sachin Ranchod
+avatar: /images/avatars/sachin.jpg
+image: /images/artwork/macbook-keyboard.png
+headline: Siyelo is growing and we're looking for talented software developers to join our team!
 ---
-
-[![Nsyncsongpics1llj5txulpx8qrm](/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg) ](/images/old/2012/09/nsyncsongpics1llj5txulpx8qrm.jpeg)
-
-Siyelo is growing and we're looking for talented software developers to join our team!
-
 ##Opportunity
 
 Be a part of an entrepreneurial and focused Ruby/Rails software consultancy, where *everybody codes* (yes, even our designer Dime has mad coding skills)*.* We are looking for people with strong web development backgrounds, with a passion for clean code and great software.

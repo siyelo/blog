@@ -5,12 +5,10 @@ date: 2012-05-11 14:07:00
 comments: true
 categories: Jobs
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/bookshelf.jpg
+headline: Siyelo is growing fast and we're looking for a bright, hardworking individual to join our team as a Social Media Intern!
 ---
-
-Siyelo is growing fast and we're looking for a bright, hardworking individual to join our team as a Social Media Intern!
-
-–
-
 **Location**: Cape Town, South Africa
 
 **Start date**: June 2012

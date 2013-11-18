@@ -5,10 +5,12 @@ date: 2012-11-27 10:01
 comments: true
 categories: rails
 author: Sachin Ranchod
+image: /images/artwork/macbook.jpg
+avatar: /images/avatars/sachin.jpg
+headline: Integrating an ActiveMerchant supported payment gateway into Spree is really easy but unfortunately it isn't particularly well documented.
 ---
 
-Integrating an [ActiveMerchant](https://github.com/Shopify/active_merchant) supported payment gateway into Spree is really easy but unfortunately it isn't particularly well documented.  Below are the steps we followed to get it working:
-
+Below are the steps we followed to get it working:
 For the purposes of this example, we'll be adding PayGate PayXML as a Spree payment gateway.
 
 Add the ActiveMerchant gem:

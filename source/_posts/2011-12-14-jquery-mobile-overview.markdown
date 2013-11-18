@@ -5,9 +5,10 @@ date: 2011-12-14 09:51:00
 comments: true
 categories: Mobile
 author: Naum Kostovski
+avatar: /images/avatars/naum.jpg
+image: /images/artwork/metal-grid.jpg
+headline: We've all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?
 ---
-
-We've all heard it, the browser is the future for the mobile  applications. Mobile web frameworks are getting a lot of traction  lately. Is this the turning point where these frameworks will finally  set the developers free from the walled garden model of the Apple App  Store and the complexity and resources needed for developing and  maintaining a separate code base for each platform out there?
 
 It's been almost a month since the 1.0 stable release of [jQuery Mobile](http://jquerymobile.com/) , the touch optimized mobile web framework. Only a year after John Resig announced the project in its first alpha stage, the jQuery team managed to deliver a solid release with an impressive [graded support](http://jquerymobile.com/gbs/) for a wide range of mobile browsers and platforms.
 

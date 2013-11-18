@@ -5,10 +5,10 @@ date: 2012-09-13 16:00:00
 comments: true
 categories: Weekly Roundup
 author: Sachin Ranchod
+avatar: /images/avatars/sachin.jpg
+image: /images/artwork/rails.jpg
+headline: We share a lot of stuff in our Dev Chat during the course of a week - most of it isn't safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  
 ---
-
-We share a lot of stuff in our Dev Chat during the course of a week - most of it isn't safe for public consumption but there are always a few things which are really interesting, thought-provoking or just plain funny.  
-
 This post starts a series of weekly articles where we'll keep a record of our favourite finds on the internet over the previous 7 days. Hopefully you find the links below as interesting as we have: 
 
 This week Peter has been mulling over ways of preventing a "[knowledge debt problem](http://nathanmarz.com/blog/your-company-has-a-knowledge-debt-problem.html)". He's also recommended that you watch Rich Hickey's presentation on [Simple made Easy](http://www.infoq.com/presentations/Simple-Made-Easy).  

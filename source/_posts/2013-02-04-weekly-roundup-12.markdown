@@ -6,7 +6,7 @@ comments: true
 categories: weekly roundup
 author: Nicole Dirks
 avatar: /images/avatar.jpg
-image: /images/artwork/applewars.jpg
+image: /images/artwork/macbook-keyboard.png
 headline: Here's our recommended reading list for the coming week
 ---
 

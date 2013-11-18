@@ -5,10 +5,10 @@ date: 2012-09-28 16:00:00
 comments: true
 categories: Weekly Roundup
 author: Sachin Ranchod
+avatar: /images/avatars/sachin.jpg
+image: /images/artwork/citizen-space.jpg
+headline: This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you'll find something thought provoking. 
 ---
-
-This is our second instalment of our Dev Chat highlight package, unfortunately we do not have a catchy beard song for you guys but hopefully you'll find something thought provoking. 
-
 First up, Sachin shared [The Ruby Security Reviewer's Guide](http://code.google.com/p/ruby-security/wiki/Guide), it's not the most comprehensive guide but it actually provides a great introduction to the Ruby language. 
 
 Has the optimism around Rails disappeared? Peter took a look at "[Why Rail critics have it all wrong](http://www.unlimitednovelty.com/2012/03/why-critics-of-rails-have-it-all-wrong.html)?" Share your thoughts with us.

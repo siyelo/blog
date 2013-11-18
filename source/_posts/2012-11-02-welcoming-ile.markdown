@@ -4,10 +4,13 @@ title: "Welcoming Ile - Our newest team member"
 date: 2012-11-02 15:20
 comments: true
 categories: team
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/minions.jpg
+headline: We're very proud to announce the newest addition to the Siyelo team - Ile Eftimov.
 ---
 
-We're very proud to announce the newest addition to the Siyelo team - Ile Eftimov. Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.
+Ile is a recent computer science graduate who is crossing over from PHP to the wonderful world of Ruby and Rails. We did a brief Q and A with Ile.
 
 ![](/images/posts/ile.jpg)
 

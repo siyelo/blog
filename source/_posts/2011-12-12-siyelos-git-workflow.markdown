@@ -5,10 +5,11 @@ date: 2011-12-12 09:53:00
 comments: true
 categories: Git Tools
 author: Peter Garbers
+avatar: /images/avatars/peter.jpg
+image: /images/artwork/vim.jpg
+headline: Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us.
 ---
-
-Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us. In this post I’m going to give a brief outline of how we work: 
-
+In this post I’m going to give a brief outline of how we work: 
 ### Named Branches
 
 We rarely work on dev/master. Almost every feature we work on will get it’s own branch. Each branch will be pushed up to github in their own namepace (to prevent cluttering).

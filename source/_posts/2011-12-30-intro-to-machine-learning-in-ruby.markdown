@@ -5,6 +5,9 @@ date: 2011-12-30 10:41:00
 comments: true
 categories: Ruby Tutorial
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/studio.jpg
+headline: Let's take a look at Machine Learning in Ruby
 ---
 
 Machine learning is branch of **A**rtificial **I**ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.

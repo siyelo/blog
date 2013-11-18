@@ -6,7 +6,8 @@ comments: true
 categories: []
 author: Siyelo
 avatar: /images/avatar.jpg
-image: /images/artwork/studio.jpg
+image: /images/artwork/keys.jpg
+headline: "What happened & what you should do."
 ---
 
 Last Tuesday, everyone in the Rails world launched into action after this [tweet](https://twitter.com/rails/status/288743490744094720). An unusual "Upgrade IMMEDIATELY" advisory.

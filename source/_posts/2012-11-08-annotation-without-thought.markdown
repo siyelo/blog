@@ -5,11 +5,10 @@ date: 2012-11-08 11:48
 comments: true
 categories:
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/macbook-color-keyboard.png
+headline: If you like your schema definitions handy in the current ActiveRecord model you're looking at, you're probably using the annotate_models gem.
 ---
-
-If you like your schema definitions handy in the current ActiveRecord
-model you're looking at, you're probably using the
-[annotate_models gem]("https://github.com/ctran/annotate_models")
 
 If you're on Rails and want to automagically 'annotate your models when running rake db:migrate, include this rake task in your project;
 

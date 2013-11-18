@@ -5,10 +5,10 @@ date: 2012-07-13 14:13:00
 comments: true
 categories: Rails Tools
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/rails.jpg
+headline: We recently undertook an audit of a Rails deployment for a system developed by Red Comet Labs. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.
 ---
-
-We recently undertook an audit of a Rails deployment for a system developed by [Red Comet Labs](http://www.redcometlabs.com/). It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.
-
 We shared our Rails Deployment experience with Red Comet Labs, and in this article we'll discuss a checklist of some [devops](http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/) practices and tools we are familiar with.
 
 ## Extract sensitive data

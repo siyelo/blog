@@ -5,6 +5,9 @@ date: 2013-01-15 10:18
 comments: true
 categories: git
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/branches.jpg
+headline: "If you're going to rewrite (git) history you better know what you're doing."
 ---
 
 I often find myself wondering when to do a interactive rebase (`` git rebase ``) vs a squashed merge (``git merge --squash ``). The answer is rather subtle and can be found [here](http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase). Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).

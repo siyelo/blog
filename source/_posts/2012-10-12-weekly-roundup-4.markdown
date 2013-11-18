@@ -4,10 +4,11 @@ title: "TL;DR: Great RSpect tests, TripAdvisors growth & Going password-less"
 date: 2012-10-12 16:00:00
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/metal-grid.jpg
+headline: Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here's this week's edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.
 ---
-
-Another week has hurried by leaving us with exactly 80 days left to the end of 2012! Here's this week's edition of the Dev Chat round-up - let us know if you have any articles that you think we missed over the last 7 days.
 
 Sachin and Glenn shared some tips & tricks:
 

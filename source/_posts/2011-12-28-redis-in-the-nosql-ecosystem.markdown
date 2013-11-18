@@ -5,6 +5,9 @@ date: 2011-12-28 21:01:00
 comments: true
 categories: Tools
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/airplane.jpg
+headline: Our thoughts on Redis in the NoSQL ecosystem
 ---
 
 Redis (**RE**mote **D**Ictionary **S**erver) is key-value in-memory database storage that also supports disk storage for persistence. It supports several [data types](http://redis.io/topics/data-types-intro): Strings, Hashes, Lists, Sets and Sorted Sets; implements [publish/subscribe](http://redis.io/topics/pubsub) messaging paradigm and has [transactions](http://redis.io/topics/transactions).

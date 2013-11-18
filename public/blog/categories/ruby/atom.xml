@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T01:32:48+01:00</updated>
+  <updated>2013-11-18T17:04:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.siyelo.com/scratching-an-itch"/>
     <updated>2012-09-07T18:00:00+02:00</updated>
     <id>http://blog.siyelo.com/scratching-an-itch</id>
-    <content type="html"><![CDATA[<p>This week we released a very simple gem called <a href="https://rubygems.org/gems/should_clean">ShouldClean</a>. ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it 'should do this...', it 'should do that...') into a cleaner and simpler imperative style (it 'does this...', it 'does that...').  </p>
+    <content type="html"><![CDATA[<p><a href="https://rubygems.org/gems/should_clean">ShouldClean</a> is a tool to help us convert RSpec test descriptions from a pile of should (it 'should do this...', it 'should do that...') into a cleaner and simpler imperative style (it 'does this...', it 'does that...').  </p>
 
 <p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word 'should' and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
 
@@ -238,9 +238,7 @@ end</p>
     <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
     <updated>2011-10-04T14:45:00+02:00</updated>
     <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
-    <content type="html"><![CDATA[<p>A great photo from the programming class @glennrob is involved with.</p>
-
-<p>(they're learning ruby)</p>
+    <content type="html"><![CDATA[<p>(they're learning ruby)</p>
 
 <p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
 ]]></content>

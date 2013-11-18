@@ -5,11 +5,10 @@ date: 2013-01-18 13:36
 comments: true
 categories:
 author: Nicole Dirks
-avatar: /images/avatar.jpg
-image: /images/artwork/macbook.jpg
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/metal-grid.jpg
+headline: It's a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.
 ---
-
-It's a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.
 
 This week our dev chat we had quite a few interesting articles posted...
 

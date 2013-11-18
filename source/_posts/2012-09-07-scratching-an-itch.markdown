@@ -5,9 +5,11 @@ date: 2012-09-07 16:00:00
 comments: true
 categories: Ruby Open-Source
 author: Sachin Ranchod
+avatar: /images/avatars/sachin.jpg
+image: /images/artwork/branches.jpg
+headline: This week we released a very simple gem called ShouldClean. 
 ---
-
-This week we released a very simple gem called [ShouldClean](https://rubygems.org/gems/should_clean). ShouldClean is a tool to help us convert RSpec test descriptions from a pile of should (it 'should do this...', it 'should do that...') into a cleaner and simpler imperative style (it 'does this...', it 'does that...').  
+[ShouldClean](https://rubygems.org/gems/should_clean) is a tool to help us convert RSpec test descriptions from a pile of should (it 'should do this...', it 'should do that...') into a cleaner and simpler imperative style (it 'does this...', it 'does that...').  
 
 The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word 'should' and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: 
 

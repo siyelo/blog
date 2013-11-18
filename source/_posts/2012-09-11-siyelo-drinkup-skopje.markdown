@@ -5,6 +5,9 @@ date: 2012-09-11 14:09:00
 comments: true
 categories: Fun
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/party.jpg
+headline: Wanna party with Siyelo Macedonia?
 ---
 
 There'll be [three](https://github.com/dalibor) [Siyelo](https://github.com/Dime) [folks](https://github.com/glennr) in town next week, and we're looking forward to meeting up with our friends in the web design/development community in MK.

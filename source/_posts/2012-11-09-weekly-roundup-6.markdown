@@ -4,11 +4,11 @@ title: "TL;DR: Learning Pyramids, Ruby 2.0 and Drunken User Testing"
 date: 2012-11-09 15:36
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/macbook-keyboard.png
+headline: We have had quite a informative week according to our Dev chat sessions, we combined last week's links with this week to give you quite a bit to cover.
 ---
-
-We have had quite a informative week according to our Dev chat sessions, we combined last week's links with this week to give you quite a bit to cover.
-
 Dali shared a few great articles with us this week:
 
 *  [New CTO](http://blog.8thlight.com/uncle-bob/2012/09/06/I-am-Your-New-CTO.html) by Uncle Bob is an interesting read about how rational expectations from a new CTO may not always appear that way...until you look closely.

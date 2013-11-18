@@ -4,11 +4,11 @@ title: "TL;DR: Rails 4, a responsive cat & a free book"
 date: 2012-11-16 17:09
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+image: /images/artwork/rails.jpg
+avatar: /images/avatars/siyelo.jpg
+headline: With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!... Happy friday from Siyelo.
 ---
-
-With 42 Days left in 2012 until the Mayan Apocalypse and the world comes to an END we’ve decided to to share as much of our insight as possible!... Happy friday from Siyelo.
-
 If you love freebies check this out. Dalibor received a free "[Practical Object-Oriented Design in Ruby](http://https://twitter.com/sandimetz/status/268753825916133376)" book thanks to Sandi Metz and InformIT.  Great customer service!
 
 Dali has been fully emerged in the [Rails 4 compilation links](http://blog.wyeworks.com/2012/11/13/rails-4-compilation-links/), a curated list of intersting links about the next release of Rails.  It's got pull requests, issues, commits, examples, posts, videos and much more.

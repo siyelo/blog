@@ -5,6 +5,9 @@ date: 2011-07-31 22:48:00
 comments: true
 categories: Git
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/macbook-color-keyboard.png
+headline: A quick but useful git trick
 ---
 
 project had a lot of old, unwanted pre-release branch tags in our remote git repo. E.g.:

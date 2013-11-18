@@ -4,11 +4,11 @@ title: "TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cart
 date: 2012-10-05 16:00:00
 comments: true
 categories: Weekly Roundup
-author: Nicole Dirks
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/macbook-keyboard.png
+headline: We bring you the third installment of our ever engaging Dev chat session shares.
 ---
-
-We bring you the third installment of our ever engaging Dev chat session shares.
-
 Dalibor recommended that we all read ['Lean from the Trenches: Managing Large-Scale Projects with Kanban'](http://pragprog.com/book/hklean/lean-from-the-trenches)  by Henrik Kniberg.  It's a great look at a practical implementation of Kanban.  We'll definitely be trying this out with future projects.
 
 Peter was all about [Schmaless SQL](http://www.confreaks.com/videos/971-mwrc2012-schemaless-sql-the-best-of-both-worlds)  this week. Will Leinweber gave a great presentation on the topic at this year's MountainWest RubyConf.

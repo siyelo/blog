@@ -5,9 +5,11 @@ date: 2012-09-20 14:00:00
 comments: true
 categories: Jobs
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/macbook.jpg
+headline: Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.
 ---
 
-Siyelo is a specialist Ruby on Rails consultancy and we are hiring a junior web developer to join our team in Skopje.
 
 ## Opportunity
 

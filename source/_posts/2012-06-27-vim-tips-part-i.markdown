@@ -5,9 +5,12 @@ date: 2012-06-27 07:50:00
 comments: true
 categories: Vim Tutorial
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/vim.png
+headline: At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful.
 ---
 
-At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful. Most of the tips we've learned from the great [Practical Vim](http://pragprog.com/book/dnvim/practical-vim) book by Drew Neil.
+Most of the tips we've learned from the great [Practical Vim](http://pragprog.com/book/dnvim/practical-vim) book by Drew Neil.
 
 ### 1. Repeat the last Ex command
 

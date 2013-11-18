@@ -6,6 +6,7 @@ comments: true
 categories:
 author: Glenn Roberts
 avatar: /images/avatar.jpg
+image: /images/artwork/squash.jpg
 headline: ... and you should feel bad.
 ---
 

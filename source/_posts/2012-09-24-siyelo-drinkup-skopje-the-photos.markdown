@@ -5,9 +5,10 @@ date: 2012-09-24 16:00:00
 comments: true
 categories: Fun
 author: Sachin Ranchod
+avatar: /images/avatars/sachin.jpg
+image: /images/artwork/skopje-drinkup.jpg
+headline: Some photos from our drinkup on Wednesday night. Thanks to all who came along!
 ---
-
-Some photos from our drinkup on Wednesday night. Thanks to all who came along!
 
 [![](/images/old/2012/09/drinkup/scaled/DSC_0003.jpg)](/images/old/2012/09/drinkup/scaled/DSC_0003.jpg)
 

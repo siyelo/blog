@@ -5,10 +5,10 @@ date: 2011-03-04 12:20:27
 comments: true
 categories: Jobs
 author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/bookshelf.jpg
+headline: Siyelo is an international Ruby on Rails agency, with solid backing and a growing portfolio of great projects, and happy clients.
 ---
-
-[Siyelo](http://www.siyelo.com) is an international Ruby on Rails agency, with solid backing and a growing portfolio of great projects, and happy clients.
-
 ### Opportunity
 
 This is an opportunity to be a part of an entrepreneurial and focused Ruby/Rails consultancy. We are looking for people with strong web development backgrounds, with a passion for clean code and great software.

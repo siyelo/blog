@@ -5,9 +5,10 @@ date: 2012-10-05 13:00:00
 comments: true
 categories: Team, Fun
 author: Peter Garbers
+avatar: /images/avatars/peter.jpg
+headline: Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here's the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers.
+image: /images/artwork/airplane.jpg
 ---
-
-Part of a tradition (that we borrowed from our friends at World Wide Creative) is for everyone to write a light-hearted resignation note when they leave Siyelo. Here's the one from our resident Clojure expert, and Ping-Pong Chief, Peter Garbers;
 
 [![](/images/old/2012/10/balls_of_fury.jpg)](/images/old/2012/10/balls_of_fury.jpg)
 

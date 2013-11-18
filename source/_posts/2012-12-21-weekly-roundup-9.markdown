@@ -3,11 +3,12 @@ layout: post
 title: "TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use"
 date: 2012-12-21 14:35
 comments: true
-author: Nicole Dirks
+author: Siyelo
 categories: weekly roundup
+avatar: /images/avatars/siyelo.jpg
+image: /images/artwork/shuttle-takeoff.jpg
+headline: So the Mayan apocalypse was a dud... Thankfully so because it would've ruined a perfect day in Cape Town.
 ---
-
-So the Mayan apocalypse was a dud... Thankfully so because it would've ruined a perfect day in Cape Town.
 
 This week Dalibor got one step closer to his goal of [Programming like Kent Beck](http://blog.iterate.no/2012/06/20/programming-like-kent-beck/).  He also spent some time reading up on what constitutes good design and why PG thinks it's not [subjective or abstract](http://paulgraham.com/taste.html).
 

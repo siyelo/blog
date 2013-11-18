@@ -5,9 +5,11 @@ date: 2010-12-01 09:23:45
 comments: true
 categories: Heroku
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/datacenter.jpg
+headline: While recently switching over a client's web app, and their mailservers to Google Apps, I found that Zerigo's template feature would make me less likely to murder kittens whenever I'm asked to do anything related to DNS.
 ---
 
-While recently switching over a client's web app, and their mailservers to Google Apps, I found that Zerigo's template feature would make me less likely to murder kittens whenever I'm asked to do anything related to DNS.
 
 ![Pastedgraphic-10](/images/old/2010/12/pastedgraphic-10.png)
 

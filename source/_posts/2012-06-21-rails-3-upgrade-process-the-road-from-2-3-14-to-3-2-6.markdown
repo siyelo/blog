@@ -4,10 +4,12 @@ title: "Rails 3 upgrade process (the road from 2.3.14 to 3.2.6)"
 date: 2012-06-21 16:10:35
 comments: true
 categories: Rails
-author:
+author: Dalibor Nasevic
+avatar: /images/avatars/dalibor.jpg
+image: /images/artwork/branches.jpg
+headline: We've just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we'll share some details about the experience and the process we took for the upgrade.
 ---
-
-We've just upgraded an application with about 20K LOC (Lines Of Code) from Rails 2.3.14 to Rails 3.2.6 and Ruby 1.8.7 to Ruby 1.9.3. Here we'll share some details about the experience and the process we took for the upgrade. Before the upgrade, it's advisable to migrate to the latest Rails 2.3 version (2.3.14).
+Before the upgrade, it's advisable to migrate to the latest Rails 2.3 version (2.3.14).
 
 ### Versions running out of support...
 
