@@ -3,7 +3,7 @@ layout: post
 title: "Introducing..."
 date: 2013-05-03 15:37
 comments: true
-categories: newcomers, welcoming
+categories: [newcomers, welcoming]
 image: /images/artwork/applewars.jpg
 avatar: /images/avatars/nic.jpg
 author: Nic Young

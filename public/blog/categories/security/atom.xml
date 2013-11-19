@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: security | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:38:15+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Security Vulnerabilities]]></title>
+    <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
+    <updated>2013-01-18T17:51:00+01:00</updated>
+    <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
+    <content type="html"><![CDATA[<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It's not always trivial, and we ran into problems ourselves. But here's how we went about it.</p>
+
+<h2>What happened?</h2>
+
+<p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
+
+<h2>What's the first issue?</h2>
+
+<p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
+
+<h2>And the second issue?</h2>
+
+<p>The second issue was actually multiple vulnerabilities. Yes, plural. Aaron found multiple weaknesses in the parameter parsing code which would allow an attacker to bypass authentication systems, inject arbitrary SQL, inject and execute arbitrary code or even perform a DDoS attack on a Ruby on Rails application. Sounds scary, right? It is; this vulnerability was found on <strong>all</strong> (current) Rails versions. Every Rails application was affected by these vulnerabilities.</p>
+
+<h2>What to do?</h2>
+
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can't stress enough that you must upgrade your Rails applications now!</p>
+
+<p>If you haven't upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+]]></content>
+  </entry>
+  
+</feed>

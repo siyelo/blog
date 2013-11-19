@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:38:15+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Scratching an itch]]></title>
+    <link href="http://blog.siyelo.com/scratching-an-itch"/>
+    <updated>2012-09-07T18:00:00+02:00</updated>
+    <id>http://blog.siyelo.com/scratching-an-itch</id>
+    <content type="html"><![CDATA[<p><a href="https://rubygems.org/gems/should_clean">ShouldClean</a> is a tool to help us convert RSpec test descriptions from a pile of should (it 'should do this...', it 'should do that...') into a cleaner and simpler imperative style (it 'does this...', it 'does that...').  </p>
+
+<p>The gem works by running through a specified directory and changing the offending descriptions within any spec files it finds. ShouldClean will remove the word 'should' and will conjugate the verb to its singular 3rd person, present indicative form (huh?). For example: </p>
+
+<p><code>ruby
+it "should be true"          #=&gt; it "is true"
+it "should action something" #=&gt; it "actions something"
+it "should push something"   #=&gt; it "pushes something"
+it "should by default be 1"  #=&gt; it "by default is 1"
+</code></p>
+
+<p>Are a few extra 'shoulds' really that big of deal? Probably not - it really boils down to a matter of preference.  For us, running this tool on projects with large test suites helps:</p>
+
+<ol>
+<li>make the tests more readable;</li>
+<li>it reduces unneccessary duplication in the spec files and the test output;</li>
+<li>An added benefit is that the test suite has a mood of certainty about it - reading the tests tells you what the code does, not what it should do when everything falls into place. </li>
+</ol>
+
+
+<p>ShouldClean is just a simple, fun project we undertook to make the code we look at everyday, slightly better.  Hopefully you can find a use for it too - remember, pull requests are always welcome (<a href="http://www.github.com/siyelo/should_clean">http://www.github.com/siyelo/should_clean</a>).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Intro to Machine Learning in Ruby]]></title>
+    <link href="http://blog.siyelo.com/intro-to-machine-learning-in-ruby"/>
+    <updated>2011-12-30T11:41:00+01:00</updated>
+    <id>http://blog.siyelo.com/intro-to-machine-learning-in-ruby</id>
+    <content type="html"><![CDATA[<p>Machine learning is branch of <strong>A</strong>rtificial <strong>I</strong>ntelligence (AI) concerned with design and development of algorithms that allow computers to learn. It's a very broad subject so we will just focus on a simple example that uses statistical classification.</p>
+
+<h3>Let's build...</h3>
+
+<p>In this tutorial we are going to build a simple news classification application that will parse and classify RSS/HTML articles from the <a href="http://www.timeslive.co.za/">Times Live</a> newspaper.</p>
+
+<p>For the job, we will use <strong>nokogiri</strong> gem and 2 ruby standard libraries: <strong>open-uri</strong> and <strong>rss/2.0</strong>.</p>
+
+<h3>RSS Parser</h3>
+
+<p>To find sources of articles for processing,  we could build a complex search engine or we can simply use the RSS feeds the newspaper provides us with to look for and discover links. <strong>RssParser</strong> class does exactly that, you initialize it with a <a href="http://avusa.feedsportal.com/c/33051/f/534658/index.rss">feed url</a> and it gives you back the links to all the articles discovered in that feed.</p>
+
+<p>``` ruby
+class RssParser
+  attr_accessor :url</p>
+
+<p>  def initialize(url)</p>
+
+<pre><code>@url = url
+</code></pre>
+
+<p>  end</p>
+
+<p>  def article_urls</p>
+
+<pre><code>RSS::Parser.parse(open(url), false).items.map{|item| item.link }
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<h3>HTML Parser</h3>
+
+<p>Having article links, we need to parse page content and extract meaningful parts from these pages. <strong>HtmlParser</strong> class can be initialized with a page url and DOM selector. In this example we will be using a CSS selector to extract the content from articles - <a href="http://getfirebug.com/">Firebug</a> and <a href="http://jquery.com/">jQuery</a> were used to find the selector for the text we are extracting from the article. In this class you will also notice <strong>clean_whitespace</strong> method which cleans the whitespace characters from the extracted text.</p>
+
+<p>``` ruby
+class HtmlParser
+  attr_accessor :url, :selector</p>
+
+<p>  def initialize(url, selector)</p>
+
+<pre><code>@url      = url
+@selector = selector
+</code></pre>
+
+<p>  end</p>
+
+<p>  def content</p>
+
+<pre><code>doc = Nokogiri::HTML(open(url))
+html_elements = doc.search(selector)
+html_elements.map { |element| clean_whitespace(element.text) }.join(' ')
+</code></pre>
+
+<p>  end</p>
+
+<p>  private</p>
+
+<pre><code>def clean_whitespace(text)
+  text.gsub(/\s{2,}|\t|\n/, ' ').strip
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Statistical Classifier</h3>
+
+<p>We introduce a class that is responsible for classification of articles. It is initialized with a hash that consists of categories (keys) and training data (values).</p>
+
+<p>Training data is used to discoverpotential relationships between articles and categories. This data should be carefully selected in order to give better classification results. It is created by determining the value for each word in the context of all words for that category (see the <strong>train_data()</strong>method).</p>
+
+<p>In this example we are usingcontent ofWikipedia articles for <a href="http://en.wikipedia.org/wiki/Economy">economy</a>, <a href="http://en.wikipedia.org/wiki/Sport">sport</a> and <a href="http://en.wikipedia.org/wiki/Health">health</a> as training data for ourcategories.</p>
+
+<p>When classifying articles we want to compare only meaningful words and ignore other wordsthat do not add any value for a certain category. We (partially) solve this problem using <a href="https://gist.github.com/1534053">stop words</a>.</p>
+
+<p>Finally, the <strong>scores()</strong> method creates the scores for each category (per text) that we are testing.</p>
+
+<p>``` ruby
+class Classifier
+  attr_accessor :training_sets, :noise_words</p>
+
+<p>  def initialize(data)</p>
+
+<pre><code>@training_sets = {}
+filename = File.join(File.dirname(__FILE__), 'stop_words.txt')
+@noise_words = File.new(filename).readlines.map(&amp;:chomp)
+train_data(data)
+</code></pre>
+
+<p>  end</p>
+
+<p>  def scores(text)</p>
+
+<pre><code>words = text.downcase.scan(/[a-z]+/)
+
+scores = {}
+training_sets.each_pair do |category, word_weights|
+  scores[category] = score(word_weights, words)
+end
+
+scores
+</code></pre>
+
+<p>  end</p>
+
+<p>  def train_data(data)</p>
+
+<pre><code>data.each_pair do |category, text|
+  words = text.downcase.scan(/[a-z]+/)
+  word_weights = Hash.new(0)
+
+  words.each {|word| word_weights[word] += 1 unless noise_words.index(word)}
+
+  ratio = 1.0 / words.length
+  word_weights.keys.each {|key| word_weights[key] *= ratio}
+
+  training_sets[category] = word_weights
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  private</p>
+
+<pre><code>def score(word_weights, words)
+  score = words.inject(0) {|acc, word| acc + word_weights[word]}
+  1000.0 * score / words.size
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Lets have a go</h3>
+
+<p>Here is the script that runs the program:</p>
+
+<p>``` ruby
+require 'rubygems'
+require 'nokogiri'
+require 'open-uri'
+require 'rss/2.0'</p>
+
+<h1>training data samples</h1>
+
+<p>economy = HtmlParser.new('http://en.wikipedia.org/wiki/Economy', '.mw-content-ltr')
+sport   = HtmlParser.new('http://en.wikipedia.org/wiki/Sport', '.mw-content-ltr')
+health  = HtmlParser.new('http://en.wikipedia.org/wiki/Health', '.mw-content-ltr')</p>
+
+<p>training_data = {
+  :economy => economy.content,
+  :sport => sport.content,
+  :health => health.content
+}</p>
+
+<p>classifier = Classifier.new(training_data)</p>
+
+<p>results = {
+  :economy => [],
+  :sport => [],
+  :health => []
+}</p>
+
+<p>rss_parser = RssParser.new('http://avusa.feedsportal.com/c/33051/f/534658/index.rss')
+rss_parser.article_urls.each do |article_url|
+  article = HtmlParser.new(article_url, '#article .area > h3, #article .area > p, #article > h3')
+  scores = classifier.scores(article.content)
+  category_name, score = scores.max_by{ |k,v| v }
+  # DEBUG info
+  # p "category: #{category_name}, score: #{score}, scores: #{scores}, url: #{article_url}"
+  results[category_name] &lt;&lt; article_url
+end</p>
+
+<p>p results
+```</p>
+
+<p>Although our statistical classification algorithm is very simple, it can give remarkably good results provided the training data is good. For even better results you can try other classification algorithms like <a href="http://en.wikipedia.org/wiki/Bayesian_probability">Bayesian probability</a>  and <a href="http://en.wikipedia.org/wiki/Latent_semantic_analysis">Latent Semantic Analysis</a>.</p>
+
+<p>If you are interested in amore indepth exampleof a news aggregator application - you can check <a href="https://github.com/siyelo/newsagg">newsagg</a> at Github. It's a simple Sinatra application with a Redis datastore that we put together. It crawls, classifies and creates 'clusters' of articles using statistical algorithms.</p>
+
+<p>If you want to learn more about Machine Learning, checkout <a href="http://shop.oreilly.com/product/9780596529321.do">Programming Collective Intelligence</a> book - code examples written in Python and <a href="http://www.apress.com/9781430223511">Scripting Intelligence</a> - code examples written in Ruby.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Koding in Khayelitsha - great photo]]></title>
+    <link href="http://blog.siyelo.com/koding-in-khayelitsha-great-photo"/>
+    <updated>2011-10-04T14:45:00+02:00</updated>
+    <id>http://blog.siyelo.com/koding-in-khayelitsha-great-photo</id>
+    <content type="html"><![CDATA[<p>(they're learning ruby)</p>
+
+<p><a href="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg"><img src="/images/old/2011/10/koding_in_khayelitsha-scaled-1000.jpg" alt="Koding_in_khayelitsha" /> </a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RubyFuZa conference, Cape Town - pics]]></title>
+    <link href="http://blog.siyelo.com/rubyfuza-conference-cape-town-pics"/>
+    <updated>2011-02-05T11:14:27+01:00</updated>
+    <id>http://blog.siyelo.com/rubyfuza-conference-cape-town-pics</id>
+    <content type="html"><![CDATA[<p><a href="/images/old/2011/02/img_1419-scaled-1000.jpg"><img src="/images/old/2011/02/img_1419-scaled-1000.jpg" alt="Img_1419" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1420-scaled-1000.jpg"><img src="/images/old/2011/02/img_1420-scaled-1000.jpg" alt="Img_1420" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1421-scaled-1000.jpg"><img src="/images/old/2011/02/img_1421-scaled-1000.jpg" alt="Img_1421" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1422-scaled-1000.jpg"><img src="/images/old/2011/02/img_1422-scaled-1000.jpg" alt="Img_1422" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1423-scaled-1000.jpg"><img src="/images/old/2011/02/img_1423-scaled-1000.jpg" alt="Img_1423" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1424-scaled-1000.jpg"><img src="/images/old/2011/02/img_1424-scaled-1000.jpg" alt="Img_1424" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1425-scaled-1000.jpg"><img src="/images/old/2011/02/img_1425-scaled-1000.jpg" alt="Img_1425" /> </a></p>
+
+<p><a href="/images/old/2011/02/img_1427-scaled-1000.jpg"><img src="/images/old/2011/02/img_1427-scaled-1000.jpg" alt="Img_1427" /> </a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -3,7 +3,7 @@ layout: post
 title: "Rails Security Vulnerabilities"
 date: 2013-01-18 17:51
 comments: true
-categories: rails, security, vulnerability
+categories: [rails, security, vulnerability]
 author: Ile Eftimov
 avatar: /images/avatars/ile.jpg
 image: /images/artwork/keys.jpg

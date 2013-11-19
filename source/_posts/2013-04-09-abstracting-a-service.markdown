@@ -3,7 +3,7 @@ layout: post
 title: "Abstracting a Service"
 date: 2013-04-09 09:59
 comments: true
-categories: talks
+categories: [talks]
 author: Stuart Corbishley
 avatar: /images/avatars/stuart.jpg
 image: /images/artwork/studio.jpg

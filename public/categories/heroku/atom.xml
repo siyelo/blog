@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Heroku | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/categories/heroku/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:38:15+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Can't drop your Heroku database?]]></title>
+    <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
+    <updated>2011-07-27T15:08:00+02:00</updated>
+    <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
+    <content type="html"><![CDATA[<p>If you're trying to drop your database on Heroku, and it's not working, be sure you put it in maintenance mode first. i.e.</p>
+
+<h3>Step 1</h3>
+
+<p><code>bash
+$ heroku maintenance:on --app
+</code></p>
+
+<h3>Step 2</h3>
+
+<p><code>bash
+$ heroku pg:reset SHARED_DATABASE --app
+</code></p>
+
+<h3>Step 3</h3>
+
+<p>???</p>
+
+<h3>Step 4</h3>
+
+<h3>Profit</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Zerigo DNS template for Heroku and Google Apps]]></title>
+    <link href="http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps"/>
+    <updated>2010-12-01T10:23:45+01:00</updated>
+    <id>http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps</id>
+    <content type="html"><![CDATA[<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
+
+<p>So here's our Zerigo DNS template for a Heroku + Google Apps setup.</p>
+
+<h3>Part A - Heroku</h3>
+
+<p><a href="/images/old/2010/12/pastedgraphic-7.png"><img src="/images/old/2010/12/pastedgraphic-7.png" alt="Pastedgraphic-7" /> </a></p>
+
+<p>Heroku docs: <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a></p>
+
+<h3>Part B - Google Apps Mail</h3>
+
+<p><a href="http://getfile4.posterous.com/getfile/files.posterous.com/siyelo/tHuMks4RfHiRhJBNSrNopDqnjeg2OqVXvkhl7rBqbD4ZzqlzL0hAHyPLiIvM/PastedGraphic-6.png"><img src="/images/old/2010/12/pastedgraphic-6-png-scaled-500.jpg" alt="Pastedgraphic-6" /> </a></p>
+
+<p>Google apps mail help article: <a href="http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866">http://www.google.com/support/a/bin/topic.py?hl=en-uk&amp;topic=14866</a></p>
+
+<h3>Part C - Google Apps miscellany </h3>
+
+<p>This is for webmail/docs/calendar</p>
+
+<p><a href="http://getfile9.posterous.com/getfile/files.posterous.com/siyelo/FmL94NEY7i4CsVB58RiTsqMOmOUEiLeiHXMAiWYQvrL915QmPdMGCCzvdHV7/PastedGraphic-8.png"><img src="/images/old/2010/12/pastedgraphic-8-png-scaled-500.jpg" alt="Pastedgraphic-8" /> </a></p>
+
+<p>And there you go! Never kill a kitten (again).</p>
+
+<p>Other similar links you might find useful: <a href="http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/">http://xtargets.com/2010/10/04/using-gmail-for-email-on-a-heroku-managed-domain/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Full text search on Heroku with Texticle]]></title>
+    <link href="http://blog.siyelo.com/full-text-search-on-heroku-with-texticle"/>
+    <updated>2010-01-12T10:44:47+01:00</updated>
+    <id>http://blog.siyelo.com/full-text-search-on-heroku-with-texticle</id>
+    <content type="html"><![CDATA[<p>Along comes Texticle. Not sure about the name, but it simple, and works a treat.</p>
+
+<p><a href="http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/">http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/</a></p>
+
+<p><img src="/images/old/2010/01/pastedgraphic.png" alt="Pastedgraphic" /></p>
+
+<p>He's even sporting a mullet in his <a href="http://github.com/tenderlove/texticle">github avatar</a>. Bonus points for that.</p>
+]]></content>
+  </entry>
+  
+</feed>

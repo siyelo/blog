@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: weekly-roundup | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/categories/weekly-roundup/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:38:15+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails security; Being the best newbie & Redesigning Google]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-12"/>
+    <updated>2013-02-04T11:11:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-12</id>
+    <content type="html"><![CDATA[<h4><a href="http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/">What the Rails security issue means for your startup</a></h4>
+
+<p>Glenn - A great overview of the Rails security issues and why they deserve your full attention.</p>
+
+<h4><a href="http://confreaks.com/videos/1103-madisonruby2012-making-a-difference-right-off-the-bat">Being the best newbie you can be</a></h4>
+
+<p>Ile - A great presentation on how you can start contributing to a successful team from Day 1 even if you don't have the technical skills yet.</p>
+
+<h4><a href="http://www.meetup.com/Code-Coffee-Cape-Town/">Code and Coffee meet up</a></h4>
+
+<p>Sachin - Code &amp; Coffee Cape Town is a meetup we host every 4 weeks.  It's a great opportunity to meet other devs in and learn something new.</p>
+
+<h4><a href="http://blog.nibbler.io/2013/01/rudebot-rolling-ubiquitous-display.html">Rudebot</a></h4>
+
+<p>Sachin - We want one of these for our distributed team!</p>
+
+<h4><a href="http://www.youtube.com/watch?v=pqeJFYwnkjE">Debt metaphor as motivation for refactoring</a></h4>
+
+<p>Dalibor - Writing good code even if you don't fully understand the problem you are facing can help reduce the time it will take to understand and refactor the code later on.</p>
+
+<iframe width="640" height="390" src="http://www.youtube.com/embed/pqeJFYwnkjE" frameborder="0" allowfullscreen></iframe>
+
+
+<h4><a href="http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm">What is Software Design</a></h4>
+
+<p>Dalibor - It is important to know and understand what software design actually is. Knowing that it is complex and fluid can help you react appropriately to radical changes.</p>
+
+<h4><a href="http://www.theverge.com/2013/1/24/3904134/google-redesign-how-larry-page-engineered-beautiful-revolution">Redesigning Google</a></h4>
+
+<p>Dime - It might have taken a few years, but we are starting to see the fruits of Larry Page's push for Google to have a cohesive and consistent visual style.</p>
+
+<h4><a href="http://uxdesign.smashingmagazine.com/2013/01/24/effectively-planning-ux-design-projects/">Effectively planning UX design projects</a></h4>
+
+<p>Dime - A step-by-step PM guide for UX projects which will help you get the most out of a tight budget</p>
+
+<h4><a href="https://www.uie.com/articles/strategy_for_responsive_design/">Devising a strategy for Responsive design.</a></h4>
+
+<p>Dime - Jumping head first into responsive design can be a problem if you don't fully understand how pervasive it's impact on your UX &amp; development process will be.</p>
+
+<h4><a href="http://www.netmagazine.com/features/best-image-compression-tools">The best image compression tools</a></h4>
+
+<p>Dime - Title says it all :)</p>
+
+<h4><a href="http://www.lukew.com/ff/entry.asp?1678">Mobile sign up forms must die</a></h4>
+
+<p>Dime - The venerable Luke Wroblewski on why gradual engagement helps prevent you from scaring off new users.</p>
+
+<h4>Finally - this is how you handle annoying videobombers</h4>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/WshrVOTLn04?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR - Bacon Pancakes, Dynamic attributes & MongoDB and Now I Know]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-11"/>
+    <updated>2013-01-25T16:51:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-11</id>
+    <content type="html"><![CDATA[<p>Glenn recommended <a href="http://onepagerapp.com/">Onepager</a> - a well designed site which solves a common problem. Glenn’s also just discovered the <a href="http://rubyrogues.com">Ruby Rogues</a> podcast (we know, he's a bit delayed...).  They have great panelists and interesting topics - it is practically required listening at Siyelo these days.</p>
+
+<p>Ile is working on a college assignment on Rails and MongoDB for his post-graduate studie.  A great article on <a href="http://paul-wong-jr.blogspot.com/2012/03/dynamic-attributes-and-mongodbmongoid.html">Dynamic attributes and MongoDB/Mongoid</a> has been helping him on his way.</p>
+
+<p>Want to get a quick overview of NoSQL? Sachin shared <a href="http://martinfowler.com/articles/nosqlKeyPoints.html">key points from NoSQL Distilled</a> by Martin Fowler.</p>
+
+<p>Finally, if you haven't already, we highly recommend that you sign up for the <a href="http://nowiknow.com/">“Now I know”</a> daily newsletter. In the words of Jimmy Wales: "It’s always fresh, always a surprise, and always interesting!"</p>
+
+<p>Happy friday!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
+    <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
+    <updated>2013-01-18T13:36:00+01:00</updated>
+    <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>
+    <content type="html"><![CDATA[<p>This week our dev chat we had quite a few interesting articles posted...</p>
+
+<p>Sachin had a keen interest in Dalibor's <a href="http://dalibornasevic.com/posts/37-deploying-with-gitploy">Deploying with Gitploy</a>, mainly because of the sexy profile picture. Its amazing how a <a href="http://schneems.com/post/40602104940/good-simple-design">good, simple design</a> and fixing simple annoyances can make such a difference to your workflow.</p>
+
+<p>Ile recommended reading <a href="http://blog.endpoint.com/2013/01/rails-CVE-2013-0156-metasploit.html">Use Metasploit to Verify Rails is Secured</a> and <a href="http://highscalability.com/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html">What If Cars Were Rented Like We Hire Programmers?</a>.</p>
+
+<p><a href="http://blog.codeclimate.com/blog/2012/11/28/your-objects-the-unix-way/">Applying the Unix Philosophy to Object-Oriented Design</a> was shared by Dalibor.</p>
+
+<p>Happy reading and enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: Worst Apocolypse Ever; Programming with Kent Beck & OO Re-use]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-9"/>
+    <updated>2012-12-21T14:35:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-9</id>
+    <content type="html"><![CDATA[<p>This week Dalibor got one step closer to his goal of <a href="http://blog.iterate.no/2012/06/20/programming-like-kent-beck/">Programming like Kent Beck</a>.  He also spent some time reading up on what constitutes good design and why PG thinks it's not <a href="http://paulgraham.com/taste.html">subjective or abstract</a>.</p>
+
+<p>Ile has been beefing up his <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim skills</a> thanks to <a href="http://twitter.com/mislav">@mislav's</a> great post.  Starting with a simple <code>.vimrc</code> which you fully understand will make it easier to 'get' the fundamentals.</p>
+
+<p>He's also shared <a href="http://twitter.com/davetron5000">David Copeland's</a> article on ways to improve reusability in your application - <a href="http://www.naildrivin5.com/blog/2012/12/19/re-use-in-oo-inheritance.html">Re-use in OO: Inheritance, Composition and Mixins</a></p>
+
+<p>Sachin was reading up on ways of improving your application's performance on Heroku whilst <a href="http://www.stormconsultancy.co.uk/blog/development/6-ways-to-get-more-bang-for-your-heroku-buck-while-making-your-rails-site-super-snappy/">staying within budget</a></p>
+
+<p>Wishing you well over the festive season from Siyelo!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements]]></title>
+    <link href="http://blog.siyelo.com/weekly-roundup-8"/>
+    <updated>2012-12-07T13:46:00+01:00</updated>
+    <id>http://blog.siyelo.com/weekly-roundup-8</id>
+    <content type="html"><![CDATA[<p>Dime shared Data Driven Documents, <a href="http://d3js.org/">D3.js</a> is a JavaScript library for manipulating documents based on data.</p>
+
+<p>Dalibor found the following articles <a href="http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/">7 Patterns to Refactor  at ActiveRecord</a> Models and Demeter: It's not just a good idea. It's the law, very insightful as well as sharing <a href="http://www.sdruby.org/podcast/94">Refactoring ActiveRecord</a> Models podcast as Ben Hughes explores several techniques for refactoring models and preventing them from getting out of hand. Purchase <a href="http://railsantipatterns.com/">Rails AntiPatterns: Best Practice Ruby on Rails Refactoring</a> on amazon and learn how to identify and fix over 300 of the most common mistakes made in Ruby on Rails applications.</p>
+
+<p>Glenn suggested reading about <a href="http://blog.obiefernandez.com/content/2008/09/master-services-agreement-part-1.html">Obie Fernandez's great MSA and SoW templates for consulting engagements</a>. Sachin shared project management theory <a href="https://aidylewis.heroku.com/2012/11/18/kanban-no-it-cant/">Kanban</a> and <a href="http://blog.headius.com/2012/11/refining-ruby.html">Refining Ruby</a>.</p>
+
+<p>Last but not least Ile shared Know your gems and create <a href="http://robots.thoughtbot.com/post/35717411108/a-healthy-bundle">A Healthy Bundle</a> and <a href="http://blog.steveklabnik.com/posts/2012-11-22-introducing-the-rails-api-project">Introducing the Rails API Project
+</a></p>
+
+<p>Enjoy your weekend!</p>
+]]></content>
+  </entry>
+  
+</feed>

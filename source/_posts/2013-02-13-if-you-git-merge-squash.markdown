@@ -3,7 +3,7 @@ layout: post
 title: "Your git squash-merge is bad"
 date: 2013-02-13 19:30
 comments: true
-categories: git
+categories: [git]
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
 image: /images/artwork/squash.jpg

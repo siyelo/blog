@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Agile | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/categories/agile/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:38:15+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Remote pair-programming with Screen]]></title>
+    <link href="http://blog.siyelo.com/remote-pair-programming-with-screen"/>
+    <updated>2011-11-03T09:37:00+01:00</updated>
+    <id>http://blog.siyelo.com/remote-pair-programming-with-screen</id>
+    <content type="html"><![CDATA[<p> There are different available options for remote pair-programming (a great summary post available <a href="http://evan.tiggerpalace.com/articles/2011/10/17/some-people-call-me-the-remote-pairing-guy-/">here</a>).</p>
+
+<p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
+
+<ul>
+<li>you don't have control over the other screen</li>
+<li>you cannot have both screen sharing and video</li>
+<li>bandwidth of the internet connection sometimes can be a problem</li>
+<li>it's not a tool for pair programming</li>
+</ul>
+
+
+<p>Recently we have been experimenting with Google+ hangouts and although it has the same limitations, we prefer it over Skype for audio/video communication. But, what we really want from a remote pair-programming tool is the ability to do real time code collaboration.</p>
+
+<p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
+
+<ul>
+<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive - useful as a real time code collaboration tool</li>
+</ul>
+
+
+<p>Here is how to setup screen for both scenarios. Note: A downside of a tool like Screen is that everyone needs to learn an editor that runs in terminal. Luckily we all like vim.</p>
+
+<p>First we need to install SSH server because all communication will happen over secure channel:</p>
+
+<p><code>bash
+sudo apt-get install ssh
+</code></p>
+
+<p>For the read only scenario, we need to setup guest user account on the host machine. For security reasons we will create a read-only account with <a href="http://man.he.net/man1/rbash">rbash</a> (<a href="http://www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/">restricted</a> bash) shell which will be used by the programmer we want to pair with to ssh into the host  machine we control and join the screen session.</p>
+
+<p><code>bash
+sudo useradd -s /bin/rbash guest
+sudo passwd guest
+sudo mkdir /home/guest
+</code></p>
+
+<p>Next we need to setup the guest shell.profile. Add the following to /home/guest/.profile</p>
+
+<p><code>bash
+trap "" 2 3 19 # stop user getting to shell
+clear
+echo "Welcome to pair-programming session"
+echo -n "Press Enter to continue..." &amp;&amp; read
+screen -x dalibor/pairprog
+exit
+</code></p>
+
+<p>Here as you can notice "screen -x dalibor/pairprog" automatically will join the session named "pairprog" that is started by "dalibor" user on "guest" user login.</p>
+
+<p>Next we need to install screen on the host machine (if it's not already installed).</p>
+
+<p><code>bash
+sudo apt-get install screen
+</code></p>
+
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: "Must run suid root for multiuser support."). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+
+<p><code>bash
+sudo chmod +s /usr/bin/screen
+sudo chmod 755 /var/run/screen
+</code></p>
+
+<p>Then you need to add the following screen config in ~/.screenrc file</p>
+
+<p>``` bash
+hardstatus on
+hardstatus alwayslastline
+startup_message off
+termcapinfo xterm ti@:te@
+hardstatus string "%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+screen -t bash1 1</p>
+
+<h1>multiuser setup</h1>
+
+<p>multiuser on
+aclchg guest -wx "#,?"
+aclchg guest +x "colon,wall,detach"
+```</p>
+
+<p>Most important lines are "multiuser on" which allows multiuser access in the screen session and "aclchg" command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall "hi there".</p>
+
+<p>Finally, communication goes like this: screen session is started by host with:</p>
+
+<p><code>bash
+screen -S pairprog
+</code></p>
+
+<p>Guest SSH to the host machine and automatically joins the screen session:</p>
+
+<p><code>bash
+ssh guest@host
+</code></p>
+
+<p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
+
+<p>If you trust the user you can add full permission with "acladd"  command, and usually it's to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+
+<p><code>bash
+multiuser on
+acladd user2
+</code></p>
+
+<p>And is starting pairprog screen session with:</p>
+
+<p><code>bash
+screen -S pairprog
+</code></p>
+
+<p>Then user2 can join that session with:</p>
+
+<p><code>bash
+screen -x user1/pairprog
+</code></p>
+
+<p>More info on screen command here in this <a href="http://aperiodic.net/screen/quick_reference">screen reference</a>. Basic commands are:</p>
+
+<p><code>bash
+Ctrl-a d # detach screen window
+Ctrl-a Ctrl-a # flip-flop between two windows
+screen -r # re-attach screen window
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Are Agile Projects Doomed to Half-Baked Design?]]></title>
+    <link href="http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design"/>
+    <updated>2010-01-10T21:23:08+01:00</updated>
+    <id>http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design</id>
+    <content type="html"><![CDATA[<p>The answer is no.</p>
+
+<p>An <a href="http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design">excellent presentation</a> from Alex &amp; Leslie from PivotalLabs and GetSatisfaction respectively tells why:</p>
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/39852" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+
+
+<p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design" title="Are Agile Projects Doomed to Half-Baked Design?" target="_blank">Are Agile Projects Doomed to Half-Baked Design?</a> </strong> from <strong><a href="http://www.slideshare.net/theinfonaut" target="_blank">theinfonaut</a></strong> </div></p>
+]]></content>
+  </entry>
+  
+</feed>
