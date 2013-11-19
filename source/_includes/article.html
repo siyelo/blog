@@ -9,11 +9,15 @@
         <div class="wrapper">
           <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}"><span>{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</span></a></h1><br />
           <p class="meta">{% include post/date.html %}{{ time }} <span>By {{ post.author }}</span> <img src="{{ post.avatar }}"/> </p><br/>
-          
         </div>
       </section>
      </div>
-     <div class="home headline block"><p class="wrapper">{{ post.headline }}</p></div>
+     <div class="home headline block">
+       <p class="wrapper">{{ post.headline }}</p>
+       <p class='categories'>Categories:
+       {% for category in post.categories %}<a href="/categories/{{ category }}">{{ category }}</a>{% endfor %}
+       </p>
+     </div>
     {% else %}
       <div class="artwork"><img src="{{ page.image }}" />
       <section class="title">
@@ -24,7 +28,7 @@
       </section>
       </div>
     {% endif %}
-    
+
     <!-- {% unless page.meta == false %} -->
     <!--   <p class="meta"> -->
     <!--     {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %} -->

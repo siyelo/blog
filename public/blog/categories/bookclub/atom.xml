@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bookclub | Siyelo]]></title>
+  <link href="http://blog.siyelo.com/blog/categories/bookclub/atom.xml" rel="self"/>
+  <link href="http://blog.siyelo.com/"/>
+  <updated>2013-11-19T11:23:16+01:00</updated>
+  <id>http://blog.siyelo.com/</id>
+  <author>
+    <name><![CDATA[Siyelo]]></name>
+    <email><![CDATA[support@siyelo.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Siyelo Book Club]]></title>
+    <link href="http://blog.siyelo.com/the-siyelo-book-club"/>
+    <updated>2012-11-08T16:08:00+01:00</updated>
+    <id>http://blog.siyelo.com/the-siyelo-book-club</id>
+    <content type="html"><![CDATA[<p>If you are interested in joining the Hangout, let us know (through the comments or on Twitter).  The next one will be on 12 Nov at 13:30 (GMT+2). We'll be chatting about <a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/">The Pragmatic Programmer</a>.</p>
+
+<p>So far we've finished the following books:</p>
+
+<ul>
+<li>Lean from the Trenches</li>
+<li>Rocket Surgery Made Easy</li>
+<li>Seductive Interaction Design</li>
+</ul>
+
+
+<p>Here is the full list of books we would like to get through.  Some might not be well suited for a book club but we all want to tackle them at some point.</p>
+
+<p>```
+<strong>Personal Development</strong>
+The Passionate Programmer
+The Pragmatic Programmer</p>
+
+<p><strong>Ruby</strong>
+The Ruby Programming Language - David Flanagan, Yukihiro Matsumoto
+Programming Ruby 1.9 - Dave Thomas, Chad Fowler, Andy Hunt
+Eloquent Ruby - Russ Olsen
+The Well Grounded Rubyist - David A. Black
+Design Patterns in Ruby - Russ Olsen
+Metaprogramming Ruby - Paolo Perrotta
+Refactoring Ruby Edition - Jay Fields, Shane Harvie, Martin Fowler, Kent Beck</p>
+
+<p><strong>Rails:</strong>
+The Rails 3 Way - Obie Fernandez
+Agile Web Development with Rails - Sam Ruby, Dave Thomas, David Heinemeier Hansson
+Ruby on Rails 3 Tutorial - Michael Hartl
+Beginning Rails 3 - Cloves Carneiro Jr., and Rida Al Barazi
+Security on Rails - Ben Poweski, David Raphael
+The Rails View - John Athayde, Bruce Williams
+Rails Antipatterns - Chad Pytel, Tammer Saleh</p>
+
+<p><strong>XP/TDD/BDD:</strong>
+The RSpec Book - David Chelimsky, Dave Astels, Aslak Hellesoy, Bryan Helmkamp, Dan North
+The Cucumber Book - Matt Wynne, Aslak Hellesoy
+Specification By Example - Gojko Adzic
+Test-Driven Development by Example - Kent Beck
+Extreme Programming Explained - Kent Beck
+User Stories Applied - Cohn
+Agile Retrospectives - Esther Derby, Diana Larsen
+The Agile Samurai - Jonathan Rasmusson
+Lean from the Trenches - Henrik Kniberg</p>
+
+<p><strong>Design:</strong>
+Practical Object Orientated Design -Sandi Metz
+Domain Driven Design - Eric Evans
+Patterns of Enteprise Application Architecture - Martin Fowler
+Refactoring - Martin Fowler, Kent Beck
+Clean Code - Robert C. Martin
+Agile Software Development - Robert C. Martin
+Software Craftsmanship - Pete McBreen</p>
+
+<p><strong>UX:</strong>
+The Design of Everyday Things - Donald A. Norman
+Don't Make Me Think - Steve Krug
+Rocket Surgery Made Easy - Steve Krug
+Seductive Interaction Design - Stephen Anderson</p>
+
+<p><strong>Business/General:</strong>
+The Lean Startup - Eric Ries
+ReWork - Jason Fried and DHH
+Product Development Flow -Reinertsen</p>
+
+<p><strong>Psychology / Behaviour:</strong>
+Moonwalking with Einstein: The Art and Science of Remembering Everything - Joshua Foer
+Thinking, Fast and Slow - Daniel Kahneman
+The Power of Habit - Charles Duhigg
+Influence: The Psychology of Persuasion - Robert B. Cialdini
+Drive: The Surprising Truth About What Motivates Us - Daniel Pink
+```</p>
+
+<p>The full list is available at <a href="https://gist.github.com/4039087">https://gist.github.com/4039087</a> - Please feel free to fork it and make changes.</p>
+
+<p>Leave a comment and let us know if you have any book recommendations.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -3,7 +3,7 @@ layout: post
 title: "Active Merchant and Spree"
 date: 2012-11-27 10:01
 comments: true
-categories: rails
+categories: rails, "active merchant', spree
 author: Sachin Ranchod
 image: /images/artwork/macbook.jpg
 avatar: /images/avatars/sachin.jpg

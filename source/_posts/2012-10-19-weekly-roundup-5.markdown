@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Making Rails fast, Practical OO & Google data centers"
 date: 2012-10-19 16:00:00
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/datacenter.jpg

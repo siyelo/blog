@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR - Bacon Pancakes, Dynamic attributes & MongoDB and Now I Know"
 date: 2013-01-25 16:51
 comments: true
-categories:
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/macbook-color-keyboard.png

@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Great RSpect tests, TripAdvisors growth & Going password-less"
 date: 2012-10-12 16:00:00
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/metal-grid.jpg

@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Lean from the Trenches, Schemaless SQL & Blowing in Nintendo cartridges"
 date: 2012-10-05 16:00:00
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/macbook-keyboard.png

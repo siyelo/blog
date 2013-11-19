@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: D3, Refactoring ActveRecord models & Templates for consulting engagements"
 date: 2012-12-07 13:46
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/studio.jpg

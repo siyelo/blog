@@ -3,7 +3,8 @@ layout: post
 title: "Introducing..."
 date: 2013-05-03 15:37
 comments: true
-image: /images/artwork/macbook.jpg
+categories: newcomers, welcoming
+image: /images/artwork/applewars.jpg
 avatar: /images/avatars/nic.jpg
 author: Nic Young
 headline: The <a href="http://siyelo.com">Siyelo</a> entourage of geeks has grown in the last couple of months, and the newcomers would like to say hi. They've put a lot of effort into this pageant, so do us a favor and humor them with a smile.

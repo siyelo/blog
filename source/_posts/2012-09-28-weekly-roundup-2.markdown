@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Ruby Security Guide, Macedonian parties & Moving things around"
 date: 2012-09-28 16:00:00
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Sachin Ranchod
 avatar: /images/avatars/sachin.jpg
 image: /images/artwork/citizen-space.jpg

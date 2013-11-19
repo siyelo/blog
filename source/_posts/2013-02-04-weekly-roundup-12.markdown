@@ -3,7 +3,7 @@ layout: post
 title: "Rails security; Being the best newbie & Redesigning Google"
 date: 2013-02-04 11:11
 comments: true
-categories: weekly roundup
+categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/macbook-keyboard.png

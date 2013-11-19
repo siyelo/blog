@@ -3,7 +3,7 @@ layout: post
 title: "Annotation without thought"
 date: 2012-11-08 11:48
 comments: true
-categories:
+categories: schema, annotations
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
 image: /images/artwork/macbook-color-keyboard.png

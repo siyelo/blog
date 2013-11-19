@@ -3,7 +3,7 @@ layout: post
 title: "TL;DR: Rails 4, a responsive cat & a free book"
 date: 2012-11-16 17:09
 comments: true
-categories: Weekly Roundup
+categories: weekly-roundup
 author: Siyelo
 image: /images/artwork/rails.jpg
 avatar: /images/avatars/siyelo.jpg

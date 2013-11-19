@@ -3,7 +3,7 @@ layout: post
 title: "The Siyelo Book Club"
 date: 2012-11-08 16:08
 comments: true
-categories:
+categories: bookclub
 author: Siyelo
 image: /images/artwork/bookshelf.jpg
 avatar: /images/avatars/siyelo.jpg

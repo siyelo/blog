@@ -3,15 +3,12 @@ layout: post
 title: "Rails Security Vulnerabilities"
 date: 2013-01-18 17:51
 comments: true
-categories: []
-author: Siyelo
-avatar: /images/avatars/siyelo.jpg
+categories: rails, security, vulnerability
+author: Ile Eftimov
+avatar: /images/avatars/ile.jpg
 image: /images/artwork/keys.jpg
-headline: "What happened & what you should do."
+headline: Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual "Upgrade IMMEDIATELY" advisory.
 ---
-
-Last Tuesday, everyone in the Rails world launched into action after this [tweet](https://twitter.com/rails/status/288743490744094720). An unusual "Upgrade IMMEDIATELY" advisory.
-
 We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It's not always trivial, and we ran into problems ourselves. But here's how we went about it.
 
 ## What happened?
