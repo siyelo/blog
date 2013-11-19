@@ -5,8 +5,10 @@ date: 2010-01-10 20:23:08
 comments: true
 categories: Agile
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/minions.jpg
+headline: What do you think?
 ---
-
 The answer is no.
 
 An [excellent presentation](http://www.slideshare.net/theinfonaut/are-agile-projects-doomed-to-halfbaked-design) from Alex & Leslie from PivotalLabs and GetSatisfaction respectively tells why:

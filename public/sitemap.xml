@@ -2,95 +2,91 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.siyelo.com/design-chunking-with-scrum</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:38:21+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/are-agile-projects-doomed-to-half-baked-design</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:39:48+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/full-text-search-on-heroku-with-texticle</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:36:34+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/what-makes-a-good-website</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:35:54+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/the-real-cost-of-bad-software</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:35:04+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/programmer-or-software-developer</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:34:09+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/paperclip-attachment-validations</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:32:21+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.siyelo.com/using-devise-for-authentication-how-to-upgrade-from-v0-8-2-to-v1-0
         </loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:31:01+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/rails-2-3devise-changing-your-email-content-type</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:30:14+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/the-least-you-can-do-on-usability</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:28:47+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/siyelo-sortfolio</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://blog.siyelo.com/did-you-vote</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:42:47+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/the-facebook-imperative-cannot-be-stopped</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:42:47+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development
         </loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:22:28+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue
         </loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:20:36+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/tip-of-the-day-mime-types-for-paperclip-ie8</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:18:39+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/scalable-full-screen-background-image</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:16:08+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/the-easiest-way-to-make-sasscompass-work-on-heroku</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:11:39+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.siyelo.com/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror
         </loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:10:14+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/handy-rake-tasks-for-heroku</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:08:52+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/scaling-ruby-on-rails-for-the-enterprise</loc>
-        <lastmod>2013-11-18T14:09:43+01:00</lastmod>
+        <lastmod>2013-11-19T01:07:08+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/web-apps-to-outlast-mobilenative-apps</loc>
@@ -322,11 +318,11 @@
     </url>
     <url>
         <loc>http://blog.siyelo.com/blog/archives/</loc>
-        <lastmod>2013-11-18T20:52:13+01:00</lastmod>
+        <lastmod>2013-11-19T01:42:47+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/</loc>
-        <lastmod>2013-11-18T20:52:13+01:00</lastmod>
+        <lastmod>2013-11-19T01:42:47+01:00</lastmod>
     </url>
     <url>
         <loc>http://blog.siyelo.com/rss.xml</loc>

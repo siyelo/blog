@@ -5,10 +5,10 @@ date: 2010-01-20 12:16:00
 comments: true
 categories: Web
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/macbook.jpg
+headline: Your website is often the first point of contact for so many people and most people who have found their way to your site will navigate away too easily if there’s not something there to hold their attention. Good graphics are important of course, but what else helps to hold the attention of your reader?
 ---
-
-Your website is often the first point of contact for so many people and most people who have found their way to your site will navigate away too easily if there’s not something there to hold their attention.  Good graphics are important of course, but what else helps to hold the attention of your reader?
-
 **Make your homepage feel like home**
 
 This is your opportunity to make a good first impression, making it too flashy or with too much content on it could result in an information overload.Some guidelines as to what information you should have:

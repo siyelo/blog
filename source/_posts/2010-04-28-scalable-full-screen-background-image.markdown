@@ -5,10 +5,10 @@ date: 2010-04-28 07:52:00
 comments: true
 categories: Design
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/notebook.jpg
+headline: Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of the alternatives is Flash and anyone who appreciates usability and web standards will probably resent that very thought.
 ---
-
-Were you trying to find a solution about applying one large and scalable background on a website? It can be a tough choice especially since one of the alternatives is Flash and anyone who appreciates usability and web standards will probably resent that very thought.
-
 Recently I worked on a website for a [branding agency](http://freezing-light-25.heroku.com/) that required a bit more avant-garde design with a large background image that could resize according to the browser’s window size and resolution. My research showed that most of the non-flash websites were done by JavaScript, but there was something else that caught my attention – a solution done with straight HTML, CSS and guess what – tables! Yeah, I know, the old arch-nemesis of web design. We almost started forgetting they existed, but they pop-up from time to time, reminding us of the good old days of poorly designed websites. And yet it was a solution so simple it’s almost creative and I was urged to try it out.
 
 The whole trick is to create a single cell table, and apply few styles to make the magic work.

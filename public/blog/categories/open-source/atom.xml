@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open-Source | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T20:52:14+01:00</updated>
+  <updated>2013-11-19T01:42:47+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -47,9 +47,7 @@ it "should by default be 1"  #=&gt; it "by default is 1"
     <link href="http://blog.siyelo.com/handy-rake-tasks-for-heroku"/>
     <updated>2010-06-18T10:42:07+02:00</updated>
     <id>http://blog.siyelo.com/handy-rake-tasks-for-heroku</id>
-    <content type="html"><![CDATA[<p>We've been using a standalone rake task to generate the .gems for our Heroku apps. Recently Heroku raised the bar by making you specify the rails version too in this file (gah). So all your 2.3.5 or lower full redeploys will start breaking without this line in .gems.</p>
-
-<p>Theres some great gists and blogposts floating around there showing you how to generate .gems, but who wants to manage individual rake tasks across projects? Not me. A little bit of hunting and I found a nice plugin ‘heroku_san’ by Elijah Miller with several cool Heroku rake tasks, including one to generate the .gems file. </p>
+    <content type="html"><![CDATA[<p>Theres some great gists and blogposts floating around there showing you how to generate .gems, but who wants to manage individual rake tasks across projects? Not me. A little bit of hunting and I found a nice plugin ‘heroku_san’ by Elijah Miller with several cool Heroku rake tasks, including one to generate the .gems file. </p>
 
 <p>Plugins are pants though, so I've updated heroku_san to a gem now too. No more copying .rake tasks between projects!</p>
 
@@ -62,9 +60,7 @@ it "should by default be 1"  #=&gt; it "by default is 1"
     <link href="http://blog.siyelo.com/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror"/>
     <updated>2010-06-07T23:25:00+02:00</updated>
     <id>http://blog.siyelo.com/github-gem-a-json-text-must-at-least-contain-two-octets-jsonparsererror</id>
-    <content type="html"><![CDATA[<p>Matt Jones and I came up with a fix for this error during Dr Nic's OSS tutorial at RailsConf '10.</p>
-
-<p>Seems like GitHub is not returning correct JSON for the <code>http://github.com/#{user}/#{project}/network_meta</code> endpoint.</p>
+    <content type="html"><![CDATA[<p>Seems like GitHub is not returning correct JSON for the <code>http://github.com/#{user}/#{project}/network_meta</code> endpoint.</p>
 
 <p>Fork our fix here:</p>
 

@@ -5,6 +5,9 @@ date: 2010-06-03 13:31:52
 comments: true
 categories:
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/rails.jpg
+headline: Wanna learn an easy way to make sass/compass work on Heroku? Read on...
 ---
 
 Configure your sass or compass options (config/compass.config):

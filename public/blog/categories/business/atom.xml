@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Business | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/business/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T20:52:14+01:00</updated>
+  <updated>2013-11-19T01:42:47+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,9 +18,9 @@
     <link href="http://blog.siyelo.com/the-facebook-imperative-cannot-be-stopped"/>
     <updated>2010-03-11T12:05:32+01:00</updated>
     <id>http://blog.siyelo.com/the-facebook-imperative-cannot-be-stopped</id>
-    <content type="html"><![CDATA[<p>Marc Benioff of SalesForce.com with his take on the <a href="http://techcrunch.com/2010/03/10/facebook-imperative-cannot-be-stopped/">next-big-thing in enterprise software </a> - which will be more social, more mobile, more instant, and (hopefully) more productive.</p>
+    <content type="html"><![CDATA[<p>We had an interesting conversation about this in Siyelo's daily stand-up meeting, and we tend to agree with Marc's outlook. Indeed many software applications could be improved with "social-networking" features/integration points to enable organizations to spread ideas and information.</p>
 
-<p>We had an interesting conversation about this in Siyelo's daily stand-up meeting, and we tend to agree with Marc's outlook. Indeed many software applications could be improved with "social-networking" features/integration points to enable organizations to spread ideas and information.</p>
+<p>You can read the article <a href="http://techcrunch.com/2010/03/10/facebook-imperative-cannot-be-stopped/">here</a></p>
 ]]></content>
   </entry>
   
@@ -29,9 +29,7 @@
     <link href="http://blog.siyelo.com/the-real-cost-of-bad-software"/>
     <updated>2010-01-21T13:28:40+01:00</updated>
     <id>http://blog.siyelo.com/the-real-cost-of-bad-software</id>
-    <content type="html"><![CDATA[<p>The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake. All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.</p>
-
-<p>Below are some of the general characteristics of a software project</p>
+    <content type="html"><![CDATA[<p>Below are some of the general characteristics of a software project</p>
 
 <ul>
 <li>Objectives - what is the scope and what are the deliverables</li>

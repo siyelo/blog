@@ -5,13 +5,10 @@ date: 2010-06-18 23:14:38
 comments: true
 categories: Fun
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/metal-grid.jpg
+headline: You want to make Rails scale? Ruby faster? your code more attractive?
 ---
-
-You want to make;
-
-* Rails scale?
-* Ruby faster?
-* your code more attractive?
 
 **and** have more XML in your life?
 

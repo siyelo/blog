@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Heroku | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-18T20:52:14+01:00</updated>
+  <updated>2013-11-19T01:42:47+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -80,9 +80,7 @@ $ heroku pg:reset SHARED_DATABASE --app
     <link href="http://blog.siyelo.com/full-text-search-on-heroku-with-texticle"/>
     <updated>2010-01-12T10:44:47+01:00</updated>
     <id>http://blog.siyelo.com/full-text-search-on-heroku-with-texticle</id>
-    <content type="html"><![CDATA[<p>We just spent some time investigating some alternative to full text search on Heroku. The initial solutions were either ThinkingSphinx (with a remote sphinx daemon, and another copy of the app running - yuck), or one of the paid options like WebSolr. None tickled our fancy. Free and simple tickle our fancy.</p>
-
-<p>Along comes Texticle. Not sure about the name, but it simple, and works a treat.</p>
+    <content type="html"><![CDATA[<p>Along comes Texticle. Not sure about the name, but it simple, and works a treat.</p>
 
 <p><a href="http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/">http://tenderlovemaking.com/2009/10/17/full-text-search-on-heroku/</a></p>
 

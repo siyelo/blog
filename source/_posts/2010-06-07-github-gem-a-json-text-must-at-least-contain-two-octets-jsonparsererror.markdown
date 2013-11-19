@@ -5,10 +5,10 @@ date: 2010-06-07 21:25:00
 comments: true
 categories: Open-Source
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/shuttle-takeoff.jpg
+headline: Matt Jones and I came up with a fix for this error during Dr Nic's OSS tutorial at RailsConf '10.
 ---
-
-Matt Jones and I came up with a fix for this error during Dr Nic's OSS tutorial at RailsConf '10.
-
 Seems like GitHub is not returning correct JSON for the `http://github.com/#{user}/#{project}/network_meta` endpoint.
 
 Fork our fix here:

@@ -5,9 +5,11 @@ date: 2010-01-28 14:07:00
 comments: true
 categories: Rails
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/bookshelf.jpg
+headline: Using Paperclip, if you need to check if your model has an attachment, you don't use the standard ActiveRecord validation helper...
 ---
-
-Using Paperclip, if you need to check if your model has an attachment, you don't use the standard ActiveRecord validation helper i.e.;
+I.E.;
 
 {% codeblock lang:ruby %}
 validates_presence_of :logo

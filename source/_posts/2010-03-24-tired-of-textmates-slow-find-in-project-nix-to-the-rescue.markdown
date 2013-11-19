@@ -5,9 +5,11 @@ date: 2010-03-24 16:03:04
 comments: true
 categories: Bash
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/graffiti.jpg
+headline: We all know that Textmate's "Find in Project" feature runs like a dog.
 ---
 
-We all know that Textmate's "Find in Project" feature runs like a dog.
 
 If you're generally only really wanting to search .rb files, here's a script which I call 'findrb'
 

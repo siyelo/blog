@@ -5,10 +5,10 @@ date: 2010-02-11 13:28:51
 comments: true
 categories: Rails
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/rails.jpg
+headline: We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.
 ---
-
-We're using PlataformaTec's fantastic Devise for user authentication in our Rails projects, despite being long-standing supporters of Authlogic for a long time. We found Devise to be far easier to set up and you get great stuff right out of the box, the automatic authentication emails, password reset forms, and very simple to configure authentication strategies to name a few.
-
 It also works great with Declarative_Authorization (if you are masochistic enough to use Declarative_Authorization in the first place).
 
 On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.

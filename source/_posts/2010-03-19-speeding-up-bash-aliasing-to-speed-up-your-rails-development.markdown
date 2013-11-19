@@ -5,12 +5,10 @@ date: 2010-03-19 17:02:57
 comments: true
 categories: Bash
 author: Glenn Roberts
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/vim.png
+headline: All good developers love the terminal, and spend many hours at the command prompt. All excellent developers are masters of the shell...
 ---
-
-All good developers love the terminal, and spend many hours at the command prompt.
-
-All excellent developers are masters of the shell.
-
 All uber developers issue [shell commands with obtuse aliases](http://github.com/glennr/bash_profile).
 
 So, if you're uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here's a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you're done.
