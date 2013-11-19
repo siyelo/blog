@@ -4,8 +4,8 @@ title: "The real cost of bad software"
 date: 2010-01-21 12:28:40
 comments: true
 categories: Business
-author: Vivi Walsh
-avatar: /images/avatars/vivi.jpg
+author: Siyelo
+avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/shuttle-takeoff.jpg
 headline: The decision to pay someone to develop new software for you is almost always a big one, and jumping into bed with the wrong software developer can be an expensive mistake. All projects have an element of uncertainty, but software related projects can be especially hard to predict, and the end result can leave the customer with considerably less in the bank.
 ---

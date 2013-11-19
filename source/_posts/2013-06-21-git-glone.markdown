@@ -2,12 +2,12 @@
 layout: post
 title: "Git Glone"
 date: 2013-06-21 09:56
-image: /images/artwork/applewars.jpg
 comments: true
 categories:
 author: Glenn Roberts
-avatar: /images/avatar.jpg
-headline: I often mis-type commands.
+avatar: /images/avatars/glenn.jpg
+image: /images/artwork/applewars.jpg
+headline: If you often mis-type commands like me...
 ---
 ```
 git[master*] % git glone git@github.com:siyelo/toadhopper.git

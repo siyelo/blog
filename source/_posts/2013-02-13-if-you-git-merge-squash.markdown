@@ -5,7 +5,7 @@ date: 2013-02-13 19:30
 comments: true
 categories:
 author: Glenn Roberts
-avatar: /images/avatar.jpg
+avatar: /images/avatars/glenn.jpg
 image: /images/artwork/squash.jpg
 headline: ... and you should feel bad.
 ---

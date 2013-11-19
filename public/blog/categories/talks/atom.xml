@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | Siyelo]]></title>
   <link href="http://blog.siyelo.com/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T01:42:47+01:00</updated>
+  <updated>2013-11-19T10:27:02+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -20,7 +20,7 @@
     <id>http://blog.siyelo.com/abstracting-a-service</id>
     <content type="html"><![CDATA[<p>This would be my 3rd attendence as a guest, and my 1st as a speaker.
 It is humbling to be around some amazingly talented and practiced
-developers, implementers and contributors of the Ruby community.<br/>
+developers, implementers and contributors of the Ruby community.
 So my talk was titled: <strong>Abstracting a Service: A Case Study in Forward
 Thinking with SOA</strong></p>
 
@@ -41,8 +41,6 @@ anyone has any questions regarding my talk, please give me a shout.</p>
 src="http://www.youtube.com/embed/kvcbzt8lZwk" frameborder="0"
 allowfullscreen></iframe>
 
-
-<p></p>
 
 <p>Also slides:</p>
 

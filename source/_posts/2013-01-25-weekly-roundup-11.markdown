@@ -5,7 +5,7 @@ date: 2013-01-25 16:51
 comments: true
 categories:
 author: Siyelo
-avatar: /images/avatar.jpg
+avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/macbook-color-keyboard.png
 headline: This week we start of Dev Chat with one of Dalibor’s favourite videos at the moment- <a href="http://www.youtube.com/watch?v=zalYJacOhpo">Adventure Time Bacon Pancakes New York Remix</a> - 10 Hours of bacon and pancakes remixed with Alicia Keys’ New York. Great way to end off a Friday afternoon.
 ---

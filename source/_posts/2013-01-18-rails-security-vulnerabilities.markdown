@@ -5,7 +5,7 @@ date: 2013-01-18 17:51
 comments: true
 categories: []
 author: Siyelo
-avatar: /images/avatar.jpg
+avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/keys.jpg
 headline: "What happened & what you should do."
 ---

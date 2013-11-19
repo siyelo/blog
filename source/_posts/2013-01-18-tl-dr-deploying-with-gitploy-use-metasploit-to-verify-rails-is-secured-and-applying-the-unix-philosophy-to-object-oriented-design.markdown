@@ -4,7 +4,7 @@ title: "TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the 
 date: 2013-01-18 13:36
 comments: true
 categories:
-author: Nicole Dirks
+author: Siyelo
 avatar: /images/avatars/siyelo.jpg
 image: /images/artwork/metal-grid.jpg
 headline: It's a new year and hey, so much for the Mayan Calendar prediction. Welcome back to most of our readers, may 2013 continue without anymore “end of the world” prediction theories.
