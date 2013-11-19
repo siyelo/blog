@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/design/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T11:38:15+01:00</updated>
+  <updated>2013-11-19T12:28:11+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -71,49 +71,87 @@
 
 <p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: <a href="http://haml-lang.com/">http://haml-lang.com/</a>.</p>
 
-<p>{% codeblock lang:haml %}</p>
-
-<h1>bg  </h1>
-
-<p>  #bg_wrapper    </p>
-
-<pre><code>%table{ :cellspacing =&gt; "0", :cellpadding =&gt; "0" }      
-  %tbody        
-    %tr          
-      %td            
-        %img#background{ :src =&gt; "images/index.jpg" }
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;bg  &lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;  #bg_wrapper    &lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;pre&gt;&lt;code&gt;%table{ :cellspacing =&amp;gt; &quot;0&quot;, :cellpadding =&amp;gt; &quot;0&quot; }      
+</span><span class='line'>  <span class="nt">%tbody</span>        
+</span><span class='line'>    <span class="nt">%tr</span>          
+</span><span class='line'>      <span class="nt">%td</span>            
+</span><span class='line'>        <span class="nt">%img</span><span class="nf">#background</span><span class="p">{</span> <span class="ss">:src</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">&quot;images/index.jpg&quot;</span> <span class="p">}</span>
+</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:</p>
 
-<p>{% codeblock lang:sass %}
-body
-  width: 100%
-  height: 100%
-  overflow: hidden</p>
-
-<h1>bg, table, td</h1>
-
-<p>  #content
-    width: 100%
-    height: 100%
-    overflow: hidden
-  #bg_wrapper
-    width: 200%
-    left: -50%
-    position: absolute
-    top: -50%
-    height: 200%
-  td
-    text-align: center
-    vertical-align: middle
-  #bg img
-    margin: 0 auto
-    min-height: 50%
-    min-width: 50%
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span>
+</span><span class='line'><span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'><span class="na">  height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'><span class="na">  overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">bg</span><span class="o">,</span> <span class="nt">table</span><span class="o">,</span> <span class="nt">td</span><span class="o">&lt;/</span><span class="nt">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nn">#content</span>
+</span><span class='line'>  <span class="na">  width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">  height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">  overflow</span><span class="o">:</span> <span class="no">hidden</span>
+</span><span class='line'><span class="err">  </span><span class="nn">#bg_wrapper</span>
+</span><span class='line'><span class="na">    width</span><span class="o">:</span> <span class="mi">200</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    left</span><span class="o">:</span> <span class="mi">-50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'><span class="na">    top</span><span class="o">:</span> <span class="mi">-50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    height</span><span class="o">:</span> <span class="mi">200</span><span class="kt">%</span>
+</span><span class='line'><span class="err">  </span><span class="nt">td</span>
+</span><span class='line'><span class="na">    text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'><span class="na">    vertical-align</span><span class="o">:</span> <span class="no">middle</span>
+</span><span class='line'><span class="err">  </span><span class="nn">#bg</span> <span class="nt">img</span>
+</span><span class='line'><span class="na">    margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="na">    min-height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'><span class="na">    min-width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>After this you can continue styling the rest of the page with straight CSS without worrying about the background. Leave the table as it is and nest the rest of your DIV’s straight in the body.</p>
 ]]></content>
