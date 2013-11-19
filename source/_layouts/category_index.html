@@ -13,7 +13,7 @@ sidebar: false
 {% endunless %}
   <div class="artwork">
     {% if post.title == site.categories[page.category].first.title && post.date == site.categories[page.category].first.date %}
-      <img src="{{ post.image }}" />
+      <img id='parallax' src="{{ post.image }}" />
     {% endif %}
   <section class="title">
     <div class="wrapper">

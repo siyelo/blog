@@ -3,7 +3,7 @@
     {% if index %}
       <div class="artwork">
         {% if post.title == paginator.posts.first.title && post.date == paginator.posts.first.date %}
-          <img src="{{ post.image }}" />
+          <img id='parallax' src="{{ post.image }}" />
         {% endif %}
       <section class="title">
         <div class="wrapper">
@@ -19,7 +19,7 @@
        </p>
      </div>
     {% else %}
-      <div class="artwork"><img src="{{ page.image }}" />
+      <div class="artwork"><img id='parallax' src="{{ page.image }}" />
       <section class="title">
         <div class="wrapper">
           <h1 class="entry-title"><span>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</span></h1><br />
