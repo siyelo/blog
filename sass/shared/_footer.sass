@@ -42,7 +42,7 @@
 			float: right
 
 		span
-			color: #fff
+			color: $two
 			display: inline-block
 			font: 16px Oswald
 			padding-bottom: 5px
@@ -90,7 +90,7 @@
 		padding: 7px 0 7px 10px
 
 	.wrapper > ul
-		border-bottom: 1px solid #eee
+		border-bottom: 1px solid $one
 		+pie-clearfix
 
 	.back_to_top
@@ -104,11 +104,20 @@
 			color: #444
 
 	.headline
+		color: #fff
+		color: rgba(255, 255, 255, .5)
 		margin-bottom: 2em
 		text-align: center
+		a
+			color: #fff
+			display: inline-block
+			&:hover, &:focus
+				color: #fff
+			&:first-letter
+				text-decoration: underline
 
 	.footer-logo
 		display: block
-		margin: 5em auto 1.2em
-		max-width: 200px
+		margin: 3em auto 1.2em
+		max-width: 160px
 		width: 100%
