@@ -6,7 +6,7 @@ comments: true
 categories: Vim Tutorial
 author: Dalibor Nasevic
 avatar: /images/avatars/dalibor.jpg
-image: /images/artwork/vim.png
+image: /images/artwork/vim.jpg
 headline: At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful.
 ---
 

@@ -6,7 +6,7 @@ comments: true
 categories:
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
-image: /images/artwork/vim.png
+image: /images/artwork/vim.jpg
 headline: A software developer would not be worth his salt if he couldn’t put some code together, but there are a multitude of skills and attributes that separate him from just being a programmer. In a world where hundreds are programmers are thrown at problems, software solutions are often not what they should be. Ultimately the quality of the work produced by good software developers is on a whole different plane, and it’s for some very good reasons.
 ---
 **Commitment to mastering a craft**

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: weekly-roundup | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/weekly-roundup/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T14:00:34+01:00</updated>
+  <updated>2013-11-19T15:53:31+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -90,7 +90,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design]]></title>
+    <title type="html"><![CDATA[TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to OOD]]></title>
     <link href="http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design"/>
     <updated>2013-01-18T13:36:00+01:00</updated>
     <id>http://blog.siyelo.com/tl-dr-deploying-with-gitploy-use-metasploit-to-verify-rails-is-secured-and-applying-the-unix-philosophy-to-object-oriented-design</id>

@@ -6,7 +6,7 @@ comments: true
 categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
-image: /images/artwork/macbook-keyboard.png
+image: /images/artwork/macbook-keyboard.jpg
 headline: We have had quite a informative week according to our Dev chat sessions, we combined last week's links with this week to give you quite a bit to cover.
 ---
 Dali shared a few great articles with us this week:

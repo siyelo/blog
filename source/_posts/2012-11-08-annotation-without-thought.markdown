@@ -6,7 +6,7 @@ comments: true
 categories: schema, annotations
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
-image: /images/artwork/macbook-color-keyboard.png
+image: /images/artwork/macbook-color-keyboard.jpg
 headline: If you like your schema definitions handy in the current ActiveRecord model you're looking at, you're probably using the annotate_models gem.
 ---
 

@@ -6,7 +6,7 @@ comments: true
 categories: Bash
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
-image: /images/artwork/vim.png
+image: /images/artwork/vim.jpg
 headline: All good developers love the terminal, and spend many hours at the command prompt. All excellent developers are masters of the shell...
 ---
 All uber developers issue [shell commands with obtuse aliases](http://github.com/glennr/bash_profile).

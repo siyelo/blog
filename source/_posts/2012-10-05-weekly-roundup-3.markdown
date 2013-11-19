@@ -6,7 +6,7 @@ comments: true
 categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
-image: /images/artwork/macbook-keyboard.png
+image: /images/artwork/macbook-keyboard.jpg
 headline: We bring you the third installment of our ever engaging Dev chat session shares.
 ---
 Dalibor recommended that we all read ['Lean from the Trenches: Managing Large-Scale Projects with Kanban'](http://pragprog.com/book/hklean/lean-from-the-trenches)  by Henrik Kniberg.  It's a great look at a practical implementation of Kanban.  We'll definitely be trying this out with future projects.

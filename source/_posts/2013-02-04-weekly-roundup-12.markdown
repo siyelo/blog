@@ -6,7 +6,7 @@ comments: true
 categories: weekly-roundup
 author: Siyelo
 avatar: /images/avatars/siyelo.jpg
-image: /images/artwork/macbook-keyboard.png
+image: /images/artwork/macbook-keyboard.jpg
 headline: Here's our recommended reading list for the coming week
 ---
 

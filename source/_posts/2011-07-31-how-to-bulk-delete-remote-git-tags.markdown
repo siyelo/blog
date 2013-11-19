@@ -6,7 +6,7 @@ comments: true
 categories: Git
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
-image: /images/artwork/macbook-color-keyboard.png
+image: /images/artwork/macbook-color-keyboard.jpg
 headline: A quick but useful git trick
 ---
 

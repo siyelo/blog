@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to Object-Oriented Design"
+title: "TL;DR: Deploying with Gitploy; Is your Rails Secured &amp; Applying the Unix Philosophy to OOD"
 date: 2013-01-18 13:36
 comments: true
 categories: weekly-roundup

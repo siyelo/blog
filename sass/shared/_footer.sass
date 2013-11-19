@@ -1,19 +1,17 @@
 #footer
-	background: #fafafa
+	background: #192935
 	border-top: #eee 1px solid
 	font-family: "Noto", sans-serif
 	padding: 5em 0 2em
 	position: relative
 	z-index: 1
-	.wrapper
-		max-width: 1000px
 
 	aside
 		clear: both
 		padding: 25px 0
 		+pie-clearfix
 		a, p
-			color: $one
+			color: #fff
 			font-size: 12px
 			text-decoration: none
 		a
@@ -25,7 +23,7 @@
 		margin-bottom: 5em
 		.marker
 			background: image_url("/images/marker.png") no-repeat
-			color: $one
+			color: #fff
 			display: block
 			float: left
 			max-width: 36px
@@ -36,12 +34,15 @@
 			width: 20%
 			&:hover, &:focus
 				opacity: 1
+				text-decoration: none
+			&:first-letter
+				text-decoration: none
 
 		span, ul
 			float: right
 
 		span
-			color: $one
+			color: #fff
 			display: inline-block
 			font: 16px Oswald
 			padding-bottom: 5px
@@ -50,13 +51,13 @@
 			width: 77%
 
 		ul
-			color: $one
+			color: #fff
 			font-size: 12px
 			padding-left: 3%
 			width: 77%
 
 		li a
-			color: $one
+			color: #fff
 			text-decoration: none
 			&:hover, &:focus
 				opacity: 1
@@ -65,6 +66,7 @@
 
 	.social
 		display: inline-block
+		float: left
 		margin: 0
 		padding: 0
 		+pie-clearfix
@@ -100,3 +102,13 @@
 		+transition(all .4s)
 		&:hover, &:focus
 			color: #444
+
+	.headline
+		margin-bottom: 2em
+		text-align: center
+
+	.footer-logo
+		display: block
+		margin: 5em auto 1.2em
+		max-width: 200px
+		width: 100%

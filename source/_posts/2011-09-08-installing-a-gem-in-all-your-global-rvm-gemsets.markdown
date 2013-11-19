@@ -6,7 +6,7 @@ comments: true
 categories:
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
-image: /images/artwork/macbook-keyboard.png
+image: /images/artwork/macbook-keyboard.jpg
 headline: Across different projects like us, you probably have a lot of development gems you like to use.
 ---
 E.g. we like;

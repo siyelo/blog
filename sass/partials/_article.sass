@@ -3,15 +3,20 @@
 
 .b-post
 	.title
-		padding-top: 6em
+		padding-top: 12em
+		padding-bottom: 8em
 	&.first
-		.title
-			padding-top: 11em
 		.headline
 			padding-top: 3em
+			.wrapper:first-child
+				background: #F7F7F7
+				margin-top: -140px
+				padding: 30px
+				+box-sizing(border-box)
+
 	&.list
 		.title
-			padding-bottom: 2em
+			padding: 5em 0 1.5em
 			h1
 				font-size: 45px
 				margin-left: 0
@@ -24,7 +29,7 @@
 					+box-shadow(none)
 			.meta
 				line-height: 30px
-				margin-top: -15px
+				margin-top: 10px
 				font-size: 12px
 				img
 					max-width: 30px
@@ -68,6 +73,7 @@
 	display: inline-block
 	font: 14px/40px Oswald, sans-serif
 	letter-spacing: .02em
+	margin-top: 30px
 	margin-bottom: 0
 	text-transform: uppercase
 	img
@@ -106,6 +112,14 @@
 	position: relative
 	z-index: 1
 	+pie-clearfix
+	&.pagination
+		background: #f7f7f7
+		padding: 2em 0
+		font-family: Oswald
+		text-transform: uppercase
+		a
+			color: #aaa
+			margin-right: 10px
 
 .comments
 	background: #f7f7f7
@@ -144,3 +158,22 @@
 #b-footer
 	padding-top: 2em
 	+pie-clearfix
+
+// Categories
+
+.categories
+	margin-top: 30px
+	visibility: hidden
+	a
+		background: #eee
+		color: #999
+		display: inline-block
+		font-size: 15px
+		padding: 5px 15px
+		visibility: visible
+		+transition(all .4s)
+		&:hover, &:focus
+			background: #e7e7e7
+			color: #555
+		&:first-letter, &:hover, &:focus
+			text-decoration: none

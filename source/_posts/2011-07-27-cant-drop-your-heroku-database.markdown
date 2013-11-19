@@ -6,7 +6,7 @@ comments: true
 categories: Heroku
 author: Glenn Roberts
 avatar: /images/avatars/glenn.jpg
-image: /images/artwork/macbook-color-keyboard.png
+image: /images/artwork/macbook-color-keyboard.jpg
 headline: Our own Glenn shares a quick Heroku trick
 ---
 

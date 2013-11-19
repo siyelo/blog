@@ -6,7 +6,7 @@ comments: true
 categories: Vim Tutorial
 author: Dalibor Nasevic
 avatar: /images/avatars/dalibor.jpg
-image: /images/artwork/vim.png
+image: /images/artwork/vim.jpg
 headline: This week we'll share few more userful Vim tips that we've learned recently, most of them from the Practical Vim book.
 ---
 You can also read the first part in this series [Vim Tips - Part I](http://blog.siyelo.com/vim-tips-part-i) at our blog.

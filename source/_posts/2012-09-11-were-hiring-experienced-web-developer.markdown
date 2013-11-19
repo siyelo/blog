@@ -6,7 +6,7 @@ comments: true
 categories: Jobs
 author: Sachin Ranchod
 avatar: /images/avatars/sachin.jpg
-image: /images/artwork/macbook-keyboard.png
+image: /images/artwork/macbook-keyboard.jpg
 headline: Siyelo is growing and we're looking for talented software developers to join our team!
 ---
 ##Opportunity
