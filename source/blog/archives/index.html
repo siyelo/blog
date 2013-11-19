@@ -2,6 +2,7 @@
 layout: page
 title: Blog Archive
 footer: false
+sidebar: false
 ---
 
   {% if page.title %}
@@ -10,7 +11,7 @@ footer: false
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
   {% endif %}
-  
+
   {% for post in site.posts reverse %}
   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
   {% unless year == this_year %}
