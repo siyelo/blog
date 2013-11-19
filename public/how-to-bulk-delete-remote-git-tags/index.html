@@ -149,7 +149,7 @@
 
 <p>I needed a one-liner to find all these prerelease tags (i.e. all tags that end in a letter), that deletes them on the remote repo. Then I could do the same on my local.</p>
 
-<p>Given that &#8220;git ls-remote&#8221; gives output like &#8221;<SHA>    refs/tags/<tag>&#8221;. E.g.:</p>
+<p>Given that &ldquo;git ls-remote&rdquo; gives output like &ldquo;<SHA>    refs/tags/<tag>&rdquo;. E.g.:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -192,9 +192,9 @@
 <p>NOTE: execute that above command with extreme predjudice, er I mean, caution. i.e.;></p>
 
 <blockquote><p>a) make sure you have the tags backed up in your local repo first and <br />
-b) check the output of the awk command first&#8230; (everything before &#8220;| xargs &#8230;&#8221; )</p></blockquote>
+b) check the output of the awk command first&hellip; (everything before &ldquo;| xargs &hellip;&rdquo; )</p></blockquote>
 
-<p>Once you&#8217;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
+<p>Once you&rsquo;ve done a dry-run or two, run that command and watch as those pesky remote tags get deleted.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -218,7 +218,7 @@ b) check the output of the awk command first&#8230; (everything before &#8220;| 
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>(This command is a lot easier to figure out since the output from &#8220;git tag -l&#8221; is simpler. Alternatively, for synchronization, if you don&#8217;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
+<p>(This command is a lot easier to figure out since the output from &ldquo;git tag -l&rdquo; is simpler. Alternatively, for synchronization, if you don&rsquo;t have any specific local tags, and are confident that remote has the tags you care about, it may be easier to wipe out all tags and pull them all from origin again.)</p>
 
 <p>Final step: Profit</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Heroku | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/heroku/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.siyelo.com/cant-drop-your-heroku-database"/>
     <updated>2011-07-27T15:08:00+02:00</updated>
     <id>http://blog.siyelo.com/cant-drop-your-heroku-database</id>
-    <content type="html"><![CDATA[<p>If you're trying to drop your database on Heroku, and it's not working, be sure you put it in maintenance mode first. i.e.</p>
+    <content type="html"><![CDATA[<p>If you&rsquo;re trying to drop your database on Heroku, and it&rsquo;s not working, be sure you put it in maintenance mode first. i.e.</p>
 
 <h3>Step 1</h3>
 
@@ -49,15 +49,15 @@ $ heroku pg:reset SHARED_DATABASE --app
     <id>http://blog.siyelo.com/a-zerigo-dns-template-for-heroku-and-google-apps</id>
     <content type="html"><![CDATA[<p><img src="/images/old/2010/12/pastedgraphic-10.png" alt="Pastedgraphic-10" /></p>
 
-<p>So here's our Zerigo DNS template for a Heroku + Google Apps setup.</p>
+<p>So here&rsquo;s our Zerigo DNS template for a Heroku + Google Apps setup.</p>
 
-<h3>Part A - Heroku</h3>
+<h3>Part A &ndash; Heroku</h3>
 
 <p><a href="/images/old/2010/12/pastedgraphic-7.png"><img src="/images/old/2010/12/pastedgraphic-7.png" alt="Pastedgraphic-7" /> </a></p>
 
 <p>Heroku docs: <a href="http://docs.heroku.com/custom-domains">http://docs.heroku.com/custom-domains</a></p>
 
-<h3>Part B - Google Apps Mail</h3>
+<h3>Part B &ndash; Google Apps Mail</h3>
 
 <p><a href="http://getfile4.posterous.com/getfile/files.posterous.com/siyelo/tHuMks4RfHiRhJBNSrNopDqnjeg2OqVXvkhl7rBqbD4ZzqlzL0hAHyPLiIvM/PastedGraphic-6.png"><img src="/images/old/2010/12/pastedgraphic-6-png-scaled-500.jpg" alt="Pastedgraphic-6" /> </a></p>
 
@@ -86,7 +86,7 @@ $ heroku pg:reset SHARED_DATABASE --app
 
 <p><img src="/images/old/2010/01/pastedgraphic.png" alt="Pastedgraphic" /></p>
 
-<p>He's even sporting a mullet in his <a href="http://github.com/tenderlove/texticle">github avatar</a>. Bonus points for that.</p>
+<p>He&rsquo;s even sporting a mullet in his <a href="http://github.com/tenderlove/texticle">github avatar</a>. Bonus points for that.</p>
 ]]></content>
   </entry>
   

@@ -45,7 +45,7 @@
 
 </head>
 
-<body id="blog"   >
+<body id="blog"   class="no-sidebar"  >
   <header id="b-header" role="banner">
 <h1 id="b-logo" class="left">
   <a href="/"><img title="Siyelo" src="/images/orbital.svg" alt="Siyelo logo"></a>
@@ -86,129 +86,51 @@
 </ul>
 
 </nav> -->
-  <div class="wrapper">
-  <div id="articles" class="blog-archives">
-    <article role="article">
-      <div id="blog-archives" class="category">
+  <div id="blog-archives" class="category">
 
 
 
   
-  <h2>2013</h2>
+  <div class="block"><h2 class='wrapper'>2013</h2></div>
 
-<article>
-  
-<h3><a href="/rails-security-vulnerabilities">Rails Security Vulnerabilities</a></h3>
-<time datetime="2013-01-18T17:51:00+01:00" pubdate><span class='day'>18</span> <span class='month'>Jan</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/rails/'>rails</a>, <a class='category' href='/categories/security/'>security</a>, <a class='category' href='/categories/vulnerability/'>vulnerability</a></span>
-</footer>
-
-
-</article>
-
-</div>
-
-      
-    </article>
-  </div>
-
-  
-  <aside class="sidebar">
+  <div class="artwork">
     
-      <section>
-  <h1>About</h1>
-  <ul id="about">
-    <li>
-      <p>Siyelo is a web development consultancy based in South Africa
-      and Macedonia. We create bespoke web and mobile apps. Interested
-      in working with us? <a href='mailto:info@siyelo.com'>Contact us</a>
-      anytime.</p>
-    </li>
-  </ul>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+      <img src="/images/artwork/keys.jpg" />
     
-      <li class="post">
-        <a href="/introducing_stu_and_nic">Introducing...</a>
-      </li>
-    
-      <li class="post">
-        <a href="/git-glone">Git Glone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/abstracting-a-service">Abstracting a Service</a>
-      </li>
-    
-      <li class="post">
-        <a href="/if-you-git-merge-squash">Your git squash-merge is bad</a>
-      </li>
-    
-      <li class="post">
-        <a href="/weekly-roundup-12">Rails security; Being the best newbie & Redesigning Google</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'siyelo',
-            count: 3,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("siyelo", 3, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
-  
-</section>
+  <section class="title">
+    <div class="wrapper">
+      <h1 class="entry-title"><a href="/rails-security-vulnerabilities"><span>Rails Security Vulnerabilities</span></a></h1><br />
+      <p class="meta">
 
 
 
 
 
-    
-  </aside>
-  
-</div>
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2013-01-18T17:51:00+01:00" pubdate data-updated="true">
+    <span class='day'> 18</span>
+    <span class='month'> Jan</span>
+    <span class='year'> 2013</span>
+  </time> <span>By Ile Eftimov</span> <img src="/images/avatars/ile.jpg"/> </p><br/>
+    </div>
+  </section>
+ </div>
+ <div class="home headline block">
+   <p class="wrapper">Last Tuesday, everyone in the Rails world launched into action after this <a href="https://twitter.com/rails/status/288743490744094720">tweet</a>. An unusual "Upgrade IMMEDIATELY" advisory.</p>
+   <p class='wrapper categories'>Posted in
+    <a class='category' href='/categories/rails/'>rails</a>, <a class='category' href='/categories/security/'>security</a>, <a class='category' href='/categories/vulnerability/'>vulnerability</a>
+   </p>
+ </div>
+
 
   <footer id="footer" role="contentinfo">
     <div class="wrapper">

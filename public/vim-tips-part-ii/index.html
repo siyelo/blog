@@ -136,11 +136,11 @@
     <div class="entry-content block">
       <div class="wrapper">
         <p class="headline">This week we'll share few more userful Vim tips that we've learned recently, most of them from the Practical Vim book.</p>
-        <p>You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips - Part I</a> at our blog.</p>
+        <p>You can also read the first part in this series <a href="http://blog.siyelo.com/vim-tips-part-i">Vim Tips &ndash; Part I</a> at our blog.</p>
 
 <h2>1. Replace in multiple files</h2>
 
-<p>To search &amp; replace in multiple files, we need to create list of files in which we&#8217;ll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the &#8220;hrt&#8221; string:</p>
+<p>To search &amp; replace in multiple files, we need to create list of files in which we&rsquo;ll execute a command. We do that by using the <strong>:args</strong> command. For example, lets load all javascript files that start with the &ldquo;hrt&rdquo; string:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="p">:</span>args app<span class="sr">/assets/</span>javascripts/hrt*.<span class="nb">js</span>
@@ -193,7 +193,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Finally, here&#8217;s an example of what needs to be run to do search &amp; replace in files:</p>
+<p>Finally, here&rsquo;s an example of what needs to be run to do search &amp; replace in files:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -208,11 +208,11 @@
 
 <h2>3. Edit already recorded macro</h2>
 
-<p>While recording a macro it&#8217;s easy to do mistakes. And when that happens, it&#8217;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>&#8220;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
+<p>While recording a macro it&rsquo;s easy to do mistakes. And when that happens, it&rsquo;s easier to edit the already recorded macro than to re-record it. Lets say we have recorded new macro in register <strong>a</strong>. We can print the content of the macro in the current buffer using <strong>:put a</strong> and then edit the macro in Vim. Once macro is changed, we can select it and then yank it to register a with <strong>&ldquo;ay</strong>. Then we are ready to execute the new macro from register a with <strong>@a</strong>.</p>
 
 <h2>4. Execute macro in multiple files</h2>
 
-<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&#8217;s load all models from a Rails app:
+<p>We have already recorded a macro and we want to run it in few files. First we build arguments list with the files, for example let&rsquo;s load all models from a Rails app:
 :args app/models/*.rb Then we run the macro (that is recorded in register a) with:
 :argdo normal @aIn the end we save all the buffers with:
 :argdo update</p>
@@ -232,14 +232,14 @@
 
 <h2>6. Vi mode on command line</h2>
 
-<p>Bash shell provides two modes for command line editing - <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
+<p>Bash shell provides two modes for command line editing &ndash; <strong>emacs</strong> and <strong>vi</strong>. Emacs editing mode is the default one, and we can change it to vi mode using:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="p">-</span><span class="k">o</span> <span class="k">vi</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&#8217;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
+<p>Then while on command line, we can press <strong>ESC</strong> to go to vi editing mode and use Vim&rsquo;s single line editing capabilities. While in normal Vim mode on command line, we can press <strong>v</strong> that will popup editor where we can edit and save buffer that will be executed on command line.</p>
 
 <p>To go back to emacs mode, we need to type:</p>
 

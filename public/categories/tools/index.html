@@ -45,7 +45,7 @@
 
 </head>
 
-<body id="blog"   >
+<body id="blog"   class="no-sidebar"  >
   <header id="b-header" role="banner">
 <h1 id="b-logo" class="left">
   <a href="/"><img title="Siyelo" src="/images/orbital.svg" alt="Siyelo logo"></a>
@@ -86,174 +86,168 @@
 </ul>
 
 </nav> -->
-  <div class="wrapper">
-  <div id="articles" class="blog-archives">
-    <article role="article">
-      <div id="blog-archives" class="category">
+  <div id="blog-archives" class="category">
 
 
 
   
-  <h2>2012</h2>
+  <div class="block"><h2 class='wrapper'>2012</h2></div>
 
-<article>
-  
-<h3><a href="/rails-deployment-audit">Rails Deployment Audit</a></h3>
-<time datetime="2012-07-13T16:13:00+02:00" pubdate><span class='day'>13</span> <span class='month'>Jul</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/rails/'>Rails</a>, <a class='category' href='/categories/tools/'>Tools</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h3><a href="/redis-in-the-nosql-ecosystem">Redis in the NoSQL ecosystem</a></h3>
-<time datetime="2011-12-28T22:01:00+01:00" pubdate><span class='day'>28</span> <span class='month'>Dec</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/tools/'>Tools</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h3><a href="/siyelos-git-workflow">Siyelos' git workflow</a></h3>
-<time datetime="2011-12-12T10:53:00+01:00" pubdate><span class='day'>12</span> <span class='month'>Dec</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/git/'>Git</a>, <a class='category' href='/categories/tools/'>Tools</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h3><a href="/remote-pair-programming-with-screen">Remote pair-programming with Screen</a></h3>
-<time datetime="2011-11-03T09:37:00+01:00" pubdate><span class='day'>03</span> <span class='month'>Nov</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/agile/'>Agile</a>, <a class='category' href='/categories/tools/'>Tools</a></span>
-</footer>
-
-
-</article>
-
-</div>
-
-      
-    </article>
-  </div>
-
-  
-  <aside class="sidebar">
+  <div class="artwork">
     
-      <section>
-  <h1>About</h1>
-  <ul id="about">
-    <li>
-      <p>Siyelo is a web development consultancy based in South Africa
-      and Macedonia. We create bespoke web and mobile apps. Interested
-      in working with us? <a href='mailto:info@siyelo.com'>Contact us</a>
-      anytime.</p>
-    </li>
-  </ul>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+      <img src="/images/artwork/rails.jpg" />
     
-      <li class="post">
-        <a href="/introducing_stu_and_nic">Introducing...</a>
-      </li>
-    
-      <li class="post">
-        <a href="/git-glone">Git Glone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/abstracting-a-service">Abstracting a Service</a>
-      </li>
-    
-      <li class="post">
-        <a href="/if-you-git-merge-squash">Your git squash-merge is bad</a>
-      </li>
-    
-      <li class="post">
-        <a href="/weekly-roundup-12">Rails security; Being the best newbie & Redesigning Google</a>
-      </li>
-    
-  </ul>
-</section>
+  <section class="title">
+    <div class="wrapper">
+      <h1 class="entry-title"><a href="/rails-deployment-audit"><span>Rails Deployment Audit</span></a></h1><br />
+      <p class="meta">
 
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2012-07-13T16:13:00+02:00" pubdate data-updated="true">
+    <span class='day'> 13</span>
+    <span class='month'> Jul</span>
+    <span class='year'> 2012</span>
+  </time> <span>By Dalibor Nasevic</span> <img src="/images/avatars/dalibor.jpg"/> </p><br/>
+    </div>
+  </section>
+ </div>
+ <div class="home headline block">
+   <p class="wrapper">We recently undertook an audit of a Rails deployment for a system developed by Red Comet Labs. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
+   <p class='wrapper categories'>Posted in
+    <a class='category' href='/categories/rails/'>Rails</a>, <a class='category' href='/categories/tools/'>Tools</a>
+   </p>
+ </div>
+
+
+
   
-  <p class="on-github"><a href="https://github.com/siyelo">@siyelo</a> on GitHub</p>
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
+  <div class="block"><h2 class='wrapper'>2011</h2></div>
 
-        github.showRepos({
-            user: 'siyelo',
-            count: 3,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("siyelo", 3, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/siyelo" class="twitter-follow-button" data-show-count="false">Follow @siyelo</a>
-  
-</section>
-
-
-
-
-
+  <div class="artwork">
     
-  </aside>
-  
-</div>
+  <section class="title">
+    <div class="wrapper">
+      <h1 class="entry-title"><a href="/redis-in-the-nosql-ecosystem"><span>Redis in the NoSQL Ecosystem</span></a></h1><br />
+      <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2011-12-28T22:01:00+01:00" pubdate data-updated="true">
+    <span class='day'> 28</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time> <span>By Dalibor Nasevic</span> <img src="/images/avatars/dalibor.jpg"/> </p><br/>
+    </div>
+  </section>
+ </div>
+ <div class="home headline block">
+   <p class="wrapper">Our thoughts on Redis in the NoSQL ecosystem</p>
+   <p class='wrapper categories'>Posted in
+    <a class='category' href='/categories/tools/'>Tools</a>
+   </p>
+ </div>
+
+
+
+  <div class="artwork">
+    
+  <section class="title">
+    <div class="wrapper">
+      <h1 class="entry-title"><a href="/siyelos-git-workflow"><span>Siyelos' Git Workflow</span></a></h1><br />
+      <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2011-12-12T10:53:00+01:00" pubdate data-updated="true">
+    <span class='day'> 12</span>
+    <span class='month'> Dec</span>
+    <span class='year'> 2011</span>
+  </time> <span>By Peter Garbers</span> <img src="/images/avatars/peter.jpg"/> </p><br/>
+    </div>
+  </section>
+ </div>
+ <div class="home headline block">
+   <p class="wrapper">Here at Siyelo we have a rather robust flow that we feel works quite well. This didn't come easily. It took lots of experimentation until we found out what exactly works for us.</p>
+   <p class='wrapper categories'>Posted in
+    <a class='category' href='/categories/git/'>Git</a>, <a class='category' href='/categories/tools/'>Tools</a>
+   </p>
+ </div>
+
+
+
+  <div class="artwork">
+    
+  <section class="title">
+    <div class="wrapper">
+      <h1 class="entry-title"><a href="/remote-pair-programming-with-screen"><span>Remote Pair-programming With Screen</span></a></h1><br />
+      <p class="meta">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time class="timestamp" datetime="2011-11-03T09:37:00+01:00" pubdate data-updated="true">
+    <span class='day'> 03</span>
+    <span class='month'> Nov</span>
+    <span class='year'> 2011</span>
+  </time> <span>By Dalibor Nasevic</span> <img src="/images/avatars/dalibor.jpg"/> </p><br/>
+    </div>
+  </section>
+ </div>
+ <div class="home headline block">
+   <p class="wrapper">At Siyelo we have 2 distributed teams, one in Cape Town and another one in Skopje. Naturally, we had to figure out how to do remote pair programming between the two offices.</p>
+   <p class='wrapper categories'>Posted in
+    <a class='category' href='/categories/agile/'>Agile</a>, <a class='category' href='/categories/tools/'>Tools</a>
+   </p>
+ </div>
+
 
   <footer id="footer" role="contentinfo">
     <div class="wrapper">

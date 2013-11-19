@@ -136,7 +136,7 @@
     <div class="entry-content block">
       <div class="wrapper">
         <p class="headline">At Siyelo all developers exclusively use Vim editor for coding. In this two-parts series we'll share few Vim tips that we find useful.</p>
-        <p>Most of the tips we&#8217;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
+        <p>Most of the tips we&rsquo;ve learned from the great <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> book by Drew Neil.</p>
 
 <h3>1. Repeat the last Ex command</h3>
 
@@ -145,7 +145,7 @@
 <ul>
 <li>Ex command prompt: <strong>:something</strong></li>
 <li>Search prompt: <strong>/something</strong></li>
-<li>Expression prompt (from insert mode type <b><C-r>=</b>): <strong>=1+1</strong></li>
+<li>Expression prompt (from insert mode type <b>&lt;C-r>=</b>): <strong>=1+1</strong></li>
 </ul>
 
 
@@ -167,7 +167,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&#8217;s handy having the following mappings in the vimrc file:</p>
+<p>We can repeat it with <strong>:s</strong> or <strong>&amp;</strong> which is synonym for <strong>:s</strong>. Note that flags used at the substitute command are not remembered, and to fix that <strong>:&amp;&amp;</strong> should be used. It&rsquo;s handy having the following mappings in the vimrc file:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -221,9 +221,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>5. Paste from register without leaving insert mode <C-r>{register}</h3>
+<h3>5. Paste from register without leaving insert mode &lt;C-r>{register}</h3>
 
-<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong><C-r>0</strong>. If yanked text contains new line characters, <strong><C-r><C-p>0</strong> will take care of fixing the indentation.</p>
+<p>While in insert mode, yanked text can be pasted without leaving the insert mode with <strong>&lt;C-r>0</strong>. If yanked text contains new line characters, <strong>&lt;C-r>&lt;C-p>0</strong> will take care of fixing the indentation.</p>
 
 <h3>6. Run normal mode commands across a range</h3>
 
@@ -240,7 +240,7 @@
 
 <p>We can visually select the 3 lines and type <strong>:normal A;</strong> or we can just select all lines in the file with <strong>%</strong> and execute the same command <strong>:%normal A;</strong>.</p>
 
-<p>Next week we&#8217;re coming with few more tips to improve your vimfu.</p>
+<p>Next week we&rsquo;re coming with few more tips to improve your vimfu.</p>
 
         <footer class="b-footer block">
           <div class="wrapper">

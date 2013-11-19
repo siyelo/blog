@@ -137,7 +137,7 @@
       <div class="wrapper">
         <p class="headline">Integrating an ActiveMerchant supported payment gateway into Spree is really easy but unfortunately it isn't particularly well documented.</p>
         <p>Below are the steps we followed to get it working:
-For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spree payment gateway.</p>
+For the purposes of this example, we&rsquo;ll be adding PayGate PayXML as a Spree payment gateway.</p>
 
 <p>Add the ActiveMerchant gem:</p>
 
@@ -175,7 +175,7 @@ For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spre
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&#8217;s preferences system so that they can be filled in via the admin backend.</p>
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&rsquo;s preferences system so that they can be filled in via the admin backend.</p>
 
 <p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
 
@@ -192,7 +192,7 @@ For the purposes of this example, we&#8217;ll be adding PayGate PayXML as a Spre
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &#8216;New payment method&#8217;.  Fill in the name of the payment method as &#8216;Credit Card&#8217; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&#8217;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &lsquo;New payment method&rsquo;.  Fill in the name of the payment method as &lsquo;Credit Card&rsquo; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&rsquo;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
 
         <footer class="b-footer block">
           <div class="wrapper">

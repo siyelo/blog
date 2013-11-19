@@ -4,7 +4,7 @@
   <title><![CDATA[Category: annotations | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/annotations/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,18 +18,18 @@
     <link href="http://blog.siyelo.com/annotation-without-thought"/>
     <updated>2012-11-08T11:48:00+01:00</updated>
     <id>http://blog.siyelo.com/annotation-without-thought</id>
-    <content type="html"><![CDATA[<p>If you're on Rails and want to automagically 'annotate your models when running rake db:migrate, include this rake task in your project;</p>
+    <content type="html"><![CDATA[<p>If you&rsquo;re on Rails and want to automagically &lsquo;annotate your models when running rake db:migrate, include this rake task in your project;</p>
 
-<p>``` ruby 'lib/tasks/annotate.rb'</p>
+<p>``` ruby &lsquo;lib/tasks/annotate.rb&rsquo;</p>
 
-<p>desc 'Annotate persisted models'
+<p>desc &lsquo;Annotate persisted models&rsquo;
 task :anno do
-  puts 'annotating models...'
-  system 'annotate --exclude tests,fixtures -p after -s'
+  puts &lsquo;annotating models&hellip;&rsquo;
+  system &lsquo;annotate &mdash;exclude tests,fixtures -p after -s&rsquo;
 end</p>
 
 <p>namespace :db do
-  desc 'migrate database [and annotate models]'
+  desc &lsquo;migrate database [and annotate models]&rsquo;
   task :migrate do</p>
 
 <pre><code>Rake::Task[:anno].invoke if Rails.env == 'development'

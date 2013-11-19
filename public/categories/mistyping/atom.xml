@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mistyping | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/mistyping/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -20,7 +20,7 @@
     <id>http://blog.siyelo.com/git-glone</id>
     <content type="html"><![CDATA[<p>```
 git[master*] % git glone git@github.com:siyelo/toadhopper.git
-git: 'glone' is not a git command. See 'git --help'.</p>
+git: &lsquo;glone&rsquo; is not a git command. See &lsquo;git &mdash;help&rsquo;.</p>
 
 <p>Did you mean this?
 clone
@@ -38,7 +38,7 @@ clone
   autocorrect = 1
 </code></p>
 
-<p>Then next time you stuff up a git command...</p>
+<p>Then next time you stuff up a git command&hellip;</p>
 
 <p><code>
 git[master*] % git glone git@github.com:siyelo/toadhopper.git

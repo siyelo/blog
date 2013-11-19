@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/talks/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -32,7 +32,7 @@ to abstract early, how we came to realize this and how we approached it.</p>
 <p>I name drop a few RubyGems along the way as well that helped immensely in
 making this process easier.</p>
 
-<p>Service Oriented Architecture is a massive subject on it's own, so if
+<p>Service Oriented Architecture is a massive subject on it&rsquo;s own, so if
 anyone has any questions regarding my talk, please give me a shout.</p>
 
 <p>So without further ado, here is the video.</p>
@@ -44,10 +44,9 @@ allowfullscreen></iframe>
 
 <p>Also slides:</p>
 
-<iframe
+<p><iframe
 src="http://prezi.com/embed/wiolzae5tiho/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined"
-width="560" height="400" frameBorder="0"></iframe>
-
+width="560" height="400" frameBorder="0"></iframe></p>
 ]]></content>
   </entry>
   

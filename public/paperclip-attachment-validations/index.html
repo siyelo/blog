@@ -138,32 +138,32 @@
         <p class="headline">Using Paperclip, if you need to check if your model has an attachment, you don't use the standard ActiveRecord validation helper...</p>
         <p>I.E.;</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>Erroneous!</p>
 
-<p>Instead you use Paperclip&#8217;s helper</p>
+<p>Instead you use Paperclip&rsquo;s helper</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>But be sure to put that <strong>after your attachment definition</strong></p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">has_attached_file</span> <span class="ss">:logo</span>
 </span><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And if you&#8217;re doing something tricky, like allowing your model to be saved without an attachment first, but enforcing that an attachment is present on update then; </p>
+<p>And if you&rsquo;re doing something tricky, like allowing your model to be saved without an attachment first, but enforcing that an attachment is present on update then; </p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_attachment_presence</span> <span class="ss">:logo</span><span class="p">,</span> <span class="ss">:unless</span> <span class="o">=&gt;</span> <span class="ss">:new_record?</span>
 </span></code></pre></td></tr></table></div></figure>
 

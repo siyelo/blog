@@ -144,11 +144,11 @@
 
 <p>Both commit-squashing methods (interactive rebase or squash-merge) give you the major benefit of a cleaner <code>git log</code> and lots of warm and fuzzies. However if you follow the above process (like we do), an interactive rebase tends to work better than a squash-merge.</p>
 
-<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &#8216;Merge Pull Request&#8217; button and shit won&#8217;t explode. Mostly.</p>
+<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &lsquo;Merge Pull Request&rsquo; button and shit won&rsquo;t explode. Mostly.</p>
 
-<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&#8217;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
+<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&rsquo;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
 
-<p>To illustrate; The &#8216;before&#8217; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &#8216;Glenn&#8217;. The &#8216;after&#8217; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
+<p>To illustrate; The &lsquo;before&rsquo; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &lsquo;Glenn&rsquo;. The &lsquo;after&rsquo; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
 
 <p><em>Before:</em></p>
 

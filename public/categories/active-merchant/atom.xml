@@ -4,7 +4,7 @@
   <title><![CDATA[Category: active merchant | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/active-merchant/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -19,7 +19,7 @@
     <updated>2012-11-27T10:01:00+01:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <content type="html"><![CDATA[<p>Below are the steps we followed to get it working:
-For the purposes of this example, we'll be adding PayGate PayXML as a Spree payment gateway.</p>
+For the purposes of this example, we&rsquo;ll be adding PayGate PayXML as a Spree payment gateway.</p>
 
 <p>Add the ActiveMerchant gem:</p>
 
@@ -27,7 +27,7 @@ For the purposes of this example, we'll be adding PayGate PayXML as a Spree paym
 
 <h1>Gemfile</h1>
 
-<p>gem 'activemerchant'
+<p>gem &lsquo;activemerchant&rsquo;
 ```</p>
 
 <p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
@@ -51,7 +51,7 @@ For the purposes of this example, we'll be adding PayGate PayXML as a Spree paym
 end
 ```</p>
 
-<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree's preferences system so that they can be filled in via the admin backend.</p>
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&rsquo;s preferences system so that they can be filled in via the admin backend.</p>
 
 <p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
 
@@ -64,7 +64,7 @@ end
 end
 ```</p>
 
-<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click 'New payment method'.  Fill in the name of the payment method as 'Credit Card' (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You'll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &lsquo;New payment method&rsquo;.  Fill in the name of the payment method as &lsquo;Credit Card&rsquo; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&rsquo;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
 ]]></content>
   </entry>
   

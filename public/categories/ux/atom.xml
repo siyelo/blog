@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UX | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/ux/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -20,7 +20,7 @@
     <id>http://blog.siyelo.com/the-least-you-can-do-on-usability</id>
     <content type="html"><![CDATA[<p><a href="http://blip.tv/file/1557737/">http://blip.tv/file/1557737/</a></p>
 
-<p>Plus there's some helpful resources on <a href="http://sensible.com/">his website</a>.</p>
+<p>Plus there&rsquo;s some helpful resources on <a href="http://sensible.com/">his website</a>.</p>
 ]]></content>
   </entry>
   
@@ -34,16 +34,16 @@
 <p>The problem: coming up with a consistent user interface design across a website while working iteratively and incrementally.  </p>
 
 <ul>
-<li>Attempt 1: Fully agile - out of the book Scrum  </li>
+<li>Attempt 1: Fully agile &ndash; out of the book Scrum  </li>
 <li>Attempt 2: Upfront IA and graphic design  </li>
 <li>Attempt 3: Post skinning  </li>
-<li>Attempt 4: "Design Chunking". The winner. i..e. Iteration Zero begins with design, design stays 1 iteration ahead.</li>
+<li>Attempt 4: &ldquo;Design Chunking&rdquo;. The winner. i..e. Iteration Zero begins with design, design stays 1 iteration ahead.</li>
 </ul>
 
 
 <p><img src="/images/old/2010/01/pastedgraphic1.png" alt="Pastedgraphic" /></p>
 
-<p>Design Chunking is essentially how our projects at Siyelo have naturally evolved to-date. WIth 1-week sprint lengths, we are tending to use a 1-week planning &amp; design concept phase ("iteration zero") before starting development (though you can start doing non-UI features during this time too).</p>
+<p>Design Chunking is essentially how our projects at Siyelo have naturally evolved to-date. WIth 1-week sprint lengths, we are tending to use a 1-week planning &amp; design concept phase (&ldquo;iteration zero&rdquo;) before starting development (though you can start doing non-UI features during this time too).</p>
 ]]></content>
   </entry>
   

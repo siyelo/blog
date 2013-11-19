@@ -136,13 +136,13 @@
     <div class="entry-content block">
       <div class="wrapper">
         <p class="headline">Devise is a great rails authentication solution, with a very active mailing list and team of contributors. Given its modular, pluggable design, simple installation, I predict it will become the "standard" authentication module, (assuming someone steps up to the plate for MongoMapper/DataMapper support for Rails 3, anyone?).</p>
-        <p>A minor issue on Rails 2.3 is that Devise (v1.0) doesn&#8217;t allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to &#8216;text/html&#8217;, unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on.</p>
+        <p>A minor issue on Rails 2.3 is that Devise (v1.0) doesn&rsquo;t allow you to override the content_type of the emails it sends. (I believe its fixed for Rails 3.0). Given the content type defaults to &lsquo;text/html&rsquo;, unless you like to cause yourself (and your users) some grief with html emails, and plain text emails will suffice, then read on.</p>
 
-<p>I&#8217;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
+<p>I&rsquo;ve patched Devise 1.0 to enable you to override this default behaviour in your config/initializers/devise.rb file</p>
 
 <p>UPDATE: Its been merged into Devise v1.0.2</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Devise</span><span class="o">.</span><span class="n">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
@@ -153,14 +153,14 @@
 
 <p>The gem on gemcutter</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">glennr</span><span class="o">-</span><span class="n">devise</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>or</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;glennr-devise&#39;</span><span class="p">,</span> <span class="ss">:lib</span> <span class="o">=&gt;</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:source</span> <span class="o">=&gt;</span> <span class="s1">&#39;http://gemcutter.org&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 

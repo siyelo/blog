@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/git/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -20,7 +20,7 @@
     <id>http://blog.siyelo.com/git-glone</id>
     <content type="html"><![CDATA[<p>```
 git[master*] % git glone git@github.com:siyelo/toadhopper.git
-git: 'glone' is not a git command. See 'git --help'.</p>
+git: &lsquo;glone&rsquo; is not a git command. See &lsquo;git &mdash;help&rsquo;.</p>
 
 <p>Did you mean this?
 clone
@@ -38,7 +38,7 @@ clone
   autocorrect = 1
 </code></p>
 
-<p>Then next time you stuff up a git command...</p>
+<p>Then next time you stuff up a git command&hellip;</p>
 
 <p><code>
 git[master*] % git glone git@github.com:siyelo/toadhopper.git
@@ -62,11 +62,11 @@ in 0.1 seconds automatically...
 
 <p>Both commit-squashing methods (interactive rebase or squash-merge) give you the major benefit of a cleaner <code>git log</code> and lots of warm and fuzzies. However if you follow the above process (like we do), an interactive rebase tends to work better than a squash-merge.</p>
 
-<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green 'Merge Pull Request' button and shit won't explode. Mostly.</p>
+<p>An interactive rebase means the <strong>author</strong> is responsible for making sure their branch history is clean <em>and will merge cleanly</em>. This is nice. As a committer I know I can press the big green &lsquo;Merge Pull Request&rsquo; button and shit won&rsquo;t explode. Mostly.</p>
 
-<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else's <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
+<p>A squash merge means the merger/committer is responsible for resolving any merge conflicts. If the committer is not the same person as the author, well, that code review just took even longer. And the Committer just rewrote history, perhaps not in a good way i.e. if someone else&rsquo;s <strong>already squashed their branch</strong>, then a merge-squash is redundant and the committer will appear as the author of that merge commit. Oops.</p>
 
-<p>To illustrate; The 'before' shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call 'Glenn'. The 'after' shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
+<p>To illustrate; The &lsquo;before&rsquo; shot below reveals a beautifully squashed branch (via interactive rebase), by our hero, the fearlesss yet considerate Author, whom we shall call &lsquo;Glenn&rsquo;. The &lsquo;after&rsquo; shot shows the aftermath of a squash-merge on that same branch, by the villianous Committer, The Glory Hunter;</p>
 
 <p><em>Before:</em></p>
 
@@ -87,23 +87,23 @@ in 0.1 seconds automatically...
     <id>http://blog.siyelo.com/thou-shalt-clean-thy-branches-git-rebase</id>
     <content type="html"><![CDATA[<p>I often find myself wondering when to do a interactive rebase (<code>git rebase</code>) vs a squashed merge (<code>git merge --squash</code>). The answer is rather subtle and can be found <a href="http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase">here</a>. Essentially it comes down to whether you want to continue on the branch (interactive rebase) vs merge it now (merge squash).</p>
 
-<p>Either way, you are rewriting histories, so you have to know what you're
+<p>Either way, you are rewriting histories, so you have to know what you&rsquo;re
 doing.</p>
 
-<p>A google search of ('git merge squash vs rebase') turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul's stance in this article is that you should
-'never' use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
+<p>A google search of (&lsquo;git merge squash vs rebase&rsquo;) turns up <a href="http://paul.stadig.name/2010/12/thou-shalt-not-lie-git-rebase-ammend.html">this article from Paul Stadig</a> which rather irks me. Paul&rsquo;s stance in this article is that you should
+&lsquo;never&rsquo; use git rebase/amend/squash. But these are all perfectly valid, and necessary parts of a healthly git workflow.</p>
 
 <p>Interactive rebasing and merge squashing are essential if you care about having a <em>clean</em> git
 history.  Linus explains it perfectly <a href="http://lwn.net/Articles/328438/">here</a></p>
 
 <blockquote><p>You should rebase your <em>private</em> trees (thats a cleanup) (and never
- pull into a branch that isn't already in good shape)</p>
+ pull into a branch that isn&rsquo;t already in good shape)</p>
 
 <p>You must never EVER destroy other peoples history</p>
 
 <p>Keep your own history readable and dont expose your crap</p>
 
-<p>Never pull into a branch that isn't already in good shape</p></blockquote>
+<p>Never pull into a branch that isn&rsquo;t already in good shape</p></blockquote>
 
 <p>Stick to these simple rules, and rebase/squash as you please!</p>
 ]]></content>

@@ -140,28 +140,28 @@
 
 <p>On to the topic of todays insightful blog post: upgrading from 0.8.2 to v1.0. Jose, the big-man-on-campus @ Plataforma tells us we should upgrade cos of a few significant bugs. Ok, lets do this.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>becomes</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">gem</span> <span class="s1">&#39;devise&#39;</span><span class="p">,</span> <span class="ss">:version</span> <span class="o">=&gt;</span> <span class="s1">&#39;&gt;=1.0.0&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>And after restarting the server, a barf.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ActionView</span><span class="o">::</span><span class="no">TemplateError</span> <span class="p">(</span><span class="n">undefined</span> <span class="n">local</span> <span class="n">variable</span> <span class="ow">or</span> <span class="nb">method</span> <span class="sb">`new_user_session_path&#39; for #&lt;ActionView::Base:0x243fca4&gt;) on line #27 of app/views/shared/_header.html.haml: 24: 25: - else 26: %li= link_to &quot;Join&quot;, join_url 27: %li= link_to &quot;Sign In&quot;, new_user_session_path</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>So obviously my Devise resource, User in this case, is fubar.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
 </span><span class='line'>  <span class="n">devise</span> <span class="ss">:all</span>
@@ -170,7 +170,7 @@
 
 <p>Hmm nothing changed there. But wait, <code>devise :all</code> is now conspicuously missing from the README, replaced by a more explicit statement of your authentication strategies in your model.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
 </span><span class='line'>  <span class="n">devise</span> <span class="ss">:authenticatable</span><span class="p">,</span> <span class="ss">:confirmable</span><span class="p">,</span> <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span>

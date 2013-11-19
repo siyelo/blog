@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -18,13 +18,13 @@
     <link href="http://blog.siyelo.com/rails-security-vulnerabilities"/>
     <updated>2013-01-18T17:51:00+01:00</updated>
     <id>http://blog.siyelo.com/rails-security-vulnerabilities</id>
-    <content type="html"><![CDATA[<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It's not always trivial, and we ran into problems ourselves. But here's how we went about it.</p>
+    <content type="html"><![CDATA[<p>We at Siyelo also rushed to upgrade all of our apps to the newest Rails versions. It&rsquo;s not always trivial, and we ran into problems ourselves. But here&rsquo;s how we went about it.</p>
 
 <h2>What happened?</h2>
 
 <p><a href="https://twitter.com/tenderlove">@tenderlove</a>, a Ruby/Rails core contributor sent out two notices [<a href="https://groups.google.com/d/topic/rubyonrails-security/t1WFuuQyavI/discussion">1</a>, <a href="https://groups.google.com/d/topic/rubyonrails-security/61bkgvnSGTQ/discussion">2</a>] regarding vulnerabilities in Ruby On Rails.</p>
 
-<h2>What's the first issue?</h2>
+<h2>What&rsquo;s the first issue?</h2>
 
 <p>The first issue is related to the way ActiveRecord interprets parameters in combination with the way JSON is parsed. If an attacker exploited this vulnerability it was possible to issue arbitrary database queries. And this was only the first half of the problem.</p>
 
@@ -34,9 +34,9 @@
 
 <h2>What to do?</h2>
 
-<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can't stress enough that you must upgrade your Rails applications now!</p>
+<p>Thanks to the great community and contributors that are developing Ruby On Rails, new versions were realeased very quickly and everyone was able to upgrade in a timely fashion. We can&rsquo;t stress enough that you must upgrade your Rails applications now!</p>
 
-<p>If you haven't upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
+<p>If you haven&rsquo;t upgraded your Rails application yet, or you had problems while doing so, then please <a href="mailto:info@siyelo.com">get in touch with Siyelo</a> to discuss how we can help you.</p>
 ]]></content>
   </entry>
   
@@ -46,7 +46,7 @@
     <updated>2012-11-27T10:01:00+01:00</updated>
     <id>http://blog.siyelo.com/active-merchant-and-spree</id>
     <content type="html"><![CDATA[<p>Below are the steps we followed to get it working:
-For the purposes of this example, we'll be adding PayGate PayXML as a Spree payment gateway.</p>
+For the purposes of this example, we&rsquo;ll be adding PayGate PayXML as a Spree payment gateway.</p>
 
 <p>Add the ActiveMerchant gem:</p>
 
@@ -54,7 +54,7 @@ For the purposes of this example, we'll be adding PayGate PayXML as a Spree paym
 
 <h1>Gemfile</h1>
 
-<p>gem 'activemerchant'
+<p>gem &lsquo;activemerchant&rsquo;
 ```</p>
 
 <p>Create the PayGate class which inherits from Spree::Gateway.  The class implements the <code>provider_class</code> method which returns the relevant ActiveMerchant billing class.</p>
@@ -78,7 +78,7 @@ For the purposes of this example, we'll be adding PayGate PayXML as a Spree paym
 end
 ```</p>
 
-<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree's preferences system so that they can be filled in via the admin backend.</p>
+<p>In this case, the ActiveMerchant::Billing::PayGateXMLGateway requires a login and password to connect and authenticate with the gateway.  Take a look at the relevant file in the ActiveMerchant repo to see what your gateway requires.  The login and password are implemented using Spree&rsquo;s preferences system so that they can be filled in via the admin backend.</p>
 
 <p>Add your new Spree gateway into the collection of payment methods Spree knows about:</p>
 
@@ -91,7 +91,7 @@ end
 end
 ```</p>
 
-<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click 'New payment method'.  Fill in the name of the payment method as 'Credit Card' (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You'll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
+<p>Finally, add your new payment method via the admin backend.  Log in as an admin user, go to configuration > payment methods.  Delete the example payment methods if there are any then click &lsquo;New payment method&rsquo;.  Fill in the name of the payment method as &lsquo;Credit Card&rsquo; (assuming you are accepting credit cards) and select the gateway you added in the provider drop-down.  You&rsquo;ll also need to fill in the preferences you added (in this case: login and password) with the details provided by the payment gateway.</p>
 ]]></content>
   </entry>
   

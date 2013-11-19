@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Design | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/design/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -20,7 +20,7 @@
     <id>http://blog.siyelo.com/solving-html5-compatibility-issues</id>
     <content type="html"><![CDATA[<p>Why use <code>&lt;div id="header"&gt;</code> when you can use just <code>&lt;header&gt;?</code> This is expecially convenient when you have tons of divs and becomes hard to trace everything. You get an extra level of visual code separation, but even more importantly you get a default hierarachy system that will give your code a common sense.</p>
 
-<p>But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won't be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it's a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
+<p>But enough about why HTML5 tags are awesome, and how about their acctual use in practise? As you might already know they are not really accepted by the current browsers, and won&rsquo;t be for some time. They are implementing more of the HTML5 and CSS3 magic as we speek, but it&rsquo;s a process that will take a while. So, what do we do about jumping on the HTML5 train?</p>
 
 <p>The first solution is a very simple one and apllies to normal type of browsers like Firefox, Safari, Opera, Chrome: just put the CSS property <code>{ display: block; }</code> in your stylesheets:</p>
 
@@ -30,9 +30,9 @@
 
 <p>```</p>
 
-<p>and you're done. This converted them into block elements and returned them in the flow, so you can use the tags in your document.</p>
+<p>and you&rsquo;re done. This converted them into block elements and returned them in the flow, so you can use the tags in your document.</p>
 
-<p>But this is not so easy when it comes to Internet Explorer. You always need to put more effort into explaining something to a deaf, dumb and blind person, and so is this monstrocity spawned by Microsoft. What you need to do here is add some javascript, otherwise your html5 elements won't be recognized even by applying the block property. In the head of the document place this piece of code:</p>
+<p>But this is not so easy when it comes to Internet Explorer. You always need to put more effort into explaining something to a deaf, dumb and blind person, and so is this monstrocity spawned by Microsoft. What you need to do here is add some javascript, otherwise your html5 elements won&rsquo;t be recognized even by applying the block property. In the head of the document place this piece of code:</p>
 
 <p>``` javascript</p>
 
@@ -41,11 +41,11 @@
 
 <p>```</p>
 
-<p>This just created the <date> tag. You can use this method to create all the elements you require to make your html5-ish website acceptable for IE. There's also <a href="http://remysharp.com/downloads/html5.js">a script</a> made by Remy Sharp that will take care of this for you.</p>
+<p>This just created the <date> tag. You can use this method to create all the elements you require to make your html5-ish website acceptable for IE. There&rsquo;s also <a href="http://remysharp.com/downloads/html5.js">a script</a> made by Remy Sharp that will take care of this for you.</p>
 
-<p>But nowdays we have more complete solutions to this problem, that also deal with cross-browser compatibility, improved css degradation and add some extra features. We have <a href="http://www.modernizr.com/">Modernizr</a> , JavaScript created by Faruk Ateş and Paul Irish that creates support for HTML5 and a lot of CSS3, and <a href="http://html5boilerplate.com/">Boilerplate</a> created by Paul Irish and Divya Manian, a cross-browser compatible and future-proof HTML template that support HTML5 and CSS3. What's really cool about Boilerplate is that they are working on a HAML/SASS port.</p>
+<p>But nowdays we have more complete solutions to this problem, that also deal with cross-browser compatibility, improved css degradation and add some extra features. We have <a href="http://www.modernizr.com/">Modernizr</a> , JavaScript created by Faruk Ateş and Paul Irish that creates support for HTML5 and a lot of CSS3, and <a href="http://html5boilerplate.com/">Boilerplate</a> created by Paul Irish and Divya Manian, a cross-browser compatible and future-proof HTML template that support HTML5 and CSS3. What&rsquo;s really cool about Boilerplate is that they are working on a HAML/SASS port.</p>
 
-<p>And for the end here are some cool examples of HTML5 websites, published recently by <a href="http://webdesignledger.com/inspiration/55-excellent-examples-of-websites-using-html5">WDL</a> . I know i'll be using HTML5 on my next website.</p>
+<p>And for the end here are some cool examples of HTML5 websites, published recently by <a href="http://webdesignledger.com/inspiration/55-excellent-examples-of-websites-using-html5">WDL</a> . I know i&rsquo;ll be using HTML5 on my next website.</p>
 ]]></content>
   </entry>
   
@@ -71,7 +71,7 @@
 
 <p>Note: I will use HAML and SASS for the code. Read here if you want to learn more about it: <a href="http://haml-lang.com/">http://haml-lang.com/</a>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -103,7 +103,7 @@
 
 <p>So it’s just a simple table with an image nested inside. Now the magic comes with combining CSS, or in this case SASS:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>

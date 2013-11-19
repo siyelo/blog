@@ -136,7 +136,7 @@
     <div class="entry-content block">
       <div class="wrapper">
         <p class="headline">We recently undertook an audit of a Rails deployment for a system developed by Red Comet Labs. It is a Rails 3.2 application that integrates with 3 different storage systems (CouchDB, PostgreSQL and Redis). It is deployed using Capistrano and the server setup and management is done using Chef.</p>
-        <p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&#8217;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
+        <p>We shared our Rails Deployment experience with Red Comet Labs, and in this article we&rsquo;ll discuss a checklist of some <a href="http://www.jedi.be/blog/2010/02/12/what-is-this-devops-thing-anyway/">devops</a> practices and tools we are familiar with.</p>
 
 <h2>Extract sensitive data</h2>
 
@@ -156,19 +156,19 @@
 
 <h2>Server security</h2>
 
-<p>Don&#8217;t use your root user when you access your server - it&#8217;s the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode&#8217;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
+<p>Don&rsquo;t use your root user when you access your server &ndash; it&rsquo;s the simplest way to prevent accidentally breaking things. Create another user that can execute superuser commands using sudo. Use this non-root user all the time. You should use SSH key authentication to protect your server against brute-force password cracking attacks. Furthermore, you should disable SSH password authentication and the ability to login as root. Read more on this in Linode&rsquo;s guide on how to <a href="http://library.linode.com/securing-your-server">secure your server</a>.</p>
 
 <h2>Start clean on boot</h2>
 
-<p>All the services that are being used by the application need to start cleanly when the server boots up - there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
+<p>All the services that are being used by the application need to start cleanly when the server boots up &ndash; there should be no need for manual intervention. If you are deploying to Ubuntu, <a href="http://manpages.ubuntu.com/manpages/precise/man8/update-rc.d.8.html">update-rc.d</a>  can be used for init.d processes. And, for the application Procfile-based processes you can use the <a href="https://github.com/ddollar/foreman">foreman gem</a>  and there is an easy <a href="http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/">export to upstart</a>  for monitoring and boot start up setup.</p>
 
 <h2>Log files</h2>
 
-<p>Prevent log files from growing to the point where you don&#8217;t have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
+<p>Prevent log files from growing to the point where you don&rsquo;t have any space left on disc device by using <a href="http://www.nullislove.com/2007/09/10/rotating-rails-log-files/">logrotate</a>. Analyze request log of your Rails application to produce a performance report with <a href="https://github.com/wvanbergen/request-log-analyzer">request-log-analyzer</a>.</p>
 
 <h2>Cron jobs</h2>
 
-<p>Whether it&#8217;s a backup script or background task that needs to be run as a job, it&#8217;s a good idea to have documentation on it within the application. Cron&#8217;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
+<p>Whether it&rsquo;s a backup script or background task that needs to be run as a job, it&rsquo;s a good idea to have documentation on it within the application. Cron&rsquo;s scheduling format is often difficult to read so we suggest using the <a href="https://github.com/javan/whenever/">whenever gem</a>  to make it more readable.</p>
 
 <h2>Backups</h2>
 
@@ -196,7 +196,7 @@
 
 <h2>Application performance</h2>
 
-<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&#8217;t want to use other service for checking that your server is up and running.</p>
+<p>Monitor your application performance, uptime, slow DB queries, background tasks with <a href="http://newrelic.com/">New Relic</a>. They also have <a href="http://newrelic.com/features/availability-monitoring">Availability monitoring</a> if you don&rsquo;t want to use other service for checking that your server is up and running.</p>
 
 <p>The list is long, but it takes lots of patience in understanding the software business and delivering great software.</p>
 

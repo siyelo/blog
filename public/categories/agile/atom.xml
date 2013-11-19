@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Agile | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/agile/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -23,10 +23,10 @@
 <p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 
 <ul>
-<li>you don't have control over the other screen</li>
+<li>you don&rsquo;t have control over the other screen</li>
 <li>you cannot have both screen sharing and video</li>
 <li>bandwidth of the internet connection sometimes can be a problem</li>
-<li>it's not a tool for pair programming</li>
+<li>it&rsquo;s not a tool for pair programming</li>
 </ul>
 
 
@@ -35,8 +35,8 @@
 <p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
 
 <ul>
-<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
-<li>permissive - useful as a real time code collaboration tool</li>
+<li>read only &ndash; useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive &ndash; useful as a real time code collaboration tool</li>
 </ul>
 
 
@@ -67,15 +67,15 @@ screen -x dalibor/pairprog
 exit
 </code></p>
 
-<p>Here as you can notice "screen -x dalibor/pairprog" automatically will join the session named "pairprog" that is started by "dalibor" user on "guest" user login.</p>
+<p>Here as you can notice &ldquo;screen -x dalibor/pairprog&rdquo; automatically will join the session named &ldquo;pairprog&rdquo; that is started by &ldquo;dalibor&rdquo; user on &ldquo;guest&rdquo; user login.</p>
 
-<p>Next we need to install screen on the host machine (if it's not already installed).</p>
+<p>Next we need to install screen on the host machine (if it&rsquo;s not already installed).</p>
 
 <p><code>bash
 sudo apt-get install screen
 </code></p>
 
-<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: "Must run suid root for multiuser support."). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &ldquo;Must run suid root for multiuser support.&rdquo;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
 
 <p><code>bash
 sudo chmod +s /usr/bin/screen
@@ -89,17 +89,17 @@ hardstatus on
 hardstatus alwayslastline
 startup_message off
 termcapinfo xterm ti@:te@
-hardstatus string "%{= kG}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+hardstatus string &ldquo;%{= kG}%-w%{.rW}%n %t%{&ndash;}%+w %=%{..G} %H %{..Y} %m/%d %C%a &rdquo;
 screen -t bash1 1</p>
 
 <h1>multiuser setup</h1>
 
 <p>multiuser on
-aclchg guest -wx "#,?"
-aclchg guest +x "colon,wall,detach"
+aclchg guest -wx &ldquo;#,?&rdquo;
+aclchg guest +x &ldquo;colon,wall,detach&rdquo;
 ```</p>
 
-<p>Most important lines are "multiuser on" which allows multiuser access in the screen session and "aclchg" command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall "hi there".</p>
+<p>Most important lines are &ldquo;multiuser on&rdquo; which allows multiuser access in the screen session and &ldquo;aclchg&rdquo; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &ldquo;hi there&rdquo;.</p>
 
 <p>Finally, communication goes like this: screen session is started by host with:</p>
 
@@ -115,7 +115,7 @@ ssh guest@host
 
 <p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
 
-<p>If you trust the user you can add full permission with "acladd"  command, and usually it's to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+<p>If you trust the user you can add full permission with &ldquo;acladd&rdquo;  command, and usually it&rsquo;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
 
 <p><code>bash
 multiuser on

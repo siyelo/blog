@@ -141,10 +141,10 @@
 <p>In the past, we often used Skype for screen sharing, but the problems with Skype are:</p>
 
 <ul>
-<li>you don&#8217;t have control over the other screen</li>
+<li>you don&rsquo;t have control over the other screen</li>
 <li>you cannot have both screen sharing and video</li>
 <li>bandwidth of the internet connection sometimes can be a problem</li>
-<li>it&#8217;s not a tool for pair programming</li>
+<li>it&rsquo;s not a tool for pair programming</li>
 </ul>
 
 
@@ -153,8 +153,8 @@
 <p>The solution: <a href="http://www.gnu.org/s/screen/">screen</a>. Screen can have many useful scenarios, but here I will focus on following two:</p>
 
 <ul>
-<li>read only - useful as a screen sharing tool by hosting read only screen session</li>
-<li>permissive - useful as a real time code collaboration tool</li>
+<li>read only &ndash; useful as a screen sharing tool by hosting read only screen session</li>
+<li>permissive &ndash; useful as a real time code collaboration tool</li>
 </ul>
 
 
@@ -195,16 +195,16 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Here as you can notice &#8220;screen -x dalibor/pairprog&#8221; automatically will join the session named &#8220;pairprog&#8221; that is started by &#8220;dalibor&#8221; user on &#8220;guest&#8221; user login.</p>
+<p>Here as you can notice &ldquo;screen -x dalibor/pairprog&rdquo; automatically will join the session named &ldquo;pairprog&rdquo; that is started by &ldquo;dalibor&rdquo; user on &ldquo;guest&rdquo; user login.</p>
 
-<p>Next we need to install screen on the host machine (if it&#8217;s not already installed).</p>
+<p>Next we need to install screen on the host machine (if it&rsquo;s not already installed).</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install screen
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &#8220;Must run suid root for multiuser support.&#8221;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
+<p>For security reasons, screen by default is installed so that other users within the system can not attach to screen session (error you will get is: &ldquo;Must run suid root for multiuser support.&rdquo;). To allow multi user setup you need to execute following (you might need to change the path if screen is installed in /usr/bin/screen for example):</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -240,7 +240,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Most important lines are &#8220;multiuser on&#8221; which allows multiuser access in the screen session and &#8220;aclchg&#8221; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &#8220;hi there&#8221;.</p>
+<p>Most important lines are &ldquo;multiuser on&rdquo; which allows multiuser access in the screen session and &ldquo;aclchg&rdquo; command which removes all write and execute permissions for all windows (#) and all commands (?) for user guest. With this setup, host can do anything and guest can just watch the screen or message by using Ctrl-a: wall &ldquo;hi there&rdquo;.</p>
 
 <p>Finally, communication goes like this: screen session is started by host with:</p>
 
@@ -258,7 +258,7 @@
 
 <p>Then they can interact in the same terminal. More on the screen commands <a href="http://aperiodic.net/screen/multiuser">here</a>.</p>
 
-<p>If you trust the user you can add full permission with &#8220;acladd&#8221;  command, and usually it&#8217;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
+<p>If you trust the user you can add full permission with &ldquo;acladd&rdquo;  command, and usually it&rsquo;s to be done on a shared server. Say we have user1 and  user2 logged in on shared server via SSH, user1 has added user2 in  the ~/.screenrc file.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

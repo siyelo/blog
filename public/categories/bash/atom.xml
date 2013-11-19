@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bash | Siyelo]]></title>
   <link href="http://blog.siyelo.com/categories/bash/atom.xml" rel="self"/>
   <link href="http://blog.siyelo.com/"/>
-  <updated>2013-11-19T12:28:11+01:00</updated>
+  <updated>2013-11-19T13:40:35+01:00</updated>
   <id>http://blog.siyelo.com/</id>
   <author>
     <name><![CDATA[Siyelo]]></name>
@@ -51,7 +51,7 @@ alias hmig='heroku rake db:migrate'
     <link href="http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue"/>
     <updated>2010-03-24T17:03:04+01:00</updated>
     <id>http://blog.siyelo.com/tired-of-textmates-slow-find-in-project-nix-to-the-rescue</id>
-    <content type="html"><![CDATA[<p>If you're generally only really wanting to search .rb files, here's a script which I call 'findrb'</p>
+    <content type="html"><![CDATA[<p>If you&rsquo;re generally only really wanting to search .rb files, here&rsquo;s a script which I call &lsquo;findrb&rsquo;</p>
 
 <p>``` bash</p>
 
@@ -80,7 +80,7 @@ glenn-roberts-4 ~/ba[master*]$ findrb 'show'
     <id>http://blog.siyelo.com/speeding-up-bash-aliasing-to-speed-up-your-rails-development</id>
     <content type="html"><![CDATA[<p>All uber developers issue <a href="http://github.com/glennr/bash_profile">shell commands with obtuse aliases</a>.</p>
 
-<p>So, if you're uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here's a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you're done.</p>
+<p>So, if you&rsquo;re uber, or at least becoming uber, and regularly spend time aliasing commands in your profile, here&rsquo;s a script to speed that up. It will open your Bash .profile in Textmate, and reload it in your Terminal once you&rsquo;re done.</p>
 
 <p><code>bash
 alias mbp='mate -w ~/.bash_profile &amp;&amp; source ~/.bash_profile'
