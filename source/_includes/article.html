@@ -14,7 +14,7 @@
      </div>
      <div class="home headline block">
         <div class="wrapper">
-          <p >{{ post.headline }}</p>
+          <p class='headline'>{{ post.headline }}</p>
           <p class='categories'>
             {{ post.categories | category_links }}
           </p>
@@ -48,21 +48,18 @@
         {{ content }}
         
         <footer id="b-footer" class="block">
-          <div class="wrapper">
 
-            <div class="meta-data">
-              <!--<p class="meta">{% include post/date.html %}{{ time }} <span>By {{ page.author }}</span> <img src="{{ page.avatar }}"/> </p>
-              <span> in </span>
-              {% include post/categories.html %}-->
+          <div class="meta-data">
+            <!--<p class="meta">{% include post/date.html %}{{ time }} <span>By {{ page.author }}</span> <img src="{{ page.avatar }}"/> </p>
+            <span> in </span>
+            {% include post/categories.html %}-->
 
-              {% unless page.sharing == false %}
-                {% include post/sharing.html %}
-              {% endunless %}
-              <p class='categories'>
-                {{ page.categories | category_links }}
-              </p>
-            </div>
-
+            {% unless page.sharing == false %}
+              {% include post/sharing.html %}
+            {% endunless %}
+            <p class='categories'>
+              {{ page.categories | category_links }}
+            </p>
           </div>
         </footer>
       </div>

@@ -1,0 +1,84 @@
+@media screen and (max-width: 767px)
+	body
+		font-size: 14px
+	.wrapper
+		padding: 0 25px
+		+box-sizing(border-box)
+
+	.pages .half, #footer .third
+		display: block
+		float: none
+		width: 100%
+	.pages .half
+		&.right
+			border-top: 1px solid #eee
+			margin-top: 2em
+			padding-top: 2em
+			text-align: left
+
+	.artwork
+		img
+			min-height: 100%
+			max-width: none
+			width: auto
+		h1
+			font-size: 36px
+		.wrapper
+			padding-right: 0
+
+	#b-header
+		background: #fff
+		padding: 5px
+		right: 0
+
+
+	.b-post.first .headline 
+		padding-top: 1em !important
+		.wrapper:first-child
+			margin-top: 0
+			padding: 30px 25px 0
+
+	.b-post.list
+		.title
+			padding-top: 4em
+			h1
+				font-size: 32px
+				line-height: 1.2
+				margin-bottom: 0
+		.headline.home
+			padding-bottom: 2.5em
+		.meta
+			max-height: 30px
+	p
+		//font-size: 14px
+	.headline
+		font-size: 18px
+		.wrapper
+			padding-top: 0 !important
+		&.home
+			padding-bottom: 2em
+	.b-post .title, .title
+		padding-top: 9em
+		padding-bottom: 3em
+		h1
+			margin-left: 20px
+			margin-bottom: 10px
+			span
+				+box-shadow($one 20px 0 0, $one -20px 0 0)
+	.meta
+		font-size: 12px
+		line-height: 30px
+		margin-top: 10px
+		max-height: 30px
+		time
+			line-height: 30px
+		img
+			max-height: 30px
+			max-width: 30px
+		> span, time
+			padding: 0 10px
+
+	.entry-content
+		img
+			float: none
+			width: 100%
