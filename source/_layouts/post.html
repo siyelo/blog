@@ -29,7 +29,7 @@ single: true
         <div class="half right">
           <p>next post</p>
           <h3><a class="basic-alignment" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{ page.next.title }}</a></h3>
-          <p class="meta">{% include post/date-next.html %}{{ time }} <span>By {{ page.next.author }}</span> <img src="{{ page.previous.avatar }}"/> </p>
+          <p class="meta">{% include post/date-next.html %}{{ time }} <span>By {{ page.next.author }}</span> <img src="{{ page.next.avatar }}"/> </p>
         </div>
       {% endif %}
     </div>
