@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-ruby '1.9.3'
 
 group :development do
   gem 'rake', '~> 0.9'
@@ -16,6 +15,7 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
   gem 'directory_watcher', '1.4.1'
+  gem 'font-awesome-sass'
 end
 
 gem 'reverse_markdown'
