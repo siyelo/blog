@@ -21,3 +21,4 @@ end
 
 gem 'reverse_markdown'
 gem 'sinatra', '~> 1.4.2'
+gem 'rails_12factor'
