@@ -13,7 +13,6 @@ group :development do
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rubypants', '~> 0.2.0'
   gem 'rb-fsevent', '~> 0.9'
-  gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
   gem 'directory_watcher', '1.4.1'
   gem 'font-awesome-sass'
@@ -22,3 +21,4 @@ end
 gem 'reverse_markdown'
 gem 'sinatra', '~> 1.4.2'
 gem 'rails_12factor'
+gem 'stringex', '~> 1.4.0'
